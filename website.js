@@ -429,12 +429,16 @@ function addToTable(it) {
         bgImg.src = moreImg;
         bgImg.alt = '';
         td.appendChild(bgImg);
+        // mark as a miss when it shows an arrow (not a match)
+        td.classList.add('cell-miss');
       } else if (v > g) {
         const bgImg = document.createElement('img');
         bgImg.className = 'cell-arrow-bg';
         bgImg.src = lessImg;
         bgImg.alt = '';
         td.appendChild(bgImg);
+        // mark as a miss when it shows an arrow (not a match)
+        td.classList.add('cell-miss');
       } else {
         // match -> green background handled by CSS type when appropriate
         td.classList.add('cell-match');
