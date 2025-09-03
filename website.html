@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Idleon Wordle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="center">
+    <div class="guess-box combo-guess" id="guessBox">
+      <div class="guess-title">Guess today's Idleon Item!</div>
+      <div class="guess-actions">
+        <div class="clue-wrap">
+          <button id="guessBtn1" class="guess-btn" aria-label="Guess button 1">Upgrade Slots Clue</button>
+          <div class="clue-note" id="note1">Unlocks in 0 guesses</div>
+        </div>
+        <div class="clue-wrap">
+          <button id="guessBtn2" class="guess-btn" aria-label="Guess button 2">Category Clue</button>
+          <div class="clue-note" id="note2">Unlocks in 0 guesses</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="combo" id="combo">
+      <div class="input-wrap">
+        <input id="search" type="text" placeholder="Type item name..." autocomplete="off" />
+        <span class="kbd">Enter</span>
+      </div>
+     
+      <div class="dropdown" id="dropdown">
+        <ul class="results" id="results"></ul>
+      </div>
+    </div>
+
+    <!-- Table now sits directly under the combo -->
+    <div class="table-wrap">
+  <table id="itemTable" class="table-panel">
+        <thead>
+          <tr class="table-head">
+            <th class="th-left">Icon</th>
+            <th class="th-left">Name</th>
+            <th class="stat-col">Class</th>
+            <th class="stat-col">Level Req</th>
+            <th class="stat-col">Power</th>
+            <th class="stat-col">Speed</th>
+            <th class="stat-col">Str</th>
+            <th class="stat-col">Agi</th>
+            <th class="stat-col">Wis</th>
+            <th class="stat-col">Luck</th>
+            <th class="stat-col">Sell Price</th>
+            <th class="stat-col">Source</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    
+   
+        <!-- Goal found modal -->
+        <div id="goalModal" class="goal-modal" aria-hidden="true">
+          <div class="goal-panel">
+            <button class="goal-close" id="goalClose" aria-label="Close">✕</button>
+            <h2 class="goal-title">YOU FOUND IT!</h2>
+            <div class="goal-body">
+              <img id="goalIcon" class="goal-icon" src="" alt="goal icon" />
+              <div id="goalName" class="goal-name"></div>
+            </div>
+            <div class="goal-guesses">Number of guesses: <strong id="goalGuesses">0</strong></div>
+            <div class="goal-footer">
+              <div class="goal-footer-text">Come back for a new item in...</div>
+              <div class="goal-timer-wrap"><span id="goalTimer" class="goal-timer">00:00:00</span></div>
+            </div>
+          </div>
+        </div>
+
+    </div> <!-- .center -->
+
+    <script src="website.js"></script>
+  </body>
+</html>

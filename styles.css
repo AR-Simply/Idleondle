@@ -1,0 +1,411 @@
+:root {
+  --bg: #0f1221;
+  --panel: #171a2c;
+  --text: #e6e9f0;
+  --muted: #a3acc3;
+  --accent: #7aa2ff;
+  --border: #2a2f47;
+  --hover: #202545;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 12px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  /* ensure padding is included in height calculations to avoid accidental overflow */
+  box-sizing: border-box;
+  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background-image: url("images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text);
+}
+
+/* apply border-box to all elements (including pseudo-elements) to make sizing predictable) */
+*, *::before, *::after { box-sizing: inherit; }
+
+/* TOP-ALIGNED LAYOUT SO PAGE GROWS DOWNWARD */
+.center {
+  /* keep the center element within the viewport even when padding is present */
+  min-height: 100svh;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;            /* horizontal centering only */
+  justify-content: flex-start !important;  /* TOP aligned vertically */
+  align-content: flex-start !important;    /* TOP aligned for multi-line */
+  gap: 12px;
+  padding: 24px;
+}
+
+
+.combo {
+  z-index: 2; /* Above table for overlay */
+  width: min(680px, 92vw);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.combo .input-wrap {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px;
+  padding: 12px 14px;
+}
+.combo input[type="text"] {
+  background: transparent; border: none; outline: none; color: var(--text);
+  font-size: 18px; padding: 10px 0; caret-color: var(--accent); width: 100%;
+}
+.combo .kbd {
+  color: var(--muted); font-size: 12px; border: 1px solid var(--border);
+  border-radius: 6px; padding: 4px 8px;
+}
+
+/* DROPDOWN OVERLAYS THE TABLE */
+.dropdown {
+  position: absolute;
+  left: 0; right: 0; top: calc(100% - 2px);
+  background: var(--panel); border: 1px solid var(--border); border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius); max-height: 360px; overflow: auto;
+  display: none; z-index: 900;
+}
+.dropdown.open { display: block; }
+
+.results { list-style: none; margin: 0; padding: 6px; }
+.guess-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.guess-title {
+  font-weight: 900;
+  color: var(--text);
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 0.6px;
+  /* visually integrate with the surrounding panel */
+  padding: 6px 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+@media (min-width: 720px) {
+  .guess-title { font-size: 22px; padding: 8px 0; }
+}
+
+.guess-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* put one button left, one right */
+  gap: 12px;
+  width: 100%;
+  max-width: 380px; /* controls how wide the button row is inside the guess box */
+}
+.guess-btn {
+  min-width: 140px; /* make buttons larger */
+  height: 48px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: var(--hover);
+  color: var(--text);
+  font-weight: 800;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+}
+
+.clue-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.clue-note { font-size: 12px; color: var(--muted); text-align: center; }
+
+/* Disabled / locked state */
+.guess-btn[disabled], .guess-btn.locked {
+  background: linear-gradient(180deg, #2a2f47, #232735);
+  color: #8b8f9e;
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+/* When guess box is placed inside .combo (above dropdown) */
+.combo-guess {
+  margin-top: 8px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  /* make the guess box size itself to its contents and allow centering
+    inside the .center flex container */
+  display: inline-flex;
+  flex-direction: column;
+  width: auto;
+  max-width: 92vw;
+  box-shadow: var(--shadow);
+  position: relative; /* create stacking context */
+  z-index: 1100; /* above dropdown (dropdown z-index:1000) */
+}
+.item {
+  display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 12px;
+  padding: 8px 10px; border-radius: 8px; cursor: pointer; border: 1px solid transparent;
+}
+.item:hover { background: var(--hover); border-color: var(--border); }
+.item img {
+  width: 38px; height: 38px; object-fit: contain; background: #0e1120; border-radius: 6px;
+  border: 1px solid var(--border);
+}
+.item .name { font-size: 15px; line-height: 1.2; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hint { margin-top: 14px; color: var(--muted); font-size: 13px; text-align: center; }
+.status { margin-top: 8px; color: #a6f3a6; font-size: 13px; text-align: center; min-height: 1.2em; }
+
+/* TABLE NOW SITS DIRECTLY UNDER THE COMBO */
+.table-wrap {
+  position: relative;
+  z-index: 1;                 /* below dropdown */
+ 
+  margin-top: 8px;
+  /* spacing and layout; visibility handled per-element so we can animate header and cells separately */
+  max-width: 92vw;
+  /* reserve vertical space so adding rows won't push page content */
+  min-height: 260px;
+  /* let the table grow to full size instead of internal scrolling */
+  max-height: none;
+  overflow-y: visible;
+  overflow-x: visible;
+}
+
+/* When table has content, make it visible */
+.table-wrap.visible { opacity: 1; }
+
+.type-yellow, .type-red, .type-green, .type-none {
+  /* type classes are markers only; sizing handled by .stat-col */
+  position: relative;
+}
+
+.cell-match {
+  background: #2e7d32 !important; /* green */
+  color: #fff;
+}
+
+.cell-miss {
+  background: #b71c1c !important; /* red */
+  color: #fff;
+}
+
+/* Ensure base padding for all table cells inside panels and give cells a subtle panel background so spacing is visible */
+.table-panel td, .table-panel th {
+  padding: 6px;
+  box-sizing: border-box;
+  /* stronger, readable cell background */
+  background: rgba(23,26,44,0.9);
+  color: var(--text);
+  border-radius: 8px;
+}
+
+/* Keep header visually distinct (override the per-cell background) */
+.table-head th {
+  background: var(--hover) !important;
+  color: var(--text) !important;
+}
+
+/* Background helpers for type classes */
+.type-yellow { background: transparent; }
+.type-red { background: transparent; }
+.type-none { background: transparent; }
+
+.cell-arrow-bg {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+  display: block;
+}
+
+.cell-content {
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Ensure the table uses a fixed layout so columns do not resize when rows are added */
+#itemTable {
+  table-layout: fixed;
+  width: min(680px, 92vw); /* match the combo width */
+  max-width: 100%;
+  margin: 0 auto; /* center */
+  /* use separate borders and a small spacing so cells appear separated */
+  border-collapse: separate;
+  border-spacing: 6px 6px; /* horizontal vertical spacing between cells */
+}
+
+.table-panel { background: transparent; border: none; border-radius: 0; overflow: visible; }
+
+/* Header helper for left-aligned headings */
+.th-left { padding: 8px; text-align: left; }
+
+/* Stat column: same fixed size and centered content */
+.stat-col {
+  min-width: 70px;
+  max-width: 150px;
+  width: 90px;
+  height: 44px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* Explicit fixed widths for stat columns (3..12) to avoid overlap */
+/* Use explicit widths for each column to ensure alignment */
+#itemTable th:nth-child(1), #itemTable td:nth-child(1) { width: 96px; }
+#itemTable th:nth-child(2), #itemTable td:nth-child(2) { width: 180px; }
+#itemTable th:nth-child(3), #itemTable td:nth-child(3) { width: 128px; }
+#itemTable th:nth-child(4), #itemTable td:nth-child(4) { width: 64px; }
+#itemTable th:nth-child(5), #itemTable td:nth-child(5) { width: 64px; }
+#itemTable th:nth-child(6), #itemTable td:nth-child(6) { width: 64px; }
+#itemTable th:nth-child(7), #itemTable td:nth-child(7) { width: 64px; }
+#itemTable th:nth-child(8), #itemTable td:nth-child(8) { width: 64px; }
+#itemTable th:nth-child(9), #itemTable td:nth-child(9) { width: 64px; }
+#itemTable th:nth-child(10), #itemTable td:nth-child(10) { width: 64px; }
+#itemTable th:nth-child(11), #itemTable td:nth-child(11) { width: 128px; }
+#itemTable th:nth-child(12), #itemTable td:nth-child(12) { width: 300px; }
+
+
+
+/* First column: icon fixed width */
+.item-icon { width:64px; height:64px; object-fit:contain; background:#0e1120; border:1px solid var(--border); border-radius:6px; }
+
+/* Icon and name cell helpers */
+.icon-cell { width: 96px; text-align: center; }
+/* Ensure first column matches icon cell */
+#itemTable th:first-child, #itemTable td:first-child { width: 96px; }
+.name-cell {
+  text-align: left;
+  padding-left: 8px;
+  /* allow wrapping instead of truncating */
+  white-space: normal;
+  overflow: visible;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.sell-price { display:inline-flex; gap:6px; align-items:center; justify-content:flex-start; }
+.coin-img { width:18px; height:18px; object-fit:contain; }
+
+/* Header background */
+.table-head {
+  background: var(--hover);
+  /* start hidden; will fade in when the table appears */
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+/* Header fade-in when table becomes visible */
+.table-head.fade-in { animation: headerFade 360ms ease both; }
+@keyframes headerFade { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Per-cell fade: start hidden, then add .in to fade each cell in */
+.cell-fade { opacity: 0; transform: translateY(6px); }
+.cell-fade.in { animation: cellFade 460ms ease both; }
+@keyframes cellFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+
+/* Ensure table elements keep native table display (fix accidental overrides) */
+#itemTable { display: table; }
+#itemTable thead, #itemTable tbody { display: table-row-group; }
+#itemTable tr { display: table-row; }
+#itemTable th, #itemTable td { display: table-cell; vertical-align: middle; box-sizing: border-box; padding: 6px; }
+
+
+
+/* Ensure table is centered within its panel */
+.table-panel { margin-left: auto; margin-right: auto; }
+
+/* Goal found modal */
+.goal-modal {
+  position: fixed;
+  inset: 0;
+  display: none; /* shown when active */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.55);
+  z-index: 9999;
+}
+.goal-modal[aria-hidden="false"] {
+  display: flex;
+}
+.goal-panel {
+  background: #fff;
+  color: #111;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  padding: 18px 20px;
+  max-width: 420px;
+  width: 92%;
+  text-align: center;
+  position: relative;
+}
+.goal-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.goal-title {
+  margin: 6px 0 12px 0;
+  font-size: 20px;
+  color: #111;
+  letter-spacing: 1px;
+}
+.goal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+}
+.goal-guesses { margin-top: 8px; color: #222; font-size: 15px; }
+.goal-guesses strong { font-weight: 900; margin-left: 6px; }
+.goal-icon {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+.goal-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+.goal-footer {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.goal-footer-text { margin-bottom: 8px; }
+.goal-timer-wrap { display: flex; justify-content: center; }
+.goal-timer {
+  font-size: 32px;
+  font-weight: 800;
+  color: #d9534f;
+  letter-spacing: 1px;
+}
+
