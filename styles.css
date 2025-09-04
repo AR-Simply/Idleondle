@@ -39,6 +39,89 @@ html, body {
   padding: 24px;
 }
 
+/* Site title image placed above the guess box */
+.site-title {
+  display: block;
+  width: min(560px, 92vw);
+  max-width: 100%;
+  height: auto;
+  margin: 6px auto 4px auto; /* small vertical spacing */
+  image-rendering: optimizeQuality;
+}
+
+/* Top row: guess box with a side vertical button box */
+.top-row {
+  display: flex;
+  gap: 12px;
+  align-items: stretch; /* make children the same height so side-box can match guess-box */
+  width: min(760px, 96vw);
+  justify-content: center;
+}
+
+/* When the guess box is placed inside the top-row, remove its extra top margin so
+  it lines up with the side-box visually. */
+.top-row .combo-guess { margin-top: 0; }
+
+.side-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+  width: 37px; /* reduced to 50% */
+  box-sizing: border-box;
+  justify-content: center; /* center the buttons vertically when side-box height matches guess-box */
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  width: 100%;
+  height: 32px; /* reduced to 50% */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.icon-btn img { width: 22px; height: 22px; object-fit: contain; }
+
+/* Keep top-row on a single line on small screens (guess box + vertical icons) */
+@media (max-width: 720px) {
+  .top-row {
+    flex-direction: row;
+    /* stretch children so .side-box can match the height of .combo-guess */
+    align-items: stretch;
+    justify-content: center;
+    gap: 8px;
+    width: min(760px, 96vw);
+    flex-wrap: nowrap;
+  }
+
+
+
+  .side-box {
+    width: 44px;
+    flex-direction: column;
+    padding: 6px;
+    gap: 6px;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  /* make the guess box stretch to the same height as the side-box */
+  .combo-guess { align-self: stretch; }
+
+  .icon-btn { width: 100%; height: 34px; }
+
+  /* Allow the inside guess action buttons to be flexible on narrow screens */
+  .guess-actions { max-width: calc(92vw - 56px); gap: 8px; }
+  .guess-btn { min-width: 0; flex: 1 1 auto; height: 44px; }
+}
+
 
 .combo {
   z-index: 2; /* Above table for overlay */
@@ -126,6 +209,15 @@ html, body {
 .clue-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
 .clue-note { font-size: 12px; color: var(--muted); text-align: center; }
 
+/* If only one clue is visible, center it inside the actions row */
+.guess-actions:has(.clue-wrap:nth-child(1):only-child),
+.guess-actions:has(.clue-wrap:nth-child(2):only-child) {
+  justify-content: center;
+}
+
+/* ensure buttons inside lone clue-wrap don't expand too far */
+.guess-actions .clue-wrap:only-child .guess-btn { min-width: 120px; }
+
 /* Disabled / locked state */
 .guess-btn[disabled], .guess-btn.locked {
   background: linear-gradient(180deg, #2a2f47, #232735);
@@ -177,7 +269,11 @@ html, body {
   /* let the table grow to full size instead of internal scrolling */
   max-height: none;
   overflow-y: visible;
-  overflow-x: visible;
+  /* keep horizontal scrolling but hide the permanent scrollbar for a cleaner look */
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE/Edge (legacy) */
+  scrollbar-width: none;     /* Firefox */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* When table has content, make it visible */
@@ -221,9 +317,13 @@ html, body {
 
 .cell-arrow-bg {
   position: absolute;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
+  /* fixed arrow size centered in the cell */
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
   opacity: 0.3;
   z-index: 0;
   pointer-events: none;
@@ -256,8 +356,8 @@ html, body {
 
 .table-panel { background: transparent; border: none; border-radius: 0; overflow: visible; }
 
-/* Header helper for left-aligned headings */
-.th-left { padding: 8px; text-align: left; }
+/* Header helper for the first-column heading (centered) */
+.th-left { padding: 8px; text-align: center; }
 
 /* Stat column: same fixed size and centered content */
 .stat-col {
@@ -273,18 +373,17 @@ html, body {
 
 /* Explicit fixed widths for stat columns (3..12) to avoid overlap */
 /* Use explicit widths for each column to ensure alignment */
-#itemTable th:nth-child(1), #itemTable td:nth-child(1) { width: 96px; }
-#itemTable th:nth-child(2), #itemTable td:nth-child(2) { width: 180px; }
-#itemTable th:nth-child(3), #itemTable td:nth-child(3) { width: 128px; }
+#itemTable th:nth-child(1), #itemTable td:nth-child(1) { width: 280px; }
+#itemTable th:nth-child(2), #itemTable td:nth-child(2) { width: 128px; }
+#itemTable th:nth-child(3), #itemTable td:nth-child(3) { width: 64px; }
 #itemTable th:nth-child(4), #itemTable td:nth-child(4) { width: 64px; }
 #itemTable th:nth-child(5), #itemTable td:nth-child(5) { width: 64px; }
 #itemTable th:nth-child(6), #itemTable td:nth-child(6) { width: 64px; }
 #itemTable th:nth-child(7), #itemTable td:nth-child(7) { width: 64px; }
 #itemTable th:nth-child(8), #itemTable td:nth-child(8) { width: 64px; }
 #itemTable th:nth-child(9), #itemTable td:nth-child(9) { width: 64px; }
-#itemTable th:nth-child(10), #itemTable td:nth-child(10) { width: 64px; }
-#itemTable th:nth-child(11), #itemTable td:nth-child(11) { width: 128px; }
-#itemTable th:nth-child(12), #itemTable td:nth-child(12) { width: 300px; }
+#itemTable th:nth-child(10), #itemTable td:nth-child(10) { width: 128px; }
+#itemTable th:nth-child(11), #itemTable td:nth-child(11) { width: 300px; }
 
 
 
@@ -294,7 +393,8 @@ html, body {
 /* Icon and name cell helpers */
 .icon-cell { width: 96px; text-align: center; }
 /* Ensure first column matches icon cell */
-#itemTable th:first-child, #itemTable td:first-child { width: 96px; }
+.item-cell { display: flex; gap: 12px; align-items: center; }
+#itemTable th:first-child, #itemTable td:first-child { width: 280px; }
 .name-cell {
   text-align: left;
   padding-left: 8px;
@@ -305,8 +405,29 @@ html, body {
   overflow-wrap: anywhere;
 }
 
-.sell-price { display:inline-flex; gap:6px; align-items:center; justify-content:flex-start; }
-.coin-img { width:18px; height:18px; object-fit:contain; }
+/* Ensure the combined Item cell displays icon and name on one line.
+   This overrides the generic table-cell display set earlier. */
+#itemTable td.item-cell {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+#itemTable td.item-cell .name-cell { padding-left: 0; }
+
+.sell-price {
+  /* each coin stack is a horizontal row: number + coin image */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 6px; /* space between different coin stacks */
+}
+/* keep a small space after the coin image, but no extra gap between number and image */
+.sell-price .coin-img, .coin-img { margin-right:6px; width:16px; height:16px; object-fit:contain; }
+
+/* Rows container for sell price stacks; group rows of up to 3 stacks */
+.sell-rows { display: flex; flex-direction: column; gap: 2px; }
+.sell-row { display: flex; flex-direction: row; gap: 0px; align-items: center; }
 
 /* Header background */
 .table-head {
@@ -407,5 +528,48 @@ html, body {
   font-weight: 800;
   color: #d9534f;
   letter-spacing: 1px;
+}
+
+/* Simple footer centering for the Ko‑fi button */
+.site-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 20px 0;
+  margin-top: 12px;
+}
+.site-footer .footer-inner {
+  width: min(680px, 92vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.site-footer .footer-inner a { display: inline-block; }
+.site-footer img { display: block; height: 36px; width: auto; border: 0; }
+
+/* Privacy link styling (centered and underlined, no functionality yet) */
+.privacy-link {
+  color: black;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+/* Container to control the Ko-fi widget size when drawn into the page */
+.kofi-container {
+  
+  max-width: 420px;
+  margin: 0 au;
+  scale: 0.1;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 420px) {
+  .kofi-container { width: min(300px, 92vw); }
+}
+
+/* Hide horizontal scrollbar in WebKit browsers but keep scrolling functional. */
+.table-wrap::-webkit-scrollbar {
+  height: 0;
 }
 

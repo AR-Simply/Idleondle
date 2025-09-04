@@ -191,18 +191,52 @@ function render(list) {
 }
 
 function selectGoalItem() {
-  // Based on the seed of today's date, pick a deterministic random item
-  const seedStr = new Date().toISOString().slice(0, 10).replace(/-/g, '');
-  const seed = Number(seedStr);
-  // Use a simple seeded PRNG (linear congruential generator)
-  let x = Math.abs(seed) % 2147483647;
-  x = (x * 48271) % 2147483647;
-  const r = x / 2147483647;
-  const index = Math.floor(r * items.length);
-  goalItem = items[index];
+  // PRNG
+  function mulberry32(a) {
+    return function() {
+      a |= 0; a = a + 0x6D2B79F5 | 0;
+      let t = Math.imul(a ^ a >>> 15, 1 | a);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    }
+  }
+
+  // Deterministic shuffle
+  function seededShuffle(array, seed) {
+    let rng = mulberry32(seed);
+    let a = array.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      let j = Math.floor(rng() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  // Local day index (midnight rollover in user's timezone)
+  function getLocalDayIndex() {
+    let now = new Date();
+    let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return Math.floor(startOfDay.getTime() / 86400000);
+  }
+
+  let dayIndex = getLocalDayIndex();
+
+  // Which cycle are we in? (reshuffle every full pass)
+  let cycle = Math.floor(dayIndex / items.length);
+
+  // Shuffle deterministically for this cycle
+  let shuffled = seededShuffle(items, cycle);
+
+  // Position inside cycle
+  let pos = dayIndex % items.length;
+
+  goalItem = shuffled[pos];
+
   if (goalItem) {
-   console.log('Goal item of the day:', goalItem);}
+    //console.log("Goal item of the day:", goalItem);
+  }
 }
+
 
 
 
@@ -270,6 +304,38 @@ function selectGoalItem() {
       input.value = "";
     }
   });
+
+  // Help modal wiring (How to Play)
+  const helpBtn = document.getElementById('helpBtn');
+  const helpModal = document.getElementById('helpModal');
+  const helpClose = document.getElementById('helpClose');
+  if (helpBtn && helpModal) {
+    helpBtn.addEventListener('click', () => {
+      helpModal.setAttribute('aria-hidden', 'false');
+    });
+  }
+  if (helpClose && helpModal) helpClose.addEventListener('click', () => { helpModal.setAttribute('aria-hidden', 'true'); });
+  if (helpModal) helpModal.addEventListener('click', (e) => { if (e.target === helpModal) helpModal.setAttribute('aria-hidden', 'true'); });
+
+  // About modal wiring
+  const aboutBtn = document.getElementById('aboutBtn');
+  const aboutModal = document.getElementById('aboutModal');
+  const aboutClose = document.getElementById('aboutClose');
+  if (aboutBtn && aboutModal) {
+    aboutBtn.addEventListener('click', () => { aboutModal.setAttribute('aria-hidden', 'false'); });
+  }
+  if (aboutClose && aboutModal) aboutClose.addEventListener('click', () => { aboutModal.setAttribute('aria-hidden', 'true'); });
+  if (aboutModal) aboutModal.addEventListener('click', (e) => { if (e.target === aboutModal) aboutModal.setAttribute('aria-hidden', 'true'); });
+
+  // Privacy modal wiring
+  const privacyLink = document.getElementById('privacyLink');
+  const privacyModal = document.getElementById('privacyModal');
+  const privacyClose = document.getElementById('privacyClose');
+  if (privacyLink && privacyModal) {
+    privacyLink.addEventListener('click', (e) => { e.preventDefault(); privacyModal.setAttribute('aria-hidden', 'false'); });
+  }
+  if (privacyClose && privacyModal) privacyClose.addEventListener('click', () => { privacyModal.setAttribute('aria-hidden', 'true'); });
+  if (privacyModal) privacyModal.addEventListener('click', (e) => { if (e.target === privacyModal) privacyModal.setAttribute('aria-hidden', 'true'); });
 })();
 
 function addToTable(it) {
@@ -321,8 +387,12 @@ function addToTable(it) {
       10000000000000000000000000000 // Eclipse
     ];
     const frag = document.createDocumentFragment();
+    const container = document.createElement('div');
+    container.className = 'sell-rows';
+    let row = document.createElement('div');
+    row.className = 'sell-row';
+    let inRow = 0;
     let remaining = n;
-    let shown = 0;
     for (let i = denominations.length - 1; i >= 0; i--) {
       const coinValue = denominations[i];
       const count = Math.floor(remaining / coinValue);
@@ -335,12 +405,18 @@ function addToTable(it) {
         img.src = `images/coins/${i+1}.png`;
         img.alt = 'coin';
         span.appendChild(img);
-        frag.appendChild(span);
+        row.appendChild(span);
         remaining -= count * coinValue;
-        shown++;
-        if (shown % 3 === 0) frag.appendChild(document.createElement('br'));
+        inRow++;
+        if (inRow === 3) {
+          container.appendChild(row);
+          row = document.createElement('div'); row.className = 'sell-row';
+          inRow = 0;
+        }
       }
     }
+    if (row.children.length > 0) container.appendChild(row);
+    frag.appendChild(container);
     return frag;
   }
 
@@ -350,19 +426,18 @@ function addToTable(it) {
     class: { type: 'red', value: it.raw.class || '', goal: goal?.raw?.class || '' },
     level_requirement: { type: 'yellow', value: it.raw.level_requirement || '0', goal: goal?.raw?.level_requirement || '0' },
     power: { type: 'yellow', value: it.raw.stats?.power || '0', goal: goal?.raw?.stats?.power || '0' },
-    Speed: { type: 'yellow', value: it.raw.stats?.Speed ? it.raw.stats.Speed.split(' ')[0] : '-', goal: goal?.raw?.stats?.Speed ? goal.raw.stats.Speed.split(' ')[0] : '-' },
+    Speed: { type: 'yellow', value: it.raw.stats?.Speed ? it.raw.stats.Speed.split(' ')[0] : '0', goal: goal?.raw?.stats?.Speed ? goal.raw.stats.Speed.split(' ')[0] : '0' },
     Strength: { type: 'yellow', value: it.raw.stats?.Strength || '0', goal: goal?.raw?.stats?.Strength || '0' },
     Agility: { type: 'yellow', value: it.raw.stats?.Agility || '0', goal: goal?.raw?.stats?.Agility || '0' },
     Wisdom: { type: 'yellow', value: it.raw.stats?.Wisdom || '0', goal: goal?.raw?.stats?.Wisdom || '0' },
     Luck: { type: 'yellow', value: it.raw.stats?.Luck || '0', goal: goal?.raw?.stats?.Luck || '0' },
-    sell_price: { type: 'yellow', value: it.raw.sell_price || '-', goal: goal?.raw?.sell_price || '-' },
+    sell_price: { type: 'yellow', value: it.raw.sell_price || '-', goal: goal?.raw?.sell_price || '0' },
     source: { type: 'red', value: it.raw.source ? it.raw.source.split('(')[0].trim() : '-', goal: goal?.raw?.source ? goal.raw.source.split('(')[0].trim() : '-' }
   };
 
-  // Build cells
+  // Build cells (first cell is combined Item: icon + name)
   const cells = [
-    { type: 'icon' },
-    { type: 'text', html: it.name },
+    { type: 'item', html: it.name, icon: it.icon },
     // class
     { type: 'red', key: 'class' },
     // level req
@@ -390,26 +465,25 @@ function addToTable(it) {
 
   // Build cells using DOM APIs (no inline styles)
   for (const cell of cells) {
-  const td = document.createElement('td');
-  // mark for staggered fade-in
-  td.classList.add('cell-fade');
+    const td = document.createElement('td');
+    // mark for staggered fade-in
+    td.classList.add('cell-fade');
     // default padding/box handled by CSS (.table-panel td)
-    if (cell.type === 'icon') {
-      td.classList.add('icon-cell');
+    if (cell.type === 'item') {
+      td.classList.add('item-cell');
+      // icon
       const img = document.createElement('img');
-      img.src = it.icon;
-      img.alt = it.name;
+      img.src = cell.icon || it.icon;
+      img.alt = it.name || cell.html || '';
       img.className = 'item-icon';
       img.onerror = () => { img.src = placeholder(); };
       td.appendChild(img);
-  row.appendChild(td);
-      continue;
-    }
-
-    if (cell.type === 'text') {
-      td.classList.add('name-cell');
-      td.textContent = cell.html || '';
-  row.appendChild(td);
+      // name
+      const nameWrap = document.createElement('div');
+      nameWrap.className = 'name-cell';
+      nameWrap.textContent = cell.html || it.name || '';
+      td.appendChild(nameWrap);
+      row.appendChild(td);
       continue;
     }
 
@@ -563,32 +637,38 @@ function updateClueState() {
   const btnCategory = document.getElementById('guessBtn2');
   const note1 = document.getElementById('note1');
   const note2 = document.getElementById('note2');
-  if (!btnWorld || !btnCategory || !note1 || !note2) return;
+  // compute remaining counts (safe even if CLUE_UNLOCKS not set)
+  const remainingWorld = Math.max(0, (CLUE_UNLOCKS.world || 0) - guessCount);
+  const remainingCategory = Math.max(0, (CLUE_UNLOCKS.category || 0) - guessCount);
 
-  const remainingWorld = Math.max(0, CLUE_UNLOCKS.world - guessCount);
-  const remainingCategory = Math.max(0, CLUE_UNLOCKS.category - guessCount);
-
-  // World clue
-  if (remainingWorld > 0) {
-    btnWorld.disabled = true;
-    btnWorld.classList.add('locked');
-    note1.textContent = `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}`;
-  } else {
-    btnWorld.disabled = false;
-    btnWorld.classList.remove('locked');
-    // remove state text when unlocked
-    note1.textContent = '';
+  // World clue (update only if element exists)
+  if (btnWorld) {
+    if (remainingWorld > 0) {
+      btnWorld.disabled = true;
+      btnWorld.classList.add('locked');
+      if (note1) note1.textContent = `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}`;
+    } else {
+      btnWorld.disabled = false;
+      btnWorld.classList.remove('locked');
+      if (note1) note1.textContent = '';
+    }
+  } else if (note1) {
+    // if button is missing but note exists, still display remaining
+    note1.textContent = remainingWorld > 0 ? `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}` : '';
   }
 
-  // Category clue
-  if (remainingCategory > 0) {
-    btnCategory.disabled = true;
-    btnCategory.classList.add('locked');
-    note2.textContent = `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}`;
-  } else {
-    btnCategory.disabled = false;
-    btnCategory.classList.remove('locked');
-    // remove state text when unlocked
-    note2.textContent = '';
+  // Category clue (update only if element exists)
+  if (btnCategory) {
+    if (remainingCategory > 0) {
+      btnCategory.disabled = true;
+      btnCategory.classList.add('locked');
+      if (note2) note2.textContent = `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}`;
+    } else {
+      btnCategory.disabled = false;
+      btnCategory.classList.remove('locked');
+      if (note2) note2.textContent = '';
+    }
+  } else if (note2) {
+    note2.textContent = remainingCategory > 0 ? `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}` : '';
   }
 }

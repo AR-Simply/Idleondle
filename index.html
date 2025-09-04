@@ -12,23 +12,63 @@
 </head>
 <body>
   <div class="center">
-    <div class="guess-box combo-guess" id="guessBox">
-      <div class="guess-title">Guess today's Idleon Item!</div>
-      <div class="guess-actions">
-        <div class="clue-wrap">
-          <button id="guessBtn1" class="guess-btn" aria-label="Guess button 1">Upgrade Slots Clue</button>
-          <div class="clue-note" id="note1">Unlocks in 0 guesses</div>
+    <img src="images/title.png" alt="Idleondle title" class="site-title" />
+
+    <div class="top-row">
+      <div class="guess-box combo-guess" id="guessBox">
+        <div class="guess-title">Guess today's IdleOn Item!</div>
+        <div class="guess-actions">
+          <!--
+          <div class="clue-wrap">
+              <button id="guessBtn1" class="guess-btn" aria-label="Guess button 1">Upgrade Slots Clue</button>
+              <div class="clue-note" id="note1">Unlocks in 0 guesses</div>
+            </div>
+          -->
+          <div class="clue-wrap">
+            <button id="guessBtn2" class="guess-btn" aria-label="Guess button 2">Category Clue</button>
+            <div class="clue-note" id="note2">Unlocks in 0 guesses</div>
+          </div>
         </div>
-        <div class="clue-wrap">
-          <button id="guessBtn2" class="guess-btn" aria-label="Guess button 2">Category Clue</button>
-          <div class="clue-note" id="note2">Unlocks in 0 guesses</div>
+
+        <!-- About modal -->
+        <div id="aboutModal" class="goal-modal" aria-hidden="true">
+          <div class="goal-panel">
+            <button class="goal-close" id="aboutClose" aria-label="Close">✕</button>
+            <h2 class="goal-title">ABOUT</h2>
+            <div class="goal-body">
+              <div style="text-align:left; font-size:14px; color:#111;">
+                <p><strong>IdleOn</strong> is a registered trademark of Lavaflame2. <strong>Idleondle</strong> is an independent project and is not affiliated with, endorsed by, or sponsored by Lavaflame2, IdleOn or any of its subsidiaries. All trademarks, service marks, trade names, and logos referenced herein remain the property of their respective owners. Any use of these names or marks is solely for descriptive purposes and does not imply any association or partnership.</p>
+
+                <p>Idleondle is inspired by games like <a href="https://www.nytimes.com/games/wordle/index.html?from=onepiecedle.net_with_love" target="_blank" rel="noopener">Wordle</a> and <a href="https://onepiecedle.net/" target="_blank" rel="noopener">Onepiecedle</a>.</p>
+
+                <p>The background, all items, icons and related properties are from <a href="https://store.steampowered.com/app/1476970/IdleOn__The_Idle_RPG/" target="_blank" rel="noopener">IdleOn</a>. Button icons are from <a href="https://www.flaticon.com/" target="_blank" rel="noopener">Flaticon</a>.</p>
+
+                <h3>FEEDBACK/QUESTIONS</h3>
+                <p>You can get in touch with us at the following email: <a href="mailto:support@ar-simply.com">support@ar-simply.com</a></p>
+
+                <p>We hope you enjoy the game!<br/>Remember to do alchemy.<br/><strong>Tobias and Frederik</strong></p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="side-box" id="sideBox" aria-hidden="true">
+  <button id="helpBtn" class="icon-btn" aria-label="Question button">
+          <img src="images/question.png" alt="question" />
+        </button>
+        <button id="aboutBtn" class="icon-btn" aria-label="Info button">
+          <img src="images/info.png" alt="info" />
+        </button>
+        <a class="icon-btn" href="https://ko-fi.com/S6S51KOEMK" target="_blank" rel="noopener noreferrer" aria-label="Ko-fi link">
+          <img src="images/kofi.png" alt="Buy Me a Coffee at ko-fi.com" style="height:24px;border:0;" />
+        </a>
       </div>
     </div>
 
     <div class="combo" id="combo">
       <div class="input-wrap">
-        <input id="search" type="text" placeholder="Type item name..." autocomplete="off" />
+        <input id="search" type="text" placeholder="Type the name of an IdleOn item..." autocomplete="off" />
         <span class="kbd">Enter</span>
       </div>
      
@@ -42,8 +82,7 @@
   <table id="itemTable" class="table-panel">
         <thead>
           <tr class="table-head">
-            <th class="th-left">Icon</th>
-            <th class="th-left">Name</th>
+            <th class="th-left">Item</th>
             <th class="stat-col">Class</th>
             <th class="stat-col">Level Req</th>
             <th class="stat-col">Power</th>
@@ -79,7 +118,83 @@
           </div>
         </div>
 
+        <!-- How to Play modal -->
+        <div id="helpModal" class="goal-modal" aria-hidden="true">
+          <div class="goal-panel">
+            <button class="goal-close" id="helpClose" aria-label="Close">✕</button>
+            <h2 class="goal-title">HOW TO PLAY?</h2>
+            <div class="goal-body">
+              <div style="text-align:left; font-size:14px; color:#111;">
+                <p>Guess today's item from the game "IdleOn". It changes every 24h.</p>
+                <p>Type in the name of an item and it will reveal its properties. The color of the tiles will change to show how close your guess was to the daily item.</p>
+                <ul>
+                  <li><strong>Green</strong> indicates the property is an exact match.</li>
+                  <li><strong>Red</strong> indicates the property is wrong.</li>
+                  <li>⬇️ ⬆️ indicates if the answer is above or below your guess.</li>
+                </ul>
+                <p>With each guess you learn more details about the daily item, until you are able to find it. If you need help, you can unlock a clue about the category of the item after a certain number of guesses.</p>
+                <h3>PROPERTIES:</h3>
+                <ul>
+                  <li><strong>Class:</strong> Which class can equip the item</li>
+                  <li><strong>Level Req:</strong> What level is required to equip the item</li>
+                  <li><strong>Power:</strong> Any kind of power on the item, such as attack power, mining power, catching power and so on.</li>
+                  <li><strong>Stats:</strong> The amount of a stat on the item.</li>
+                  <li><strong>Sell price:</strong> How much the item sells for.</li>
+                  <li><strong>Source:</strong> Where the item comes from.</li>
+                </ul>
+                <p><strong>Good luck and have fun!</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </div> <!-- .center -->
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+  <a id="privacyLink" class="privacy-link" href="#">Privacy Policy</a>
+      </div>
+    </footer>
+
+        <!-- Privacy Policy modal -->
+        <div id="privacyModal" class="goal-modal" aria-hidden="true">
+          <div class="goal-panel">
+            <button class="goal-close" id="privacyClose" aria-label="Close">✕</button>
+            <h2 class="goal-title">Privacy Policy</h2>
+            <div class="goal-body">
+              <div style="text-align:left; font-size:14px; color:#111; max-height:60vh; overflow:auto;">
+                <p><strong>Effective Date:</strong> 04/09 2025</p>
+                <p>This Privacy Policy explains how this website collects, uses, and protects personal data in accordance with the General Data Protection Regulation (GDPR) and other applicable EU data protection laws.</p>
+
+                <h3>Data Collection</h3>
+                <p>This website does not directly collect, store, or process personal data of visitors. No user accounts, contact forms, or databases are maintained. No cookies are set or stored by this website for purposes under its direct control.</p>
+
+                <h3>Google AdSense</h3>
+                <p>This website displays advertisements through Google AdSense. Google, as a third-party vendor, uses cookies to serve ads based on users’ prior visits to this and other websites. Google’s use of advertising cookies enables it and its partners to serve personalized ads to users based on their interests.</p>
+                <p>Users in the European Union will be presented with a consent mechanism before personalized ads are shown. Consent choices can be managed or withdrawn at any time. Non-personalized ads may also be served.</p>
+                <p>For more information on how Google processes personal data in advertising, refer to Google’s Privacy &amp; Terms: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">https://policies.google.com/technologies/ads</a>.</p>
+
+                <h3>Legal Basis for Processing</h3>
+                <p>The processing of data through Google AdSense is based on user consent under Article 6(1)(a) GDPR.</p>
+
+                <h3>Data Sharing</h3>
+                <p>This website does not share personal data with third parties except as necessary for Google AdSense.</p>
+
+                <h3>User Rights</h3>
+                <p>Under GDPR, users have the right to access, rectify, erase, or restrict processing of their personal data, the right to data portability, and the right to withdraw consent at any time. Users may also lodge a complaint with a supervisory authority.</p>
+
+                <h3>Contact</h3>
+                <p>For any concerns regarding this Privacy Policy or data protection matters, contact:<br/>
+                AR-Simply<br/>
+                Niels Jernes Vej 10, 9220 Aalborg Øst, Denmark<br/>
+                <a href="mailto:support@ar-simply.com">support@ar-simply.com</a></p>
+
+                <h3>Updates</h3>
+                <p>This Privacy Policy may be updated to remain compliant with legal requirements. Any changes will be reflected on this page with a revised effective date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
     <script src="website.js"></script>
   </body>
