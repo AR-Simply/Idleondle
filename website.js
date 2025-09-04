@@ -17,7 +17,7 @@ let guessCount = 0;
 // Clue unlock thresholds (number of guesses required to unlock)
 const CLUE_UNLOCKS = {
   world: 4,      // world clue unlocks after 2 guesses
-  category: 7    // category clue unlocks after 4 guesses
+  category: 5    // category clue unlocks after 4 guesses
 };
 
 // ---------- Utils ----------
