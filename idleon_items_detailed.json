@@ -169,19 +169,6 @@
     }
   },
   "Wands": {
-    "Arcanist Staff": {
-      "icon": "images\\Wands\\Arcanist Staff.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Wands",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "20",
-        "Speed": "5 (Medium)",
-        "Reach": "80"
-      },
-      "class": "Mage"
-    },
     "Cattle Core Soothsayer Staff": {
       "icon": "images\\Wands\\Cattle Core Soothsayer Staff.png",
       "level_requirement": "160",
@@ -278,22 +265,6 @@
       },
       "class": "Mage"
     },
-    "Microphone": {
-      "icon": "images\\Wands\\Microphone.png",
-      "level_requirement": "1",
-      "sell_price": 200,
-      "type": "Wands",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "13",
-        "Speed": "8 (Faster)",
-        "Agility": "5",
-        "Wisdom": "9",
-        "Reach": "160",
-        "Upgrade Slots": "3"
-      },
-      "class": "Mage"
-    },
     "Quarterstaff": {
       "icon": "images\\Wands\\Quarterstaff.png",
       "level_requirement": "12",
@@ -338,22 +309,6 @@
         "Wisdom": "70",
         "Reach": "310",
         "Upgrade Slots": "6"
-      },
-      "class": "Mage"
-    },
-    "Spriggly Staff": {
-      "icon": "images\\Wands\\Spriggly Staff.png",
-      "level_requirement": "1",
-      "sell_price": 200,
-      "type": "Wands",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "25",
-        "Speed": "5 (Medium)",
-        "Wisdom": "15",
-        "Luck": "1",
-        "Reach": "160",
-        "Upgrade Slots": "2"
       },
       "class": "Mage"
     },
@@ -407,24 +362,6 @@
     }
   },
   "Spears": {
-    "Blood Screamer": {
-      "icon": "images\\Spears\\Blood Screamer.png",
-      "level_requirement": "55",
-      "sell_price": 200,
-      "type": "Spears",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "87",
-        "Speed": "10 (Supersonic)",
-        "Strength": "5",
-        "Agility": "15",
-        "Wisdom": "5",
-        "Luck": "5",
-        "Reach": "84",
-        "Upgrade Slots": "2"
-      },
-      "class": "Warrior"
-    },
     "Deuscythe": {
       "icon": "images\\Spears\\Deuscythe.png",
       "level_requirement": "90",
@@ -483,57 +420,6 @@
         "Wisdom": "4",
         "Reach": "80",
         "Upgrade Slots": "3"
-      },
-      "class": "Warrior"
-    },
-    "Flesh Reaper": {
-      "icon": "images\\Spears\\Flesh Reaper.png",
-      "level_requirement": "1",
-      "sell_price": 40,
-      "type": "Spears",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "2500",
-        "Speed": "9 (Turbo)",
-        "Strength": "10000",
-        "Agility": "2500",
-        "Wisdom": "1000",
-        "Luck": "4200",
-        "Reach": "70"
-      },
-      "class": "All"
-    },
-    "Frozen Impaler": {
-      "icon": "images\\Spears\\Frozen Impaler.png",
-      "level_requirement": "45",
-      "sell_price": 120,
-      "type": "Spears",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "66",
-        "Speed": "3 (Slower)",
-        "Strength": "4",
-        "Agility": "2",
-        "Wisdom": "9",
-        "Luck": "2",
-        "Reach": "100",
-        "Upgrade Slots": "2"
-      },
-      "class": "Warrior"
-    },
-    "Iron Sword": {
-      "icon": "images\\Spears\\Iron Sword.png",
-      "level_requirement": "1",
-      "sell_price": 200,
-      "type": "Spears",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "32",
-        "Speed": "10 (Supersonic)",
-        "Strength": "3",
-        "Luck": "1",
-        "Reach": "78",
-        "Upgrade Slots": "2"
       },
       "class": "Warrior"
     },
@@ -625,23 +511,6 @@
         "Strength": "7",
         "Wisdom": "3",
         "Reach": "62",
-        "Upgrade Slots": "2"
-      },
-      "class": "Warrior"
-    },
-    "Steel Spear": {
-      "icon": "images\\Spears\\Steel Spear.png",
-      "level_requirement": "25",
-      "sell_price": 223400,
-      "type": "Spears",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "40",
-        "Speed": "2 (Sluggish)",
-        "Strength": "2",
-        "Wisdom": "3",
-        "Luck": "1",
-        "Reach": "90",
         "Upgrade Slots": "2"
       },
       "class": "Warrior"
@@ -803,23 +672,6 @@
         "Agility": "52",
         "Reach": "350",
         "Upgrade Slots": "6"
-      },
-      "class": "Archer"
-    },
-    "Rooted Bow": {
-      "icon": "images\\Bows\\Rooted Bow.png",
-      "level_requirement": "25",
-      "sell_price": 200,
-      "type": "Bows",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "25",
-        "Speed": "7 (Fast)",
-        "Strength": "18",
-        "Agility": "15",
-        "Luck": "1",
-        "Reach": "200",
-        "Upgrade Slots": "2"
       },
       "class": "Archer"
     },
@@ -1149,23 +1001,6 @@
       },
       "class": "All"
     },
-    "Demon Horns": {
-      "icon": "images\\Helmets\\Demon Horns.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Helmets",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "400",
-        "Strength": "3000",
-        "Agility": "3000",
-        "Wisdom": "3000",
-        "Luck": "3000",
-        "Defence": "10000",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Diabolical Headcase": {
       "icon": "images\\Helmets\\Diabolical Headcase.png",
       "level_requirement": "135",
@@ -1246,20 +1081,6 @@
         "Wisdom": "1",
         "Defence": "3",
         "Upgrade Slots": "1"
-      },
-      "class": "All"
-    },
-    "Farmer Brimer": {
-      "icon": "images\\Helmets\\Farmer Brimer.png",
-      "level_requirement": "3",
-      "sell_price": 150,
-      "type": "Helmets",
-      "source": "Unobtainable",
-      "stats": {
-        "Agility": "4",
-        "Wisdom": "2",
-        "Defence": "4",
-        "Upgrade Slots": "2"
       },
       "class": "All"
     },
@@ -1347,19 +1168,6 @@
         "Upgrade Slots": "7"
       },
       "class": "All"
-    },
-    "Ice Cream Sunday": {
-      "icon": "images\\Helmets\\Ice Cream Sunday.png",
-      "level_requirement": "30",
-      "sell_price": 200,
-      "type": "Helmets",
-      "source": "Unobtainable",
-      "stats": {
-        "Wisdom": "6",
-        "Defence": "5",
-        "Upgrade Slots": "5"
-      },
-      "class": "Beginner"
     },
     "Ice Guard Helmet": {
       "icon": "images\\Helmets\\Ice Guard Helmet.png",
@@ -1529,21 +1337,6 @@
       },
       "class": "Warrior"
     },
-    "Nondescript Game Show Host Hair": {
-      "icon": "images\\Helmets\\Nondescript Game Show Host Hair.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Helmets",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "100",
-        "Strength": "25",
-        "Agility": "40",
-        "Luck": "50",
-        "Upgrade Slots": "8"
-      },
-      "class": "All"
-    },
     "Nuget Cake Fedora": {
       "icon": "images\\Helmets\\Nuget Cake Fedora.png",
       "level_requirement": "40",
@@ -1640,19 +1433,6 @@
       },
       "class": "All"
     },
-    "Red Headband": {
-      "icon": "images\\Helmets\\Red Headband.png",
-      "level_requirement": "1",
-      "sell_price": 200,
-      "type": "Helmets",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "2",
-        "Luck": "2",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Royal Turban": {
       "icon": "images\\Helmets\\Royal Turban.png",
       "level_requirement": "70",
@@ -1723,19 +1503,6 @@
         "Upgrade Slots": "3"
       },
       "class": "Archer"
-    },
-    "Slime Cap": {
-      "icon": "images\\Helmets\\Slime Cap.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Helmets",
-      "source": "Unobtainable",
-      "stats": {
-        "Agility": "4",
-        "Luck": "2",
-        "Upgrade Slots": "4"
-      },
-      "class": "Beginner"
     },
     "Steam Cap": {
       "icon": "images\\Helmets\\Steam Cap.png",
@@ -1845,19 +1612,6 @@
       "stats": {
         "Luck": "1",
         "Upgrade Slots": "1"
-      },
-      "class": "All"
-    },
-    "Trojan Helmet": {
-      "icon": "images\\Helmets\\Trojan Helmet.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Helmets",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "2",
-        "Agility": "2",
-        "Upgrade Slots": "2"
       },
       "class": "All"
     },
@@ -2288,21 +2042,6 @@
       },
       "class": "Beginner"
     },
-    "Molten Chest": {
-      "icon": "images\\Shirts\\Molten Chest.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Shirts",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "Warrior"
-    },
     "Orange Tee": {
       "icon": "images\\Shirts\\Orange Tee.png",
       "level_requirement": "2",
@@ -2317,21 +2056,6 @@
         "Upgrade Slots": "1"
       },
       "class": "All"
-    },
-    "Paralax Chest": {
-      "icon": "images\\Shirts\\Paralax Chest.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Shirts",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "Warrior"
     },
     "Planktop": {
       "icon": "images\\Shirts\\Planktop.png",
@@ -2371,21 +2095,6 @@
         "Wisdom": "3",
         "Defence": "3",
         "Upgrade Slots": "1"
-      },
-      "class": "All"
-    },
-    "REPLACE ME": {
-      "icon": "images\\Shirts\\REPLACE ME.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Shirts",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
       },
       "class": "All"
     },
@@ -2449,21 +2158,6 @@
         "Upgrade Slots": "3"
       },
       "class": "Warrior"
-    },
-    "Tanned Hide": {
-      "icon": "images\\Shirts\\Tanned Hide.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Shirts",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "Archer"
     },
     "Tattered Cloth": {
       "icon": "images\\Shirts\\Tattered Cloth.png",
@@ -2541,20 +2235,6 @@
       },
       "class": "All"
     },
-    "Ancient Leggings": {
-      "icon": "images\\Pants\\Ancient Leggings.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Pants",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Bandito Pantaloon": {
       "icon": "images\\Pants\\Bandito Pantaloon.png",
       "level_requirement": "35",
@@ -2611,21 +2291,6 @@
         "Upgrade Slots": "2"
       },
       "class": "All"
-    },
-    "Crystallax Shins": {
-      "icon": "images\\Pants\\Crystallax Shins.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Pants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "Warrior"
     },
     "Dementia Shins": {
       "icon": "images\\Pants\\Dementia Shins.png",
@@ -2715,35 +2380,6 @@
         "Upgrade Slots": "3"
       },
       "class": "All"
-    },
-    "Forensic Leggings": {
-      "icon": "images\\Pants\\Forensic Leggings.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Pants",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
-    "Gilded Pilates": {
-      "icon": "images\\Pants\\Gilded Pilates.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Pants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "Warrior"
     },
     "Give Up On Life Pants": {
       "icon": "images\\Pants\\Give Up On Life Pants.png",
@@ -2835,20 +2471,6 @@
         "Luck": "50",
         "Defence": "140",
         "Upgrade Slots": "9"
-      },
-      "class": "All"
-    },
-    "Merchantile Pants": {
-      "icon": "images\\Pants\\Merchantile Pants.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Pants",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
       },
       "class": "All"
     },
@@ -2958,20 +2580,6 @@
         "Wisdom": "9",
         "Defence": "38",
         "Upgrade Slots": "4"
-      },
-      "class": "All"
-    },
-    "Yellow Belt Ninja Pants": {
-      "icon": "images\\Pants\\Yellow Belt Ninja Pants.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Pants",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
       },
       "class": "All"
     }
@@ -3561,20 +3169,6 @@
         "Upgrade Slots": "4"
       },
       "class": "All"
-    },
-    "Wood Fishing Rod": {
-      "icon": "images\\Fishing Rods\\Wood Fishing Rod.png",
-      "level_requirement": "2",
-      "sell_price": 200,
-      "type": "Fishing Rods",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "3",
-        "Speed": "3 (Slower)",
-        "Strength": "1",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
     }
   },
   "Shoes": {
@@ -3618,19 +3212,6 @@
         "Upgrade Slots": "3"
       },
       "class": "All"
-    },
-    "Cauldrunners": {
-      "icon": "images\\Shoes\\Cauldrunners.png",
-      "level_requirement": "30",
-      "sell_price": 200,
-      "type": "Shoes",
-      "source": "Unobtainable",
-      "stats": {
-        "Wisdom": "9",
-        "Defence": "4",
-        "Upgrade Slots": "3"
-      },
-      "class": "Mage"
     },
     "Cavern Trekkers": {
       "icon": "images\\Shoes\\Cavern Trekkers.png",
@@ -3826,18 +3407,6 @@
       },
       "class": "All"
     },
-    "Eyern Boots": {
-      "icon": "images\\Shoes\\Eyern Boots.png",
-      "level_requirement": "15",
-      "sell_price": 20,
-      "type": "Shoes",
-      "source": "Unobtainable",
-      "stats": {
-        "Defence": "1",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Fiberous Footings": {
       "icon": "images\\Shoes\\Fiberous Footings.png",
       "level_requirement": "110",
@@ -3851,20 +3420,6 @@
       },
       "class": "All"
     },
-    "Flap Flops": {
-      "icon": "images\\Shoes\\Flap Flops.png",
-      "level_requirement": "10",
-      "sell_price": 200,
-      "type": "Shoes",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Flip Flops": {
       "icon": "images\\Shoes\\Flip Flops.png",
       "level_requirement": "4",
@@ -3874,48 +3429,6 @@
       "stats": {
         "Agility": "3",
         "Upgrade Slots": "1"
-      },
-      "class": "All"
-    },
-    "Floop Flops": {
-      "icon": "images\\Shoes\\Floop Flops.png",
-      "level_requirement": "25",
-      "sell_price": 200,
-      "type": "Shoes",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
-    "Flux Flops": {
-      "icon": "images\\Shoes\\Flux Flops.png",
-      "level_requirement": "50",
-      "sell_price": 200,
-      "type": "Shoes",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "5",
-        "Agility": "3",
-        "Luck": "8",
-        "Defence": "40",
-        "Upgrade Slots": "3"
-      },
-      "class": "All"
-    },
-    "Gaia Shoes": {
-      "icon": "images\\Shoes\\Gaia Shoes.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Shoes",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "2",
-        "Agility": "6",
-        "Upgrade Slots": "2"
       },
       "class": "All"
     },
@@ -3947,21 +3460,6 @@
         "Wisdom": "2",
         "Luck": "2",
         "Upgrade Slots": "3"
-      },
-      "class": "All"
-    },
-    "Hermes Boots": {
-      "icon": "images\\Shoes\\Hermes Boots.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Shoes",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
       },
       "class": "All"
     },
@@ -4142,40 +3640,9 @@
         "Upgrade Slots": "4"
       },
       "class": "All"
-    },
-    "Yeti Walkers": {
-      "icon": "images\\Shoes\\Yeti Walkers.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Shoes",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
     }
   },
   "Pendants": {
-    "Blubbery Icey": {
-      "icon": "images\\Pendants\\Blubbery Icey.png",
-      "level_requirement": "1",
-      "sell_price": 420,
-      "type": "Pendants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "10",
-        "Strength": "3",
-        "Agility": "3",
-        "Wisdom": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Carrot Horror": {
       "icon": "images\\Pendants\\Carrot Horror.png",
       "level_requirement": "14",
@@ -4239,22 +3706,6 @@
       "stats": {
         "power": "8",
         "Upgrade Slots": "4"
-      },
-      "class": "All"
-    },
-    "Chocotastic Icey": {
-      "icon": "images\\Pendants\\Chocotastic Icey.png",
-      "level_requirement": "1",
-      "sell_price": 420,
-      "type": "Pendants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "7",
-        "Strength": "3",
-        "Agility": "3",
-        "Wisdom": "3",
-        "Luck": "3",
-        "Upgrade Slots": "1"
       },
       "class": "All"
     },
@@ -4351,38 +3802,6 @@
       },
       "class": "All"
     },
-    "Lava Icey": {
-      "icon": "images\\Pendants\\Lava Icey.png",
-      "level_requirement": "1",
-      "sell_price": 420,
-      "type": "Pendants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "12",
-        "Strength": "4",
-        "Agility": "4",
-        "Wisdom": "4",
-        "Luck": "4",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
-    "Legends Icey": {
-      "icon": "images\\Pendants\\Legends Icey.png",
-      "level_requirement": "1",
-      "sell_price": 27,
-      "type": "Pendants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "15",
-        "Strength": "5",
-        "Agility": "5",
-        "Wisdom": "5",
-        "Luck": "5",
-        "Upgrade Slots": "3"
-      },
-      "class": "All"
-    },
     "Little Wooden Katana": {
       "icon": "images\\Pendants\\Little Wooden Katana.png",
       "level_requirement": "1",
@@ -4393,36 +3812,6 @@
         "Strength": "2",
         "Agility": "1",
         "Upgrade Slots": "1"
-      },
-      "class": "All"
-    },
-    "Lucky Fish Head": {
-      "icon": "images\\Pendants\\Lucky Fish Head.png",
-      "level_requirement": "20",
-      "sell_price": 6500,
-      "type": "Pendants",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "2",
-        "Agility": "2",
-        "Wisdom": "2",
-        "Luck": "5",
-        "Upgrade Slots": "3"
-      },
-      "class": "All"
-    },
-    "Mint Icey": {
-      "icon": "images\\Pendants\\Mint Icey.png",
-      "level_requirement": "1",
-      "sell_price": 420,
-      "type": "Pendants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "1",
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Luck": "1"
       },
       "class": "All"
     },
@@ -4450,53 +3839,6 @@
         "power": "6",
         "Defence": "5",
         "Upgrade Slots": "3"
-      },
-      "class": "All"
-    },
-    "Quartz Pendant": {
-      "icon": "images\\Pendants\\Quartz Pendant.png",
-      "level_requirement": "20",
-      "sell_price": 6500,
-      "type": "Pendants",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "2",
-        "Agility": "2",
-        "Wisdom": "2",
-        "Luck": "5",
-        "Upgrade Slots": "3"
-      },
-      "class": "All"
-    },
-    "Rainbo Icey": {
-      "icon": "images\\Pendants\\Rainbo Icey.png",
-      "level_requirement": "1",
-      "sell_price": 420,
-      "type": "Pendants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "2",
-        "Agility": "2",
-        "Wisdom": "2",
-        "Luck": "2",
-        "Upgrade Slots": "1"
-      },
-      "class": "All"
-    },
-    "Rok Road Icey": {
-      "icon": "images\\Pendants\\Rok Road Icey.png",
-      "level_requirement": "1",
-      "sell_price": 420,
-      "type": "Pendants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "3",
-        "Strength": "2",
-        "Agility": "2",
-        "Wisdom": "2",
-        "Luck": "2",
-        "Upgrade Slots": "1"
       },
       "class": "All"
     },
@@ -4541,21 +3883,6 @@
       },
       "class": "All"
     },
-    "Strawbu Icey": {
-      "icon": "images\\Pendants\\Strawbu Icey.png",
-      "level_requirement": "1",
-      "sell_price": 420,
-      "type": "Pendants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "2",
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Luck": "1"
-      },
-      "class": "All"
-    },
     "Strung Bludgeon": {
       "icon": "images\\Pendants\\Strung Bludgeon.png",
       "level_requirement": "20",
@@ -4565,20 +3892,6 @@
       "stats": {
         "power": "4",
         "Upgrade Slots": "3"
-      },
-      "class": "All"
-    },
-    "Strung Steamy": {
-      "icon": "images\\Pendants\\Strung Steamy.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Pendants",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Luck": "3"
       },
       "class": "All"
     },
@@ -4672,15 +3985,6 @@
         "Upgrade Slots": "3"
       },
       "class": "All"
-    },
-    "Cultist Ring": {
-      "icon": "images\\Rings\\Cultist Ring.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Rings",
-      "source": "Unobtainable",
-      "stats": {},
-      "class": "Mage"
     },
     "Dawn Stopwatch": {
       "icon": "images\\Rings\\Dawn Stopwatch.png",
@@ -4816,21 +4120,6 @@
       },
       "class": "All"
     },
-    "Gold Ring": {
-      "icon": "images\\Rings\\Gold Ring.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Rings",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Lab Ring": {
       "icon": "images\\Rings\\Lab Ring.png",
       "level_requirement": "100",
@@ -4865,21 +4154,6 @@
         "power": "3",
         "Defence": "3",
         "Upgrade Slots": "3"
-      },
-      "class": "All"
-    },
-    "Molden Crust": {
-      "icon": "images\\Rings\\Molden Crust.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Rings",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
       },
       "class": "All"
     },
@@ -5032,32 +4306,6 @@
       },
       "class": "All"
     },
-    "Spikeweed Ring": {
-      "icon": "images\\Rings\\Spikeweed Ring.png",
-      "level_requirement": "9",
-      "sell_price": 2500,
-      "type": "Rings",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "3",
-        "Strength": "6",
-        "Agility": "2",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
-    "Spirit Killer Ring": {
-      "icon": "images\\Rings\\Spirit Killer Ring.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Rings",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "6",
-        "Defence": "6"
-      },
-      "class": "All"
-    },
     "Steel Band": {
       "icon": "images\\Rings\\Steel Band.png",
       "level_requirement": "15",
@@ -5102,36 +4350,6 @@
       },
       "class": "All"
     },
-    "The Used Bandaid": {
-      "icon": "images\\Rings\\The Used Bandaid.png",
-      "level_requirement": "9",
-      "sell_price": 2500,
-      "type": "Rings",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "3",
-        "Strength": "6",
-        "Agility": "4",
-        "Luck": "1",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
-    "Toxic Bubbles Band": {
-      "icon": "images\\Rings\\Toxic Bubbles Band.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Rings",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Tundra Killer Ring": {
       "icon": "images\\Rings\\Tundra Killer Ring.png",
       "level_requirement": "1",
@@ -5163,20 +4381,6 @@
     }
   },
   "Bug Catching Nets": {
-    "Bug Net": {
-      "icon": "images\\Bug Catching Nets\\Bug Net.png",
-      "level_requirement": "2",
-      "sell_price": 100,
-      "type": "Bug Catching Nets",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "4",
-        "Speed": "4 (Slow)",
-        "Agility": "2",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Copper Netted Net": {
       "icon": "images\\Bug Catching Nets\\Copper Netted Net.png",
       "level_requirement": "4",

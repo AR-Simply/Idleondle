@@ -222,7 +222,7 @@ function selectGoalItem() {
   let dayIndex = getLocalDayIndex();
 
   // Which cycle are we in? (reshuffle every full pass)
-  let cycle = Math.floor(dayIndex / items.length);
+  let cycle = Math.floor(dayIndex / items.length)+2;
 
   // Shuffle deterministically for this cycle
   let shuffled = seededShuffle(items, cycle);
@@ -562,6 +562,31 @@ function addToTable(it) {
   // If this is the goal item, show the modal after the last cell's animation completes + 1s
   try {
     if (goalItem && it && it.name === goalItem.name) {
+      // Ensure the dropdown and its wrapper are fully hidden when the user guessed the goal item
+      try {
+        const dropdownEl = document.getElementById('dropdown');
+        if (dropdownEl) {
+          dropdownEl.classList.remove('open');
+          dropdownEl.style.display = 'none';
+          dropdownEl.setAttribute('aria-hidden', 'true');
+        }
+      } catch (e) {}
+      // Hide and disable the search input and its surrounding combo wrapper so the
+      // entire input box is visually removed and made inert.
+      try {
+        const inputEl = document.getElementById('search');
+        const comboWrap = document.getElementById('combo');
+        if (inputEl) {
+          inputEl.style.display = 'none';
+          inputEl.disabled = true;
+          inputEl.setAttribute('aria-hidden', 'true');
+        }
+        if (comboWrap) {
+          comboWrap.style.display = 'none';
+          comboWrap.setAttribute('aria-hidden', 'true');
+          comboWrap.classList.add('goal-guessed');
+        }
+      } catch (e) {}
       if (typeof goalModalTimeout !== 'undefined' && goalModalTimeout) { clearTimeout(goalModalTimeout); }
       const lastInDelay = staggerMs * (tds.length - 1);
       const totalDelay = lastInDelay + animMs + 1000; // wait 1s after animation
