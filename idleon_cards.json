@@ -1,0 +1,1164 @@
+{
+  "Cards": {
+    "Alien Hive Chunk Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Alien Hive Chunk Card.png"
+    },
+    "Amarok Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Amarok Card.png"
+    },
+    "Ancient Golem Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Ancient Golem Card.png"
+    },
+    "Baba Yaga Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Baba Yaga Card.png"
+    },
+    "Baby Boa Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Baby Boa Card.png"
+    },
+    "Baby Troll Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Baby Troll Card.png"
+    },
+    "Bamboo Logs Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Bamboo Logs Card.png"
+    },
+    "Bamboo Spirit Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Bamboo Spirit Card.png"
+    },
+    "Bandit Bob Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Bandit Bob Card.png"
+    },
+    "Beefie Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Beefie Card.png"
+    },
+    "Biggie Hours Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Biggie Hours Card.png"
+    },
+    "Biggole Mole Card": {
+      "category": "Smoulderin' Plateau",
+      "dropchance": null,
+      "icon": "images\\Cards\\Biggole Mole Card.png"
+    },
+    "Biggole Wurm Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Biggole Wurm Card.png"
+    },
+    "Bleach Logs Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Bleach Logs Card.png"
+    },
+    "Blighted Chizoar Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Blighted Chizoar Card.png"
+    },
+    "Blitzkrieg Troll Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Blitzkrieg Troll Card.png"
+    },
+    "Bloach Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Bloach Card.png"
+    },
+    "Blobfish Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Blobfish Card.png"
+    },
+    "Bloodbone Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Bloodbone Card.png"
+    },
+    "Bloque Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Bloque Card.png"
+    },
+    "Boop Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Boop Card.png"
+    },
+    "Bop Box Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Bop Box Card.png"
+    },
+    "Bored Bean Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Bored Bean Card.png"
+    },
+    "Breezy Soul Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Breezy Soul Card.png"
+    },
+    "Bubbulyte Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Bubbulyte Card.png"
+    },
+    "Bunny Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Bunny Card.png"
+    },
+    "Butterfly Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Butterfly Card.png"
+    },
+    "Cactopunk Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Cactopunk Card.png"
+    },
+    "Carrotman Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Carrotman Card.png"
+    },
+    "Caulifish Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Caulifish Card.png"
+    },
+    "Caustic Glaciaxus Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Caustic Glaciaxus Card.png"
+    },
+    "Ceramic Spirit Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Ceramic Spirit Card.png"
+    },
+    "Chaotic Amarok Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Chaotic Amarok Card.png"
+    },
+    "Chaotic Chizoar Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Chaotic Chizoar Card.png"
+    },
+    "Chaotic Efaunt Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Chaotic Efaunt Card.png"
+    },
+    "Chaotic Emperor Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Chaotic Emperor Card.png"
+    },
+    "Chaotic Kattlekruk Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Chaotic Kattlekruk Card.png"
+    },
+    "Chaotic Troll Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Chaotic Troll Card.png"
+    },
+    "Cheese Nub Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Cheese Nub Card.png"
+    },
+    "Chizoar Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Chizoar Card.png"
+    },
+    "Choccie Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Choccie Card.png"
+    },
+    "Chocco Box Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Chocco Box Card.png"
+    },
+    "Chromatium Frog Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Chromatium Frog Card.png"
+    },
+    "Cinder Forge Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Cinder Forge Card.png"
+    },
+    "Citringe Card": {
+      "category": "Smoulderin' Plateau",
+      "dropchance": null,
+      "icon": "images\\Cards\\Citringe Card.png"
+    },
+    "Clammie Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Clammie Card.png"
+    },
+    "Coastiolyte Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Coastiolyte Card.png"
+    },
+    "Copper Ore Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Copper Ore Card.png"
+    },
+    "Crabbo Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Crabbo Card.png"
+    },
+    "Crabcake Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Crabcake Card.png"
+    },
+    "Crawler Card": {
+      "category": "Smoulderin' Plateau",
+      "dropchance": null,
+      "icon": "images\\Cards\\Crawler Card.png"
+    },
+    "Crescent Spud Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Crescent Spud Card.png"
+    },
+    "Cryosnake Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Cryosnake Card.png"
+    },
+    "Crystal Candalight Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Crystal Candalight Card.png"
+    },
+    "Crystal Capybara Card": {
+      "category": "Smoulderin' Plateau",
+      "dropchance": null,
+      "icon": "images\\Cards\\Crystal Capybara Card.png"
+    },
+    "Crystal Carrot Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Crystal Carrot Card.png"
+    },
+    "Crystal Cattle Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Crystal Cattle Card.png"
+    },
+    "Crystal Crabal Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Crystal Crabal Card.png"
+    },
+    "Crystal Custard Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Crystal Custard Card.png"
+    },
+    "Cubed Logs Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Cubed Logs Card.png"
+    },
+    "Dandielogs Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Dandielogs Card.png"
+    },
+    "Dedotated Ram Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Dedotated Ram Card.png"
+    },
+    "Demented Spiritlord Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Demented Spiritlord Card.png"
+    },
+    "Dementia Ore Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Dementia Ore Card.png"
+    },
+    "Demon Genie Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Demon Genie Card.png"
+    },
+    "Dig Doug Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Dig Doug Card.png"
+    },
+    "Dilapidated Slush Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Dilapidated Slush Card.png"
+    },
+    "Domeo Magmus Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Domeo Magmus Card.png"
+    },
+    "Donut Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Donut Card.png"
+    },
+    "Dr Defecaus Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Dr Defecaus Card.png"
+    },
+    "Dreadlo Ore Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Dreadlo Ore Card.png"
+    },
+    "Dune Soul Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Dune Soul Card.png"
+    },
+    "Dung Beat Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Dung Beat Card.png"
+    },
+    "Dust Mote Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Dust Mote Card.png"
+    },
+    "Efaunt Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Efaunt Card.png"
+    },
+    "Effervescent Logs Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Effervescent Logs Card.png"
+    },
+    "Egg Capsule Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Egg Capsule Card.png"
+    },
+    "Egggulyte Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Egggulyte Card.png"
+    },
+    "Eldritch Croaker Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Eldritch Croaker Card.png"
+    },
+    "Emperor Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Emperor Card.png"
+    },
+    "Enraged Snakenhotep Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Enraged Snakenhotep Card.png"
+    },
+    "Fairy Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Fairy Card.png"
+    },
+    "Falloween Pumpkin Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Falloween Pumpkin Card.png"
+    },
+    "Fire Forge Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Fire Forge Card.png"
+    },
+    "Fire Spirit Card": {
+      "category": "Smoulderin' Plateau",
+      "dropchance": null,
+      "icon": "images\\Cards\\Fire Spirit Card.png"
+    },
+    "Firefly Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Firefly Card.png"
+    },
+    "Flombeige Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Flombeige Card.png"
+    },
+    "Floofie Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Floofie Card.png"
+    },
+    "Fly Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Fly Card.png"
+    },
+    "Flycicle Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Flycicle Card.png"
+    },
+    "Flying Worm Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Flying Worm Card.png"
+    },
+    "Forest Fibres Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Forest Fibres Card.png"
+    },
+    "Forest Soul Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Forest Soul Card.png"
+    },
+    "Forlorn Grandfrogger Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Forlorn Grandfrogger Card.png"
+    },
+    "Frigid Soul Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Frigid Soul Card.png"
+    },
+    "Frog Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Frog Card.png"
+    },
+    "Froge Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Froge Card.png"
+    },
+    "Frost Flake Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Frost Flake Card.png"
+    },
+    "Fruitfly Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Fruitfly Card.png"
+    },
+    "Gelatinous Cuboid Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Gelatinous Cuboid Card.png"
+    },
+    "Ghost (Event) Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Ghost (Event) Card.png"
+    },
+    "Giant Rose Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Giant Rose Card.png"
+    },
+    "Giftmas Blobulyte Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Giftmas Blobulyte Card.png"
+    },
+    "Gigafrog Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Gigafrog Card.png"
+    },
+    "Gilded Efaunt Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Gilded Efaunt Card.png"
+    },
+    "Glaciaxus Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Glaciaxus Card.png"
+    },
+    "Globohopper Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Globohopper Card.png"
+    },
+    "Gloomie Mushroom Card": {
+      "category": "Smoulderin' Plateau",
+      "dropchance": null,
+      "icon": "images\\Cards\\Gloomie Mushroom Card.png"
+    },
+    "Glublin Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Glublin Card.png"
+    },
+    "Glunko The Massive Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Glunko The Massive Card.png"
+    },
+    "Godshard Ore Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Godshard Ore Card.png"
+    },
+    "Gold Ore Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Gold Ore Card.png"
+    },
+    "Golden Giftmas Box Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Golden Giftmas Box Card.png"
+    },
+    "Golden Glaciaxus Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Golden Glaciaxus Card.png"
+    },
+    "Goldfish Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Goldfish Card.png"
+    },
+    "Grandfrogger Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Grandfrogger Card.png"
+    },
+    "Green Mushroom Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Green Mushroom Card.png"
+    },
+    "Grumblo Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Grumblo Card.png"
+    },
+    "Hermit Can Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Hermit Can Card.png"
+    },
+    "Honker Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Honker Card.png"
+    },
+    "Ice Guard Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Ice Guard Card.png"
+    },
+    "Icefish Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Icefish Card.png"
+    },
+    "IdleOn 4th Anniversary Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\IdleOn 4th Anniversary Card.png"
+    },
+    "Inevitable Snakenhotep Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Inevitable Snakenhotep Card.png"
+    },
+    "Iron Ore Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Iron Ore Card.png"
+    },
+    "Jellyfish Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Jellyfish Card.png"
+    },
+    "Jumbo Shrimp Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Jumbo Shrimp Card.png"
+    },
+    "Jungle Logs Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Jungle Logs Card.png"
+    },
+    "Kattlekruk Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Kattlekruk Card.png"
+    },
+    "King Doot Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\King Doot Card.png"
+    },
+    "King Frog Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\King Frog Card.png"
+    },
+    "Kraken Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Kraken Card.png"
+    },
+    "Ladybug Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Ladybug Card.png"
+    },
+    "Lampar Card": {
+      "category": "Smoulderin' Plateau",
+      "dropchance": null,
+      "icon": "images\\Cards\\Lampar Card.png"
+    },
+    "Lantern Spirit Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Lantern Spirit Card.png"
+    },
+    "Lava Slimer Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Lava Slimer Card.png"
+    },
+    "Lazlo Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Lazlo Card.png"
+    },
+    "Leek Spirit Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Leek Spirit Card.png"
+    },
+    "Loveulyte Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Loveulyte Card.png"
+    },
+    "Lustre Ore Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Lustre Ore Card.png"
+    },
+    "Maccie Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Maccie Card.png"
+    },
+    "Mafioso Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Mafioso Card.png"
+    },
+    "Magma Geode Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Magma Geode Card.png"
+    },
+    "Mama Troll Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Mama Troll Card.png"
+    },
+    "Mamooth Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Mamooth Card.png"
+    },
+    "Manta Ray Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Manta Ray Card.png"
+    },
+    "Maple Logs Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Maple Logs Card.png"
+    },
+    "Mashed Potato Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Mashed Potato Card.png"
+    },
+    "Massive Troll Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Massive Troll Card.png"
+    },
+    "Meaning of Giftmas Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Meaning of Giftmas Card.png"
+    },
+    "Mimic Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Mimic Card.png"
+    },
+    "Minichief Spirit Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Minichief Spirit Card.png"
+    },
+    "Mister Brightside Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Mister Brightside Card.png"
+    },
+    "Molti Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Molti Card.png"
+    },
+    "Moonmoon Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Moonmoon Card.png"
+    },
+    "Mosquisnow Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Mosquisnow Card.png"
+    },
+    "Mousey Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Mousey Card.png"
+    },
+    "Mr Blueberry Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Mr Blueberry Card.png"
+    },
+    "Mutated Mush Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Mutated Mush Card.png"
+    },
+    "Neyeptune Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Neyeptune Card.png"
+    },
+    "Nutto Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Nutto Card.png"
+    },
+    "Oak Logs Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Oak Logs Card.png"
+    },
+    "Octodar Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Octodar Card.png"
+    },
+    "Oozie Soul Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Oozie Soul Card.png"
+    },
+    "Owlio Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Owlio Card.png"
+    },
+    "Penguin Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Penguin Card.png"
+    },
+    "Pincermin Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Pincermin Card.png"
+    },
+    "Pingy Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Pingy Card.png"
+    },
+    "Plasti Doug Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Plasti Doug Card.png"
+    },
+    "Platinum Ore Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Platinum Ore Card.png"
+    },
+    "Poisonic Frog Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Poisonic Frog Card.png"
+    },
+    "Poop Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Poop Card.png"
+    },
+    "Potty Rolls Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Potty Rolls Card.png"
+    },
+    "Purgatory Stalker Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Purgatory Stalker Card.png"
+    },
+    "Purp Mushroom Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Purp Mushroom Card.png"
+    },
+    "Quenchie Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Quenchie Card.png"
+    },
+    "Radiant Amarok Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Radiant Amarok Card.png"
+    },
+    "Rat Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Rat Card.png"
+    },
+    "Red Mushroom Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Red Mushroom Card.png"
+    },
+    "Ricecake Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Ricecake Card.png"
+    },
+    "River Spirit Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\River Spirit Card.png"
+    },
+    "Rooted Soul Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Rooted Soul Card.png"
+    },
+    "Rotting Grandfrogger Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Rotting Grandfrogger Card.png"
+    },
+    "Royal Egg Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Royal Egg Card.png"
+    },
+    "Sacrilegious Kattlekruk Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Sacrilegious Kattlekruk Card.png"
+    },
+    "Samurai Guardian Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Samurai Guardian Card.png"
+    },
+    "Sand Castle Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Sand Castle Card.png"
+    },
+    "Sand Giant Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Sand Giant Card.png"
+    },
+    "Sand Shark Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Sand Shark Card.png"
+    },
+    "Sandy Pot Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Sandy Pot Card.png"
+    },
+    "Scarab Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Scarab Card.png"
+    },
+    "Scorpie Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Scorpie Card.png"
+    },
+    "Sentient Cereal Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Sentient Cereal Card.png"
+    },
+    "Sheepie Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Sheepie Card.png"
+    },
+    "Shell Snake Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Shell Snake Card.png"
+    },
+    "Shellfish Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Shellfish Card.png"
+    },
+    "Sir Stache Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Sir Stache Card.png"
+    },
+    "Skelefish Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Skelefish Card.png"
+    },
+    "Skydoggie Spirit Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Skydoggie Spirit Card.png"
+    },
+    "Slime Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Slime Card.png"
+    },
+    "Snakenhotep Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Snakenhotep Card.png"
+    },
+    "Snelbie Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Snelbie Card.png"
+    },
+    "Snowman Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Snowman Card.png"
+    },
+    "Soda Can Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Soda Can Card.png"
+    },
+    "Sovereign Emperor Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Sovereign Emperor Card.png"
+    },
+    "Spirit Diamond Card": {
+      "category": "Bosses",
+      "dropchance": null,
+      "icon": "images\\Cards\\Spirit Diamond Card.png"
+    },
+    "Spring Splendor Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Spring Splendor Card.png"
+    },
+    "Sprout Spirit Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Sprout Spirit Card.png"
+    },
+    "Squishy Soul Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Squishy Soul Card.png"
+    },
+    "Starfire Ore Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Starfire Ore Card.png"
+    },
+    "Stilted Seeker Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Stilted Seeker Card.png"
+    },
+    "Stiltmole Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Stiltmole Card.png"
+    },
+    "Suggma Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\Suggma Card.png"
+    },
+    "Summer Spirit Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Summer Spirit Card.png"
+    },
+    "Target Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Target Card.png"
+    },
+    "Thermister Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Thermister Card.png"
+    },
+    "Tremor Wurm Card": {
+      "category": "Smoulderin' Plateau",
+      "dropchance": null,
+      "icon": "images\\Cards\\Tremor Wurm Card.png"
+    },
+    "Tropilogs Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Tropilogs Card.png"
+    },
+    "Tundra Logs Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Tundra Logs Card.png"
+    },
+    "TV Card": {
+      "category": "Hyperion Nebula",
+      "dropchance": null,
+      "icon": "images\\Cards\\TV Card.png"
+    },
+    "Tyson Card": {
+      "category": "Yum Yum Desert",
+      "dropchance": null,
+      "icon": "images\\Cards\\Tyson Card.png"
+    },
+    "Valentslime Card": {
+      "category": "Events",
+      "dropchance": null,
+      "icon": "images\\Cards\\Valentslime Card.png"
+    },
+    "Veiny Logs Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Veiny Logs Card.png"
+    },
+    "Vengeful Grandfrogger Card": {
+      "category": "Dungeons",
+      "dropchance": null,
+      "icon": "images\\Cards\\Vengeful Grandfrogger Card.png"
+    },
+    "Void Ore Card": {
+      "category": "Medium Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Void Ore Card.png"
+    },
+    "Walking Stick Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Walking Stick Card.png"
+    },
+    "Wispy Lumber Card": {
+      "category": "Hard Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Wispy Lumber Card.png"
+    },
+    "Wode Board Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Wode Board Card.png"
+    },
+    "Wood Mushroom Card": {
+      "category": "Blunder Hills",
+      "dropchance": null,
+      "icon": "images\\Cards\\Wood Mushroom Card.png"
+    },
+    "Woodlin Spirit Card": {
+      "category": "Spirited Valley",
+      "dropchance": null,
+      "icon": "images\\Cards\\Woodlin Spirit Card.png"
+    },
+    "Worker Bee Card": {
+      "category": "Easy Resources",
+      "dropchance": null,
+      "icon": "images\\Cards\\Worker Bee Card.png"
+    },
+    "Xylobone Card": {
+      "category": "Frostbite Tundra",
+      "dropchance": null,
+      "icon": "images\\Cards\\Xylobone Card.png"
+    }
+  }
+}

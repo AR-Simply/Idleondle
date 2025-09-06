@@ -5,7 +5,7 @@
   <title>Idleondle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="description" content="Play Idleondle — guess the daily item from IdleOn in this word game. Free, no account required.">
+  <meta name="description" content="Play Idleondle — daily word guessing games from the world of IdleOn. Free, no account required.">
   <link rel="canonical" href="https://www.idleondle.com/">
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png">
@@ -19,7 +19,8 @@
 </head>
 <body>
   <div class="center">
-    <img src="images/title.png" alt="Idleondle title" class="site-title" />
+  <img src="images/title.png" alt="Idleondle title" class="site-title" />
+    
 
     <div class="top-row">
       <div class="guess-box combo-guess" id="guessBox">
@@ -75,7 +76,7 @@
 
     <div class="combo" id="combo">
       <div class="input-wrap">
-        <input id="search" type="text" placeholder="Type the name of an IdleOn item..." autocomplete="off" />
+        <input id="search" type="text" placeholder="Type the name of an item..." autocomplete="off" />
         <span class="kbd">Enter</span>
       </div>
      
@@ -132,7 +133,7 @@
             <h2 class="goal-title">HOW TO PLAY?</h2>
             <div class="goal-body">
               <div style="text-align:left; font-size:14px; color:#111;">
-                <p>Guess today's item from the game "IdleOn". It changes at midnight in your timezone.</p>
+                <p>Daily guessing games from the game "IdleOn". Games changes at midnight in your timezone.</p>
                 <p>Type in the name of an item and it will reveal its properties. The color of the tiles will change to show how close your guess was to the daily item.</p>
                 <ul>
                   <li><strong>Green</strong> indicates the property is an exact match.</li>
@@ -209,6 +210,19 @@
           </div>
         </div>
 
-    <script src="website.js"></script>
+    <script type="module">
+      import { initShared } from './js/shared.js';
+      import ItemGuesser from './js/ItemGuesser.js';
+
+      // Initialize shared functionality and wire page-specific handlers
+      initShared({
+        dataUrl: 'idleon_items_detailed.json',
+        imageBase: './images',
+        onSelect: (item) => {
+          // Add selected item to the table (page-specific)
+          if (ItemGuesser && typeof ItemGuesser.addToTable === 'function') ItemGuesser.addToTable(item);
+        }
+      });
+    </script>
   </body>
 </html>

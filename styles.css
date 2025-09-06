@@ -49,6 +49,57 @@ html, body {
   image-rendering: optimizeQuality;
 }
 
+/* Page switch buttons (between title and guess box) */
+.page-switch {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  position: relative;
+}
+.page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  text-decoration: none;
+}
+.page-btn img { width: 36px; height: 36px; object-fit: contain; }
+.page-btn.active { background: #2e7d32; border-color: #2e7d32; }
+
+/* vertical separator between the two page buttons */
+
+.page-btn { z-index: 2; position: relative; }
+.page-switch::after {
+  /* horizontal bar centered vertically through the buttons */
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 48px); /* extend slightly beyond buttons */
+  height: 12px;
+  background: #8B5A2B; /* brown separator */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  pointer-events: none;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+@media (max-width: 420px) {
+  .page-switch::after { top: 50%; transform: translate(-50%, -50%); height: 10px; width: calc(100% + 32px); }
+  .page-btn { width: 48px; height: 48px; }
+  .page-btn img { width:30px; height:30px; }
+}
+
+
 .top-row {
   display: flex;
   gap: 12px;
@@ -116,6 +167,50 @@ html, body {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   position: relative;
+}
+
+/* Daily card (prominent icon on cardGuesser page) */
+.daily-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+  /* frame (sharp, not blurred) around the image */
+  width: 360px;
+  height: 360px;
+  padding: 3px; /* thickness of the outline */
+  /* use same color as the guess box border so outlines match */
+  background: var(--border);
+  border-radius: 15px;
+  box-sizing: border-box;
+  overflow: hidden; /* ensure image stays inside rounded frame */
+}
+.daily-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* inner rounding so frame is visible */
+  border-radius: 12px;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.daily-card-name {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--text);
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .daily-card {
+    width: 120px;
+    height: 120px;
+    padding: 2px;
+    border-radius: 12px;
+  }
+  .daily-card-img { width: 100%; height: 100%; }
+  .daily-card-name { font-size: 16px; }
 }
 .combo .input-wrap {
   display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px;
