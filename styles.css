@@ -202,16 +202,7 @@ html, body {
   text-align: center;
 }
 
-@media (max-width: 720px) {
-  .daily-card {
-    width: 120px;
-    height: 120px;
-    padding: 2px;
-    border-radius: 12px;
-  }
-  .daily-card-img { width: 100%; height: 100%; }
-  .daily-card-name { font-size: 16px; }
-}
+/* removed: no responsive adjustments for .daily-card; it keeps its desktop size */
 .combo .input-wrap {
   display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px;
   padding: 12px 14px;
