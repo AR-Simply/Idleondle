@@ -24,7 +24,7 @@ export function setCardBlur(percent) {
 }
 
 export async function initCardGuesser(options = {}) {
-  await initShared(Object.assign({ dataUrl: 'idleon_cards.json', imageBase: './images' }, options));
+  await initShared(Object.assign({ dataUrl: '../json/idleon_cards.json', imageBase: '../images' }, options));
   // Render the daily card prominently below the combo (search input + dropdown)
   try {
     const goal = getGoalItem();
@@ -35,11 +35,22 @@ export async function initCardGuesser(options = {}) {
     const img = document.createElement('img');
     img.className = 'daily-card-img';
     img.alt = goal?.name || 'Daily card';
-    img.src = goal?.icon || ('./images/icon.png');
-    img.onerror = () => { img.src = './images/icon.png'; };
+    img.src = goal?.icon || ('../images/icon.png');
+    img.onerror = () => { img.src = '../images/icon.png'; };
 
     // Only render the large image; caption/label removed per UI request
-    container.appendChild(img);
+  container.appendChild(img);
+
+  // Add a transparent overlay above the image so users can't directly interact
+  // with or view the unblurred image via context menu / drag. This overlay
+  // sits above the img (which will receive CSS blur) and itself is not blurred.
+  const overlay = document.createElement('div');
+  overlay.className = 'daily-card-overlay';
+  // Prevent context menu on the overlay to avoid "open image in new tab" cheat
+  overlay.addEventListener('contextmenu', (ev) => { ev.preventDefault(); });
+  // Prevent dragging the underlying image via pointer events
+  overlay.addEventListener('dragstart', (ev) => { ev.preventDefault(); });
+  container.appendChild(overlay);
 
   // remember image for module-level control and expose on window for convenience
   _dailyImg = img;
@@ -54,7 +65,7 @@ export async function initCardGuesser(options = {}) {
       document.addEventListener('guess:updated', (e) => {
         try {
           // Each guess reduces blur by 5% (clamped to 0)
-          _currentBlurPercent = Math.max(0, (_currentBlurPercent || 0) - 5);
+          _currentBlurPercent = Math.max(0, (_currentBlurPercent || 0) - 7.5);
           setCardBlur(_currentBlurPercent);
         } catch (err) { /* non-fatal */ }
       });

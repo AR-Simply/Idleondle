@@ -43,14 +43,46 @@ function encodePathSegments(p) {
 
 function resolveIcon(p) {
   const cleaned = toWebPath(p).replace(/^\.?\//, '');
-  // Normalise base without leading ./ or trailing /
-  const baseRaw = String(IMAGE_BASE || '').replace(/^\.?\//, '').replace(/\/$/, '');
-  // If the cleaned path already contains the base prefix, don't double-prefix.
-  if (baseRaw && (cleaned === baseRaw || cleaned.startsWith(baseRaw + '/'))) {
-    return encodePathSegments(cleaned).replace(/\/{2,}/g, '/');
+  // Normalise IMAGE_BASE in a few useful forms.
+  const rawBase = String(IMAGE_BASE || '').replace(/\/$/, ''); // keep any ../ prefix
+  const base = rawBase === '.' ? '' : rawBase;
+  // baseNorm is the base with any leading ../ or ./ removed; used to detect
+  // when cleaned already contains the same folder name (eg 'images/...') so
+  // we avoid producing '.../images/images/...'
+  const baseNorm = rawBase.replace(/^(?:\.\.\/)+/, '').replace(/^\.?\//, '').replace(/\/$/, '');
+  if (baseNorm && (cleaned === baseNorm || cleaned.startsWith(baseNorm + '/'))) {
+    // Remove duplicate baseNorm from cleaned when joining with rawBase
+    const tail = cleaned === baseNorm ? '' : cleaned.slice(baseNorm.length + 1);
+    const joined = base ? (base + (tail ? '/' + tail : '')) : (tail || baseNorm);
+    return encodePathSegments(joined).replace(/\/{2,}/g, '/');
   }
-  const base = IMAGE_BASE.replace(/\/$/, '');
-  const joined = base ? `${base}/${cleaned}` : cleaned;
+
+  // If no explicit base is provided, try to compute a relative prefix based on
+  // the current document location so pages inside a subfolder (eg `html/`)
+  // can still reference images placed at the project root.
+  let relPrefix = '';
+  try {
+    if (!base && typeof document !== 'undefined' && document.location && document.location.pathname) {
+      // Count path segments (ignore leading/trailing slashes). If the page
+      // looks like a file (last segment contains a dot), we don't count it.
+      const parts = document.location.pathname.split('/').filter(Boolean);
+      const last = parts[parts.length - 1] || '';
+      const isFile = last.includes('.');
+      const depth = Math.max(0, parts.length - (isFile ? 1 : 0));
+      // We only need to go up one level per depth to reach project root.
+      if (depth > 0) relPrefix = '../'.repeat(depth);
+    }
+  } catch (e) {
+    relPrefix = '';
+  }
+
+  // Don't double-prefix if cleaned already climbs up or is absolute.
+  if (cleaned.startsWith('..') || cleaned.startsWith('/')) {
+    const joined = base ? `${base}/${cleaned}` : cleaned;
+    return encodePathSegments(joined).replace(/\/{2,}/g, '/');
+  }
+
+  const joined = base ? `${base}/${cleaned}` : `${relPrefix}${cleaned}`;
   return encodePathSegments(joined).replace(/\/{2,}/g, '/');
 }
 
@@ -304,18 +336,25 @@ export async function initShared(config = {}) {
       const makeBtn = (href, id, imgSrc, alt) => {
         const a = document.createElement('a'); a.href = href; a.className = 'page-btn'; a.id = id; a.title = alt;
         const img = document.createElement('img');
-        img.src = imgSrc;
+        // If imageBase is set, use it as prefix unless imgSrc already contains it
+        const prefix = String(imageBase || '').replace(/\/$/, '');
+        const cleaned = imgSrc.replace(/^\.?\//, '');
+        img.src = prefix ? `${prefix}/${cleaned}` : cleaned;
         img.alt = alt;
         a.appendChild(img);
         return a;
       };
-      // Left: copper helmet, Right: card image
-      wrap.appendChild(makeBtn('index.html', 'btn-items', 'images/Helmets/Copper Helmet.png', 'Item Guesser'));
-      wrap.appendChild(makeBtn('cardGuesser.html', 'btn-cards', 'images/card.png', 'Card Guesser'));
-      titleEl.insertAdjacentElement('afterend', wrap);
-      const isCard = location.pathname.endsWith('cardGuesser.html') || location.href.includes('cardGuesser.html');
-      document.getElementById('btn-items')?.classList.toggle('active', !isCard);
-      document.getElementById('btn-cards')?.classList.toggle('active', isCard);
+  // Left: item, middle: card, right: monster
+  wrap.appendChild(makeBtn('index.html', 'btn-items', '../images/Helmets/Copper Helmet.png', 'Item Guesser'));
+  wrap.appendChild(makeBtn('cardGuesser.html', 'btn-cards', '../images/card.png', 'Card Guesser'));
+  wrap.appendChild(makeBtn('monsterGuesser.html', 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser'));
+  titleEl.insertAdjacentElement('afterend', wrap);
+  const isCard = location.pathname.endsWith('cardGuesser.html') || location.href.includes('cardGuesser.html');
+  const isMonster = location.pathname.endsWith('monsterGuesser.html') || location.href.includes('monsterGuesser.html');
+  const isItems = !isCard && !isMonster;
+  document.getElementById('btn-items')?.classList.toggle('active', isItems);
+  document.getElementById('btn-cards')?.classList.toggle('active', isCard);
+  document.getElementById('btn-monster')?.classList.toggle('active', isMonster);
     } catch (e) { console.warn('Page switch render failed', e); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => renderPageSwitch(config.imageBase || IMAGE_BASE)); else renderPageSwitch(config.imageBase || IMAGE_BASE);

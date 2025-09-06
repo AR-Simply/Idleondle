@@ -43,7 +43,7 @@ export function addToTable(it) {
       const count = Math.floor(remaining / coinValue);
       if (count > 0) {
         const span = document.createElement('span'); span.className = 'sell-price'; span.appendChild(document.createTextNode(String(count)));
-        const img = document.createElement('img'); img.className = 'coin-img'; img.src = `images/coins/${i+1}.png`; img.alt = 'coin'; span.appendChild(img);
+  const img = document.createElement('img'); img.className = 'coin-img'; img.src = `../images/coins/${i+1}.png`; img.alt = 'coin'; span.appendChild(img);
         rowDiv.appendChild(span);
         remaining -= count * coinValue; inRow++; if (inRow === 3) { container.appendChild(rowDiv); rowDiv = document.createElement('div'); rowDiv.className = 'sell-row'; inRow = 0; }
       }
@@ -69,8 +69,8 @@ export function addToTable(it) {
 
   const cells = [ { type: 'item', html: it.name, icon: it.icon }, { type: 'red', key: 'class' }, { type: 'yellow', key: 'level_requirement' }, { type: 'yellow', key: 'power' }, { type: 'yellow', key: 'Speed' }, { type: 'yellow', key: 'Strength' }, { type: 'yellow', key: 'Agility' }, { type: 'yellow', key: 'Wisdom' }, { type: 'yellow', key: 'Luck' }, { type: 'yellow', key: 'sell_price' }, { type: 'red', key: 'source' } ];
 
-  const lessImg = 'images/less.png';
-  const moreImg = 'images/more.png';
+  const lessImg = '../images/less.png';
+  const moreImg = '../images/more.png';
 
   for (const cell of cells) {
     const td = document.createElement('td'); td.classList.add('cell-fade');

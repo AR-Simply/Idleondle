@@ -14,7 +14,7 @@ html, body {
   margin: 0;
   box-sizing: border-box;
   font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background-image: url("images/bg.png");
+  background-image: url("../images/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -157,6 +157,11 @@ html, body {
   .icon-btn { width: 100%; height: 34px; }
   .guess-actions { max-width: calc(90% - 56px); gap: 8px; }
   .guess-btn { min-width: 0; flex: 1 1 auto; height: 44px; }
+  .emojibox img { width: 84px; height: 84px; padding: 6px; }
+  .emojibox { margin-top: 12px; padding: 10px; gap: 12px; width: 100%; }
+  .emoji-tile { width: 84px; height: 84px; font-size: 36px; }
+  .emoji-tile.locked { opacity: 0.95; }
+  .emoji-note { font-size: 20px; }
 }
 
 .combo {
@@ -185,6 +190,7 @@ html, body {
   border-radius: 15px;
   box-sizing: border-box;
   overflow: hidden; /* ensure image stays inside rounded frame */
+  position: relative; /* needed so the overlay can be absolutely positioned on top */
 }
 .daily-card-img {
   width: 100%;
@@ -200,6 +206,17 @@ html, body {
   font-size: 18px;
   color: var(--text);
   text-align: center;
+}
+
+/* Semi-transparent overlay sitting above the image to prevent visual cheating.
+   The overlay is a sibling of the img and is not affected by the img's filter blur. */
+.daily-card-overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0,0,0,0); /* tweak opacity to taste */
+  border-radius: 12px; /* match inner image rounding */
+  z-index: 2; /* above the image but below any future controls */
+  pointer-events: auto; /* capture mouse events so the underlying image can't be directly interacted with */
 }
 
 /* removed: no responsive adjustments for .daily-card; it keeps its desktop size */
@@ -224,6 +241,66 @@ html, body {
   display: none; z-index: 20;
 }
 .dropdown.open { display: block; }
+
+/* Emoji box: grouped panel with large icons (icons increased by 50%) */
+.emojibox {
+  display: flex;
+  flex-direction: column; /* stack the row and the note */
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin: 24px auto 0 auto;
+  width: min(680px, 90%);
+  box-sizing: border-box;
+  background: linear-gradient(180deg, rgba(23,26,44,0.6), rgba(23,26,44,0.45));
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.emojibox img {
+  width: 108px; /* 72 * 1.5 */
+  height: 108px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  padding: 6px;
+}
+
+/* horizontal row inside the emojibox to hold emoji tiles */
+.emoji-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Emoji tile (used by monsterGuesser) */
+.emoji-tile {
+  width: 108px;
+  height: 108px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  color: var(--text);
+  box-sizing: border-box;
+  transition: background 180ms ease, color 180ms ease;
+}
+.emoji-tile.locked { color: var(--muted); opacity: 0.9; }
+
+/* Note displayed below emoji tiles */
+.emoji-note {
+  width: 100%;
+  text-align: center;
+  margin: 0; /* spacing handled by .emojibox gap */
+  color: var(--muted);
+  font-size: 18px; /* increased for readability */
+}
 
 .results { list-style: none; margin: 0; padding: 6px; }
 .guess-box {
@@ -323,8 +400,8 @@ html, body {
   min-height: 260px;
   max-height: none;
   overflow-y: visible;
-  /* show the full table instead of forcing an inner horizontal scroll */
-  overflow-x: visible;
+  /* allow horizontal scrolling on narrow viewports (mobile) */
+  overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
@@ -376,10 +453,18 @@ html, body {
 #itemTable {
   table-layout: fixed;
   width: min(680px, 90%);
+  /* allow the table to expand beyond the container width so it can be scrolled
+     on small screens where column totals exceed viewport width */
+  min-width: max-content;
   max-width: 100%;
   margin: 0 auto;
   border-collapse: separate;
   border-spacing: 6px 6px;
+}
+
+@media (max-width: 720px) {
+  /* Ensure touch scrolling for the table container on mobile */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
 .table-panel { background: transparent; border: none; border-radius: 0; overflow: visible; }
 .th-left { padding: 8px; text-align: center; }
