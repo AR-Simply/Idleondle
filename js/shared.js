@@ -345,9 +345,18 @@ export async function initShared(config = {}) {
         return a;
       };
   // Left: item, middle: card, right: monster
-  wrap.appendChild(makeBtn('index.html', 'btn-items', '../images/Helmets/Copper Helmet.png', 'Item Guesser'));
-  wrap.appendChild(makeBtn('cardGuesser.html', 'btn-cards', '../images/card.png', 'Card Guesser'));
-  wrap.appendChild(makeBtn('monsterGuesser.html', 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser'));
+  // Detect whether the current document is inside the `html/` folder so
+  // generated hrefs point to the right location when pages are opened from
+  // the repo root or from the `html/` subfolder.
+  const parts = (location.pathname || '').split('/').filter(Boolean);
+  const inHtmlFolder = parts.includes('html');
+  const indexHref = inHtmlFolder ? '../index.html' : 'index.html';
+  const cardHref = inHtmlFolder ? 'cardGuesser.html' : 'html/cardGuesser.html';
+  const monsterHref = inHtmlFolder ? 'monsterGuesser.html' : 'html/monsterGuesser.html';
+
+  wrap.appendChild(makeBtn(indexHref, 'btn-items', '../images/Helmets/Copper Helmet.png', 'Item Guesser'));
+  wrap.appendChild(makeBtn(cardHref, 'btn-cards', '../images/card.png', 'Card Guesser'));
+  wrap.appendChild(makeBtn(monsterHref, 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser'));
   titleEl.insertAdjacentElement('afterend', wrap);
   const isCard = location.pathname.endsWith('cardGuesser.html') || location.href.includes('cardGuesser.html');
   const isMonster = location.pathname.endsWith('monsterGuesser.html') || location.href.includes('monsterGuesser.html');
