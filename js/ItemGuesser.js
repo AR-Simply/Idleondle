@@ -98,7 +98,7 @@ export function addToTable(it) {
 
   tbody.insertBefore(row, tbody.firstChild);
   const tds = Array.from(row.querySelectorAll('td'));
-  const staggerMs = 500; const animMs = 260;
+  const staggerMs = 500; const animMs = 460; // animMs should match CSS .cell-fade.in animation duration
   tds.forEach((c, i) => { setTimeout(() => { c.classList.add('in'); }, staggerMs * i); });
 
   try {
@@ -106,7 +106,27 @@ export function addToTable(it) {
       try { const dropdownEl = document.getElementById('dropdown'); if (dropdownEl) { dropdownEl.classList.remove('open'); dropdownEl.style.display = 'none'; dropdownEl.setAttribute('aria-hidden', 'true'); } } catch (e) {}
       try { const inputEl = document.getElementById('search'); const comboWrap = document.getElementById('combo'); if (inputEl) { inputEl.style.display = 'none'; inputEl.disabled = true; inputEl.setAttribute('aria-hidden', 'true'); } if (comboWrap) { comboWrap.style.display = 'none'; comboWrap.setAttribute('aria-hidden', 'true'); comboWrap.classList.add('goal-guessed'); } } catch (e) {}
       // notify shared to show modal after animations
-      notifyGoalGuessed(it);
+      try {
+        // Detect whether this page should use the animation-aware delay. We want
+        // the index page (not inside /html/) and the HardItemGuesser page to wait
+        // until table cell animations complete before showing the modal.
+        const parts = (location.pathname || '').split('/').filter(Boolean);
+        const inHtmlFolder = parts.includes('html');
+        const isHardPage = (location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('HardItemGuesser');
+        const shouldDelay = !inHtmlFolder || isHardPage;
+
+        if (shouldDelay && tds.length > 0) {
+          // Wait until the last cell has been given the 'in' class and its animation
+          // completes, then add an extra 1s before showing the modal.
+          const lastIndex = tds.length - 1;
+          const waitMs = (staggerMs * lastIndex) + animMs + 1000;
+          setTimeout(() => notifyGoalGuessed(it), waitMs);
+        } else {
+          // Other pages keep the original immediate behavior
+          notifyGoalGuessed(it);
+        }
+
+      } catch (e) { notifyGoalGuessed(it); }
     }
   } catch (e) { console.error('Goal scheduling failed', e); }
 }

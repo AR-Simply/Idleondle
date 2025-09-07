@@ -152,9 +152,18 @@ async function loadItems() {
 }
 
 function filterItems(q) {
-  const s = q.trim().toLowerCase();
+  const s = (q || '').trim();
   if (!s) return [];
-  return items.filter(it => it.name.toLowerCase().includes(s)).slice(0, MAX_RESULTS);
+  const isCardPage = (location.pathname || '').endsWith('cardGuesser.html') || (location.href || '').includes('cardGuesser');
+  const normalizeForCard = (str) => String(str || '').replace(/\bcard\b/ig, '').replace(/\s{2,}/g, ' ').trim().toLowerCase();
+  if (isCardPage) {
+    const qs = normalizeForCard(s);
+    // If stripping 'card' from the query leaves nothing, don't return everything
+    if (!qs) return [];
+    return items.filter(it => normalizeForCard(it.name).includes(qs)).slice(0, MAX_RESULTS);
+  }
+  const sl = s.toLowerCase();
+  return items.filter(it => it.name.toLowerCase().includes(sl)).slice(0, MAX_RESULTS);
 }
 
 // Render dropdown results; calls onSelect(item) when an item is chosen.
@@ -183,6 +192,10 @@ function render(list) {
   }
 
   const frag = document.createDocumentFragment();
+  // Detect whether we're rendering dropdown on the cardGuesser page so we
+  // can alter the visible label (remove the word "card"). Do not mutate
+  // the original item object - only change the displayed text.
+  const isCardPage = (location.pathname || '').endsWith('cardGuesser.html') || (location.href || '').includes('cardGuesser');
   for (const it of list) {
     const li = document.createElement('li');
     li.className = 'item';
@@ -192,21 +205,31 @@ function render(list) {
     img.addEventListener('error', () => { img.src = placeholder(); });
     const nameDiv = document.createElement('div');
     nameDiv.className = 'name';
-    nameDiv.textContent = it.name;
+    // When on the card guessaer page, remove the standalone word "card"
+    // (case-insensitive) from the display label and collapse extra spaces.
+    let displayName = it.name || '';
+    if (isCardPage) {
+      displayName = displayName.replace(/\bcard\b/ig, '').replace(/\s{2,}/g, ' ').trim();
+    }
+    nameDiv.textContent = displayName;
     li.appendChild(img);
     li.appendChild(nameDiv);
     li.addEventListener('click', () => {
       // increment guess counter for any selection attempt
       incrementGuessCount();
-  // If this selection is the goal item, trigger goal flow
-  try { if (goalItem && it && it.name === goalItem.name) notifyGoalGuessed(it); } catch (e) {}
       // Remove item so it won't appear in future searches
       items = items.filter(item => item.name !== it.name);
       document.getElementById('dropdown').classList.remove('open');
       const inputEl = document.getElementById('search');
       if (inputEl) { inputEl.value = it.name; try { inputEl.focus(); } catch (e) {} }
-      // call page-specific selection handler if provided
-      if (typeof _config.onSelect === 'function') _config.onSelect(it);
+      // call page-specific selection handler if provided; if page handles selection
+      // itself (e.g. addToTable), let it decide when to show the modal. Only
+      // show the modal here if no page-specific handler exists.
+      if (typeof _config.onSelect === 'function') {
+        try { _config.onSelect(it); } catch (e) { console.warn('onSelect handler failed', e); }
+      } else {
+        try { if (goalItem && it && it.name === goalItem.name) notifyGoalGuessed(it); } catch (e) {}
+      }
       // Re-render dropdown in case user continues typing
       const q = document.getElementById('search')?.value || '';
       render(filterItems(q));
@@ -223,9 +246,16 @@ function selectGoalItem() {
   function getLocalDayIndex() { let now = new Date(); let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()); return Math.floor(startOfDay.getTime() / 86400000); }
   let dayIndex = getLocalDayIndex();
   let cycle = Math.floor(dayIndex / Math.max(1, items.length)) + 2;
+  // Allow pages to specify a deterministic seed offset via initShared({ seedOffset })
+  // so variants (like hard mode) can use a different daily sequence.
+  try {
+    const offset = Number(_config?.seedOffset || 0) || 0;
+    if (offset) cycle = cycle + offset;
+  } catch (e) { /* ignore */ }
   let shuffled = seededShuffle(items, cycle);
   let pos = items.length ? (dayIndex % items.length) : 0;
   goalItem = shuffled[pos];
+  //console.log(`Selected goal item: ${goalItem?.name || 'none'}`);
 }
 
 // Show/hide goal modal and timer
@@ -357,6 +387,23 @@ export async function initShared(config = {}) {
   wrap.appendChild(makeBtn(indexHref, 'btn-items', '../images/Helmets/Copper Helmet.png', 'Item Guesser'));
   wrap.appendChild(makeBtn(cardHref, 'btn-cards', '../images/card.png', 'Card Guesser'));
   wrap.appendChild(makeBtn(monsterHref, 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser'));
+  // If this is the hard-item guesser page, change the left page button to a red "hard" button
+  try {
+    const isHardPage = (location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('HardItemGuesser');
+    if (isHardPage) {
+      const prefix = String(imageBase || '').replace(/\/$/, '');
+      const btnItemsEl = wrap.querySelector('#btn-items');
+      if (btnItemsEl) {
+        const imgEl = btnItemsEl.querySelector('img');
+        if (imgEl) {
+          const cleaned = 'Premium Helmets/Diamon Horns.png';
+          imgEl.src = prefix ? `${prefix}/${cleaned}` : cleaned;
+          imgEl.alt = 'Diamon Horns';
+        }
+        btnItemsEl.classList.add('hard');
+      }
+    }
+  } catch (e) { /* non-fatal */ }
   titleEl.insertAdjacentElement('afterend', wrap);
   const isCard = location.pathname.endsWith('cardGuesser.html') || location.href.includes('cardGuesser.html');
   const isMonster = location.pathname.endsWith('monsterGuesser.html') || location.href.includes('monsterGuesser.html');
@@ -411,14 +458,16 @@ export async function initShared(config = {}) {
     if (e.key === 'Enter') {
       const first = filterItems(input.value)[0];
       if (first) {
-  incrementGuessCount();
-  // If this selection is the goal item, trigger goal flow
-  try { if (goalItem && first && first.name === goalItem.name) notifyGoalGuessed(first); } catch (e) {}
+        incrementGuessCount();
         items = items.filter(item => item.name !== first.name);
         document.getElementById('dropdown')?.classList.remove('open');
         const inputEl = document.getElementById('search');
         if (inputEl) { inputEl.value = ""; lastQuery = ''; try { inputEl.focus(); } catch (e) {} }
-        if (typeof _config.onSelect === 'function') _config.onSelect(first);
+        if (typeof _config.onSelect === 'function') {
+          try { _config.onSelect(first); } catch (e) { console.warn('onSelect handler failed', e); }
+        } else {
+          try { if (goalItem && first && first.name === goalItem.name) notifyGoalGuessed(first); } catch (e) {}
+        }
         render(filterItems(document.getElementById('search')?.value || ''));
       }
     }

@@ -4,10 +4,13 @@
   <meta charset="utf-8" />
   <title>Idleondle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png">
   <link rel="apple-touch-icon" href="../images/icon.png">
 
+  <meta name="google-adsense-account" content="ca-pub-4897247326207368">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4897247326207368" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="center">
@@ -68,12 +71,7 @@
         <ul class="results" id="results"></ul>
       </div>
     </div>
-    <!-- Emoji box: temporary large icons shown beneath the dropdown -->
-    <div class="emojibox" id="emojibox" aria-hidden="false">
-      <img src="../images/question.png" alt="emoji-1" />
-      <img src="../images/info.png" alt="emoji-2" />
-      <img src="../images/kofi.png" alt="emoji-3" />
-    </div>
+
 
     <!-- Goal found modal (shared) -->
     <div id="goalModal" class="goal-modal" aria-hidden="true">
@@ -88,6 +86,13 @@
         <div class="goal-footer">
           <div class="goal-footer-text">Come back for a new card in...</div>
           <div class="goal-timer-wrap"><span id="goalTimer" class="goal-timer">00:00:00</span></div>
+        </div>
+        <!-- Add action button linking to Monster Guesser (carrotman icon) -->
+        <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
+          <a href="monsterGuesser.html" class="guess-btn" id="toMonsterBtn" aria-label="Monster Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+            <img src="../images/Enemies/carrotman-6_thumb.png" alt="carrotman" style="width:22px;height:22px;object-fit:contain;" />
+            <span style="color:var(--text);font-weight:800;font-size:15px;">Monster Guesser</span>
+          </a>
         </div>
       </div>
     </div>

@@ -1,0 +1,7359 @@
+{
+  "Fisticuffs": {
+    "Bandage Wraps": {
+      "icon": "images\\Fisticuffs\\Bandage Wraps.png",
+      "level_requirement": "25",
+      "sell_price": 46140,
+      "type": "Fisticuffs",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "20",
+        "Speed": "7 (Fast)",
+        "Strength": "6",
+        "Luck": "10",
+        "Reach": "65",
+        "Upgrade Slots": "3"
+      },
+      "class": "Beginner"
+    },
+    "Boxing Gloves": {
+      "icon": "images\\Fisticuffs\\Boxing Gloves.png",
+      "level_requirement": "2",
+      "sell_price": 4,
+      "type": "Fisticuffs",
+      "source": "Smithing",
+      "stats": {
+        "power": "4",
+        "Speed": "5 (Medium)",
+        "Strength": "2",
+        "Luck": "2",
+        "Reach": "55"
+      },
+      "class": "All"
+    },
+    "Crackled Skull Destroyer": {
+      "icon": "images\\Fisticuffs\\Crackled Skull Destroyer.png",
+      "level_requirement": "270",
+      "sell_price": 3000251327900,
+      "type": "Fisticuffs",
+      "source": "Smithing",
+      "stats": {
+        "power": "66",
+        "Speed": "10 (Supersonic)",
+        "Luck": "52",
+        "Reach": "96",
+        "Upgrade Slots": "6"
+      },
+      "class": "Beginner"
+    },
+    "Diabolical Gauntlet": {
+      "icon": "images\\Fisticuffs\\Diabolical Gauntlet.png",
+      "level_requirement": "130",
+      "sell_price": 1123900,
+      "type": "Fisticuffs",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "45",
+        "Speed": "9 (Turbo)",
+        "Luck": "30",
+        "Reach": "96",
+        "Upgrade Slots": "4"
+      },
+      "class": "Beginner"
+    },
+    "Eclectic Ordeal": {
+      "icon": "images\\Fisticuffs\\Eclectic Ordeal.png",
+      "level_requirement": "85",
+      "sell_price": 323900,
+      "type": "Fisticuffs",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "32",
+        "Speed": "9 (Turbo)",
+        "Luck": "17",
+        "Reach": "85",
+        "Upgrade Slots": "4"
+      },
+      "class": "Beginner"
+    },
+    "Knuckle Sabers": {
+      "icon": "images\\Fisticuffs\\Knuckle Sabers.png",
+      "level_requirement": "110",
+      "sell_price": 573900,
+      "type": "Fisticuffs",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "38",
+        "Speed": "9 (Turbo)",
+        "Luck": "21",
+        "Reach": "85",
+        "Upgrade Slots": "4"
+      },
+      "class": "Beginner"
+    },
+    "Mittens of the Gods": {
+      "icon": "images\\Fisticuffs\\Mittens of the Gods.png",
+      "level_requirement": "510",
+      "sell_price": 3154302327900,
+      "type": "Fisticuffs",
+      "source": "Smithing(Lantern Spirit),Lantern Spirit",
+      "stats": {
+        "power": "90",
+        "Speed": "10 (Supersonic)",
+        "Luck": "82",
+        "Reach": "96",
+        "Upgrade Slots": "7"
+      },
+      "class": "Beginner"
+    },
+    "Molten Core Knucklers": {
+      "icon": "images\\Fisticuffs\\Molten Core Knucklers.png",
+      "level_requirement": "160",
+      "sell_price": 251223900,
+      "type": "Fisticuffs",
+      "source": "Smithing(Suggma),Suggma",
+      "stats": {
+        "power": "55",
+        "Speed": "9 (Turbo)",
+        "Luck": "40",
+        "Reach": "96",
+        "Upgrade Slots": "5"
+      },
+      "class": "Beginner"
+    },
+    "Pentastud Slapper": {
+      "icon": "images\\Fisticuffs\\Pentastud Slapper.png",
+      "level_requirement": "360",
+      "sell_price": 3004201327900,
+      "type": "Fisticuffs",
+      "source": "Smithing(Sprout Spirit,RIP Tide),Sprout Spirit",
+      "stats": {
+        "power": "75",
+        "Speed": "10 (Supersonic)",
+        "Luck": "65",
+        "Reach": "96",
+        "Upgrade Slots": "6"
+      },
+      "class": "Beginner"
+    },
+    "The Stingers": {
+      "icon": "images\\Fisticuffs\\The Stingers.png",
+      "level_requirement": "6",
+      "sell_price": 380,
+      "type": "Fisticuffs",
+      "source": "Smithing",
+      "stats": {
+        "power": "11",
+        "Speed": "5 (Medium)",
+        "Strength": "5",
+        "Luck": "5",
+        "Reach": "60",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Uninflated Glove": {
+      "icon": "images\\Fisticuffs\\Uninflated Glove.png",
+      "level_requirement": "50",
+      "sell_price": 15142280,
+      "type": "Fisticuffs",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "27",
+        "Speed": "8 (Faster)",
+        "Luck": "13",
+        "Reach": "65",
+        "Upgrade Slots": "4"
+      },
+      "class": "Beginner"
+    }
+  },
+  "Wands": {
+    "Arcanist Staff": {
+      "icon": "images\\Wands\\Arcanist Staff.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Wands",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "20",
+        "Speed": "5 (Medium)",
+        "Reach": "80"
+      },
+      "class": "Mage"
+    },
+    "Cattle Core Soothsayer Staff": {
+      "icon": "images\\Wands\\Cattle Core Soothsayer Staff.png",
+      "level_requirement": "160",
+      "sell_price": 178867200,
+      "type": "Wands",
+      "source": "Smithing(Fire Spirit),Fire Spirit",
+      "stats": {
+        "power": "75",
+        "Speed": "8 (Faster)",
+        "Agility": "20",
+        "Wisdom": "35",
+        "Reach": "275",
+        "Upgrade Slots": "5"
+      },
+      "class": "Mage"
+    },
+    "Crows Nest": {
+      "icon": "images\\Wands\\Crows Nest.png",
+      "level_requirement": "50",
+      "sell_price": 123850,
+      "type": "Wands",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "30",
+        "Speed": "5 (Medium)",
+        "Agility": "5",
+        "Wisdom": "9",
+        "Reach": "160",
+        "Upgrade Slots": "3"
+      },
+      "class": "Mage"
+    },
+    "Diabolical Opticule": {
+      "icon": "images\\Wands\\Diabolical Opticule.png",
+      "level_requirement": "130",
+      "sell_price": 3867200,
+      "type": "Wands",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "61",
+        "Speed": "7 (Fast)",
+        "Agility": "13",
+        "Wisdom": "25",
+        "Reach": "250",
+        "Upgrade Slots": "5"
+      },
+      "class": "Mage"
+    },
+    "Gnarled Wand": {
+      "icon": "images\\Wands\\Gnarled Wand.png",
+      "level_requirement": "4",
+      "sell_price": 70,
+      "type": "Wands",
+      "source": "Smithing",
+      "stats": {
+        "power": "7",
+        "Speed": "5 (Medium)",
+        "Wisdom": "4",
+        "Reach": "115",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Grey Gatsby": {
+      "icon": "images\\Wands\\Grey Gatsby.png",
+      "level_requirement": "90",
+      "sell_price": 634200,
+      "type": "Wands",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "43",
+        "Speed": "6 (Quick)",
+        "Agility": "10",
+        "Wisdom": "13",
+        "Luck": "1",
+        "Reach": "170",
+        "Upgrade Slots": "4"
+      },
+      "class": "Mage"
+    },
+    "Magnifique Godcaster": {
+      "icon": "images\\Wands\\Magnifique Godcaster.png",
+      "level_requirement": "525",
+      "sell_price": 955499051200,
+      "type": "Wands",
+      "source": "Smithing(Skydoggie Spirit),Skydoggie Spirit",
+      "stats": {
+        "power": "125",
+        "Speed": "9 (Turbo)",
+        "Agility": "40",
+        "Wisdom": "80",
+        "Reach": "80",
+        "Upgrade Slots": "7"
+      },
+      "class": "Mage"
+    },
+    "Microphone": {
+      "icon": "images\\Wands\\Microphone.png",
+      "level_requirement": "1",
+      "sell_price": 200,
+      "type": "Wands",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "13",
+        "Speed": "8 (Faster)",
+        "Agility": "5",
+        "Wisdom": "9",
+        "Reach": "160",
+        "Upgrade Slots": "3"
+      },
+      "class": "Mage"
+    },
+    "Quarterstaff": {
+      "icon": "images\\Wands\\Quarterstaff.png",
+      "level_requirement": "12",
+      "sell_price": 1950,
+      "type": "Wands",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "power": "16",
+        "Speed": "4 (Slow)",
+        "Wisdom": "9",
+        "Reach": "120",
+        "Upgrade Slots": "2"
+      },
+      "class": "Mage"
+    },
+    "Skullslip Hallow": {
+      "icon": "images\\Wands\\Skullslip Hallow.png",
+      "level_requirement": "110",
+      "sell_price": 3034200,
+      "type": "Wands",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "51",
+        "Speed": "6 (Quick)",
+        "Agility": "12",
+        "Wisdom": "18",
+        "Reach": "195",
+        "Upgrade Slots": "5"
+      },
+      "class": "Mage"
+    },
+    "Sparky Marble Staff": {
+      "icon": "images\\Wands\\Sparky Marble Staff.png",
+      "level_requirement": "375",
+      "sell_price": 950498901200,
+      "type": "Wands",
+      "source": "Smithing(Baby Troll),Baby Troll",
+      "stats": {
+        "power": "108",
+        "Speed": "8 (Faster)",
+        "Agility": "30",
+        "Wisdom": "70",
+        "Reach": "310",
+        "Upgrade Slots": "6"
+      },
+      "class": "Mage"
+    },
+    "Spriggly Staff": {
+      "icon": "images\\Wands\\Spriggly Staff.png",
+      "level_requirement": "1",
+      "sell_price": 200,
+      "type": "Wands",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "25",
+        "Speed": "5 (Medium)",
+        "Wisdom": "15",
+        "Luck": "1",
+        "Reach": "160",
+        "Upgrade Slots": "2"
+      },
+      "class": "Mage"
+    },
+    "Spriggly Storm": {
+      "icon": "images\\Wands\\Spriggly Storm.png",
+      "level_requirement": "75",
+      "sell_price": 438850,
+      "type": "Wands",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "36",
+        "Speed": "5 (Medium)",
+        "Wisdom": "15",
+        "Luck": "1",
+        "Reach": "155",
+        "Upgrade Slots": "4"
+      },
+      "class": "Mage"
+    },
+    "Staff of the Undead Plague": {
+      "icon": "images\\Wands\\Staff of the Undead Plague.png",
+      "level_requirement": "250",
+      "sell_price": 350178901200,
+      "type": "Wands",
+      "source": "Smithing",
+      "stats": {
+        "power": "94",
+        "Speed": "8 (Faster)",
+        "Agility": "23",
+        "Wisdom": "54",
+        "Reach": "300",
+        "Upgrade Slots": "6"
+      },
+      "class": "Mage"
+    },
+    "Starlight": {
+      "icon": "images\\Wands\\Starlight.png",
+      "level_requirement": "30",
+      "sell_price": 42350,
+      "type": "Wands",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "23",
+        "Speed": "4 (Slow)",
+        "Agility": "1",
+        "Wisdom": "11",
+        "Reach": "145",
+        "Upgrade Slots": "3"
+      },
+      "class": "Mage"
+    }
+  },
+  "Spears": {
+    "Blood Screamer": {
+      "icon": "images\\Spears\\Blood Screamer.png",
+      "level_requirement": "55",
+      "sell_price": 200,
+      "type": "Spears",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "87",
+        "Speed": "10 (Supersonic)",
+        "Strength": "5",
+        "Agility": "15",
+        "Wisdom": "5",
+        "Luck": "5",
+        "Reach": "84",
+        "Upgrade Slots": "2"
+      },
+      "class": "Warrior"
+    },
+    "Deuscythe": {
+      "icon": "images\\Spears\\Deuscythe.png",
+      "level_requirement": "90",
+      "sell_price": 5577910,
+      "type": "Spears",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "40",
+        "Speed": "6 (Quick)",
+        "Strength": "20",
+        "Reach": "88",
+        "Upgrade Slots": "4"
+      },
+      "class": "Warrior"
+    },
+    "Diabolical Flesh Ripper": {
+      "icon": "images\\Spears\\Diabolical Flesh Ripper.png",
+      "level_requirement": "130",
+      "sell_price": 23655910,
+      "type": "Spears",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "58",
+        "Speed": "7 (Fast)",
+        "Strength": "30",
+        "Reach": "92",
+        "Upgrade Slots": "5"
+      },
+      "class": "Warrior"
+    },
+    "Elegant Spear": {
+      "icon": "images\\Spears\\Elegant Spear.png",
+      "level_requirement": "375",
+      "sell_price": 930518689910,
+      "type": "Spears",
+      "source": "Smithing(Ricecake),Ricecake",
+      "stats": {
+        "power": "97",
+        "Speed": "8 (Faster)",
+        "Strength": "65",
+        "Reach": "116",
+        "Upgrade Slots": "6"
+      },
+      "class": "Warrior"
+    },
+    "Enforced Slasher": {
+      "icon": "images\\Spears\\Enforced Slasher.png",
+      "level_requirement": "50",
+      "sell_price": 167515,
+      "type": "Spears",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "26",
+        "Speed": "5 (Medium)",
+        "Strength": "11",
+        "Wisdom": "4",
+        "Reach": "80",
+        "Upgrade Slots": "3"
+      },
+      "class": "Warrior"
+    },
+    "Flesh Reaper": {
+      "icon": "images\\Spears\\Flesh Reaper.png",
+      "level_requirement": "1",
+      "sell_price": 40,
+      "type": "Spears",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "2500",
+        "Speed": "9 (Turbo)",
+        "Strength": "10000",
+        "Agility": "2500",
+        "Wisdom": "1000",
+        "Luck": "4200",
+        "Reach": "70"
+      },
+      "class": "All"
+    },
+    "Frozen Impaler": {
+      "icon": "images\\Spears\\Frozen Impaler.png",
+      "level_requirement": "45",
+      "sell_price": 120,
+      "type": "Spears",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "66",
+        "Speed": "3 (Slower)",
+        "Strength": "4",
+        "Agility": "2",
+        "Wisdom": "9",
+        "Luck": "2",
+        "Reach": "100",
+        "Upgrade Slots": "2"
+      },
+      "class": "Warrior"
+    },
+    "Iron Sword": {
+      "icon": "images\\Spears\\Iron Sword.png",
+      "level_requirement": "1",
+      "sell_price": 200,
+      "type": "Spears",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "32",
+        "Speed": "10 (Supersonic)",
+        "Strength": "3",
+        "Luck": "1",
+        "Reach": "78",
+        "Upgrade Slots": "2"
+      },
+      "class": "Warrior"
+    },
+    "Magma Maul": {
+      "icon": "images\\Spears\\Magma Maul.png",
+      "level_requirement": "160",
+      "sell_price": 198655910,
+      "type": "Spears",
+      "source": "Smithing(Citringe),Citringe",
+      "stats": {
+        "power": "70",
+        "Speed": "7 (Fast)",
+        "Strength": "40",
+        "Reach": "92",
+        "Upgrade Slots": "5"
+      },
+      "class": "Warrior"
+    },
+    "Massive Godbreaker": {
+      "icon": "images\\Spears\\Massive Godbreaker.png",
+      "level_requirement": "525",
+      "sell_price": 935518839910,
+      "type": "Spears",
+      "source": "Smithing(Skydoggie Spirit),Skydoggie Spirit",
+      "stats": {
+        "power": "112",
+        "Speed": "9 (Turbo)",
+        "Strength": "80",
+        "Reach": "132",
+        "Upgrade Slots": "7"
+      },
+      "class": "Warrior"
+    },
+    "Royal Bayonet": {
+      "icon": "images\\Spears\\Royal Bayonet.png",
+      "level_requirement": "30",
+      "sell_price": 17275,
+      "type": "Spears",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "20",
+        "Speed": "5 (Medium)",
+        "Strength": "10",
+        "Wisdom": "2",
+        "Reach": "95",
+        "Upgrade Slots": "3"
+      },
+      "class": "Warrior"
+    },
+    "Skull Lance": {
+      "icon": "images\\Spears\\Skull Lance.png",
+      "level_requirement": "250",
+      "sell_price": 330198689910,
+      "type": "Spears",
+      "source": "Smithing",
+      "stats": {
+        "power": "85",
+        "Speed": "8 (Faster)",
+        "Strength": "52",
+        "Reach": "116",
+        "Upgrade Slots": "6"
+      },
+      "class": "Warrior"
+    },
+    "Slimsharp Fin": {
+      "icon": "images\\Spears\\Slimsharp Fin.png",
+      "level_requirement": "110",
+      "sell_price": 10577910,
+      "type": "Spears",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "48",
+        "Speed": "6 (Quick)",
+        "Strength": "24",
+        "Reach": "92",
+        "Upgrade Slots": "5"
+      },
+      "class": "Warrior"
+    },
+    "Steel Axe": {
+      "icon": "images\\Spears\\Steel Axe.png",
+      "level_requirement": "11",
+      "sell_price": 4375,
+      "type": "Spears",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "power": "14",
+        "Speed": "5 (Medium)",
+        "Strength": "7",
+        "Wisdom": "3",
+        "Reach": "62",
+        "Upgrade Slots": "2"
+      },
+      "class": "Warrior"
+    },
+    "Steel Spear": {
+      "icon": "images\\Spears\\Steel Spear.png",
+      "level_requirement": "25",
+      "sell_price": 223400,
+      "type": "Spears",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "40",
+        "Speed": "2 (Sluggish)",
+        "Strength": "2",
+        "Wisdom": "3",
+        "Luck": "1",
+        "Reach": "90",
+        "Upgrade Slots": "2"
+      },
+      "class": "Warrior"
+    },
+    "The Ice Breaker": {
+      "icon": "images\\Spears\\The Ice Breaker.png",
+      "level_requirement": "75",
+      "sell_price": 5557515,
+      "type": "Spears",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "33",
+        "Speed": "5 (Medium)",
+        "Strength": "13",
+        "Wisdom": "6",
+        "Reach": "76",
+        "Upgrade Slots": "4"
+      },
+      "class": "Warrior"
+    },
+    "Wooden Spear": {
+      "icon": "images\\Spears\\Wooden Spear.png",
+      "level_requirement": "4",
+      "sell_price": 30,
+      "type": "Spears",
+      "source": "Smithing",
+      "stats": {
+        "power": "7",
+        "Speed": "5 (Medium)",
+        "Strength": "3",
+        "Wisdom": "1",
+        "Reach": "70",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    }
+  },
+  "Bows": {
+    "Birch Longbow": {
+      "icon": "images\\Bows\\Birch Longbow.png",
+      "level_requirement": "12",
+      "sell_price": 2000,
+      "type": "Bows",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "power": "12",
+        "Speed": "6 (Quick)",
+        "Strength": "4",
+        "Agility": "5",
+        "Reach": "170",
+        "Upgrade Slots": "2"
+      },
+      "class": "Archer"
+    },
+    "Blackhole Bow": {
+      "icon": "images\\Bows\\Blackhole Bow.png",
+      "level_requirement": "90",
+      "sell_price": 147970,
+      "type": "Bows",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "36",
+        "Speed": "7 (Fast)",
+        "Strength": "10",
+        "Agility": "13",
+        "Reach": "230",
+        "Upgrade Slots": "4"
+      },
+      "class": "Archer"
+    },
+    "Blizzard Bow": {
+      "icon": "images\\Bows\\Blizzard Bow.png",
+      "level_requirement": "75",
+      "sell_price": 92620,
+      "type": "Bows",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "30",
+        "Speed": "6 (Quick)",
+        "Agility": "15",
+        "Reach": "205",
+        "Upgrade Slots": "4"
+      },
+      "class": "Archer"
+    },
+    "Carrot Launcher": {
+      "icon": "images\\Bows\\Carrot Launcher.png",
+      "level_requirement": "18",
+      "sell_price": 5000,
+      "type": "Bows",
+      "source": "Carrotman",
+      "stats": {
+        "power": "22",
+        "Speed": "2 (Sluggish)",
+        "Agility": "8",
+        "Reach": "225",
+        "Upgrade Slots": "2"
+      },
+      "class": "Archer"
+    },
+    "Diabolical Continuit": {
+      "icon": "images\\Bows\\Diabolical Continuit.png",
+      "level_requirement": "130",
+      "sell_price": 3026000,
+      "type": "Bows",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "54",
+        "Speed": "8 (Faster)",
+        "Strength": "14",
+        "Agility": "20",
+        "Reach": "300",
+        "Upgrade Slots": "5"
+      },
+      "class": "Archer"
+    },
+    "Doublestring Godshooter": {
+      "icon": "images\\Bows\\Doublestring Godshooter.png",
+      "level_requirement": "525",
+      "sell_price": 965498210000,
+      "type": "Bows",
+      "source": "Smithing(Skydoggie Spirit),Skydoggie Spirit",
+      "stats": {
+        "power": "110",
+        "Speed": "10 (Supersonic)",
+        "Strength": "37",
+        "Agility": "70",
+        "Reach": "370",
+        "Upgrade Slots": "7"
+      },
+      "class": "Archer"
+    },
+    "Pharaoh Bow": {
+      "icon": "images\\Bows\\Pharaoh Bow.png",
+      "level_requirement": "50",
+      "sell_price": 56620,
+      "type": "Bows",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "23",
+        "Speed": "6 (Quick)",
+        "Strength": "1",
+        "Agility": "13",
+        "Reach": "200",
+        "Upgrade Slots": "3"
+      },
+      "class": "Archer"
+    },
+    "Pristine Longbow": {
+      "icon": "images\\Bows\\Pristine Longbow.png",
+      "level_requirement": "375",
+      "sell_price": 960498060000,
+      "type": "Bows",
+      "source": "Smithing(River Spirit),River Spirit",
+      "stats": {
+        "power": "95",
+        "Speed": "9 (Turbo)",
+        "Strength": "30",
+        "Agility": "52",
+        "Reach": "350",
+        "Upgrade Slots": "6"
+      },
+      "class": "Archer"
+    },
+    "Rooted Bow": {
+      "icon": "images\\Bows\\Rooted Bow.png",
+      "level_requirement": "25",
+      "sell_price": 200,
+      "type": "Bows",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "25",
+        "Speed": "7 (Fast)",
+        "Strength": "18",
+        "Agility": "15",
+        "Luck": "1",
+        "Reach": "200",
+        "Upgrade Slots": "2"
+      },
+      "class": "Archer"
+    },
+    "Sediment Core Grunkler": {
+      "icon": "images\\Bows\\Sediment Core Grunkler.png",
+      "level_requirement": "160",
+      "sell_price": 178026000,
+      "type": "Bows",
+      "source": "Smithing(Lampar),Lampar",
+      "stats": {
+        "power": "65",
+        "Speed": "8 (Faster)",
+        "Strength": "20",
+        "Agility": "30",
+        "Reach": "320",
+        "Upgrade Slots": "5"
+      },
+      "class": "Archer"
+    },
+    "Shardsure Leif": {
+      "icon": "images\\Bows\\Shardsure Leif.png",
+      "level_requirement": "110",
+      "sell_price": 2947970,
+      "type": "Bows",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "44",
+        "Speed": "7 (Fast)",
+        "Strength": "12",
+        "Agility": "16",
+        "Reach": "255",
+        "Upgrade Slots": "5"
+      },
+      "class": "Archer"
+    },
+    "Spiked Menace": {
+      "icon": "images\\Bows\\Spiked Menace.png",
+      "level_requirement": "30",
+      "sell_price": 31150,
+      "type": "Bows",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "17",
+        "Speed": "6 (Quick)",
+        "Strength": "5",
+        "Agility": "8",
+        "Luck": "3",
+        "Reach": "175",
+        "Upgrade Slots": "3"
+      },
+      "class": "Archer"
+    },
+    "Spine Tingler Sniper": {
+      "icon": "images\\Bows\\Spine Tingler Sniper.png",
+      "level_requirement": "250",
+      "sell_price": 360178060000,
+      "type": "Bows",
+      "source": "Smithing",
+      "stats": {
+        "power": "80",
+        "Speed": "9 (Turbo)",
+        "Strength": "25",
+        "Agility": "41",
+        "Reach": "340",
+        "Upgrade Slots": "6"
+      },
+      "class": "Archer"
+    },
+    "Wooden Bow": {
+      "icon": "images\\Bows\\Wooden Bow.png",
+      "level_requirement": "1",
+      "sell_price": 50,
+      "type": "Bows",
+      "source": "Smithing",
+      "stats": {
+        "power": "7",
+        "Speed": "5 (Medium)",
+        "Strength": "2",
+        "Agility": "3",
+        "Reach": "150",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    }
+  },
+  "Helmets": {
+    "3rd Anniversary Ice Cream Topper": {
+      "icon": "images\\Helmets\\3rd Anniversary Ice Cream Topper.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "3rd Anniversary Event Boxes",
+      "stats": {
+        "power": "2",
+        "Defence": "5",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Acorn Topper": {
+      "icon": "images\\Helmets\\Acorn Topper.png",
+      "level_requirement": "30",
+      "sell_price": 2251350,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Defence": "30",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Adornment of the High Priest": {
+      "icon": "images\\Helmets\\Adornment of the High Priest.png",
+      "level_requirement": "100",
+      "sell_price": 6730250,
+      "type": "Helmets",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "1",
+        "Agility": "5",
+        "Wisdom": "25",
+        "Defence": "40",
+        "Upgrade Slots": "5"
+      },
+      "class": "Mage"
+    },
+    "Alien Headband": {
+      "icon": "images\\Helmets\\Alien Headband.png",
+      "level_requirement": "13",
+      "sell_price": 1000,
+      "type": "Helmets",
+      "source": "Promotheus",
+      "stats": {
+        "Agility": "3",
+        "Wisdom": "11",
+        "Defence": "4",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Amarok Helmet": {
+      "icon": "images\\Helmets\\Amarok Helmet.png",
+      "level_requirement": "38",
+      "sell_price": 30450,
+      "type": "Helmets",
+      "source": "Smithing(Blunder Hills Merit Shop)",
+      "stats": {
+        "Strength": "4",
+        "Agility": "4",
+        "Wisdom": "4",
+        "Luck": "4",
+        "Defence": "20",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Apple Launch Hat": {
+      "icon": "images\\Helmets\\Apple Launch Hat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "3rd Anniversary Event Boxes,Golden Gift,Phone Box,Golden Oyster",
+      "stats": {
+        "power": "3",
+        "Defence": "3",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Baseball Hat": {
+      "icon": "images\\Helmets\\Baseball Hat.png",
+      "level_requirement": "1",
+      "sell_price": 5,
+      "type": "Helmets",
+      "source": "Moonmoon,Character Creation",
+      "stats": {
+        "Strength": "1",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Big Pretty Bow": {
+      "icon": "images\\Helmets\\Big Pretty Bow.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "3rd Anniversary Event Boxes,Choco Box,Choco Box",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Birthday Hat": {
+      "icon": "images\\Helmets\\Birthday Hat.png",
+      "level_requirement": "10",
+      "sell_price": 5220,
+      "type": "Helmets",
+      "source": "Smithing,Level Up Gift Bubble",
+      "stats": {
+        "Luck": "5",
+        "Defence": "10",
+        "Upgrade Slots": "5"
+      },
+      "class": "Beginner"
+    },
+    "Bored Beanie": {
+      "icon": "images\\Helmets\\Bored Beanie.png",
+      "level_requirement": "8",
+      "sell_price": 500,
+      "type": "Helmets",
+      "source": "Bored Bean",
+      "stats": {
+        "Agility": "7",
+        "Luck": "3",
+        "Defence": "5",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Bunny Ears": {
+      "icon": "images\\Helmets\\Bunny Ears.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Egg Capsule,Spring Splendor Event",
+      "stats": {
+        "Agility": "4",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Chizoar Helmet": {
+      "icon": "images\\Helmets\\Chizoar Helmet.png",
+      "level_requirement": "110",
+      "sell_price": 7425275,
+      "type": "Helmets",
+      "source": "Smithing(Frostbite Tundra Merit Shop)",
+      "stats": {
+        "power": "3",
+        "Strength": "20",
+        "Agility": "20",
+        "Wisdom": "20",
+        "Defence": "60",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    },
+    "Conquistador Plume": {
+      "icon": "images\\Helmets\\Conquistador Plume.png",
+      "level_requirement": "100",
+      "sell_price": 6730250,
+      "type": "Helmets",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "1",
+        "Strength": "7",
+        "Agility": "23",
+        "Defence": "47",
+        "Upgrade Slots": "3"
+      },
+      "class": "Archer"
+    },
+    "Copper Helmet": {
+      "icon": "images\\Helmets\\Copper Helmet.png",
+      "level_requirement": "8",
+      "sell_price": 420,
+      "type": "Helmets",
+      "source": "Smithing,Dewdrop Silver Chest",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Defence": "7",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Cowbo Galloneer": {
+      "icon": "images\\Helmets\\Cowbo Galloneer.png",
+      "level_requirement": "6",
+      "sell_price": 1500,
+      "type": "Helmets",
+      "source": "Cowbo Jones",
+      "stats": {
+        "Strength": "2",
+        "Defence": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Crown of the Gods": {
+      "icon": "images\\Helmets\\Crown of the Gods.png",
+      "level_requirement": "510",
+      "sell_price": 1514076289650,
+      "type": "Helmets",
+      "source": "Smithing(Minichief Spirit),Minichief Spirit",
+      "stats": {
+        "power": "18",
+        "Strength": "65",
+        "Agility": "65",
+        "Wisdom": "65",
+        "Luck": "65",
+        "Defence": "210",
+        "Upgrade Slots": "11"
+      },
+      "class": "All"
+    },
+    "Dementia Helmet": {
+      "icon": "images\\Helmets\\Dementia Helmet.png",
+      "level_requirement": "70",
+      "sell_price": 465000,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "12",
+        "Agility": "12",
+        "Wisdom": "12",
+        "Luck": "12",
+        "Defence": "34",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Demon Horns": {
+      "icon": "images\\Helmets\\Demon Horns.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Helmets",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "400",
+        "Strength": "3000",
+        "Agility": "3000",
+        "Wisdom": "3000",
+        "Luck": "3000",
+        "Defence": "10000",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Diabolical Headcase": {
+      "icon": "images\\Helmets\\Diabolical Headcase.png",
+      "level_requirement": "135",
+      "sell_price": 88055250,
+      "type": "Helmets",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "5",
+        "Strength": "30",
+        "Agility": "30",
+        "Wisdom": "30",
+        "Luck": "30",
+        "Defence": "90",
+        "Upgrade Slots": "8"
+      },
+      "class": "All"
+    },
+    "Efaunt Helmet": {
+      "icon": "images\\Helmets\\Efaunt Helmet.png",
+      "level_requirement": "80",
+      "sell_price": 120220,
+      "type": "Helmets",
+      "source": "Smithing(Yum Yum Desert Merit Shop)",
+      "stats": {
+        "power": "1",
+        "Strength": "8",
+        "Agility": "8",
+        "Wisdom": "8",
+        "Luck": "8",
+        "Defence": "38",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Emperor Kabuto": {
+      "icon": "images\\Helmets\\Emperor Kabuto.png",
+      "level_requirement": "650",
+      "sell_price": 1514076339650,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "power": "25",
+        "Strength": "80",
+        "Agility": "80",
+        "Wisdom": "80",
+        "Luck": "80",
+        "Defence": "270",
+        "Upgrade Slots": "12"
+      },
+      "class": "All"
+    },
+    "Epic Santa Hat": {
+      "icon": "images\\Helmets\\Epic Santa Hat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Giftmas Present",
+      "stats": {
+        "power": "2",
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Luck": "3",
+        "Defence": "15",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Farmer Brim": {
+      "icon": "images\\Helmets\\Farmer Brim.png",
+      "level_requirement": "1",
+      "sell_price": 12,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "2",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Defence": "3",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Farmer Brimer": {
+      "icon": "images\\Helmets\\Farmer Brimer.png",
+      "level_requirement": "3",
+      "sell_price": 150,
+      "type": "Helmets",
+      "source": "Unobtainable",
+      "stats": {
+        "Agility": "4",
+        "Wisdom": "2",
+        "Defence": "4",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Funny Hat": {
+      "icon": "images\\Helmets\\Funny Hat.png",
+      "level_requirement": "20",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Idle Skilling Crossover",
+      "stats": {
+        "power": "3",
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Luck": "5",
+        "Defence": "10",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Gold Helmet": {
+      "icon": "images\\Helmets\\Gold Helmet.png",
+      "level_requirement": "35",
+      "sell_price": 29420,
+      "type": "Helmets",
+      "source": "Smithing,Chillsnap Silver Chest",
+      "stats": {
+        "Strength": "7",
+        "Agility": "7",
+        "Wisdom": "7",
+        "Defence": "15",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Grandma Disguise": {
+      "icon": "images\\Helmets\\Grandma Disguise.png",
+      "level_requirement": "35",
+      "sell_price": 1500,
+      "type": "Helmets",
+      "source": "Amarok,Chaotic Amarok,Radiant Amarok",
+      "stats": {
+        "Wisdom": "15",
+        "Defence": "5",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Green Headband": {
+      "icon": "images\\Helmets\\Green Headband.png",
+      "level_requirement": "1",
+      "sell_price": 150,
+      "type": "Helmets",
+      "source": "Frog",
+      "stats": {
+        "Strength": "2",
+        "Agility": "4",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Grey Beret": {
+      "icon": "images\\Helmets\\Grey Beret.png",
+      "level_requirement": "1",
+      "sell_price": 5,
+      "type": "Helmets",
+      "source": "Dedotated Ram,Character Creation",
+      "stats": {
+        "Agility": "1",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Honker Hat": {
+      "icon": "images\\Helmets\\Honker Hat.png",
+      "level_requirement": "100",
+      "sell_price": 80001253,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "power": "2",
+        "Defence": "60",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    },
+    "Ice Cream Sunday": {
+      "icon": "images\\Helmets\\Ice Cream Sunday.png",
+      "level_requirement": "30",
+      "sell_price": 200,
+      "type": "Helmets",
+      "source": "Unobtainable",
+      "stats": {
+        "Wisdom": "6",
+        "Defence": "5",
+        "Upgrade Slots": "5"
+      },
+      "class": "Beginner"
+    },
+    "Ice Guard Helmet": {
+      "icon": "images\\Helmets\\Ice Guard Helmet.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Random Events(Glacial Guild)",
+      "stats": {
+        "power": "3",
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Luck": "5",
+        "Defence": "5",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Iron Helmet": {
+      "icon": "images\\Helmets\\Iron Helmet.png",
+      "level_requirement": "15",
+      "sell_price": 7280,
+      "type": "Helmets",
+      "source": "Smithing,Sandstone Silver Chest",
+      "stats": {
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Defence": "10",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Jar": {
+      "icon": "images\\Helmets\\Jar.png",
+      "level_requirement": "25",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Snake Jar",
+      "stats": {
+        "Defence": "25",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Leather Cap": {
+      "icon": "images\\Helmets\\Leather Cap.png",
+      "level_requirement": "6",
+      "sell_price": 150,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Defence": "5",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Lustre Veil": {
+      "icon": "images\\Helmets\\Lustre Veil.png",
+      "level_requirement": "115",
+      "sell_price": 39965250,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "22",
+        "Agility": "22",
+        "Wisdom": "22",
+        "Luck": "22",
+        "Defence": "72",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Magma Core Headdress": {
+      "icon": "images\\Helmets\\Magma Core Headdress.png",
+      "level_requirement": "210",
+      "sell_price": 26072650,
+      "type": "Helmets",
+      "source": "Smithing(Cheese Nub),Cheese Nub",
+      "stats": {
+        "power": "9",
+        "Strength": "40",
+        "Agility": "40",
+        "Wisdom": "40",
+        "Luck": "40",
+        "Defence": "125",
+        "Upgrade Slots": "9"
+      },
+      "class": "All"
+    },
+    "Marbiglass Headdress": {
+      "icon": "images\\Helmets\\Marbiglass Headdress.png",
+      "level_requirement": "360",
+      "sell_price": 1526139650,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "power": "14",
+        "Strength": "58",
+        "Agility": "58",
+        "Wisdom": "58",
+        "Luck": "58",
+        "Defence": "175",
+        "Upgrade Slots": "10"
+      },
+      "class": "All"
+    },
+    "Mark of Member": {
+      "icon": "images\\Helmets\\Mark of Member.png",
+      "level_requirement": "80",
+      "sell_price": 6756750,
+      "type": "Helmets",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "Luck": "20",
+        "Defence": "50",
+        "Upgrade Slots": "5"
+      },
+      "class": "Beginner"
+    },
+    "Meteorhead": {
+      "icon": "images\\Helmets\\Meteorhead.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Random Events(Meteorite)",
+      "stats": {
+        "power": "3",
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Luck": "5",
+        "Defence": "5",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Militia Helm": {
+      "icon": "images\\Helmets\\Militia Helm.png",
+      "level_requirement": "10",
+      "sell_price": 1140,
+      "type": "Helmets",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "Strength": "7",
+        "Agility": "2",
+        "Defence": "11",
+        "Upgrade Slots": "2"
+      },
+      "class": "Warrior"
+    },
+    "Murmillo Helm": {
+      "icon": "images\\Helmets\\Murmillo Helm.png",
+      "level_requirement": "100",
+      "sell_price": 6730250,
+      "type": "Helmets",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "1",
+        "Strength": "20",
+        "Wisdom": "10",
+        "Defence": "55",
+        "Upgrade Slots": "3"
+      },
+      "class": "Warrior"
+    },
+    "Nondescript Game Show Host Hair": {
+      "icon": "images\\Helmets\\Nondescript Game Show Host Hair.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "100",
+        "Strength": "25",
+        "Agility": "40",
+        "Luck": "50",
+        "Upgrade Slots": "8"
+      },
+      "class": "All"
+    },
+    "Nuget Cake Fedora": {
+      "icon": "images\\Helmets\\Nuget Cake Fedora.png",
+      "level_requirement": "40",
+      "sell_price": 4329,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "power": "1",
+        "Luck": "10",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Paper Boat": {
+      "icon": "images\\Helmets\\Paper Boat.png",
+      "level_requirement": "30",
+      "sell_price": 1500,
+      "type": "Helmets",
+      "source": "R-9(Sources)",
+      "stats": {
+        "Strength": "4",
+        "Wisdom": "10",
+        "Defence": "12",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Pink Headband": {
+      "icon": "images\\Helmets\\Pink Headband.png",
+      "level_requirement": "1",
+      "sell_price": 200,
+      "type": "Helmets",
+      "source": "Twitch Prizes,Weekly Battles(On Rotation)",
+      "stats": {
+        "Strength": "4",
+        "Agility": "4",
+        "Wisdom": "4",
+        "Luck": "4",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Platinum Helmet": {
+      "icon": "images\\Helmets\\Platinum Helmet.png",
+      "level_requirement": "55",
+      "sell_price": 383780,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "9",
+        "Agility": "9",
+        "Wisdom": "9",
+        "Defence": "25",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Propeller Cap": {
+      "icon": "images\\Helmets\\Propeller Cap.png",
+      "level_requirement": "1",
+      "sell_price": 5,
+      "type": "Helmets",
+      "source": "Gelatinous Cuboid,Character Creation",
+      "stats": {
+        "Wisdom": "1",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Purple Tupacband": {
+      "icon": "images\\Helmets\\Purple Tupacband.png",
+      "level_requirement": "1",
+      "sell_price": 1130,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "Agility": "2",
+        "Wisdom": "5",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Real Civil Engineer Helmet": {
+      "icon": "images\\Helmets\\Real Civil Engineer Helmet.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Secrets",
+      "stats": {
+        "Strength": "2",
+        "Wisdom": "4",
+        "Defence": "6",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Red Headband": {
+      "icon": "images\\Helmets\\Red Headband.png",
+      "level_requirement": "1",
+      "sell_price": 200,
+      "type": "Helmets",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "2",
+        "Luck": "2",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Royal Turban": {
+      "icon": "images\\Helmets\\Royal Turban.png",
+      "level_requirement": "70",
+      "sell_price": 200,
+      "type": "Helmets",
+      "source": "Chaotic Efaunt,Efaunt,Gilded Efaunt",
+      "stats": {
+        "Agility": "15",
+        "Defence": "7",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Santa Hat": {
+      "icon": "images\\Helmets\\Santa Hat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Giftmas Box,2021 Giftmas Login Bonus",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Shiny Bored Beanie": {
+      "icon": "images\\Helmets\\Shiny Bored Beanie.png",
+      "level_requirement": "9",
+      "sell_price": 15150500,
+      "type": "Helmets",
+      "source": "Smithing(Domeo Magmus),Domeo Magmus",
+      "stats": {
+        "power": "20",
+        "Defence": "100",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Skulled Helmet of the Divine": {
+      "icon": "images\\Helmets\\Skulled Helmet of the Divine.png",
+      "level_requirement": "300",
+      "sell_price": 26124650,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "power": "12",
+        "Strength": "50",
+        "Agility": "50",
+        "Wisdom": "50",
+        "Luck": "50",
+        "Defence": "160",
+        "Upgrade Slots": "10"
+      },
+      "class": "All"
+    },
+    "Sleek Coif": {
+      "icon": "images\\Helmets\\Sleek Coif.png",
+      "level_requirement": "40",
+      "sell_price": 41140,
+      "type": "Helmets",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "Strength": "4",
+        "Agility": "12",
+        "Defence": "18",
+        "Upgrade Slots": "3"
+      },
+      "class": "Archer"
+    },
+    "Slime Cap": {
+      "icon": "images\\Helmets\\Slime Cap.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Helmets",
+      "source": "Unobtainable",
+      "stats": {
+        "Agility": "4",
+        "Luck": "2",
+        "Upgrade Slots": "4"
+      },
+      "class": "Beginner"
+    },
+    "Steam Cap": {
+      "icon": "images\\Helmets\\Steam Cap.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Steam Launch Event",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1"
+      },
+      "class": "All"
+    },
+    "Stump Prop": {
+      "icon": "images\\Helmets\\Stump Prop.png",
+      "level_requirement": "4",
+      "sell_price": 200,
+      "type": "Helmets",
+      "source": "Woodsman",
+      "stats": {
+        "power": "5",
+        "Agility": "3",
+        "Luck": "4",
+        "Defence": "2",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Summer Shell": {
+      "icon": "images\\Helmets\\Summer Shell.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Summer Cooler",
+      "stats": {
+        "Agility": "4",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "The Crow Perch": {
+      "icon": "images\\Helmets\\The Crow Perch.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Helmets",
+      "source": "Weekly Battles(On Rotation)",
+      "stats": {
+        "power": "1",
+        "Defence": "1",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Thief Hood": {
+      "icon": "images\\Helmets\\Thief Hood.png",
+      "level_requirement": "10",
+      "sell_price": 1020,
+      "type": "Helmets",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "Strength": "3",
+        "Agility": "6",
+        "Defence": "9",
+        "Upgrade Slots": "2"
+      },
+      "class": "Archer"
+    },
+    "Thin Veil of The Troll": {
+      "icon": "images\\Helmets\\Thin Veil of The Troll.png",
+      "level_requirement": "180",
+      "sell_price": 470150,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "power": "7",
+        "Strength": "35",
+        "Agility": "35",
+        "Wisdom": "35",
+        "Luck": "35",
+        "Defence": "100",
+        "Upgrade Slots": "9"
+      },
+      "class": "All"
+    },
+    "Top Hat": {
+      "icon": "images\\Helmets\\Top Hat.png",
+      "level_requirement": "10",
+      "sell_price": 1200,
+      "type": "Helmets",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "Wisdom": "8",
+        "Luck": "1",
+        "Defence": "7",
+        "Upgrade Slots": "2"
+      },
+      "class": "Mage"
+    },
+    "Traffic Cone": {
+      "icon": "images\\Helmets\\Traffic Cone.png",
+      "level_requirement": "1",
+      "sell_price": 5,
+      "type": "Helmets",
+      "source": "Lampar,Character Creation",
+      "stats": {
+        "Luck": "1",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Trojan Helmet": {
+      "icon": "images\\Helmets\\Trojan Helmet.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Helmets",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Viking Cap": {
+      "icon": "images\\Helmets\\Viking Cap.png",
+      "level_requirement": "40",
+      "sell_price": 47260,
+      "type": "Helmets",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "Strength": "13",
+        "Wisdom": "3",
+        "Defence": "21",
+        "Upgrade Slots": "3"
+      },
+      "class": "Warrior"
+    },
+    "Void Imperium Helmet": {
+      "icon": "images\\Helmets\\Void Imperium Helmet.png",
+      "level_requirement": "90",
+      "sell_price": 6715250,
+      "type": "Helmets",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "15",
+        "Agility": "15",
+        "Wisdom": "15",
+        "Luck": "15",
+        "Defence": "46",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "White Headband": {
+      "icon": "images\\Helmets\\White Headband.png",
+      "level_requirement": "1",
+      "sell_price": 200,
+      "type": "Helmets",
+      "source": "R-1(Sources)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Witch Hat": {
+      "icon": "images\\Helmets\\Witch Hat.png",
+      "level_requirement": "40",
+      "sell_price": 121320,
+      "type": "Helmets",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "Agility": "1",
+        "Wisdom": "16",
+        "Defence": "15",
+        "Upgrade Slots": "3"
+      },
+      "class": "Mage"
+    },
+    "Yellow Headband": {
+      "icon": "images\\Helmets\\Yellow Headband.png",
+      "level_requirement": "1",
+      "sell_price": 200,
+      "type": "Helmets",
+      "source": "Sandy Pot",
+      "stats": {
+        "Agility": "2",
+        "Wisdom": "3",
+        "Luck": "8",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    }
+  },
+  "Shirts": {
+    "Amarok Bodyplate": {
+      "icon": "images\\Shirts\\Amarok Bodyplate.png",
+      "level_requirement": "35",
+      "sell_price": 30100,
+      "type": "Shirts",
+      "source": "Smithing(Blunder Hills Merit Shop)",
+      "stats": {
+        "power": "3",
+        "Strength": "7",
+        "Agility": "7",
+        "Wisdom": "7",
+        "Defence": "25",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Black Tee": {
+      "icon": "images\\Shirts\\Black Tee.png",
+      "level_requirement": "1",
+      "sell_price": 2693,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "Defence": "5",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Blue Tee": {
+      "icon": "images\\Shirts\\Blue Tee.png",
+      "level_requirement": "5",
+      "sell_price": 178,
+      "type": "Shirts",
+      "source": "Smithing(The Smithing Grind)",
+      "stats": {
+        "Agility": "5",
+        "Wisdom": "5",
+        "Defence": "7",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Chizoar Bodyplate": {
+      "icon": "images\\Shirts\\Chizoar Bodyplate.png",
+      "level_requirement": "105",
+      "sell_price": 75508218,
+      "type": "Shirts",
+      "source": "Smithing(Frostbite Tundra Merit Shop)",
+      "stats": {
+        "Strength": "15",
+        "Agility": "15",
+        "Wisdom": "15",
+        "Defence": "70",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Copper Platebody": {
+      "icon": "images\\Shirts\\Copper Platebody.png",
+      "level_requirement": "8",
+      "sell_price": 1615,
+      "type": "Shirts",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Defence": "10",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Damascus Plates": {
+      "icon": "images\\Shirts\\Damascus Plates.png",
+      "level_requirement": "95",
+      "sell_price": 35528200,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "Strength": "17",
+        "Wisdom": "5",
+        "Defence": "60",
+        "Upgrade Slots": "5"
+      },
+      "class": "Warrior"
+    },
+    "Dementia Body": {
+      "icon": "images\\Shirts\\Dementia Body.png",
+      "level_requirement": "70",
+      "sell_price": 528000,
+      "type": "Shirts",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Defence": "40",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Diabolical Abdomen": {
+      "icon": "images\\Shirts\\Diabolical Abdomen.png",
+      "level_requirement": "130",
+      "sell_price": 92545700,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "Strength": "20",
+        "Agility": "20",
+        "Wisdom": "20",
+        "Luck": "20",
+        "Defence": "90",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    },
+    "Efaunt Ribcage": {
+      "icon": "images\\Shirts\\Efaunt Ribcage.png",
+      "level_requirement": "80",
+      "sell_price": 4260,
+      "type": "Shirts",
+      "source": "Smithing(Yum Yum Desert Merit Shop)",
+      "stats": {
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Defence": "50",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Elegantine Robes": {
+      "icon": "images\\Shirts\\Elegantine Robes.png",
+      "level_requirement": "95",
+      "sell_price": 35528200,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "Agility": "1",
+        "Wisdom": "23",
+        "Defence": "47",
+        "Upgrade Slots": "5"
+      },
+      "class": "Mage"
+    },
+    "Emperor Sokutai Ho": {
+      "icon": "images\\Shirts\\Emperor Sokutai Ho.png",
+      "level_requirement": "600",
+      "sell_price": 1525210521200,
+      "type": "Shirts",
+      "source": "Smithing",
+      "stats": {
+        "power": "20",
+        "Strength": "75",
+        "Agility": "75",
+        "Wisdom": "75",
+        "Luck": "75",
+        "Defence": "300",
+        "Upgrade Slots": "11"
+      },
+      "class": "All"
+    },
+    "Evergreen Wraps": {
+      "icon": "images\\Shirts\\Evergreen Wraps.png",
+      "level_requirement": "95",
+      "sell_price": 35528200,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "Strength": "4",
+        "Agility": "19",
+        "Defence": "53",
+        "Upgrade Slots": "5"
+      },
+      "class": "Archer"
+    },
+    "Feral Leathering": {
+      "icon": "images\\Shirts\\Feral Leathering.png",
+      "level_requirement": "40",
+      "sell_price": 296080,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "Strength": "2",
+        "Agility": "12",
+        "Defence": "19",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Fur Shirt": {
+      "icon": "images\\Shirts\\Fur Shirt.png",
+      "level_requirement": "18",
+      "sell_price": 26000,
+      "type": "Shirts",
+      "source": "Smithing(Glublin,Videogame Highscores are COOL!),Glublin",
+      "stats": {
+        "Strength": "5",
+        "Agility": "9",
+        "Defence": "13",
+        "Upgrade Slots": "3"
+      },
+      "class": "Archer"
+    },
+    "Furled Robes": {
+      "icon": "images\\Shirts\\Furled Robes.png",
+      "level_requirement": "40",
+      "sell_price": 90280,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "Agility": "1",
+        "Wisdom": "13",
+        "Defence": "15",
+        "Upgrade Slots": "3"
+      },
+      "class": "Mage"
+    },
+    "Gold Platebody": {
+      "icon": "images\\Shirts\\Gold Platebody.png",
+      "level_requirement": "35",
+      "sell_price": 120365,
+      "type": "Shirts",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Defence": "20",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Green Tee": {
+      "icon": "images\\Shirts\\Green Tee.png",
+      "level_requirement": "2",
+      "sell_price": 578,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "Luck": "3",
+        "Defence": "4",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Hide Shirt": {
+      "icon": "images\\Shirts\\Hide Shirt.png",
+      "level_requirement": "15",
+      "sell_price": 6965,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "Strength": "6",
+        "Defence": "4",
+        "Upgrade Slots": "3"
+      },
+      "class": "Warrior"
+    },
+    "Iron Platebody": {
+      "icon": "images\\Shirts\\Iron Platebody.png",
+      "level_requirement": "15",
+      "sell_price": 5200,
+      "type": "Shirts",
+      "source": "Smithing,Dewdrop Golden Chest",
+      "stats": {
+        "Strength": "4",
+        "Agility": "4",
+        "Wisdom": "4",
+        "Defence": "16",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Lustre Chestplate": {
+      "icon": "images\\Shirts\\Lustre Chestplate.png",
+      "level_requirement": "110",
+      "sell_price": 60503200,
+      "type": "Shirts",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "16",
+        "Agility": "16",
+        "Wisdom": "16",
+        "Luck": "16",
+        "Defence": "80",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Magma Core Wavemaille": {
+      "icon": "images\\Shirts\\Magma Core Wavemaille.png",
+      "level_requirement": "220",
+      "sell_price": 19800331200,
+      "type": "Shirts",
+      "source": "Smithing(Stiltmole),Stiltmole",
+      "stats": {
+        "power": "5",
+        "Strength": "30",
+        "Agility": "30",
+        "Wisdom": "30",
+        "Luck": "30",
+        "Defence": "115",
+        "Upgrade Slots": "8"
+      },
+      "class": "All"
+    },
+    "Marbiglass Tunic": {
+      "icon": "images\\Shirts\\Marbiglass Tunic.png",
+      "level_requirement": "350",
+      "sell_price": 20210371200,
+      "type": "Shirts",
+      "source": "Smithing",
+      "stats": {
+        "power": "10",
+        "Strength": "45",
+        "Agility": "45",
+        "Wisdom": "45",
+        "Luck": "45",
+        "Defence": "170",
+        "Upgrade Slots": "9"
+      },
+      "class": "All"
+    },
+    "MCR Tshirt": {
+      "icon": "images\\Shirts\\MCR Tshirt.png",
+      "level_requirement": "25",
+      "sell_price": 200,
+      "type": "Shirts",
+      "source": "Sprout",
+      "stats": {
+        "power": "2",
+        "Agility": "8",
+        "Defence": "1",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Member Hoodie": {
+      "icon": "images\\Shirts\\Member Hoodie.png",
+      "level_requirement": "80",
+      "sell_price": 65827760,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "Luck": "25",
+        "Defence": "40",
+        "Upgrade Slots": "4"
+      },
+      "class": "Beginner"
+    },
+    "Molten Chest": {
+      "icon": "images\\Shirts\\Molten Chest.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Shirts",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "Warrior"
+    },
+    "Orange Tee": {
+      "icon": "images\\Shirts\\Orange Tee.png",
+      "level_requirement": "2",
+      "sell_price": 3,
+      "type": "Shirts",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Defence": "3",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Paralax Chest": {
+      "icon": "images\\Shirts\\Paralax Chest.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Shirts",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "Warrior"
+    },
+    "Planktop": {
+      "icon": "images\\Shirts\\Planktop.png",
+      "level_requirement": "10",
+      "sell_price": 200,
+      "type": "Shirts",
+      "source": "Wode Board",
+      "stats": {
+        "Strength": "6",
+        "Defence": "4",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Platinum Platbody": {
+      "icon": "images\\Shirts\\Platinum Platbody.png",
+      "level_requirement": "50",
+      "sell_price": 1130200,
+      "type": "Shirts",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "8",
+        "Agility": "8",
+        "Wisdom": "8",
+        "Defence": "30",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Purple Tee": {
+      "icon": "images\\Shirts\\Purple Tee.png",
+      "level_requirement": "2",
+      "sell_price": 583,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "Wisdom": "3",
+        "Defence": "3",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "REPLACE ME": {
+      "icon": "images\\Shirts\\REPLACE ME.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Shirts",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Robe of the Gods": {
+      "icon": "images\\Shirts\\Robe of the Gods.png",
+      "level_requirement": "500",
+      "sell_price": 1525210491200,
+      "type": "Shirts",
+      "source": "Smithing(Ceramic Spirit),Ceramic Spirit",
+      "stats": {
+        "power": "15",
+        "Strength": "60",
+        "Agility": "60",
+        "Wisdom": "60",
+        "Luck": "60",
+        "Defence": "220",
+        "Upgrade Slots": "10"
+      },
+      "class": "All"
+    },
+    "Serrated Chest of the Divine": {
+      "icon": "images\\Shirts\\Serrated Chest of the Divine.png",
+      "level_requirement": "280",
+      "sell_price": 19800361200,
+      "type": "Shirts",
+      "source": "Smithing",
+      "stats": {
+        "power": "8",
+        "Strength": "40",
+        "Agility": "40",
+        "Wisdom": "40",
+        "Luck": "40",
+        "Defence": "135",
+        "Upgrade Slots": "9"
+      },
+      "class": "All"
+    },
+    "Spore Tee": {
+      "icon": "images\\Shirts\\Spore Tee.png",
+      "level_requirement": "1",
+      "sell_price": 125,
+      "type": "Shirts",
+      "source": "Green Mushroom",
+      "stats": {
+        "Agility": "3",
+        "Defence": "3",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Studded Hide": {
+      "icon": "images\\Shirts\\Studded Hide.png",
+      "level_requirement": "40",
+      "sell_price": 287045,
+      "type": "Shirts",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "Strength": "10",
+        "Wisdom": "4",
+        "Defence": "25",
+        "Upgrade Slots": "3"
+      },
+      "class": "Warrior"
+    },
+    "Tanned Hide": {
+      "icon": "images\\Shirts\\Tanned Hide.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Shirts",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "Archer"
+    },
+    "Tattered Cloth": {
+      "icon": "images\\Shirts\\Tattered Cloth.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Shirts",
+      "source": "R-2(Sources)",
+      "stats": {
+        "Wisdom": "8",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "Mage"
+    },
+    "Trollish Garb": {
+      "icon": "images\\Shirts\\Trollish Garb.png",
+      "level_requirement": "190",
+      "sell_price": 330000,
+      "type": "Shirts",
+      "source": "Smithing",
+      "stats": {
+        "power": "3",
+        "Strength": "24",
+        "Agility": "24",
+        "Wisdom": "24",
+        "Luck": "24",
+        "Defence": "100",
+        "Upgrade Slots": "8"
+      },
+      "class": "All"
+    },
+    "Void Imperium Platebody": {
+      "icon": "images\\Shirts\\Void Imperium Platebody.png",
+      "level_requirement": "90",
+      "sell_price": 35503200,
+      "type": "Shirts",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "13",
+        "Agility": "13",
+        "Wisdom": "13",
+        "Defence": "55",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    }
+  },
+  "Pants": {
+    "Adam's Leaf": {
+      "icon": "images\\Pants\\Adam's Leaf.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Pants",
+      "source": "Sprout",
+      "stats": {
+        "Strength": "4",
+        "Wisdom": "13",
+        "Defence": "2",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Amarok Hinds": {
+      "icon": "images\\Pants\\Amarok Hinds.png",
+      "level_requirement": "40",
+      "sell_price": 28500,
+      "type": "Pants",
+      "source": "Smithing(Blunder Hills Merit Shop)",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Defence": "18",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Ancient Leggings": {
+      "icon": "images\\Pants\\Ancient Leggings.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Pants",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Bandito Pantaloon": {
+      "icon": "images\\Pants\\Bandito Pantaloon.png",
+      "level_requirement": "35",
+      "sell_price": 4660,
+      "type": "Pants",
+      "source": "Smithing(Poop),Poop",
+      "stats": {
+        "Agility": "9",
+        "Defence": "14",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Bleached Designer Wode Patch Pants": {
+      "icon": "images\\Pants\\Bleached Designer Wode Patch Pants.png",
+      "level_requirement": "25",
+      "sell_price": 9155,
+      "type": "Pants",
+      "source": "Smithing(Wode Board),Wode Board",
+      "stats": {
+        "Agility": "3",
+        "Wisdom": "7",
+        "Defence": "11",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Chizoar Scaled Leggings": {
+      "icon": "images\\Pants\\Chizoar Scaled Leggings.png",
+      "level_requirement": "100",
+      "sell_price": 9335210,
+      "type": "Pants",
+      "source": "Smithing(Frostbite Tundra Merit Shop)",
+      "stats": {
+        "Strength": "13",
+        "Agility": "13",
+        "Wisdom": "13",
+        "Defence": "52",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Copper Platelegs": {
+      "icon": "images\\Pants\\Copper Platelegs.png",
+      "level_requirement": "8",
+      "sell_price": 660,
+      "type": "Pants",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Defence": "6",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Crystallax Shins": {
+      "icon": "images\\Pants\\Crystallax Shins.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Pants",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "Warrior"
+    },
+    "Dementia Shins": {
+      "icon": "images\\Pants\\Dementia Shins.png",
+      "level_requirement": "70",
+      "sell_price": 2200000,
+      "type": "Pants",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "7",
+        "Agility": "7",
+        "Wisdom": "7",
+        "Defence": "28",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Diabolical Trimed Leg Guards": {
+      "icon": "images\\Pants\\Diabolical Trimed Leg Guards.png",
+      "level_requirement": "130",
+      "sell_price": 90494200,
+      "type": "Pants",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "Strength": "18",
+        "Agility": "18",
+        "Wisdom": "18",
+        "Luck": "18",
+        "Defence": "65",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    },
+    "Dirty Coal Miner Baggy Soot Pants": {
+      "icon": "images\\Pants\\Dirty Coal Miner Baggy Soot Pants.png",
+      "level_requirement": "25",
+      "sell_price": 1580,
+      "type": "Pants",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "Strength": "7",
+        "Defence": "12",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Efaunt Hipilium": {
+      "icon": "images\\Pants\\Efaunt Hipilium.png",
+      "level_requirement": "75",
+      "sell_price": 1260,
+      "type": "Pants",
+      "source": "Smithing(Yum Yum Desert Merit Shop)",
+      "stats": {
+        "Strength": "4",
+        "Agility": "4",
+        "Wisdom": "4",
+        "Defence": "32",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Emperor Zubon": {
+      "icon": "images\\Pants\\Emperor Zubon.png",
+      "level_requirement": "600",
+      "sell_price": 2282200329100,
+      "type": "Pants",
+      "source": "Smithing",
+      "stats": {
+        "power": "13",
+        "Strength": "65",
+        "Agility": "65",
+        "Wisdom": "65",
+        "Luck": "65",
+        "Defence": "250",
+        "Upgrade Slots": "11"
+      },
+      "class": "All"
+    },
+    "Fishing Overalls": {
+      "icon": "images\\Pants\\Fishing Overalls.png",
+      "level_requirement": "35",
+      "sell_price": 20310,
+      "type": "Pants",
+      "source": "Smithing(Walking Stick),Walking Stick",
+      "stats": {
+        "Strength": "8",
+        "Defence": "15",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Forensic Leggings": {
+      "icon": "images\\Pants\\Forensic Leggings.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Pants",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Gilded Pilates": {
+      "icon": "images\\Pants\\Gilded Pilates.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Pants",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "Warrior"
+    },
+    "Give Up On Life Pants": {
+      "icon": "images\\Pants\\Give Up On Life Pants.png",
+      "level_requirement": "7",
+      "sell_price": 200,
+      "type": "Pants",
+      "source": "R-1(Sources)",
+      "stats": {
+        "Wisdom": "6",
+        "Defence": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Gold Platelegs": {
+      "icon": "images\\Pants\\Gold Platelegs.png",
+      "level_requirement": "35",
+      "sell_price": 37160,
+      "type": "Pants",
+      "source": "Smithing,Sandstone Golden Chest",
+      "stats": {
+        "Strength": "4",
+        "Agility": "4",
+        "Wisdom": "4",
+        "Defence": "16",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Iron Platelegs": {
+      "icon": "images\\Pants\\Iron Platelegs.png",
+      "level_requirement": "15",
+      "sell_price": 7865,
+      "type": "Pants",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Defence": "11",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Lustre Scales": {
+      "icon": "images\\Pants\\Lustre Scales.png",
+      "level_requirement": "110",
+      "sell_price": 36430200,
+      "type": "Pants",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "14",
+        "Agility": "14",
+        "Wisdom": "14",
+        "Luck": "14",
+        "Defence": "54",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Magma Core Battleskirt": {
+      "icon": "images\\Pants\\Magma Core Battleskirt.png",
+      "level_requirement": "225",
+      "sell_price": 31500179100,
+      "type": "Pants",
+      "source": "Smithing(Molti),Molti",
+      "stats": {
+        "power": "5",
+        "Strength": "32",
+        "Agility": "32",
+        "Wisdom": "32",
+        "Luck": "32",
+        "Defence": "95",
+        "Upgrade Slots": "8"
+      },
+      "class": "All"
+    },
+    "Marbiglass Legplates": {
+      "icon": "images\\Pants\\Marbiglass Legplates.png",
+      "level_requirement": "350",
+      "sell_price": 781500209100,
+      "type": "Pants",
+      "source": "Smithing",
+      "stats": {
+        "power": "7",
+        "Strength": "50",
+        "Agility": "50",
+        "Wisdom": "50",
+        "Luck": "50",
+        "Defence": "140",
+        "Upgrade Slots": "9"
+      },
+      "class": "All"
+    },
+    "Merchantile Pants": {
+      "icon": "images\\Pants\\Merchantile Pants.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Pants",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Platinum Shins": {
+      "icon": "images\\Pants\\Platinum Shins.png",
+      "level_requirement": "50",
+      "sell_price": 657865,
+      "type": "Pants",
+      "source": "Smithing,Chillsnap Golden Chest",
+      "stats": {
+        "Strength": "6",
+        "Agility": "6",
+        "Wisdom": "6",
+        "Defence": "23",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Spiked Leggings of the Divine": {
+      "icon": "images\\Pants\\Spiked Leggings of the Divine.png",
+      "level_requirement": "260",
+      "sell_price": 31500199100,
+      "type": "Pants",
+      "source": "Smithing",
+      "stats": {
+        "power": "5",
+        "Strength": "45",
+        "Agility": "45",
+        "Wisdom": "45",
+        "Luck": "45",
+        "Defence": "112",
+        "Upgrade Slots": "9"
+      },
+      "class": "All"
+    },
+    "Tatters of the Gods": {
+      "icon": "images\\Pants\\Tatters of the Gods.png",
+      "level_requirement": "500",
+      "sell_price": 2282200309100,
+      "type": "Pants",
+      "source": "Smithing(Leek Spirit),Leek Spirit",
+      "stats": {
+        "power": "10",
+        "Strength": "55",
+        "Agility": "55",
+        "Wisdom": "55",
+        "Luck": "55",
+        "Defence": "190",
+        "Upgrade Slots": "10"
+      },
+      "class": "All"
+    },
+    "Torn Jeans": {
+      "icon": "images\\Pants\\Torn Jeans.png",
+      "level_requirement": "4",
+      "sell_price": 60,
+      "type": "Pants",
+      "source": "Smithing",
+      "stats": {
+        "Agility": "2",
+        "Wisdom": "1",
+        "Defence": "4",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Trimmed Rune Platelegs": {
+      "icon": "images\\Pants\\Trimmed Rune Platelegs.png",
+      "level_requirement": "82",
+      "sell_price": 200,
+      "type": "Pants",
+      "source": "King Doot",
+      "stats": {
+        "Strength": "4",
+        "Agility": "2",
+        "Defence": "20",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Twisted Scales": {
+      "icon": "images\\Pants\\Twisted Scales.png",
+      "level_requirement": "180",
+      "sell_price": 2500177500,
+      "type": "Pants",
+      "source": "Smithing",
+      "stats": {
+        "power": "3",
+        "Strength": "25",
+        "Agility": "25",
+        "Wisdom": "25",
+        "Luck": "25",
+        "Defence": "70",
+        "Upgrade Slots": "8"
+      },
+      "class": "All"
+    },
+    "Void Imperium Shardshins": {
+      "icon": "images\\Pants\\Void Imperium Shardshins.png",
+      "level_requirement": "90",
+      "sell_price": 9230200,
+      "type": "Pants",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "9",
+        "Agility": "9",
+        "Wisdom": "9",
+        "Defence": "38",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Yellow Belt Ninja Pants": {
+      "icon": "images\\Pants\\Yellow Belt Ninja Pants.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Pants",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    }
+  },
+  "Pickaxes": {
+    "Copper Pickaxe": {
+      "icon": "images\\Pickaxes\\Copper Pickaxe.png",
+      "level_requirement": "3",
+      "sell_price": 30,
+      "type": "Pickaxes",
+      "source": "Smithing",
+      "stats": {
+        "power": "6",
+        "Speed": "3 (Slower)",
+        "Strength": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Dementia Pickaxe": {
+      "icon": "images\\Pickaxes\\Dementia Pickaxe.png",
+      "level_requirement": "37",
+      "sell_price": 6014070,
+      "type": "Pickaxes",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "19",
+        "Speed": "5 (Medium)",
+        "Strength": "15",
+        "Agility": "5",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Destroyer of the Mollo Gomme": {
+      "icon": "images\\Pickaxes\\Destroyer of the Mollo Gomme.png",
+      "level_requirement": "100",
+      "sell_price": 750011712920,
+      "type": "Pickaxes",
+      "source": "Smithing",
+      "stats": {
+        "power": "62",
+        "Speed": "8 (Faster)",
+        "Strength": "55",
+        "Agility": "25",
+        "Defence": "35",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    },
+    "Dreadlo Pickolo": {
+      "icon": "images\\Pickaxes\\Dreadlo Pickolo.png",
+      "level_requirement": "70",
+      "sell_price": 11695420,
+      "type": "Pickaxes",
+      "source": "Smithing",
+      "stats": {
+        "power": "42",
+        "Speed": "7 (Fast)",
+        "Strength": "35",
+        "Agility": "15",
+        "Defence": "25",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Gold Pickaxe": {
+      "icon": "images\\Pickaxes\\Gold Pickaxe.png",
+      "level_requirement": "15",
+      "sell_price": 223570,
+      "type": "Pickaxes",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "13",
+        "Speed": "4 (Slow)",
+        "Strength": "8",
+        "Agility": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Iron Pickaxe": {
+      "icon": "images\\Pickaxes\\Iron Pickaxe.png",
+      "level_requirement": "8",
+      "sell_price": 2570,
+      "type": "Pickaxes",
+      "source": "Smithing",
+      "stats": {
+        "power": "10",
+        "Speed": "4 (Slow)",
+        "Strength": "5",
+        "Agility": "2",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Junk Pickaxe": {
+      "icon": "images\\Pickaxes\\Junk Pickaxe.png",
+      "level_requirement": "2",
+      "sell_price": 50,
+      "type": "Pickaxes",
+      "source": "Glumlee,Scripticus",
+      "stats": {
+        "power": "2",
+        "Speed": "3 (Slower)",
+        "Strength": "1"
+      },
+      "class": "All"
+    },
+    "Lustre Pickaxe": {
+      "icon": "images\\Pickaxes\\Lustre Pickaxe.png",
+      "level_requirement": "55",
+      "sell_price": 11679320,
+      "type": "Pickaxes",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "30",
+        "Speed": "6 (Quick)",
+        "Strength": "25",
+        "Agility": "10",
+        "Defence": "7",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Marbiglass Pickaxe": {
+      "icon": "images\\Pickaxes\\Marbiglass Pickaxe.png",
+      "level_requirement": "80",
+      "sell_price": 11702920,
+      "type": "Pickaxes",
+      "source": "Smithing",
+      "stats": {
+        "power": "51",
+        "Speed": "7 (Fast)",
+        "Strength": "42",
+        "Agility": "20",
+        "Defence": "30",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Platinum Pickaxe": {
+      "icon": "images\\Pickaxes\\Platinum Pickaxe.png",
+      "level_requirement": "25",
+      "sell_price": 1851570,
+      "type": "Pickaxes",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "16",
+        "Speed": "4 (Slow)",
+        "Strength": "11",
+        "Agility": "4",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Poopy Pickaxe": {
+      "icon": "images\\Pickaxes\\Poopy Pickaxe.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Pickaxes",
+      "source": "Dr Defecaus,TP Pete",
+      "stats": {
+        "power": "18",
+        "Speed": "2 (Sluggish)",
+        "Defence": "3",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Skewered Snek": {
+      "icon": "images\\Pickaxes\\Skewered Snek.png",
+      "level_requirement": "10",
+      "sell_price": 200,
+      "type": "Pickaxes",
+      "source": "Random Events(Snake Swarm)",
+      "stats": {
+        "power": "5",
+        "Speed": "2 (Sluggish)",
+        "Wisdom": "12",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Starfire Pickaxe": {
+      "icon": "images\\Pickaxes\\Starfire Pickaxe.png",
+      "level_requirement": "65",
+      "sell_price": 11694820,
+      "type": "Pickaxes",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "35",
+        "Speed": "6 (Quick)",
+        "Strength": "30",
+        "Agility": "12",
+        "Defence": "15",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Void Imperium Pik": {
+      "icon": "images\\Pickaxes\\Void Imperium Pik.png",
+      "level_requirement": "45",
+      "sell_price": 8494320,
+      "type": "Pickaxes",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "24",
+        "Speed": "5 (Medium)",
+        "Strength": "18",
+        "Agility": "6",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    }
+  },
+  "Hatchets": {
+    "Annihilator of the Yggdrasil": {
+      "icon": "images\\Hatchets\\Annihilator of the Yggdrasil.png",
+      "level_requirement": "90",
+      "sell_price": 1506554621450,
+      "type": "Hatchets",
+      "source": "Smithing",
+      "stats": {
+        "power": "62",
+        "Speed": "8 (Faster)",
+        "Strength": "8",
+        "Agility": "8",
+        "Wisdom": "50",
+        "Luck": "8",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    },
+    "Copper Chopper": {
+      "icon": "images\\Hatchets\\Copper Chopper.png",
+      "level_requirement": "4",
+      "sell_price": 27,
+      "type": "Hatchets",
+      "source": "Smithing",
+      "stats": {
+        "power": "7",
+        "Speed": "3 (Slower)",
+        "Agility": "1",
+        "Wisdom": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Dementia Dicer": {
+      "icon": "images\\Hatchets\\Dementia Dicer.png",
+      "level_requirement": "25",
+      "sell_price": 966200,
+      "type": "Hatchets",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "23",
+        "Speed": "5 (Medium)",
+        "Agility": "6",
+        "Wisdom": "17",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Dreadlo Hatchet": {
+      "icon": "images\\Hatchets\\Dreadlo Hatchet.png",
+      "level_requirement": "65",
+      "sell_price": 54591450,
+      "type": "Hatchets",
+      "source": "Smithing",
+      "stats": {
+        "power": "40",
+        "Speed": "7 (Fast)",
+        "Strength": "4",
+        "Agility": "4",
+        "Wisdom": "32",
+        "Luck": "4",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Golden Axe": {
+      "icon": "images\\Hatchets\\Golden Axe.png",
+      "level_requirement": "15",
+      "sell_price": 181200,
+      "type": "Hatchets",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "14",
+        "Speed": "4 (Slow)",
+        "Wisdom": "8",
+        "Luck": "4",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Grumbie the Hatchet Hammer": {
+      "icon": "images\\Hatchets\\Grumbie the Hatchet Hammer.png",
+      "level_requirement": "10",
+      "sell_price": 200,
+      "type": "Hatchets",
+      "source": "Random Events(Mega Grumblo)",
+      "stats": {
+        "power": "5",
+        "Speed": "2 (Sluggish)",
+        "Strength": "12",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Iron Hatchet": {
+      "icon": "images\\Hatchets\\Iron Hatchet.png",
+      "level_requirement": "8",
+      "sell_price": 3700,
+      "type": "Hatchets",
+      "source": "Smithing",
+      "stats": {
+        "power": "10",
+        "Speed": "3 (Slower)",
+        "Strength": "2",
+        "Wisdom": "5",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Lustre Logger": {
+      "icon": "images\\Hatchets\\Lustre Logger.png",
+      "level_requirement": "40",
+      "sell_price": 9076450,
+      "type": "Hatchets",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "29",
+        "Speed": "6 (Quick)",
+        "Wisdom": "24",
+        "Luck": "8",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Marbiglass Hatchet": {
+      "icon": "images\\Hatchets\\Marbiglass Hatchet.png",
+      "level_requirement": "75",
+      "sell_price": 1554591450,
+      "type": "Hatchets",
+      "source": "Smithing",
+      "stats": {
+        "power": "50",
+        "Speed": "8 (Faster)",
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "40",
+        "Luck": "5",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Old Hatchet": {
+      "icon": "images\\Hatchets\\Old Hatchet.png",
+      "level_requirement": "2",
+      "sell_price": 50,
+      "type": "Hatchets",
+      "source": "Woodsman",
+      "stats": {
+        "power": "3",
+        "Speed": "3 (Slower)",
+        "Wisdom": "1",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Plat Hatchet": {
+      "icon": "images\\Hatchets\\Plat Hatchet.png",
+      "level_requirement": "20",
+      "sell_price": 511200,
+      "type": "Hatchets",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "18",
+        "Speed": "4 (Slow)",
+        "Agility": "5",
+        "Wisdom": "14",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Starfire Hatchet": {
+      "icon": "images\\Hatchets\\Starfire Hatchet.png",
+      "level_requirement": "50",
+      "sell_price": 17091450,
+      "type": "Hatchets",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "35",
+        "Speed": "6 (Quick)",
+        "Agility": "9",
+        "Wisdom": "28",
+        "Luck": "3",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Stinky Axe": {
+      "icon": "images\\Hatchets\\Stinky Axe.png",
+      "level_requirement": "15",
+      "sell_price": 10000,
+      "type": "Hatchets",
+      "source": "Dr Defecaus",
+      "stats": {
+        "power": "18",
+        "Speed": "2 (Sluggish)",
+        "Wisdom": "8",
+        "Luck": "4",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Void Imperium Axe": {
+      "icon": "images\\Hatchets\\Void Imperium Axe.png",
+      "level_requirement": "30",
+      "sell_price": 2966450,
+      "type": "Hatchets",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "26",
+        "Speed": "5 (Medium)",
+        "Agility": "7",
+        "Wisdom": "20",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    }
+  },
+  "Fishing Rods": {
+    "Angler of the Iliunne": {
+      "icon": "images\\Fishing Rods\\Angler of the Iliunne.png",
+      "level_requirement": "90",
+      "sell_price": 3046403659,
+      "type": "Fishing Rods",
+      "source": "Smithing",
+      "stats": {
+        "power": "85",
+        "Speed": "8 (Faster)",
+        "Strength": "75",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    },
+    "Copper Fish Rod": {
+      "icon": "images\\Fishing Rods\\Copper Fish Rod.png",
+      "level_requirement": "4",
+      "sell_price": 2120,
+      "type": "Fishing Rods",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "power": "8",
+        "Speed": "3 (Slower)",
+        "Strength": "2",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Dementia Rod for Fishing": {
+      "icon": "images\\Fishing Rods\\Dementia Rod for Fishing.png",
+      "level_requirement": "33",
+      "sell_price": 963400,
+      "type": "Fishing Rods",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "30",
+        "Speed": "5 (Medium)",
+        "Strength": "12",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Dreadlo Rod": {
+      "icon": "images\\Fishing Rods\\Dreadlo Rod.png",
+      "level_requirement": "60",
+      "sell_price": 21373659,
+      "type": "Fishing Rods",
+      "source": "Smithing",
+      "stats": {
+        "power": "60",
+        "Speed": "7 (Fast)",
+        "Strength": "35",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Gold Fishing Rod": {
+      "icon": "images\\Fishing Rods\\Gold Fishing Rod.png",
+      "level_requirement": "15",
+      "sell_price": 104400,
+      "type": "Fishing Rods",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "19",
+        "Speed": "4 (Slow)",
+        "Strength": "6",
+        "Luck": "4",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Iron Fishing Rod": {
+      "icon": "images\\Fishing Rods\\Iron Fishing Rod.png",
+      "level_requirement": "9",
+      "sell_price": 16900,
+      "type": "Fishing Rods",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "power": "13",
+        "Speed": "4 (Slow)",
+        "Strength": "4",
+        "Wisdom": "1",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Lustre Rod": {
+      "icon": "images\\Fishing Rods\\Lustre Rod.png",
+      "level_requirement": "45",
+      "sell_price": 3308659,
+      "type": "Fishing Rods",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "43",
+        "Speed": "6 (Quick)",
+        "Strength": "20",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Marbiglass Rod": {
+      "icon": "images\\Fishing Rods\\Marbiglass Rod.png",
+      "level_requirement": "75",
+      "sell_price": 271373659,
+      "type": "Fishing Rods",
+      "source": "Smithing",
+      "stats": {
+        "power": "72",
+        "Speed": "7 (Fast)",
+        "Strength": "50",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Plat Fishing Rod": {
+      "icon": "images\\Fishing Rods\\Plat Fishing Rod.png",
+      "level_requirement": "25",
+      "sell_price": 508400,
+      "type": "Fishing Rods",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "25",
+        "Speed": "5 (Medium)",
+        "Strength": "9",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Starfire Rod": {
+      "icon": "images\\Fishing Rods\\Starfire Rod.png",
+      "level_requirement": "50",
+      "sell_price": 5123659,
+      "type": "Fishing Rods",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "50",
+        "Speed": "6 (Quick)",
+        "Strength": "25",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Void Imperium Rod": {
+      "icon": "images\\Fishing Rods\\Void Imperium Rod.png",
+      "level_requirement": "40",
+      "sell_price": 983659,
+      "type": "Fishing Rods",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "36",
+        "Speed": "5 (Medium)",
+        "Strength": "15",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Wood Fishing Rod": {
+      "icon": "images\\Fishing Rods\\Wood Fishing Rod.png",
+      "level_requirement": "2",
+      "sell_price": 200,
+      "type": "Fishing Rods",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "3",
+        "Speed": "3 (Slower)",
+        "Strength": "1",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    }
+  },
+  "Shoes": {
+    "Amarok Paws": {
+      "icon": "images\\Shoes\\Amarok Paws.png",
+      "level_requirement": "35",
+      "sell_price": 12275,
+      "type": "Shoes",
+      "source": "Smithing(Blunder Hills Merit Shop)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Defence": "10",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Angler Boots": {
+      "icon": "images\\Shoes\\Angler Boots.png",
+      "level_requirement": "30",
+      "sell_price": 96175,
+      "type": "Shoes",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "Strength": "6",
+        "Defence": "8",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Bandito Boots": {
+      "icon": "images\\Shoes\\Bandito Boots.png",
+      "level_requirement": "30",
+      "sell_price": 97425,
+      "type": "Shoes",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "Agility": "6",
+        "Defence": "8",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Cauldrunners": {
+      "icon": "images\\Shoes\\Cauldrunners.png",
+      "level_requirement": "30",
+      "sell_price": 200,
+      "type": "Shoes",
+      "source": "Unobtainable",
+      "stats": {
+        "Wisdom": "9",
+        "Defence": "4",
+        "Upgrade Slots": "3"
+      },
+      "class": "Mage"
+    },
+    "Cavern Trekkers": {
+      "icon": "images\\Shoes\\Cavern Trekkers.png",
+      "level_requirement": "30",
+      "sell_price": 93075,
+      "type": "Shoes",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "Strength": "5",
+        "Wisdom": "1",
+        "Defence": "10",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Chef Hat Shoes": {
+      "icon": "images\\Shoes\\Chef Hat Shoes.png",
+      "level_requirement": "125",
+      "sell_price": 47057500,
+      "type": "Shoes",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "Defence": "45",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Chizoar Walkers": {
+      "icon": "images\\Shoes\\Chizoar Walkers.png",
+      "level_requirement": "95",
+      "sell_price": 7687006,
+      "type": "Shoes",
+      "source": "Smithing(Frostbite Tundra Merit Shop)",
+      "stats": {
+        "Strength": "12",
+        "Agility": "12",
+        "Wisdom": "12",
+        "Luck": "12",
+        "Defence": "48",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Cooking Clogs": {
+      "icon": "images\\Shoes\\Cooking Clogs.png",
+      "level_requirement": "100",
+      "sell_price": 3000,
+      "type": "Shoes",
+      "source": "Purp Mushroom",
+      "stats": {
+        "Defence": "40",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Copper Boots": {
+      "icon": "images\\Shoes\\Copper Boots.png",
+      "level_requirement": "8",
+      "sell_price": 525,
+      "type": "Shoes",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "2",
+        "Defence": "2",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Deep Sea Galoshes": {
+      "icon": "images\\Shoes\\Deep Sea Galoshes.png",
+      "level_requirement": "110",
+      "sell_price": 48341675,
+      "type": "Shoes",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "Strength": "12",
+        "Defence": "29",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Dementia Boots": {
+      "icon": "images\\Shoes\\Dementia Boots.png",
+      "level_requirement": "65",
+      "sell_price": 750300,
+      "type": "Shoes",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "7",
+        "Agility": "7",
+        "Wisdom": "7",
+        "Luck": "7",
+        "Defence": "22",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Devious Slippers of the Divine": {
+      "icon": "images\\Shoes\\Devious Slippers of the Divine.png",
+      "level_requirement": "240",
+      "sell_price": 69600124000,
+      "type": "Shoes",
+      "source": "Smithing",
+      "stats": {
+        "power": "5",
+        "Strength": "38",
+        "Agility": "38",
+        "Wisdom": "38",
+        "Luck": "38",
+        "Defence": "100",
+        "Upgrade Slots": "8"
+      },
+      "class": "All"
+    },
+    "Diabolical Toe Tips": {
+      "icon": "images\\Shoes\\Diabolical Toe Tips.png",
+      "level_requirement": "130",
+      "sell_price": 69620500,
+      "type": "Shoes",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "Strength": "17",
+        "Agility": "17",
+        "Wisdom": "17",
+        "Luck": "17",
+        "Defence": "60",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Divvy Slippers": {
+      "icon": "images\\Shoes\\Divvy Slippers.png",
+      "level_requirement": "200",
+      "sell_price": 3594115000,
+      "type": "Shoes",
+      "source": "Smithing(Domeo Magmus),Domeo Magmus",
+      "stats": {
+        "Agility": "5",
+        "Wisdom": "12",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Drip of the Gods": {
+      "icon": "images\\Shoes\\Drip of the Gods.png",
+      "level_requirement": "500",
+      "sell_price": 1574050234000,
+      "type": "Shoes",
+      "source": "Smithing(Mama Troll),Mama Troll",
+      "stats": {
+        "power": "5",
+        "Strength": "57",
+        "Agility": "57",
+        "Wisdom": "57",
+        "Luck": "57",
+        "Defence": "120",
+        "Upgrade Slots": "9"
+      },
+      "class": "All"
+    },
+    "Efaunts Broken Ankles": {
+      "icon": "images\\Shoes\\Efaunts Broken Ankles.png",
+      "level_requirement": "70",
+      "sell_price": 261970,
+      "type": "Shoes",
+      "source": "Smithing(Yum Yum Desert Merit Shop)",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Defence": "18",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Emperor Geta": {
+      "icon": "images\\Shoes\\Emperor Geta.png",
+      "level_requirement": "600",
+      "sell_price": 1574050244000,
+      "type": "Shoes",
+      "source": "Smithing",
+      "stats": {
+        "power": "5",
+        "Strength": "70",
+        "Agility": "70",
+        "Wisdom": "70",
+        "Luck": "70",
+        "Defence": "150",
+        "Upgrade Slots": "10"
+      },
+      "class": "All"
+    },
+    "Eyern Boots": {
+      "icon": "images\\Shoes\\Eyern Boots.png",
+      "level_requirement": "15",
+      "sell_price": 20,
+      "type": "Shoes",
+      "source": "Unobtainable",
+      "stats": {
+        "Defence": "1",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Fiberous Footings": {
+      "icon": "images\\Shoes\\Fiberous Footings.png",
+      "level_requirement": "110",
+      "sell_price": 47745275,
+      "type": "Shoes",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "Wisdom": "14",
+        "Defence": "25",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Flap Flops": {
+      "icon": "images\\Shoes\\Flap Flops.png",
+      "level_requirement": "10",
+      "sell_price": 200,
+      "type": "Shoes",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Flip Flops": {
+      "icon": "images\\Shoes\\Flip Flops.png",
+      "level_requirement": "4",
+      "sell_price": 104,
+      "type": "Shoes",
+      "source": "Smithing",
+      "stats": {
+        "Agility": "3",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Floop Flops": {
+      "icon": "images\\Shoes\\Floop Flops.png",
+      "level_requirement": "25",
+      "sell_price": 200,
+      "type": "Shoes",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Flux Flops": {
+      "icon": "images\\Shoes\\Flux Flops.png",
+      "level_requirement": "50",
+      "sell_price": 200,
+      "type": "Shoes",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "5",
+        "Agility": "3",
+        "Luck": "8",
+        "Defence": "40",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Gaia Shoes": {
+      "icon": "images\\Shoes\\Gaia Shoes.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Shoes",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "2",
+        "Agility": "6",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Gold Boots": {
+      "icon": "images\\Shoes\\Gold Boots.png",
+      "level_requirement": "30",
+      "sell_price": 79725,
+      "type": "Shoes",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Luck": "3",
+        "Defence": "8",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Goo Galoshes": {
+      "icon": "images\\Shoes\\Goo Galoshes.png",
+      "level_requirement": "10",
+      "sell_price": 1765,
+      "type": "Shoes",
+      "source": "Smithing(Slime),Glunko The Massive,Slime",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Luck": "2",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Hermes Boots": {
+      "icon": "images\\Shoes\\Hermes Boots.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Shoes",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Iron Boots": {
+      "icon": "images\\Shoes\\Iron Boots.png",
+      "level_requirement": "15",
+      "sell_price": 10525,
+      "type": "Shoes",
+      "source": "Smithing(W1 Colosseum first silver chest)",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Defence": "4",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Laboratory Scrubs": {
+      "icon": "images\\Shoes\\Laboratory Scrubs.png",
+      "level_requirement": "100",
+      "sell_price": 3000,
+      "type": "Shoes",
+      "source": "Donut",
+      "stats": {
+        "Luck": "20",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Logger Heels": {
+      "icon": "images\\Shoes\\Logger Heels.png",
+      "level_requirement": "30",
+      "sell_price": 99775,
+      "type": "Shoes",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "Wisdom": "7",
+        "Defence": "6",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Lustre Shieldshoe": {
+      "icon": "images\\Shoes\\Lustre Shieldshoe.png",
+      "level_requirement": "110",
+      "sell_price": 47045500,
+      "type": "Shoes",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "13",
+        "Agility": "13",
+        "Wisdom": "13",
+        "Luck": "13",
+        "Defence": "50",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Magma Core Lavarunners": {
+      "icon": "images\\Shoes\\Magma Core Lavarunners.png",
+      "level_requirement": "230",
+      "sell_price": 69600114000,
+      "type": "Shoes",
+      "source": "Smithing(Purgatory Stalker),Purgatory Stalker",
+      "stats": {
+        "power": "3",
+        "Strength": "28",
+        "Agility": "28",
+        "Wisdom": "28",
+        "Luck": "28",
+        "Defence": "90",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    },
+    "Marbiglass Soles": {
+      "icon": "images\\Shoes\\Marbiglass Soles.png",
+      "level_requirement": "350",
+      "sell_price": 70850134000,
+      "type": "Shoes",
+      "source": "Smithing",
+      "stats": {
+        "power": "5",
+        "Strength": "43",
+        "Agility": "43",
+        "Wisdom": "43",
+        "Luck": "43",
+        "Defence": "110",
+        "Upgrade Slots": "8"
+      },
+      "class": "All"
+    },
+    "Platinum Boots": {
+      "icon": "images\\Shoes\\Platinum Boots.png",
+      "level_requirement": "50",
+      "sell_price": 261725,
+      "type": "Shoes",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Luck": "5",
+        "Defence": "15",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Rough Rockers": {
+      "icon": "images\\Shoes\\Rough Rockers.png",
+      "level_requirement": "110",
+      "sell_price": 48038575,
+      "type": "Shoes",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "Strength": "13",
+        "Wisdom": "1",
+        "Defence": "32",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Sheek Scrubs": {
+      "icon": "images\\Shoes\\Sheek Scrubs.png",
+      "level_requirement": "125",
+      "sell_price": 47057500,
+      "type": "Shoes",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "Luck": "30",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Soles of the Troll": {
+      "icon": "images\\Shoes\\Soles of the Troll.png",
+      "level_requirement": "185",
+      "sell_price": 112000,
+      "type": "Shoes",
+      "source": "Smithing",
+      "stats": {
+        "power": "2",
+        "Strength": "22",
+        "Agility": "22",
+        "Wisdom": "22",
+        "Luck": "22",
+        "Defence": "65",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    },
+    "Spaggy Westerados": {
+      "icon": "images\\Shoes\\Spaggy Westerados.png",
+      "level_requirement": "110",
+      "sell_price": 48042925,
+      "type": "Shoes",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "Agility": "13",
+        "Defence": "29",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Void Imperium Kicks": {
+      "icon": "images\\Shoes\\Void Imperium Kicks.png",
+      "level_requirement": "85",
+      "sell_price": 7645500,
+      "type": "Shoes",
+      "source": "Smithing",
+      "stats": {
+        "Strength": "9",
+        "Agility": "9",
+        "Wisdom": "9",
+        "Luck": "9",
+        "Defence": "30",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Yeti Walkers": {
+      "icon": "images\\Shoes\\Yeti Walkers.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Shoes",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    }
+  },
+  "Pendants": {
+    "Blubbery Icey": {
+      "icon": "images\\Pendants\\Blubbery Icey.png",
+      "level_requirement": "1",
+      "sell_price": 420,
+      "type": "Pendants",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "10",
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Carrot Horror": {
+      "icon": "images\\Pendants\\Carrot Horror.png",
+      "level_requirement": "14",
+      "sell_price": 500,
+      "type": "Pendants",
+      "source": "Stiltzcho",
+      "stats": {
+        "Agility": "2",
+        "Wisdom": "5",
+        "Luck": "2",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Cedar Pendant": {
+      "icon": "images\\Pendants\\Cedar Pendant.png",
+      "level_requirement": "20",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Flurbo Shop",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "3",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Chaotic Amarok Pendant": {
+      "icon": "images\\Pendants\\Chaotic Amarok Pendant.png",
+      "level_requirement": "30",
+      "sell_price": 4150,
+      "type": "Pendants",
+      "source": "Smithing(Blunder Hills Merit Shop)",
+      "stats": {
+        "power": "2",
+        "Wisdom": "12",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Chizoars Blankie": {
+      "icon": "images\\Pendants\\Chizoars Blankie.png",
+      "level_requirement": "100",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Blighted Chizoar,Chaotic Chizoar,Chizoar",
+      "stats": {
+        "power": "5",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Chizoars Caustic Scarf": {
+      "icon": "images\\Pendants\\Chizoars Caustic Scarf.png",
+      "level_requirement": "120",
+      "sell_price": 46,
+      "type": "Pendants",
+      "source": "Smithing(Frostbite Tundra Merit Shop)",
+      "stats": {
+        "power": "8",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Chocotastic Icey": {
+      "icon": "images\\Pendants\\Chocotastic Icey.png",
+      "level_requirement": "1",
+      "sell_price": 420,
+      "type": "Pendants",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "7",
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Luck": "3",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Crescent Moon Pendant": {
+      "icon": "images\\Pendants\\Crescent Moon Pendant.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "power": "3",
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Luck": "10",
+        "Defence": "10"
+      },
+      "class": "All"
+    },
+    "Deathbloom Flower Pendant": {
+      "icon": "images\\Pendants\\Deathbloom Flower Pendant.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "power": "5"
+      },
+      "class": "All"
+    },
+    "Deathly Cluster Pendant": {
+      "icon": "images\\Pendants\\Deathly Cluster Pendant.png",
+      "level_requirement": "80",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Flurbo Shop",
+      "stats": {
+        "power": "2",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Emerald Bling Pendant": {
+      "icon": "images\\Pendants\\Emerald Bling Pendant.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Luck": "10"
+      },
+      "class": "All"
+    },
+    "Fishhead Pendant": {
+      "icon": "images\\Pendants\\Fishhead Pendant.png",
+      "level_requirement": "40",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Flurbo Shop",
+      "stats": {
+        "Strength": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Fuscismatia": {
+      "icon": "images\\Pendants\\Fuscismatia.png",
+      "level_requirement": "70",
+      "sell_price": 10000,
+      "type": "Pendants",
+      "source": "Snelbie",
+      "stats": {
+        "Wisdom": "10",
+        "Defence": "5",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Hallowed Tail Pendant": {
+      "icon": "images\\Pendants\\Hallowed Tail Pendant.png",
+      "level_requirement": "110",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Flurbo Shop",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Lava Icey": {
+      "icon": "images\\Pendants\\Lava Icey.png",
+      "level_requirement": "1",
+      "sell_price": 420,
+      "type": "Pendants",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "12",
+        "Strength": "4",
+        "Agility": "4",
+        "Wisdom": "4",
+        "Luck": "4",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Legends Icey": {
+      "icon": "images\\Pendants\\Legends Icey.png",
+      "level_requirement": "1",
+      "sell_price": 27,
+      "type": "Pendants",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "15",
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Luck": "5",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Little Wooden Katana": {
+      "icon": "images\\Pendants\\Little Wooden Katana.png",
+      "level_requirement": "1",
+      "sell_price": 200,
+      "type": "Pendants",
+      "source": "Picnic Stowaway",
+      "stats": {
+        "Strength": "2",
+        "Agility": "1",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Lucky Fish Head": {
+      "icon": "images\\Pendants\\Lucky Fish Head.png",
+      "level_requirement": "20",
+      "sell_price": 6500,
+      "type": "Pendants",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Luck": "5",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Mint Icey": {
+      "icon": "images\\Pendants\\Mint Icey.png",
+      "level_requirement": "1",
+      "sell_price": 420,
+      "type": "Pendants",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "1",
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1"
+      },
+      "class": "All"
+    },
+    "Persephones Bouquet": {
+      "icon": "images\\Pendants\\Persephones Bouquet.png",
+      "level_requirement": "140",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Flurbo Shop",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "3"
+      },
+      "class": "All"
+    },
+    "Polished Bludgeon": {
+      "icon": "images\\Pendants\\Polished Bludgeon.png",
+      "level_requirement": "40",
+      "sell_price": 3570,
+      "type": "Pendants",
+      "source": "Smithing(Dr Defecaus),Dr Defecaus",
+      "stats": {
+        "power": "6",
+        "Defence": "5",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Quartz Pendant": {
+      "icon": "images\\Pendants\\Quartz Pendant.png",
+      "level_requirement": "20",
+      "sell_price": 6500,
+      "type": "Pendants",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Luck": "5",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Rainbo Icey": {
+      "icon": "images\\Pendants\\Rainbo Icey.png",
+      "level_requirement": "1",
+      "sell_price": 420,
+      "type": "Pendants",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Luck": "2",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Rok Road Icey": {
+      "icon": "images\\Pendants\\Rok Road Icey.png",
+      "level_requirement": "1",
+      "sell_price": 420,
+      "type": "Pendants",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "3",
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Luck": "2",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Skullfish Pendant": {
+      "icon": "images\\Pendants\\Skullfish Pendant.png",
+      "level_requirement": "60",
+      "sell_price": 3001,
+      "type": "Pendants",
+      "source": "Smithing(Biggie Hours),Biggie Hours",
+      "stats": {
+        "Strength": "10",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Sleek Shank": {
+      "icon": "images\\Pendants\\Sleek Shank.png",
+      "level_requirement": "1",
+      "sell_price": 1080,
+      "type": "Pendants",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "power": "1",
+        "Defence": "4",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Slimy Necklace": {
+      "icon": "images\\Pendants\\Slimy Necklace.png",
+      "level_requirement": "5",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Glunko The Massive",
+      "stats": {
+        "power": "1",
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Defence": "1",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Strawbu Icey": {
+      "icon": "images\\Pendants\\Strawbu Icey.png",
+      "level_requirement": "1",
+      "sell_price": 420,
+      "type": "Pendants",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "2",
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1"
+      },
+      "class": "All"
+    },
+    "Strung Bludgeon": {
+      "icon": "images\\Pendants\\Strung Bludgeon.png",
+      "level_requirement": "20",
+      "sell_price": 2320,
+      "type": "Pendants",
+      "source": "Smithing(Mafioso),Mafioso",
+      "stats": {
+        "power": "4",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Strung Steamy": {
+      "icon": "images\\Pendants\\Strung Steamy.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "3"
+      },
+      "class": "All"
+    },
+    "Strung Tooth of the Divine": {
+      "icon": "images\\Pendants\\Strung Tooth of the Divine.png",
+      "level_requirement": "250",
+      "sell_price": 1,
+      "type": "Pendants",
+      "source": "Chaotic Kattlekruk,Kattlekruk,Sacrilegious Kattlekruk",
+      "stats": {
+        "power": "8",
+        "Strength": "6",
+        "Agility": "6",
+        "Wisdom": "6",
+        "Luck": "6",
+        "Defence": "30",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Tarantulight": {
+      "icon": "images\\Pendants\\Tarantulight.png",
+      "level_requirement": "20",
+      "sell_price": 6500,
+      "type": "Pendants",
+      "source": "Encroaching Forest Villas(Shop)",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Luck": "5",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "The Divine Scarf": {
+      "icon": "images\\Pendants\\The Divine Scarf.png",
+      "level_requirement": "425",
+      "sell_price": 11601,
+      "type": "Pendants",
+      "source": "Smithing",
+      "stats": {
+        "power": "15",
+        "Strength": "35",
+        "Agility": "35",
+        "Wisdom": "35",
+        "Luck": "35",
+        "Defence": "35",
+        "Upgrade Slots": "11"
+      },
+      "class": "All"
+    }
+  },
+  "Rings": {
+    "Bejeweled Ring": {
+      "icon": "images\\Rings\\Bejeweled Ring.png",
+      "level_requirement": "70",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Flurbo Shop",
+      "stats": {
+        "Luck": "7",
+        "Defence": "4",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Chef Ring": {
+      "icon": "images\\Rings\\Chef Ring.png",
+      "level_requirement": "100",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Choccie",
+      "stats": {
+        "Defence": "10",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Copper Band": {
+      "icon": "images\\Rings\\Copper Band.png",
+      "level_requirement": "1",
+      "sell_price": 2100,
+      "type": "Rings",
+      "source": "Smithing(DropTable1),R-1(Sources)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "3",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Cultist Ring": {
+      "icon": "images\\Rings\\Cultist Ring.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Unobtainable",
+      "stats": {},
+      "class": "Mage"
+    },
+    "Dawn Stopwatch": {
+      "icon": "images\\Rings\\Dawn Stopwatch.png",
+      "level_requirement": "90",
+      "sell_price": 46200,
+      "type": "Rings",
+      "source": "Smithing(Mutated Mush),Mutated Mush",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Luck": "3",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Death Wish": {
+      "icon": "images\\Rings\\Death Wish.png",
+      "level_requirement": "55",
+      "sell_price": 200,
+      "type": "Rings",
+      "source": "Meel",
+      "stats": {
+        "power": "4",
+        "Defence": "6",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Deepwater Trench Ring": {
+      "icon": "images\\Rings\\Deepwater Trench Ring.png",
+      "level_requirement": "9",
+      "sell_price": 2500,
+      "type": "Rings",
+      "source": "Omar Da Ogar",
+      "stats": {
+        "power": "14",
+        "Strength": "12",
+        "Agility": "4",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Defenders Dignity": {
+      "icon": "images\\Rings\\Defenders Dignity.png",
+      "level_requirement": "40",
+      "sell_price": 42750,
+      "type": "Rings",
+      "source": "Smithing(Mimic),Mimic",
+      "stats": {
+        "Defence": "12",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Demented Emperor Opal": {
+      "icon": "images\\Rings\\Demented Emperor Opal.png",
+      "level_requirement": "500",
+      "sell_price": 1500000000001,
+      "type": "Rings",
+      "source": "Smithing(Demented Spiritlord),Demented Spiritlord",
+      "stats": {
+        "power": "12",
+        "Strength": "50",
+        "Agility": "50",
+        "Wisdom": "50",
+        "Luck": "50",
+        "Defence": "15",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Dooble Goopi": {
+      "icon": "images\\Rings\\Dooble Goopi.png",
+      "level_requirement": "30",
+      "sell_price": 31300,
+      "type": "Rings",
+      "source": "Smithing(Slime),Slime",
+      "stats": {
+        "Luck": "1",
+        "Defence": "2",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Dune Killer Ring": {
+      "icon": "images\\Rings\\Dune Killer Ring.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "power": "2",
+        "Defence": "3"
+      },
+      "class": "All"
+    },
+    "Efaunt Trunculus": {
+      "icon": "images\\Rings\\Efaunt Trunculus.png",
+      "level_requirement": "80",
+      "sell_price": 102779,
+      "type": "Rings",
+      "source": "Smithing(Yum Yum Desert Merit Shop)",
+      "stats": {
+        "power": "3",
+        "Agility": "10",
+        "Defence": "8",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Elf Twist Ring": {
+      "icon": "images\\Rings\\Elf Twist Ring.png",
+      "level_requirement": "15",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Flurbo Shop",
+      "stats": {
+        "Defence": "7",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Frisbee Ring": {
+      "icon": "images\\Rings\\Frisbee Ring.png",
+      "level_requirement": "45",
+      "sell_price": 5000,
+      "type": "Rings",
+      "source": "Sprout",
+      "stats": {
+        "Strength": "12",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Gold Ring": {
+      "icon": "images\\Rings\\Gold Ring.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Rings",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Lab Ring": {
+      "icon": "images\\Rings\\Lab Ring.png",
+      "level_requirement": "100",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Demon Genie",
+      "stats": {
+        "Defence": "10",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Magma Killer Ring": {
+      "icon": "images\\Rings\\Magma Killer Ring.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "power": "5",
+        "Defence": "5"
+      },
+      "class": "All"
+    },
+    "Midnight Stopwatch": {
+      "icon": "images\\Rings\\Midnight Stopwatch.png",
+      "level_requirement": "90",
+      "sell_price": 55000,
+      "type": "Rings",
+      "source": "Smithing(Dilapidated Slush),Dilapidated Slush",
+      "stats": {
+        "power": "3",
+        "Defence": "3",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Molden Crust": {
+      "icon": "images\\Rings\\Molden Crust.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Rings",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Nebula Killer Ring": {
+      "icon": "images\\Rings\\Nebula Killer Ring.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "power": "4",
+        "Defence": "4"
+      },
+      "class": "All"
+    },
+    "Neutron Ice Ring": {
+      "icon": "images\\Rings\\Neutron Ice Ring.png",
+      "level_requirement": "95",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Dedotated Ram",
+      "stats": {
+        "power": "3",
+        "Defence": "11",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Oceanic Ring": {
+      "icon": "images\\Rings\\Oceanic Ring.png",
+      "level_requirement": "9",
+      "sell_price": 2500,
+      "type": "Rings",
+      "source": "Omar Da Ogar",
+      "stats": {
+        "power": "8",
+        "Strength": "9",
+        "Agility": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Protectors Pride": {
+      "icon": "images\\Rings\\Protectors Pride.png",
+      "level_requirement": "70",
+      "sell_price": 44700,
+      "type": "Rings",
+      "source": "Smithing(King Doot),King Doot",
+      "stats": {
+        "Luck": "3",
+        "Defence": "20",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Pugilist Demise": {
+      "icon": "images\\Rings\\Pugilist Demise.png",
+      "level_requirement": "9",
+      "sell_price": 4000,
+      "type": "Rings",
+      "source": "Blunder Hills(Shop)",
+      "stats": {
+        "Strength": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Rex Ring": {
+      "icon": "images\\Rings\\Rex Ring.png",
+      "level_requirement": "40",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Flurbo Shop",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Defence": "2",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Sanic Ring": {
+      "icon": "images\\Rings\\Sanic Ring.png",
+      "level_requirement": "60",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Star Sign: Chronus-9a",
+      "stats": {
+        "Agility": "8",
+        "Luck": "4",
+        "Defence": "5",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Serrated Rex Ring": {
+      "icon": "images\\Rings\\Serrated Rex Ring.png",
+      "level_requirement": "50",
+      "sell_price": 32001,
+      "type": "Rings",
+      "source": "Smithing(Baba Yaga),Baba Yaga",
+      "stats": {
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Defence": "5",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Shallow Watering": {
+      "icon": "images\\Rings\\Shallow Watering.png",
+      "level_requirement": "9",
+      "sell_price": 2500,
+      "type": "Rings",
+      "source": "Omar Da Ogar",
+      "stats": {
+        "power": "4",
+        "Strength": "6",
+        "Agility": "2",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Silver Stopwatch": {
+      "icon": "images\\Rings\\Silver Stopwatch.png",
+      "level_requirement": "17",
+      "sell_price": 5000,
+      "type": "Rings",
+      "source": "Funguy",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Souped Lab Ring": {
+      "icon": "images\\Rings\\Souped Lab Ring.png",
+      "level_requirement": "110",
+      "sell_price": 10000006,
+      "type": "Rings",
+      "source": "Smithing(Mutated Mush),Mutated Mush",
+      "stats": {
+        "Defence": "10",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Spikeweed Ring": {
+      "icon": "images\\Rings\\Spikeweed Ring.png",
+      "level_requirement": "9",
+      "sell_price": 2500,
+      "type": "Rings",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "3",
+        "Strength": "6",
+        "Agility": "2",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Spirit Killer Ring": {
+      "icon": "images\\Rings\\Spirit Killer Ring.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "6",
+        "Defence": "6"
+      },
+      "class": "All"
+    },
+    "Steel Band": {
+      "icon": "images\\Rings\\Steel Band.png",
+      "level_requirement": "15",
+      "sell_price": 19200,
+      "type": "Rings",
+      "source": "Smithing(DropTable3,Task Unlocks Tab 1),R-3(Sources)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "4",
+        "Defence": "1",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Tenacity Ring": {
+      "icon": "images\\Rings\\Tenacity Ring.png",
+      "level_requirement": "120",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Flurbo Shop",
+      "stats": {
+        "power": "6",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "The Emperor's Opal": {
+      "icon": "images\\Rings\\The Emperor's Opal.png",
+      "level_requirement": "150",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Flurbo Shop",
+      "stats": {
+        "power": "8",
+        "Strength": "30",
+        "Agility": "30",
+        "Wisdom": "30",
+        "Luck": "30",
+        "Defence": "8"
+      },
+      "class": "All"
+    },
+    "The Used Bandaid": {
+      "icon": "images\\Rings\\The Used Bandaid.png",
+      "level_requirement": "9",
+      "sell_price": 2500,
+      "type": "Rings",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "3",
+        "Strength": "6",
+        "Agility": "4",
+        "Luck": "1",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Toxic Bubbles Band": {
+      "icon": "images\\Rings\\Toxic Bubbles Band.png",
+      "level_requirement": "15",
+      "sell_price": 200,
+      "type": "Rings",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "5",
+        "Strength": "3",
+        "Agility": "3",
+        "Luck": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Tundra Killer Ring": {
+      "icon": "images\\Rings\\Tundra Killer Ring.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Rings",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "power": "3",
+        "Defence": "3"
+      },
+      "class": "All"
+    },
+    "Zero Point Stopwatch": {
+      "icon": "images\\Rings\\Zero Point Stopwatch.png",
+      "level_requirement": "250",
+      "sell_price": 111225,
+      "type": "Rings",
+      "source": "Smithing(Domeo Magmus),Domeo Magmus",
+      "stats": {
+        "power": "5",
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Luck": "10",
+        "Defence": "5",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    }
+  },
+  "Premium Helmets": {
+    "Arcanist Crown": {
+      "icon": "images\\Premium Helmets\\Arcanist Crown.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Bamboo Hat": {
+      "icon": "images\\Premium Helmets\\Bamboo Hat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Bamboo Spirit",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Bandit Bob Mask": {
+      "icon": "images\\Premium Helmets\\Bandit Bob Mask.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Falloween Treat,Spring Splendor Event",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Bedsheet with Holes": {
+      "icon": "images\\Premium Helmets\\Bedsheet with Holes.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Falloween Treat,Giftmas Present",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Big Bunny": {
+      "icon": "images\\Premium Helmets\\Big Bunny.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Seasonal Pack)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Bloo Creamer": {
+      "icon": "images\\Premium Helmets\\Bloo Creamer.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Bloque Mask": {
+      "icon": "images\\Premium Helmets\\Bloque Mask.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Falloween Treat",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Borzoi Topper": {
+      "icon": "images\\Premium Helmets\\Borzoi Topper.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Carrotman Mask": {
+      "icon": "images\\Premium Helmets\\Carrotman Mask.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Falloween Treat",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Celebration Mane": {
+      "icon": "images\\Premium Helmets\\Celebration Mane.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "4th Anniversary Event",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Charcoal Hat": {
+      "icon": "images\\Premium Helmets\\Charcoal Hat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Ricecake",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Corgi Topper": {
+      "icon": "images\\Premium Helmets\\Corgi Topper.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Dainty Brim": {
+      "icon": "images\\Premium Helmets\\Dainty Brim.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Minichief Spirit",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Dairy Dunk": {
+      "icon": "images\\Premium Helmets\\Dairy Dunk.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Retired),Summer Cooler",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Deathbringer Hood of Death": {
+      "icon": "images\\Premium Helmets\\Deathbringer Hood of Death.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Diamon Horns": {
+      "icon": "images\\Premium Helmets\\Diamon Horns.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Retired)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    },
+    "Diamond Horns": {
+      "icon": "images\\Premium Helmets\\Diamond Horns.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    },
+    "Ele Sorcerer Pointed Hat": {
+      "icon": "images\\Premium Helmets\\Ele Sorcerer Pointed Hat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Fanned Blossomage": {
+      "icon": "images\\Premium Helmets\\Fanned Blossomage.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Royal Egg",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Farmer Brimest": {
+      "icon": "images\\Premium Helmets\\Farmer Brimest.png",
+      "level_requirement": "1",
+      "sell_price": 400,
+      "type": "Premium Helmets",
+      "source": "4th Anniversary Event",
+      "stats": {
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Festive Beast Mask": {
+      "icon": "images\\Premium Helmets\\Festive Beast Mask.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Lantern Spirit",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Fiery Mane": {
+      "icon": "images\\Premium Helmets\\Fiery Mane.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Ceramic Spirit",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Fluffy Ramsy": {
+      "icon": "images\\Premium Helmets\\Fluffy Ramsy.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Rotating Pack)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Funky Hat": {
+      "icon": "images\\Premium Helmets\\Funky Hat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "River Spirit",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Giftmas Snoozy Cap": {
+      "icon": "images\\Premium Helmets\\Giftmas Snoozy Cap.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Seasonal Pack)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Giftmas Tree": {
+      "icon": "images\\Premium Helmets\\Giftmas Tree.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Rotating Pack)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Gilded Headband": {
+      "icon": "images\\Premium Helmets\\Gilded Headband.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Woodlin Spirit",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Glublin Mask": {
+      "icon": "images\\Premium Helmets\\Glublin Mask.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Falloween Treat",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Goldberry": {
+      "icon": "images\\Premium Helmets\\Goldberry.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "4th Anniversary Event",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Green Beanie": {
+      "icon": "images\\Premium Helmets\\Green Beanie.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Guardian Mane": {
+      "icon": "images\\Premium Helmets\\Guardian Mane.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Samurai Guardian",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Halloween Pumpkin": {
+      "icon": "images\\Premium Helmets\\Halloween Pumpkin.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Retired),Twitch Prizes",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Heiress Headdress": {
+      "icon": "images\\Premium Helmets\\Heiress Headdress.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Mama Troll",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Hotdog Hero": {
+      "icon": "images\\Premium Helmets\\Hotdog Hero.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "3rd Anniversary Event Boxes,Summer Cooler",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Husky Hat": {
+      "icon": "images\\Premium Helmets\\Husky Hat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Giftmas Present",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Ice Cream Sundae": {
+      "icon": "images\\Premium Helmets\\Ice Cream Sundae.png",
+      "level_requirement": "30",
+      "sell_price": 200,
+      "type": "Premium Helmets",
+      "source": "Choco Box",
+      "stats": {
+        "Luck": "10",
+        "Defence": "2",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Invisible Hat": {
+      "icon": "images\\Premium Helmets\\Invisible Hat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Spring Splendor Event",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Orange Beanie": {
+      "icon": "images\\Premium Helmets\\Orange Beanie.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "4th Anniversary Event",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Paper Bag": {
+      "icon": "images\\Premium Helmets\\Paper Bag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "4th Anniversary Event,3rd Anniversary Event Boxes,Gem Shop(Limited),Gem Shop(Retired)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Parasite": {
+      "icon": "images\\Premium Helmets\\Parasite.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "4th Anniversary Event,3rd Anniversary Event Boxes,Gem Shop(Limited),Choco Box",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Pardoned Turkey": {
+      "icon": "images\\Premium Helmets\\Pardoned Turkey.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Retired),Twitch Prizes",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Pink Beanie": {
+      "icon": "images\\Premium Helmets\\Pink Beanie.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Choco Box",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Pop Cat": {
+      "icon": "images\\Premium Helmets\\Pop Cat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "4th Anniversary Event,Summer Cooler,Choco Box",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Reinforced Headband": {
+      "icon": "images\\Premium Helmets\\Reinforced Headband.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Baby Troll",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Shogun Helmet": {
+      "icon": "images\\Premium Helmets\\Shogun Helmet.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Baby Troll",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Siege Captain Cap": {
+      "icon": "images\\Premium Helmets\\Siege Captain Cap.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Smitty's Bubble Blowing Hat": {
+      "icon": "images\\Premium Helmets\\Smitty's Bubble Blowing Hat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Falloween Treat,Gem Shop(Retired)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Snowman (Premium Helmet)": {
+      "icon": "images\\Premium Helmets\\Snowman (Premium Helmet).png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Retired),Twitch Prizes",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Spirited Mane": {
+      "icon": "images\\Premium Helmets\\Spirited Mane.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Leek Spirit",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Straw Hat": {
+      "icon": "images\\Premium Helmets\\Straw Hat.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Sprout Spirit",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Strawbiggy": {
+      "icon": "images\\Premium Helmets\\Strawbiggy.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "3rd Anniversary Event Boxes,Gem Shop(Retired)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "The Classic": {
+      "icon": "images\\Premium Helmets\\The Classic.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "3rd Anniversary Event Boxes,Gem Shop(Limited)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "The Red Boaty": {
+      "icon": "images\\Premium Helmets\\The Red Boaty.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Arcade(Dreadlo)",
+      "stats": {
+        "power": "2",
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "True Crown": {
+      "icon": "images\\Premium Helmets\\True Crown.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Rotating Pack)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Umbrella Brim": {
+      "icon": "images\\Premium Helmets\\Umbrella Brim.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Wig Bandana": {
+      "icon": "images\\Premium Helmets\\Wig Bandana.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Sprout Spirit",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Windwalker Hood": {
+      "icon": "images\\Premium Helmets\\Windwalker Hood.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Yellow Beanie": {
+      "icon": "images\\Premium Helmets\\Yellow Beanie.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Premium Helmets",
+      "source": "Summer Cooler",
+      "stats": {
+        "Strength": "1",
+        "Agility": "1",
+        "Wisdom": "1",
+        "Luck": "1",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    }
+  },
+  "Trophies": {
+    "Baller": {
+      "icon": "images\\Trophies\\Baller.png",
+      "level_requirement": "1",
+      "sell_price": 777,
+      "type": "Trophies",
+      "source": "Hoops Minigame(40+ Points)",
+      "stats": {
+        "power": "3",
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Luck": "3",
+        "Defence": "3"
+      },
+      "class": "All"
+    },
+    "Beach Bro": {
+      "icon": "images\\Trophies\\Beach Bro.png",
+      "level_requirement": "1",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Gem Shop(Seasonal Pack)",
+      "stats": {
+        "power": "2",
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Luck": "5"
+      },
+      "class": "All"
+    },
+    "Blunder Hero": {
+      "icon": "images\\Trophies\\Blunder Hero.png",
+      "level_requirement": "50",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Scripticus",
+      "stats": {
+        "power": "2",
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Luck": "5",
+        "Defence": "15"
+      },
+      "class": "All"
+    },
+    "Club Maestro": {
+      "icon": "images\\Trophies\\Club Maestro.png",
+      "level_requirement": "70",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Cactolyte",
+      "stats": {
+        "power": "1",
+        "Luck": "20",
+        "Defence": "20"
+      },
+      "class": "Beginner"
+    },
+    "Club Member": {
+      "icon": "images\\Trophies\\Club Member.png",
+      "level_requirement": "1",
+      "sell_price": 777,
+      "type": "Trophies",
+      "source": "Rocklyte",
+      "stats": {
+        "Luck": "5",
+        "Defence": "5"
+      },
+      "class": "Beginner"
+    },
+    "Critter Baron": {
+      "icon": "images\\Trophies\\Critter Baron.png",
+      "level_requirement": "1",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Lord of the Hunt",
+      "stats": {
+        "Agility": "20"
+      },
+      "class": "All"
+    },
+    "Dice Dynamo": {
+      "icon": "images\\Trophies\\Dice Dynamo.png",
+      "level_requirement": "1",
+      "sell_price": 777,
+      "type": "Trophies",
+      "source": "Roll Da Dice",
+      "stats": {
+        "power": "1",
+        "Luck": "5"
+      },
+      "class": "All"
+    },
+    "Frost Prince": {
+      "icon": "images\\Trophies\\Frost Prince.png",
+      "level_requirement": "120",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Hoggindaz",
+      "stats": {
+        "power": "2",
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Luck": "10",
+        "Defence": "50"
+      },
+      "class": "All"
+    },
+    "Gladiator": {
+      "icon": "images\\Trophies\\Gladiator.png",
+      "level_requirement": "1",
+      "sell_price": 777,
+      "type": "Trophies",
+      "source": "Centurion",
+      "stats": {
+        "power": "1"
+      },
+      "class": "All"
+    },
+    "Heroic Spirit": {
+      "icon": "images\\Trophies\\Heroic Spirit.png",
+      "level_requirement": "600",
+      "sell_price": 777,
+      "type": "Trophies",
+      "source": "Potti",
+      "stats": {
+        "power": "5",
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Luck": "10",
+        "Defence": "50"
+      },
+      "class": "All"
+    },
+    "I Made This Game": {
+      "icon": "images\\Trophies\\I Made This Game.png",
+      "level_requirement": "1",
+      "sell_price": 777,
+      "type": "Trophies",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "1"
+      },
+      "class": "All"
+    },
+    "Idle Skiller": {
+      "icon": "images\\Trophies\\Idle Skiller.png",
+      "level_requirement": "99",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Idle Skilling Crossover",
+      "stats": {
+        "power": "3",
+        "Strength": "20",
+        "Agility": "20",
+        "Wisdom": "20",
+        "Luck": "20"
+      },
+      "class": "All"
+    },
+    "King of Food": {
+      "icon": "images\\Trophies\\King of Food.png",
+      "level_requirement": "65",
+      "sell_price": 10000,
+      "type": "Trophies",
+      "source": "Picnic Stowaway",
+      "stats": {
+        "power": "3",
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Luck": "10",
+        "Defence": "25"
+      },
+      "class": "All"
+    },
+    "Luckier Lad": {
+      "icon": "images\\Trophies\\Luckier Lad.png",
+      "level_requirement": "1",
+      "sell_price": 58275,
+      "type": "Trophies",
+      "source": "Smithing",
+      "stats": {
+        "Luck": "50"
+      },
+      "class": "All"
+    },
+    "Lucky Lad": {
+      "icon": "images\\Trophies\\Lucky Lad.png",
+      "level_requirement": "1",
+      "sell_price": 777,
+      "type": "Trophies",
+      "source": "MR-1(Sources),MR-2(Sources),MR-3(Sources),MR-4(Sources),MR-5(Sources),MR-6(Sources)",
+      "stats": {
+        "Luck": "7"
+      },
+      "class": "All"
+    },
+    "Master of Nothing": {
+      "icon": "images\\Trophies\\Master of Nothing.png",
+      "level_requirement": "1",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Island Expeditions(Fractal Island)",
+      "stats": {
+        "power": "5",
+        "Strength": "26",
+        "Agility": "26",
+        "Wisdom": "26",
+        "Luck": "26"
+      },
+      "class": "All"
+    },
+    "Megalodon": {
+      "icon": "images\\Trophies\\Megalodon.png",
+      "level_requirement": "1",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Fishing Minigame(Catching the Megalodon)",
+      "stats": {
+        "power": "5",
+        "Strength": "15",
+        "Defence": "30"
+      },
+      "class": "All"
+    },
+    "Nebula Royal": {
+      "icon": "images\\Trophies\\Nebula Royal.png",
+      "level_requirement": "320",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Royal Worm",
+      "stats": {
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Luck": "10"
+      },
+      "class": "All"
+    },
+    "One of the Divine": {
+      "icon": "images\\Trophies\\One of the Divine.png",
+      "level_requirement": "450",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Tired Mole",
+      "stats": {
+        "power": "10",
+        "Strength": "30",
+        "Agility": "30",
+        "Wisdom": "30",
+        "Luck": "30"
+      },
+      "class": "All"
+    },
+    "Original Gamer": {
+      "icon": "images\\Trophies\\Original Gamer.png",
+      "level_requirement": "1",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Unobtainable",
+      "stats": {
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2",
+        "Luck": "2"
+      },
+      "class": "All"
+    },
+    "Trailblazer": {
+      "icon": "images\\Trophies\\Trailblazer.png",
+      "level_requirement": "1",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Gem Shop(Rotating Pack),Twitch Prizes",
+      "stats": {
+        "power": "4",
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Luck": "3"
+      },
+      "class": "All"
+    },
+    "Ultra Unboxer": {
+      "icon": "images\\Trophies\\Ultra Unboxer.png",
+      "level_requirement": "1",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Guild Giftbox",
+      "stats": {
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Luck": "3",
+        "Defence": "3"
+      },
+      "class": "All"
+    },
+    "YumYum Sheriff": {
+      "icon": "images\\Trophies\\YumYum Sheriff.png",
+      "level_requirement": "90",
+      "sell_price": 69,
+      "type": "Trophies",
+      "source": "Cowbo Jones",
+      "stats": {
+        "power": "2",
+        "Strength": "8",
+        "Agility": "8",
+        "Wisdom": "8",
+        "Luck": "8",
+        "Defence": "25"
+      },
+      "class": "All"
+    }
+  },
+  "Capes": {
+    "Angel Wings": {
+      "icon": "images\\Capes\\Angel Wings.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "5",
+        "Luck": "5",
+        "Defence": "10"
+      },
+      "class": "All"
+    },
+    "Blighted Chizoar Shard Cape": {
+      "icon": "images\\Capes\\Blighted Chizoar Shard Cape.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Blighted Chizoar,Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "3"
+      },
+      "class": "All"
+    },
+    "Blooming Vine": {
+      "icon": "images\\Capes\\Blooming Vine.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "15",
+        "Strength": "12",
+        "Agility": "12",
+        "Wisdom": "12",
+        "Luck": "12",
+        "Defence": "30"
+      },
+      "class": "All"
+    },
+    "Cascading Scaled Cape of Krieg": {
+      "icon": "images\\Capes\\Cascading Scaled Cape of Krieg.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Blitzkrieg Troll,Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "1",
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Luck": "10"
+      },
+      "class": "All"
+    },
+    "Chains of the Gilded Vaultguard": {
+      "icon": "images\\Capes\\Chains of the Gilded Vaultguard.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "30",
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Luck": "30",
+        "Defence": "25"
+      },
+      "class": "All"
+    },
+    "Easter Egg Backpack": {
+      "icon": "images\\Capes\\Easter Egg Backpack.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Defence": "10"
+      },
+      "class": "All"
+    },
+    "Eternal Flames of The Divine": {
+      "icon": "images\\Capes\\Eternal Flames of The Divine.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Sacrilegious Kattlekruk,Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "5",
+        "Strength": "11",
+        "Agility": "11",
+        "Wisdom": "11",
+        "Luck": "11",
+        "Defence": "25"
+      },
+      "class": "All"
+    },
+    "Giant Nightshade": {
+      "icon": "images\\Capes\\Giant Nightshade.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "5",
+        "Strength": "2",
+        "Agility": "2",
+        "Wisdom": "2"
+      },
+      "class": "All"
+    },
+    "Giant Rose": {
+      "icon": "images\\Capes\\Giant Rose.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop - Random Wing(Limited),Choco Box,Choco Box",
+      "stats": {
+        "power": "2",
+        "Defence": "10"
+      },
+      "class": "All"
+    },
+    "Giant Starflower": {
+      "icon": "images\\Capes\\Giant Starflower.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop - Random Wing(Limited),Choco Box",
+      "stats": {
+        "power": "6",
+        "Defence": "10"
+      },
+      "class": "All"
+    },
+    "Giant Violet": {
+      "icon": "images\\Capes\\Giant Violet.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop - Random Wing(Limited),Choco Box",
+      "stats": {
+        "power": "4",
+        "Defence": "10"
+      },
+      "class": "All"
+    },
+    "Gilded Efaunt Dislodged Tusks": {
+      "icon": "images\\Capes\\Gilded Efaunt Dislodged Tusks.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gilded Efaunt,Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "Strength": "15",
+        "Agility": "15",
+        "Wisdom": "15"
+      },
+      "class": "All"
+    },
+    "Gilded Emperor Wings": {
+      "icon": "images\\Capes\\Gilded Emperor Wings.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Emperor,Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "8",
+        "Strength": "15",
+        "Agility": "15",
+        "Wisdom": "15",
+        "Luck": "15"
+      },
+      "class": "All"
+    },
+    "Lava Wings": {
+      "icon": "images\\Capes\\Lava Wings.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "50",
+        "Defence": "11"
+      },
+      "class": "All"
+    },
+    "Molten Cloak": {
+      "icon": "images\\Capes\\Molten Cloak.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "6",
+        "Defence": "5"
+      },
+      "class": "All"
+    },
+    "Phoenix Wings": {
+      "icon": "images\\Capes\\Phoenix Wings.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "30",
+        "Strength": "40",
+        "Agility": "40",
+        "Wisdom": "40",
+        "Luck": "40"
+      },
+      "class": "All"
+    },
+    "Radiant Amarok Backstabber": {
+      "icon": "images\\Capes\\Radiant Amarok Backstabber.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Radiant Amarok,Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "Defence": "50"
+      },
+      "class": "All"
+    },
+    "Riftwalker Wings": {
+      "icon": "images\\Capes\\Riftwalker Wings.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "25",
+        "Strength": "30",
+        "Agility": "30",
+        "Wisdom": "30",
+        "Luck": "30",
+        "Defence": "60"
+      },
+      "class": "All"
+    },
+    "Timeless Watch": {
+      "icon": "images\\Capes\\Timeless Watch.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Capes",
+      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "stats": {
+        "power": "20",
+        "Strength": "50",
+        "Agility": "50",
+        "Wisdom": "50",
+        "Luck": "50"
+      },
+      "class": "All"
+    }
+  },
+  "Nametags": {
+    "3rd Anniversary IdleOn Nametag": {
+      "icon": "images\\Nametags\\3rd Anniversary IdleOn Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "500th 3rd Anniversary Event Box",
+      "stats": {
+        "power": "3",
+        "Strength": "3",
+        "Agility": "3",
+        "Wisdom": "3",
+        "Luck": "3",
+        "Defence": "3"
+      },
+      "class": "All"
+    },
+    "4th Anniversary IdleOn Nametag": {
+      "icon": "images\\Nametags\\4th Anniversary IdleOn Nametag.png",
+      "level_requirement": "4",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "4th Anniversary Event",
+      "stats": {
+        "Strength": "4",
+        "Agility": "4",
+        "Wisdom": "4",
+        "Luck": "4",
+        "Defence": "4"
+      },
+      "class": "All"
+    },
+    "Aethermoon Nametag": {
+      "icon": "images\\Nametags\\Aethermoon Nametag.png",
+      "level_requirement": "4",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "power": "10",
+        "Strength": "20",
+        "Agility": "20",
+        "Wisdom": "20",
+        "Defence": "30"
+      },
+      "class": "All"
+    },
+    "Balling Nametag": {
+      "icon": "images\\Nametags\\Balling Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Gem Shop(Limited)",
+      "stats": {
+        "Strength": "5",
+        "Agility": "5",
+        "Wisdom": "5",
+        "Luck": "40",
+        "Defence": "20"
+      },
+      "class": "All"
+    },
+    "Deadbones Nametag": {
+      "icon": "images\\Nametags\\Deadbones Nametag.png",
+      "level_requirement": "4",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Summer Event",
+      "stats": {
+        "power": "7",
+        "Luck": "10",
+        "Defence": "15"
+      },
+      "class": "All"
+    },
+    "Falloween Nametag": {
+      "icon": "images\\Nametags\\Falloween Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Falloween Treat",
+      "stats": {
+        "Strength": "10"
+      },
+      "class": "All"
+    },
+    "Frostyman Nametag": {
+      "icon": "images\\Nametags\\Frostyman Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Giftmas Wheel",
+      "stats": {
+        "power": "5",
+        "Strength": "6",
+        "Agility": "6",
+        "Wisdom": "6",
+        "Luck": "6",
+        "Defence": "25"
+      },
+      "class": "All"
+    },
+    "Island Adventurer Nametag": {
+      "icon": "images\\Nametags\\Island Adventurer Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Gem Shop(Rotating Pack)",
+      "stats": {
+        "power": "12",
+        "Strength": "12",
+        "Agility": "12",
+        "Wisdom": "12",
+        "Luck": "12"
+      },
+      "class": "All"
+    },
+    "Lava's Awesome Nametag": {
+      "icon": "images\\Nametags\\Lava's Awesome Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "100",
+        "Strength": "200",
+        "Agility": "200",
+        "Wisdom": "200",
+        "Luck": "200",
+        "Defence": "3"
+      },
+      "class": "All"
+    },
+    "Lovely Day Nametag": {
+      "icon": "images\\Nametags\\Lovely Day Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Choco Box",
+      "stats": {
+        "power": "10",
+        "Strength": "8",
+        "Agility": "8",
+        "Wisdom": "8",
+        "Defence": "25"
+      },
+      "class": "All"
+    },
+    "Megafeather Nametag": {
+      "icon": "images\\Nametags\\Megafeather Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Gem Shop(Limited),Golden Gift,Golden Oyster",
+      "stats": {
+        "power": "5",
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Luck": "10"
+      },
+      "class": "All"
+    },
+    "Nightshade Nametag": {
+      "icon": "images\\Nametags\\Nightshade Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Golden Gift,Golden Oyster",
+      "stats": {
+        "power": "2",
+        "Defence": "1"
+      },
+      "class": "All"
+    },
+    "Riftwalker Nametag": {
+      "icon": "images\\Nametags\\Riftwalker Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Gem Shop(Rotating Pack)",
+      "stats": {
+        "power": "6",
+        "Strength": "8",
+        "Agility": "8",
+        "Wisdom": "8",
+        "Luck": "8"
+      },
+      "class": "All"
+    },
+    "Snowflake Nametag": {
+      "icon": "images\\Nametags\\Snowflake Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Giftmas Present",
+      "stats": {
+        "power": "2",
+        "Defence": "5"
+      },
+      "class": "All"
+    },
+    "Spectacular 4th Year Nametag": {
+      "icon": "images\\Nametags\\Spectacular 4th Year Nametag.png",
+      "level_requirement": "4",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "4th Anniversary Event",
+      "stats": {
+        "power": "4",
+        "Strength": "4",
+        "Agility": "4",
+        "Wisdom": "4",
+        "Luck": "4",
+        "Defence": "44"
+      },
+      "class": "All"
+    },
+    "Spring Flowers Nametag": {
+      "icon": "images\\Nametags\\Spring Flowers Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Golden Gift,Spring Splendor Event,Golden Oyster",
+      "stats": {
+        "Strength": "4",
+        "Agility": "4",
+        "Wisdom": "4",
+        "Luck": "4"
+      },
+      "class": "All"
+    },
+    "Summer Shovel Nametag": {
+      "icon": "images\\Nametags\\Summer Shovel Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Summer Cooler",
+      "stats": {
+        "power": "4",
+        "Strength": "4",
+        "Agility": "4",
+        "Wisdom": "4",
+        "Luck": "4"
+      },
+      "class": "All"
+    },
+    "Timeless Nametag": {
+      "icon": "images\\Nametags\\Timeless Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Gem Shop(Rotating Pack)",
+      "stats": {
+        "power": "5",
+        "Strength": "10",
+        "Agility": "10",
+        "Wisdom": "10",
+        "Luck": "10"
+      },
+      "class": "All"
+    },
+    "Trash Tuna Nametag": {
+      "icon": "images\\Nametags\\Trash Tuna Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Island Expeditions(Trash Island)",
+      "stats": {
+        "Strength": "30"
+      },
+      "class": "All"
+    },
+    "Treasure Nametag": {
+      "icon": "images\\Nametags\\Treasure Nametag.png",
+      "level_requirement": "4",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Summer Event",
+      "stats": {
+        "power": "7",
+        "Luck": "10",
+        "Defence": "15"
+      },
+      "class": "All"
+    },
+    "Vman Nametag": {
+      "icon": "images\\Nametags\\Vman Nametag.png",
+      "level_requirement": "1",
+      "sell_price": 1,
+      "type": "Nametags",
+      "source": "Nebulyte",
+      "stats": {
+        "power": "1",
+        "Luck": "30"
+      },
+      "class": "Beginner"
+    }
+  },
+  "Bug catching nets": {},
+  "Bug Catching Nets": {
+    "Bug Net": {
+      "icon": "images\\Bug Catching Nets\\Bug Net.png",
+      "level_requirement": "2",
+      "sell_price": 100,
+      "type": "Bug Catching Nets",
+      "source": "Unobtainable",
+      "stats": {
+        "power": "4",
+        "Speed": "4 (Slow)",
+        "Agility": "2",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Copper Netted Net": {
+      "icon": "images\\Bug Catching Nets\\Copper Netted Net.png",
+      "level_requirement": "4",
+      "sell_price": 4200,
+      "type": "Bug Catching Nets",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "power": "9",
+        "Speed": "4 (Slow)",
+        "Strength": "1",
+        "Agility": "3",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Dementia Net": {
+      "icon": "images\\Bug Catching Nets\\Dementia Net.png",
+      "level_requirement": "25",
+      "sell_price": 740800,
+      "type": "Bug Catching Nets",
+      "source": "Smithing(Task Unlocks Tab 3),Royal Worm",
+      "stats": {
+        "power": "31",
+        "Speed": "5 (Medium)",
+        "Strength": "4",
+        "Agility": "9",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Dreadlo Matted Netting": {
+      "icon": "images\\Bug Catching Nets\\Dreadlo Matted Netting.png",
+      "level_requirement": "65",
+      "sell_price": 73931050,
+      "type": "Bug Catching Nets",
+      "source": "Smithing",
+      "stats": {
+        "power": "65",
+        "Speed": "7 (Fast)",
+        "Strength": "13",
+        "Agility": "25",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Golden Net": {
+      "icon": "images\\Bug Catching Nets\\Golden Net.png",
+      "level_requirement": "15",
+      "sell_price": 55800,
+      "type": "Bug Catching Nets",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "20",
+        "Speed": "5 (Medium)",
+        "Strength": "2",
+        "Agility": "6",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Lustre Netting": {
+      "icon": "images\\Bug Catching Nets\\Lustre Netting.png",
+      "level_requirement": "40",
+      "sell_price": 11916050,
+      "type": "Bug Catching Nets",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "45",
+        "Speed": "6 (Quick)",
+        "Strength": "8",
+        "Agility": "15",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Marbiglass Netting": {
+      "icon": "images\\Bug Catching Nets\\Marbiglass Netting.png",
+      "level_requirement": "80",
+      "sell_price": 713931050,
+      "type": "Bug Catching Nets",
+      "source": "Smithing",
+      "stats": {
+        "power": "78",
+        "Speed": "7 (Fast)",
+        "Strength": "15",
+        "Agility": "32",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Platinet": {
+      "icon": "images\\Bug Catching Nets\\Platinet.png",
+      "level_requirement": "20",
+      "sell_price": 255800,
+      "type": "Bug Catching Nets",
+      "source": "Smithing(Task Unlocks Tab 2)",
+      "stats": {
+        "power": "26",
+        "Speed": "5 (Medium)",
+        "Strength": "3",
+        "Agility": "7",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Reinforced Net": {
+      "icon": "images\\Bug Catching Nets\\Reinforced Net.png",
+      "level_requirement": "10",
+      "sell_price": 15800,
+      "type": "Bug Catching Nets",
+      "source": "Smithing(Task Unlocks Tab 1)",
+      "stats": {
+        "power": "14",
+        "Speed": "4 (Slow)",
+        "Strength": "2",
+        "Agility": "4",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Starfire Trim Netting": {
+      "icon": "images\\Bug Catching Nets\\Starfire Trim Netting.png",
+      "level_requirement": "50",
+      "sell_price": 23931050,
+      "type": "Bug Catching Nets",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "55",
+        "Speed": "6 (Quick)",
+        "Strength": "10",
+        "Agility": "20",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Void Imperium Net": {
+      "icon": "images\\Bug Catching Nets\\Void Imperium Net.png",
+      "level_requirement": "30",
+      "sell_price": 2741050,
+      "type": "Bug Catching Nets",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "37",
+        "Speed": "5 (Medium)",
+        "Strength": "6",
+        "Agility": "12",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Wrangler of the Qoxzul": {
+      "icon": "images\\Bug Catching Nets\\Wrangler of the Qoxzul.png",
+      "level_requirement": "95",
+      "sell_price": 2313971050,
+      "type": "Bug Catching Nets",
+      "source": "Smithing",
+      "stats": {
+        "power": "92",
+        "Speed": "8 (Faster)",
+        "Strength": "20",
+        "Agility": "45",
+        "Upgrade Slots": "7"
+      },
+      "class": "All"
+    }
+  },
+  "Trap Box Sets": {
+    "Cardboard Traps": {
+      "icon": "images\\Trap Box Sets\\Cardboard Traps.png",
+      "level_requirement": "1",
+      "sell_price": 5000,
+      "type": "Trap Box Sets",
+      "source": "Lord of the Hunt,Frostbite Towndra(Shop)",
+      "stats": {
+        "power": "4",
+        "Speed": "4 (Slow)",
+        "Agility": "2",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Containment of the Zrgyios": {
+      "icon": "images\\Trap Box Sets\\Containment of the Zrgyios.png",
+      "level_requirement": "120",
+      "sell_price": 84164613,
+      "type": "Trap Box Sets",
+      "source": "Smithing",
+      "stats": {
+        "power": "80",
+        "Speed": "4 (Slow)",
+        "Agility": "80",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Egalitarian Traps": {
+      "icon": "images\\Trap Box Sets\\Egalitarian Traps.png",
+      "level_requirement": "60",
+      "sell_price": 9111613,
+      "type": "Trap Box Sets",
+      "source": "Smithing",
+      "stats": {
+        "power": "55",
+        "Speed": "4 (Slow)",
+        "Agility": "38",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Forbidden Traps": {
+      "icon": "images\\Trap Box Sets\\Forbidden Traps.png",
+      "level_requirement": "90",
+      "sell_price": 34114613,
+      "type": "Trap Box Sets",
+      "source": "Smithing",
+      "stats": {
+        "power": "67",
+        "Speed": "4 (Slow)",
+        "Agility": "56",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Meaty Traps": {
+      "icon": "images\\Trap Box Sets\\Meaty Traps.png",
+      "level_requirement": "40",
+      "sell_price": 111313,
+      "type": "Trap Box Sets",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "34",
+        "Speed": "4 (Slow)",
+        "Agility": "15",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Natural Traps": {
+      "icon": "images\\Trap Box Sets\\Natural Traps.png",
+      "level_requirement": "25",
+      "sell_price": 11015,
+      "type": "Trap Box Sets",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "20",
+        "Speed": "4 (Slow)",
+        "Agility": "10",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Royal Traps": {
+      "icon": "images\\Trap Box Sets\\Royal Traps.png",
+      "level_requirement": "48",
+      "sell_price": 8111313,
+      "type": "Trap Box Sets",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "45",
+        "Speed": "4 (Slow)",
+        "Agility": "20",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Silkskin Traps": {
+      "icon": "images\\Trap Box Sets\\Silkskin Traps.png",
+      "level_requirement": "5",
+      "sell_price": 600,
+      "type": "Trap Box Sets",
+      "source": "Smithing",
+      "stats": {
+        "power": "8",
+        "Speed": "4 (Slow)",
+        "Agility": "4",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Steel Traps": {
+      "icon": "images\\Trap Box Sets\\Steel Traps.png",
+      "level_requirement": "35",
+      "sell_price": 11283,
+      "type": "Trap Box Sets",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "26",
+        "Speed": "4 (Slow)",
+        "Agility": "12",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Wooden Traps": {
+      "icon": "images\\Trap Box Sets\\Wooden Traps.png",
+      "level_requirement": "15",
+      "sell_price": 6000,
+      "type": "Trap Box Sets",
+      "source": "Smithing",
+      "stats": {
+        "power": "13",
+        "Speed": "4 (Slow)",
+        "Agility": "7",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    }
+  },
+  "Worship Skulls": {
+    "Ceramic Skull": {
+      "icon": "images\\Worship Skulls\\Ceramic Skull.png",
+      "level_requirement": "10",
+      "sell_price": 1250,
+      "type": "Worship Skulls",
+      "source": "Smithing",
+      "stats": {
+        "power": "8",
+        "Speed": "5 (Medium)",
+        "Wisdom": "4",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    },
+    "Crystal Skull of Esquire Vnoze": {
+      "icon": "images\\Worship Skulls\\Crystal Skull of Esquire Vnoze.png",
+      "level_requirement": "120",
+      "sell_price": 587238650,
+      "type": "Worship Skulls",
+      "source": "Smithing",
+      "stats": {
+        "power": "70",
+        "Speed": "10 (Supersonic)",
+        "Upgrade Slots": "6"
+      },
+      "class": "All"
+    },
+    "Cultist Skull": {
+      "icon": "images\\Worship Skulls\\Cultist Skull.png",
+      "level_requirement": "90",
+      "sell_price": 237188650,
+      "type": "Worship Skulls",
+      "source": "Smithing",
+      "stats": {
+        "power": "63",
+        "Speed": "9 (Turbo)",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Dreadnaught Skull": {
+      "icon": "images\\Worship Skulls\\Dreadnaught Skull.png",
+      "level_requirement": "70",
+      "sell_price": 14688650,
+      "type": "Worship Skulls",
+      "source": "Smithing",
+      "stats": {
+        "power": "55",
+        "Speed": "9 (Turbo)",
+        "Upgrade Slots": "5"
+      },
+      "class": "All"
+    },
+    "Glauss Skull": {
+      "icon": "images\\Worship Skulls\\Glauss Skull.png",
+      "level_requirement": "50",
+      "sell_price": 1938550,
+      "type": "Worship Skulls",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "34",
+        "Speed": "7 (Fast)",
+        "Wisdom": "15",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Horned Skull": {
+      "icon": "images\\Worship Skulls\\Horned Skull.png",
+      "level_requirement": "25",
+      "sell_price": 13300,
+      "type": "Worship Skulls",
+      "source": "Smithing",
+      "stats": {
+        "power": "13",
+        "Speed": "5 (Medium)",
+        "Wisdom": "7",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Luciferian Skull": {
+      "icon": "images\\Worship Skulls\\Luciferian Skull.png",
+      "level_requirement": "60",
+      "sell_price": 4938550,
+      "type": "Worship Skulls",
+      "source": "Smithing(Task Unlocks Tab 4)",
+      "stats": {
+        "power": "45",
+        "Speed": "8 (Faster)",
+        "Wisdom": "20",
+        "Upgrade Slots": "4"
+      },
+      "class": "All"
+    },
+    "Manifested Skull": {
+      "icon": "images\\Worship Skulls\\Manifested Skull.png",
+      "level_requirement": "40",
+      "sell_price": 438550,
+      "type": "Worship Skulls",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "26",
+        "Speed": "7 (Fast)",
+        "Wisdom": "12",
+        "Upgrade Slots": "3"
+      },
+      "class": "All"
+    },
+    "Prickle Skull": {
+      "icon": "images\\Worship Skulls\\Prickle Skull.png",
+      "level_requirement": "35",
+      "sell_price": 158300,
+      "type": "Worship Skulls",
+      "source": "Smithing(Task Unlocks Tab 3)",
+      "stats": {
+        "power": "20",
+        "Speed": "6 (Quick)",
+        "Wisdom": "10",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
+    "Slush Skull": {
+      "icon": "images\\Worship Skulls\\Slush Skull.png",
+      "level_requirement": "10",
+      "sell_price": 100,
+      "type": "Worship Skulls",
+      "source": "Dilapidated Slush",
+      "stats": {
+        "power": "10",
+        "Speed": "2 (Sluggish)",
+        "Defence": "25"
+      },
+      "class": "All"
+    },
+    "Wax Skull": {
+      "icon": "images\\Worship Skulls\\Wax Skull.png",
+      "level_requirement": "1",
+      "sell_price": 5000,
+      "type": "Worship Skulls",
+      "source": "Frostbite Towndra(Shop)",
+      "stats": {
+        "power": "4",
+        "Speed": "4 (Slow)",
+        "Wisdom": "2",
+        "Upgrade Slots": "1"
+      },
+      "class": "All"
+    }
+  }
+}

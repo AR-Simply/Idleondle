@@ -74,6 +74,10 @@ html, body {
 .page-btn img { width: 36px; height: 36px; object-fit: contain; }
 .page-btn.active { background: #2e7d32; border-color: #2e7d32; }
 
+/* Hard page button (red) */
+.page-btn.hard { background: linear-gradient(180deg, #d9534f, #b71c1c); border-color: #9b1414; }
+.page-btn.hard img { filter: drop-shadow(0 1px 0 rgba(0,0,0,0.25)); }
+
 /* vertical separator between the two page buttons */
 
 .page-btn { z-index: 2; position: relative; }
@@ -362,6 +366,15 @@ html, body {
   cursor: not-allowed;
   opacity: 0.9;
 }
+
+/* Hard mode button (red) */
+.btn-hard {
+  background: linear-gradient(180deg, #d9534f, #b71c1c);
+  color: #fff;
+  border: 1px solid #9b1414;
+}
+.btn-hard:hover { filter: brightness(0.95); }
+.btn-hard:active { transform: translateY(1px); }
 
 .combo-guess {
   margin-top: 8px;
