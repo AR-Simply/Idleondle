@@ -41,6 +41,56 @@ function encodePathSegments(p) {
   return p.split('/').map(seg => encodeURIComponent(seg)).join('/');
 }
 
+// Cookie helpers: record a win with game name and ISO timestamp.
+function setCookie(name, value, days = 365) {
+  try {
+    if (typeof document === 'undefined') return;
+    const d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = 'expires=' + d.toUTCString();
+    document.cookie = `${name}=${encodeURIComponent(value)}; ${expires}; path=/`;
+  } catch (e) { /* non-fatal */ }
+}
+
+function recordWin(game) {
+  try {
+    if (typeof document === 'undefined') return;
+    const now = new Date().toISOString();
+    const payload = { game: String(game || 'unknown'), time: now };
+    // Store a general last-win cookie and a per-game timestamp cookie.
+    setCookie('idleondle_last_win', JSON.stringify(payload), 365);
+    const safeName = String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_').toLowerCase();
+    setCookie(`idleondle_win_${safeName}`, now, 365);
+  } catch (e) { /* non-fatal */ }
+}
+
+// Read cookie helper and check whether a game was won today (local date)
+function getCookie(name) {
+  try {
+    if (typeof document === 'undefined') return null;
+    const pairs = document.cookie.split(';').map(s => s.trim());
+    for (const p of pairs) {
+      if (!p) continue;
+      const idx = p.indexOf('=');
+      const k = idx === -1 ? p : p.slice(0, idx);
+      const v = idx === -1 ? '' : p.slice(idx + 1);
+      if (k === name) return decodeURIComponent(v || '');
+    }
+  } catch (e) { /* non-fatal */ }
+  return null;
+}
+function hasWinToday(game) {
+  try {
+    const key = `idleondle_win_${String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_').toLowerCase()}`;
+    const val = getCookie(key);
+    if (!val) return false;
+    const then = new Date(val);
+    if (isNaN(then.getTime())) return false;
+    const now = new Date();
+    return then.getFullYear() === now.getFullYear() && then.getMonth() === now.getMonth() && then.getDate() === now.getDate();
+  } catch (e) { return false; }
+}
+
 function resolveIcon(p) {
   const cleaned = toWebPath(p).replace(/^\.?\//, '');
   // Normalise IMAGE_BASE in a few useful forms.
@@ -340,6 +390,19 @@ function notifyGoalGuessed(it) {
   // Fallback: directly call cardGuesser API if present (covers timing issues)
   try { if (typeof window !== 'undefined' && window.cardGuesser && typeof window.cardGuesser.setCardBlur === 'function') window.cardGuesser.setCardBlur(0); } catch (e) {}
   // Show the modal after a short delay (1s) to allow UI to settle
+  // Record the win in cookies for analytics/local tracking across pages.
+  try {
+    // Detect game type from pathname or href. Default to 'item'.
+    const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
+    let game = 'item';
+    if (path.toLowerCase().includes('cardguesser')) game = 'card';
+    else if (path.toLowerCase().includes('monsterguesser') || path.toLowerCase().includes('monster')) game = 'monster';
+    else if (path.toLowerCase().includes('harditemguesser') || path.toLowerCase().includes('harditem')) game = 'hard_item';
+    // Allow page modules to specify a friendly game name on the item object (optional)
+    if (it && it._gameName) game = it._gameName;
+    recordWin(game);
+  } catch (e) { /* non-fatal */ }
+
   goalModalTimeout = setTimeout(() => { showGoalModal(it); goalModalTimeout = null; }, 1000);
 }
 
@@ -360,9 +423,9 @@ export async function initShared(config = {}) {
     try {
       const titleEl = document.querySelector('.site-title');
       if (!titleEl) return;
-      // Remove existing if present
-      const existing = document.querySelector('.page-switch'); if (existing) existing.remove();
-      const wrap = document.createElement('div'); wrap.className = 'page-switch';
+  // Use an existing .page-switch if present in the HTML; otherwise create one.
+  let wrap = document.querySelector('.page-switch');
+  if (!wrap) { wrap = document.createElement('div'); wrap.className = 'page-switch'; }
       const makeBtn = (href, id, imgSrc, alt) => {
         const a = document.createElement('a'); a.href = href; a.className = 'page-btn'; a.id = id; a.title = alt;
         const img = document.createElement('img');
@@ -384,12 +447,37 @@ export async function initShared(config = {}) {
   const cardHref = inHtmlFolder ? 'cardGuesser.html' : 'html/cardGuesser.html';
   const monsterHref = inHtmlFolder ? 'monsterGuesser.html' : 'html/monsterGuesser.html';
 
-  wrap.appendChild(makeBtn(indexHref, 'btn-items', '../images/Helmets/Copper Helmet.png', 'Item Guesser'));
-  wrap.appendChild(makeBtn(cardHref, 'btn-cards', '../images/card.png', 'Card Guesser'));
-  wrap.appendChild(makeBtn(monsterHref, 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser'));
+      // Ensure the switch has the three expected buttons. If static HTML provided
+      // them, update their href/img; otherwise append new buttons.
+      const ensureBtn = (href, id, imgSrc, alt) => {
+        const existingBtn = wrap.querySelector('#' + id);
+        if (existingBtn) {
+          existingBtn.href = href;
+          const imgEl = existingBtn.querySelector('img');
+          if (imgEl) {
+            const prefix = String(imageBase || '').replace(/\/$/, '');
+            const cleaned = imgSrc.replace(/^\.?\//, '');
+            imgEl.src = prefix ? `${prefix}/${cleaned}` : cleaned;
+            imgEl.alt = alt;
+          }
+          return existingBtn;
+        }
+        const btn = makeBtn(href, id, imgSrc, alt);
+        wrap.appendChild(btn);
+        return btn;
+      };
+
+      ensureBtn(indexHref, 'btn-items', '../images/Helmets/Copper Helmet.png', 'Item Guesser');
+      ensureBtn(cardHref, 'btn-cards', '../images/card.png', 'Card Guesser');
+      ensureBtn(monsterHref, 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser');
   // If this is the hard-item guesser page, change the left page button to a red "hard" button
-  try {
-    const isHardPage = (location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('HardItemGuesser');
+    try {
+    // Detect hard-mode page more reliably: filename in URL OR explicit marker in
+    // the document (data-hard attribute or [data-hard] element). This makes the
+    // detection robust when the deployed site rewrites paths or hides filenames.
+    const isHardPage = (location.pathname || '').endsWith('HardItemGuesser.html')
+      || (location.href || '').includes('HardItemGuesser')
+      || (typeof document !== 'undefined' && (document.body?.dataset?.hard === 'true' || document.querySelector('[data-hard]')));
     if (isHardPage) {
       const prefix = String(imageBase || '').replace(/\/$/, '');
       const btnItemsEl = wrap.querySelector('#btn-items');
@@ -404,13 +492,39 @@ export async function initShared(config = {}) {
       }
     }
   } catch (e) { /* non-fatal */ }
-  titleEl.insertAdjacentElement('afterend', wrap);
-  const isCard = location.pathname.endsWith('cardGuesser.html') || location.href.includes('cardGuesser.html');
-  const isMonster = location.pathname.endsWith('monsterGuesser.html') || location.href.includes('monsterGuesser.html');
+  // If we created the element, insert it after the title. If it already
+  // existed in the HTML, it should already be in place.
+  if (!document.querySelector('.page-switch')) titleEl.insertAdjacentElement('afterend', wrap);
+  else if (!wrap.parentNode) titleEl.insertAdjacentElement('afterend', wrap);
+  // Determine current page and set visual states on switcher buttons.
+  const isCard = location.pathname.endsWith('cardGuesser.html') || location.href.includes('cardGuesser.html') || location.href.includes('cardGuesser');
+  const isMonster = location.pathname.endsWith('monsterGuesser.html') || location.href.includes('monsterGuesser.html') || location.href.includes('monsterGuesser');
+  const isHardPage = (location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('HardItemGuesser') || (typeof document !== 'undefined' && (document.body?.dataset?.hard === 'true' || document.querySelector('[data-hard]')));
   const isItems = !isCard && !isMonster;
-  document.getElementById('btn-items')?.classList.toggle('active', isItems);
-  document.getElementById('btn-cards')?.classList.toggle('active', isCard);
-  document.getElementById('btn-monster')?.classList.toggle('active', isMonster);
+
+  const btnItems = document.getElementById('btn-items');
+  const btnCards = document.getElementById('btn-cards');
+  const btnMonster = document.getElementById('btn-monster');
+
+  // reset classes/styles
+  [btnItems, btnCards, btnMonster].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
+
+  // Mark hard page button (left one) as red if current page is hard-mode or if the target is the hard page
+  if (isHardPage && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
+
+  // Mark completed (green) if the per-game cookie shows a win today
+  try {
+    if (btnItems && hasWinToday('item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
+    if (btnCards && hasWinToday('card')) { btnCards.classList.add('complete'); btnCards.style.background = '#2ecc71'; }
+    if (btnMonster && hasWinToday('monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
+    // Hard-item completed may be tracked under 'hard_item'
+    if (btnItems && hasWinToday('hard_item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
+  } catch (e) { /* non-fatal */ }
+
+  // Mark active (yellow) -- higher priority than complete so we override background
+  if (isItems && btnItems) { btnItems.classList.add('active'); btnItems.style.background = '#f1c40f'; }
+  if (isCard && btnCards) { btnCards.classList.add('active'); btnCards.style.background = '#f1c40f'; }
+  if (isMonster && btnMonster) { btnMonster.classList.add('active'); btnMonster.style.background = '#f1c40f'; }
     } catch (e) { console.warn('Page switch render failed', e); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => renderPageSwitch(config.imageBase || IMAGE_BASE)); else renderPageSwitch(config.imageBase || IMAGE_BASE);

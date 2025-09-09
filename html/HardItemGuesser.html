@@ -9,17 +9,29 @@
   <meta name="description" content="Play Idleondle  daily word guessing games from the world of IdleOn. Free, no account required.">
   <link rel="canonical" href="https://www.idleondle.com/">
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png">
-  <link rel="apple-touch-icon" href="../images/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png">
+  <link rel="apple-touch-icon" href="/images/icon.png">
 
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="/styles.css">
 
   <meta name="google-adsense-account" content="ca-pub-4897247326207368">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4897247326207368" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="center">
-  <img src="../images/title.png" alt="Idleondle title" class="site-title" />
+  <img src="/images/title.png" alt="Idleondle title" class="site-title" />
+  <!-- Static page switcher -->
+  <div class="page-switch">
+    <a href="/index.html" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
+      <img src="/images/Helmets/Copper Helmet.png" alt="Item" />
+    </a>
+    <a href="/html/cardGuesser.html" id="btn-cards" class="page-btn" title="Card Guesser">
+      <img src="/images/card.png" alt="Cards" />
+    </a>
+    <a href="/html/monsterGuesser.html" id="btn-monster" class="page-btn page-btn-right" title="Monster Guesser">
+      <img src="/images/Enemies/carrotman-6_thumb.png" alt="Monster" />
+    </a>
+  </div>
 
     <div class="top-row">
       <div class="guess-box combo-guess" id="guessBox">
@@ -62,13 +74,13 @@
 
       <div class="side-box" id="sideBox" aria-hidden="true">
         <button id="helpBtn" class="icon-btn" aria-label="Question button">
-          <img src="../images/question.png" alt="question" />
+          <img src="/images/question.png" alt="question" />
         </button>
         <button id="aboutBtn" class="icon-btn" aria-label="Info button">
-          <img src="../images/info.png" alt="info" />
+          <img src="/images/info.png" alt="info" />
         </button>
         <a class="icon-btn" href="https://ko-fi.com/S6S51KOEMK" target="_blank" rel="noopener noreferrer" aria-label="Ko-fi link">
-          <img src="../images/kofi.png" alt="Buy Me a Coffee at ko-fi.com" style="height:24px;border:0;" />
+          <img src="/images/kofi.png" alt="Buy Me a Coffee at ko-fi.com" style="height:24px;border:0;" />
         </a>
       </div>
     </div>
@@ -194,17 +206,19 @@
         </div>
 
     <script type="module">
-      import { initShared } from '../js/shared.js';
-      import ItemGuesser from '../js/ItemGuesser.js';
+      import { initShared } from '/js/shared.js';
+      import ItemGuesser from '/js/ItemGuesser.js';
 
       // Initialize shared functionality and wire page-specific handlers
+      // Mark page as hard-mode for robust detection
+      document.body.dataset.hard = 'true';
       initShared({
-        dataUrl: '../json/idleon_items_hard.json',
-        imageBase: '../images',
-  // Increase clue unlock thresholds for hard mode
-  clueUnlocks: { world: 10, category: 10 },
-  // Use a seed offset so hard mode selects from a different deterministic sequence
-  seedOffset: 999,
+        dataUrl: '/json/idleon_items_hard.json',
+        imageBase: '/images',
+        // Increase clue unlock thresholds for hard mode
+        clueUnlocks: { world: 10, category: 10 },
+        // Use a seed offset so hard mode selects from a different deterministic sequence
+        seedOffset: 999,
         onSelect: (item) => {
           // Add selected item to the table (page-specific)
           if (ItemGuesser && typeof ItemGuesser.addToTable === 'function') ItemGuesser.addToTable(item);

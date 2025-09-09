@@ -3,30 +3,34 @@
     "Amarok": {
       "world": "Blunder Hills",
       "icon": "images\\Enemies\\amarok-18_thumb.png",
-      "emoji1": "🌲",
-      "emoji2": "🐺",
-      "emoji3": "🪓"
+      "emoji1": "🤺",
+      "emoji2": "🗿",
+      "emoji3": "🐺",
+      "emoji4": "🗝️"
     },
     "Baba Yaga": {
       "world": "Blunder Hills",
       "icon": "images\\Enemies\\baba-yaga-16_thumb.png",
-      "emoji1": "🌙",
-      "emoji2": "🧹",
-      "emoji3": "🧙‍♀️"
+      "emoji1": "🏛️",
+      "emoji2": "🧙‍♀️",
+      "emoji3": "🐥",
+      "emoji4": "🏚️"
     },
     "Baby Boa": {
       "world": "Blunder Hills",
       "icon": "images\\Enemies\\baby-boa-5_thumb.png",
-      "emoji1": "🐣",
+      "emoji1": "👅",
       "emoji2": "🌿",
-      "emoji3": "🐍"
+      "emoji3": "👶",
+      "emoji4": "🐍"
     },
     "Baby Troll": {
       "world": "Spirited Valley",
       "icon": "images\\Enemies\\baby-troll-95_thumb.png",
       "emoji1": "🍼",
-      "emoji2": "🪵",
-      "emoji3": "👹"
+      "emoji2": "🛝",
+      "emoji3": "",
+      "emoji4": "👹"
     },
     "Bamboo Spirit": {
       "world": "Spirited Valley",
