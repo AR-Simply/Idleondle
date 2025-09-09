@@ -55,12 +55,13 @@ function setCookie(name, value, days = 365) {
 function recordWin(game) {
   try {
     if (typeof document === 'undefined') return;
-    const now = new Date().toISOString();
-    const payload = { game: String(game || 'unknown'), time: now };
-    // Store a general last-win cookie and a per-game timestamp cookie.
-    setCookie('idleondle_last_win', JSON.stringify(payload), 365);
-    const safeName = String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_').toLowerCase();
-    setCookie(`idleondle_win_${safeName}`, now, 365);
+  const now = new Date().toISOString();
+  const guesses = Number(arguments[1]) || Number(guessCount) || 0;
+  const payload = { game: String(game || 'unknown'), time: now, guesses };
+  // Store a general last-win cookie and a per-game payload cookie (JSON).
+  setCookie('idleondle_last_win', JSON.stringify(payload), 365);
+  const safeName = String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_').toLowerCase();
+  setCookie(`idleondle_win_${safeName}`, JSON.stringify({ time: now, guesses }), 365);
   } catch (e) { /* non-fatal */ }
 }
 
@@ -84,11 +85,45 @@ function hasWinToday(game) {
     const key = `idleondle_win_${String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_').toLowerCase()}`;
     const val = getCookie(key);
     if (!val) return false;
-    const then = new Date(val);
-    if (isNaN(then.getTime())) return false;
-    const now = new Date();
-    return then.getFullYear() === now.getFullYear() && then.getMonth() === now.getMonth() && then.getDate() === now.getDate();
+    // Support both legacy ISO string values and current JSON payloads
+    try {
+      const parsed = JSON.parse(val);
+      if (parsed && parsed.time) {
+        const then = new Date(parsed.time);
+        if (isNaN(then.getTime())) return false;
+        const now = new Date();
+        return then.getFullYear() === now.getFullYear() && then.getMonth() === now.getMonth() && then.getDate() === now.getDate();
+      }
+    } catch (e) {
+      const then = new Date(val);
+      if (isNaN(then.getTime())) return false;
+      const now = new Date();
+      return then.getFullYear() === now.getFullYear() && then.getMonth() === now.getMonth() && then.getDate() === now.getDate();
+    }
   } catch (e) { return false; }
+}
+
+function getWinPayload(game) {
+  try {
+    const key = `idleondle_win_${String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_').toLowerCase()}`;
+    const v = getCookie(key);
+    if (!v) return null;
+    try { const parsed = JSON.parse(v); if (parsed && parsed.time) return parsed; } catch (e) { /* ignore */ }
+    // legacy ISO-string value
+    const then = new Date(v);
+    if (isNaN(then.getTime())) return null;
+    return { time: then.toISOString(), guesses: 0 };
+  } catch (e) { return null; }
+}
+
+function detectGameFromPath() {
+  try {
+    const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
+    if (path.toLowerCase().includes('cardguesser')) return 'card';
+    if (path.toLowerCase().includes('monsterguesser') || path.toLowerCase().includes('monster')) return 'monster';
+    if (path.toLowerCase().includes('harditemguesser') || path.toLowerCase().includes('harditem')) return 'hard_item';
+    return 'item';
+  } catch (e) { return 'item'; }
 }
 
 function resolveIcon(p) {
@@ -318,7 +353,9 @@ function showGoalModal(item) {
   icon.src = item.icon || placeholder();
   icon.alt = item.name || 'item';
   name.textContent = item.name || '';
-  try { document.getElementById('goalGuesses').textContent = String(guessCount || 0); } catch (e) {}
+  // goalGuesses parameter optional: if provided, use it; otherwise use current guessCount
+  const argGuesses = (arguments.length > 1 && typeof arguments[1] === 'number') ? arguments[1] : null;
+  try { document.getElementById('goalGuesses').textContent = String(argGuesses !== null ? argGuesses : (guessCount || 0)); } catch (e) {}
   modal.setAttribute('aria-hidden', 'false');
 
   function update() {
@@ -399,8 +436,8 @@ function notifyGoalGuessed(it) {
     else if (path.toLowerCase().includes('monsterguesser') || path.toLowerCase().includes('monster')) game = 'monster';
     else if (path.toLowerCase().includes('harditemguesser') || path.toLowerCase().includes('harditem')) game = 'hard_item';
     // Allow page modules to specify a friendly game name on the item object (optional)
-    if (it && it._gameName) game = it._gameName;
-    recordWin(game);
+  if (it && it._gameName) game = it._gameName;
+  recordWin(game, Number(guessCount) || 0);
   } catch (e) { /* non-fatal */ }
 
   goalModalTimeout = setTimeout(() => { showGoalModal(it); goalModalTimeout = null; }, 1000);
@@ -514,20 +551,61 @@ export async function initShared(config = {}) {
 
   // Mark completed (green) if the per-game cookie shows a win today
   try {
-    if (btnItems && hasWinToday('item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
+  // Do not mark the hard-mode page button as complete when we're on hard-mode;
+  // hard mode must remain visibly red. Only mark item/card as complete on non-hard pages.
+  if (!isHardPage && btnItems && hasWinToday('item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
     if (btnCards && hasWinToday('card')) { btnCards.classList.add('complete'); btnCards.style.background = '#2ecc71'; }
     if (btnMonster && hasWinToday('monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
     // Hard-item completed may be tracked under 'hard_item'
-    if (btnItems && hasWinToday('hard_item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
+  if (!isHardPage && btnItems && hasWinToday('hard_item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
   } catch (e) { /* non-fatal */ }
 
   // Mark active (yellow) -- higher priority than complete so we override background
-  if (isItems && btnItems) { btnItems.classList.add('active'); btnItems.style.background = '#f1c40f'; }
+  // If this is the hard-mode page, keep the left button red instead of marking it active
+  if (isItems && btnItems && !isHardPage) { btnItems.classList.add('active'); btnItems.style.background = '#f1c40f'; }
   if (isCard && btnCards) { btnCards.classList.add('active'); btnCards.style.background = '#f1c40f'; }
   if (isMonster && btnMonster) { btnMonster.classList.add('active'); btnMonster.style.background = '#f1c40f'; }
+  // Ensure hard-mode left button remains red (override) when detected
+  if (isHardPage && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
     } catch (e) { console.warn('Page switch render failed', e); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => renderPageSwitch(config.imageBase || IMAGE_BASE)); else renderPageSwitch(config.imageBase || IMAGE_BASE);
+
+  // After rendering the page switcher, if the user has already completed today's
+  // game for the current page, show the goal modal so they can see the answer.
+  try {
+    const currentGame = detectGameFromPath();
+    if (hasWinToday(currentGame)) {
+      // Wait until UI elements settle, then show the modal using the current goal and stored guesses.
+      setTimeout(() => {
+        try {
+          const gi = getGoalItem();
+          const payload = getWinPayload(currentGame) || {};
+          const payloadGuesses = Number(payload.guesses) || 0;
+          // Hide the search input and combo wrapper so the modal is prominent
+          try {
+            const inputEl = document.getElementById('search');
+            const comboWrap = document.getElementById('combo');
+            const dropdownEl = document.getElementById('dropdown');
+            if (inputEl) { inputEl.style.display = 'none'; inputEl.disabled = true; inputEl.setAttribute('aria-hidden', 'true'); }
+            if (comboWrap) { comboWrap.style.display = 'none'; comboWrap.setAttribute('aria-hidden', 'true'); comboWrap.classList.add('goal-guessed'); }
+            if (dropdownEl) { dropdownEl.classList.remove('open'); dropdownEl.style.display = 'none'; dropdownEl.setAttribute('aria-hidden', 'true'); }
+          } catch (e) { /* non-fatal */ }
+          if (gi) showGoalModal(gi, payloadGuesses);
+          // Let page-specific modules react as if the guess was correct (unblur card, reveal emojis)
+          try {
+            if (typeof document !== 'undefined' && typeof CustomEvent === 'function') {
+              document.dispatchEvent(new CustomEvent('guess:correct', { detail: { item: gi } }));
+            }
+            // Fallback: directly call cardGuesser API if present
+            if (typeof window !== 'undefined' && window.cardGuesser && typeof window.cardGuesser.setCardBlur === 'function') {
+              try { window.cardGuesser.setCardBlur(0); } catch (e) { /* non-fatal */ }
+            }
+          } catch (e) { /* non-fatal */ }
+        } catch (e) { /* non-fatal */ }
+      }, 600);
+    }
+  } catch (e) { /* non-fatal */ }
 
   // NOTE: daily icon rendering for card pages is now handled by the page-specific module
   // (cardGuesser.js). The shared code previously injected a small daily icon which

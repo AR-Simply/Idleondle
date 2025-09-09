@@ -43,6 +43,8 @@ export async function initMonsterGuesser(options = {}) {
       const val = goal && goal.raw ? (goal.raw[key] || '') : '';
       tile.textContent = val || '';
       tile.classList.remove('locked');
+      // If twemoji is available, parse only this tile (or the emojibox) to replace with images
+      try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(tile, { folder: 'svg', ext: '.svg' }); } catch (e) { /* non-fatal */ }
     };
 
     const updateNote = (count) => {
@@ -70,9 +72,15 @@ export async function initMonsterGuesser(options = {}) {
         } catch (err) { /* non-fatal */ }
       });
       // When correct, reveal all
-      document.addEventListener('guess:correct', () => { reveal(2); reveal(3); if (note) note.style.display = 'none'; });
+      document.addEventListener('guess:correct', () => { reveal(2); reveal(3); if (note) note.style.display = 'none';
+        // parse the whole emojibox so all emoji are replaced with Twemoji images
+        try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(box, { folder: 'svg', ext: '.svg' }); } catch (e) { /* non-fatal */ }
+      });
     } catch (e) { /* non-fatal */ }
   } catch (e) { console.warn('Failed to render emojibox', e); }
+
+  // If twemoji is available, parse the initial emojibox so emoji render consistently across systems
+  try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(document.getElementById('emojibox') || document.body, { folder: 'svg', ext: '.svg' }); } catch (e) { /* non-fatal */ }
 }
 
 // Auto-init when imported directly from the page (mirrors cardGuesser.js behavior)

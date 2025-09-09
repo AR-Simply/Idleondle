@@ -576,154 +576,176 @@
       "icon": "images\\Enemies\\sand-giant-31_thumb.png",
       "emoji1": "🏜️",
       "emoji2": "🧱",
-      "emoji3": "🗿"
+      "emoji3": "🗿",
+      "emoji4": "🦶"// Not earlier than this fixed tobias  ost ost bad guy hyge dig
     },
     "Sandy Pot": {
       "world": "Yum-Yum Desert",
       "icon": "images\\Enemies\\sandy-pot-22_thumb.png",
-      "emoji1": "🏺",
-      "emoji2": "🏖️",
-      "emoji3": "🫙"
+      "emoji1": "🏜️",
+      "emoji2": "🪟",
+      "emoji3": "🏖️",
+      "emoji4": "🏺"
     },
     "Sheepie": {
       "world": "Frostbite Tundra",
       "icon": "images\\Enemies\\sheepie-38_thumb.png",
-      "emoji1": "🧶",
-      "emoji2": "❄️",
-      "emoji3": "🐑"
+      "emoji1": "❄️",
+      "emoji2": "🧶",
+      "emoji3": "❄️",
+      "emoji4": "🐏"
     },
     "Sir Stache": {
       "world": "Frostbite Tundra",
       "icon": "images\\Enemies\\sir-stache-40_thumb.png",
-      "emoji1": "🎩",
+      "emoji1": "☕",
       "emoji2": "🤵",
-      "emoji3": "🥸"
+      "emoji3": "🎩",
+      "emoji4": "🥸"
     },
     "Skydoggie Spirit": {
       "world": "Spirited Valley",
       "icon": "images\\Enemies\\skydoggie-spirit-102_thumb.png",
-      "emoji1": "☁️",
-      "emoji2": "🐶",
-      "emoji3": "🐕‍🦺"
+      "emoji1": "😈",
+      "emoji2": "☁️",
+      "emoji3": "👻",
+      "emoji4": "🐕‍🦺"
     },
     "Slime": {
       "world": "Blunder Hills",
       "icon": "images\\Enemies\\slime-4_thumb.png",
-      "emoji1": "🫧",
+      "emoji1": "💧",
       "emoji2": "🧪",
-      "emoji3": "🟢"
+      "emoji3": "👀",
+      "emoji4": "🟢"
     },
     "Snelbie": {
       "world": "Yum-Yum Desert",
       "icon": "images\\Enemies\\snelbie-32_thumb.png",
-      "emoji1": "🟤",
-      "emoji2": "🐚",
-      "emoji3": "🐌"
+      "emoji1": "🏜️",
+      "emoji2": "🟤",
+      "emoji3": "🐚",
+      "emoji4": "🐌"
     },
     "Snowman": {
       "world": "Frostbite Tundra",
       "icon": "images\\Enemies\\snowman-44_thumb.png",
-      "emoji1": "❄️",
-      "emoji2": "🎩",
-      "emoji3": "⛄"
+      "emoji1": "🥕",
+      "emoji2": "👦",
+      "emoji3": "🏐",
+      "emoji4": "⛄"
     },
     "Soda Can": {
       "world": "Hyperion Nebula",
       "icon": "images\\Enemies\\soda-can-60_thumb.png",
-      "emoji1": "🥤",
-      "emoji2": "💥",
-      "emoji3": "🥤"
+      "emoji1": "🫧",
+      "emoji2": "😃",
+      "emoji3": "👾",
+      "emoji4": "🥤"
     },
     "Sprout Spirit": {
       "world": "Spirited Valley",
       "icon": "images\\Enemies\\sprout-spirit-92_thumb.png",
-      "emoji1": "🌱",
-      "emoji2": "🌫️",
-      "emoji3": "👻"
+      "emoji1": "𓇢",
+      "emoji2": "👒",
+      "emoji3": "💧",
+      "emoji4": "🌱"
     },
     "Stilted Seeker": {
       "world": "Hyperion Nebula",
       "icon": "images\\Enemies\\stilted-seeker-68_thumb.png",
-      "emoji1": "🕷️",
-      "emoji2": "🦵",
-      "emoji3": "🎯"
+      "emoji1": "🦩",
+      "emoji2": "👾",
+      "emoji3": "👀",
+      "emoji4": "🔨"
     },
     "Stiltmole": {
       "world": "Smolderin' Plateau",
       "icon": "images\\Enemies\\stiltmole-78_thumb.png",
-      "emoji1": "🕳️",
+      "emoji1": "🦩",
       "emoji2": "👓",
-      "emoji3": "🐹"
+      "emoji3": "💈",
+      "emoji4": "🐹"
     },
     "Suggma": {
       "world": "Smolderin' Plateau",
       "icon": "images\\Enemies\\suggma-69_thumb.png",
-      "emoji1": "🟪",
-      "emoji2": "👅",
-      "emoji3": "🧪"
+      "emoji1": "〰️",
+      "emoji2": "🥵",
+      "emoji3": "♨️",
+      "emoji4": "🔥"
     },
     "Thermister": {
       "world": "Frostbite Tundra",
       "icon": "images\\Enemies\\thermister-46_thumb.png",
-      "emoji1": "🌡️",
-      "emoji2": "🔥",
-      "emoji3": "🌡️"
+      "emoji1": "☃️",
+      "emoji2": "🤧",
+      "emoji3": "❄️",
+      "emoji4": "🌡️"
     },
     "Tremor Wurm": {
       "world": "Smolderin' Plateau",
       "icon": "images\\Enemies\\tremor-wurm-86_thumb.png",
-      "emoji1": "🌋",
+      "emoji1": "👨‍🍳",
       "emoji2": "🌫️",
-      "emoji3": "🪱"
+      "emoji3": "😮",
+      "emoji4": "🪱"
     },
     "TV": {
       "world": "Hyperion Nebula",
       "icon": "images\\Enemies\\tv-57_thumb.png",
-      "emoji1": "📡",
-      "emoji2": "🛰️",
-      "emoji3": "📺"
+      "emoji1": "🦷",
+      "emoji2": "📡",
+      "emoji3": "🔌",
+      "emoji4": "📺"
     },
     "Tyson": {
       "world": "Yum-Yum Desert",
       "icon": "images\\Enemies\\tyson-29_thumb.png",
-      "emoji1": "🟫",
-      "emoji2": "🥔",
-      "emoji3": "🥊"
+      "emoji1": "🍪",
+      "emoji2": "💪",
+      "emoji3": "🏜️",
+      "emoji4": "🍖"
     },
     "Walking Stick": {
       "world": "Blunder Hills",
       "icon": "images\\Enemies\\walking-stick-10_thumb.png",
-      "emoji1": "🍃",
-      "emoji2": "🌳",
-      "emoji3": "🦗"
+      "emoji1": "🦵",
+      "emoji2": "🪳",
+      "emoji3": "🌲",
+      "emoji4": "🪵"
     },
     "Wode Board": {
       "world": "Blunder Hills",
       "icon": "images\\Enemies\\wode-board-8_thumb.png",
-      "emoji1": "🪵",
-      "emoji2": "🔨",
-      "emoji3": "📦"
+      "emoji1": "💪",
+      "emoji2": "🛹",
+      "emoji3": "🌲",
+      "emoji4": "🪵"
     },
     "Woodlin Spirit": {
       "world": "Spirited Valley",
       "icon": "images\\Enemies\\woodlin-spirit-96_thumb.png",
-      "emoji1": "🌲",
-      "emoji2": "🌫️",
-      "emoji3": "👻"
+      "emoji1": "😱",
+      "emoji2": "🍃",
+      "emoji3": "👻",
+      "emoji4": "🪵"
     },
     "Wood Mushroom": {
       "world": "Blunder Hills",
       "icon": "images\\Enemies\\Wood_Mushroom_thumb.png",
-      "emoji1": "🪵",
-      "emoji2": "🌲",
-      "emoji3": "🍄"
+      "emoji1": "🥏",
+      "emoji2": "⭕",
+      "emoji3": "🪵",
+      "emoji4": "🍄"
     },
     "Xylobone": {
       "world": "Frostbite Tundra",
       "icon": "images\\Enemies\\xylobone-54_thumb.png",
-      "emoji1": "🎼",
-      "emoji2": "☠️",
-      "emoji3": "🦴"
+      "emoji1": "🥶",
+      "emoji2": "🧑‍🌾",
+      "emoji3": "🪞",
+      "emoji4": "💀"
     }
   }
 }
