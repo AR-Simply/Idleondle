@@ -56,7 +56,7 @@ export async function initCardGuesser(options = {}) {
   _dailyImg = img;
 
   // Start blurred at 70% as requested and keep local state
-  _currentBlurPercent = 70;
+  _currentBlurPercent = 80;
   setCardBlur(_currentBlurPercent);
 
   // Listen for guess events from shared.js and decrement blur by 5% per guess
@@ -65,7 +65,7 @@ export async function initCardGuesser(options = {}) {
       document.addEventListener('guess:updated', (e) => {
         try {
           // Each guess reduces blur by 5% (clamped to 0)
-          _currentBlurPercent = Math.max(0, (_currentBlurPercent || 0) - 7.5);
+          _currentBlurPercent = Math.max(0, (_currentBlurPercent || 0) - 10);
           setCardBlur(_currentBlurPercent);
         } catch (err) { /* non-fatal */ }
       });

@@ -452,6 +452,15 @@ export async function initShared(config = {}) {
   MAX_RESULTS = config.maxResults || MAX_RESULTS;
   CLUE_UNLOCKS = Object.assign({}, CLUE_UNLOCKS, config.clueUnlocks || {});
 
+  // If this is the monster guesser page, set clue unlock thresholds very high
+  // so the clue buttons reflect the requested "999 guesses" behavior.
+  try {
+    const game = detectGameFromPath();
+    if (game === 'monster') {
+      CLUE_UNLOCKS = { world: 999, category: 999 };
+    }
+  } catch (e) { /* non-fatal */ }
+
   await loadItems();
   selectGoalItem();
 

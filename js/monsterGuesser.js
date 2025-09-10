@@ -13,11 +13,13 @@ export async function initMonsterGuesser(options = {}) {
     // Replace existing contents with a row of emoji tiles, so the note can sit below them.
     const e1 = (goal && goal.raw && goal.raw.emoji1) ? String(goal.raw.emoji1) : '❓';
     const placeholder = '?';
+    // Render four emoji tiles; the first is visible at start, others locked
     box.innerHTML = `
       <div class="emoji-row">
         <div class="emoji-tile" data-index="1">${e1}</div>
         <div class="emoji-tile locked" data-index="2">${placeholder}</div>
         <div class="emoji-tile locked" data-index="3">${placeholder}</div>
+        <div class="emoji-tile locked" data-index="4">${placeholder}</div>
       </div>
     `;
 
@@ -27,7 +29,7 @@ export async function initMonsterGuesser(options = {}) {
       note = document.createElement('div');
       note.id = 'emojiNote';
       note.className = 'emoji-note';
-      note.textContent = 'Emoji revealed in 3 guesses';
+      note.textContent = 'Emoji revealed in 2 guesses';
       // append into the emojibox so it appears below the emoji tiles but still inside the box
       box.appendChild(note);
     } else if (note.parentNode !== box) {
@@ -51,14 +53,14 @@ export async function initMonsterGuesser(options = {}) {
       if (!note) return;
       if (count >= 6) { note.style.display = 'none'; return; }
       note.style.display = '';
-      if (count >= 3) {
-        const rem = Math.max(0, 6 - count);
-        note.textContent = `Emoji revealed in ${rem} guesses`;
-        return;
+      // Reveal schedule: every 2 guesses. Remaining reveals at 2,4,6 -> total 3 more reveals
+      const nextRevealAt = [2,4,6].find(n => count < n);
+      if (nextRevealAt === undefined) {
+        note.textContent = `Emoji revealed in 0 guesses`;
+      } else {
+        const rem = nextRevealAt - count;
+        note.textContent = `Next emoji revealed in ${rem} guesses`;
       }
-      // count < 3
-      const rem = Math.max(0, 3 - count);
-      note.textContent = `Emoji revealed in ${rem} guesses`;
     };
 
     // Listen for shared guess updates. detail.guessCount is provided by shared.js
@@ -66,13 +68,15 @@ export async function initMonsterGuesser(options = {}) {
       document.addEventListener('guess:updated', (e) => {
         try {
           const count = (e && e.detail && typeof e.detail.guessCount === 'number') ? e.detail.guessCount : 0;
-          if (count >= 3) reveal(2);
-          if (count >= 6) reveal(3);
+          // Reveal 2nd emoji at 2 guesses, 3rd at 4, 4th at 6
+          if (count >= 2) reveal(2);
+          if (count >= 4) reveal(3);
+          if (count >= 6) reveal(4);
           updateNote(count);
         } catch (err) { /* non-fatal */ }
       });
       // When correct, reveal all
-      document.addEventListener('guess:correct', () => { reveal(2); reveal(3); if (note) note.style.display = 'none';
+      document.addEventListener('guess:correct', () => { reveal(2); reveal(3); reveal(4); if (note) note.style.display = 'none';
         // parse the whole emojibox so all emoji are replaced with Twemoji images
         try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(box, { folder: 'svg', ext: '.svg' }); } catch (e) { /* non-fatal */ }
       });
