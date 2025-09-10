@@ -435,11 +435,11 @@
     "Mama Troll": {
       "world": "Spirited Valley",
       "icon": "images\\Enemies\\mama-troll-99_thumb.png",
-      "emoji1": "🤰"
+      "emoji1": "🤰",
       "emoji2": "🌺",
       "emoji3": "👹",
       "emoji4": "🛼"
-    }, // TODO: frederik klarer de ovenstående 
+    },
     "Mamooth": {
       "world": "Frostbite Tundra",
       "icon": "images\\Enemies\\mamooth-43_thumb.png",
