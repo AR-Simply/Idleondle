@@ -1919,20 +1919,6 @@
         "Upgrade Slots": "3"
       },
       "class": "Mage"
-    },
-    "Yellow Headband": {
-      "icon": "images\\Helmets\\Yellow Headband.png",
-      "level_requirement": "1",
-      "sell_price": 200,
-      "type": "Helmets",
-      "source": "Sandy Pot",
-      "stats": {
-        "Agility": "2",
-        "Wisdom": "3",
-        "Luck": "8",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
     }
   },
   "Shirts": {
@@ -2288,21 +2274,6 @@
       },
       "class": "Beginner"
     },
-    "Molten Chest": {
-      "icon": "images\\Shirts\\Molten Chest.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Shirts",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "Warrior"
-    },
     "Orange Tee": {
       "icon": "images\\Shirts\\Orange Tee.png",
       "level_requirement": "2",
@@ -2374,21 +2345,6 @@
       },
       "class": "All"
     },
-    "REPLACE ME": {
-      "icon": "images\\Shirts\\REPLACE ME.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Shirts",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Robe of the Gods": {
       "icon": "images\\Shirts\\Robe of the Gods.png",
       "level_requirement": "500",
@@ -2449,21 +2405,6 @@
         "Upgrade Slots": "3"
       },
       "class": "Warrior"
-    },
-    "Tanned Hide": {
-      "icon": "images\\Shirts\\Tanned Hide.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Shirts",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "Archer"
     },
     "Tattered Cloth": {
       "icon": "images\\Shirts\\Tattered Cloth.png",
@@ -2541,20 +2482,6 @@
       },
       "class": "All"
     },
-    "Ancient Leggings": {
-      "icon": "images\\Pants\\Ancient Leggings.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Pants",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Bandito Pantaloon": {
       "icon": "images\\Pants\\Bandito Pantaloon.png",
       "level_requirement": "35",
@@ -2611,21 +2538,6 @@
         "Upgrade Slots": "2"
       },
       "class": "All"
-    },
-    "Crystallax Shins": {
-      "icon": "images\\Pants\\Crystallax Shins.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Pants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "Warrior"
     },
     "Dementia Shins": {
       "icon": "images\\Pants\\Dementia Shins.png",
@@ -2715,35 +2627,6 @@
         "Upgrade Slots": "3"
       },
       "class": "All"
-    },
-    "Forensic Leggings": {
-      "icon": "images\\Pants\\Forensic Leggings.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Pants",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
-    "Gilded Pilates": {
-      "icon": "images\\Pants\\Gilded Pilates.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Pants",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "Warrior"
     },
     "Give Up On Life Pants": {
       "icon": "images\\Pants\\Give Up On Life Pants.png",
@@ -2835,20 +2718,6 @@
         "Luck": "50",
         "Defence": "140",
         "Upgrade Slots": "9"
-      },
-      "class": "All"
-    },
-    "Merchantile Pants": {
-      "icon": "images\\Pants\\Merchantile Pants.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Pants",
-      "source": "Unobtainable",
-      "stats": {
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
       },
       "class": "All"
     },
@@ -4142,21 +4011,6 @@
         "Upgrade Slots": "4"
       },
       "class": "All"
-    },
-    "Yeti Walkers": {
-      "icon": "images\\Shoes\\Yeti Walkers.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Shoes",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
     }
   },
   "Pendants": {
@@ -4263,7 +4117,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Pendants",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "3",
         "Strength": "10",
@@ -4279,7 +4133,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Pendants",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "5"
       },
@@ -4302,7 +4156,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Pendants",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "10",
         "Agility": "10",
@@ -4771,7 +4625,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Rings",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "2",
         "Defence": "3"
@@ -4848,7 +4702,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Rings",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "5",
         "Defence": "5"
@@ -4888,7 +4742,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Rings",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "4",
         "Defence": "4"
@@ -5137,7 +4991,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Rings",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "3",
         "Defence": "3"
@@ -5168,7 +5022,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5226,7 +5080,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Seasonal Pack)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5270,7 +5124,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5327,7 +5181,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5355,7 +5209,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Retired), Summer Cooler",
+      "source": "Gem Shop, Summer Cooler",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5370,7 +5224,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5384,7 +5238,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Retired)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5414,7 +5268,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5481,7 +5335,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Rotating Pack)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5510,7 +5364,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Seasonal Pack)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5524,7 +5378,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Rotating Pack)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5582,7 +5436,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5611,7 +5465,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Retired), Twitch Prizes",
+      "source": "Gem Shop, Twitch Prizes",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5711,7 +5565,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "4th Anniversary Event, 3rd Anniversary Event Boxes, Gem Shop(Limited), Gem Shop(Retired)",
+      "source": "4th Anniversary Event, 3rd Anniversary Event Boxes, Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5726,7 +5580,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "4th Anniversary Event, 3rd Anniversary Event Boxes, Gem Shop(Limited), Choco Box",
+      "source": "4th Anniversary Event, 3rd Anniversary Event Boxes, Gem Shop, Choco Box",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5741,7 +5595,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Retired), Twitch Prizes",
+      "source": "Gem Shop, Twitch Prizes",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5813,7 +5667,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5827,7 +5681,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Falloween Treat, Gem Shop(Retired)",
+      "source": "Falloween Treat, Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5842,7 +5696,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Retired), Twitch Prizes",
+      "source": "Gem Shop, Twitch Prizes",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5885,7 +5739,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "3rd Anniversary Event Boxes, Gem Shop(Retired)",
+      "source": "3rd Anniversary Event Boxes, Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5900,7 +5754,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "3rd Anniversary Event Boxes, Gem Shop(Limited)",
+      "source": "3rd Anniversary Event Boxes, Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5931,7 +5785,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Rotating Pack)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5973,7 +5827,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -6020,7 +5874,7 @@
       "level_requirement": "1",
       "sell_price": 69,
       "type": "Trophies",
-      "source": "Gem Shop(Seasonal Pack)",
+      "source": "Gem Shop",
       "stats": {
         "power": "2",
         "Strength": "5",
@@ -6277,7 +6131,7 @@
       "level_requirement": "1",
       "sell_price": 69,
       "type": "Trophies",
-      "source": "Gem Shop(Rotating Pack), Twitch Prizes",
+      "source": "Gem Shop, Twitch Prizes",
       "stats": {
         "power": "4",
         "Strength": "3",
@@ -6325,7 +6179,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing",
+      "source": "Gem Shop, Random Wing",
       "stats": {
         "power": "5",
         "Luck": "5",
@@ -6338,7 +6192,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Blighted Chizoar, Gem Shop - Random Wing",
+      "source": "Blighted Chizoar, Gem Shop, Random Wing",
       "stats": {
         "power": "3"
       },
@@ -6349,7 +6203,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
+      "source": "Gem Shop, Random Wing",
       "stats": {
         "power": "15",
         "Strength": "12",
@@ -6365,7 +6219,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Blitzkrieg Troll, Gem Shop - Random Wing",
+      "source": "Blitzkrieg Troll, Gem Shop, Random Wing",
       "stats": {
         "power": "1",
         "Strength": "10",
@@ -6380,7 +6234,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing",
+      "source": "Gem Shop, Random Wing",
       "stats": {
         "power": "30",
         "Strength": "10",
@@ -6396,7 +6250,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
+      "source": "Gem Shop, Random Wing",
       "stats": {
         "Strength": "5",
         "Agility": "5",
@@ -6410,7 +6264,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Sacrilegious Kattlekruk, Gem Shop - Random Wing, (Limited)",
+      "source": "Sacrilegious Kattlekruk, Gem Shop, Random Wing",
       "stats": {
         "power": "5",
         "Strength": "11",
@@ -6426,7 +6280,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing",
+      "source": "Gem Shop, Random Wing",
       "stats": {
         "power": "5",
         "Strength": "2",
@@ -6440,7 +6294,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing, Choco Box",
+      "source": "Gem Shop, Random Wing, Choco Box",
       "stats": {
         "power": "2",
         "Defence": "10"
@@ -6452,7 +6306,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing, Choco Box",
+      "source": "Gem Shop, Random Wing, Choco Box",
       "stats": {
         "power": "6",
         "Defence": "10"
@@ -6464,7 +6318,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing, Choco Box",
+      "source": "Gem Shop, Random Wing, Choco Box",
       "stats": {
         "power": "4",
         "Defence": "10"
@@ -6476,7 +6330,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gilded Efaunt, Gem Shop - Random Wing",
+      "source": "Gilded Efaunt, Gem Shop, Random Wing",
       "stats": {
         "Strength": "15",
         "Agility": "15",
@@ -6489,7 +6343,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Emperor, Gem Shop - Random Wing",
+      "source": "Emperor, Gem Shop, Random Wing",
       "stats": {
         "power": "8",
         "Strength": "15",
@@ -6516,7 +6370,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
+      "source": "Gem Shop, Random Wing",
       "stats": {
         "power": "6",
         "Defence": "5"
@@ -6528,7 +6382,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
+      "source": "Gem Shop, Random Wing",
       "stats": {
         "power": "30",
         "Strength": "40",
@@ -6543,7 +6397,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Radiant Amarok, Gem Shop - Random Wing",
+      "source": "Radiant Amarok, Gem Shop, Random Wing",
       "stats": {
         "Defence": "50"
       },
@@ -6554,7 +6408,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
+      "source": "Gem Shop, Random Wing",
       "stats": {
         "power": "25",
         "Strength": "30",
@@ -6570,7 +6424,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
+      "source": "Gem Shop, Random Wing",
       "stats": {
         "power": "20",
         "Strength": "50",
@@ -6618,7 +6472,7 @@
       "level_requirement": "4",
       "sell_price": 1,
       "type": "Nametags",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "10",
         "Strength": "20",
@@ -6633,7 +6487,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Nametags",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "5",
         "Agility": "5",
@@ -6688,7 +6542,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Nametags",
-      "source": "Gem Shop(Rotating Pack)",
+      "source": "Gem Shop",
       "stats": {
         "power": "12",
         "Strength": "12",
@@ -6734,7 +6588,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Nametags",
-      "source": "Gem Shop(Limited), Golden Gift, Golden Oyster",
+      "source": "Gem Shop, Golden Gift, Golden Oyster",
       "stats": {
         "power": "5",
         "Strength": "10",
@@ -6761,7 +6615,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Nametags",
-      "source": "Gem Shop(Rotating Pack)",
+      "source": "Gem Shop",
       "stats": {
         "power": "6",
         "Strength": "8",
@@ -6833,7 +6687,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Nametags",
-      "source": "Gem Shop(Rotating Pack)",
+      "source": "Gem Shop",
       "stats": {
         "power": "5",
         "Strength": "10",
