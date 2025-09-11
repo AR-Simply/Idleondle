@@ -10,7 +10,11 @@
   --radius: 12px;
 }
 html, body {
-  height: 100%;
+  /* Use a viewport-relative minimum height instead of 100% —
+    percentage heights can create cyclic calculations for children in
+    Firefox (especially when combined with tables), allowing elements to
+    expand indefinitely. Using min-height avoids that. */
+  min-height: 100svh;
   margin: 0;
   box-sizing: border-box;
   font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -510,9 +514,10 @@ html, body {
 #itemTable {
   table-layout: fixed;
   width: min(680px, 90%);
-  /* allow the table to expand beyond the container width so it can be scrolled
-     on small screens where column totals exceed viewport width */
-  min-width: max-content;
+  /* Prevent Firefox from forcing the table to the max-content width (which
+    can grow unbounded). Let the table be sized by `width` and allow the
+    `.table-wrap` container to provide horizontal scrolling when needed. */
+  min-width: 0;
   max-width: 100%;
   margin: 0 auto;
   border-collapse: separate;
