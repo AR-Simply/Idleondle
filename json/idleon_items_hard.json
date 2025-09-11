@@ -919,6 +919,20 @@
       },
       "class": "All"
     },
+    "Yellow Headband": {
+      "icon": "images\\Helmets\\Yellow Headband.png",
+      "level_requirement": "1",
+      "sell_price": 200,
+      "type": "Helmets",
+      "source": "Sandy Pot",
+      "stats": {
+        "Agility": "2",
+        "Wisdom": "3",
+        "Luck": "8",
+        "Upgrade Slots": "2"
+      },
+      "class": "All"
+    },
     "Acorn Topper": {
       "icon": "images\\Helmets\\Acorn Topper.png",
       "level_requirement": "30",
@@ -4670,21 +4684,6 @@
       },
       "class": "All"
     },
-    "Gold Ring": {
-      "icon": "images\\Rings\\Gold Ring.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Rings",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
     "Lab Ring": {
       "icon": "images\\Rings\\Lab Ring.png",
       "level_requirement": "100",
@@ -4967,21 +4966,6 @@
         "Strength": "6",
         "Agility": "4",
         "Luck": "1",
-        "Upgrade Slots": "2"
-      },
-      "class": "All"
-    },
-    "Toxic Bubbles Band": {
-      "icon": "images\\Rings\\Toxic Bubbles Band.png",
-      "level_requirement": "15",
-      "sell_price": 200,
-      "type": "Rings",
-      "source": "Unobtainable",
-      "stats": {
-        "power": "5",
-        "Strength": "3",
-        "Agility": "3",
-        "Luck": "3",
         "Upgrade Slots": "2"
       },
       "class": "All"
