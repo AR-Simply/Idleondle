@@ -629,6 +629,30 @@ html, body {
   text-align: center;
   position: relative;
 }
+
+/* Make the ABOUT modal scrollable only on the index page.
+   The hard-mode page sets `document.body.dataset.hard = 'true'`, so we
+   target pages without that attribute (index). This constrains the
+   panel height and allows the body to scroll if content overflows. */
+body:not([data-hard]) #aboutModal .goal-panel {
+  max-height: 80vh; /* keep the dialog inside the viewport */
+}
+body:not([data-hard]) #aboutModal .goal-body {
+  /* Reserve some room for title/footer; allow internal scrolling */
+  max-height: calc(80vh - 120px);
+  overflow: auto;
+  text-align: left; /* match the inner content styling used inline on index */
+}
+
+/* Also make the HOW TO PLAY modal scrollable only on the index page */
+body:not([data-hard]) #helpModal .goal-panel {
+  max-height: 80vh;
+}
+body:not([data-hard]) #helpModal .goal-body {
+  max-height: calc(80vh - 120px);
+  overflow: auto;
+  text-align: left;
+}
 .goal-close {
   position: absolute;
   right: 8px;
