@@ -501,7 +501,10 @@ html, body {
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  height: 100%;
+  /* Avoid using height:100% here — on Firefox this can create a cyclic
+    percentage height calculation with table cells that makes rows grow
+    indefinitely. Use a safe minimum height instead. */
+  min-height: 44px;
 }
 
 #itemTable {
@@ -577,6 +580,18 @@ html, body {
 .table-head { background: var(--hover); opacity: 0; transform: translateY(-6px); }
 .table-head.fade-in { animation: headerFade 360ms ease both; }
 @keyframes headerFade { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+/* Small mobile-only hint shown under the table to indicate horizontal scroll */
+  .scroll-note {
+    opacity: 0;
+    transform: translateY(-6px);
+    color: #000; /* black text as requested */
+    font-size: 13px;
+    text-align: right;
+    margin: 0; /* sit directly below the table */
+    transition: opacity 260ms ease, transform 260ms ease;
+    display: none; /* hidden by default, shown only on very small screens */
+  }
+.scroll-note.fade-in { animation: headerFade 360ms ease both; }
 .cell-fade { opacity: 0; transform: translateY(6px); }
 .cell-fade.in { animation: cellFade 460ms ease both; }
 @keyframes cellFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
@@ -658,7 +673,13 @@ html, body {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 420px) {
-  .kofi-container { width: min(300px, 90%); }
+@media (max-width: 720px) {
+  /* Ensure touch scrolling for the table container on mobile */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
+/* Only show the scroll hint on very small displays (phones) */
+@media (max-width: 420px) {
+  .scroll-note { display: block; }
+}
+  .scroll-note { display: block; }
 .table-wrap::-webkit-scrollbar { height: 0; }

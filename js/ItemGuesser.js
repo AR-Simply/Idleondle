@@ -13,6 +13,37 @@ export function addToTable(it) {
   if (!wasVisible) {
     const headerRow = document.querySelector('#itemTable thead tr.table-head');
     if (headerRow) headerRow.classList.add('fade-in');
+    try {
+      const wrap = document.querySelector('.table-wrap');
+      if (wrap) {
+        let scrollNote = wrap.querySelector('.scroll-note');
+        if (!scrollNote) {
+          scrollNote = document.createElement('div');
+          scrollNote.className = 'scroll-note';
+          scrollNote.id = 'tableScrollNote';
+          scrollNote.textContent = 'Scroll to the right →';
+          wrap.appendChild(scrollNote);
+        }
+
+        const updateScrollNote = () => {
+          try {
+            const shouldShow = window.innerWidth <= 420; // always show on small displays
+            try { const cs = window.getComputedStyle(scrollNote); console.debug('IG-updateScrollNote', { shouldShow, innerWidth: window.innerWidth, computedDisplay: cs.display, computedOpacity: cs.opacity }); } catch (e) {}
+            if (shouldShow) {
+              scrollNote.style.setProperty('display', 'block', 'important');
+              setTimeout(() => scrollNote.classList.add('fade-in'), 10);
+              scrollNote.style.setProperty('opacity', '1', 'important');
+              scrollNote.style.setProperty('transform', 'translateY(0)', 'important');
+            } else {
+              scrollNote.classList.remove('fade-in');
+              try { scrollNote.style.removeProperty('display'); scrollNote.style.removeProperty('opacity'); scrollNote.style.removeProperty('transform'); } catch (e) {}
+            }
+          } catch (e) { console.error('IG-updateScrollNote error', e); }
+        };
+        updateScrollNote();
+        let _t; window.addEventListener('resize', () => { clearTimeout(_t); _t = setTimeout(updateScrollNote, 150); });
+      }
+    } catch (e) {}
   }
 
   const row = document.createElement('tr');
