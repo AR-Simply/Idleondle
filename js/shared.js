@@ -508,7 +508,7 @@ function updateClueState() {
     if (remainingWorld > 0) {
       btnWorld.disabled = true;
       btnWorld.classList.add('locked');
-      if (note1) note1.textContent = `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}`;
+      if (note1) note1.textContent = `${remainingWorld} ${remainingWorld === 1 ? 'guess' : 'guesses'} left`;
     } else {
       const wasLocked = !!(btnWorld.disabled || btnWorld.classList.contains('locked'));
       btnWorld.disabled = false;
@@ -527,14 +527,14 @@ function updateClueState() {
       }
     }
   } else if (note1) {
-    note1.textContent = remainingWorld > 0 ? `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}` : '';
+    note1.textContent = remainingWorld > 0 ? `${remainingWorld} ${remainingWorld === 1 ? 'guess' : 'guesses'} left` : '';
   }
 
   if (btnCategory) {
     if (remainingCategory > 0) {
       btnCategory.disabled = true;
       btnCategory.classList.add('locked');
-      if (note2) note2.textContent = `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}`;
+      if (note2) note2.textContent = `${remainingCategory} ${remainingCategory === 1 ? 'guess' : 'guesses'} left`;
     } else {
       const wasLocked = !!(btnCategory.disabled || btnCategory.classList.contains('locked'));
       btnCategory.disabled = false;
@@ -551,7 +551,7 @@ function updateClueState() {
       }
     }
   } else if (note2) {
-    note2.textContent = remainingCategory > 0 ? `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}` : '';
+    note2.textContent = remainingCategory > 0 ? `${remainingCategory} ${remainingCategory === 1 ? 'guess' : 'guesses'} left` : '';
   }
 }
 

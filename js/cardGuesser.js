@@ -80,12 +80,12 @@ export async function initCardGuesser(options = {}) {
       if (locked) {
         colorBtn.classList.remove('unlocked-outline');
         colorBtn.textContent = 'Color Clue';
-        try { const n = document.getElementById('noteColor'); if (n) n.textContent = locked ? `Unlocks in 3 guesses` : ''; } catch (e) {}
+        try { const n = document.getElementById('noteColor'); if (n) n.textContent = locked ? `3 guesses left` : ''; } catch (e) {}
       } else {
         colorBtn.classList.add('unlocked-outline');
         // keep label until clicked
         colorBtn.textContent = 'Color Clue';
-        try { const n = document.getElementById('noteColor'); if (n) n.textContent = `Unlocks in 0 guesses`; } catch (e) {}
+  try { const n = document.getElementById('noteColor'); if (n) n.textContent = `0 guesses left`; } catch (e) {}
       }
     } catch (e) {}
   }
@@ -137,9 +137,9 @@ export async function initCardGuesser(options = {}) {
                     colorBtn.addEventListener('click', _clear);
                   }
                 } catch (e) {}
-              } else {
+                } else {
                 // show remaining count
-                try { const n = document.getElementById('noteColor'); if (n) n.textContent = `Unlocks in ${3 - guessNum} guess${(3 - guessNum) === 1 ? '' : 'es'}`; } catch (e) {}
+                try { const n = document.getElementById('noteColor'); if (n) n.textContent = `${3 - guessNum} ${(3 - guessNum) === 1 ? 'guess' : 'guesses'} left`; } catch (e) {}
               }
             }
           } catch (ee) {}
