@@ -194,17 +194,27 @@ html, body {
     flex-wrap: wrap; /* allow buttons to wrap instead of overflowing */
     gap: 8px;
     justify-content: center;
+    /* avoid forcing a computed 100% width which can trigger overflow in
+       some Firefox layouts when combined with gaps/paddings; let flexbox
+       size the container naturally */
+    box-sizing: border-box;
+    align-content: center;
   }
   .guess-actions .clue-wrap {
     flex: 0 1 auto;
     min-width: 0; /* allow shrinking */
     width: auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
   }
   .guess-actions .clue-wrap .guess-btn {
     min-width: 96px; /* smaller baseline width for buttons */
     padding: 6px 8px;
     font-size: 14px;
     height: 40px;
+    /* prevent the button from flexing to fill the row */
+    flex: 0 1 auto !important;
   }
   .guess-actions .clue-note { font-size: 12px; }
 }
