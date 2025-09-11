@@ -700,6 +700,39 @@ export async function initShared(config = {}) {
     }
   });
 
+  // Some mobile browsers (including Vivaldi) can emit Enter on keyup/keypress or
+  // submit instead of keydown. Add extra listeners and debounce to avoid double-handling.
+  try {
+    let _lastEnterHandled = 0;
+    const handleEnterEvent = (evt) => {
+      const now = Date.now();
+      if (now - _lastEnterHandled < 600) return; // debounce repeated events
+      _lastEnterHandled = now;
+      try {
+        const first = filterItems(input.value)[0];
+        if (!first) return;
+        incrementGuessCount();
+        items = items.filter(item => item.name !== first.name);
+        document.getElementById('dropdown')?.classList.remove('open');
+        const inputEl = document.getElementById('search');
+        if (inputEl) { inputEl.value = ""; lastQuery = ''; try { inputEl.focus(); } catch (e) {} }
+        if (typeof _config.onSelect === 'function') {
+          try { _config.onSelect(first); } catch (e) { console.warn('onSelect handler failed', e); }
+        } else {
+          try { if (goalItem && first && first.name === goalItem.name) notifyGoalGuessed(first); } catch (e) {}
+        }
+        render(filterItems(document.getElementById('search')?.value || ''));
+      } catch (e) { /* non-fatal */ }
+    };
+    if (input) {
+      input.addEventListener('keyup', (e) => { if (e.key === 'Enter') handleEnterEvent(e); });
+      input.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleEnterEvent(e); });
+      // If the input is inside a form, catch submit as well
+      const form = input.closest ? input.closest('form') : null;
+      if (form) form.addEventListener('submit', (e) => { e.preventDefault(); handleEnterEvent(e); });
+    }
+  } catch (e) { /* non-fatal */ }
+
   document.addEventListener('click', (e) => {
     const combo = document.getElementById('combo');
     if (!combo?.contains(e.target)) {

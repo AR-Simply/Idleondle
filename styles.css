@@ -168,6 +168,44 @@ html, body {
   .emoji-note { font-size: 20px; }
 }
 
+/* Tighter emoji sizing for small mobile devices (phones) */
+@media (max-width: 420px) {
+  .emojibox img {
+    width: 64px;
+    height: 64px;
+    padding: 4px;
+  }
+  .emoji-tile {
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+    border-radius: 10px;
+  }
+  .emoji-note { font-size: 14px; }
+}
+
+/* Stronger overrides to handle Twemoji-inserted elements and inline attributes */
+@media (max-width: 620px) {
+  .emojibox img, .emojibox svg, .emoji-row img, .emoji-row svg, .emoji-tile > img, .emoji-tile > svg {
+    width: 64px !important;
+    height: 64px !important;
+    max-width: 64px !important;
+    max-height: 64px !important;
+    padding: 4px !important;
+    object-fit: contain !important;
+    display: inline-block !important;
+  }
+  .emoji-tile {
+    width: 64px !important;
+    height: 64px !important;
+    min-width: 64px !important;
+    min-height: 64px !important;
+    font-size: 32px !important;
+    line-height: 1 !important;
+  }
+  .emoji-note { font-size: 14px !important; }
+}
+
 .combo {
   z-index: 2;
   width: min(680px, 90%);
@@ -195,6 +233,7 @@ html, body {
   box-sizing: border-box;
   overflow: hidden; /* ensure image stays inside rounded frame */
   position: relative; /* needed so the overlay can be absolutely positioned on top */
+  z-index: 1; /* keep below dropdown (which is z-index:1000) */
 }
 .daily-card-img {
   width: 100%;
@@ -242,7 +281,7 @@ html, body {
   left: 0; right: 0; top: calc(100% - 2px);
   background: var(--panel); border: 1px solid var(--border); border-top: none;
   border-radius: 0 0 var(--radius) var(--radius); max-height: 360px; overflow: auto;
-  display: none; z-index: 20;
+  display: none; z-index: 1000; /* ensure dropdown appears above other page elements (cards, images) */
 }
 .dropdown.open { display: block; }
 
