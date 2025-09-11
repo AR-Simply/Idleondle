@@ -728,41 +728,64 @@ function incrementGuessCount() {
 }
 
 // Update the clue buttons and note text based on current guessCount
+// Delegate to shared implementation when available. Keep fallback behavior
+// to avoid breaking pages that don't load the shared module.
 function updateClueState() {
+  try {
+    if (typeof window !== 'undefined' && typeof window.updateClueState === 'function' && window.updateClueState !== updateClueState) {
+      // If the shared module exposed updateClueState on window, call it.
+      return window.updateClueState();
+    }
+  } catch (e) { /* fall through to local fallback */ }
+
+  // Local fallback (previous inline implementation) — kept minimal and
+  // only used if shared.js is not available for backward compatibility.
   const btnWorld = document.getElementById('guessBtn1');
   const btnCategory = document.getElementById('guessBtn2');
   const note1 = document.getElementById('note1');
   const note2 = document.getElementById('note2');
-  // compute remaining counts (safe even if CLUE_UNLOCKS not set)
   const remainingWorld = Math.max(0, (CLUE_UNLOCKS.world || 0) - guessCount);
   const remainingCategory = Math.max(0, (CLUE_UNLOCKS.category || 0) - guessCount);
 
-  // World clue (update only if element exists)
   if (btnWorld) {
     if (remainingWorld > 0) {
-      btnWorld.disabled = true;
-      btnWorld.classList.add('locked');
-      if (note1) note1.textContent = `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}`;
+      btnWorld.disabled = true; btnWorld.classList.add('locked'); if (note1) note1.textContent = `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}`;
     } else {
-      btnWorld.disabled = false;
-      btnWorld.classList.remove('locked');
-      if (note1) note1.textContent = '';
+      const wasLocked = !!(btnWorld.disabled || btnWorld.classList.contains('locked'));
+      btnWorld.disabled = false; btnWorld.classList.remove('locked'); if (note1) note1.textContent = '';
+      if (wasLocked) {
+        try {
+          if (typeof showToast === 'function') showToast('Clue unlocked: World', { timeout: 3000 });
+        } catch (e) {}
+        try {
+          // visually indicate newly unlocked clue until the user clicks it
+          btnWorld.classList.add('unlocked-outline');
+          const _rmWorld = () => { try { btnWorld.classList.remove('unlocked-outline'); btnWorld.removeEventListener('click', _rmWorld); } catch (e) {} };
+          btnWorld.addEventListener('click', _rmWorld);
+        } catch (e) {}
+      }
     }
   } else if (note1) {
-    // if button is missing but note exists, still display remaining
     note1.textContent = remainingWorld > 0 ? `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}` : '';
   }
 
-  // Category clue (update only if element exists)
   if (btnCategory) {
     if (remainingCategory > 0) {
-      btnCategory.disabled = true;
-      btnCategory.classList.add('locked');
-      if (note2) note2.textContent = `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}`;
+      btnCategory.disabled = true; btnCategory.classList.add('locked'); if (note2) note2.textContent = `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}`;
     } else {
-      btnCategory.disabled = false;
-      btnCategory.classList.remove('locked');
-      if (note2) note2.textContent = '';
+      const wasLocked = !!(btnCategory.disabled || btnCategory.classList.contains('locked'));
+      btnCategory.disabled = false; btnCategory.classList.remove('locked'); if (note2) note2.textContent = '';
+      if (wasLocked) {
+        try {
+          if (typeof showToast === 'function') showToast('Clue unlocked: Category', { timeout: 3000 });
+        } catch (e) {}
+        try {
+          // visually indicate newly unlocked clue until the user clicks it
+          btnCategory.classList.add('unlocked-outline');
+          const _rmCategory = () => { try { btnCategory.classList.remove('unlocked-outline'); btnCategory.removeEventListener('click', _rmCategory); } catch (e) {} };
+          btnCategory.addEventListener('click', _rmCategory);
+        } catch (e) {}
+      }
     }
   } else if (note2) {
     note2.textContent = remainingCategory > 0 ? `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}` : '';

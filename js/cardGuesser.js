@@ -5,6 +5,8 @@ import { initShared, getGoalItem } from './shared.js';
 let _dailyImg = null;
 // Track current blur percent so event-driven updates can decrement it
 let _currentBlurPercent = null;
+// Whether the color clue has been used/unlocked. While false the image stays grayscale.
+let _colorUnlocked = false;
 
 function percentToPx(p) {
   const n = Number(p) || 0;
@@ -19,12 +21,20 @@ export function setCardBlur(percent) {
   _currentBlurPercent = Math.max(0, Math.min(100, pct));
   const px = percentToPx(_currentBlurPercent);
     _dailyImg.style.transition = 'filter 320ms ease';
-    _dailyImg.style.filter = `blur(${px}px)`;
+    // Preserve grayscale until color clue is unlocked/used
+    const filterVal = _colorUnlocked ? `blur(${px}px)` : `grayscale(100%) blur(${px}px)`;
+    _dailyImg.style.filter = filterVal;
   } catch (e) { console.warn('setCardBlur failed', e); }
 }
 
 export async function initCardGuesser(options = {}) {
-  await initShared(Object.assign({ dataUrl: '../json/idleon_cards.json', imageBase: '../images' }, options));
+  // Ensure the category clue requires 6 guesses on the cardGuesser page.
+  const sharedInitConfig = Object.assign({
+    dataUrl: '../json/idleon_cards.json',
+    imageBase: '../images',
+    clueUnlocks: Object.assign({}, (options && options.clueUnlocks) || {}, { category: 6 })
+  }, options || {});
+  await initShared(sharedInitConfig);
   // Render the daily card prominently below the combo (search input + dropdown)
   try {
     const goal = getGoalItem();
@@ -55,6 +65,45 @@ export async function initCardGuesser(options = {}) {
   // remember image for module-level control and expose on window for convenience
   _dailyImg = img;
 
+  // Apply initial grayscale to the image (start black and white)
+  try {
+    _dailyImg.style.filter = 'grayscale(100%) blur(' + percentToPx(_currentBlurPercent) + 'px)';
+    _dailyImg.style.transition = 'filter 320ms ease';
+  } catch (e) { /* non-fatal */ }
+
+  // Color button handling (a button is inserted in the page HTML)
+  const colorBtn = document.getElementById('colorBtn');
+  function setColorLocked(locked) {
+    try {
+      if (!colorBtn) return;
+      colorBtn.disabled = locked;
+      if (locked) {
+        colorBtn.classList.remove('unlocked-outline');
+        colorBtn.textContent = 'Color Clue';
+        try { const n = document.getElementById('noteColor'); if (n) n.textContent = locked ? `Unlocks in 3 guesses` : ''; } catch (e) {}
+      } else {
+        colorBtn.classList.add('unlocked-outline');
+        // keep label until clicked
+        colorBtn.textContent = 'Color Clue';
+        try { const n = document.getElementById('noteColor'); if (n) n.textContent = `Unlocks in 0 guesses`; } catch (e) {}
+      }
+    } catch (e) {}
+  }
+  // start locked
+  setColorLocked(true);
+
+  // Clicking the button removes grayscale and updates label
+  if (colorBtn) colorBtn.addEventListener('click', () => {
+    try {
+      if (colorBtn.disabled) return;
+      // reveal color and preserve current blur
+      _colorUnlocked = true;
+      setCardBlur(_currentBlurPercent || 0);
+      colorBtn.textContent = 'Colors!';
+      colorBtn.classList.remove('unlocked-outline');
+    } catch (e) { console.warn('colorBtn click failed', e); }
+  });
+
   // Start blurred at 70% as requested and keep local state
   _currentBlurPercent = 80;
   setCardBlur(_currentBlurPercent);
@@ -67,12 +116,41 @@ export async function initCardGuesser(options = {}) {
           // Each guess reduces blur by 5% (clamped to 0)
           _currentBlurPercent = Math.max(0, (_currentBlurPercent || 0) - 10);
           setCardBlur(_currentBlurPercent);
+          // Unlock color clue after 3 guesses (i.e., when guessCount >= 3)
+          try {
+            const count = (e && e.detail && typeof e.detail.guessCount === 'number') ? e.detail.guessCount : null;
+            // If detail not provided, derive from global exposed by shared.js
+            const globalCount = (typeof window !== 'undefined' && typeof window.guessCount === 'number') ? window.guessCount : null;
+            const guessNum = count !== null ? count : (globalCount !== null ? globalCount : null);
+            // fallback: if unable to determine, do nothing
+            if (guessNum !== null && !_colorUnlocked) {
+              if (guessNum >= 3) {
+                setColorLocked(false);
+                // show toast to announce color clue unlock
+                try { if (typeof window !== 'undefined' && typeof window.showToast === 'function') showToast('Clue unlocked: Color', { timeout: 3000 }); } catch (e) {}
+                // update unlock note to show it's available
+                try { const n = document.getElementById('noteColor'); if (n) n.textContent = ''; } catch (e) {}
+                // when user clicks the color button, clear outline and note
+                try {
+                  if (colorBtn) {
+                    const _clear = function _clearColorNote() { try { colorBtn.classList.remove('unlocked-outline'); const n = document.getElementById('noteColor'); if (n) n.textContent = ''; colorBtn.removeEventListener('click', _clear); } catch (e) {} };
+                    colorBtn.addEventListener('click', _clear);
+                  }
+                } catch (e) {}
+              } else {
+                // show remaining count
+                try { const n = document.getElementById('noteColor'); if (n) n.textContent = `Unlocks in ${3 - guessNum} guess${(3 - guessNum) === 1 ? '' : 'es'}`; } catch (e) {}
+              }
+            }
+          } catch (ee) {}
         } catch (err) { /* non-fatal */ }
       });
       // When the guess is correct, immediately unblur the image and keep it unblurred
       document.addEventListener('guess:correct', (e) => {
         try {
           _currentBlurPercent = 0;
+          // reveal color when the guess is correct
+          _colorUnlocked = true;
           setCardBlur(0);
         } catch (err) { /* non-fatal */ }
       });

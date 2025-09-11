@@ -41,6 +41,60 @@ function encodePathSegments(p) {
   return p.split('/').map(seg => encodeURIComponent(seg)).join('/');
 }
 
+// ----------------- Toast helper -----------------
+// Lightweight, dependency-free toast system. Call showToast(message, opts).
+(function () {
+  if (typeof window === 'undefined') return;
+  if (window.__toastInstalled) return;
+  window.__toastInstalled = true;
+
+  function createContainer() {
+    const c = document.createElement('div');
+    c.id = 'toast-container';
+    c.setAttribute('aria-live', 'polite');
+    c.setAttribute('aria-atomic', 'false');
+    // If a container already exists (from previous page module), reuse it
+    const existing = document.getElementById('toast-container');
+    if (existing) return existing;
+    document.body.appendChild(c);
+    return c;
+  }
+
+  let container = null;
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => { container = createContainer(); }); else container = createContainer();
+
+  let idCounter = 0;
+  window.showToast = function (message, opts = {}) {
+    if (!container) container = createContainer();
+    const id = ++idCounter;
+    // default timeout 3000ms (user preference)
+    const timeout = typeof opts.timeout === 'number' ? opts.timeout : 3000;
+
+    const el = document.createElement('div');
+    el.className = 'toast';
+    el.dataset.toastId = id;
+
+    // Simple centered text - remove action/close buttons as requested
+    el.textContent = message;
+    container.appendChild(el);
+
+    // show
+    requestAnimationFrame(() => el.classList.add('show'));
+
+    let hideTimer = timeout > 0 ? setTimeout(remove, timeout) : null;
+
+    el.tabIndex = -1; // not focusable by default
+
+    function remove() {
+      if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+      el.classList.remove('show');
+      el.addEventListener('transitionend', () => { if (el.parentNode) el.parentNode.removeChild(el); }, { once: true });
+    }
+
+    return { id, element: el, remove };
+  };
+})();
+
 // Locale-safe lowercase helper: normalises and uses an explicit English locale
 // to avoid Turkish dotted/dotless I issues when comparing identifiers/keys.
 function safeLower(s) {
@@ -443,14 +497,62 @@ function updateClueState() {
   const note2 = document.getElementById('note2');
   const remainingWorld = Math.max(0, (CLUE_UNLOCKS.world || 0) - guessCount);
   const remainingCategory = Math.max(0, (CLUE_UNLOCKS.category || 0) - guessCount);
+  // Track previous locked state so we only show a toast when the button
+  // transitions from locked -> unlocked.
+  try {
+    if (btnWorld) btnWorld.__prevLocked = btnWorld.__prevLocked === undefined ? !!(btnWorld.disabled || btnWorld.classList.contains('locked')) : btnWorld.__prevLocked;
+    if (btnCategory) btnCategory.__prevLocked = btnCategory.__prevLocked === undefined ? !!(btnCategory.disabled || btnCategory.classList.contains('locked')) : btnCategory.__prevLocked;
+  } catch (e) { /* ignore */ }
+
   if (btnWorld) {
-    if (remainingWorld > 0) { btnWorld.disabled = true; btnWorld.classList.add('locked'); if (note1) note1.textContent = `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}`; }
-    else { btnWorld.disabled = false; btnWorld.classList.remove('locked'); if (note1) note1.textContent = ''; }
-  } else if (note1) { note1.textContent = remainingWorld > 0 ? `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}` : ''; }
+    if (remainingWorld > 0) {
+      btnWorld.disabled = true;
+      btnWorld.classList.add('locked');
+      if (note1) note1.textContent = `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}`;
+    } else {
+      const wasLocked = !!(btnWorld.disabled || btnWorld.classList.contains('locked'));
+      btnWorld.disabled = false;
+      btnWorld.classList.remove('locked');
+      if (note1) note1.textContent = '';
+      if (wasLocked) {
+        try {
+          if (typeof window !== 'undefined' && typeof window.showToast === 'function') {
+            // visually indicate the button has just been unlocked
+            try { btnWorld.classList.add('unlocked-outline'); } catch (e) {}
+            // remove the outline when the user interacts with the button
+            try { btnWorld.addEventListener('click', function _rm() { btnWorld.classList.remove('unlocked-outline'); btnWorld.removeEventListener('click', _rm); }); } catch (e) {}
+            showToast('Clue unlocked: World', { timeout: 3000 });
+          }
+        } catch (e) { /* ignore */ }
+      }
+    }
+  } else if (note1) {
+    note1.textContent = remainingWorld > 0 ? `Unlocks in ${remainingWorld} guess${remainingWorld === 1 ? '' : 'es'}` : '';
+  }
+
   if (btnCategory) {
-    if (remainingCategory > 0) { btnCategory.disabled = true; btnCategory.classList.add('locked'); if (note2) note2.textContent = `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}`; }
-    else { btnCategory.disabled = false; btnCategory.classList.remove('locked'); if (note2) note2.textContent = ''; }
-  } else if (note2) { note2.textContent = remainingCategory > 0 ? `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}` : ''; }
+    if (remainingCategory > 0) {
+      btnCategory.disabled = true;
+      btnCategory.classList.add('locked');
+      if (note2) note2.textContent = `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}`;
+    } else {
+      const wasLocked = !!(btnCategory.disabled || btnCategory.classList.contains('locked'));
+      btnCategory.disabled = false;
+      btnCategory.classList.remove('locked');
+      if (note2) note2.textContent = '';
+      if (wasLocked) {
+        try {
+          if (typeof window !== 'undefined' && typeof window.showToast === 'function') {
+            try { btnCategory.classList.add('unlocked-outline'); } catch (e) {}
+            try { btnCategory.addEventListener('click', function _rm2() { btnCategory.classList.remove('unlocked-outline'); btnCategory.removeEventListener('click', _rm2); }); } catch (e) {}
+            showToast('Clue unlocked: Category', { timeout: 3000 });
+          }
+        } catch (e) { /* ignore */ }
+      }
+    }
+  } else if (note2) {
+    note2.textContent = remainingCategory > 0 ? `Unlocks in ${remainingCategory} guess${remainingCategory === 1 ? '' : 'es'}` : '';
+  }
 }
 
 // Called by page-specific code when the selected item matched the goal.
@@ -788,3 +890,16 @@ export { notifyGoalGuessed };
 export { safeLower };
 
 // Default export is not used; consumers should call initShared then use other exports.
+
+// Expose some helpers on the global `window` object for non-module pages that
+// include `js/website.js` without importing this module. This lets page-specific
+// scripts delegate to the canonical shared implementations (toast, clue handling)
+// while still working if the shared module isn't present.
+try {
+  if (typeof window !== 'undefined') {
+    window.incrementGuessCount = window.incrementGuessCount || incrementGuessCount;
+    window.updateClueState = window.updateClueState || updateClueState;
+    window.filterItems = window.filterItems || filterItems;
+    window.getGoalItem = window.getGoalItem || getGoalItem;
+  }
+} catch (e) { /* non-fatal */ }

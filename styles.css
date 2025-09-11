@@ -396,6 +396,17 @@ html, body {
   justify-content: center;
   padding: 8px 12px;
 }
+
+/* Visual outline to indicate a clue has just been unlocked. Kept
+   subtle and accessible; persists until the user clicks the clue. */
+.guess-btn.unlocked-outline {
+  outline: 3px solid #ffe39d;
+  outline-offset: 3px;
+  box-shadow: 0 8px 22px rgba(255,227,157,0.12);
+  /* make text white for better contrast against the yellow outline/background */
+  color: #fff;
+  font-weight: 900;
+}
 .clue-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
 .clue-note { font-size: 12px; color: var(--muted); text-align: center; }
 .guess-actions:has(.clue-wrap:nth-child(1):only-child),
@@ -712,3 +723,51 @@ body:not([data-hard]) #helpModal .goal-body {
 }
   .scroll-note { display: block; }
 .table-wrap::-webkit-scrollbar { height: 0; }
+
+/* Toast notifications (global) - centered, large, auto-dismiss */
+
+#toast-container {
+  /* place the toast low in the viewport and center horizontally */
+  position: fixed;
+  left: 50%;
+  bottom: 4vh; /* anchor near the bottom of the viewport */
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2147483647; /* ensure on top */
+  pointer-events: none; /* let clicks pass through outside the toast */
+  align-items: center;
+}
+.toast {
+  pointer-events: auto;
+  /* bright, accessible yellow with slight gradient */
+  background:  #ffe39d;
+  color: #111; /* dark text for contrast */
+  padding: 16px 22px;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45), 0 2px 6px rgba(0,0,0,0.2) inset;
+  max-width: 720px;
+  min-width: 280px;
+  width: min(80vw, 640px);
+  overflow-wrap: anywhere;
+  display: block;
+  text-align: center;
+  transform-origin: center center;
+  opacity: 0;
+  transform: translateY(8px) scale(.995);
+  transition: opacity .22s cubic-bezier(.2,.9,.3,1), transform .22s cubic-bezier(.2,.9,.3,1);
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 800;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.toast.show { opacity: 1; transform: translateY(0) scale(1); }
+
+@media (max-width: 520px) {
+  /* On narrow viewports keep the toast low (near bottom) but allow
+     it to expand to the viewport width for readability. Avoid
+     centering in the middle of the screen which obstructs content. */
+  #toast-container { left: 50%; top: 92vh; transform: translateX(-50%); width: calc(100% - 32px); }
+  .toast { width: calc(100% - 48px); max-width: none; font-size: 16px; }
+}
