@@ -1355,7 +1355,7 @@
       "level_requirement": "30",
       "sell_price": 1500,
       "type": "Helmets",
-      "source": "R-9(Sources)",
+      "source": "R-9",
       "stats": {
         "Strength": "4",
         "Wisdom": "10",
@@ -1650,7 +1650,7 @@
       "level_requirement": "1",
       "sell_price": 200,
       "type": "Helmets",
-      "source": "R-1(Sources)",
+      "source": "R-1",
       "stats": {
         "Strength": "1",
         "Agility": "1",

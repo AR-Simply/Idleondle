@@ -5,7 +5,7 @@
       "level_requirement": "25",
       "sell_price": 46140,
       "type": "Fisticuffs",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "20",
         "Speed": "7 (Fast)",
@@ -51,7 +51,7 @@
       "level_requirement": "130",
       "sell_price": 1123900,
       "type": "Fisticuffs",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "45",
         "Speed": "9 (Turbo)",
@@ -66,7 +66,7 @@
       "level_requirement": "85",
       "sell_price": 323900,
       "type": "Fisticuffs",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "32",
         "Speed": "9 (Turbo)",
@@ -81,7 +81,7 @@
       "level_requirement": "110",
       "sell_price": 573900,
       "type": "Fisticuffs",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "38",
         "Speed": "9 (Turbo)",
@@ -96,7 +96,7 @@
       "level_requirement": "510",
       "sell_price": 3154302327900,
       "type": "Fisticuffs",
-      "source": "Smithing(Lantern Spirit),Lantern Spirit",
+      "source": "Smithing, (Lantern Spirit)",
       "stats": {
         "power": "90",
         "Speed": "10 (Supersonic)",
@@ -111,7 +111,7 @@
       "level_requirement": "160",
       "sell_price": 251223900,
       "type": "Fisticuffs",
-      "source": "Smithing(Suggma),Suggma",
+      "source": "Smithing, (Suggma)",
       "stats": {
         "power": "55",
         "Speed": "9 (Turbo)",
@@ -126,7 +126,7 @@
       "level_requirement": "360",
       "sell_price": 3004201327900,
       "type": "Fisticuffs",
-      "source": "Smithing(Sprout Spirit,RIP Tide),Sprout Spirit",
+      "source": "Smithing, (Sprout Spirit)",
       "stats": {
         "power": "75",
         "Speed": "10 (Supersonic)",
@@ -157,7 +157,7 @@
       "level_requirement": "50",
       "sell_price": 15142280,
       "type": "Fisticuffs",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "27",
         "Speed": "8 (Faster)",
@@ -187,7 +187,7 @@
       "level_requirement": "160",
       "sell_price": 178867200,
       "type": "Wands",
-      "source": "Smithing(Fire Spirit),Fire Spirit",
+      "source": "Smithing, (Fire Spirit)",
       "stats": {
         "power": "75",
         "Speed": "8 (Faster)",
@@ -203,7 +203,7 @@
       "level_requirement": "50",
       "sell_price": 123850,
       "type": "Wands",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "30",
         "Speed": "5 (Medium)",
@@ -219,7 +219,7 @@
       "level_requirement": "130",
       "sell_price": 3867200,
       "type": "Wands",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "61",
         "Speed": "7 (Fast)",
@@ -250,7 +250,7 @@
       "level_requirement": "90",
       "sell_price": 634200,
       "type": "Wands",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "43",
         "Speed": "6 (Quick)",
@@ -267,7 +267,7 @@
       "level_requirement": "525",
       "sell_price": 955499051200,
       "type": "Wands",
-      "source": "Smithing(Skydoggie Spirit),Skydoggie Spirit",
+      "source": "Smithing, (Skydoggie Spirit)",
       "stats": {
         "power": "125",
         "Speed": "9 (Turbo)",
@@ -299,7 +299,7 @@
       "level_requirement": "12",
       "sell_price": 1950,
       "type": "Wands",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "power": "16",
         "Speed": "4 (Slow)",
@@ -314,7 +314,7 @@
       "level_requirement": "110",
       "sell_price": 3034200,
       "type": "Wands",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "51",
         "Speed": "6 (Quick)",
@@ -330,7 +330,7 @@
       "level_requirement": "375",
       "sell_price": 950498901200,
       "type": "Wands",
-      "source": "Smithing(Baby Troll),Baby Troll",
+      "source": "Smithing, (Baby Troll)",
       "stats": {
         "power": "108",
         "Speed": "8 (Faster)",
@@ -362,7 +362,7 @@
       "level_requirement": "75",
       "sell_price": 438850,
       "type": "Wands",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "36",
         "Speed": "5 (Medium)",
@@ -394,7 +394,7 @@
       "level_requirement": "30",
       "sell_price": 42350,
       "type": "Wands",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "23",
         "Speed": "4 (Slow)",
@@ -430,7 +430,7 @@
       "level_requirement": "90",
       "sell_price": 5577910,
       "type": "Spears",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "40",
         "Speed": "6 (Quick)",
@@ -445,7 +445,7 @@
       "level_requirement": "130",
       "sell_price": 23655910,
       "type": "Spears",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "58",
         "Speed": "7 (Fast)",
@@ -460,7 +460,7 @@
       "level_requirement": "375",
       "sell_price": 930518689910,
       "type": "Spears",
-      "source": "Smithing(Ricecake),Ricecake",
+      "source": "Smithing, (Ricecake)",
       "stats": {
         "power": "97",
         "Speed": "8 (Faster)",
@@ -475,7 +475,7 @@
       "level_requirement": "50",
       "sell_price": 167515,
       "type": "Spears",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "26",
         "Speed": "5 (Medium)",
@@ -542,7 +542,7 @@
       "level_requirement": "160",
       "sell_price": 198655910,
       "type": "Spears",
-      "source": "Smithing(Citringe),Citringe",
+      "source": "Smithing, (Citringe)",
       "stats": {
         "power": "70",
         "Speed": "7 (Fast)",
@@ -557,7 +557,7 @@
       "level_requirement": "525",
       "sell_price": 935518839910,
       "type": "Spears",
-      "source": "Smithing(Skydoggie Spirit),Skydoggie Spirit",
+      "source": "Smithing, (Skydoggie Spirit)",
       "stats": {
         "power": "112",
         "Speed": "9 (Turbo)",
@@ -572,7 +572,7 @@
       "level_requirement": "30",
       "sell_price": 17275,
       "type": "Spears",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "20",
         "Speed": "5 (Medium)",
@@ -603,7 +603,7 @@
       "level_requirement": "110",
       "sell_price": 10577910,
       "type": "Spears",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "48",
         "Speed": "6 (Quick)",
@@ -618,7 +618,7 @@
       "level_requirement": "11",
       "sell_price": 4375,
       "type": "Spears",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "power": "14",
         "Speed": "5 (Medium)",
@@ -651,7 +651,7 @@
       "level_requirement": "75",
       "sell_price": 5557515,
       "type": "Spears",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "33",
         "Speed": "5 (Medium)",
@@ -685,7 +685,7 @@
       "level_requirement": "12",
       "sell_price": 2000,
       "type": "Bows",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "power": "12",
         "Speed": "6 (Quick)",
@@ -701,7 +701,7 @@
       "level_requirement": "90",
       "sell_price": 147970,
       "type": "Bows",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "36",
         "Speed": "7 (Fast)",
@@ -717,7 +717,7 @@
       "level_requirement": "75",
       "sell_price": 92620,
       "type": "Bows",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "30",
         "Speed": "6 (Quick)",
@@ -747,7 +747,7 @@
       "level_requirement": "130",
       "sell_price": 3026000,
       "type": "Bows",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "54",
         "Speed": "8 (Faster)",
@@ -763,7 +763,7 @@
       "level_requirement": "525",
       "sell_price": 965498210000,
       "type": "Bows",
-      "source": "Smithing(Skydoggie Spirit),Skydoggie Spirit",
+      "source": "Smithing, (Skydoggie Spirit)",
       "stats": {
         "power": "110",
         "Speed": "10 (Supersonic)",
@@ -779,7 +779,7 @@
       "level_requirement": "50",
       "sell_price": 56620,
       "type": "Bows",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "23",
         "Speed": "6 (Quick)",
@@ -795,7 +795,7 @@
       "level_requirement": "375",
       "sell_price": 960498060000,
       "type": "Bows",
-      "source": "Smithing(River Spirit),River Spirit",
+      "source": "Smithing, (River Spirit)",
       "stats": {
         "power": "95",
         "Speed": "9 (Turbo)",
@@ -828,7 +828,7 @@
       "level_requirement": "160",
       "sell_price": 178026000,
       "type": "Bows",
-      "source": "Smithing(Lampar),Lampar",
+      "source": "Smithing, (Lampar)",
       "stats": {
         "power": "65",
         "Speed": "8 (Faster)",
@@ -844,7 +844,7 @@
       "level_requirement": "110",
       "sell_price": 2947970,
       "type": "Bows",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "44",
         "Speed": "7 (Fast)",
@@ -860,7 +860,7 @@
       "level_requirement": "30",
       "sell_price": 31150,
       "type": "Bows",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "17",
         "Speed": "6 (Quick)",
@@ -939,7 +939,7 @@
       "level_requirement": "100",
       "sell_price": 6730250,
       "type": "Helmets",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "1",
         "Agility": "5",
@@ -968,7 +968,7 @@
       "level_requirement": "38",
       "sell_price": 30450,
       "type": "Helmets",
-      "source": "Smithing(Blunder Hills Merit Shop)",
+      "source": "Smithing, (Blunder Hills Merit Shop)",
       "stats": {
         "Strength": "4",
         "Agility": "4",
@@ -984,7 +984,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Helmets",
-      "source": "3rd Anniversary Event Boxes,Golden Gift,Phone Box,Golden Oyster",
+      "source": "3rd Anniversary Event Boxes, Golden Gift, Phone Box, Golden Oyster",
       "stats": {
         "power": "3",
         "Defence": "3",
@@ -997,7 +997,7 @@
       "level_requirement": "1",
       "sell_price": 5,
       "type": "Helmets",
-      "source": "Moonmoon,Character Creation",
+      "source": "Moonmoon, Character Creation",
       "stats": {
         "Strength": "1",
         "Upgrade Slots": "1"
@@ -1009,7 +1009,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Helmets",
-      "source": "3rd Anniversary Event Boxes,Choco Box,Choco Box",
+      "source": "3rd Anniversary Event Boxes, Choco Box",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -1023,7 +1023,7 @@
       "level_requirement": "10",
       "sell_price": 5220,
       "type": "Helmets",
-      "source": "Smithing,Level Up Gift Bubble",
+      "source": "Smithing, Level Up Gift Bubble",
       "stats": {
         "Luck": "5",
         "Defence": "10",
@@ -1050,7 +1050,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Helmets",
-      "source": "Egg Capsule,Spring Splendor Event",
+      "source": "Egg Capsule, Spring Splendor Event",
       "stats": {
         "Agility": "4",
         "Upgrade Slots": "3"
@@ -1062,7 +1062,7 @@
       "level_requirement": "110",
       "sell_price": 7425275,
       "type": "Helmets",
-      "source": "Smithing(Frostbite Tundra Merit Shop)",
+      "source": "Smithing, (Frostbite Tundra Merit Shop)",
       "stats": {
         "power": "3",
         "Strength": "20",
@@ -1078,7 +1078,7 @@
       "level_requirement": "100",
       "sell_price": 6730250,
       "type": "Helmets",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "1",
         "Strength": "7",
@@ -1093,7 +1093,7 @@
       "level_requirement": "8",
       "sell_price": 420,
       "type": "Helmets",
-      "source": "Smithing,Dewdrop Silver Chest",
+      "source": "Smithing, Colosseum",
       "stats": {
         "Strength": "3",
         "Agility": "3",
@@ -1121,7 +1121,7 @@
       "level_requirement": "510",
       "sell_price": 1514076289650,
       "type": "Helmets",
-      "source": "Smithing(Minichief Spirit),Minichief Spirit",
+      "source": "Smithing, (Minichief Spirit)",
       "stats": {
         "power": "18",
         "Strength": "65",
@@ -1171,7 +1171,7 @@
       "level_requirement": "135",
       "sell_price": 88055250,
       "type": "Helmets",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "5",
         "Strength": "30",
@@ -1188,7 +1188,7 @@
       "level_requirement": "80",
       "sell_price": 120220,
       "type": "Helmets",
-      "source": "Smithing(Yum Yum Desert Merit Shop)",
+      "source": "Smithing, (Yum Yum Desert Merit Shop)",
       "stats": {
         "power": "1",
         "Strength": "8",
@@ -1285,7 +1285,7 @@
       "level_requirement": "35",
       "sell_price": 29420,
       "type": "Helmets",
-      "source": "Smithing,Chillsnap Silver Chest",
+      "source": "Smithing, Colosseum",
       "stats": {
         "Strength": "7",
         "Agility": "7",
@@ -1300,7 +1300,7 @@
       "level_requirement": "35",
       "sell_price": 1500,
       "type": "Helmets",
-      "source": "Amarok,Chaotic Amarok,Radiant Amarok",
+      "source": "Amarok, Chaotic Amarok, Radiant Amarok",
       "stats": {
         "Wisdom": "15",
         "Defence": "5",
@@ -1328,7 +1328,7 @@
       "level_requirement": "1",
       "sell_price": 5,
       "type": "Helmets",
-      "source": "Dedotated Ram,Character Creation",
+      "source": "Dedotated Ram, Character Creation",
       "stats": {
         "Agility": "1",
         "Upgrade Slots": "1"
@@ -1366,7 +1366,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Helmets",
-      "source": "Random Events(Glacial Guild)",
+      "source": "Random Events, (Glacial Guild)",
       "stats": {
         "power": "3",
         "Strength": "5",
@@ -1383,7 +1383,7 @@
       "level_requirement": "15",
       "sell_price": 7280,
       "type": "Helmets",
-      "source": "Smithing,Sandstone Silver Chest",
+      "source": "Smithing, Colosseum",
       "stats": {
         "Strength": "5",
         "Agility": "5",
@@ -1441,7 +1441,7 @@
       "level_requirement": "210",
       "sell_price": 26072650,
       "type": "Helmets",
-      "source": "Smithing(Cheese Nub),Cheese Nub",
+      "source": "Smithing, (Cheese Nub)",
       "stats": {
         "power": "9",
         "Strength": "40",
@@ -1475,7 +1475,7 @@
       "level_requirement": "80",
       "sell_price": 6756750,
       "type": "Helmets",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "Luck": "20",
         "Defence": "50",
@@ -1488,7 +1488,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Helmets",
-      "source": "Random Events(Meteorite)",
+      "source": "Random Events, (Meteorite)",
       "stats": {
         "power": "3",
         "Strength": "5",
@@ -1505,7 +1505,7 @@
       "level_requirement": "10",
       "sell_price": 1140,
       "type": "Helmets",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "Strength": "7",
         "Agility": "2",
@@ -1519,7 +1519,7 @@
       "level_requirement": "100",
       "sell_price": 6730250,
       "type": "Helmets",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "1",
         "Strength": "20",
@@ -1576,7 +1576,7 @@
       "level_requirement": "1",
       "sell_price": 200,
       "type": "Helmets",
-      "source": "Twitch Prizes,Weekly Battles(On Rotation)",
+      "source": "Twitch Prizes, Weekly Battles",
       "stats": {
         "Strength": "4",
         "Agility": "4",
@@ -1606,7 +1606,7 @@
       "level_requirement": "1",
       "sell_price": 5,
       "type": "Helmets",
-      "source": "Gelatinous Cuboid,Character Creation",
+      "source": "Gelatinous Cuboid, Character Creation",
       "stats": {
         "Wisdom": "1",
         "Upgrade Slots": "1"
@@ -1658,7 +1658,7 @@
       "level_requirement": "70",
       "sell_price": 200,
       "type": "Helmets",
-      "source": "Chaotic Efaunt,Efaunt,Gilded Efaunt",
+      "source": "Chaotic Efaunt, Efaunt, Gilded Efaunt",
       "stats": {
         "Agility": "15",
         "Defence": "7",
@@ -1671,7 +1671,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Helmets",
-      "source": "Giftmas Box,2021 Giftmas Login Bonus",
+      "source": "Giftmas Box, 2021 Giftmas Login Bonus",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -1685,7 +1685,7 @@
       "level_requirement": "9",
       "sell_price": 15150500,
       "type": "Helmets",
-      "source": "Smithing(Domeo Magmus),Domeo Magmus",
+      "source": "Smithing, (Domeo Magmus)",
       "stats": {
         "power": "20",
         "Defence": "100",
@@ -1715,7 +1715,7 @@
       "level_requirement": "40",
       "sell_price": 41140,
       "type": "Helmets",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "Strength": "4",
         "Agility": "12",
@@ -1783,7 +1783,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Helmets",
-      "source": "Weekly Battles(On Rotation)",
+      "source": "Weekly Battles",
       "stats": {
         "power": "1",
         "Defence": "1",
@@ -1796,7 +1796,7 @@
       "level_requirement": "10",
       "sell_price": 1020,
       "type": "Helmets",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "Strength": "3",
         "Agility": "6",
@@ -1827,7 +1827,7 @@
       "level_requirement": "10",
       "sell_price": 1200,
       "type": "Helmets",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "Wisdom": "8",
         "Luck": "1",
@@ -1841,7 +1841,7 @@
       "level_requirement": "1",
       "sell_price": 5,
       "type": "Helmets",
-      "source": "Lampar,Character Creation",
+      "source": "Lampar, Character Creation",
       "stats": {
         "Luck": "1",
         "Upgrade Slots": "1"
@@ -1866,7 +1866,7 @@
       "level_requirement": "40",
       "sell_price": 47260,
       "type": "Helmets",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "Strength": "13",
         "Wisdom": "3",
@@ -1911,7 +1911,7 @@
       "level_requirement": "40",
       "sell_price": 121320,
       "type": "Helmets",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "Agility": "1",
         "Wisdom": "16",
@@ -1941,7 +1941,7 @@
       "level_requirement": "35",
       "sell_price": 30100,
       "type": "Shirts",
-      "source": "Smithing(Blunder Hills Merit Shop)",
+      "source": "Smithing, (Blunder Hills Merit Shop)",
       "stats": {
         "power": "3",
         "Strength": "7",
@@ -1957,7 +1957,7 @@
       "level_requirement": "1",
       "sell_price": 2693,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "Defence": "5",
         "Upgrade Slots": "5"
@@ -1969,7 +1969,7 @@
       "level_requirement": "5",
       "sell_price": 178,
       "type": "Shirts",
-      "source": "Smithing(The Smithing Grind)",
+      "source": "Smithing, (The Smithing Grind)",
       "stats": {
         "Agility": "5",
         "Wisdom": "5",
@@ -1983,7 +1983,7 @@
       "level_requirement": "105",
       "sell_price": 75508218,
       "type": "Shirts",
-      "source": "Smithing(Frostbite Tundra Merit Shop)",
+      "source": "Smithing, (Frostbite Tundra Merit Shop)",
       "stats": {
         "Strength": "15",
         "Agility": "15",
@@ -2013,7 +2013,7 @@
       "level_requirement": "95",
       "sell_price": 35528200,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "Strength": "17",
         "Wisdom": "5",
@@ -2042,7 +2042,7 @@
       "level_requirement": "130",
       "sell_price": 92545700,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "Strength": "20",
         "Agility": "20",
@@ -2058,7 +2058,7 @@
       "level_requirement": "80",
       "sell_price": 4260,
       "type": "Shirts",
-      "source": "Smithing(Yum Yum Desert Merit Shop)",
+      "source": "Smithing, (Yum Yum Desert Merit Shop)",
       "stats": {
         "Strength": "5",
         "Agility": "5",
@@ -2073,7 +2073,7 @@
       "level_requirement": "95",
       "sell_price": 35528200,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "Agility": "1",
         "Wisdom": "23",
@@ -2104,7 +2104,7 @@
       "level_requirement": "95",
       "sell_price": 35528200,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "Strength": "4",
         "Agility": "19",
@@ -2118,7 +2118,7 @@
       "level_requirement": "40",
       "sell_price": 296080,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "Strength": "2",
         "Agility": "12",
@@ -2132,7 +2132,7 @@
       "level_requirement": "18",
       "sell_price": 26000,
       "type": "Shirts",
-      "source": "Smithing(Glublin,Videogame Highscores are COOL!),Glublin",
+      "source": "Smithing, (Glublin)",
       "stats": {
         "Strength": "5",
         "Agility": "9",
@@ -2146,7 +2146,7 @@
       "level_requirement": "40",
       "sell_price": 90280,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "Agility": "1",
         "Wisdom": "13",
@@ -2175,7 +2175,7 @@
       "level_requirement": "2",
       "sell_price": 578,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "Luck": "3",
         "Defence": "4",
@@ -2188,7 +2188,7 @@
       "level_requirement": "15",
       "sell_price": 6965,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "Strength": "6",
         "Defence": "4",
@@ -2201,7 +2201,7 @@
       "level_requirement": "15",
       "sell_price": 5200,
       "type": "Shirts",
-      "source": "Smithing,Dewdrop Golden Chest",
+      "source": "Smithing, Colosseum",
       "stats": {
         "Strength": "4",
         "Agility": "4",
@@ -2232,7 +2232,7 @@
       "level_requirement": "220",
       "sell_price": 19800331200,
       "type": "Shirts",
-      "source": "Smithing(Stiltmole),Stiltmole",
+      "source": "Smithing, (Stiltmole)",
       "stats": {
         "power": "5",
         "Strength": "30",
@@ -2280,7 +2280,7 @@
       "level_requirement": "80",
       "sell_price": 65827760,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "Luck": "25",
         "Defence": "40",
@@ -2366,7 +2366,7 @@
       "level_requirement": "2",
       "sell_price": 583,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "Wisdom": "3",
         "Defence": "3",
@@ -2394,7 +2394,7 @@
       "level_requirement": "500",
       "sell_price": 1525210491200,
       "type": "Shirts",
-      "source": "Smithing(Ceramic Spirit),Ceramic Spirit",
+      "source": "Smithing, (Ceramic Spirit)",
       "stats": {
         "power": "15",
         "Strength": "60",
@@ -2441,7 +2441,7 @@
       "level_requirement": "40",
       "sell_price": 287045,
       "type": "Shirts",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "Strength": "10",
         "Wisdom": "4",
@@ -2531,7 +2531,7 @@
       "level_requirement": "40",
       "sell_price": 28500,
       "type": "Pants",
-      "source": "Smithing(Blunder Hills Merit Shop)",
+      "source": "Smithing, (Blunder Hills Merit Shop)",
       "stats": {
         "Strength": "2",
         "Agility": "2",
@@ -2560,7 +2560,7 @@
       "level_requirement": "35",
       "sell_price": 4660,
       "type": "Pants",
-      "source": "Smithing(Poop),Poop",
+      "source": "Smithing, (Poop)",
       "stats": {
         "Agility": "9",
         "Defence": "14",
@@ -2573,7 +2573,7 @@
       "level_requirement": "25",
       "sell_price": 9155,
       "type": "Pants",
-      "source": "Smithing(Wode Board),Wode Board",
+      "source": "Smithing, (Wode Board)",
       "stats": {
         "Agility": "3",
         "Wisdom": "7",
@@ -2587,7 +2587,7 @@
       "level_requirement": "100",
       "sell_price": 9335210,
       "type": "Pants",
-      "source": "Smithing(Frostbite Tundra Merit Shop)",
+      "source": "Smithing, (Frostbite Tundra Merit Shop)",
       "stats": {
         "Strength": "13",
         "Agility": "13",
@@ -2647,7 +2647,7 @@
       "level_requirement": "130",
       "sell_price": 90494200,
       "type": "Pants",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "Strength": "18",
         "Agility": "18",
@@ -2663,7 +2663,7 @@
       "level_requirement": "25",
       "sell_price": 1580,
       "type": "Pants",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "Strength": "7",
         "Defence": "12",
@@ -2676,7 +2676,7 @@
       "level_requirement": "75",
       "sell_price": 1260,
       "type": "Pants",
-      "source": "Smithing(Yum Yum Desert Merit Shop)",
+      "source": "Smithing, (Yum Yum Desert Merit Shop)",
       "stats": {
         "Strength": "4",
         "Agility": "4",
@@ -2708,7 +2708,7 @@
       "level_requirement": "35",
       "sell_price": 20310,
       "type": "Pants",
-      "source": "Smithing(Walking Stick),Walking Stick",
+      "source": "Smithing, (Walking Stick)",
       "stats": {
         "Strength": "8",
         "Defence": "15",
@@ -2750,7 +2750,7 @@
       "level_requirement": "7",
       "sell_price": 200,
       "type": "Pants",
-      "source": "R-1(Sources)",
+      "source": "R-1",
       "stats": {
         "Wisdom": "6",
         "Defence": "3",
@@ -2763,7 +2763,7 @@
       "level_requirement": "35",
       "sell_price": 37160,
       "type": "Pants",
-      "source": "Smithing,Sandstone Golden Chest",
+      "source": "Smithing, Colosseum",
       "stats": {
         "Strength": "4",
         "Agility": "4",
@@ -2809,7 +2809,7 @@
       "level_requirement": "225",
       "sell_price": 31500179100,
       "type": "Pants",
-      "source": "Smithing(Molti),Molti",
+      "source": "Smithing, (Molti)",
       "stats": {
         "power": "5",
         "Strength": "32",
@@ -2857,7 +2857,7 @@
       "level_requirement": "50",
       "sell_price": 657865,
       "type": "Pants",
-      "source": "Smithing,Chillsnap Golden Chest",
+      "source": "Smithing, Colosseum",
       "stats": {
         "Strength": "6",
         "Agility": "6",
@@ -2889,7 +2889,7 @@
       "level_requirement": "500",
       "sell_price": 2282200309100,
       "type": "Pants",
-      "source": "Smithing(Leek Spirit),Leek Spirit",
+      "source": "Smithing, (Leek Spirit)",
       "stats": {
         "power": "10",
         "Strength": "55",
@@ -2996,7 +2996,7 @@
       "level_requirement": "37",
       "sell_price": 6014070,
       "type": "Pickaxes",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "19",
         "Speed": "5 (Medium)",
@@ -3043,7 +3043,7 @@
       "level_requirement": "15",
       "sell_price": 223570,
       "type": "Pickaxes",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "13",
         "Speed": "4 (Slow)",
@@ -3073,7 +3073,7 @@
       "level_requirement": "2",
       "sell_price": 50,
       "type": "Pickaxes",
-      "source": "Glumlee,Scripticus",
+      "source": "Glumlee, Scripticus",
       "stats": {
         "power": "2",
         "Speed": "3 (Slower)",
@@ -3086,7 +3086,7 @@
       "level_requirement": "55",
       "sell_price": 11679320,
       "type": "Pickaxes",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "30",
         "Speed": "6 (Quick)",
@@ -3118,7 +3118,7 @@
       "level_requirement": "25",
       "sell_price": 1851570,
       "type": "Pickaxes",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "16",
         "Speed": "4 (Slow)",
@@ -3133,7 +3133,7 @@
       "level_requirement": "15",
       "sell_price": 200,
       "type": "Pickaxes",
-      "source": "Dr Defecaus,TP Pete",
+      "source": "Dr Defecaus, TP Pete",
       "stats": {
         "power": "18",
         "Speed": "2 (Sluggish)",
@@ -3147,7 +3147,7 @@
       "level_requirement": "10",
       "sell_price": 200,
       "type": "Pickaxes",
-      "source": "Random Events(Snake Swarm)",
+      "source": "Random Events, (Snake Swarm)",
       "stats": {
         "power": "5",
         "Speed": "2 (Sluggish)",
@@ -3161,7 +3161,7 @@
       "level_requirement": "65",
       "sell_price": 11694820,
       "type": "Pickaxes",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "35",
         "Speed": "6 (Quick)",
@@ -3177,7 +3177,7 @@
       "level_requirement": "45",
       "sell_price": 8494320,
       "type": "Pickaxes",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "24",
         "Speed": "5 (Medium)",
@@ -3226,7 +3226,7 @@
       "level_requirement": "25",
       "sell_price": 966200,
       "type": "Hatchets",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "23",
         "Speed": "5 (Medium)",
@@ -3258,7 +3258,7 @@
       "level_requirement": "15",
       "sell_price": 181200,
       "type": "Hatchets",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "14",
         "Speed": "4 (Slow)",
@@ -3273,7 +3273,7 @@
       "level_requirement": "10",
       "sell_price": 200,
       "type": "Hatchets",
-      "source": "Random Events(Mega Grumblo)",
+      "source": "Random Events, (Mega Grumblo)",
       "stats": {
         "power": "5",
         "Speed": "2 (Sluggish)",
@@ -3302,7 +3302,7 @@
       "level_requirement": "40",
       "sell_price": 9076450,
       "type": "Hatchets",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "29",
         "Speed": "6 (Quick)",
@@ -3348,7 +3348,7 @@
       "level_requirement": "20",
       "sell_price": 511200,
       "type": "Hatchets",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "18",
         "Speed": "4 (Slow)",
@@ -3363,7 +3363,7 @@
       "level_requirement": "50",
       "sell_price": 17091450,
       "type": "Hatchets",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "35",
         "Speed": "6 (Quick)",
@@ -3394,7 +3394,7 @@
       "level_requirement": "30",
       "sell_price": 2966450,
       "type": "Hatchets",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "26",
         "Speed": "5 (Medium)",
@@ -3425,7 +3425,7 @@
       "level_requirement": "4",
       "sell_price": 2120,
       "type": "Fishing Rods",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "power": "8",
         "Speed": "3 (Slower)",
@@ -3439,7 +3439,7 @@
       "level_requirement": "33",
       "sell_price": 963400,
       "type": "Fishing Rods",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "30",
         "Speed": "5 (Medium)",
@@ -3467,7 +3467,7 @@
       "level_requirement": "15",
       "sell_price": 104400,
       "type": "Fishing Rods",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "19",
         "Speed": "4 (Slow)",
@@ -3482,7 +3482,7 @@
       "level_requirement": "9",
       "sell_price": 16900,
       "type": "Fishing Rods",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "power": "13",
         "Speed": "4 (Slow)",
@@ -3497,7 +3497,7 @@
       "level_requirement": "45",
       "sell_price": 3308659,
       "type": "Fishing Rods",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "43",
         "Speed": "6 (Quick)",
@@ -3525,7 +3525,7 @@
       "level_requirement": "25",
       "sell_price": 508400,
       "type": "Fishing Rods",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "25",
         "Speed": "5 (Medium)",
@@ -3539,7 +3539,7 @@
       "level_requirement": "50",
       "sell_price": 5123659,
       "type": "Fishing Rods",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "50",
         "Speed": "6 (Quick)",
@@ -3553,7 +3553,7 @@
       "level_requirement": "40",
       "sell_price": 983659,
       "type": "Fishing Rods",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "36",
         "Speed": "5 (Medium)",
@@ -3583,7 +3583,7 @@
       "level_requirement": "35",
       "sell_price": 12275,
       "type": "Shoes",
-      "source": "Smithing(Blunder Hills Merit Shop)",
+      "source": "Smithing, (Blunder Hills Merit Shop)",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -3598,7 +3598,7 @@
       "level_requirement": "30",
       "sell_price": 96175,
       "type": "Shoes",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "Strength": "6",
         "Defence": "8",
@@ -3611,7 +3611,7 @@
       "level_requirement": "30",
       "sell_price": 97425,
       "type": "Shoes",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "Agility": "6",
         "Defence": "8",
@@ -3637,7 +3637,7 @@
       "level_requirement": "30",
       "sell_price": 93075,
       "type": "Shoes",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "Strength": "5",
         "Wisdom": "1",
@@ -3651,7 +3651,7 @@
       "level_requirement": "125",
       "sell_price": 47057500,
       "type": "Shoes",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "Defence": "45",
         "Upgrade Slots": "5"
@@ -3663,7 +3663,7 @@
       "level_requirement": "95",
       "sell_price": 7687006,
       "type": "Shoes",
-      "source": "Smithing(Frostbite Tundra Merit Shop)",
+      "source": "Smithing, (Frostbite Tundra Merit Shop)",
       "stats": {
         "Strength": "12",
         "Agility": "12",
@@ -3707,7 +3707,7 @@
       "level_requirement": "110",
       "sell_price": 48341675,
       "type": "Shoes",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "Strength": "12",
         "Defence": "29",
@@ -3753,7 +3753,7 @@
       "level_requirement": "130",
       "sell_price": 69620500,
       "type": "Shoes",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "Strength": "17",
         "Agility": "17",
@@ -3769,7 +3769,7 @@
       "level_requirement": "200",
       "sell_price": 3594115000,
       "type": "Shoes",
-      "source": "Smithing(Domeo Magmus),Domeo Magmus",
+      "source": "Smithing, (Domeo Magmus)",
       "stats": {
         "Agility": "5",
         "Wisdom": "12",
@@ -3782,7 +3782,7 @@
       "level_requirement": "500",
       "sell_price": 1574050234000,
       "type": "Shoes",
-      "source": "Smithing(Mama Troll),Mama Troll",
+      "source": "Smithing, (Mama Troll)ll",
       "stats": {
         "power": "5",
         "Strength": "57",
@@ -3799,7 +3799,7 @@
       "level_requirement": "70",
       "sell_price": 261970,
       "type": "Shoes",
-      "source": "Smithing(Yum Yum Desert Merit Shop)",
+      "source": "Smithing, (Yum Yum Desert Merit Shop)",
       "stats": {
         "Strength": "2",
         "Agility": "2",
@@ -3843,7 +3843,7 @@
       "level_requirement": "110",
       "sell_price": 47745275,
       "type": "Shoes",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "Wisdom": "14",
         "Defence": "25",
@@ -3940,7 +3940,7 @@
       "level_requirement": "10",
       "sell_price": 1765,
       "type": "Shoes",
-      "source": "Smithing(Slime),Glunko The Massive,Slime",
+      "source": "Smithing, (Slime), Glunko The Massive",
       "stats": {
         "Strength": "2",
         "Agility": "2",
@@ -3970,7 +3970,7 @@
       "level_requirement": "15",
       "sell_price": 10525,
       "type": "Shoes",
-      "source": "Smithing(W1 Colosseum first silver chest)",
+      "source": "Smithing, Colosseum",
       "stats": {
         "Strength": "2",
         "Agility": "2",
@@ -3997,7 +3997,7 @@
       "level_requirement": "30",
       "sell_price": 99775,
       "type": "Shoes",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "Wisdom": "7",
         "Defence": "6",
@@ -4026,7 +4026,7 @@
       "level_requirement": "230",
       "sell_price": 69600114000,
       "type": "Shoes",
-      "source": "Smithing(Purgatory Stalker),Purgatory Stalker",
+      "source": "Smithing, (Purgatory Stalker)",
       "stats": {
         "power": "3",
         "Strength": "28",
@@ -4076,7 +4076,7 @@
       "level_requirement": "110",
       "sell_price": 48038575,
       "type": "Shoes",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "Strength": "13",
         "Wisdom": "1",
@@ -4090,7 +4090,7 @@
       "level_requirement": "125",
       "sell_price": 47057500,
       "type": "Shoes",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "Luck": "30",
         "Upgrade Slots": "5"
@@ -4119,7 +4119,7 @@
       "level_requirement": "110",
       "sell_price": 48042925,
       "type": "Shoes",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "Agility": "13",
         "Defence": "29",
@@ -4210,7 +4210,7 @@
       "level_requirement": "30",
       "sell_price": 4150,
       "type": "Pendants",
-      "source": "Smithing(Blunder Hills Merit Shop)",
+      "source": "Smithing, (Blunder Hills Merit Shop)",
       "stats": {
         "power": "2",
         "Wisdom": "12",
@@ -4223,7 +4223,7 @@
       "level_requirement": "100",
       "sell_price": 1,
       "type": "Pendants",
-      "source": "Blighted Chizoar,Chaotic Chizoar,Chizoar",
+      "source": "Blighted Chizoar, Chaotic Chizoar, Chizoar",
       "stats": {
         "power": "5",
         "Upgrade Slots": "3"
@@ -4235,7 +4235,7 @@
       "level_requirement": "120",
       "sell_price": 46,
       "type": "Pendants",
-      "source": "Smithing(Frostbite Tundra Merit Shop)",
+      "source": "Smithing, (Frostbite Tundra Merit Shop)",
       "stats": {
         "power": "8",
         "Upgrade Slots": "4"
@@ -4445,7 +4445,7 @@
       "level_requirement": "40",
       "sell_price": 3570,
       "type": "Pendants",
-      "source": "Smithing(Dr Defecaus),Dr Defecaus",
+      "source": "Smithing, (Dr Defecaus),Dr Defecaus",
       "stats": {
         "power": "6",
         "Defence": "5",
@@ -4505,7 +4505,7 @@
       "level_requirement": "60",
       "sell_price": 3001,
       "type": "Pendants",
-      "source": "Smithing(Biggie Hours),Biggie Hours",
+      "source": "Smithing, (Biggie Hours),Biggie Hours",
       "stats": {
         "Strength": "10",
         "Upgrade Slots": "2"
@@ -4517,7 +4517,7 @@
       "level_requirement": "1",
       "sell_price": 1080,
       "type": "Pendants",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "power": "1",
         "Defence": "4",
@@ -4561,7 +4561,7 @@
       "level_requirement": "20",
       "sell_price": 2320,
       "type": "Pendants",
-      "source": "Smithing(Mafioso),Mafioso",
+      "source": "Smithing, (Mafioso)",
       "stats": {
         "power": "4",
         "Upgrade Slots": "3"
@@ -4587,7 +4587,7 @@
       "level_requirement": "250",
       "sell_price": 1,
       "type": "Pendants",
-      "source": "Chaotic Kattlekruk,Kattlekruk,Sacrilegious Kattlekruk",
+      "source": "Chaotic Kattlekruk, Kattlekruk, Sacrilegious Kattlekruk",
       "stats": {
         "power": "8",
         "Strength": "6",
@@ -4604,7 +4604,7 @@
       "level_requirement": "20",
       "sell_price": 6500,
       "type": "Pendants",
-      "source": "Encroaching Forest Villas(Shop)",
+      "source": "Town Shop",
       "stats": {
         "Strength": "2",
         "Agility": "2",
@@ -4663,7 +4663,7 @@
       "level_requirement": "1",
       "sell_price": 2100,
       "type": "Rings",
-      "source": "Smithing(DropTable1),R-1(Sources)",
+      "source": "Smithing, R-1",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -4687,7 +4687,7 @@
       "level_requirement": "90",
       "sell_price": 46200,
       "type": "Rings",
-      "source": "Smithing(Mutated Mush),Mutated Mush",
+      "source": "Smithing, (Mutated Mush)",
       "stats": {
         "Strength": "3",
         "Agility": "3",
@@ -4729,7 +4729,7 @@
       "level_requirement": "40",
       "sell_price": 42750,
       "type": "Rings",
-      "source": "Smithing(Mimic),Mimic",
+      "source": "Smithing, (Mimic)",
       "stats": {
         "Defence": "12",
         "Upgrade Slots": "2"
@@ -4741,7 +4741,7 @@
       "level_requirement": "500",
       "sell_price": 1500000000001,
       "type": "Rings",
-      "source": "Smithing(Demented Spiritlord),Demented Spiritlord",
+      "source": "Smithing, (Demented Spiritlord)",
       "stats": {
         "power": "12",
         "Strength": "50",
@@ -4758,7 +4758,7 @@
       "level_requirement": "30",
       "sell_price": 31300,
       "type": "Rings",
-      "source": "Smithing(Slime),Slime",
+      "source": "Smithing, (Slime)",
       "stats": {
         "Luck": "1",
         "Defence": "2",
@@ -4783,7 +4783,7 @@
       "level_requirement": "80",
       "sell_price": 102779,
       "type": "Rings",
-      "source": "Smithing(Yum Yum Desert Merit Shop)",
+      "source": "Smithing, (Yum Yum Desert Merit Shop)",
       "stats": {
         "power": "3",
         "Agility": "10",
@@ -4860,7 +4860,7 @@
       "level_requirement": "90",
       "sell_price": 55000,
       "type": "Rings",
-      "source": "Smithing(Dilapidated Slush),Dilapidated Slush",
+      "source": "Smithing, (Dilapidated Slush)",
       "stats": {
         "power": "3",
         "Defence": "3",
@@ -4927,7 +4927,7 @@
       "level_requirement": "70",
       "sell_price": 44700,
       "type": "Rings",
-      "source": "Smithing(King Doot),King Doot",
+      "source": "Smithing, (King Doot)",
       "stats": {
         "Luck": "3",
         "Defence": "20",
@@ -4940,7 +4940,7 @@
       "level_requirement": "9",
       "sell_price": 4000,
       "type": "Rings",
-      "source": "Blunder Hills(Shop)",
+      "source": "Town Shop",
       "stats": {
         "Strength": "3",
         "Upgrade Slots": "2"
@@ -4967,7 +4967,7 @@
       "level_requirement": "60",
       "sell_price": 1,
       "type": "Rings",
-      "source": "Star Sign: Chronus-9a",
+      "source": "Star Sign",
       "stats": {
         "Agility": "8",
         "Luck": "4",
@@ -4981,7 +4981,7 @@
       "level_requirement": "50",
       "sell_price": 32001,
       "type": "Rings",
-      "source": "Smithing(Baba Yaga),Baba Yaga",
+      "source": "Smithing, (Baba Yaga)",
       "stats": {
         "Strength": "5",
         "Agility": "5",
@@ -5025,7 +5025,7 @@
       "level_requirement": "110",
       "sell_price": 10000006,
       "type": "Rings",
-      "source": "Smithing(Mutated Mush),Mutated Mush",
+      "source": "Smithing, (Mutated Mush)",
       "stats": {
         "Defence": "10",
         "Upgrade Slots": "3"
@@ -5063,7 +5063,7 @@
       "level_requirement": "15",
       "sell_price": 19200,
       "type": "Rings",
-      "source": "Smithing(DropTable3,Task Unlocks Tab 1),R-3(Sources)",
+      "source": "Smithing, (Task Unlocks Tab 1), R-3",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5149,7 +5149,7 @@
       "level_requirement": "250",
       "sell_price": 111225,
       "type": "Rings",
-      "source": "Smithing(Domeo Magmus),Domeo Magmus",
+      "source": "Smithing, (Domeo Magmus)",
       "stats": {
         "power": "5",
         "Strength": "10",
@@ -5196,7 +5196,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Falloween Treat,Spring Splendor Event",
+      "source": "Falloween Treat, Spring Splendor Event",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5211,7 +5211,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Falloween Treat,Giftmas Present",
+      "source": "Falloween Treat, Giftmas Present",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5355,7 +5355,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Retired),Summer Cooler",
+      "source": "Gem Shop(Retired), Summer Cooler",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5611,7 +5611,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Retired),Twitch Prizes",
+      "source": "Gem Shop(Retired), Twitch Prizes",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5640,7 +5640,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "3rd Anniversary Event Boxes,Summer Cooler",
+      "source": "3rd Anniversary Event Boxes, Summer Cooler",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5711,7 +5711,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "4th Anniversary Event,3rd Anniversary Event Boxes,Gem Shop(Limited),Gem Shop(Retired)",
+      "source": "4th Anniversary Event, 3rd Anniversary Event Boxes, Gem Shop(Limited), Gem Shop(Retired)",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5726,7 +5726,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "4th Anniversary Event,3rd Anniversary Event Boxes,Gem Shop(Limited),Choco Box",
+      "source": "4th Anniversary Event, 3rd Anniversary Event Boxes, Gem Shop(Limited), Choco Box",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5741,7 +5741,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Retired),Twitch Prizes",
+      "source": "Gem Shop(Retired), Twitch Prizes",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5770,7 +5770,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "4th Anniversary Event,Summer Cooler,Choco Box",
+      "source": "4th Anniversary Event, Summer Cooler, Choco Box",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5827,7 +5827,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Falloween Treat,Gem Shop(Retired)",
+      "source": "Falloween Treat, Gem Shop(Retired)",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5842,7 +5842,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "Gem Shop(Retired),Twitch Prizes",
+      "source": "Gem Shop(Retired), Twitch Prizes",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5885,7 +5885,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "3rd Anniversary Event Boxes,Gem Shop(Retired)",
+      "source": "3rd Anniversary Event Boxes, Gem Shop(Retired)",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5900,7 +5900,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
-      "source": "3rd Anniversary Event Boxes,Gem Shop(Limited)",
+      "source": "3rd Anniversary Event Boxes, Gem Shop(Limited)",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -6004,7 +6004,7 @@
       "level_requirement": "1",
       "sell_price": 777,
       "type": "Trophies",
-      "source": "Hoops Minigame(40+ Points)",
+      "source": "Hoops Minigame",
       "stats": {
         "power": "3",
         "Strength": "3",
@@ -6195,7 +6195,7 @@
       "level_requirement": "1",
       "sell_price": 777,
       "type": "Trophies",
-      "source": "MR-1(Sources),MR-2(Sources),MR-3(Sources),MR-4(Sources),MR-5(Sources),MR-6(Sources)",
+      "source": "MR-1, MR-2, MR-3, MR-4, MR-5, MR-6",
       "stats": {
         "Luck": "7"
       },
@@ -6206,7 +6206,7 @@
       "level_requirement": "1",
       "sell_price": 69,
       "type": "Trophies",
-      "source": "Island Expeditions(Fractal Island)",
+      "source": "Island Expeditions",
       "stats": {
         "power": "5",
         "Strength": "26",
@@ -6221,7 +6221,7 @@
       "level_requirement": "1",
       "sell_price": 69,
       "type": "Trophies",
-      "source": "Fishing Minigame(Catching the Megalodon)",
+      "source": "Fishing Minigame",
       "stats": {
         "power": "5",
         "Strength": "15",
@@ -6277,7 +6277,7 @@
       "level_requirement": "1",
       "sell_price": 69,
       "type": "Trophies",
-      "source": "Gem Shop(Rotating Pack),Twitch Prizes",
+      "source": "Gem Shop(Rotating Pack), Twitch Prizes",
       "stats": {
         "power": "4",
         "Strength": "3",
@@ -6325,7 +6325,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing(Limited)",
+      "source": "Gem Shop - Random Wing",
       "stats": {
         "power": "5",
         "Luck": "5",
@@ -6338,7 +6338,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Blighted Chizoar,Gem Shop - Random Wing(Limited)",
+      "source": "Blighted Chizoar, Gem Shop - Random Wing",
       "stats": {
         "power": "3"
       },
@@ -6349,7 +6349,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
       "stats": {
         "power": "15",
         "Strength": "12",
@@ -6365,7 +6365,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Blitzkrieg Troll,Gem Shop - Random Wing(Limited)",
+      "source": "Blitzkrieg Troll, Gem Shop - Random Wing",
       "stats": {
         "power": "1",
         "Strength": "10",
@@ -6380,7 +6380,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing(Limited)",
+      "source": "Gem Shop - Random Wing",
       "stats": {
         "power": "30",
         "Strength": "10",
@@ -6396,7 +6396,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
       "stats": {
         "Strength": "5",
         "Agility": "5",
@@ -6410,7 +6410,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Sacrilegious Kattlekruk,Gem Shop - Random Wing(Limited)",
+      "source": "Sacrilegious Kattlekruk, Gem Shop - Random Wing, (Limited)",
       "stats": {
         "power": "5",
         "Strength": "11",
@@ -6426,7 +6426,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing(Limited)",
+      "source": "Gem Shop - Random Wing",
       "stats": {
         "power": "5",
         "Strength": "2",
@@ -6440,7 +6440,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing(Limited),Choco Box,Choco Box",
+      "source": "Gem Shop - Random Wing, Choco Box",
       "stats": {
         "power": "2",
         "Defence": "10"
@@ -6452,7 +6452,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing(Limited),Choco Box",
+      "source": "Gem Shop - Random Wing, Choco Box",
       "stats": {
         "power": "6",
         "Defence": "10"
@@ -6464,7 +6464,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop - Random Wing(Limited),Choco Box",
+      "source": "Gem Shop - Random Wing, Choco Box",
       "stats": {
         "power": "4",
         "Defence": "10"
@@ -6476,7 +6476,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gilded Efaunt,Gem Shop - Random Wing(Limited)",
+      "source": "Gilded Efaunt, Gem Shop - Random Wing",
       "stats": {
         "Strength": "15",
         "Agility": "15",
@@ -6489,7 +6489,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Emperor,Gem Shop - Random Wing(Limited)",
+      "source": "Emperor, Gem Shop - Random Wing",
       "stats": {
         "power": "8",
         "Strength": "15",
@@ -6516,7 +6516,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
       "stats": {
         "power": "6",
         "Defence": "5"
@@ -6528,7 +6528,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
       "stats": {
         "power": "30",
         "Strength": "40",
@@ -6543,7 +6543,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Radiant Amarok,Gem Shop - Random Wing(Limited)",
+      "source": "Radiant Amarok, Gem Shop - Random Wing",
       "stats": {
         "Defence": "50"
       },
@@ -6554,7 +6554,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
       "stats": {
         "power": "25",
         "Strength": "30",
@@ -6570,7 +6570,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Capes",
-      "source": "Gem Shop(Rotating Pack),Gem Shop - Random Wing(Limited)",
+      "source": "Gem Shop(Rotating Pack), Gem Shop - Random Wing",
       "stats": {
         "power": "20",
         "Strength": "50",
@@ -6734,7 +6734,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Nametags",
-      "source": "Gem Shop(Limited),Golden Gift,Golden Oyster",
+      "source": "Gem Shop(Limited), Golden Gift, Golden Oyster",
       "stats": {
         "power": "5",
         "Strength": "10",
@@ -6749,7 +6749,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Nametags",
-      "source": "Golden Gift,Golden Oyster",
+      "source": "Golden Gift, Golden Oyster",
       "stats": {
         "power": "2",
         "Defence": "1"
@@ -6804,7 +6804,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Nametags",
-      "source": "Golden Gift,Spring Splendor Event,Golden Oyster",
+      "source": "Golden Gift, Spring Splendor Event, Golden Oyster",
       "stats": {
         "Strength": "4",
         "Agility": "4",
@@ -6848,7 +6848,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Nametags",
-      "source": "Island Expeditions(Trash Island)",
+      "source": "Island Expeditions",
       "stats": {
         "Strength": "30"
       },
@@ -6901,7 +6901,7 @@
       "level_requirement": "4",
       "sell_price": 4200,
       "type": "Bug Catching Nets",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "power": "9",
         "Speed": "4 (Slow)",
@@ -6916,7 +6916,7 @@
       "level_requirement": "25",
       "sell_price": 740800,
       "type": "Bug Catching Nets",
-      "source": "Smithing(Task Unlocks Tab 3),Royal Worm",
+      "source": "Smithing, (Task Unlocks Tab 3), Royal Worm",
       "stats": {
         "power": "31",
         "Speed": "5 (Medium)",
@@ -6946,7 +6946,7 @@
       "level_requirement": "15",
       "sell_price": 55800,
       "type": "Bug Catching Nets",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "20",
         "Speed": "5 (Medium)",
@@ -6961,7 +6961,7 @@
       "level_requirement": "40",
       "sell_price": 11916050,
       "type": "Bug Catching Nets",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "45",
         "Speed": "6 (Quick)",
@@ -6991,7 +6991,7 @@
       "level_requirement": "20",
       "sell_price": 255800,
       "type": "Bug Catching Nets",
-      "source": "Smithing(Task Unlocks Tab 2)",
+      "source": "Smithing, (Task Unlocks Tab 2)",
       "stats": {
         "power": "26",
         "Speed": "5 (Medium)",
@@ -7006,7 +7006,7 @@
       "level_requirement": "10",
       "sell_price": 15800,
       "type": "Bug Catching Nets",
-      "source": "Smithing(Task Unlocks Tab 1)",
+      "source": "Smithing, (Task Unlocks Tab 1)",
       "stats": {
         "power": "14",
         "Speed": "4 (Slow)",
@@ -7021,7 +7021,7 @@
       "level_requirement": "50",
       "sell_price": 23931050,
       "type": "Bug Catching Nets",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "55",
         "Speed": "6 (Quick)",
@@ -7036,7 +7036,7 @@
       "level_requirement": "30",
       "sell_price": 2741050,
       "type": "Bug Catching Nets",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "37",
         "Speed": "5 (Medium)",
@@ -7068,7 +7068,7 @@
       "level_requirement": "1",
       "sell_price": 5000,
       "type": "Trap Box Sets",
-      "source": "Lord of the Hunt,Frostbite Towndra(Shop)",
+      "source": "Lord of the Hunt, Town Shop",
       "stats": {
         "power": "4",
         "Speed": "4 (Slow)",
@@ -7124,7 +7124,7 @@
       "level_requirement": "40",
       "sell_price": 111313,
       "type": "Trap Box Sets",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "34",
         "Speed": "4 (Slow)",
@@ -7138,7 +7138,7 @@
       "level_requirement": "25",
       "sell_price": 11015,
       "type": "Trap Box Sets",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "20",
         "Speed": "4 (Slow)",
@@ -7152,7 +7152,7 @@
       "level_requirement": "48",
       "sell_price": 8111313,
       "type": "Trap Box Sets",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "45",
         "Speed": "4 (Slow)",
@@ -7180,7 +7180,7 @@
       "level_requirement": "35",
       "sell_price": 11283,
       "type": "Trap Box Sets",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "26",
         "Speed": "4 (Slow)",
@@ -7263,7 +7263,7 @@
       "level_requirement": "50",
       "sell_price": 1938550,
       "type": "Worship Skulls",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "34",
         "Speed": "7 (Fast)",
@@ -7291,7 +7291,7 @@
       "level_requirement": "60",
       "sell_price": 4938550,
       "type": "Worship Skulls",
-      "source": "Smithing(Task Unlocks Tab 4)",
+      "source": "Smithing, (Task Unlocks Tab 4)",
       "stats": {
         "power": "45",
         "Speed": "8 (Faster)",
@@ -7305,7 +7305,7 @@
       "level_requirement": "40",
       "sell_price": 438550,
       "type": "Worship Skulls",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "26",
         "Speed": "7 (Fast)",
@@ -7319,7 +7319,7 @@
       "level_requirement": "35",
       "sell_price": 158300,
       "type": "Worship Skulls",
-      "source": "Smithing(Task Unlocks Tab 3)",
+      "source": "Smithing, (Task Unlocks Tab 3)",
       "stats": {
         "power": "20",
         "Speed": "6 (Quick)",
@@ -7346,7 +7346,7 @@
       "level_requirement": "1",
       "sell_price": 5000,
       "type": "Worship Skulls",
-      "source": "Frostbite Towndra(Shop)",
+      "source": "Town Shop",
       "stats": {
         "power": "4",
         "Speed": "4 (Slow)",
