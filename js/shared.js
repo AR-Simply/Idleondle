@@ -358,6 +358,32 @@ function showGoalModal(item) {
   try { document.getElementById('goalGuesses').textContent = String(argGuesses !== null ? argGuesses : (guessCount || 0)); } catch (e) {}
   modal.setAttribute('aria-hidden', 'false');
 
+  // Insert a small title image under the guesses count so all pages show the
+  // project's title inside the goal modal. Reuse the element if already present.
+  try {
+    const guessesEl = document.getElementById('goalGuesses');
+    let container = guessesEl && guessesEl.parentNode ? guessesEl.parentNode : null;
+    // Fallback: insert before the footer inside the modal panel
+    if (!container) container = modal.querySelector('.goal-panel') || modal;
+    if (container) {
+      let titleImg = document.getElementById('goalTitleImg');
+      if (!titleImg) {
+        titleImg = document.createElement('img');
+        titleImg.id = 'goalTitleImg';
+        titleImg.className = 'goal-title-img';
+        // keep image small and centered
+        titleImg.style.width = '180px';
+        titleImg.style.display = 'block';
+        titleImg.style.margin = '8px auto 0';
+      }
+      // Resolve the path relative to IMAGE_BASE so it works from any page
+      try { titleImg.src = resolveIcon('images/title.png'); } catch (e) { titleImg.src = '../images/title.png'; }
+      titleImg.alt = 'Idleondle';
+      // Insert if not already a direct sibling after the guesses container
+      if (titleImg.parentNode !== container) container.insertBefore(titleImg, guessesEl ? guessesEl.nextSibling : null);
+    }
+  } catch (e) { /* non-fatal */ }
+
   function update() {
     const now = new Date();
     const midnight = new Date(now); midnight.setHours(24,0,0,0);
