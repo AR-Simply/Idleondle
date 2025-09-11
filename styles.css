@@ -188,6 +188,36 @@ html, body {
   .emoji-note { font-size: 14px; }
 }
 
+/* Compact clue buttons on small screens to avoid overflow in the guess box */
+@media (max-width: 520px) {
+  .guess-actions {
+    flex-wrap: wrap; /* allow buttons to wrap instead of overflowing */
+    gap: 8px;
+    justify-content: center;
+  }
+  .guess-actions .clue-wrap {
+    flex: 0 1 auto;
+    min-width: 0; /* allow shrinking */
+    width: auto;
+  }
+  .guess-actions .clue-wrap .guess-btn {
+    min-width: 96px; /* smaller baseline width for buttons */
+    padding: 6px 8px;
+    font-size: 14px;
+    height: 40px;
+  }
+  .guess-actions .clue-note { font-size: 12px; }
+}
+
+@media (max-width: 360px) {
+  .guess-actions .clue-wrap .guess-btn {
+    min-width: 76px; /* extremely small phones */
+    padding: 6px 6px;
+    font-size: 13px;
+    height: 38px;
+  }
+}
+
 /* Stronger overrides to handle Twemoji-inserted elements and inline attributes */
 @media (max-width: 620px) {
   .emojibox img, .emojibox svg, .emoji-row img, .emoji-row svg, .emoji-tile > img, .emoji-tile > svg {
