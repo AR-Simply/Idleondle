@@ -1,7 +1,7 @@
 // ItemGuesser.js
 // Page-specific logic for the Item Guesser: table rendering and goal handling.
 
-import { getGoalItem, notifyGoalGuessed } from './shared.js';
+import { getGoalItem, notifyGoalGuessed, safeLower } from './shared.js';
 
 // Adds an item row to the table and handles goal detection
 export function addToTable(it) {
@@ -64,7 +64,7 @@ export function addToTable(it) {
     Wisdom: { type: 'yellow', value: it.raw.stats?.Wisdom || '0', goal: goal?.raw?.stats?.Wisdom || '0' },
     Luck: { type: 'yellow', value: it.raw.stats?.Luck || '0', goal: goal?.raw?.stats?.Luck || '0' },
     sell_price: { type: 'yellow', value: it.raw.sell_price || '-', goal: goal?.raw?.sell_price || '0' },
-    source: { type: 'red', value: it.raw.source ? it.raw.source.split('(')[0].trim() : '-', goal: goal?.raw?.source ? goal.raw.source.split('(')[0].trim() : '-' }
+  source: { type: 'red', value: it.raw.source ? String(it.raw.source).trim() : '-', goal: goal?.raw?.source ? String(goal.raw.source).trim() : '-' }
   };
 
   const cells = [ { type: 'item', html: it.name, icon: it.icon }, { type: 'red', key: 'class' }, { type: 'yellow', key: 'level_requirement' }, { type: 'yellow', key: 'power' }, { type: 'yellow', key: 'Speed' }, { type: 'yellow', key: 'Strength' }, { type: 'yellow', key: 'Agility' }, { type: 'yellow', key: 'Wisdom' }, { type: 'yellow', key: 'Luck' }, { type: 'yellow', key: 'sell_price' }, { type: 'red', key: 'source' } ];
@@ -90,7 +90,22 @@ export function addToTable(it) {
       row.appendChild(td); continue;
     }
     if (cell.type === 'red') {
-      if (info.value === info.goal) td.classList.add('cell-match'); else td.classList.add('cell-miss');
+      // For the source column, allow partial matches (e.g. guess's source contains part of goal)
+      if (cell.key === 'source') {
+        const aRaw = String(info.value || '');
+        const bRaw = String(info.goal || '');
+        const a = safeLower(aRaw);
+        const b = safeLower(bRaw);
+        const tokens = s => String(s || '').replace(/[^0-9a-z]+/g, ' ').split(/\s+/).filter(Boolean).filter(w => w.length >= 2);
+        const aTokens = new Set(tokens(a));
+        const bTokens = tokens(b);
+        try { if (a.includes('smithing') || b.includes('smithing')) console.log('IG-source-compare', { a, b, aTokens: Array.from(aTokens), bTokens }); } catch (e) {}
+        if (a === b) td.classList.add('cell-match');
+        else if (bTokens.length > 0 && bTokens.some(t => aTokens.has(t))) td.classList.add('cell-partial');
+        else td.classList.add('cell-miss');
+      } else {
+        if (info.value === info.goal) td.classList.add('cell-match'); else td.classList.add('cell-miss');
+      }
       const span = document.createElement('span'); span.className = 'cell-content'; span.textContent = info.value; td.appendChild(span); row.appendChild(td); continue;
     }
     td.textContent = info.value; row.appendChild(td);

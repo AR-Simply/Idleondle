@@ -38,6 +38,16 @@ const toWebPath = p => String(p || '')
 function encodePathSegments(p) {
   return p.split('/').map(seg => encodeURIComponent(seg)).join('/');
 }
+// Locale-safe lowercase helper: normalises and uses an explicit English locale
+// to avoid Turkish dotted/dotless I issues when comparing identifiers/keys.
+function safeLower(s) {
+  if (s === null || s === undefined) return '';
+  try {
+    return String(s).normalize('NFC').toLocaleLowerCase('en');
+  } catch (e) {
+    try { return String(s).normalize('NFC').toLowerCase(); } catch (e2) { return String(s).toLowerCase(); }
+  }
+}
 function resolveIcon(p) {
   const cleaned = toWebPath(p).replace(/^\.?\//, '');        // strip leading ./ or /
   const base = IMAGE_BASE.replace(/\/$/, '');                 // no trailing slash on base
@@ -111,9 +121,9 @@ async function loadItems() {
 }
 
 function filterItems(q) {
-  const s = q.trim().toLowerCase();
+  const s = safeLower(String(q || '').trim());
   if (!s) return [];
-  return items.filter(it => it.name.toLowerCase().includes(s)).slice(0, MAX_RESULTS);
+  return items.filter(it => safeLower(it.name).includes(s)).slice(0, MAX_RESULTS);
 }
 
 function render(list) {
@@ -432,7 +442,7 @@ function addToTable(it) {
     Wisdom: { type: 'yellow', value: it.raw.stats?.Wisdom || '0', goal: goal?.raw?.stats?.Wisdom || '0' },
     Luck: { type: 'yellow', value: it.raw.stats?.Luck || '0', goal: goal?.raw?.stats?.Luck || '0' },
     sell_price: { type: 'yellow', value: it.raw.sell_price || '-', goal: goal?.raw?.sell_price || '0' },
-    source: { type: 'red', value: it.raw.source ? it.raw.source.split('(')[0].trim() : '-', goal: goal?.raw?.source ? goal.raw.source.split('(')[0].trim() : '-' }
+  source: { type: 'red', value: it.raw.source ? String(it.raw.source).trim() : '-', goal: goal?.raw?.source ? String(goal.raw.source).trim() : '-' }
   };
 
   // Build cells (first cell is combined Item: icon + name)
@@ -532,10 +542,29 @@ function addToTable(it) {
     }
 
     if (cell.type === 'red') {
-      if (info.value === info.goal) {
-        td.classList.add('cell-match');
+      // Source column: mark partial matches (yellow) when one side contains the other
+      if (cell.key === 'source') {
+        // Tokenize and compare words: mark partial if any meaningful token from
+        // the goal appears inside the guess. This handles cases like
+        // "Smithing, (W1 Colosseum)" vs "Smithing, (Slime), Glunko The Massive".
+        const aRaw = String(info.value || '');
+        const bRaw = String(info.goal || '');
+        const a = safeLower(aRaw);
+        const b = safeLower(bRaw);
+        // split on non-alphanumeric characters, keep tokens of length >= 2
+        const tokens = s => String(s || '').replace(/[^0-9a-z]+/g, ' ').split(/\s+/).filter(Boolean).filter(w => w.length >= 2);
+        const aTokens = new Set(tokens(a));
+        const bTokens = tokens(b);
+        try { if (a.includes('smithing') || b.includes('smithing')) console.log('source-compare', { a, b, aTokens: Array.from(aTokens), bTokens }); } catch (e) { /* ignore */ }
+        if (a === b) td.classList.add('cell-match');
+        else if (bTokens.length > 0 && bTokens.some(t => aTokens.has(t))) td.classList.add('cell-partial');
+        else td.classList.add('cell-miss');
       } else {
-        td.classList.add('cell-miss');
+        if (info.value === info.goal) {
+          td.classList.add('cell-match');
+        } else {
+          td.classList.add('cell-miss');
+        }
       }
       const span = document.createElement('span');
       span.className = 'cell-content';

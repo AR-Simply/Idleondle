@@ -41,6 +41,19 @@ function encodePathSegments(p) {
   return p.split('/').map(seg => encodeURIComponent(seg)).join('/');
 }
 
+// Locale-safe lowercase helper: normalises and uses an explicit English locale
+// to avoid Turkish dotted/dotless I issues when comparing identifiers/keys.
+function safeLower(s) {
+  if (s === null || s === undefined) return '';
+  try {
+    // Normalize then force an English locale lowercase mapping for stable comparisons
+    return String(s).normalize('NFC').toLocaleLowerCase('en');
+  } catch (e) {
+    // Fallback to generic conversion if environment doesn't support locales
+    try { return String(s).normalize('NFC').toLowerCase(); } catch (e2) { return String(s).toLowerCase(); }
+  }
+}
+
 // Cookie helpers: record a win with game name and ISO timestamp.
 function setCookie(name, value, days = 365) {
   try {
@@ -60,7 +73,7 @@ function recordWin(game) {
   const payload = { game: String(game || 'unknown'), time: now, guesses };
   // Store a general last-win cookie and a per-game payload cookie (JSON).
   setCookie('idleondle_last_win', JSON.stringify(payload), 365);
-  const safeName = String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_').toLowerCase();
+  const safeName = safeLower(String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_'));
   setCookie(`idleondle_win_${safeName}`, JSON.stringify({ time: now, guesses }), 365);
   } catch (e) { /* non-fatal */ }
 }
@@ -82,7 +95,7 @@ function getCookie(name) {
 }
 function hasWinToday(game) {
   try {
-    const key = `idleondle_win_${String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_').toLowerCase()}`;
+  const key = `idleondle_win_${safeLower(String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_'))}`;
     const val = getCookie(key);
     if (!val) return false;
     // Support both legacy ISO string values and current JSON payloads
@@ -105,7 +118,7 @@ function hasWinToday(game) {
 
 function getWinPayload(game) {
   try {
-    const key = `idleondle_win_${String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_').toLowerCase()}`;
+  const key = `idleondle_win_${safeLower(String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_'))}`;
     const v = getCookie(key);
     if (!v) return null;
     try { const parsed = JSON.parse(v); if (parsed && parsed.time) return parsed; } catch (e) { /* ignore */ }
@@ -118,10 +131,11 @@ function getWinPayload(game) {
 
 function detectGameFromPath() {
   try {
-    const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
-    if (path.toLowerCase().includes('cardguesser')) return 'card';
-    if (path.toLowerCase().includes('monsterguesser') || path.toLowerCase().includes('monster')) return 'monster';
-    if (path.toLowerCase().includes('harditemguesser') || path.toLowerCase().includes('harditem')) return 'hard_item';
+  const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
+  const p = safeLower(path);
+  if (p.includes('cardguesser')) return 'card';
+  if (p.includes('monsterguesser') || p.includes('monster')) return 'monster';
+  if (p.includes('harditemguesser') || p.includes('harditem')) return 'hard_item';
     return 'item';
   } catch (e) { return 'item'; }
 }
@@ -240,15 +254,15 @@ function filterItems(q) {
   const s = (q || '').trim();
   if (!s) return [];
   const isCardPage = (location.pathname || '').endsWith('cardGuesser.html') || (location.href || '').includes('cardGuesser');
-  const normalizeForCard = (str) => String(str || '').replace(/\bcard\b/ig, '').replace(/\s{2,}/g, ' ').trim().toLowerCase();
+  const normalizeForCard = (str) => safeLower(String(str || '').replace(/\bcard\b/ig, '').replace(/\s{2,}/g, ' ').trim());
   if (isCardPage) {
     const qs = normalizeForCard(s);
     // If stripping 'card' from the query leaves nothing, don't return everything
     if (!qs) return [];
     return items.filter(it => normalizeForCard(it.name).includes(qs)).slice(0, MAX_RESULTS);
   }
-  const sl = s.toLowerCase();
-  return items.filter(it => it.name.toLowerCase().includes(sl)).slice(0, MAX_RESULTS);
+  const sl = safeLower(s);
+  return items.filter(it => safeLower(it.name).includes(sl)).slice(0, MAX_RESULTS);
 }
 
 // Render dropdown results; calls onSelect(item) when an item is chosen.
@@ -456,11 +470,12 @@ function notifyGoalGuessed(it) {
   // Record the win in cookies for analytics/local tracking across pages.
   try {
     // Detect game type from pathname or href. Default to 'item'.
-    const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
-    let game = 'item';
-    if (path.toLowerCase().includes('cardguesser')) game = 'card';
-    else if (path.toLowerCase().includes('monsterguesser') || path.toLowerCase().includes('monster')) game = 'monster';
-    else if (path.toLowerCase().includes('harditemguesser') || path.toLowerCase().includes('harditem')) game = 'hard_item';
+  const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
+  let game = 'item';
+  const p = safeLower(path);
+  if (p.includes('cardguesser')) game = 'card';
+  else if (p.includes('monsterguesser') || p.includes('monster')) game = 'monster';
+  else if (p.includes('harditemguesser') || p.includes('harditem')) game = 'hard_item';
     // Allow page modules to specify a friendly game name on the item object (optional)
   if (it && it._gameName) game = it._gameName;
   recordWin(game, Number(guessCount) || 0);
@@ -769,5 +784,7 @@ export { filterItems, incrementGuessCount, updateClueState, getGoalItem };
 function getGoalItem() { return goalItem; }
 
 export { notifyGoalGuessed };
+// Export locale helper for other modules
+export { safeLower };
 
 // Default export is not used; consumers should call initShared then use other exports.

@@ -463,6 +463,8 @@ html, body {
 .type-yellow, .type-red, .type-green, .type-none { position: relative; }
 .cell-match { background: #2e7d32 !important; color: #fff; }
 .cell-miss { background: #b71c1c !important; color: #fff; }
+/* Partial match: when the guess's source contains part of the goal's source */
+.cell-partial { background: #f39c12 !important; color: #fff !important; }
 .table-panel td, .table-panel th {
   padding: 6px;
   box-sizing: border-box;
@@ -540,7 +542,7 @@ html, body {
 #itemTable th:nth-child(8), #itemTable td:nth-child(8) { width: 64px; }
 #itemTable th:nth-child(9), #itemTable td:nth-child(9) { width: 64px; }
 #itemTable th:nth-child(10), #itemTable td:nth-child(10) { width: 128px; }
-#itemTable th:nth-child(11), #itemTable td:nth-child(11) { width: 300px; }
+#itemTable th:nth-child(11), #itemTable td:nth-child(11) { width: 420px; }
 
 .item-icon { width:64px; height:64px; object-fit:contain; background:#0e1120; border:1px solid var(--border); border-radius:6px; }
 .icon-cell { width: 96px; text-align: center; }
