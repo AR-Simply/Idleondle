@@ -232,7 +232,7 @@ function selectGoalItem() {
   let dayIndex = getLocalDayIndex();
 
   // Which cycle are we in? (reshuffle every full pass)
-  let cycle = Math.floor(dayIndex / items.length)+3;
+  let cycle = Math.floor(dayIndex / items.length)+10;
 
   // Shuffle deterministically for this cycle
   let shuffled = seededShuffle(items, cycle);
