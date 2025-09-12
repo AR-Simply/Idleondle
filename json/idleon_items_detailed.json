@@ -3468,7 +3468,7 @@
       "level_requirement": "15",
       "sell_price": 10525,
       "type": "Shoes",
-      "source": "Smithing, (W1 Colosseum)",
+      "source": "Smithing, Colosseum",
       "stats": {
         "Strength": "2",
         "Agility": "2",
@@ -3714,7 +3714,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Pendants",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "3",
         "Strength": "10",
@@ -3730,7 +3730,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Pendants",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "5"
       },
@@ -3753,7 +3753,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Pendants",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "Strength": "10",
         "Agility": "10",
@@ -4075,7 +4075,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Rings",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "2",
         "Defence": "3"
@@ -4137,7 +4137,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Rings",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "5",
         "Defence": "5"
@@ -4162,7 +4162,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Rings",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "4",
         "Defence": "4"
@@ -4355,7 +4355,7 @@
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Rings",
-      "source": "Gem Shop(Limited)",
+      "source": "Gem Shop",
       "stats": {
         "power": "3",
         "Defence": "3"

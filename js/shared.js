@@ -187,6 +187,8 @@ function detectGameFromPath() {
   try {
   const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
   const p = safeLower(path);
+  // Detect hard-card pages explicitly so hard mode uses a separate cookie/identity
+  if (p.includes('hardcardguesser') || p.includes('hardcard')) return 'hard_card';
   if (p.includes('cardguesser')) return 'card';
   if (p.includes('monsterguesser') || p.includes('monster')) return 'monster';
   if (p.includes('harditemguesser') || p.includes('harditem')) return 'hard_item';
@@ -659,36 +661,57 @@ export async function initShared(config = {}) {
       ensureBtn(indexHref, 'btn-items', '../images/Helmets/Copper Helmet.png', 'Item Guesser');
       ensureBtn(cardHref, 'btn-cards', '../images/card.png', 'Card Guesser');
       ensureBtn(monsterHref, 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser');
-  // If this is the hard-item guesser page, change the left page button to a red "hard" button
+  // If this is a hard-mode page, change the appropriate page button to a red "hard" button
     try {
-    // Detect hard-mode page more reliably: filename in URL OR explicit marker in
-    // the document (data-hard attribute or [data-hard] element). This makes the
-    // detection robust when the deployed site rewrites paths or hides filenames.
-    const isHardPage = (location.pathname || '').endsWith('HardItemGuesser.html')
-      || (location.href || '').includes('HardItemGuesser')
-      || (typeof document !== 'undefined' && (document.body?.dataset?.hard === 'true' || document.querySelector('[data-hard]')));
-    if (isHardPage) {
-      const prefix = String(imageBase || '').replace(/\/$/, '');
-      const btnItemsEl = wrap.querySelector('#btn-items');
-      if (btnItemsEl) {
-        const imgEl = btnItemsEl.querySelector('img');
-        if (imgEl) {
-          const cleaned = 'Premium Helmets/Diamon Horns.png';
-          imgEl.src = prefix ? `${prefix}/${cleaned}` : cleaned;
-          imgEl.alt = 'Diamon Horns';
+      // Determine hard type: 'item' for HardItemGuesser, 'card' for HardCardGuesser,
+      // or allow pages to explicitly set document.body.dataset.hard = 'item'|'card'.
+      let hardType = null;
+      if ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('HardItemGuesser')) hardType = 'item';
+      if ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('HardCardGuesser')) hardType = 'card';
+      if (typeof document !== 'undefined' && document.body?.dataset?.hard) hardType = document.body.dataset.hard;
+
+      if (hardType) {
+        const prefix = String(imageBase || '').replace(/\/$/, '');
+        if (hardType === 'item') {
+          const btnItemsEl = wrap.querySelector('#btn-items');
+          if (btnItemsEl) {
+            const imgEl = btnItemsEl.querySelector('img');
+            if (imgEl) {
+              const cleaned = 'Premium Helmets/Diamon Horns.png';
+              imgEl.src = prefix ? `${prefix}/${cleaned}` : cleaned;
+              imgEl.alt = 'Diamon Horns';
+            }
+            btnItemsEl.classList.add('hard');
+          }
         }
-        btnItemsEl.classList.add('hard');
+        if (hardType === 'card') {
+          const btnCardsEl = wrap.querySelector('#btn-cards');
+          if (btnCardsEl) {
+            const imgEl = btnCardsEl.querySelector('img');
+            if (imgEl) {
+              const cleaned = 'hardcard.png';
+              imgEl.src = prefix ? `${prefix}/${cleaned}` : cleaned;
+              imgEl.alt = 'Hard Card';
+            }
+            btnCardsEl.classList.add('hard');
+          }
+        }
       }
-    }
-  } catch (e) { /* non-fatal */ }
+    } catch (e) { /* non-fatal */ }
   // If we created the element, insert it after the title. If it already
   // existed in the HTML, it should already be in place.
   if (!document.querySelector('.page-switch')) titleEl.insertAdjacentElement('afterend', wrap);
   else if (!wrap.parentNode) titleEl.insertAdjacentElement('afterend', wrap);
   // Determine current page and set visual states on switcher buttons.
-  const isCard = location.pathname.endsWith('cardGuesser.html') || location.href.includes('cardGuesser.html') || location.href.includes('cardGuesser');
-  const isMonster = location.pathname.endsWith('monsterGuesser.html') || location.href.includes('monsterGuesser.html') || location.href.includes('monsterGuesser');
-  const isHardPage = (location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('HardItemGuesser') || (typeof document !== 'undefined' && (document.body?.dataset?.hard === 'true' || document.querySelector('[data-hard]')));
+  const _pathname = (location.pathname || '').toLowerCase();
+  const _href = (location.href || '').toLowerCase();
+  const isCard = _pathname.endsWith('cardguesser.html') || _href.includes('cardguesser.html') || _href.includes('cardguesser');
+  const isMonster = _pathname.endsWith('monsterguesser.html') || _href.includes('monsterguesser.html') || _href.includes('monsterguesser');
+  // Recompute hardType for later decisions (keep consistent with earlier detection)
+  const hardType = (typeof document !== 'undefined' && document.body?.dataset?.hard) ? document.body.dataset.hard :
+    ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('HardItemGuesser')) ? 'item' :
+    ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('HardCardGuesser')) ? 'card' : null;
+  const isHardAny = !!hardType;
   const isItems = !isCard && !isMonster;
 
   const btnItems = document.getElementById('btn-items');
@@ -698,27 +721,29 @@ export async function initShared(config = {}) {
   // reset classes/styles
   [btnItems, btnCards, btnMonster].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
 
-  // Mark hard page button (left one) as red if current page is hard-mode or if the target is the hard page
-  if (isHardPage && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
+  // Mark hard page button red depending on hard type
+  if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
+  if (hardType === 'card' && btnCards) { btnCards.classList.add('hard'); btnCards.style.background = '#c0392b'; }
 
   // Mark completed (green) if the per-game cookie shows a win today
   try {
   // Do not mark the hard-mode page button as complete when we're on hard-mode;
   // hard mode must remain visibly red. Only mark item/card as complete on non-hard pages.
-  if (!isHardPage && btnItems && hasWinToday('item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
-    if (btnCards && hasWinToday('card')) { btnCards.classList.add('complete'); btnCards.style.background = '#2ecc71'; }
+  if (hardType !== 'item' && btnItems && hasWinToday('item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
+    if (hardType !== 'card' && btnCards && hasWinToday('card')) { btnCards.classList.add('complete'); btnCards.style.background = '#2ecc71'; }
     if (btnMonster && hasWinToday('monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
     // Hard-item completed may be tracked under 'hard_item'
-  if (!isHardPage && btnItems && hasWinToday('hard_item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
+  if (hardType !== 'item' && btnItems && hasWinToday('hard_item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
   } catch (e) { /* non-fatal */ }
 
   // Mark active (yellow) -- higher priority than complete so we override background
   // If this is the hard-mode page, keep the left button red instead of marking it active
-  if (isItems && btnItems && !isHardPage) { btnItems.classList.add('active'); btnItems.style.background = '#f1c40f'; }
-  if (isCard && btnCards) { btnCards.classList.add('active'); btnCards.style.background = '#f1c40f'; }
+  if (isItems && btnItems && hardType !== 'item') { btnItems.classList.add('active'); btnItems.style.background = '#f1c40f'; }
+  if (isCard && btnCards && hardType !== 'card') { btnCards.classList.add('active'); btnCards.style.background = '#f1c40f'; }
   if (isMonster && btnMonster) { btnMonster.classList.add('active'); btnMonster.style.background = '#f1c40f'; }
-  // Ensure hard-mode left button remains red (override) when detected
-  if (isHardPage && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
+  // Ensure hard-mode buttons remain red (override) when detected
+  if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
+  if (hardType === 'card' && btnCards) { btnCards.classList.add('hard'); btnCards.style.background = '#c0392b'; }
     } catch (e) { console.warn('Page switch render failed', e); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => renderPageSwitch(config.imageBase || IMAGE_BASE)); else renderPageSwitch(config.imageBase || IMAGE_BASE);

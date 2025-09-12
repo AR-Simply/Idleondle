@@ -12,7 +12,6 @@
   <link rel="apple-touch-icon" href="images/icon.png">
 
   <link rel="stylesheet" href="styles.css">
-<script defer src="https://cloud.umami.is/script.js" data-website-id="ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3"></script>
   <meta name="google-adsense-account" content="ca-pub-4897247326207368">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4897247326207368"
      crossorigin="anonymous"></script>
@@ -135,7 +134,7 @@
             </div>
             <!-- Bottom action buttons: Hard Item Guesser (left) and Next Game (right) -->
             <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
-              <a href="html/HardItemGuesser.html" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+              <a href="html/HardItemGuesser.html" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
                 <img src="images/Premium Helmets/Diamon Horns.png" alt="Diamon Horns" style="width:22px;height:22px;object-fit:contain;" />
                 <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
               </a>
@@ -191,6 +190,21 @@
       </div>
     </footer>
 
+    <!-- Consent modal for Umami (appears if no umami_consent cookie) -->
+    <div id="consentBackdrop" class="consent-backdrop" hidden></div>
+    <div id="consentBanner" class="consent-modal" role="dialog" aria-modal="true" aria-label="Cookie consent" hidden>
+      <div class="consent-modal-inner">
+        <h3 style="margin:0 0 8px 0;">Privacy & Analytics</h3>
+        <div class="consent-text">
+          We use a privacy-friendly analytics script (Umami) to understand site usage. Please opt-in so we can see how many uses the website. You can change this later in the Privacy Policy.
+        </div>
+        <div class="consent-actions">
+          <button id="consentAccept" class="consent-btn consent-accept">Accept</button>
+          <button id="consentDecline" class="consent-btn consent-decline">Decline</button>
+        </div>
+      </div>
+    </div>
+
         <!-- Privacy Policy modal -->
         <div id="privacyModal" class="goal-modal" aria-hidden="true">
           <div class="goal-panel">
@@ -206,8 +220,14 @@
 
                 <p>We do set a small, local cookie to support game UX: <code>idleondle_last_win</code> and per-game cookies named <code>idleondle_win_<em>&lt;game&gt;</em></code>. These cookies store a JSON payload containing the game identifier, an ISO timestamp of when you completed the daily puzzle, and the number of guesses you used. The cookies are used only locally by the site to show that you've already completed today's puzzle, automatically reveal the answer, and display the guess count in the post-win modal.</p>
 
-                <p>These cookies are non-personal, do not contain any identifiers that would reasonably identify you, are not shared with third parties by this site, and are retained locally for 365 days to allow users to revisit prior wins on the same device. For clarity, this is separate from advertising cookies used by Google AdSense (see below).</p>
+                <p>These cookies are non-personal, do not contain any identifiers that would reasonably identify you, are not shared with third parties by this site, and are retained locally for 365 days to allow users to revisit prior wins on the same device. For clarity, this is separate from advertising cookies used by Google AdSense or Umami (see below).</p>
 
+                <h3>Analytics (Umami)</h3>
+                 <p>We use <strong>Umami</strong> for privacy-focused, anonymous analytics. Umami only collects non-identifying information such as pageviews, referrers, timestamps, and basic device/browser metadata. No names, email addresses, or persistent personal identifiers are collected or stored. The Umami script is loaded only if you explicitly opt in via this Privacy Policy ("Accept analytics"). You can revoke your choice at any time by returning to this Privacy Policy and selecting "Disable analytics".</p>
+                <div style="display:flex;gap:8px;justify-content:center;margin:12px 0 0 0;">
+                          <button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
+                          <button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
+                        </div>
                 <h3>Google AdSense</h3>
                 <p>This website displays advertisements through Google AdSense. Google, as a third-party vendor, uses cookies to serve ads based on users’ prior visits to this and other websites. Google’s use of advertising cookies enables it and its partners to serve personalized ads to users based on their interests.</p>
                 <p>Users in the European Union will be presented with a consent mechanism before personalized ads are shown. Consent choices can be managed or withdrawn at any time. Non-personalized ads may also be served.</p>
@@ -248,6 +268,110 @@
           if (ItemGuesser && typeof ItemGuesser.addToTable === 'function') ItemGuesser.addToTable(item);
         }
       });
+    </script>
+
+    <script>
+      // Cookie helpers
+      function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie = name + '=' + encodeURIComponent(value) + '; path=/; expires=' + expires + '; SameSite=Lax';
+      }
+      function getCookie(name) {
+        return document.cookie.split('; ').reduce((r, v) => {
+          const parts = v.split('=');
+          return parts[0] === name ? decodeURIComponent(parts.slice(1).join('=')) : r
+        }, undefined);
+      }
+
+      // Dynamically inject Umami script
+      function loadUmami() {
+        if (document.querySelector('script[data-website-id]')) return; // already loaded
+        const s = document.createElement('script');
+        s.defer = true;
+        s.src = 'https://cloud.umami.is/script.js';
+        s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3');
+        document.head.appendChild(s);
+      }
+
+      // Consent banner behaviour (defensive)
+      (function(){
+        const banner = document.getElementById('consentBanner');
+        const backdrop = document.getElementById('consentBackdrop');
+        const accept = document.getElementById('consentAccept');
+        const decline = document.getElementById('consentDecline');
+  // Normalize consent cookie: treat anything but explicit 'yes' or 'no' as unknown
+  let consent = getCookie('umami_consent');
+  if (consent !== 'yes' && consent !== 'no') consent = undefined;
+
+        function showModal() {
+          // Only show if both backdrop and banner exist; otherwise do nothing
+          if (backdrop) { backdrop.hidden = false; backdrop.setAttribute('aria-hidden','false'); }
+          if (banner)  { banner.hidden = false;  banner.setAttribute('aria-hidden','false'); }
+        }
+
+        function hideModal() {
+          if (backdrop) { backdrop.hidden = true; backdrop.setAttribute('aria-hidden','true'); }
+          if (banner)  { banner.hidden = true;  banner.setAttribute('aria-hidden','true'); }
+        }
+
+        // Defensive: if required elements are missing, ensure nothing remains visible
+        function safeHideAll() {
+          if (backdrop) { backdrop.hidden = true; backdrop.setAttribute('aria-hidden','true'); }
+          if (banner) { banner.hidden = true; banner.setAttribute('aria-hidden','true'); }
+        }
+
+        // If consent unknown, show only when all parts are present and interactive
+        if (consent === undefined) {
+          if (banner && backdrop && accept && decline) {
+            showModal();
+          } else {
+            // Missing element(s) - avoid showing a backdrop without a banner
+            safeHideAll();
+            console.warn('Consent UI: missing elements, not showing modal to avoid blocking the page.');
+          }
+        } else if (consent === 'yes') {
+          // user previously opted in
+          loadUmami();
+        } else {
+          // Explicitly opted out: ensure UI hidden
+          safeHideAll();
+        }
+
+        // Wire up handlers only if the buttons exist
+        if (accept && typeof accept.addEventListener === 'function') {
+          accept.addEventListener('click', function(){
+            try {
+              setCookie('umami_consent','yes',365);
+              hideModal();
+              loadUmami();
+            } catch (e) {
+              console.error('Error handling consent accept:', e);
+            }
+          });
+        }
+
+        if (decline && typeof decline.addEventListener === 'function') {
+          decline.addEventListener('click', function(){
+            try {
+              setCookie('umami_consent','no',365);
+              hideModal();
+            } catch (e) {
+              console.error('Error handling consent decline:', e);
+            }
+          });
+        }
+      })();
+        // Expose convenience functions to allow privacy modal buttons to change consent
+        function setConsentYes() { setCookie('umami_consent','yes',365); loadUmami(); }
+        function setConsentNo() { setCookie('umami_consent','no',365); }
+
+        // Wire privacy modal buttons if present
+        (function(){
+          const pa = document.getElementById('privacyAccept');
+          const pd = document.getElementById('privacyDecline');
+          if (pa) pa.addEventListener('click', function(){ setConsentYes(); document.getElementById('privacyModal').setAttribute('aria-hidden','true'); });
+          if (pd) pd.addEventListener('click', function(){ setConsentNo(); document.getElementById('privacyModal').setAttribute('aria-hidden','true'); });
+        })();
     </script>
   </body>
 </html>

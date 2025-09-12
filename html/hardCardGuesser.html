@@ -30,13 +30,13 @@
 
     <div class="top-row">
       <div class="guess-box combo-guess" id="guessBox">
-        <div class="guess-title">Guess today's IdleOn card!</div>
+        <div class="guess-title">Guess today's HARD IdleOn card!</div>
         <div class="guess-actions">
-
           <div class="clue-wrap">
-            <button id="guessBtn2" class="guess-btn" aria-label="Category clue">Category Clue</button>
-            <div class="clue-note" id="note2"></div>
+            <button id="colorBtn" class="guess-btn" aria-label="Color clue" disabled>Color Clue</button>
+            <div class="clue-note" id="noteColor"></div>
           </div>
+         
         </div>
 
         <!-- About modal -->
@@ -101,10 +101,6 @@
         </div>
         <!-- Add action button linking to Monster Guesser (carrotman icon) -->
         <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
-          <a href="hardCardGuesser.html" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
-                <img src="../images/hardcard.png" alt="Hard Card" style="width:22px;height:22px;object-fit:contain;" />
-                <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
-              </a>
           <a href="monsterGuesser.html" class="guess-btn" id="toMonsterBtn" aria-label="Monster Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
             <img src="../images/Enemies/carrotman-6_thumb.png" alt="carrotman" style="width:22px;height:22px;object-fit:contain;" />
             <span style="color:var(--text);font-weight:800;font-size:15px;">Next game</span>
@@ -121,7 +117,7 @@
         <div class="goal-body">
           <div style="text-align:left; font-size:14px; color:#111;">
             <p>Daily guessing games from the game "IdleOn". Games changes at midnight in your timezone.</p>
-            <p>The card unblurs slightly for each guess. When you guess correctly, the card will be fully revealed.</p>
+            <p>On hard mode the card is greyscale and unblurs a smaller amount for each guess.</p>
            
             <p>How fast can you discover what card it is?</p>
             
@@ -194,7 +190,18 @@
   </div>
 
   <script type="module">
-    import '../js/cardGuesser.js';
+     // Initialize shared with a hard dataset + seed offset
+     import { initShared } from '../js/shared.js';
+     import '../js/cardGuesser.js';
+  document.body.dataset.hard = 'card'; // mark page as hard-card for robust detection by shared modules
+    // Initialize shared with hard-mode settings: use a separate JSON and seedOffset
+    initShared({
+      dataUrl: '../json/idleon_cards.json',
+      imageBase: '../images',
+      // keep clue unlocks similar to cardGuesser but optionally harder
+      clueUnlocks: { category: 10 },
+      seedOffset: 999
+    });
   </script>
   <script>
     (function(){
