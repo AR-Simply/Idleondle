@@ -794,6 +794,30 @@ body:not([data-hard]) #helpModal .goal-body {
   font-size: 13px;
 }
 
+/* Footer follow box */
+.footer-follow-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(180deg, rgba(23,26,44,0.95), rgba(23,26,44,0.9));
+  padding: 12px 18px 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35), 0 1px 2px rgba(255,255,255,0.07) inset;
+  max-width: 520px;
+}
+.footer-follow-box .kofi-follow-link {
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #fff;
+  text-align: center;
+  line-height: 1.25;
+  letter-spacing: .3px;
+}
+.footer-follow-box .kofi-follow-link:hover { color: #ffd27a; text-shadow: 0 0 4px rgba(255,210,122,0.4); }
+
 .kofi-container {
   max-width: 420px;
   margin: 0 auto;

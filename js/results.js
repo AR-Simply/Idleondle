@@ -168,6 +168,14 @@ function renderResultsBox() {
 	footer.appendChild(timerWrap);
 
 	// Ko-fi support link
+	const kofiMsg = document.createElement('div');
+	kofiMsg.textContent = 'Follow on Ko-fi for development updates and news';
+	kofiMsg.style.fontSize = '13px';
+	kofiMsg.style.fontWeight = '600';
+	kofiMsg.style.color = 'var(--muted)';
+	kofiMsg.style.marginTop = '8px';
+	kofiMsg.style.textAlign = 'center';
+	footer.appendChild(kofiMsg);
 	const kofi = document.createElement('div');
 	kofi.style.marginTop = '6px';
 	kofi.innerHTML = "<a href='https://ko-fi.com/S6S51KOEMK' target='_blank' rel='noopener'><img height='36' style='border:0;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' alt='Buy Me a Coffee at ko-fi.com' /></a>";
