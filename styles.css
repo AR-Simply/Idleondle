@@ -413,6 +413,54 @@ html, body {
   .guess-title { font-size: 22px; padding: 8px 0; }
 }
 
+  /* Results box (Daily Results) */
+  .results-box {
+    background: linear-gradient(180deg, rgba(23,26,44,0.95), rgba(23,26,44,0.9));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 420px; /* narrow column */
+    min-height: 320px; /* make it vertically long-ish */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .results-box-header { display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:12px; width:100%; }
+  .results-box-header h2 { text-align:center; width:100%; }
+  .results-box-header h2 { margin:0; font-size:18px; letter-spacing:0.6px; }
+  .results-box .small-btn { background: transparent; color: var(--accent); border: 1px solid var(--border); padding:6px 8px; border-radius:8px; cursor:pointer; font-weight:700; }
+  .results-list { min-height:48px; color:var(--text); }
+  .results-items { display:flex; flex-direction:column; gap:4px; }
+  .results-row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:8px 10px; border-radius:10px; background: rgba(0,0,0,0.12); border:1px solid rgba(255,255,255,0.02); }
+  /* Single definition for row-line: reduced vertical padding */
+  .results-row-line { justify-content: space-between; gap:12px; padding:6px 10px; }
+  .results-line-left { flex: 1 1 auto; display:flex; align-items:center; justify-content:flex-start; }
+  .results-line-right { flex: 0 0 auto; display:flex; align-items:center; justify-content:flex-end; min-width:80px; }
+  .results-game-line { font-weight:800; font-size:15px; letter-spacing:.5px; }
+  .results-meta-line { font-weight:700; font-size:15px; color:var(--accent); min-width:32px; text-align:right; }
+  .hard-mode { color:#c0392b !important; }
+
+  /* Enhanced Daily Results title */
+  .results-box-header.fancy-title { flex-direction: column; gap:6px; }
+  .results-title-wrap { display:flex; align-items:center; justify-content:center; gap:12px; position:relative; }
+  .results-title-wrap.no-gems { gap:0; }
+  .results-title-text { margin:0; font-size:32px; font-weight:900; letter-spacing:1.3px; background:linear-gradient(90deg,#ffd479,#ff9f43,#ff5f6d); -webkit-background-clip:text; background-clip:text; color:transparent; position:relative; text-shadow:0 2px 6px rgba(0,0,0,0.25); }
+  .results-title-text.large { font-size:40px; letter-spacing:1.6px; }
+  .results-title-text .accent { background:linear-gradient(90deg,#6fa8ff,#7aa2ff,#9fb8ff); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .results-subtitle { font-size:12px; text-transform:uppercase; letter-spacing:2px; color:var(--muted); font-weight:600; opacity:0.9; }
+  .results-left { display:flex; flex-direction:column; gap:4px; align-items:center; }
+  .results-game { font-weight:800; font-size:16px; color:var(--text); text-align:center; }
+  .results-meta { color:var(--muted); font-size:13px; }
+  .results-right { display:flex; align-items:center; gap:8px; }
+  .results-gem { width:28px; height:28px; object-fit:contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); }
+  .rank-icon { width:36px; height:36px; position:relative; top:-7px; }
+  .results-end-section { text-align:center; }
+
+
 .guess-actions {
   display: flex;
   align-items: center;

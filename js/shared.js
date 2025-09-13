@@ -185,6 +185,8 @@ function getWinPayload(game) {
 
 function detectGameFromPath() {
   try {
+  // Allow pages to explicitly set the current game via <body data-game="pack">.
+  try { const explicit = document?.body?.dataset?.game; if (explicit) return safeLower(String(explicit)); } catch (e) {}
   const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
   const p = safeLower(path);
   // Detect hard-card pages explicitly so hard mode uses a separate cookie/identity
@@ -574,12 +576,9 @@ function notifyGoalGuessed(it) {
   // Record the win in cookies for analytics/local tracking across pages.
   try {
     // Detect game type from pathname or href. Default to 'item'.
-  const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
+  // Use unified detection helper so hard-card pages are distinguished correctly
   let game = 'item';
-  const p = safeLower(path);
-  if (p.includes('cardguesser')) game = 'card';
-  else if (p.includes('monsterguesser') || p.includes('monster')) game = 'monster';
-  else if (p.includes('harditemguesser') || p.includes('harditem')) game = 'hard_item';
+  try { game = detectGameFromPath(); } catch (e) { /* fallback keeps item */ }
     // Allow page modules to specify a friendly game name on the item object (optional)
   if (it && it._gameName) game = it._gameName;
   recordWin(game, Number(guessCount) || 0);
@@ -734,6 +733,8 @@ export async function initShared(config = {}) {
     if (btnMonster && hasWinToday('monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
     // Hard-item completed may be tracked under 'hard_item'
   if (hardType !== 'item' && btnItems && hasWinToday('hard_item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
+    // Hard-card completed may be tracked under 'hard_card'
+  if (hardType !== 'card' && btnCards && hasWinToday('hard_card')) { btnCards.classList.add('complete'); btnCards.style.background = '#2ecc71'; }
   } catch (e) { /* non-fatal */ }
 
   // Mark active (yellow) -- higher priority than complete so we override background

@@ -6,13 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="../styles.css">
+  <style>
+  /* Reveal overlay styles for packGuesser */
+  .reveal-wrap { position: relative; display: inline-block; max-width: 100%; overflow: hidden; }
+    .reveal-wrap img { display: block; width: 100%; height: auto; }
+  .tile-overlay { position: absolute; left: 0; top: 0; right: 0; bottom: 0; pointer-events: none; z-index: 1; }
+  .tile { position: absolute; background: rgba(0,0,0,0.94); opacity: 1; transition: opacity 380ms ease, transform 360ms ease; will-change: opacity, transform; z-index: 2; }
+  /* Ensure dropdown/input sit above the reveal overlay */
+  .combo, .dropdown { position: relative; z-index: 9999; }
+    .tile.revealed { opacity: 0; transform: translateY(-6px) scale(0.98); }
+    @media (prefers-reduced-motion: reduce) { .tile { transition: none; } .tile.revealed { transform: none; } }
+  </style>
   <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png">
   <link rel="apple-touch-icon" href="../images/icon.png">
 
   <meta name="google-adsense-account" content="ca-pub-4897247326207368">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4897247326207368" crossorigin="anonymous"></script>
 </head>
-<body>
+<body data-game="pack">
   <div class="center">
   <img src="../images/title.png" alt="Idleondle title" class="site-title" />
   <!-- Static page switcher -->
@@ -131,6 +142,14 @@
       </div>
     </div>
 
+    
+      <!-- Daily pack reveal placed under the dropdown/input as requested -->
+      <div class="reveal-wrap" id="revealWrap">
+        <img id="packImage" alt="Daily Pack" src="" />
+        <div class="tile-overlay" id="tileOverlay" aria-hidden="true"></div>
+      </div>
+    </div>
+
   </div> <!-- .center -->
 
   <footer class="site-footer" role="contentinfo">
@@ -185,13 +204,23 @@
           <h3>Updates</h3>
           <p>This Privacy Policy may be updated to remain compliant with legal requirements. Any changes will be reflected on this page with a revised effective date.</p>
         </div>
-    
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin:12px 0 0 0;">
+          <button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
+          <button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
+        </div>
       </div>
     </div>
   </div>
 
   <script type="module">
-    import '../js/cardGuesser.js';
+    // Initialize shared loader to use the packs JSON so a deterministic daily
+    // pack is selected before packGuesser runs.
+    import { initShared } from '../js/shared.js';
+    (async () => {
+      await initShared({ dataUrl: '../json/idleon_packs.json', imageBase: '../' });
+      // After shared is initialized, load the packGuesser module which will read getGoalItem()
+      await import('../js/packGuesser.js');
+    })();
   </script>
   <script>
     (function(){

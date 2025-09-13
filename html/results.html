@@ -28,16 +28,20 @@
     </a>
   </div>
 
-    <div class="top-row">
-      <div class="guess-box combo-guess" id="guessBox">
-        <div class="guess-title">Guess today's IdleOn card!</div>
-        <div class="guess-actions">
+  <!-- Daily results box (shows wins from cookies) -->
+  <div id="resultsbox" class="results-box" aria-live="polite" aria-atomic="true" style="margin:14px auto 24px; max-width:720px;">
+    <div class="results-box-header fancy-title">
+      <div class="results-title-wrap no-gems">
+        <h2 class="results-title-text large">Daily <span class="accent">Results</span></h2>
+      </div>
+      <div class="results-subtitle">Share your victories!</div>
+    </div>
+    <div id="resultsList" class="results-list">
+      <em>Loading...</em>
+    </div>
+  </div>
 
-          <div class="clue-wrap">
-            <button id="guessBtn2" class="guess-btn" aria-label="Category clue">Category Clue</button>
-            <div class="clue-note" id="note2"></div>
-          </div>
-        </div>
+  
 
         <!-- About modal -->
         <div id="aboutModal" class="goal-modal" aria-hidden="true">
@@ -62,28 +66,9 @@
         </div>
       </div>
 
-      <div class="side-box" id="sideBox" aria-hidden="true">
-        <button id="helpBtn" class="icon-btn" aria-label="Question button">
-          <img src="../images/question.png" alt="question" />
-        </button>
-        <button id="aboutBtn" class="icon-btn" aria-label="Info button">
-          <img src="../images/info.png" alt="info" />
-        </button>
-        <a class="icon-btn" href="https://ko-fi.com/S6S51KOEMK" target="_blank" rel="noopener noreferrer" aria-label="Ko-fi link">
-          <img src="../images/kofi.png" alt="Buy Me a Coffee" style="height:24px;border:0;" />
-        </a>
-      </div>
-    </div>
+ 
 
-    <div class="combo" id="combo">
-      <div class="input-wrap">
-        <input id="search" type="text" placeholder="Type the name of a card..." autocomplete="off" />
-      </div>
-      <div class="dropdown" id="dropdown">
-        <ul class="results" id="results"></ul>
-      </div>
-    </div>
-
+   
 
     <!-- Goal found modal (shared) -->
     <div id="goalModal" class="goal-modal" aria-hidden="true">
@@ -191,7 +176,7 @@
   </div>
 
   <script type="module">
-    import '../js/cardGuesser.js';
+    import '../js/results.js';
   </script>
   <script>
     (function(){

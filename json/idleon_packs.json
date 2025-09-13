@@ -1,0 +1,100 @@
+{
+  "Packs": {
+    "Ancient Echoes Pack": {
+      "icon": "images\\Packs\\Ancient_Echoes_Pack.png"
+    },
+    "Auto-Loot Pack": {
+      "icon": "images\\Packs\\Auto_-Loot_Pack.png"
+    },
+    "Blazing Star Anniversary Pack": {
+      "icon": "images\\Packs\\Blazing_Star_Anniversary_Pack.png"
+    },
+    "Bloomin 27 Pet Pack Bundle": {
+      "icon": "images\\Packs\\Bloomin_27_Pet_Pack_Bundle.png"
+    },
+    "Calm Serenity Pack": {
+      "icon": "images\\Packs\\Calm_Serenity_Pack.png"
+    },
+    "Deathbringer Pack": {
+      "icon": "images\\Packs\\Deathbringer_Pack.png"
+    },
+    "Dungeon Bundle": {
+      "icon": "images\\Packs\\Dungeon_Bundle.png"
+    },
+    "Easter Bundle": {
+      "icon": "images\\Packs\\Easter_Bundle.png"
+    },
+    "Eggscellent Pack": {
+      "icon": "images\\Packs\\Eggscellent_Pack.png"
+    },
+    "Equinox Dreamer Pack": {
+      "icon": "images\\Packs\\Equinox_Dreamer_Pack.png"
+    },
+    "Eternal Hunter Pack": {
+      "icon": "images\\Packs\\Eternal_Hunter_Pack.png"
+    },
+    "Fallen Spirits Pet Pack": {
+      "icon": "images\\Packs\\Fallen_Spirits_Pet_Pack.png"
+    },
+    "Gem Motherlode Pack": {
+      "icon": "images\\Packs\\Gem_Motherlode_Pack.png"
+    },
+    "Giftmas Bundle": {
+      "icon": "images\\Packs\\Giftmas_Bundle.png"
+    },
+    "Gilded Treasure Pack": {
+      "icon": "images\\Packs\\Gilded_Treasure_Pack.png"
+    },
+    "Island Explorer Pack": {
+      "icon": "images\\Packs\\Island_Explorer_Pack.png"
+    },
+    "Lava Supporter Pack Bundle UI": {
+      "icon": "images\\Packs\\Lava_Supporter_Pack_Bundle_UI.png"
+    },
+    "Lush Emerald Anniversary Pack": {
+      "icon": "images\\Packs\\Lush_Emerald_Anniversary_Pack.png"
+    },
+    "Midnight Tide Anniversary Pack (1)": {
+      "icon": "images\\Packs\\Midnight_Tide_Anniversary_Pack_(1).png"
+    },
+    "Midnight Tide Anniversary Pack": {
+      "icon": "images\\Packs\\Midnight_Tide_Anniversary_Pack.png"
+    },
+    "New Year Pack": {
+      "icon": "images\\Packs\\New_Year_Pack.png"
+    },
+    "Outta This World Pack": {
+      "icon": "images\\Packs\\Outta_This_World_Pack.png"
+    },
+    "Riftwalker Pack Bundle": {
+      "icon": "images\\Packs\\Riftwalker_Pack_Bundle.png"
+    },
+    "Sacred Methods Pack": {
+      "icon": "images\\Packs\\Sacred_Methods_Pack.png"
+    },
+    "Starter Pack": {
+      "icon": "images\\Packs\\Starter_Pack.png"
+    },
+    "Storage Ram Pack": {
+      "icon": "images\\Packs\\Storage_Ram_Pack.png"
+    },
+    "Summer Bundle": {
+      "icon": "images\\Packs\\Summer_Bundle.png"
+    },
+    "Super Hot Fire Pack": {
+      "icon": "images\\Packs\\Super_Hot_Fire_Pack.png"
+    },
+    "Timeless Pack": {
+      "icon": "images\\Packs\\Timeless_Pack.png"
+    },
+    "Totally Chill Pack": {
+      "icon": "images\\Packs\\Totally_Chill_Pack.png"
+    },
+    "Valenslime Day Pack": {
+      "icon": "images\\Packs\\Valenslime_Day_Pack.png"
+    },
+    "Windwalker Pack": {
+      "icon": "images\\Packs\\Windwalker_Pack.png"
+    }
+  }
+}
