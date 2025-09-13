@@ -838,6 +838,12 @@ body:not([data-hard]) #helpModal .goal-body {
 
 /* Toast notifications (global) - centered, large, auto-dismiss */
 
+/* Meal daily recipe modal enhancements */
+#dailyRecipeSpices { position: relative; }
+#dailySpiceIcons img { transition: transform 160ms ease, filter 220ms ease; }
+#dailySpiceIcons img:hover { transform: scale(1.06); filter: drop-shadow(0 4px 10px rgba(0,0,0,0.55)); }
+#dailyRecipeVariant { font-weight:700; color:#111; font-size:16px; letter-spacing:0; text-shadow:none; }
+
 #toast-container {
   /* place the toast low in the viewport and center horizontally */
   position: fixed;

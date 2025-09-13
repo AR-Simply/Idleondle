@@ -1,76 +1,76 @@
 {
   "Spices": {
     "Bamboo Forest Spice": {
-      "icon": "Bamboo_Forest_Spice.png"
+      "icon": "Spice\\Bamboo_Forest_Spice.png"
     },
     "Beach Docks Spice": {
-      "icon": "36px-Beach_Docks_Spice.png"
+      "icon": "Spice\\36px-Beach_Docks_Spice.png"
     },
     "Coarse Mountains Spice": {
-      "icon": "36px-Coarse_Mountains_Spice.png"
+      "icon": "Spice\\36px-Coarse_Mountains_Spice.png"
     },
     "Crystal Caverns Spice": {
-      "icon": "36px-Crystal_Caverns_Spice.png"
+      "icon": "Spice\\36px-Crystal_Caverns_Spice.png"
     },
     "Desert Oasis Spice": {
-      "icon": "36px-Desert_Oasis_Spice.png"
+      "icon": "Spice\\36px-Desert_Oasis_Spice.png"
     },
     "Dharma Mesa Spice": {
-      "icon": "Dharma_Mesa_Spice.png"
+      "icon": "Spice\\Dharma_Mesa_Spice.png"
     },
     "Encroaching Forest Spice": {
-      "icon": "36px-Encroaching_Forest_Spice.png"
+      "icon": "Spice\\36px-Encroaching_Forest_Spice.png"
     },
     "Frosty Peaks Spice": {
-      "icon": "36px-Frosty_Peaks_Spice.png"
+      "icon": "Spice\\36px-Frosty_Peaks_Spice.png"
     },
     "Grasslands Spice": {
-      "icon": "36px-Grasslands_Spice.png"
+      "icon": "Spice\\36px-Grasslands_Spice.png"
     },
     "Jungle Spice": {
-      "icon": "36px-Jungle_Spice.png"
+      "icon": "Spice\\36px-Jungle_Spice.png"
     },
     "Lullaby Airways Spice": {
-      "icon": "Lullaby_Airways_Spice.png"
+      "icon": "Spice\\Lullaby_Airways_Spice.png"
     },
     "Molten Bay Spice": {
-      "icon": "36px-Molten_Bay_Spice.png"
+      "icon": "Spice\\36px-Molten_Bay_Spice.png"
     },
     "Nebulon Mantle Spice": {
-      "icon": "36px-Nebulon_Mantle_Spice.png"
+      "icon": "Spice\\36px-Nebulon_Mantle_Spice.png"
     },
     "Pristalle Lake Spice": {
-      "icon": "36px-Pristalle_Lake_Spice.png"
+      "icon": "Spice\\36px-Pristalle_Lake_Spice.png"
     },
     "Shores of Eternity Spice": {
-      "icon": "36px-Shores_of_Eternity_Spice.png"
+      "icon": "Spice\\36px-Shores_of_Eternity_Spice.png"
     },
     "Smokey Lake Spice": {
-      "icon": "36px-Smokey_Lake_Spice.png"
+      "icon": "Spice\\36px-Smokey_Lake_Spice.png"
     },
     "Spirit Fields Spice": {
-      "icon": "Spirit_Fields_Spice.png"
+      "icon": "Spice\\Spirit_Fields_Spice.png"
     },
     "Starfield Skies Spice": {
-      "icon": "36px-Starfield_Skies_Spice.png"
+      "icon": "Spice\\36px-Starfield_Skies_Spice.png"
     },
     "Stinky Sewers Spice": {
-      "icon": "36px-Stinky_Sewers_Spice.png"
+      "icon": "Spice\\36px-Stinky_Sewers_Spice.png"
     },
     "The Crypt Spice": {
-      "icon": "36px-The_Crypt_Spice.png"
+      "icon": "Spice\\36px-The_Crypt_Spice.png"
     },
     "Tree Interior Spice": {
-      "icon": "36px-Tree_Interior_Spice.png"
+      "icon": "Spice\\36px-Tree_Interior_Spice.png"
     },
     "Tundra Outback Spice": {
-      "icon": "36px-Tundra_Outback_Spice.png"
+      "icon": "Spice\\36px-Tundra_Outback_Spice.png"
     },
     "Twilight Desert Spice": {
-      "icon": "36px-Twilight_Desert_Spice.png"
+      "icon": "Spice\\36px-Twilight_Desert_Spice.png"
     },
     "Wurm Catacombs Spice": {
-      "icon": "36px-Wurm_Catacombs_Spice.png"
+      "icon": "Spice\\36px-Wurm_Catacombs_Spice.png"
     }
   }
 }

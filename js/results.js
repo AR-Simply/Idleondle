@@ -89,7 +89,8 @@ function renderResultsBox() {
 				'card': 'Card Guesser',
 				'hard card': 'HARD Card Guesser',
 				'hard_card': 'HARD Card Guesser',
-				'monster': 'Monster Guesser'
+				'monster': 'Monster Guesser',
+				'meal': 'Meal Guesser'
 			};
 
 			for (const w of wins) {

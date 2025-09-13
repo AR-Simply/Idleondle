@@ -194,6 +194,8 @@ function detectGameFromPath() {
   if (p.includes('cardguesser')) return 'card';
   if (p.includes('monsterguesser') || p.includes('monster')) return 'monster';
   if (p.includes('harditemguesser') || p.includes('harditem')) return 'hard_item';
+  // New: meal guesser page
+  if (p.includes('mealguesser')) return 'meal';
     return 'item';
   } catch (e) { return 'item'; }
 }
@@ -415,6 +417,23 @@ function selectGoalItem() {
   //console.log(`Selected goal item: ${goalItem?.name || 'none'}`);
 }
 
+// Public helper: given an array length and optional seedOffset, return today's deterministic index
+// matching the internal selectGoalItem logic (cycle + shuffle + modulo).
+export function getDailyDeterministicIndex(length, seedOffset = 0) {
+  try {
+    if (!length || length <= 0) return 0;
+    function getLocalDayIndex() { let now = new Date(); let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()); return Math.floor(startOfDay.getTime() / 86400000); }
+    const dayIndex = getLocalDayIndex();
+    let cycle = Math.floor(dayIndex / Math.max(1, length)) + 10 + (Number(seedOffset)||0);
+    // Use the same mulberry32 + Fisher-Yates shuffle just to derive ordering, then take position.
+    function mulberry32(a) { return function() { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; } }
+    function seededShuffle(length, seed) { let rng = mulberry32(seed); const arr = Array.from({length}, (_,i)=>i); for (let i = arr.length - 1; i > 0; i--) { let j = Math.floor(rng() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }
+    const order = seededShuffle(length, cycle);
+    const pos = dayIndex % length;
+    return order[pos] || 0;
+  } catch(e) { return 0; }
+}
+
 // Show/hide goal modal and timer
 function showGoalModal(item) {
   const modal = document.getElementById('goalModal');
@@ -473,6 +492,8 @@ function showGoalModal(item) {
   const close = document.getElementById('goalClose');
   if (close) close.onclick = () => hideGoalModal();
   modal.onclick = (e) => { if (e.target === modal) hideGoalModal(); };
+
+  // (Meal-specific spice injection removed; now handled solely by mealGuesser.js)
 }
 
 function hideGoalModal() {
@@ -914,6 +935,12 @@ function getGoalItem() { return goalItem; }
 export { notifyGoalGuessed };
 // Export locale helper for other modules
 export { safeLower };
+
+// Allow external modules (e.g., mealGuesser) to override the selected goal after init.
+// This mirrors internal structure and lets new game variants reuse goal handling + cookies.
+export function setGoalItem(it) {
+  try { goalItem = it || goalItem; } catch (e) { /* non-fatal */ }
+}
 
 // Default export is not used; consumers should call initShared then use other exports.
 
