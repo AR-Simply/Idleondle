@@ -77,7 +77,7 @@
 
     <div class="combo" id="combo">
       <div class="input-wrap">
-        <input id="search" type="text" placeholder="Type the name of a card..." autocomplete="off" />
+        <input id="search" type="text" placeholder="Type the name of a meal..." autocomplete="off" />
       </div>
       <div class="dropdown" id="dropdown">
         <ul class="results" id="results"></ul>
@@ -91,14 +91,8 @@
         <button class="goal-close" id="goalClose" aria-label="Close">✕</button>
         <h2 class="goal-title">YOU FOUND IT!</h2>
         <div class="goal-body">
-          <div id="dailyRecipeSpices" style="display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;">
-            <div id="dailySpiceIcons" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;min-height:80px;">
-              <!-- Spice icons injected here -->
-            </div>
-            <img id="goalIcon" class="goal-icon" src="" alt="goal icon" style="display:none;width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.5));" />
-            <div id="goalName" class="goal-name" style="display:none;margin-top:4px;"></div>
-            <div id="dailyRecipeVariant"></div>
-          </div>
+          <img id="goalIcon" class="goal-icon" src="" alt="goal icon" />
+          <div id="goalName" class="goal-name"></div>
         </div>
         <div class="goal-guesses">Number of guesses: <strong id="goalGuesses">0</strong></div>
         <div class="goal-footer">
@@ -127,9 +121,9 @@
         <div class="goal-body">
           <div style="text-align:left; font-size:14px; color:#111;">
             <p>Daily guessing games from the game "IdleOn". Games changes at midnight in your timezone.</p>
-            <p>Guess the spices needed for the selected recipe and food. The recipe is the best possible according to the Idleon Wiki. It can be either by Fire Time, Luck or earliest possible. </p>
+            <p>Guess the daily meal based on the recipe and outlines of the spices needed. The recipe is the best possible according to the Idleon Wiki. It can be either by Fire Time, Luck or earliest possible. Guesses reveal outlines of more spices.</p>
            
-            <p>How fast can you discover the recipe?</p>
+            <p>How fast can you discover the meal?</p>
             
             <p><strong>Good luck and have fun!</strong></p>
           </div>
