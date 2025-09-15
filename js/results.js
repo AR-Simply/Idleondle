@@ -219,14 +219,15 @@ function markPageSwitcherCompletion() {
 	const btnItems = document.getElementById('btn-items');
 	const btnCards = document.getElementById('btn-cards');
 	const btnMonster = document.getElementById('btn-monster');
+	const btnMeal = document.getElementById('btn-meal');
 	// Item (normal or hard)
-	if (btnItems && (hasWinToday('item') || hasWinToday('hard_item'))) {
+	if (btnItems && (hasWinToday('item'))) {
 		btnItems.classList.add('complete');
 		btnItems.style.background = '#2ecc71';
 		btnItems.style.borderColor = '#2ecc71';
 	}
 	// Card (normal or hard)
-	if (btnCards && (hasWinToday('card') || hasWinToday('hard_card'))) {
+	if (btnCards && (hasWinToday('card'))) {
 		btnCards.classList.add('complete');
 		btnCards.style.background = '#2ecc71';
 		btnCards.style.borderColor = '#2ecc71';
@@ -236,6 +237,12 @@ function markPageSwitcherCompletion() {
 		btnMonster.classList.add('complete');
 		btnMonster.style.background = '#2ecc71';
 		btnMonster.style.borderColor = '#2ecc71';
+	}
+	// Meal
+	if (btnMeal && hasWinToday('meal')) {
+		btnMeal.classList.add('complete');
+		btnMeal.style.background = '#2ecc71';
+		btnMeal.style.borderColor = '#2ecc71';
 	}
 }
 
@@ -428,7 +435,7 @@ function injectResultsFlame(){
 		const wrap = document.createElement('div');
 		wrap.id = 'resultsFlameWrap';
 		wrap.className = 'flame-wrap';
-		wrap.style.margin = '0 0 0 12px';
+		wrap.style.margin = '12px 0 0 12px';
 		wrap.style.display = 'inline-flex';
 		wrap.style.alignItems = 'center';
 		wrap.style.justifyContent = 'center';

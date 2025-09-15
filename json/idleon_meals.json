@@ -4,403 +4,474 @@
       "icon": "Meals\\36px-Turkey_a_la_Thank.png",
       "luck": ["Grasslands Spice"],
       "fire": ["Grasslands Spice"],
-      "early": ["Grasslands Spice"]
+      "early": ["Grasslands Spice"],
+      "effect": "Total Damage"
     },
     "Egg": {
       "icon": "Meals\\36px-Egg.png",
       "luck": ["Jungle Spice"],
       "fire": ["Grasslands Spice", "Jungle Spice"],
-      "early": ["Grasslands Spice", "Jungle Spice"]
+      "early": ["Grasslands Spice", "Jungle Spice"],
+      "effect": "Meal Cooking Speed"
     },
     "Salad": {
       "icon": "Meals\\36px-Salad.png",
       "luck": ["Encroaching Forest Spice"],
       "fire": ["Grasslands Spice", "Jungle Spice"],
-      "early": ["Grasslands Spice", "Jungle Spice"]
+      "early": ["Grasslands Spice", "Jungle Spice"],
+      "effect": "Cash from Monsters"
     },
     "Pie": {
       "icon": "Meals\\36px-Pie.png",
       "luck": ["Jungle Spice", "Smokey Lake Spice"],
       "fire": ["Grasslands Spice", "Jungle Spice"],
-      "early": ["Grasslands Spice", "Jungle Spice"]
+      "early": ["Grasslands Spice", "Jungle Spice"],
+      "effect": "Recipe Cooking Speed"
     },
     "Frenk Fries": {
       "icon": "Meals\\36px-Frenk_Fries.png",
       "luck": ["Stinky Sewers Spice"],
       "fire": ["Jungle Spice", "Encroaching Forest Spice"],
-      "early": ["Jungle Spice", "Encroaching Forest Spice"]
+      "early": ["Jungle Spice", "Encroaching Forest Spice"],
+      "effect": "New Pet Breeding Odds"
     },
     "Spaghetti": {
       "icon": "Meals\\36px-Spaghetti.png",
       "luck": ["Encroaching Forest Spice", "Molten Bay Spice"],
       "fire": ["Jungle Spice", "Encroaching Forest Spice"],
-      "early": ["Jungle Spice", "Encroaching Forest Spice"]
+      "early": ["Jungle Spice", "Encroaching Forest Spice"],
+      "effect": "Breeding EXP"
     },
     "Corn": {
       "icon": "Meals\\36px-Corn.png",
       "luck": ["Beach Docks Spice"],
       "fire": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice"],
-      "early": ["Encroaching Forest Spice", "Tree Interior Spice"]
+      "early": ["Encroaching Forest Spice", "Tree Interior Spice"],
+      "effect": "Skill Efficiency"
+
     },
     "Garlic Bread": {
       "icon": "Meals\\36px-Garlic_Bread.png",
       "luck": ["Coarse Mountains Spice"],
       "fire": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice"],
-      "early": ["Grasslands Spice", "Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice"]
+      "early": ["Grasslands Spice", "Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice"],
+      "effect": "VIP Library Membership"
     },
     "Garlicless Bread": {
       "icon": "Meals\\36px-Garlicless_Bread.png",
       "luck": ["Tree Interior Spice"],
       "fire": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice"],
-      "early": ["Jungle Spice", "Tree Interior Spice"]
+      "early": ["Jungle Spice", "Tree Interior Spice"],
+      "effect": "Lab EXP"
     },
     "Pizza": {
       "icon": "Meals\\36px-Pizza.png",
       "luck": ["The Crypt Spice"],
       "fire": ["Grasslands Spice", "Jungle Spice", "Tree Interior Spice", "Stinky Sewers Spice"],
-      "early": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Stinky Sewers Spice"]
+      "early": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Stinky Sewers Spice"],
+      "effect": "New Pet Breeding Odds"
     },
     "Apple": {
       "icon": "Meals\\36px-Apple.png",
       "luck": ["Stinky Sewers Spice", "Starfield Skies Spice"],
       "fire": ["Encroaching Forest Spice", "Stinky Sewers Spice"],
-      "early": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Stinky Sewers Spice"]
+      "early": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Stinky Sewers Spice"],
+      "effect": "Base DEF"
     },
     "Pancakes": {
       "icon": "Meals\\36px-Pancakes.png",
       "luck": ["Tundra Outback Spice"],
       "fire": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Stinky Sewers Spice"],
-      "early": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Stinky Sewers Spice"]
+      "early": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Stinky Sewers Spice"],
+      "effect": "Line Width"
+
     },
     "Corndog": {
       "icon": "Meals\\36px-Corndog.png",
       "luck": ["Crystal Caverns Spice"],
       "fire": ["Tree Interior Spice", "Stinky Sewers Spice", "Desert Oasis Spice"],
-      "early": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Desert Oasis Spice"]
+      "early": ["Jungle Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Desert Oasis Spice"],
+      "effect": "Meal Cooking Speed"
     },
     "Cabbage": {
       "icon": "Meals\\36px-Cabbage.png",
       "luck": ["Desert Oasis Spice"],
       "fire": ["Grasslands Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Desert Oasis Spice"],
-      "early": ["Grasslands Spice", "Encroaching Forest Spice", "Desert Oasis Spice"]
+      "early": ["Grasslands Spice", "Encroaching Forest Spice", "Desert Oasis Spice"],
+       "effect": "Cooking Spd per kitchen LVs"
+
     },
     "Potato Pea Pastry": {
       "icon": "Meals\\36px-Potato_Pea_Pastry.png",
       "luck": ["Nebulon Mantle Spice"],
       "fire": ["Jungle Spice", "Tree Interior Spice", "Stinky Sewers Spice", "Desert Oasis Spice"],
-      "early": ["Jungle Spice", "Tree Interior Spice", "Stinky Sewers Spice", "Desert Oasis Spice"]
+      "early": ["Jungle Spice", "Tree Interior Spice", "Stinky Sewers Spice", "Desert Oasis Spice"],
+      "effect": "Lower Egg Incubator Time"
+     
     },
     "Dango": {
       "icon": "Meals\\36px-Dango.png",
       "luck": ["Beach Docks Spice", "Pristalle Lake Spice"],
       "fire": ["Grasslands Spice", "Beach Docks Spice"],
-      "early": ["Grasslands Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Beach Docks Spice"]
+      "early": ["Grasslands Spice", "Encroaching Forest Spice", "Tree Interior Spice", "Beach Docks Spice"],
+      "effect": "Lower Kitchen Upgrade Costs"
     },
     "Sourish Fish": {
       "icon": "Meals\\36px-Sourish_Fish.png",
       "luck": ["Shores of Eternity Spice"],
       "fire": ["Grasslands Spice", "Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice"],
-      "early": ["Grasslands Spice", "Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice"]
+      "early": ["Grasslands Spice", "Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice"],
+      "effect": "VIP Library Membership"
     },
     "Octoplop": {
       "icon": "Meals\\36px-Octoplop.png",
       "luck": ["Molten Bay Spice"],
       "fire": ["Jungle Spice", "Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice"],
-      "early": ["Jungle Spice", "Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice"]
+      "early": ["Jungle Spice", "Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice"],
+      "effect": "Total Damage"
     },
     "Croissant": {
       "icon": "Meals\\36px-Croissant.png",
       "luck": ["Smokey Lake Spice"],
       "fire": ["Encroaching Forest Spice", "Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice"],
-      "early": ["Encroaching Forest Spice", "Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice"]
+      "early": ["Encroaching Forest Spice", "Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice"],
+      "effect": "Pet Fighting Damage"
     },
     "Canopy": {
       "icon": "Meals\\36px-Canopy.png",
       "luck": ["Coarse Mountains Spice", "Crystal Caverns Spice"],
       "fire": ["Grasslands Spice", "Tree Interior Spice", "Stinky Sewers Spice", "Coarse Mountains Spice"],
-      "early": ["Grasslands Spice", "Encroaching Forest Spice", "Desert Oasis Spice", "Coarse Mountains Spice"]
+      "early": ["Grasslands Spice", "Encroaching Forest Spice", "Desert Oasis Spice", "Coarse Mountains Spice"],
+      "effect": "New Recipe Cooking Speed"
     },
     "Cannoli": {
       "icon": "Meals\\36px-Cannoli.png",
       "luck": ["Twilight Desert Spice"],
       "fire": ["Grasslands Spice", "Beach Docks Spice", "Twilight Desert Spice"],
-      "early": ["Grasslands Spice", "Tree Interior Spice", "Desert Oasis Spice", "Twilight Desert Spice"]
+      "early": ["Grasslands Spice", "Tree Interior Spice", "Desert Oasis Spice", "Twilight Desert Spice"],
+      "effect": "Points earned in Tower Defence"
     },
     "Cheese": {
       "icon": "Meals\\36px-Cheese.png",
       "luck": ["Bamboo Forest Spice"],
       "fire": ["Encroaching Forest Spice", "Tree Interior Spice", "Coarse Mountains Spice", "Twilight Desert Spice"],
-      "early": ["Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice", "Coarse Mountains Spice"]
+      "early": ["Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice", "Coarse Mountains Spice"],
+      "effect": "Cooking EXP"
     },
     "Sawdust": {
       "icon": "Meals\\36px-Sawdust.png",
       "luck": ["Lullaby Airways Spice"],
       "fire": ["Grasslands Spice", "Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice"],
-      "early": ["Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice", "Coarse Mountains Spice"]
+      "early": ["Stinky Sewers Spice", "Desert Oasis Spice", "Beach Docks Spice", "Coarse Mountains Spice"],
+      "effect": "Lab EXP"
     },
     "Eggplant": {
       "icon": "Meals\\36px-Eggplant.png",
       "luck": ["The Crypt Spice", "Frosty Peaks Spice"],
       "fire": ["Grasslands Spice", "Desert Oasis Spice", "The Crypt Spice"],
-      "early": ["Tree Interior Spice", "Beach Docks Spice", "The Crypt Spice"]
+      "early": ["Tree Interior Spice", "Beach Docks Spice", "The Crypt Spice"],
+      "effect": "Pet Breedability Speed"
     },
     "Cheesy Bread": {
       "icon": "Meals\\36px-Cheesy_Bread.png",
       "luck": ["Frosty Peaks Spice", "Pristalle Lake Spice"],
       "fire": ["Encroaching Forest Spice", "Desert Oasis Spice", "Coarse Mountains Spice", "The Crypt Spice"],
-      "early": ["Stinky Sewers Spice", "Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice"]
+      "early": ["Stinky Sewers Spice", "Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice"],
+      "effect":  "Total Accuracy"
     },
     "Wild Boar": {
       "icon": "Meals\\36px-Wild_Boar.png",
       "luck": ["Frosty Peaks Spice", "Starfield Skies Spice"],
       "fire": ["Coarse Mountains Spice", "Twilight Desert Spice", "The Crypt Spice"],
-      "early": ["Stinky Sewers Spice", "Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice"]
+      "early": ["Stinky Sewers Spice", "Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice"],
+      "effect": "Line Width"
     },
     "Donut": {
       "icon": "Meals\\36px-Donut.png",
       "luck": ["Frosty Peaks Spice", "Shores of Eternity Spice"],
       "fire": ["Stinky Sewers Spice", "Beach Docks Spice", "Coarse Mountains Spice", "The Crypt Spice"],
-      "early": ["Stinky Sewers Spice", "Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice"]
+      "early": ["Stinky Sewers Spice", "Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice"],
+      "effect": "New Pet Breeding Odds" 
     },
     "Riceball": {
       "icon": "Meals\\36px-Riceball.png",
       "luck": ["Frosty Peaks Spice"],
       "fire": ["Encroaching Forest Spice", "Tree Interior Spice", "Frosty Peaks Spice"],
-      "early": ["Tree Interior Spice", "Coarse Mountains Spice", "Frosty Peaks Spice"]
+      "early": ["Tree Interior Spice", "Coarse Mountains Spice", "Frosty Peaks Spice"],
+      "effect": "Skill Efficiency"
     },
     "Cauliflower": {
       "icon": "Meals\\36px-Cauliflower.png",
       "luck": ["Tundra Outback Spice", "Shores of Eternity Spice"],
       "fire": ["Twilight Desert Spice", "The Crypt Spice", "Frosty Peaks Spice"],
-      "early": ["Desert Oasis Spice", "Beach Docks Spice", "Coarse Mountains Spice", "The Crypt Spice"]
+      "early": ["Desert Oasis Spice", "Beach Docks Spice", "Coarse Mountains Spice", "The Crypt Spice"],
+      "effect": "Basic Atk Speed"
     },
     "Durian Fruit": {
       "icon": "Meals\\36px-Durian_Fruit.png",
       "luck": ["Tundra Outback Spice", "Smokey Lake Spice"],
       "fire": ["Stinky Sewers Spice", "Desert Oasis Spice", "The Crypt Spice", "Frosty Peaks Spice"],
-      "early": ["Stinky Sewers Spice", "Coarse Mountains Spice", "Twilight Desert Spice", "The Crypt Spice"]
+      "early": ["Stinky Sewers Spice", "Coarse Mountains Spice", "Twilight Desert Spice", "The Crypt Spice"],
+      "effect": "Lower Kitchen Upgrade costs"
     },
     "Orange": {
       "icon": "Meals\\36px-Orange.png",
       "luck": ["Tundra Outback Spice", "Wurm Catacombs Spice"],
       "fire": ["Desert Oasis Spice", "Beach Docks Spice", "The Crypt Spice", "Frosty Peaks Spice"],
-      "early": ["Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice", "The Crypt Spice"]
+      "early": ["Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice", "The Crypt Spice"],
+      "effect": "VIP Library Membership"
     },
     "Bunt Cake": {
       "icon": "Meals\\36px-Bunt_Cake.png",
       "luck": ["Tundra Outback Spice", "Spirit Fields Spice"],
       "fire": ["Grasslands Spice", "Beach Docks Spice", "Frosty Peaks Spice", "Tundra Outback Spice"],
-      "early": ["Grasslands Spice", "Jungle Spice", "Encroaching Forest Spice", "Tundra Outback Spice"]
+      "early": ["Grasslands Spice", "Jungle Spice", "Encroaching Forest Spice", "Tundra Outback Spice"],
+      "effect": "Cash from Monsters"
     },
     "Chocolate Truffle": {
       "icon": "Meals\\36px-Chocolate_Truffle.png",
       "luck": ["Crystal Caverns Spice", "Wurm Catacombs Spice"],
       "fire": ["Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice", "Frosty Peaks Spice"],
-      "early": ["Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice", "Frosty Peaks Spice"]
+      "early": ["Beach Docks Spice", "Coarse Mountains Spice", "Twilight Desert Spice", "Frosty Peaks Spice"],
+      "effect": "New Pet Breeding Odds"
     },
     "Leek": {
       "icon": "Meals\\36px-Leek.png",
       "luck": ["Crystal Caverns Spice", "Bamboo Forest Spice"],
       "fire": ["Grasslands Spice", "Beach Docks Spice", "The Crypt Spice", "Crystal Caverns Spice"],
-      "early": ["Grasslands Spice", "Stinky Sewers Spice", "Twilight Desert Spice", "Crystal Caverns Spice"]
+      "early": ["Grasslands Spice", "Stinky Sewers Spice", "Twilight Desert Spice", "Crystal Caverns Spice"],
+      "effect": "Skilling Prowess"
     },
     "Fortune Cookie": {
       "icon": "Meals\\36px-Fortune_Cookie.png",
       "luck": ["Pristalle Lake Spice", "Spirit Fields Spice"],
       "fire": ["Stinky Sewers Spice", "Twilight Desert Spice", "Frosty Peaks Spice", "Tundra Outback Spice"],
-      "early": ["Coarse Mountains Spice", "Twilight Desert Spice", "The Crypt Spice", "Frosty Peaks Spice"]
+      "early": ["Coarse Mountains Spice", "Twilight Desert Spice", "The Crypt Spice", "Frosty Peaks Spice"],
+      "effect": "Library checkout Speed"
     },
     "Pretzel": {
       "icon": "Meals\\36px-Pretzel.png",
       "luck": ["Pristalle Lake Spice", "Lullaby Airways Spice"],
       "fire": ["Beach Docks Spice", "Twilight Desert Spice", "The Crypt Spice", "Tundra Outback Spice"],
-      "early": ["Coarse Mountains Spice", "Twilight Desert Spice", "The Crypt Spice", "Frosty Peaks Spice"]
+      "early": ["Coarse Mountains Spice", "Twilight Desert Spice", "The Crypt Spice", "Frosty Peaks Spice"],
+      "effect": "Lab EXP"
     },
     "Sea Urchin": {
       "icon": "Meals\\36px-Sea_Urchin.png",
       "luck": ["Pristalle Lake Spice", "Dharma Mesa Spice"],
       "fire": ["Coarse Mountains Spice", "Twilight Desert Spice", "The Crypt Spice", "Tundra Outback Spice"],
-      "early": ["Coarse Mountains Spice", "The Crypt Spice", "Frosty Peaks Spice", "Tundra Outback Spice"]
+      "early": ["Coarse Mountains Spice", "The Crypt Spice", "Frosty Peaks Spice", "Tundra Outback Spice"],
+      "effect": "Critters from traps"
     },
     "Mashed Potato": {
       "icon": "Meals\\36px-Mashed_Potato.png",
       "luck": ["Pristalle Lake Spice"],
       "fire": ["Encroaching Forest Spice", "Twilight Desert Spice", "The Crypt Spice", "Pristalle Lake Spice"],
-      "early": ["Jungle Spice", "Frosty Peaks Spice", "Pristalle Lake Spice"]
+      "early": ["Jungle Spice", "Frosty Peaks Spice", "Pristalle Lake Spice"],
+      "effect": "Cooking EXP"
     },
     "Mutton": {
       "icon": "Meals\\36px-Mutton.png",
       "luck": ["Nebulon Mantle Spice", "Dharma Mesa Spice"],
       "fire": ["Tree Interior Spice", "The Crypt Spice", "Crystal Caverns Spice", "Pristalle Lake Spice"],
-      "early": ["Twilight Desert Spice", "The Crypt Spice", "Frosty Peaks Spice", "Tundra Outback Spice"]
+      "early": ["Twilight Desert Spice", "The Crypt Spice", "Frosty Peaks Spice", "Tundra Outback Spice"],
+      "effect": "Crit Chance"
     },
     "Wedding Cake": {
       "icon": "Meals\\36px-Wedding_Cake.png",
       "luck": ["Shores of Eternity Spice", "Dharma Mesa Spice"],
       "fire": ["Stinky Sewers Spice", "The Crypt Spice", "Crystal Caverns Spice", "Pristalle Lake Spice"],
-      "early": ["Twilight Desert Spice", "The Crypt Spice", "Frosty Peaks Spice", "Tundra Outback Spice"]
+      "early": ["Twilight Desert Spice", "The Crypt Spice", "Frosty Peaks Spice", "Tundra Outback Spice"],
+      "effect": "Pet Fighting Damage"
     },
     "Eel": {
       "icon": "Meals\\36px-Eel.png",
       "luck": ["Molten Bay Spice", "Dharma Mesa Spice"],
       "fire": ["Beach Docks Spice", "The Crypt Spice", "Tundra Outback Spice", "Pristalle Lake Spice"],
-      "early": ["Twilight Desert Spice", "Frosty Peaks Spice", "Tundra Outback Spice", "Crystal Caverns Spice"]
+      "early": ["Twilight Desert Spice", "Frosty Peaks Spice", "Tundra Outback Spice", "Crystal Caverns Spice"],
+      "effect": "Line Width"
     },
     "Whipped Cocoa": {
       "icon": "Meals\\36px-Whipped_Cocoa.png",
       "luck": ["Nebulon Mantle Spice", "Starfield Skies Spice", "Spirit Fields Spice"],
       "fire": ["Twilight Desert Spice", "Frosty Peaks Spice", "Nebulon Mantle Spice"],
-      "early": ["Jungle Spice", "Desert Oasis Spice", "Tundra Outback Spice", "Nebulon Mantle Spice"]
+      "early": ["Jungle Spice", "Desert Oasis Spice", "Tundra Outback Spice", "Nebulon Mantle Spice"],
+      "effect": "Skill Efficiency"
     },
     "Onion": {
       "icon": "Meals\\36px-Onion.png",
       "luck": ["Smokey Lake Spice", "Dharma Mesa Spice"],
       "fire": ["Beach Docks Spice", "Frosty Peaks Spice", "Crystal Caverns Spice", "Pristalle Lake Spice"],
-      "early": ["Twilight Desert Spice", "Frosty Peaks Spice", "Tundra Outback Spice", "Crystal Caverns Spice"]
+      "early": ["Twilight Desert Spice", "Frosty Peaks Spice", "Tundra Outback Spice", "Crystal Caverns Spice"],
+      "effect": "Total Damage"
     },
     "Soda": {
       "icon": "Meals\\36px-Soda.png",
       "luck": ["Spirit Fields Spice", "Dharma Mesa Spice"],
       "fire": ["Coarse Mountains Spice", "Frosty Peaks Spice", "Crystal Caverns Spice", "Pristalle Lake Spice"],
-      "early": ["The Crypt Spice", "Frosty Peaks Spice", "Tundra Outback Spice", "Crystal Caverns Spice"]
+      "early": ["The Crypt Spice", "Frosty Peaks Spice", "Tundra Outback Spice", "Crystal Caverns Spice"],
+      "effect": "Meal Cooking Speed"
     },
     "Sushi Roll": {
       "icon": "Meals\\36px-Sushi_Roll.png",
       "luck": ["Bamboo Forest Spice", "Dharma Mesa Spice"],
       "fire": ["Coarse Mountains Spice", "The Crypt Spice", "Pristalle Lake Spice", "Nebulon Mantle Spice"],
-      "early": ["Twilight Desert Spice", "Tundra Outback Spice", "Crystal Caverns Spice", "Pristalle Lake Spice"]
+      "early": ["Twilight Desert Spice", "Tundra Outback Spice", "Crystal Caverns Spice", "Pristalle Lake Spice"],
+      "effect": "VIP Library Membership"
     },
     "Buncha Banana": {
       "icon": "Meals\\36px-Buncha_Banana.png",
       "luck": ["Starfield Skies Spice"],
       "fire": ["Jungle Spice", "Encroaching Forest Spice", "Stinky Sewers Spice", "Starfield Skies Spice"],
-      "early": ["Grasslands Spice", "Beach Docks Spice", "Pristalle Lake Spice", "Starfield Skies Spice"]
+      "early": ["Grasslands Spice", "Beach Docks Spice", "Pristalle Lake Spice", "Starfield Skies Spice"],
+      "effect": "Max LVs for TP Pete Star Talent"
     },
     "Pumpkin": {
       "icon": "Meals\\36px-Pumpkin.png",
       "luck": ["Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Twilight Desert Spice", "Frosty Peaks Spice", "Crystal Caverns Spice", "Starfield Skies Spice"],
-      "early": ["The Crypt Spice", "Tundra Outback Spice", "Crystal Caverns Spice", "Pristalle Lake Spice"]
+      "early": ["The Crypt Spice", "Tundra Outback Spice", "Crystal Caverns Spice", "Pristalle Lake Spice"],
+      "effect": "Liquid Cap"
     },
     "Cotton Candy": {
       "icon": "Meals\\36px-Cotton_Candy.png",
       "luck": ["Tree Interior Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Twilight Desert Spice", "Frosty Peaks Spice", "Pristalle Lake Spice", "Starfield Skies Spice"],
-      "early": ["Frosty Peaks Spice", "Tundra Outback Spice", "Crystal Caverns Spice", "Pristalle Lake Spice"]
+      "early": ["Frosty Peaks Spice", "Tundra Outback Spice", "Crystal Caverns Spice", "Pristalle Lake Spice"],
+      "effect": "Divinity EXP"
     },
     "Massive Fig": {
       "icon": "Meals\\36px-Massive_Fig.png",
       "luck": ["Shores of Eternity Spice", "Spirit Fields Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Jungle Spice", "Encroaching Forest Spice", "Beach Docks Spice", "Shores of Eternity Spice"],
-      "early": ["Jungle Spice", "Starfield Skies Spice", "Shores of Eternity Spice"]
+      "early": ["Jungle Spice", "Starfield Skies Spice", "Shores of Eternity Spice"],
+      "effect": "Total Damage"
     },
     "Head Chef Geustloaf": {
       "icon": "Meals\\36px-Head_Chef_Bread.png",
       "luck": ["Stinky Sewers Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Twilight Desert Spice", "Crystal Caverns Spice", "Pristalle Lake Spice", "Starfield Skies Spice"],
-      "early": ["Tundra Outback Spice", "Crystal Caverns Spice", "Pristalle Lake Spice", "Nebulon Mantle Spice"]
+      "early": ["Tundra Outback Spice", "Crystal Caverns Spice", "Pristalle Lake Spice", "Nebulon Mantle Spice"],
+      "effect": "Bits Gained"
     },
     "Kiwi Fruit": {
       "icon": "Meals\\36px-Kiwi_Fruit.png",
       "luck": ["Molten Bay Spice", "Wurm Catacombs Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Grasslands Spice", "Crystal Caverns Spice", "Starfield Skies Spice", "Molten Bay Spice"],
-      "early": ["Grasslands Spice", "Desert Oasis Spice", "Crystal Caverns Spice", "Molten Bay Spice"]
+      "early": ["Grasslands Spice", "Desert Oasis Spice", "Crystal Caverns Spice", "Molten Bay Spice"],
+      "effect": "Liquid Cap"
     },
     "Popped Corn": {
       "icon": "Meals\\36px-Popped_Corn.png",
       "luck": ["Beach Docks Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Beach Docks Spice", "Pristalle Lake Spice", "Starfield Skies Spice", "Shores of Eternity Spice"],
-      "early": ["Tundra Outback Spice", "Crystal Caverns Spice", "Pristalle Lake Spice", "Nebulon Mantle Spice"]
+      "early": ["Tundra Outback Spice", "Crystal Caverns Spice", "Pristalle Lake Spice", "Nebulon Mantle Spice"],
+      "effect": "Sailing Speed"
     },
     "Double Cherry": {
       "icon": "Meals\\36px-Double_Cherry.png",
       "luck": ["Twilight Desert Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Stinky Sewers Spice", "Starfield Skies Spice", "Shores of Eternity Spice", "Molten Bay Spice"],
-      "early": ["Frosty Peaks Spice", "Pristalle Lake Spice", "Nebulon Mantle Spice", "Starfield Skies Spice"]
+      "early": ["Frosty Peaks Spice", "Pristalle Lake Spice", "Nebulon Mantle Spice", "Starfield Skies Spice"],
+      "effect": "Meal Cooking Speed"
     },
     "Ratatouey": {
       "icon": "Meals\\36px-Ratatouey.png",
       "luck": ["Smokey Lake Spice", "Wurm Catacombs Spice", "Bamboo Forest Spice", "Dharma Mesa Spice"],
       "fire": ["Encroaching Forest Spice", "Tree Interior Spice", "Stinky Sewers Spice", "Smokey Lake Spice"],
-      "early": ["Stinky Sewers Spice", "Beach Docks Spice", "Molten Bay Spice", "Smokey Lake Spice"]
+      "early": ["Stinky Sewers Spice", "Beach Docks Spice", "Molten Bay Spice", "Smokey Lake Spice"],
+      "effect": "Lower Kitchen Upgrade costs"
     },
     "Giant Tomato": {
       "icon": "Meals\\36px-Giant_Tomato.png",
       "luck": ["Wurm Catacombs Spice", "Spirit Fields Spice", "Bamboo Forest Spice"],
       "fire": ["Coarse Mountains Spice", "Pristalle Lake Spice", "Starfield Skies Spice", "Smokey Lake Spice"],
-      "early": ["Tundra Outback Spice", "Pristalle Lake Spice", "Nebulon Mantle Spice", "Starfield Skies Spice"]
+      "early": ["Tundra Outback Spice", "Pristalle Lake Spice", "Nebulon Mantle Spice", "Starfield Skies Spice"],
+      "effect": "Gaming EXP"
     },
     "Wrath Grapes": {
       "icon": "Meals\\36px-Wrath_Grapes.png",
       "luck": ["Wurm Catacombs Spice", "Spirit Fields Spice", "Bamboo Forest Spice"],
       "fire": ["Pristalle Lake Spice", "Starfield Skies Spice", "Molten Bay Spice", "Smokey Lake Spice"],
-      "early": ["Crystal Caverns Spice", "Pristalle Lake Spice", "Nebulon Mantle Spice", "Starfield Skies Spice"]
+      "early": ["Crystal Caverns Spice", "Pristalle Lake Spice", "Nebulon Mantle Spice", "Starfield Skies Spice"],
+      "effect": "Divinity EXP"
     },
     "Sausy Sausage": {
       "icon": "Meals\\36px-Sausy_Sausage.png",
       "luck": ["Wurm Catacombs Spice"],
       "fire": ["Coarse Mountains Spice", "Twilight Desert Spice", "Frosty Peaks Spice", "Wurm Catacombs Spice"],
-      "early": ["Pristalle Lake Spice", "Molten Bay Spice", "Smokey Lake Spice", "Wurm Catacombs Spice"]
+      "early": ["Pristalle Lake Spice", "Molten Bay Spice", "Smokey Lake Spice", "Wurm Catacombs Spice"],
+      "effect": "Bits Gained"
     },
     "Seasoned Marrow": {
       "icon": "Meals\\Seasoned_Marrow.png",
       "luck": ["Desert Oasis Spice", "Bamboo Forest Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Shores of Eternity Spice", "Molten Bay Spice", "Smokey Lake Spice", "Spirit Fields Spice"],
-      "early": ["Shores of Eternity Spice", "Molten Bay Spice", "Smokey Lake Spice", "Spirit Fields Spice"]
+      "early": ["Shores of Eternity Spice", "Molten Bay Spice", "Smokey Lake Spice", "Spirit Fields Spice"],
+      "effect": "Farming EXP"
     },
     "Sticky Bun": {
       "icon": "Meals\\Sticky_Bun.png",
       "luck": ["Spirit Fields Spice"],
       "fire": ["Twilight Desert Spice", "Crystal Caverns Spice", "Smokey Lake Spice", "Spirit Fields Spice"],
-      "early": ["Jungle Spice", "Stinky Sewers Spice", "The Crypt Spice", "Spirit Fields Spice"]
+      "early": ["Jungle Spice", "Stinky Sewers Spice", "The Crypt Spice", "Spirit Fields Spice"],
+      "effect": "Summoning Essence Gain"
     },
     "Frazzleberry": {
       "icon": "Meals\\Frazzleberry.png",
       "luck": ["Coarse Mountains Spice", "Bamboo Forest Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Shores of Eternity Spice", "Molten Bay Spice", "Wurm Catacombs Spice", "Spirit Fields Spice"],
-      "early": ["Molten Bay Spice", "Smokey Lake Spice", "Wurm Catacombs Spice", "Spirit Fields Spice"]
+      "early": ["Molten Bay Spice", "Smokey Lake Spice", "Wurm Catacombs Spice", "Spirit Fields Spice"],
+      "effect": "Sneaking EXP"
     },
     "Misterloin Steak": {
       "icon": "Meals\\36px-Misterloin_Steak.png",
       "luck": ["Bamboo Forest Spice"],
       "fire": ["Jungle Spice", "Tundra Outback Spice", "Nebulon Mantle Spice", "Bamboo Forest Spice"],
-      "early": ["Stinky Sewers Spice", "Beach Docks Spice", "Coarse Mountains Spice", "Bamboo Forest Spice"]
+      "early": ["Stinky Sewers Spice", "Beach Docks Spice", "Coarse Mountains Spice", "Bamboo Forest Spice"],
+      "effect": "Jade gain"
     },
     "Large Pohayoh": {
       "icon": "Meals\\Large_Pohayoh.png",
       "luck": ["The Crypt Spice", "Bamboo Forest Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Shores of Eternity Spice", "Smokey Lake Spice", "Wurm Catacombs Spice", "Bamboo Forest Spice"],
-      "early": ["Molten Bay Spice", "Smokey Lake Spice", "Wurm Catacombs Spice", "Spirit Fields Spice"]
+      "early": ["Molten Bay Spice", "Smokey Lake Spice", "Wurm Catacombs Spice", "Spirit Fields Spice"],
+      "effect": "Summoning EXP"
     },
     "Bill Jack Pepper": {
       "icon": "Meals\\36px-Bill_Jack_Pepper.png",
       "luck": ["Tundra Outback Spice", "Bamboo Forest Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Shores of Eternity Spice", "Smokey Lake Spice", "Spirit Fields Spice", "Bamboo Forest Spice"],
-      "early": ["Molten Bay Spice", "Wurm Catacombs Spice", "Spirit Fields Spice", "Bamboo Forest Spice"]
+      "early": ["Molten Bay Spice", "Wurm Catacombs Spice", "Spirit Fields Spice", "Bamboo Forest Spice"],
+      "effect": "Crop Evolution Chance"
     },
     "Burned Marshmallow": {
       "icon": "Meals\\Burned_Marshmallow.png",
       "luck": ["Lullaby Airways Spice"],
       "fire": ["Twilight Desert Spice", "Smokey Lake Spice", "Spirit Fields Spice", "Lullaby Airways Spice"],
-      "early": ["Stinky Sewers Spice", "Tundra Outback Spice", "Molten Bay Spice", "Lullaby Airways Spice"]
+      "early": ["Stinky Sewers Spice", "Tundra Outback Spice", "Molten Bay Spice", "Lullaby Airways Spice"],
+      "effect": "Meal Cooking Speed"
     },
     "Yumi Peachring": {
       "icon": "Meals\\Yumi_Peachring.png",
       "luck": ["Crystal Caverns Spice", "Bamboo Forest Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Molten Bay Spice", "Wurm Catacombs Spice", "Spirit Fields Spice", "Bamboo Forest Spice"],
-      "early": ["Molten Bay Spice", "Wurm Catacombs Spice", "Spirit Fields Spice", "Bamboo Forest Spice"]
+      "early": ["Molten Bay Spice", "Wurm Catacombs Spice", "Spirit Fields Spice", "Bamboo Forest Spice"],
+      "effect": "Golden Food bonus"
     },
     "Plumpcakes": {
       "icon": "Meals\\36px-Plumpcakes.png",
       "luck": ["Nebulon Mantle Spice", "Bamboo Forest Spice", "Lullaby Airways Spice", "Dharma Mesa Spice"],
       "fire": ["Shores of Eternity Spice", "Spirit Fields Spice", "Bamboo Forest Spice", "Lullaby Airways Spice"],
-      "early": ["Smokey Lake Spice", "Wurm Catacombs Spice", "Spirit Fields Spice", "Bamboo Forest Spice"]
+      "early": ["Smokey Lake Spice", "Wurm Catacombs Spice", "Spirit Fields Spice", "Bamboo Forest Spice"],
+      "effect": "Total Damage"
     },
     "Nyanborgir": {
       "icon": "Meals\\Nyanborgir.png",
       "luck": ["Dharma Mesa Spice"],
       "fire": ["Twilight Desert Spice", "Tundra Outback Spice", "Molten Bay Spice", "Dharma Mesa Spice"],
-      "early": ["Desert Oasis Spice", "Crystal Caverns Spice", "Pristalle Lake Spice", "Dharma Mesa Spice"]
+      "early": ["Desert Oasis Spice", "Crystal Caverns Spice", "Pristalle Lake Spice", "Dharma Mesa Spice"],
+      "effect": "Crop Evolution Chance"
     }
   }
 }

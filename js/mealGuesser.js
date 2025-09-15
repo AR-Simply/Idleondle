@@ -29,7 +29,7 @@ let _requiredSpices = [];
 let _revealedSpices = new Set();
 let _spiceImgMap = Object.create(null); // name -> <img>
 let _mealWinFired = false;
-let _guessCount = 0; // counts total user guesses until win
+let _guessCount = 0; // counts total user guesses until win (used for silhouette progression)
 let _spiceSlotMap = Object.create(null); // name -> slot wrapper div
 
 // Reveal spice silhouettes progressively: first spice visible from start, then one new outline every 2 guesses
@@ -55,11 +55,11 @@ function updateSpiceOutlineProgress() {
 				}
 			} else {
 				if (idx < visibleSilhouettes) {
-					// Silhouette unlocked: show image darkened, hide '?'
+					// Silhouette unlocked: show full-color image, hide '?'
 					slot.style.display = 'inline-flex';
 					img.style.display = 'inline-block';
-					img.style.filter = 'brightness(0)';
-					img.style.opacity = '0.18';
+					img.style.filter = 'none';
+					img.style.opacity = '1';
 					if (q) q.style.display = 'none';
 				} else {
 					// Locked: hide image completely, show '?'
@@ -77,7 +77,7 @@ function updateSpiceOutlineProgress() {
 			note.id = 'mealSpiceProgress';
 			note.style.width = '100%';
 			note.style.textAlign = 'center';
-			note.style.fontSize = '12px';
+			note.style.fontSize = '15px';
 			note.style.fontWeight = '600';
 			note.style.letterSpacing = '0.4px';
 			note.style.marginTop = '4px';
@@ -94,7 +94,7 @@ function updateSpiceOutlineProgress() {
 				note.style.display = 'block';
 				const nextRevealAt = currentVisible * 2; // guess count when next silhouette appears
 				const remaining = Math.max(0, nextRevealAt - _guessCount);
-				note.textContent = `Outline revealed in ${remaining} guess${remaining === 1 ? '' : 'es'}`;
+				note.textContent = `Spice revealed in ${remaining} guess${remaining === 1 ? '' : 'es'}`;
 			}
 		}
 	} catch(e){ /* non-fatal */ }
@@ -230,16 +230,16 @@ function onSelectMeal(it){
 	} catch(e){ /* non-fatal */ }
 }
 
-// Custom clue handler: reuse guessBtn2 for Category (e.g., Source or Type field in meal JSON)
+// Clue handler: use shared system's guessBtn2 unlock (category threshold) but display meal effect instead
 const guessHandlers = {
 	guessBtn2: () => {
 		const btn = document.getElementById('guessBtn2');
 		if (!btn || btn.disabled) return;
 		try {
 			const goal = window.getGoalItem ? window.getGoalItem() : null;
-			const category = goal?.raw?.category || goal?.raw?.type || goal?.raw?.class || 'Unknown';
-			btn.textContent = category;
-			btn.setAttribute('aria-label', `Category: ${category}`);
+			const effect = goal?.raw?.effect || goal?.raw?.Effect || 'Unknown';
+			btn.textContent = effect;
+			btn.setAttribute('aria-label', `Meal effect: ${effect}`);
 		} catch(e){ /* ignore */ }
 	}
 };
@@ -249,8 +249,7 @@ function buildDailyMealUI(){
 	const mealGoal = getGoalItem();
 	if (!mealGoal) return; // not yet ready
 	window.__mealDailyGoal = mealGoal;
-	const titleEl = document.querySelector('.guess-title');
-	if (titleEl) titleEl.textContent = "Guess today's IdleOn meal!";
+	
 	const variant = (getDailyDeterministicIndex(3, 0) % 3) + 1; // 1..3
 	window.__mealDailyVariant = variant;
 	const variantTextMap = {
@@ -331,8 +330,9 @@ function buildDailyMealUI(){
 				img.style.width = '64px';
 				img.style.height = '64px';
 				img.style.objectFit = 'contain';
-				img.style.filter = 'brightness(0)';
-				img.style.opacity = '0.18';
+				// Show full-color icon by default; visibility handled in updateSpiceOutlineProgress()
+				img.style.filter = 'none';
+				img.style.opacity = '1';
 				img.style.borderRadius = '8px';
 				img.style.background = 'rgba(255,255,255,0.02)';
 				img.style.transition = 'filter 400ms ease, opacity 400ms ease';
@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 		imageBase: '../images',
 		seedOffset: SEED_OFFSET,
 		onSelect: onSelectMeal,
-		clueUnlocks: { category: 999 },
+		clueUnlocks: { category: 5 }, // shared system manages unlock; we override button text when clicked
 		guessButtonHandlers: guessHandlers
 	});
 	// Build UI now (or shortly if goal not yet populated)

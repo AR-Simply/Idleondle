@@ -10,18 +10,38 @@ export async function initMonsterGuesser(options = {}) {
     const goal = getGoalItem();
     const box = document.getElementById('emojibox');
     if (!box) return;
-    // Replace existing contents with a row of emoji tiles, so the note can sit below them.
+    // Build slots similar to spice silhouettes: first slot shows first emoji, others hidden behind '?'
     const e1 = (goal && goal.raw && goal.raw.emoji1) ? String(goal.raw.emoji1) : '❓';
-    const placeholder = '?';
-    // Render four emoji tiles; the first is visible at start, others locked
-    box.innerHTML = `
-      <div class="emoji-row">
-        <div class="emoji-tile" data-index="1">${e1}</div>
-        <div class="emoji-tile locked" data-index="2">${placeholder}</div>
-        <div class="emoji-tile locked" data-index="3">${placeholder}</div>
-        <div class="emoji-tile locked" data-index="4">${placeholder}</div>
-      </div>
-    `;
+    const slotWrap = document.createElement('div');
+    slotWrap.className = 'emoji-row';
+    box.innerHTML = '';
+
+    function makeSlot(index, content, revealed) {
+      const slot = document.createElement('div');
+      slot.className = 'emoji-slot' + (revealed ? ' revealed' : ' hidden-initial');
+      slot.dataset.index = String(index);
+      const inner = document.createElement('div');
+      inner.className = 'emoji-inner emoji-tile';
+      inner.textContent = content;
+      inner.setAttribute('aria-label', 'emoji ' + index);
+      const q = document.createElement('span');
+      q.className = 'emoji-q';
+      q.textContent = '?';
+      slot.appendChild(inner);
+      slot.appendChild(q);
+      if (revealed) { q.style.display = 'none'; }
+      return slot;
+    }
+
+    const slot1 = makeSlot(1, e1, true);
+    const slot2 = makeSlot(2, '', false);
+    const slot3 = makeSlot(3, '', false);
+    const slot4 = makeSlot(4, '', false);
+    slotWrap.appendChild(slot1);
+    slotWrap.appendChild(slot2);
+    slotWrap.appendChild(slot3);
+    slotWrap.appendChild(slot4);
+    box.appendChild(slotWrap);
 
     // Ensure there is a note element placed inside the emojibox (as a child)
     let note = document.getElementById('emojiNote');
@@ -39,14 +59,18 @@ export async function initMonsterGuesser(options = {}) {
 
     // Helper to reveal nth emoji from goal raw fields
     const reveal = (n) => {
-      const tile = box.querySelector(`.emoji-tile[data-index="${n}"]`);
-      if (!tile) return;
+      const slot = box.querySelector(`.emoji-slot[data-index="${n}"]`);
+      if (!slot) return;
+      const inner = slot.querySelector('.emoji-inner');
+      if (!inner) return;
       const key = `emoji${n}`;
       const val = goal && goal.raw ? (goal.raw[key] || '') : '';
-      tile.textContent = val || '';
-      tile.classList.remove('locked');
-      // If twemoji is available, parse only this tile (or the emojibox) to replace with images
-      try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(tile, { folder: 'svg', ext: '.svg' }); } catch (e) { /* non-fatal */ }
+      inner.textContent = val || '';
+      slot.classList.add('revealed');
+      slot.classList.remove('hidden-initial');
+      const q = slot.querySelector('.emoji-q');
+      if (q) q.style.display = 'none';
+      try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(inner, { folder: 'svg', ext: '.svg' }); } catch (e) { /* non-fatal */ }
     };
 
     const updateNote = (count) => {

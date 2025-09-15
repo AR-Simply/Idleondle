@@ -640,7 +640,19 @@ function updateClueState() {
           if (typeof window !== 'undefined' && typeof window.showToast === 'function') {
             try { btnCategory.classList.add('unlocked-outline'); } catch (e) {}
             try { btnCategory.addEventListener('click', function _rm2() { btnCategory.classList.remove('unlocked-outline'); btnCategory.removeEventListener('click', _rm2); }); } catch (e) {}
-            showToast('Clue unlocked: Category', { timeout: 3000 });
+            // Determine contextual label for the second clue (category/effect/etc.)
+            let catLabel = 'Category';
+            try {
+              const g = typeof detectGameFromPath === 'function' ? detectGameFromPath() : '';
+              if (g === 'meal') catLabel = 'Meal effect';
+            } catch (e) { /* fallback keeps default */ }
+            // Improve accessibility hint when unlocking on meal page
+            try {
+              if (btnCategory && catLabel === 'Meal effect') {
+                btnCategory.setAttribute('aria-label', 'Meal effect clue unlocked');
+              }
+            } catch (e) { /* non-fatal */ }
+            showToast(`Clue unlocked: ${catLabel}`, { timeout: 3000 });
           }
         } catch (e) { /* ignore */ }
       }
@@ -721,7 +733,7 @@ export async function initShared(config = {}) {
         a.appendChild(img);
         return a;
       };
-  // Left: item, middle: card, right: monster
+  // Left: item, card, monster, meal (new)
   // Detect whether the current document is inside the `html/` folder so
   // generated hrefs point to the right location when pages are opened from
   // the repo root or from the `html/` subfolder.
@@ -730,6 +742,7 @@ export async function initShared(config = {}) {
   const indexHref = inHtmlFolder ? '../index.html' : 'index.html';
   const cardHref = inHtmlFolder ? 'cardGuesser.html' : 'html/cardGuesser.html';
   const monsterHref = inHtmlFolder ? 'monsterGuesser.html' : 'html/monsterGuesser.html';
+  const mealHref = inHtmlFolder ? 'mealGuesser.html' : 'html/mealGuesser.html';
 
       // Ensure the switch has the three expected buttons. If static HTML provided
       // them, update their href/img; otherwise append new buttons.
@@ -751,9 +764,14 @@ export async function initShared(config = {}) {
         return btn;
       };
 
-      ensureBtn(indexHref, 'btn-items', '../images/Helmets/Copper Helmet.png', 'Item Guesser');
-      ensureBtn(cardHref, 'btn-cards', '../images/card.png', 'Card Guesser');
-      ensureBtn(monsterHref, 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser');
+  // Only ensure the original three buttons (items, cards, monster). The Meal button
+  // is now required to be present statically in each HTML file so we no longer
+  // inject or auto-create it here. This avoids path duplication issues and keeps
+  // navigation fully author-controlled per user request.
+  ensureBtn(indexHref, 'btn-items', '../images/Helmets/Copper Helmet.png', 'Item Guesser');
+  ensureBtn(cardHref, 'btn-cards', '../images/card.png', 'Card Guesser');
+  ensureBtn(monsterHref, 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser');
+  // NOTE: meal button intentionally not auto-created anymore.
   // If this is a hard-mode page, change the appropriate page button to a red "hard" button
     try {
       // Determine hard type: 'item' for HardItemGuesser, 'card' for HardCardGuesser,
@@ -800,19 +818,21 @@ export async function initShared(config = {}) {
   const _href = (location.href || '').toLowerCase();
   const isCard = _pathname.endsWith('cardguesser.html') || _href.includes('cardguesser.html') || _href.includes('cardguesser');
   const isMonster = _pathname.endsWith('monsterguesser.html') || _href.includes('monsterguesser.html') || _href.includes('monsterguesser');
+  const isMeal = _pathname.endsWith('mealguesser.html') || _href.includes('mealguesser.html') || _href.includes('mealguesser');
   // Recompute hardType for later decisions (keep consistent with earlier detection)
   const hardType = (typeof document !== 'undefined' && document.body?.dataset?.hard) ? document.body.dataset.hard :
     ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('HardItemGuesser')) ? 'item' :
     ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('HardCardGuesser')) ? 'card' : null;
   const isHardAny = !!hardType;
-  const isItems = !isCard && !isMonster;
+  const isItems = !isCard && !isMonster && !isMeal;
 
   const btnItems = document.getElementById('btn-items');
   const btnCards = document.getElementById('btn-cards');
   const btnMonster = document.getElementById('btn-monster');
+  const btnMeal = document.getElementById('btn-meal');
 
   // reset classes/styles
-  [btnItems, btnCards, btnMonster].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
+  [btnItems, btnCards, btnMonster, btnMeal].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
 
   // Mark hard page button red depending on hard type
   if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
@@ -824,7 +844,8 @@ export async function initShared(config = {}) {
   // hard mode must remain visibly red. Only mark item/card as complete on non-hard pages.
   if (hardType !== 'item' && btnItems && hasWinToday('item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
     if (hardType !== 'card' && btnCards && hasWinToday('card')) { btnCards.classList.add('complete'); btnCards.style.background = '#2ecc71'; }
-    if (btnMonster && hasWinToday('monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
+  if (btnMonster && hasWinToday('monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
+  if (btnMeal && hasWinToday('meal')) { btnMeal.classList.add('complete'); btnMeal.style.background = '#2ecc71'; }
     // Hard-item completed may be tracked under 'hard_item'
   if (hardType !== 'item' && btnItems && hasWinToday('hard_item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
     // Hard-card completed may be tracked under 'hard_card'
@@ -836,6 +857,7 @@ export async function initShared(config = {}) {
   if (isItems && btnItems && hardType !== 'item') { btnItems.classList.add('active'); btnItems.style.background = '#f1c40f'; }
   if (isCard && btnCards && hardType !== 'card') { btnCards.classList.add('active'); btnCards.style.background = '#f1c40f'; }
   if (isMonster && btnMonster) { btnMonster.classList.add('active'); btnMonster.style.background = '#f1c40f'; }
+  if (isMeal && btnMeal) { btnMeal.classList.add('active'); btnMeal.style.background = '#f1c40f'; }
   // Ensure hard-mode buttons remain red (override) when detected
   if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
   if (hardType === 'card' && btnCards) { btnCards.classList.add('hard'); btnCards.style.background = '#c0392b'; }
@@ -879,7 +901,8 @@ export async function initShared(config = {}) {
             flameWrap.style.position = 'absolute';
             flameWrap.style.top = (rect.top + rect.height / 2) + 'px';
             flameWrap.style.left = rect.right + 'px';
-            flameWrap.style.transform = 'translate(16px, -50%)'; // 16px gap to the right, vertically centered
+            // Original horizontal gap was 16px; add 30px more (total 46px) per request
+            flameWrap.style.transform = 'translate(20px, -50%)';
           } catch (e) { /* non-fatal */ }
         };
         positionFlame();

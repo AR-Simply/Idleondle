@@ -23,9 +23,12 @@
     <a href="cardGuesser.html" id="btn-cards" class="page-btn" title="Card Guesser">
       <img src="../images/card.png" alt="Cards" />
     </a>
-    <a href="monsterGuesser.html" id="btn-monster" class="page-btn page-btn-right" title="Monster Guesser">
+    <a href="monsterGuesser.html" id="btn-monster" class="page-btn" title="Monster Guesser">
       <img src="../images/Enemies/carrotman-6_thumb.png" alt="Monster" />
     </a>
+      <a href="mealGuesser.html" id="btn-meal" class="page-btn page-btn-right" title="Meal Guesser">
+        <img src="../images/Spice/36px-Jungle_Spice.png" alt="Meal" />
+      </a>
   </div>
 
     <div class="top-row">
@@ -34,8 +37,8 @@
         <div class="guess-actions">
 
               <div class="clue-wrap">
-            <button id="guessBtn2" class="guess-btn" aria-label="Category clue">No clues for this</button>
-            
+            <button id="guessBtn2" class="guess-btn" aria-label="Meal effect clue" disabled>Meal effect clue</button>
+            <div class="clue-note" id="note2"></div>
           </div>
         </div>
 
@@ -101,13 +104,9 @@
         </div>
         <!-- Add action button linking to Monster Guesser (carrotman icon) -->
         <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
-          <a href="hardCardGuesser.html" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
-                <img src="../images/hardcard.png" alt="Hard Card" style="width:22px;height:22px;object-fit:contain;" />
-                <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
-              </a>
-          <a href="monsterGuesser.html" class="guess-btn" id="toMonsterBtn" aria-label="Monster Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-            <img src="../images/Enemies/carrotman-6_thumb.png" alt="carrotman" style="width:22px;height:22px;object-fit:contain;" />
-            <span style="color:var(--text);font-weight:800;font-size:15px;">Next game</span>
+          <a href="results.html" class="guess-btn btn-results" id="resultsBtn" aria-label="View Results" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+            <img src="../images/icon.png" alt="Results" style="width:22px;height:22px;object-fit:contain;" />
+            <span style="color:var(--text);font-weight:800;font-size:15px;">Daily Results</span>
           </a>
         </div>
       </div>
