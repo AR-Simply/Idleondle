@@ -148,7 +148,7 @@ function renderResultsBox() {
 	thanks.style.letterSpacing = '0.5px';
 
 	const see = document.createElement('div');
-	see.textContent = 'See you in:';
+	see.textContent = 'Keep your streak alive! See you in:';
 	see.style.fontSize = '13px';
 	see.style.fontWeight = '600';
 	see.style.color = 'var(--muted)';
@@ -167,6 +167,20 @@ function renderResultsBox() {
 	footer.appendChild(see);
 	timerWrap.appendChild(timer);
 	footer.appendChild(timerWrap);
+
+	// Insert copy button at the very top of the end section (above title)
+	try {
+		const copyBtn = document.createElement('button');
+		copyBtn.id = 'copyResultsBtn';
+		copyBtn.type = 'button';
+		copyBtn.className = 'guess-btn';
+		copyBtn.textContent = 'Copy Results';
+		copyBtn.setAttribute('aria-label','Copy daily results');
+		copyBtn.title = 'Copy daily results';
+		copyBtn.style.marginBottom = '8px';
+		footer.insertBefore(copyBtn, footer.firstChild);
+		copyBtn.addEventListener('click', copyShareText);
+	} catch(e) { /* non-fatal */ }
 
 	// Ko-fi support link
 	const kofiMsg = document.createElement('div');
@@ -229,18 +243,111 @@ function capitalizeWords(s){ return String(s||'').split(' ').map(w=> w ? w[0].to
 
 function copyShareText() {
 	const wins = collectWinsToday();
-	if (!wins.length) { navigator.clipboard?.writeText('I played Idleondle today — go win some games!'); return; }
-	const pieces = wins.map(w => `${capitalizeWords(w.game)}: ${w.guesses} ${w.guesses===1?'guess':'guesses'}`);
-	const txt = `My Idleondle daily results (${new Date().toLocaleDateString()}):\n` + pieces.join('\n') + '\nCan you beat me?';
-	if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(()=> showToast('Results copied to clipboard!')).catch(()=> showToast('Could not copy results.'));
+	const header = 'Can you beat my Idleondle results?';
+	// Use full https URL in plain text so most platforms auto-link it
+	const footerText = 'https://idleondle.com';
+	const footerUrl = 'https://idleondle.com';
+	if (!wins.length) {
+		const emptyTxt = `${header}\n${footerText}`;
+		if (navigator.clipboard?.writeText) navigator.clipboard.writeText(emptyTxt).then(()=> showToast('Nothing yet – copied template!')).catch(()=> showToast('Copy failed.'));
+		return;
+	}
+	// Map rank numbers to emoji
+	const rankEmoji = { 1:'🎖️', 2:'🥈', 3:'🥉', 4:'🎀', 5:'💀' };
+	// Friendly name mapping (duplicated from renderResultsBox for isolation)
+	const labelMap = {
+		'item': 'Item Guesser',
+		'hard item': 'HARD Item Guesser',
+		'hard_item': 'HARD Item Guesser',
+		'card': 'Card Guesser',
+		'hard card': 'HARD Card Guesser',
+		'hard_card': 'HARD Card Guesser',
+		'monster': 'Monster Guesser',
+		'meal': 'Meal Guesser'
+	};
+	const lines = wins.map(w => {
+		const raw = w.game.trim();
+		const key = raw.toLowerCase();
+		const friendly = labelMap[key] || labelMap[key.replace(/\s+/g,'_')] || capitalizeWords(raw);
+		const isHard = /hard/i.test(friendly);
+		const rank = determineRank(w.guesses, isHard);
+		const emoji = rankEmoji[rank] || '💀';
+		// Desired format: <gamename>: <score><emoji>
+		return { text: `${friendly}: ${w.guesses}${emoji}`, friendly, rank, guesses: w.guesses, emoji };
+	});
+	const plainLines = lines.map(l => l.text);
+	const plainText = `${header}\n` + plainLines.join('\n') + `\n${footerText}`;
+	// Build minimal HTML variant for richer paste targets
+	// HTML mirrors plain format: <gamename>: <score><emoji> with score bolded
+	const htmlLines = lines.map(l => `<div>${escapeHtml(l.friendly)}: <strong>${l.guesses}</strong>${l.emoji}</div>`).join('');
+	const html = `<div>${escapeHtml(header)}</div>${htmlLines}<div><a href="${footerUrl}" target="_blank" rel="noopener">${escapeHtml(footerText)}</a></div>`;
+	// Try rich clipboard first
+	if (navigator.clipboard && window.ClipboardItem) {
+		try {
+			const data = new ClipboardItem({
+				'text/plain': new Blob([plainText], { type: 'text/plain' }),
+				'text/html': new Blob([html], { type: 'text/html' })
+			});
+			navigator.clipboard.write([data]).then(()=> showToast('Results copied!')).catch(()=> {
+				// Fallback to plain text
+				navigator.clipboard.writeText(plainText).then(()=> showToast('Results copied (text only)')).catch(()=> showToast('Copy failed.'));
+			});
+			return;
+		} catch(e) { /* fall through to plain */ }
+	}
+	// Plain text fallback
+	if (navigator.clipboard?.writeText) {
+		navigator.clipboard.writeText(plainText).then(()=> showToast('Results copied!')).catch(()=> showToast('Copy failed.'));
+	} else {
+		try { const ta = document.createElement('textarea'); ta.value = plainText; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); showToast('Results copied!'); } catch(e){ showToast('Copy failed.'); }
+	}
+	// end fallback block
 }
 
+
+function escapeHtml(s){ return String(s).replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
 // Graceful fallback for showToast used by shared.js
-function showToast(msg) { try { if (window.showToast) window.showToast(msg); else alert(msg); } catch(e){ try{ alert(msg);}catch(e){} } }
+// Toast helper: prefer existing global showToast; if missing, create a minimal inline version (no alerts)
+function showToast(msg) {
+	try {
+		if (window.showToast) { window.showToast(msg); return; }
+		// Minimal inline toast system (only if shared.js not loaded on results page)
+		let container = document.getElementById('toast-container');
+		if (!container) {
+			container = document.createElement('div');
+			container.id = 'toast-container';
+			container.style.position = 'fixed';
+			container.style.bottom = '16px';
+			container.style.left = '50%';
+			container.style.transform = 'translateX(-50%)';
+			container.style.display = 'flex';
+			container.style.flexDirection = 'column';
+			container.style.gap = '8px';
+			container.style.zIndex = '9999';
+			document.body.appendChild(container);
+		}
+		const el = document.createElement('div');
+		el.textContent = msg;
+		el.style.background = 'rgba(20,22,40,0.92)';
+		el.style.color = '#fff';
+		el.style.padding = '8px 14px';
+		el.style.borderRadius = '6px';
+		el.style.fontSize = '14px';
+		el.style.fontWeight = '600';
+		el.style.boxShadow = '0 4px 10px rgba(0,0,0,0.35)';
+		el.style.opacity = '0';
+		el.style.transition = 'opacity .25s ease';
+		container.appendChild(el);
+		requestAnimationFrame(()=> { el.style.opacity = '1'; });
+		setTimeout(()=> { el.style.opacity = '0'; el.addEventListener('transitionend', () => { if (el.parentNode) el.parentNode.removeChild(el); }, { once:true }); }, 3000);
+	} catch(e) { /* swallow */ }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 	renderResultsBox();
+	injectResultsFlame();
 	markPageSwitcherCompletion();
+	try { const btn = document.getElementById('copyResultsBtn'); if (btn) btn.addEventListener('click', copyShareText); } catch(e) {}
 	// Re-render on header click (manual refresh)
 	const header = document.querySelector('#resultsbox .results-box-header h2'); if (header) header.addEventListener('click', renderResultsBox);
 
@@ -308,4 +415,43 @@ function buildRankIcon(rank){
 	const r = Math.min(5, Math.max(1, Number(rank)||5));
 	// results.html is in html/ so we need ../images/...
 	return '../images/rank/rank' + r + '.png';
+}
+
+// --- Results page flame (daily streak) injection ---
+function injectResultsFlame(){
+	try {
+		if (document.getElementById('resultsFlameWrap')) return; // already inserted
+		const header = document.querySelector('.results-box-header') || document.getElementById('resultsbox');
+		if (!header) return;
+		// Read streak cookies (mirrors shared.js logic simplified)
+		const streakVal = (() => { try { return Number(getCookie('idleondle_streak')) || 0; } catch(e){ return 0; } })();
+		const wrap = document.createElement('div');
+		wrap.id = 'resultsFlameWrap';
+		wrap.className = 'flame-wrap';
+		wrap.style.margin = '0 0 0 12px';
+		wrap.style.display = 'inline-flex';
+		wrap.style.alignItems = 'center';
+		wrap.style.justifyContent = 'center';
+		const img = document.createElement('img');
+		img.id = 'resultsFlameImg';
+		img.className = 'flame-icon' + (streakVal === 0 ? ' flame-zero' : '');
+		img.alt = 'Daily Streak';
+		img.title = 'Daily Streak';
+		try { img.src = '../images/flame.png'; } catch(e){ img.src = '../images/flame.png'; }
+		const num = document.createElement('span');
+		num.className = 'flame-streak';
+		num.id = 'resultsFlameStreak';
+		num.textContent = String(streakVal);
+		wrap.appendChild(img); wrap.appendChild(num);
+		// Place to the right of the main title text inside the header.
+		// Try to locate an h2 or first heading-like element.
+		let titleEl = header.querySelector('h2, .results-title-text');
+		if (!titleEl) titleEl = header.firstElementChild;
+		if (titleEl) {
+			// Insert after title element
+			titleEl.insertAdjacentElement('afterend', wrap);
+		} else {
+			header.appendChild(wrap);
+		}
+	} catch(e){ /* non-fatal */ }
 }

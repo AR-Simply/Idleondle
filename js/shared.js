@@ -13,6 +13,11 @@ let DATA_URL = 'idleon_items_detailed.json';
 let IMAGE_BASE = './';
 let MAX_RESULTS = 50;
 let CLUE_UNLOCKS = { world: 4, category: 5 };
+// Streak constants
+const STREAK_COOKIE = 'idleondle_streak';
+const STREAK_LAST_COOKIE = 'idleondle_streak_last'; // stores ISO date of last increment
+// Use local midnight (same logic as game rotation) for daily boundary
+
 
 // State
 let items = [];
@@ -21,6 +26,69 @@ let goalItem = null;
 let loadingItems = true;
 let guessCount = 0;
 let _config = {};
+let _streak = 0;
+let _streakLast = null; // ISO string of last increment day (midnight reference)
+
+function getLocalDayKey(d=new Date()) { return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
+function parseCookieInt(name, fallback=0){ const v = getCookie(name); if(!v) return fallback; const n=Number(v); return Number.isFinite(n)?n:fallback; }
+function loadStreak(){
+  try { _streak = parseCookieInt(STREAK_COOKIE,0); _streakLast = getCookie(STREAK_LAST_COOKIE) || null; } catch(e){ _streak=0; _streakLast=null; }
+  // If last date missing but streak>0, assume today so it doesn't instantly reset
+  if(_streak>0 && !_streakLast){ _streakLast = getLocalDayKey(); }
+  evaluateStreakReset();
+  renderStreak();
+}
+function saveStreak(){ try { setCookie(STREAK_COOKIE,String(_streak),400); setCookie(STREAK_LAST_COOKIE,getLocalDayKey(),400);} catch(e){} }
+function evaluateStreakReset(){
+  try {
+    if(!_streakLast){ if(_streak!==0){ _streak=0; saveStreak(); } return; }
+    const todayKey = getLocalDayKey();
+    if(_streakLast === todayKey) return; // already updated today
+    // Determine gap in days
+    const lastParts = _streakLast.split('-').map(n=>Number(n));
+    if(lastParts.length!==3) { _streak=0; saveStreak(); return; }
+    const lastDate = new Date(lastParts[0], lastParts[1]-1, lastParts[2]);
+    const today = new Date();
+    const diffDays = Math.floor((today - lastDate)/86400000);
+    if(diffDays > 1){ // missed at least one reset
+      _streak = 0;
+      saveStreak();
+    }
+  } catch(e){ /* non-fatal */ }
+}
+function incrementStreakIfFirstWinToday(){
+  try {
+    const todayKey = getLocalDayKey();
+    if(_streakLast === todayKey) return; // already counted a win today
+    _streak += 1;
+    _streakLast = todayKey;
+    saveStreak();
+    animateStreakIncrement();
+    renderStreak();
+  } catch(e){ /* non-fatal */ }
+}
+function renderStreak(){
+  try {
+    const el = document.getElementById('flameStreak');
+    const img = document.getElementById('flameIconImg');
+    if(el) el.textContent = String(_streak||0);
+    // Grey out flame when streak is 0
+    if(img){
+      if((_streak||0) === 0) img.classList.add('flame-zero'); else img.classList.remove('flame-zero');
+    }
+  } catch(e){ /* non-fatal */ }
+}
+function animateStreakIncrement(){
+  try {
+    const wrap = document.querySelector('.flame-wrap');
+    if(!wrap) return;
+    wrap.classList.remove('flame-bump');
+    // Force reflow to restart animation
+    void wrap.offsetWidth;
+    wrap.classList.add('flame-bump');
+  } catch(e){ /* non-fatal */ }
+}
+
 
 // timers used by modals/timers
 let goalTimerInterval = null;
@@ -605,6 +673,9 @@ function notifyGoalGuessed(it) {
   recordWin(game, Number(guessCount) || 0);
   } catch (e) { /* non-fatal */ }
 
+  // Increment streak only for the first completed game of the day across all pages
+  try { incrementStreakIfFirstWinToday(); } catch (e) { /* non-fatal */ }
+
   goalModalTimeout = setTimeout(() => { showGoalModal(it); goalModalTimeout = null; }, 1000);
 }
 
@@ -769,6 +840,70 @@ export async function initShared(config = {}) {
     } catch (e) { console.warn('Page switch render failed', e); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => renderPageSwitch(config.imageBase || IMAGE_BASE)); else renderPageSwitch(config.imageBase || IMAGE_BASE);
+
+  // Inject flame icon + streak (now on all pages)
+  try {
+    const sideBox = document.getElementById('sideBox') || document.querySelector('.side-box');
+    const switcher = document.querySelector('.page-switch');
+    const isResultsPage = /results\.html$/i.test(location.pathname);
+    // Only reposition next to page switcher when switcher exists and not results page
+    if (!document.getElementById('flameIconImg')) {
+      // Create flame structure once
+      const flameWrap = document.createElement('div');
+      flameWrap.className = 'flame-wrap';
+      flameWrap.id = 'flameWrapRoot';
+      const img = document.createElement('img');
+      img.id = 'flameIconImg';
+      img.className = 'flame-icon';
+      img.alt = 'Flame';
+      img.title = 'Daily Streak';
+      img.setAttribute('aria-label','Daily Streak');
+      try { img.src = resolveIcon('images/flame.png'); } catch (e) { img.src = 'images/flame.png'; }
+      const streak = document.createElement('span');
+      streak.className = 'flame-streak';
+      streak.id = 'flameStreak';
+      streak.textContent = '0';
+      flameWrap.appendChild(img);
+      flameWrap.appendChild(streak);
+
+      if (switcher && !isResultsPage) {
+        try { switcher.classList.add('offset-left'); } catch(e) { /* non-fatal */ }
+        // Position flame immediately to the right of the page switcher (centered vertically on it)
+        flameWrap.classList.add('floating-flame');
+        document.body.appendChild(flameWrap);
+        const positionFlame = () => {
+          try {
+            const rect = switcher.getBoundingClientRect();
+            flameWrap.style.position = 'absolute';
+            flameWrap.style.top = (rect.top + rect.height / 2) + 'px';
+            flameWrap.style.left = rect.right + 'px';
+            flameWrap.style.transform = 'translate(16px, -50%)'; // 16px gap to the right, vertically centered
+          } catch (e) { /* non-fatal */ }
+        };
+        positionFlame();
+        window.addEventListener('resize', positionFlame);
+      } else if (sideBox) {
+        // Fallback: keep previous behavior next to side box
+        let wrapper = document.getElementById('sideFlameWrap');
+        if (!wrapper) {
+          wrapper = document.createElement('div');
+          wrapper.id = 'sideFlameWrap';
+          wrapper.className = 'side-with-flame';
+          if (sideBox.parentNode) sideBox.parentNode.insertBefore(wrapper, sideBox);
+          wrapper.appendChild(sideBox);
+        }
+        wrapper.appendChild(flameWrap);
+      }
+      loadStreak();
+    } else {
+      // Flame exists: just re-render number
+      try {
+        const img = document.getElementById('flameIconImg');
+        if (img) { img.title = 'Daily Streak'; img.setAttribute('aria-label','Daily Streak'); }
+      } catch(e) { /* non-fatal */ }
+      renderStreak();
+    }
+  } catch (e) { /* non-fatal */ }
 
   // After rendering the page switcher, if the user has already completed today's
   // game for the current page, show the goal modal so they can see the answer.

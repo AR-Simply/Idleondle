@@ -62,6 +62,7 @@ html, body {
   margin-bottom: 6px;
   position: relative;
 }
+.page-switch.offset-left { transform: translateX(-20px); }
 .page-btn {
   display: inline-flex;
   align-items: center;
@@ -144,6 +145,57 @@ html, body {
 }
 .icon-btn img { width: 22px; height: 22px; object-fit: contain; }
 
+/* Plain flame icon (injected) */
+img.flame-icon { width:72px; height:72px; object-fit:contain; display:inline-block; margin-left:8px; transition:filter .25s, transform .25s; }
+img.flame-icon:hover { filter: drop-shadow(0 0 12px #ff9140); transform: scale(1.08); }
+/* Zero state greyscale */
+img.flame-icon.flame-zero { filter: grayscale(100%) brightness(0.55) contrast(1.1); opacity:0.7; }
+img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contrast(1.15); }
+/* Increment animation */
+.flame-bump { animation: flameBump 420ms ease-out; }
+@keyframes flameBump { 0% { transform: translateY(-10px) scale(1); } 40% { transform: translateY(-12px) scale(1.18); } 70% { transform: translateY(-9px) scale(1.05); } 100% { transform: translateY(-10px) scale(1); } }
+/* Flame streak overlay */
+.flame-wrap { position:relative; display:inline-flex; align-items:center; justify-content:center; transform:translateY(-10px); }
+.flame-wrap .flame-streak { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:30px; color:#fff; text-shadow:0 0 4px #000,0 0 6px #ff6a00; pointer-events:none; font-family: 'Segoe UI', system-ui, sans-serif; transform:translateY(12px); }
+/* Wrapper that aligns side-box with flame icon */
+.side-with-flame { display:flex; flex-direction:row; align-items:center; justify-content:center; gap:4px; }
+.side-with-flame > .side-box { margin:0; }
+
+/* Flame next to page switcher */
+#switchFlameWrap { display:inline-block; }
+#switchFlameWrap .flame-wrap { width:60px; height:60px; }
+#switchFlameWrap img.flame-icon { width:60px; height:60px; margin-left:0; }
+#switchFlameWrap .flame-streak { font-size:26px; transform:translateY(10px); }
+
+/* Inline row for page switcher + flame */
+.switcher-flame-row { display:inline-flex; align-items:center; justify-content:center; }
+/* Switcher stays perfectly centered; flame will be floated elsewhere */
+
+/* Floating flame (detached positioning) */
+.floating-flame { position:absolute; z-index:20; pointer-events:auto; }
+.floating-flame img.flame-icon { width:72px; height:72px; }
+.floating-flame .flame-streak { font-size:30px; transform:translateY(12px); }
+@media (max-width:720px){
+  .floating-flame img.flame-icon { width:60px; height:60px; }
+  .floating-flame .flame-streak { font-size:24px; }
+}
+@media (max-width:520px){
+  .floating-flame img.flame-icon { width:52px; height:52px; }
+  .floating-flame .flame-streak { font-size:22px; }
+}
+
+@media (max-width:640px){
+  .switcher-flame-row { gap:10px; }
+  .switcher-flame-row img.flame-icon { width:50px; height:50px; }
+  .switcher-flame-row .flame-streak { font-size:22px; transform:translateY(8px); }
+}
+
+@media (max-width: 640px) {
+  #switchFlameWrap .flame-wrap { width:50px; height:50px; }
+  #switchFlameWrap img.flame-icon { width:50px; height:50px; }
+  #switchFlameWrap .flame-streak { font-size:22px; transform:translateY(8px); }
+}
+
 @media (max-width: 720px) {
   .top-row {
     flex-direction: row;
@@ -163,6 +215,9 @@ html, body {
   }
   .combo-guess { align-self: stretch; }
   .icon-btn { width: 100%; height: 34px; }
+  img.flame-icon { margin-left:6px; width:56px; height:56px; }
+  .flame-wrap .flame-streak { font-size:24px; transform:translateY(10px); }
+  .side-with-flame { gap:4px; }
   .guess-actions { max-width: calc(90% - 56px); gap: 8px; }
   .guess-btn { min-width: 0; flex: 1 1 auto; height: 44px; }
   .emojibox img { width: 84px; height: 84px; padding: 6px; }
@@ -252,7 +307,8 @@ html, body {
 
 .combo {
   z-index: 2;
-  width: min(680px, 90%);
+  /* Halved from 680px to 340px */
+  width: min(400px, 90%);
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
