@@ -80,12 +80,14 @@ function renderStreak(){
 }
 function animateStreakIncrement(){
   try {
-    const wrap = document.querySelector('.flame-wrap');
-    if(!wrap) return;
-    wrap.classList.remove('flame-bump');
-    // Force reflow to restart animation
-    void wrap.offsetWidth;
-    wrap.classList.add('flame-bump');
+    // Target the main page flame image; also pulse results page image if present
+    const candidates = [document.getElementById('flameIconImg'), document.getElementById('resultsFlameImg')].filter(Boolean);
+    if(!candidates.length) return;
+    candidates.forEach(img => {
+      img.classList.remove('flame-bump');
+      void img.offsetWidth; // reflow to restart
+      img.classList.add('flame-bump');
+    });
   } catch(e){ /* non-fatal */ }
 }
 
