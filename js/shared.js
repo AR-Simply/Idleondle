@@ -895,23 +895,23 @@ export async function initShared(config = {}) {
       flameWrap.appendChild(streak);
 
       if (switcher && !isResultsPage) {
-        try { switcher.classList.add('offset-left'); } catch(e) { /* non-fatal */ }
-        // Position flame immediately to the right of the page switcher (centered vertically on it)
-        flameWrap.classList.add('floating-flame');
-        document.body.appendChild(flameWrap);
-        const positionFlame = () => {
-          try {
-            const rect = switcher.getBoundingClientRect();
-            const topPx = rect.top + (rect.height / 2);
-            const leftPx = rect.right + 20; // gap from switcher
-            flameWrap.style.top = topPx + 'px';
-            flameWrap.style.left = leftPx + 'px';
-            flameWrap.style.transform = 'translateY(-50%)';
-          } catch (e) { /* non-fatal */ }
-        };
-        positionFlame();
-        window.addEventListener('resize', positionFlame, { passive: true });
-        window.addEventListener('scroll', positionFlame, { passive: true }); /* ensure it tracks if switcher moves (e.g., layout shifts) */
+        // Place flame inside the page switcher flex container so it aligns horizontally
+        try { switcher.classList.remove('offset-left'); } catch(e) { /* non-fatal */ }
+        flameWrap.classList.add('inline-flame');
+        switcher.appendChild(flameWrap);
+        // Mark switcher so CSS can shorten decorative bar, and set a CSS var for dynamic width subtraction
+        try {
+          switcher.classList.add('has-flame');
+          const updateSwitcherBar = () => {
+            try {
+              const ml = parseFloat(getComputedStyle(flameWrap).marginLeft) || 0;
+              const total = flameWrap.offsetWidth + ml; // total horizontal space consumed
+              switcher.style.setProperty('--flame-total-width', total + 'px');
+            } catch(e) { /* non-fatal */ }
+          };
+          updateSwitcherBar();
+          window.addEventListener('resize', debounce(updateSwitcherBar, 160));
+        } catch(e) { /* non-fatal */ }
       } else if (sideBox) {
         // Fallback: keep previous behavior next to side box
         let wrapper = document.getElementById('sideFlameWrap');

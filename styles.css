@@ -78,6 +78,10 @@ body::before {
   justify-content: center;
   margin-bottom: 6px;
   position: relative;
+  /* Amount the decorative bar should extend (overhang) to the left (and right when no flame) */
+  --switch-overhang: 24px;
+  /* Horizontal gap between last icon and flame so bar stops early */
+  --flame-gap: 24px;
 }
 .page-switch.offset-left { transform: translateX(-20px); }
 .page-btn {
@@ -104,13 +108,15 @@ body::before {
 
 .page-btn { z-index: 2; position: relative; }
 .page-switch::after {
-  /* horizontal bar centered vertically through the buttons */
+  /* horizontal bar behind buttons */
   content: '';
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% + 48px); /* extend slightly beyond buttons */
+  /* Shift entire bar 20px to the right */
+  left: calc(0px - var(--switch-overhang) + 20px);
+  transform: translateY(-50%);
+  /* Reduce width by the same 20px so right edge stays consistent */
+  width: calc(100% + (var(--switch-overhang) * 2) - 20px);
   height: 12px;
   background: #8B5A2B; /* brown separator */
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -118,11 +124,21 @@ body::before {
   border-radius: 6px;
   z-index: 1;
 }
+/* When the flame is present inside the switcher, shorten the bar so it does not run beneath the flame. */
+.page-switch.has-flame::after {
+  /* Keep left overhang, stop before flame leaving flame-gap; flame-total-width already includes flame margin-left. */
+  left: calc(0px - var(--switch-overhang) + 20px);
+  /* Match right shift with equivalent width reduction so right alignment preserved. */
+  width: calc(100% - var(--flame-total-width, 120px) + (var(--switch-overhang) * 2) - var(--flame-gap) - 25px);
+}
 
 @media (max-width: 420px) {
-  .page-switch::after { top: 50%; transform: translate(-50%, -50%); height: 10px; width: calc(100% + 32px); }
+  .page-switch { --switch-overhang: 16px; }
+  .page-switch { --flame-gap: 16px; }
+  .page-switch::after { height: 10px; }
   .page-btn { width: 48px; height: 48px; }
   .page-btn img { width:30px; height:30px; }
+  .page-switch.has-flame::after { height:10px; }
 }
 
 
@@ -189,17 +205,18 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
 .switcher-flame-row { display:inline-flex; align-items:center; justify-content:center; }
 /* Switcher stays perfectly centered; flame will be floated elsewhere */
 
-/* Floating flame (detached positioning) - lowered z-index so it stays beneath modals */
-.floating-flame { position:fixed; z-index:5; pointer-events:auto; }
-.floating-flame img.flame-icon { width:72px; height:72px; }
-.floating-flame .flame-streak { font-size:30px; transform:translateY(12px); }
+/* Inline flame placed directly after the page switcher */
+.inline-flame { display:inline-flex; margin-left:16px; align-items:center; }
+.inline-flame img.flame-icon { width:72px; height:72px; display:block; }
+.inline-flame .flame-streak { font-size:30px; transform:translateY(6px); }
 @media (max-width:720px){
-  .floating-flame img.flame-icon { width:60px; height:60px; }
-  .floating-flame .flame-streak { font-size:24px; }
+  .inline-flame img.flame-icon { width:60px; height:60px; }
+  .inline-flame .flame-streak { font-size:24px; transform:translateY(4px); }
 }
 @media (max-width:520px){
-  .floating-flame img.flame-icon { width:52px; height:52px; }
-  .floating-flame .flame-streak { font-size:22px; }
+  .inline-flame { margin-left:12px; }
+  .inline-flame img.flame-icon { width:52px; height:52px; }
+  .inline-flame .flame-streak { font-size:22px; transform:translateY(4px); }
 }
 
 @media (max-width:640px){
