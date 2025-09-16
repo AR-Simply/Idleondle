@@ -1,391 +1,257 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Idleondle</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <meta name="description" content="Play Idleondle — daily word guessing games from the world of IdleOn. Free, no account required.">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Idleondle – Daily Idleon Games</title>
+	<meta name="description" content="Idleondle – Play daily word & guessing games from the Legends of IdleOn universe. Free, no account required." />
+	<link rel="icon" href="/images/icon.png" />
+	<link rel="preload" href="images/bg.png" as="image" />
+	<link rel="stylesheet" href="styles.css" />
+	<meta name="color-scheme" content="dark light" />
   <link rel="canonical" href="https://www.idleondle.com/">
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
-  <link rel="apple-touch-icon" href="images/icon.png">
-
-  <link rel="stylesheet" href="styles.css">
-  <meta name="google-adsense-account" content="ca-pub-4897247326207368">
+    <meta name="google-adsense-account" content="ca-pub-4897247326207368">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4897247326207368"
      crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="center">
-  <img src="images/title.png" alt="Idleondle title" class="site-title" />
-  <!-- Static page switcher: item, card, monster, meal -->
-  <div class="page-switch">
-    <a href="../" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
-      <img src="images/Helmets/Copper Helmet.png" alt="Item" />
-    </a>
-    <a href="html/cardGuesser.html" id="btn-cards" class="page-btn" title="Card Guesser">
-      <img src="images/card.png" alt="Cards" />
-    </a>
-    <a href="html/monsterGuesser.html" id="btn-monster" class="page-btn" title="Monster Guesser">
-      <img src="images/Enemies/carrotman-6_thumb.png" alt="Monster" />
-    </a>
-    <a href="html/mealGuesser.html" id="btn-meal" class="page-btn page-btn-right" title="Meal Guesser">
-      <img src="images/Spice/36px-Jungle_Spice.png" alt="Meal" />
-    </a>
-  </div>
+	<main class="front-wrapper" id="top">
+		<header class="front-header" role="banner">
+			<a href="./" aria-label="Idleondle Home" style="display:inline-block;line-height:0;">
+				<img src="images/title.png" class="front-logo" alt="Idleondle" width="520" height="160" decoding="async" />
+			</a>
+			<p class="front-tagline">Daily Idleon challenges – pick a game below.</p>
+		</header>
 
-    <div class="top-row">
-      <div class="guess-box combo-guess" id="guessBox">
-        <div class="guess-title">Guess today's Item!</div>
-        <div class="guess-actions">
-          <!--
-          <div class="clue-wrap">
-              <button id="guessBtn1" class="guess-btn" aria-label="Guess button 1">Upgrade Slots Clue</button>
-              <div class="clue-note" id="note1">0 guesses left</div>
-            </div>
-          -->
-          <div class="clue-wrap">
-            <button id="guessBtn2" class="guess-btn" aria-label="Guess button 2">Category Clue</button>
-            <div class="clue-note" id="note2">0 guesses left</div>
-          </div>
-        </div>
+		<nav class="game-grid" aria-label="Game selection">
 
-        <!-- About modal -->
-        <div id="aboutModal" class="goal-modal" aria-hidden="true">
-          <div class="goal-panel">
-            <button class="goal-close" id="aboutClose" aria-label="Close">✕</button>
-            <h2 class="goal-title">ABOUT</h2>
-            <div class="goal-body">
-              <div style="text-align:left; font-size:14px; color:#111;">
-                <p><strong>IdleOn</strong> is a registered trademark of Lavaflame2. <strong>Idleondle</strong> is an independent project and is not affiliated with, endorsed by, or sponsored by Lavaflame2, IdleOn or any of its subsidiaries. All trademarks, service marks, trade names, and logos referenced herein remain the property of their respective owners. Any use of these names or marks is solely for descriptive purposes and does not imply any association or partnership.</p>
+      			<a class="game-card" href="item/" data-game="item">
+				<img src="images/Helmets/Copper Helmet.png" alt="" class="game-icon" width="88" height="88" loading="lazy" decoding="async" />
+				<div class="game-info">
+					<h2 class="game-title">Item Guesser</h2>
+					<p class="game-subtitle">Guess today’s item</p>
+				</div>
+			</a>
+			<a class="game-card hard" href="harditem/" data-game="harditem">
+				<img src="images/Premium Helmets/Diamon Horns.png" alt="" class="game-icon" width="88" height="88" loading="lazy" decoding="async" />
+				<div class="game-info">
+					<h2 class="game-title">HARD Item</h2>
+					<p class="game-subtitle">Includes more items</p>
+				</div>
+			</a>
 
-                <p>Idleondle is inspired by games like <a href="https://www.nytimes.com/games/wordle/index.html?from=onepiecedle.net_with_love" target="_blank" rel="noopener">Wordle</a> and <a href="https://onepiecedle.net/" target="_blank" rel="noopener">Onepiecedle</a>.</p>
+			<a class="game-card" href="card/" data-game="card">
+				<img src="images/card.png" alt="" class="game-icon" width="88" height="88" loading="lazy" decoding="async" />
+				<div class="game-info">
+					<h2 class="game-title">Card Guesser</h2>
+					<p class="game-subtitle">Guess today’s card</p>
+				</div>
+			</a>
+			<a class="game-card hard" href="hardcard/" data-game="hardcard">
+				<img src="images/hardcard.png" alt="" class="game-icon" width="88" height="88" loading="lazy" decoding="async" />
+				<div class="game-info">
+					<h2 class="game-title">HARD Card</h2>
+					<p class="game-subtitle">Greyscaled and less unblurring</p>
+				</div>
+			</a>
 
-                <p>The background, all items, icons and related properties are from <a href="https://store.steampowered.com/app/1476970/IdleOn__The_Idle_RPG/" target="_blank" rel="noopener">IdleOn</a>. Button icons are from <a href="https://www.flaticon.com/" target="_blank" rel="noopener">Flaticon</a>.</p>
+       <a class="game-card" href="monster/" data-game="monster">
+				<img src="images/Enemies/carrotman-6_thumb.png" alt="" class="game-icon" width="88" height="88" loading="lazy" decoding="async" />
+				<div class="game-info">
+					<h2 class="game-title">Monster Guesser</h2>
+					<p class="game-subtitle">Guess today’s monster</p>
+				</div>
+			</a>
 
-                <h3>FEEDBACK/QUESTIONS</h3>
-                <p>You can get in touch with us at the following email: <a href="mailto:support@ar-simply.com">support@ar-simply.com</a></p>
+			<a class="game-card" href="meal/" data-game="meal">
+				<img src="images/spice.png" alt="" class="game-icon" width="88" height="88" loading="lazy" decoding="async" />
+				<div class="game-info">
+					<h2 class="game-title">Meal Guesser</h2>
+					<p class="game-subtitle">Guess today's meal</p>
+				</div>
+			</a>
 
-                <p>We hope you enjoy the game!<br/>Remember to do alchemy.<br/><strong>Tobias and Frederik</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+			<a class="game-card results" href="results/" data-game="results">
+				<img src="images/icon.png" alt="" class="game-icon" width="120" height="88" loading="lazy" decoding="async" />
+				<div class="game-info">
+					<h2 class="game-title">Daily Results</h2>
+					<p class="game-subtitle">Share your victories</p>
+				</div>
+			</a>
+		</nav>
 
-      <div class="side-box" id="sideBox" aria-hidden="true">
-        <button id="helpBtn" class="icon-btn" aria-label="Question button">
-          <img src="images/question.png" alt="question" />
-        </button>
-        <button id="aboutBtn" class="icon-btn" aria-label="Info button">
-          <img src="images/info.png" alt="info" />
-        </button>
-        <a class="icon-btn" href="https://ko-fi.com/S6S51KOEMK" target="_blank" rel="noopener noreferrer" aria-label="Ko-fi link">
-          <img src="images/kofi.png" alt="Buy Me a Coffee at ko-fi.com" style="height:24px;border:0;" />
-        </a>
-      </div>
-    </div>
+		<footer class="front-footer" role="contentinfo">
+			<p class="front-note" style="display:flex;gap:22px;justify-content:center;flex-wrap:wrap;">
+				<a id="aboutLink" href="#" class="front-inline-link" style="text-decoration:underline;">About</a>
+				<a id="privacyLink" href="#" class="front-inline-link" style="text-decoration:underline;">Privacy Policy</a>
+			</p>
+		</footer>
+	</main>
 
-    <div class="combo" id="combo">
-        <div class="input-wrap">
-        <input id="search" type="text" placeholder="Type the name of an item..." autocomplete="off" />
-      </div>
-     
-      <div class="dropdown" id="dropdown">
-        <ul class="results" id="results"></ul>
-      </div>
-    </div>
+	<!-- About Modal -->
+	<div id="aboutModal" class="goal-modal" aria-hidden="true">
+		<div class="goal-panel">
+			<button class="goal-close" id="aboutClose" aria-label="Close">✕</button>
+			<h2 class="goal-title">ABOUT</h2>
+			<div class="goal-body">
+				<div style="text-align:left; font-size:14px; color:#111;">
+					<p><strong>IdleOn</strong> is a registered trademark of Lavaflame2. <strong>Idleondle</strong> is an independent project and is not affiliated with, endorsed by, or sponsored by Lavaflame2, IdleOn or any of its subsidiaries. All trademarks, service marks, trade names, and logos referenced herein remain the property of their respective owners. Any use of these names or marks is solely for descriptive purposes and does not imply any association or partnership.</p>
 
-    <!-- Table now sits directly under the combo -->
-    <div class="table-wrap">
-  <table id="itemTable" class="table-panel">
-        <thead>
-          <tr class="table-head">
-            <th class="th-left">Item</th>
-            <th class="stat-col">Class</th>
-            <th class="stat-col">Level Req</th>
-            <th class="stat-col">Power</th>
-            <th class="stat-col">Speed</th>
-            <th class="stat-col">Str</th>
-            <th class="stat-col">Agi</th>
-            <th class="stat-col">Wis</th>
-            <th class="stat-col">Luck</th>
-            <th class="stat-col">Sell Price</th>
-            <th class="stat-col">Source</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
+					<p>Idleondle is inspired by games like <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank" rel="noopener">Wordle</a> and <a href="https://onepiecedle.net/" target="_blank" rel="noopener">Onepiecedle</a>.</p>
 
-    
-   
-        <!-- Goal found modal -->
-        <div id="goalModal" class="goal-modal" aria-hidden="true">
-          <div class="goal-panel">
-            <button class="goal-close" id="goalClose" aria-label="Close">✕</button>
-            <h2 class="goal-title">YOU FOUND IT!</h2>
-            <div class="goal-body">
-              <img id="goalIcon" class="goal-icon" src="" alt="goal icon" />
-              <div id="goalName" class="goal-name"></div>
-            </div>
-            <div class="goal-guesses">Number of guesses: <strong id="goalGuesses">0</strong></div>
-            <div class="goal-footer">
-              <div class="goal-footer-text">Come back for a new item in...</div>
-              <div class="goal-timer-wrap"><span id="goalTimer" class="goal-timer">00:00:00</span></div>
-            </div>
-            <!-- Bottom action buttons: Hard Item Guesser (left) and Next Game (right) -->
-            <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
-              <a href="harditem/" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
-                <img src="images/Premium Helmets/Diamon Horns.png" alt="Diamon Horns" style="width:22px;height:22px;object-fit:contain;" />
-                <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
-              </a>
-              <a href="card/" class="guess-btn" id="nextGameBtn" aria-label="Next Game" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-                <img src="images/card.png" alt="card" style="width:22px;height:22px;object-fit:contain;" />
-                <span style="color:var(--text);font-weight:800;font-size:15px;">Next Game</span>
-              </a>
-              
-            </div>
-                <a href="results/" class="guess-btn results-btn-orange" id="resultsbtn" aria-label="View your past daily results" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:18px;width:68%;">
-                  <img src="images/icon.png" alt="Results icon" style="width:24px;height:24px;object-fit:contain;" />
-                  <span style="font-weight:900;font-size:15px;">See Your Results</span>
-                </a>
+					<p>The background, all items, icons and related properties are from <a href="https://store.steampowered.com/app/1476970/IdleOn__The_Idle_RPG/" target="_blank" rel="noopener">IdleOn</a>. Button icons are from <a href="https://www.flaticon.com/" target="_blank" rel="noopener">Flaticon</a>.</p>
 
+					<h3>FEEDBACK/QUESTIONS</h3>
+					<p>You can get in touch with us at the following email: <a href="mailto:support@ar-simply.com">support@ar-simply.com</a></p>
 
-          </div>
-        </div>
+					<p>We hope you enjoy the game!<br/>Remember to do alchemy.<br/><strong>Tobias and Frederik</strong></p>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        <!-- How to Play modal -->
-        <div id="helpModal" class="goal-modal" aria-hidden="true">
-          <div class="goal-panel">
-            <button class="goal-close" id="helpClose" aria-label="Close">✕</button>
-            <h2 class="goal-title">HOW TO PLAY?</h2>
-            <div class="goal-body">
-              <div style="text-align:left; font-size:14px; color:#111;">
-                <p>Daily guessing games from the game "IdleOn". Games changes at midnight in your timezone.</p>
-                <p>Type in the name of an item and it will reveal its properties. The color of the tiles will change to show how close your guess was to the daily item.</p>
-                <ul>
-                  <li><strong>Green</strong> indicates the property is an exact match.</li>
-                  <li><strong>Yellow</strong> indicates the property is a partial match.</li>
-                  <li><strong>Red</strong> indicates the property is wrong.</li>
-                  <li>⬇️ ⬆️ indicates if the answer is above or below your guess.</li>
-                </ul>
-                <p>With each guess you learn more details about the daily item. If you need help, you can unlock a clue about the category of the item after a certain number of guesses.</p>
-                <h3>INCLUDED ITEMS:</h3>
-                <ul>
-                  <li><strong>Weapons:</strong> Fisticuffs, bows, spears, wands</li>
-                  <li><strong>Armor:</strong>  Helmets, pants, pendants, rings, shoes</li>
-                  <li><strong>Tools:</strong> Pickaxes, hatchets, fishing rods, nets, traps, worship skulls</li>
-                </ul>
-                <h3>PROPERTIES:</h3>
-                <ul>
-                  <li><strong>Class:</strong> Which class can equip the item.</li>
-                  <li><strong>Level Req:</strong> What level is required to equip the item.</li>
-                  <li><strong>Power:</strong> Any kind of power on the item, such as attack power, mining power, catching power and so on.</li>
-                  <li><strong>Stats:</strong> The amount of a stat on the item.</li>
-                  <li><strong>Sell price:</strong> How much the item sells for.</li>
-                  <li><strong>Source:</strong> Where the item comes from.</li>
-                </ul>
-                <p><strong>Good luck and have fun!</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
+	<!-- Privacy Policy Modal -->
+	<div id="privacyModal" class="goal-modal" aria-hidden="true">
+		<div class="goal-panel">
+			<button class="goal-close" id="privacyClose" aria-label="Close">✕</button>
+			<h2 class="goal-title">Privacy Policy</h2>
+			<div class="goal-body">
+				<div style="text-align:left; font-size:14px; color:#111; max-height:60vh; overflow:auto;">
+					<p><strong>Effective Date:</strong> 04/09 2025</p>
+					<p>This Privacy Policy explains how this website collects, uses, and protects personal data in accordance with the General Data Protection Regulation (GDPR) and other applicable EU data protection laws.</p>
 
-    </div> <!-- .center -->
+					<h3>Data Collection</h3>
+					<p>This website does not directly collect, store, or process personal data of visitors. No user accounts, contact forms, or databases are maintained.</p>
 
-    <footer class="site-footer" role="contentinfo">
-      <div class="footer-inner" style="flex-direction:column;gap:8px;">
-        <div class="footer-follow-box">
-          <a href="https://ko-fi.com/S6S51KOEMK" target="_blank" rel="noopener" class="kofi-follow-link">Follow on Ko-fi for development updates and news</a>
-        </div>
-        <a id="privacyLink" class="privacy-link" href="#">Privacy Policy</a>
-      </div>
-    </footer>
+					<p>We set a small local cookie to support game UX: <code>idleondle_last_win</code> and per-game cookies named <code>idleondle_win_<em>&lt;game&gt;</em></code>. These store the game identifier, an ISO timestamp of completion, and guess count – only to show completion status locally. They are non-personal and expire after 365 days.</p>
 
-    <!-- Consent modal for Umami (appears if no umami_consent cookie) -->
-    <div id="consentBackdrop" class="consent-backdrop" hidden></div>
-    <div id="consentBanner" class="consent-modal" role="dialog" aria-modal="true" aria-label="Cookie consent" hidden>
-      <div class="consent-modal-inner">
-        <h3 style="margin:0 0 8px 0;">Privacy & Analytics</h3>
-        <div class="consent-text">
-          We use a privacy-friendly analytics script (Umami) to understand site usage. Please opt-in so we can see how many uses the website. You can change this later in the Privacy Policy.
-        </div>
-        <div class="consent-actions">
-          <button id="consentAccept" class="consent-btn consent-accept">Accept</button>
-          <button id="consentDecline" class="consent-btn consent-decline">Decline</button>
-        </div>
-      </div>
-    </div>
+					<h3>Analytics (Umami)</h3>
+					<p>We use <strong>Umami</strong> for privacy-focused, anonymous analytics. It collects only non-identifying information (pageviews, referrers, timestamps, basic device/browser metadata). The script loads only if you opt in below. You can revoke consent anytime.</p>
+					<div style="display:flex;gap:8px;justify-content:center;margin:12px 0 0 0;">
+						<button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
+						<button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
+					</div>
 
-        <!-- Privacy Policy modal -->
-        <div id="privacyModal" class="goal-modal" aria-hidden="true">
-          <div class="goal-panel">
-            <button class="goal-close" id="privacyClose" aria-label="Close">✕</button>
-            <h2 class="goal-title">Privacy Policy</h2>
-            <div class="goal-body">
-              <div style="text-align:left; font-size:14px; color:#111; max-height:60vh; overflow:auto;">
-                <p><strong>Effective Date:</strong> 04/09 2025</p>
-                <p>This Privacy Policy explains how this website collects, uses, and protects personal data in accordance with the General Data Protection Regulation (GDPR) and other applicable EU data protection laws.</p>
+					<h3>Google AdSense</h3>
+					<p>This site displays ads via Google AdSense. Google may use cookies to serve personalized or non-personalized ads depending on your region and consent choices. EU users receive a consent dialog.</p>
+					<p>More info: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">https://policies.google.com/technologies/ads</a></p>
 
-                <h3>Data Collection</h3>
-                <p>This website does not directly collect, store, or process personal data of visitors. No user accounts, contact forms, or databases are maintained.</p>
+					<h3>Legal Basis</h3>
+					<p>AdSense processing is based on consent under Article 6(1)(a) GDPR.</p>
 
-                <p>We do set a small, local cookie to support game UX: <code>idleondle_last_win</code> and per-game cookies named <code>idleondle_win_<em>&lt;game&gt;</em></code>. These cookies store a JSON payload containing the game identifier, an ISO timestamp of when you completed the daily puzzle, and the number of guesses you used. The cookies are used only locally by the site to show that you've already completed today's puzzle, automatically reveal the answer, and display the guess count in the post-win modal.</p>
+					<h3>Data Sharing</h3>
+					<p>No personal data is shared beyond what is necessary for AdSense operations.</p>
 
-                <p>These cookies are non-personal, do not contain any identifiers that would reasonably identify you, are not shared with third parties by this site, and are retained locally for 365 days to allow users to revisit prior wins on the same device. For clarity, this is separate from advertising cookies used by Google AdSense or Umami (see below).</p>
+					<h3>User Rights</h3>
+					<p>GDPR rights include access, rectification, erasure, restriction, portability, and withdrawal of consent. You may lodge a complaint with a supervisory authority.</p>
 
-                <h3>Analytics (Umami)</h3>
-                 <p>We use <strong>Umami</strong> for privacy-focused, anonymous analytics. Umami only collects non-identifying information such as pageviews, referrers, timestamps, and basic device/browser metadata. No names, email addresses, or persistent personal identifiers are collected or stored. The Umami script is loaded only if you explicitly opt in via this Privacy Policy ("Accept analytics"). You can revoke your choice at any time by returning to this Privacy Policy and selecting "Disable analytics".</p>
-                <div style="display:flex;gap:8px;justify-content:center;margin:12px 0 0 0;">
-                          <button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
-                          <button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
-                        </div>
-                <h3>Google AdSense</h3>
-                <p>This website displays advertisements through Google AdSense. Google, as a third-party vendor, uses cookies to serve ads based on users’ prior visits to this and other websites. Google’s use of advertising cookies enables it and its partners to serve personalized ads to users based on their interests.</p>
-                <p>Users in the European Union will be presented with a consent mechanism before personalized ads are shown. Consent choices can be managed or withdrawn at any time. Non-personalized ads may also be served.</p>
-                <p>For more information on how Google processes personal data in advertising, refer to Google’s Privacy &amp; Terms: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">https://policies.google.com/technologies/ads</a>.</p>
+					<h3>Contact</h3>
+					<p>AR-Simply<br/>Niels Jernes Vej 10, 9220 Aalborg Øst, Denmark<br/><a href="mailto:support@ar-simply.com">support@ar-simply.com</a></p>
 
-                <h3>Legal Basis for Processing</h3>
-                <p>The processing of data through Google AdSense is based on user consent under Article 6(1)(a) GDPR.</p>
+					<h3>Updates</h3>
+					<p>Policy changes will appear here with a revised effective date.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
-                <h3>Data Sharing</h3>
-                <p>This website does not share personal data with third parties except as necessary for Google AdSense.</p>
+		<!-- Consent banner (moved from item page for global first-touch prompt) -->
+		<div id="consentBackdrop" class="consent-backdrop" hidden></div>
+		<div id="consentBanner" class="consent-modal" role="dialog" aria-modal="true" aria-label="Cookie consent" hidden>
+			<div class="consent-modal-inner">
+				<h3 style="margin:0 0 8px 0;">Privacy & Analytics</h3>
+				<div class="consent-text">
+					We use a privacy-friendly analytics script (Umami) to understand site usage. Please opt in to help us improve. You can change this later in the Privacy Policy.
+				</div>
+				<div class="consent-actions">
+					<button id="consentAccept" class="consent-btn consent-accept">Accept</button>
+					<button id="consentDecline" class="consent-btn consent-decline">Decline</button>
+				</div>
+			</div>
+		</div>
 
-                <h3>User Rights</h3>
-                <p>Under GDPR, users have the right to access, rectify, erase, or restrict processing of their personal data, the right to data portability, and the right to withdraw consent at any time. Users may also lodge a complaint with a supervisory authority.</p>
+		<script>
+		(function(){
+			// Modal open/close (About & Privacy)
+			const aboutLink = document.getElementById('aboutLink');
+			const privacyLink = document.getElementById('privacyLink');
+			const aboutModal = document.getElementById('aboutModal');
+			const privacyModal = document.getElementById('privacyModal');
+			const aboutClose = document.getElementById('aboutClose');
+			const privacyClose = document.getElementById('privacyClose');
+			function open(m){ if(m) { m.setAttribute('aria-hidden','false'); /* trap focus basic */ const f=m.querySelector('button, a, [tabindex]'); if(f) f.focus({preventScroll:true}); } }
+			function close(m){ if(m) m.setAttribute('aria-hidden','true'); }
+			if(aboutLink) aboutLink.addEventListener('click', e=>{ e.preventDefault(); open(aboutModal); });
+			if(privacyLink) privacyLink.addEventListener('click', e=>{ e.preventDefault(); open(privacyModal); });
+			if(aboutClose) aboutClose.addEventListener('click', ()=> close(aboutModal));
+			if(privacyClose) privacyClose.addEventListener('click', ()=> close(privacyModal));
+			[aboutModal, privacyModal].forEach(m => m && m.addEventListener('click', e=>{ if(e.target===m) close(m); }));
 
-                <h3>Contact</h3>
-                <p>For any concerns regarding this Privacy Policy or data protection matters, contact:<br/>
-                AR-Simply<br/>
-                Niels Jernes Vej 10, 9220 Aalborg Øst, Denmark<br/>
-                <a href="mailto:support@ar-simply.com">support@ar-simply.com</a></p>
+			// Consent & analytics logic (centralized)
+			function setCookie(name, value, days) {
+				const expires = new Date(Date.now() + days * 864e5).toUTCString();
+				document.cookie = name + '=' + encodeURIComponent(value) + '; path=/; expires=' + expires + '; SameSite=Lax';
+			}
+			function getCookie(name) {
+				return document.cookie.split('; ').reduce((r, v) => {
+					const parts = v.split('=');
+					return parts[0] === name ? decodeURIComponent(parts.slice(1).join('=')) : r;
+				}, undefined);
+			}
+			function loadUmami() {
+				if (document.querySelector('script[data-website-id]')) return;
+				const s = document.createElement('script');
+				s.defer = true;
+				s.src = 'https://cloud.umami.is/script.js';
+				s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3');
+				document.head.appendChild(s);
+			}
+			function setConsentYes() { setCookie('umami_consent','yes',365); loadUmami(); }
+			function setConsentNo() { setCookie('umami_consent','no',365); }
 
-                <h3>Updates</h3>
-                <p>This Privacy Policy may be updated to remain compliant with legal requirements. Any changes will be reflected on this page with a revised effective date.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+			// Banner DOM
+			const banner = document.getElementById('consentBanner');
+			const backdrop = document.getElementById('consentBackdrop');
+			const acceptBtn = document.getElementById('consentAccept');
+			const declineBtn = document.getElementById('consentDecline');
 
-    <script type="module">
-      import { initShared } from './js/shared.js';
-      import ItemGuesser from './js/ItemGuesser.js';
+			// Normalize consent cookie
+			let consent = getCookie('umami_consent');
+			if (consent !== 'yes' && consent !== 'no') consent = undefined;
 
-      // Initialize shared functionality and wire page-specific handlers
-      initShared({
-        dataUrl: 'json/idleon_items_detailed.json',
-        imageBase: 'images',
-        onSelect: (item) => {
-          // Add selected item to the table (page-specific)
-          if (ItemGuesser && typeof ItemGuesser.addToTable === 'function') ItemGuesser.addToTable(item);
-        }
-      });
-    </script>
+			function showBanner(){ if(backdrop){ backdrop.hidden=false; backdrop.setAttribute('aria-hidden','false'); } if(banner){ banner.hidden=false; banner.setAttribute('aria-hidden','false'); } }
+			function hideBanner(){ if(backdrop){ backdrop.hidden=true; backdrop.setAttribute('aria-hidden','true'); } if(banner){ banner.hidden=true; banner.setAttribute('aria-hidden','true'); } }
+			function safeHide(){ hideBanner(); }
 
-    <script>
-      // Cookie helpers
-      function setCookie(name, value, days) {
-        const expires = new Date(Date.now() + days * 864e5).toUTCString();
-        document.cookie = name + '=' + encodeURIComponent(value) + '; path=/; expires=' + expires + '; SameSite=Lax';
-      }
-      function getCookie(name) {
-        return document.cookie.split('; ').reduce((r, v) => {
-          const parts = v.split('=');
-          return parts[0] === name ? decodeURIComponent(parts.slice(1).join('=')) : r
-        }, undefined);
-      }
+			if (consent === undefined) {
+				if (banner && backdrop && acceptBtn && declineBtn) {
+					showBanner();
+				} else {
+					safeHide();
+					console.warn('Consent UI missing pieces; banner suppressed.');
+				}
+			} else if (consent === 'yes') {
+				loadUmami();
+			} else {
+				safeHide();
+			}
 
-      // Dynamically inject Umami script
-      function loadUmami() {
-        if (document.querySelector('script[data-website-id]')) return; // already loaded
-        const s = document.createElement('script');
-        s.defer = true;
-        s.src = 'https://cloud.umami.is/script.js';
-        s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3');
-        document.head.appendChild(s);
-      }
+			if (acceptBtn) acceptBtn.addEventListener('click', () => { setConsentYes(); hideBanner(); });
+			if (declineBtn) declineBtn.addEventListener('click', () => { setConsentNo(); hideBanner(); });
 
-      // Consent banner behaviour (defensive)
-      (function(){
-        const banner = document.getElementById('consentBanner');
-        const backdrop = document.getElementById('consentBackdrop');
-        const accept = document.getElementById('consentAccept');
-        const decline = document.getElementById('consentDecline');
-  // Normalize consent cookie: treat anything but explicit 'yes' or 'no' as unknown
-  let consent = getCookie('umami_consent');
-  if (consent !== 'yes' && consent !== 'no') consent = undefined;
+			// Privacy modal buttons (inside modal itself)
+			const pa = document.getElementById('privacyAccept');
+			const pd = document.getElementById('privacyDecline');
+			const pm = privacyModal;
+			if (pa) pa.addEventListener('click', () => { setConsentYes(); close(pm); });
+			if (pd) pd.addEventListener('click', () => { setConsentNo(); close(pm); });
 
-        function showModal() {
-          // Only show if both backdrop and banner exist; otherwise do nothing
-          if (backdrop) { backdrop.hidden = false; backdrop.setAttribute('aria-hidden','false'); }
-          if (banner)  { banner.hidden = false;  banner.setAttribute('aria-hidden','false'); }
-        }
+			// Export to window (optional reuse on subpages loaded dynamically)
+			window.IdleondleConsent = { setConsentYes, setConsentNo, loadUmami };
+			// Auto-load Umami if previously accepted
+			if (consent === 'yes') loadUmami();
+		})();
+		</script>
 
-        function hideModal() {
-          if (backdrop) { backdrop.hidden = true; backdrop.setAttribute('aria-hidden','true'); }
-          if (banner)  { banner.hidden = true;  banner.setAttribute('aria-hidden','true'); }
-        }
-
-        // Defensive: if required elements are missing, ensure nothing remains visible
-        function safeHideAll() {
-          if (backdrop) { backdrop.hidden = true; backdrop.setAttribute('aria-hidden','true'); }
-          if (banner) { banner.hidden = true; banner.setAttribute('aria-hidden','true'); }
-        }
-
-        // If consent unknown, show only when all parts are present and interactive
-        if (consent === undefined) {
-          if (banner && backdrop && accept && decline) {
-            showModal();
-          } else {
-            // Missing element(s) - avoid showing a backdrop without a banner
-            safeHideAll();
-            console.warn('Consent UI: missing elements, not showing modal to avoid blocking the page.');
-          }
-        } else if (consent === 'yes') {
-          // user previously opted in
-          loadUmami();
-        } else {
-          // Explicitly opted out: ensure UI hidden
-          safeHideAll();
-        }
-
-        // Wire up handlers only if the buttons exist
-        if (accept && typeof accept.addEventListener === 'function') {
-          accept.addEventListener('click', function(){
-            try {
-              setCookie('umami_consent','yes',365);
-              hideModal();
-              loadUmami();
-            } catch (e) {
-              console.error('Error handling consent accept:', e);
-            }
-          });
-        }
-
-        if (decline && typeof decline.addEventListener === 'function') {
-          decline.addEventListener('click', function(){
-            try {
-              setCookie('umami_consent','no',365);
-              hideModal();
-            } catch (e) {
-              console.error('Error handling consent decline:', e);
-            }
-          });
-        }
-      })();
-        // Expose convenience functions to allow privacy modal buttons to change consent
-        function setConsentYes() { setCookie('umami_consent','yes',365); loadUmami(); }
-        function setConsentNo() { setCookie('umami_consent','no',365); }
-
-        // Wire privacy modal buttons if present
-        (function(){
-          const pa = document.getElementById('privacyAccept');
-          const pd = document.getElementById('privacyDecline');
-          if (pa) pa.addEventListener('click', function(){ setConsentYes(); document.getElementById('privacyModal').setAttribute('aria-hidden','true'); });
-          if (pd) pd.addEventListener('click', function(){ setConsentNo(); document.getElementById('privacyModal').setAttribute('aria-hidden','true'); });
-        })();
-    </script>
-  </body>
+</body>
 </html>

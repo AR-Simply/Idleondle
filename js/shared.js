@@ -743,7 +743,7 @@ export async function initShared(config = {}) {
   // the repo root or from the `html/` subfolder.
   const parts = (location.pathname || '').split('/').filter(Boolean);
 
-  const indexHref = '../';
+  const indexHref = '../item/';
   const cardHref = '../card/';
   const monsterHref = '../monster/';
   const mealHref = '../meal/';

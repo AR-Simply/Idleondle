@@ -4,43 +4,40 @@
   <meta charset="utf-8" />
   <title>Idleondle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex, nofollow">
 
-  <meta name="description" content="Play Idleondle  daily word guessing games from the world of IdleOn. Free, no account required.">
+  <meta name="description" content="Play Idleondle — daily word guessing games from the world of IdleOn. Free, no account required.">
   <link rel="canonical" href="https://www.idleondle.com/">
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png">
-  <link rel="apple-touch-icon" href="/images/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png">
+  <link rel="apple-touch-icon" href="../images/icon.png">
 
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="../styles.css">
 
-  <meta name="google-adsense-account" content="ca-pub-4897247326207368">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4897247326207368" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="center">
-  <a href="/" aria-label="Idleondle Home" style="display:inline-block;line-height:0;">
-    <img src="/images/title.png" alt="Idleondle title" class="site-title" />
+  <a href="../" aria-label="Idleondle Home" style="display:inline-block;line-height:0;">
+    <img src="../images/title.png" alt="Idleondle title" class="site-title" />
   </a>
-  <!-- Static page switcher -->
+  <!-- Static page switcher: item, card, monster, meal -->
   <div class="page-switch">
-    <a href="/index.html" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
-      <img src="/images/Helmets/Copper Helmet.png" alt="Item" />
+    <a href="../item/" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
+      <img src="../images/Helmets/Copper Helmet.png" alt="Item" />
     </a>
-    <a href="/html/cardGuesser.html" id="btn-cards" class="page-btn" title="Card Guesser">
-      <img src="/images/card.png" alt="Cards" />
+    <a href="../card/" id="btn-cards" class="page-btn" title="Card Guesser">
+      <img src="../images/card.png" alt="Cards" />
     </a>
-    <a href="/html/monsterGuesser.html" id="btn-monster" class="page-btn" title="Monster Guesser">
-      <img src="/images/Enemies/carrotman-6_thumb.png" alt="Monster" />
+    <a href="../monster/" id="btn-monster" class="page-btn" title="Monster Guesser">
+      <img src="../images/Enemies/carrotman-6_thumb.png" alt="Monster" />
     </a>
-    <a href="/html/mealGuesser.html" id="btn-meal" class="page-btn page-btn-right" title="Meal Guesser">
-      <img src="/images/Spice/36px-Jungle_Spice.png" alt="Meal" />
+    <a href="../meal/" id="btn-meal" class="page-btn page-btn-right" title="Meal Guesser">
+      <img src="../images/Spice/36px-Jungle_Spice.png" alt="Meal" />
     </a>
   </div>
 
     <div class="top-row">
       <div class="guess-box combo-guess" id="guessBox">
-        <div class="guess-title">Guess today's HARD Item!</div>
+        <div class="guess-title">Guess today's Item!</div>
         <div class="guess-actions">
           <!--
           <div class="clue-wrap">
@@ -79,19 +76,19 @@
 
       <div class="side-box" id="sideBox" aria-hidden="true">
         <button id="helpBtn" class="icon-btn" aria-label="Question button">
-          <img src="/images/question.png" alt="question" />
+          <img src="../images/question.png" alt="question" />
         </button>
         <button id="aboutBtn" class="icon-btn" aria-label="Info button">
-          <img src="/images/info.png" alt="info" />
+          <img src="../images/info.png" alt="info" />
         </button>
         <a class="icon-btn" href="https://ko-fi.com/S6S51KOEMK" target="_blank" rel="noopener noreferrer" aria-label="Ko-fi link">
-          <img src="/images/kofi.png" alt="Buy Me a Coffee at ko-fi.com" style="height:24px;border:0;" />
+          <img src="../images/kofi.png" alt="Buy Me a Coffee at ko-fi.com" style="height:24px;border:0;" />
         </a>
       </div>
     </div>
 
     <div class="combo" id="combo">
-      <div class="input-wrap">
+        <div class="input-wrap">
         <input id="search" type="text" placeholder="Type the name of an item..." autocomplete="off" />
       </div>
      
@@ -128,30 +125,34 @@
         <div id="goalModal" class="goal-modal" aria-hidden="true">
           <div class="goal-panel">
             <button class="goal-close" id="goalClose" aria-label="Close">✕</button>
-            <h2 class="goal-title">YOU CONQUERED HARD MODE!</h2>
+            <h2 class="goal-title">YOU FOUND IT!</h2>
             <div class="goal-body">
               <img id="goalIcon" class="goal-icon" src="" alt="goal icon" />
               <div id="goalName" class="goal-name"></div>
             </div>
             <div class="goal-guesses">Number of guesses: <strong id="goalGuesses">0</strong></div>
             <div class="goal-footer">
-              <div class="goal-footer-text">How did you do that? Come back in...</div>
+              <div class="goal-footer-text">Come back for a new item in...</div>
               <div class="goal-timer-wrap"><span id="goalTimer" class="goal-timer">00:00:00</span></div>
             </div>
-                    <!-- Add action button linking to Monster Guesser (carrotman icon) -->
-        <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
-         
-          <a href="/card/" class="guess-btn" id="toMonsterBtn" aria-label="Monster Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-            <img src="/images/card.png" alt="carrotman" style="width:22px;height:22px;object-fit:contain;" />
-            <span style="color:var(--text);font-weight:800;font-size:15px;">Next game</span>
-          </a>
-
-                      </div>
-                <a href="/results/" class="guess-btn results-btn-orange" id="resultsbtn" aria-label="View your past daily results" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:18px;width:68%;">
-                  <img src="/images/icon.png" alt="Results icon" style="width:24px;height:24px;object-fit:contain;" />
+            <!-- Bottom action buttons: Hard Item Guesser (left) and Next Game (right) -->
+            <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
+              <a href="../harditem/" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
+                <img src="../images/Premium Helmets/Diamon Horns.png" alt="Diamon Horns" style="width:22px;height:22px;object-fit:contain;" />
+                <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
+              </a>
+              <a href="../card/" class="guess-btn" id="nextGameBtn" aria-label="Next Game" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+                <img src="../images/card.png" alt="card" style="width:22px;height:22px;object-fit:contain;" />
+                <span style="color:var(--text);font-weight:800;font-size:15px;">Next Game</span>
+              </a>
+              
+            </div>
+                <a href="../results/" class="guess-btn results-btn-orange" id="resultsbtn" aria-label="View your past daily results" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:18px;width:68%;">
+                  <img src="../images/icon.png" alt="Results icon" style="width:24px;height:24px;object-fit:contain;" />
                   <span style="font-weight:900;font-size:15px;">See Your Results</span>
                 </a>
-        </div>
+
+
           </div>
         </div>
 
@@ -163,13 +164,30 @@
             <div class="goal-body">
               <div style="text-align:left; font-size:14px; color:#111;">
                 <p>Daily guessing games from the game "IdleOn". Games changes at midnight in your timezone.</p>
-                <p>Hard mode includes the following:</p>
+                <p>Type in the name of an item and it will reveal its properties. The color of the tiles will change to show how close your guess was to the daily item.</p>
                 <ul>
-                  <li><strong>Special category items:</strong> Premium helmets, trophies, capes, nametags</li>
-                  <li><strong>Unobtainables:</strong> Adds items to all categories that are unobtainable in the game</li>
+                  <li><strong>Green</strong> indicates the property is an exact match.</li>
+                  <li><strong>Yellow</strong> indicates the property is a partial match.</li>
+                  <li><strong>Red</strong> indicates the property is wrong.</li>
+                  <li>⬇️ ⬆️ indicates if the answer is above or below your guess.</li>
                 </ul>
-           
-                <p><strong>Good luck, you will need it!</strong></p>
+                <p>With each guess you learn more details about the daily item. If you need help, you can unlock a clue about the category of the item after a certain number of guesses.</p>
+                <h3>INCLUDED ITEMS:</h3>
+                <ul>
+                  <li><strong>Weapons:</strong> Fisticuffs, bows, spears, wands</li>
+                  <li><strong>Armor:</strong>  Helmets, pants, pendants, rings, shoes</li>
+                  <li><strong>Tools:</strong> Pickaxes, hatchets, fishing rods, nets, traps, worship skulls</li>
+                </ul>
+                <h3>PROPERTIES:</h3>
+                <ul>
+                  <li><strong>Class:</strong> Which class can equip the item.</li>
+                  <li><strong>Level Req:</strong> What level is required to equip the item.</li>
+                  <li><strong>Power:</strong> Any kind of power on the item, such as attack power, mining power, catching power and so on.</li>
+                  <li><strong>Stats:</strong> The amount of a stat on the item.</li>
+                  <li><strong>Sell price:</strong> How much the item sells for.</li>
+                  <li><strong>Source:</strong> Where the item comes from.</li>
+                </ul>
+                <p><strong>Good luck and have fun!</strong></p>
               </div>
             </div>
           </div>
@@ -177,7 +195,7 @@
 
     </div> <!-- .center -->
 
-      <footer class="site-footer" role="contentinfo">
+    <footer class="site-footer" role="contentinfo">
       <div class="footer-inner" style="flex-direction:column;gap:8px;">
         <div class="footer-follow-box">
           <a href="https://ko-fi.com/S6S51KOEMK" target="_blank" rel="noopener" class="kofi-follow-link">Follow on Ko-fi for development updates and news</a>
@@ -185,6 +203,7 @@
         <a id="privacyLink" class="privacy-link" href="#">Privacy Policy</a>
       </div>
     </footer>
+
 
         <!-- Privacy Policy modal -->
         <div id="privacyModal" class="goal-modal" aria-hidden="true">
@@ -204,11 +223,11 @@
                 <p>These cookies are non-personal, do not contain any identifiers that would reasonably identify you, are not shared with third parties by this site, and are retained locally for 365 days to allow users to revisit prior wins on the same device. For clarity, this is separate from advertising cookies used by Google AdSense or Umami (see below).</p>
 
                 <h3>Analytics (Umami)</h3>
-                  <p>We use <strong>Umami</strong> for privacy-focused, anonymous analytics. Umami only collects non-identifying information such as pageviews, referrers, timestamps, and basic device/browser metadata. No names, email addresses, or persistent personal identifiers are collected or stored. The Umami script is loaded only if you explicitly opt in via this Privacy Policy ("Accept analytics"). You can revoke your choice at any time by returning to this Privacy Policy and selecting "Disable analytics".</p>
-              <div style="display:flex;gap:8px;justify-content:center;margin:12px 0 0 0;">
-                        <button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
-                        <button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
-                      </div>
+                 <p>We use <strong>Umami</strong> for privacy-focused, anonymous analytics. Umami only collects non-identifying information such as pageviews, referrers, timestamps, and basic device/browser metadata. No names, email addresses, or persistent personal identifiers are collected or stored. The Umami script is loaded only if you explicitly opt in via this Privacy Policy ("Accept analytics"). You can revoke your choice at any time by returning to this Privacy Policy and selecting "Disable analytics".</p>
+                <div style="display:flex;gap:8px;justify-content:center;margin:12px 0 0 0;">
+                          <button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
+                          <button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
+                        </div>
                 <h3>Google AdSense</h3>
                 <p>This website displays advertisements through Google AdSense. Google, as a third-party vendor, uses cookies to serve ads based on users’ prior visits to this and other websites. Google’s use of advertising cookies enables it and its partners to serve personalized ads to users based on their interests.</p>
                 <p>Users in the European Union will be presented with a consent mechanism before personalized ads are shown. Consent choices can be managed or withdrawn at any time. Non-personalized ads may also be served.</p>
@@ -232,57 +251,42 @@
                 <h3>Updates</h3>
                 <p>This Privacy Policy may be updated to remain compliant with legal requirements. Any changes will be reflected on this page with a revised effective date.</p>
               </div>
-              <div style="display:flex;gap:8px;justify-content:flex-end;margin:12px 0 0 0;">
-                <button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
-                <button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
-              </div>
             </div>
           </div>
         </div>
 
     <script type="module">
-      import { initShared } from '/js/shared.js';
-      import ItemGuesser from '/js/ItemGuesser.js';
+      // Adjusted relative imports after moving page into /item/ folder
+      import { initShared } from '../js/shared.js';
+      import ItemGuesser from '../js/ItemGuesser.js';
 
       // Initialize shared functionality and wire page-specific handlers
-  // Mark page as hard-mode for robust detection
-  document.body.dataset.hard = 'item';
       initShared({
-        dataUrl: '/json/idleon_items_hard.json',
-        imageBase: '/images',
-        // Increase clue unlock thresholds for hard mode
-        clueUnlocks: { world: 10, category: 10 },
-        // Use a seed offset so hard mode selects from a different deterministic sequence
-        seedOffset: 999,
+        dataUrl: '../json/idleon_items_detailed.json',
+        imageBase: '../images',
         onSelect: (item) => {
           // Add selected item to the table (page-specific)
           if (ItemGuesser && typeof ItemGuesser.addToTable === 'function') ItemGuesser.addToTable(item);
         }
       });
     </script>
-      <script>
-        (function(){
-          if (document.cookie.split('; ').some(c => c.startsWith('umami_consent=') && c.split('=')[1] === 'yes')) {
-            const s = document.createElement('script');
-            s.defer = true;
-            s.src = 'https://cloud.umami.is/script.js';
-            s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3');
-            document.head.appendChild(s);
-          }
-        })();
-      </script>
-      <script>
-        function setCookie(name, value, days) { const d = new Date(); d.setTime(d.getTime() + (days*86400000)); document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + d.toUTCString() + '; path=/'; }
-        function loadUmami() { if (document.querySelector('script[data-website-id]')) return; const s = document.createElement('script'); s.defer = true; s.src = 'https://cloud.umami.is/script.js'; s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3'); document.head.appendChild(s); }
-        function setConsentYes() { setCookie('umami_consent','yes',365); loadUmami(); }
-        function setConsentNo() { setCookie('umami_consent','no',365); }
-        (function(){
-          const pa = document.getElementById('privacyAccept');
-          const pd = document.getElementById('privacyDecline');
-          const pm = document.getElementById('privacyModal');
-          if (pa) pa.addEventListener('click', function(){ setConsentYes(); if (pm) pm.setAttribute('aria-hidden','true'); });
-          if (pd) pd.addEventListener('click', function(){ setConsentNo(); if (pm) pm.setAttribute('aria-hidden','true'); });
-        })();
-      </script>
+
+    <script>
+      // Lightweight privacy modal consent buttons: delegate to global (root) logic
+      (function(){
+        function localSetCookie(name, value, days) {
+          const expires = new Date(Date.now() + days * 864e5).toUTCString();
+          document.cookie = name + '=' + encodeURIComponent(value) + '; path=/; expires=' + expires + '; SameSite=Lax';
+        }
+        function loadUmamiOnce(){ if(document.querySelector('script[data-website-id]')) return; const s=document.createElement('script'); s.defer=true; s.src='https://cloud.umami.is/script.js'; s.setAttribute('data-website-id','ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3'); document.head.appendChild(s); }
+        const api = window.IdleondleConsent || { setConsentYes: () => { localSetCookie('umami_consent','yes',365); loadUmamiOnce(); }, setConsentNo: () => { localSetCookie('umami_consent','no',365); } };
+        const pa = document.getElementById('privacyAccept');
+        const pd = document.getElementById('privacyDecline');
+        const pm = document.getElementById('privacyModal');
+        function close(){ if(pm) pm.setAttribute('aria-hidden','true'); }
+        if (pa) pa.addEventListener('click', () => { api.setConsentYes(); close(); });
+        if (pd) pd.addEventListener('click', () => { api.setConsentNo(); close(); });
+      })();
+    </script>
   </body>
 </html>
