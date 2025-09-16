@@ -351,6 +351,49 @@ function showToast(msg) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+	// Normalize consent cookie here as results page may not import shared.js
+	try {
+		const get = (name) => {
+			try {
+				const pairs = document.cookie.split(';').map(s => s.trim());
+				for (const p of pairs) {
+					if (!p) continue;
+					const idx = p.indexOf('=');
+					const k = idx === -1 ? p : p.slice(0, idx);
+					const v = idx === -1 ? '' : p.slice(idx + 1);
+					if (k === name) return decodeURIComponent(v || '');
+				}
+			} catch (e) {}
+			return undefined;
+		};
+		const val = get('umami_consent');
+		if (val === 'yes' || val === 'no') {
+			const exp = new Date(Date.now() + 365 * 864e5).toUTCString();
+			const parts = [
+				`umami_consent=${encodeURIComponent(val)}`,
+				`expires=${exp}`,
+				'path=/',
+				'SameSite=Lax'
+			];
+			try {
+				const host = String(location.hostname || '').toLowerCase();
+				const isHttps = String(location.protocol || '').toLowerCase() === 'https:';
+				if (isHttps && (host === 'idleondle.com' || host.endsWith('.idleondle.com'))) {
+					parts.push('domain=.idleondle.com');
+					parts.push('Secure');
+				}
+			} catch (e) {}
+			try { document.cookie = parts.join('; '); } catch (e) {}
+			if (val === 'yes' && !document.querySelector('script[data-website-id]')) {
+				const s = document.createElement('script');
+				s.defer = true;
+				s.src = 'https://cloud.umami.is/script.js';
+				s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3');
+				document.head.appendChild(s);
+			}
+		}
+	} catch (e) { /* swallow */ }
+
 	renderResultsBox();
 	injectResultsFlame();
 	markPageSwitcherCompletion();

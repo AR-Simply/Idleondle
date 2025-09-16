@@ -189,6 +189,61 @@ function setCookie(name, value, days = 365) {
   } catch (e) { /* non-fatal */ }
 }
 
+// One-time normalization of analytics consent cookie across pages.
+// Re-sets 'umami_consent' with consistent attributes so it is visible on all routes
+// after folder restructures, and loads Umami when consent is already granted.
+(function normalizeConsentCookie(){
+  try {
+    if (typeof document === 'undefined') return;
+    const get = (name) => {
+      try {
+        const pairs = document.cookie.split(';').map(s => s.trim());
+        for (const p of pairs) {
+          if (!p) continue;
+          const idx = p.indexOf('=');
+          const k = idx === -1 ? p : p.slice(0, idx);
+          const v = idx === -1 ? '' : p.slice(idx + 1);
+          if (k === name) return decodeURIComponent(v || '');
+        }
+      } catch (e) {}
+      return undefined;
+    };
+    const val = get('umami_consent');
+    if (val !== 'yes' && val !== 'no') return; // nothing to normalize
+
+    // Build a cookie string with Path=/ and SameSite=Lax. On production HTTPS, also set Domain=.idleondle.com and Secure.
+    const exp = new Date(Date.now() + 365 * 864e5).toUTCString();
+    const parts = [
+      `umami_consent=${encodeURIComponent(val)}`,
+      `expires=${exp}`,
+      'path=/',
+      'SameSite=Lax'
+    ];
+    try {
+      const host = String(location.hostname || '').toLowerCase();
+      const isHttps = String(location.protocol || '').toLowerCase() === 'https:';
+      if (isHttps && (host === 'idleondle.com' || host.endsWith('.idleondle.com'))) {
+        parts.push('domain=.idleondle.com');
+        parts.push('Secure');
+      }
+    } catch (e) { /* ignore env issues */ }
+    try { document.cookie = parts.join('; '); } catch (e) { /* non-fatal */ }
+
+    // Load Umami script if consent is yes and script not present yet.
+    if (val === 'yes') {
+      try {
+        if (!document.querySelector('script[data-website-id]')) {
+          const s = document.createElement('script');
+          s.defer = true;
+          s.src = 'https://cloud.umami.is/script.js';
+          s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3');
+          document.head.appendChild(s);
+        }
+      } catch (e) { /* non-fatal */ }
+    }
+  } catch (e) { /* silent */ }
+})();
+
 function recordWin(game) {
   try {
     if (typeof document === 'undefined') return;
@@ -1096,6 +1151,16 @@ export async function initShared(config = {}) {
   if (privacyLink && privacyModal) privacyLink.addEventListener('click', (e) => { e.preventDefault(); privacyModal.setAttribute('aria-hidden', 'false'); });
   if (privacyClose && privacyModal) privacyClose.addEventListener('click', () => { privacyModal.setAttribute('aria-hidden', 'true'); });
   if (privacyModal) privacyModal.addEventListener('click', (e) => { if (e.target === privacyModal) privacyModal.setAttribute('aria-hidden', 'true'); });
+
+  // Terms of Use modal wiring (optional; only activates if elements exist on page)
+  try {
+    const termsLink = document.getElementById('termsLink');
+    const termsModal = document.getElementById('termsModal');
+    const termsClose = document.getElementById('termsClose');
+    if (termsLink && termsModal) termsLink.addEventListener('click', (e) => { e.preventDefault(); termsModal.setAttribute('aria-hidden', 'false'); });
+    if (termsClose && termsModal) termsClose.addEventListener('click', () => { termsModal.setAttribute('aria-hidden', 'true'); });
+    if (termsModal) termsModal.addEventListener('click', (e) => { if (e.target === termsModal) termsModal.setAttribute('aria-hidden', 'true'); });
+  } catch (e) { /* non-fatal */ }
 }
 
 export { filterItems, incrementGuessCount, updateClueState, getGoalItem };

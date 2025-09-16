@@ -158,8 +158,12 @@
   </div> <!-- .center -->
 
   <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <a id="privacyLink" class="privacy-link" href="#">Privacy Policy</a>
+    <div class="footer-inner" style="flex-direction:column;gap:8px;">
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a id="privacyLink" class="privacy-link" href="#">Privacy Policy</a>
+        <a id="termsLink" class="privacy-link" href="#">Terms of Use</a>
+        <a href="https://forms.gle/q12y17cxLe3gEjgF8" target="_blank" rel="noopener" class="privacy-link">Give Feedback</a>
+      </div>
     </div>
   </footer>
 
@@ -217,6 +221,49 @@
     </div>
   </div>
 
+  <!-- Terms of Use modal -->
+  <div id="termsModal" class="goal-modal" aria-hidden="true">
+    <div class="goal-panel">
+      <button class="goal-close" id="termsClose" aria-label="Close">✕</button>
+      <h2 class="goal-title">Terms of Use</h2>
+      <div class="goal-body">
+        <div style="text-align:left; font-size:14px; color:#111; max-height:60vh; overflow:auto;">
+          <h3>1. Acceptance of Terms</h3>
+          <p>By accessing or using Idleondle, you agree to comply with and be bound by these Terms of Service. If you do not agree, do not use the site.</p>
+
+          <h3>2. Use of the Site</h3>
+          <p>Idleondle is provided for personal, non-commercial use. You may not copy, modify, distribute, or sell any part of the site or its content, except as expressly permitted.</p>
+
+          <h3>3. Intellectual Property</h3>
+          <p>All content on Idleondle, including game mechanics, and text, is the property of Idleondle or licensed to it. Assets obtained from IdleOn or other sources remain the property of their respective owners. Unauthorized use, reproduction, or distribution of any assets not owned by Idleondle is prohibited. Use of IdleOn assets is further governed under our Privacy Policy.</p>
+
+          <h3>4. User Conduct</h3>
+          <p>You must not:</p>
+          <ul>
+            <li>Interfere with the operation of the site</li>
+            <li>Attempt to gain unauthorized access to data or accounts</li>
+            <li>Post offensive, illegal, or harmful content</li>
+          </ul>
+
+          <h3>5. Disclaimer of Warranties</h3>
+          <p>Idleondle is provided “as is.” No warranty is made regarding uninterrupted access, accuracy, or reliability. Use is at your own risk.</p>
+
+          <h3>6. Limitation of Liability</h3>
+          <p>Idleondle is not liable for any damages, direct or indirect, arising from the use or inability to use the site, including loss of data or profits.</p>
+
+          <h3>7. Changes to Terms</h3>
+          <p>Idleondle may modify these terms at any time. Continued use constitutes acceptance of the revised terms.</p>
+
+          <h3>8. Governing Law</h3>
+          <p>These Terms are governed by the laws of the jurisdiction in which Idleondle operates.</p>
+
+          <h3>9. Contact</h3>
+          <p>For questions regarding these Terms, contact the site administrator through the contact information provided in the Privacy Policy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script type="module">
     // Initialize shared loader to use the packs JSON so a deterministic daily
     // pack is selected before packGuesser runs.
@@ -251,6 +298,25 @@
       const pm = document.getElementById('privacyModal');
       if (pa) pa.addEventListener('click', function(){ setConsentYes(); if (pm) pm.setAttribute('aria-hidden','true'); });
       if (pd) pd.addEventListener('click', function(){ setConsentNo(); if (pm) pm.setAttribute('aria-hidden','true'); });
+    })();
+  </script>
+  <script>
+    // Minimal modal wiring for Privacy & Terms on this page
+    (function(){
+      const privacyLink = document.getElementById('privacyLink');
+      const privacyModal = document.getElementById('privacyModal');
+      const privacyClose = document.getElementById('privacyClose');
+      const termsLink = document.getElementById('termsLink');
+      const termsModal = document.getElementById('termsModal');
+      const termsClose = document.getElementById('termsClose');
+      function open(m){ if(m){ m.setAttribute('aria-hidden','false'); const f=m.querySelector('button,a,[tabindex]'); if(f) try{f.focus();}catch(e){} } }
+      function close(m){ if(m) m.setAttribute('aria-hidden','true'); }
+      if (privacyLink && privacyModal) privacyLink.addEventListener('click', e => { e.preventDefault(); open(privacyModal); });
+      if (privacyClose && privacyModal) privacyClose.addEventListener('click', () => close(privacyModal));
+      if (privacyModal) privacyModal.addEventListener('click', e => { if (e.target === privacyModal) close(privacyModal); });
+      if (termsLink && termsModal) termsLink.addEventListener('click', e => { e.preventDefault(); open(termsModal); });
+      if (termsClose && termsModal) termsClose.addEventListener('click', () => close(termsModal));
+      if (termsModal) termsModal.addEventListener('click', e => { if (e.target === termsModal) close(termsModal); });
     })();
   </script>
   
