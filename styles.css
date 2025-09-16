@@ -62,8 +62,11 @@ body::before {
 
 .site-title {
   display: block;
-  width: min(560px, 90%);
-  max-width: 100%;
+  /* Allow the image (and therefore the link) to shrink-to-fit its intrinsic width
+     instead of always stretching to 90% of the container. Cap the size for large
+     viewports and ensure it scales down on very small screens. */
+  width: auto;
+  max-width: min(560px, 90vw);
   height: auto;
   margin: 6px auto 4px auto;
   image-rendering: optimizeQuality;
@@ -1111,7 +1114,15 @@ body > .front-wrapper { /* isolate front page layout from legacy classes */
   z-index: 1; /* above bg ::before */
 }
 .front-header { text-align: center; display:flex; flex-direction:column; gap:12px; align-items:center; }
-.front-logo { width: min(560px,90%); height: auto; image-rendering: optimizeQuality; filter: drop-shadow(0 6px 24px rgba(0,0,0,0.55)); }
+.front-logo {
+  /* Mirror the shrink-to-fit behavior used for .site-title so the clickable area
+     matches the visible pixels and does not extend unnecessarily left/right. */
+  width: auto;
+  max-width: min(560px, 90vw);
+  height: auto;
+  image-rendering: optimizeQuality;
+  filter: drop-shadow(0 6px 24px rgba(0,0,0,0.55));
+}
 .front-tagline { margin:0; font-size: clamp(18px,3.2vw,24px); font-weight:600; letter-spacing:.4px; color: black; }
 
 /* Grid of game buttons (single column on mobile, responsive multi-row) */
