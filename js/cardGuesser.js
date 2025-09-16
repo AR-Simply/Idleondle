@@ -28,9 +28,15 @@ export function setCardBlur(percent) {
 }
 
 export async function initCardGuesser(options = {}) {
-  // Detect whether this page should start in "hard" mode (keep grayscale)
-  const _isHardPage = (typeof location !== 'undefined' && (((location.pathname || '').toLowerCase().includes('hardcardguesser')) || ((location.href || '').toLowerCase().includes('hardcardguesser'))))
-    || (typeof document !== 'undefined' && (document.body?.dataset?.hard === 'true' || !!document.querySelector('[data-hard]')));
+  // Robust hard-mode detection: supports folder /hardcard/, legacy *hardcardguesser*, or any data-hard attribute
+  let _isHardPage = false;
+  try {
+    const locPath = (typeof location !== 'undefined' && (location.pathname || '').toLowerCase()) || '';
+    const locHref = (typeof location !== 'undefined' && (location.href || '').toLowerCase()) || '';
+    const hardViaPath = /\/hardcard\//.test(locPath) || /\/hardcard\//.test(locHref) || locPath.includes('hardcardguesser') || locHref.includes('hardcardguesser');
+    const hardAttr = (typeof document !== 'undefined') && (document.body?.dataset?.hard !== undefined || !!document.querySelector('[data-hard]'));
+    _isHardPage = hardViaPath || hardAttr;
+  } catch (e) { /* non-fatal */ }
   // For normal cardGuesser pages, show color by default. For hard pages, keep grayscale locked.
   _colorUnlocked = !_isHardPage;
   // Per-page configuration: how many guesses until color unlock and how much blur reduces per guess

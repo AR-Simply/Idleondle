@@ -261,7 +261,7 @@ function detectGameFromPath() {
   const p = safeLower(path);
   // Detect hard-card pages explicitly so hard mode uses a separate cookie/identity
   if (p.includes('hardcardguesser') || p.includes('hardcard')) return 'hard_card';
-  if (p.includes('cardguesser')) return 'card';
+  if (p.includes('card')) return 'card';
   if (p.includes('monsterguesser') || p.includes('monster')) return 'monster';
   if (p.includes('harditemguesser') || p.includes('harditem')) return 'hard_item';
   // New: meal guesser page
@@ -383,7 +383,7 @@ async function loadItems() {
 function filterItems(q) {
   const s = (q || '').trim();
   if (!s) return [];
-  const isCardPage = (location.pathname || '').endsWith('cardGuesser.html') || (location.href || '').includes('cardGuesser');
+  const isCardPage = (location.pathname || '').endsWith('cardGuesser.html') || (location.href || '').includes('card');
   const normalizeForCard = (str) => safeLower(String(str || '').replace(/\bcard\b/ig, '').replace(/\s{2,}/g, ' ').trim());
   if (isCardPage) {
     const qs = normalizeForCard(s);
@@ -424,7 +424,7 @@ function render(list) {
   // Detect whether we're rendering dropdown on the cardGuesser page so we
   // can alter the visible label (remove the word "card"). Do not mutate
   // the original item object - only change the displayed text.
-  const isCardPage = (location.pathname || '').endsWith('cardGuesser.html') || (location.href || '').includes('cardGuesser');
+  const isCardPage = (location.pathname || '').endsWith('cardGuesser.html') || (location.href || '').includes('card');
   for (const it of list) {
     const li = document.createElement('li');
     li.className = 'item';
@@ -742,11 +742,11 @@ export async function initShared(config = {}) {
   // generated hrefs point to the right location when pages are opened from
   // the repo root or from the `html/` subfolder.
   const parts = (location.pathname || '').split('/').filter(Boolean);
-  const inHtmlFolder = parts.includes('html');
-  const indexHref = inHtmlFolder ? '../index.html' : 'index.html';
-  const cardHref = inHtmlFolder ? 'cardGuesser.html' : 'html/cardGuesser.html';
-  const monsterHref = inHtmlFolder ? 'monsterGuesser.html' : 'html/monsterGuesser.html';
-  const mealHref = inHtmlFolder ? 'mealGuesser.html' : 'html/mealGuesser.html';
+
+  const indexHref = '../';
+  const cardHref = '../card/';
+  const monsterHref = '../monster/';
+  const mealHref = '../meal/';
 
       // Ensure the switch has the three expected buttons. If static HTML provided
       // them, update their href/img; otherwise append new buttons.
@@ -775,14 +775,15 @@ export async function initShared(config = {}) {
   ensureBtn(indexHref, 'btn-items', '../images/Helmets/Copper Helmet.png', 'Item Guesser');
   ensureBtn(cardHref, 'btn-cards', '../images/card.png', 'Card Guesser');
   ensureBtn(monsterHref, 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser');
+  ensureBtn(mealHref, 'btn-meal', '../images/Spice/36px-Jungle_Spice.png', 'Meal Guesser');
   // NOTE: meal button intentionally not auto-created anymore.
   // If this is a hard-mode page, change the appropriate page button to a red "hard" button
     try {
       // Determine hard type: 'item' for HardItemGuesser, 'card' for HardCardGuesser,
       // or allow pages to explicitly set document.body.dataset.hard = 'item'|'card'.
       let hardType = null;
-      if ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('HardItemGuesser')) hardType = 'item';
-      if ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('HardCardGuesser')) hardType = 'card';
+      if ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('harditem')) hardType = 'item';
+      if ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('hardcard')) hardType = 'card';
       if (typeof document !== 'undefined' && document.body?.dataset?.hard) hardType = document.body.dataset.hard;
 
       if (hardType) {
@@ -820,13 +821,13 @@ export async function initShared(config = {}) {
   // Determine current page and set visual states on switcher buttons.
   const _pathname = (location.pathname || '').toLowerCase();
   const _href = (location.href || '').toLowerCase();
-  const isCard = _pathname.endsWith('cardguesser.html') || _href.includes('cardguesser.html') || _href.includes('cardguesser');
-  const isMonster = _pathname.endsWith('monsterguesser.html') || _href.includes('monsterguesser.html') || _href.includes('monsterguesser');
-  const isMeal = _pathname.endsWith('mealguesser.html') || _href.includes('mealguesser.html') || _href.includes('mealguesser');
+  const isCard = _pathname.endsWith('cardguesser.html') || _href.includes('cardguesser.html') || _href.includes('card'); // Do something about hard card
+  const isMonster = _pathname.endsWith('monsterguesser.html') || _href.includes('monsterguesser.html') || _href.includes('monster');
+  const isMeal = _pathname.endsWith('mealguesser.html') || _href.includes('mealguesser.html') || _href.includes('meal');
   // Recompute hardType for later decisions (keep consistent with earlier detection)
   const hardType = (typeof document !== 'undefined' && document.body?.dataset?.hard) ? document.body.dataset.hard :
-    ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('HardItemGuesser')) ? 'item' :
-    ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('HardCardGuesser')) ? 'card' : null;
+    ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('harditem')) ? 'item' :
+    ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('hardcard')) ? 'card' : null;
   const isHardAny = !!hardType;
   const isItems = !isCard && !isMonster && !isMeal;
 

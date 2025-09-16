@@ -17,29 +17,34 @@
   <img src="../images/title.png" alt="Idleondle title" class="site-title" />
   <!-- Static page switcher -->
   <div class="page-switch">
-    <a href="../index.html" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
+    <a href="/" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
       <img src="../images/Helmets/Copper Helmet.png" alt="Item" />
     </a>
-    <a href="cardGuesser.html" id="btn-cards" class="page-btn" title="Card Guesser">
+    <a href="/card/" id="btn-cards" class="page-btn" title="Card Guesser">
       <img src="../images/card.png" alt="Cards" />
     </a>
-    <a href="monsterGuesser.html" id="btn-monster" class="page-btn" title="Monster Guesser">
+    <a href="/monster/" id="btn-monster" class="page-btn" title="Monster Guesser">
       <img src="../images/Enemies/carrotman-6_thumb.png" alt="Monster" />
     </a>
-    <a href="mealGuesser.html" id="btn-meal" class="page-btn page-btn-right" title="Meal Guesser">
+    <a href="/meal/" id="btn-meal" class="page-btn page-btn-right" title="Meal Guesser">
       <img src="../images/Spice/36px-Jungle_Spice.png" alt="Meal" />
     </a>
   </div>
 
-        <div class="top-row">
-      <div class="guess-box combo-guess" id="guessBox">
-        <div class="guess-title">Guess today's enemy!</div>
-        <div class="guess-actions">
-          <div class="clue-wrap">
-            <button id="guessBtn2" class="guess-btn" aria-label="Category clue">No clues for this</button>
-            
-          </div>
-        </div>
+  <!-- Daily results box (shows wins from cookies) -->
+  <div id="resultsbox" class="results-box" aria-live="polite" aria-atomic="true" style="margin:14px auto 24px; max-width:720px;">
+    <div class="results-box-header fancy-title" style="position:relative;">
+      <div class="results-title-wrap no-gems">
+        <h2 class="results-title-text large">Daily <span class="accent">Results</span></h2>
+      </div>
+      <div class="results-subtitle">Share your victories!</div>
+    </div>
+    <div id="resultsList" class="results-list">
+      <em>Loading...</em>
+    </div>
+  </div>
+
+  
 
         <!-- About modal -->
         <div id="aboutModal" class="goal-modal" aria-hidden="true">
@@ -64,34 +69,9 @@
         </div>
       </div>
 
-      <div class="side-box" id="sideBox" aria-hidden="true">
-        <button id="helpBtn" class="icon-btn" aria-label="Question button">
-          <img src="../images/question.png" alt="question" />
-        </button>
-        <button id="aboutBtn" class="icon-btn" aria-label="Info button">
-          <img src="../images/info.png" alt="info" />
-        </button>
-        <a class="icon-btn" href="https://ko-fi.com/S6S51KOEMK" target="_blank" rel="noopener noreferrer" aria-label="Ko-fi link">
-          <img src="../images/kofi.png" alt="Buy Me a Coffee" style="height:24px;border:0;" />
-        </a>
-      </div>
-    </div>
+ 
 
-    <div class="combo" id="combo">
-      <div class="input-wrap">
-        <input id="search" type="text" placeholder="Type the name of an enemy..." autocomplete="off" />
-      </div>
-      <div class="dropdown" id="dropdown">
-        <ul class="results" id="results"></ul>
-      </div>
-    </div>
-    <!-- Emoji box: temporary large icons shown beneath the dropdown -->
-    <div class="emojibox" id="emojibox" aria-hidden="false">
-      <img src="../images/question.png" alt="emoji-1" />
-      <img src="../images/info.png" alt="emoji-2" />
-      <img src="../images/kofi.png" alt="emoji-3" />
-      <img src="../images/more.png" alt="emoji-4" />
-    </div>
+   
 
     <!-- Goal found modal (shared) -->
     <div id="goalModal" class="goal-modal" aria-hidden="true">
@@ -104,13 +84,18 @@
         </div>
         <div class="goal-guesses">Number of guesses: <strong id="goalGuesses">0</strong></div>
         <div class="goal-footer">
-          <div class="goal-footer-text">Come back for a new enemy in...</div>
+          <div class="goal-footer-text">Come back for a new card in...</div>
           <div class="goal-timer-wrap"><span id="goalTimer" class="goal-timer">00:00:00</span></div>
         </div>
+        <!-- Add action button linking to Monster Guesser (carrotman icon) -->
         <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
-          <a href="mealGuesser.html" class="guess-btn btn-results" id="resultsBtn" aria-label="View Results" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-            <img src="../images/Spice/36px-Jungle_Spice.png" alt="Results" style="width:22px;height:22px;object-fit:contain;" />
-            <span style="color:var(--text);font-weight:800;font-size:15px;">Next Game</span>
+          <a href="hardCardGuesser.html" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
+                <img src="../images/hardcard.png" alt="Hard Card" style="width:22px;height:22px;object-fit:contain;" />
+                <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
+              </a>
+          <a href="monsterGuesser.html" class="guess-btn" id="toMonsterBtn" aria-label="Monster Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+            <img src="../images/Enemies/carrotman-6_thumb.png" alt="carrotman" style="width:22px;height:22px;object-fit:contain;" />
+            <span style="color:var(--text);font-weight:800;font-size:15px;">Next game</span>
           </a>
         </div>
       </div>
@@ -124,10 +109,10 @@
         <div class="goal-body">
           <div style="text-align:left; font-size:14px; color:#111;">
             <p>Daily guessing games from the game "IdleOn". Games changes at midnight in your timezone.</p>
-            <p>The emojies represent a monster in idleon. More emojies are revealed with guesses. Each emoji gets less vague.</p>
-
-            <p>How fast can you discover what monster it is?</p>
-
+            <p>The card unblurs slightly for each guess. When you guess correctly, the card will be fully revealed.</p>
+           
+            <p>How fast can you discover what card it is?</p>
+            
             <p><strong>Good luck and have fun!</strong></p>
           </div>
         </div>
@@ -136,14 +121,11 @@
 
   </div> <!-- .center -->
 
-   <footer class="site-footer" role="contentinfo">
-      <div class="footer-inner" style="flex-direction:column;gap:8px;">
-        <div class="footer-follow-box">
-          <a href="https://ko-fi.com/S6S51KOEMK" target="_blank" rel="noopener" class="kofi-follow-link">Follow on Ko-fi for development updates and news</a>
-        </div>
-        <a id="privacyLink" class="privacy-link" href="#">Privacy Policy</a>
-      </div>
-    </footer>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <a id="privacyLink" class="privacy-link" href="#">Privacy Policy</a>
+    </div>
+  </footer>
 
   <!-- Privacy Policy modal -->
   <div id="privacyModal" class="goal-modal" aria-hidden="true">
@@ -156,19 +138,18 @@
           <p>This Privacy Policy explains how this website collects, uses, and protects personal data in accordance with the General Data Protection Regulation (GDPR) and other applicable EU data protection laws.</p>
 
           <h3>Data Collection</h3>
-          <p>This website does not directly collect, store, or process personal data of visitors. No user accounts, contact forms, or databases are maintained. </p>
-            <p>This website does not directly collect, store, or process personal data of visitors. No user accounts, contact forms, or databases are maintained.</p>
+      <p>This website does not directly collect, store, or process personal data of visitors. No user accounts, contact forms, or databases are maintained.</p>
 
-                            <p>We do set a small, local cookie to support game UX: <code>idleondle_last_win</code> and per-game cookies named <code>idleondle_win_<em>&lt;game&gt;</em></code>. These cookies store a JSON payload containing the game identifier, an ISO timestamp of when you completed the daily puzzle, and the number of guesses you used. The cookies are used only locally by the site to show that you've already completed today's puzzle, automatically reveal the answer, and display the guess count in the post-win modal.</p>
+                        <p>We do set a small, local cookie to support game UX: <code>idleondle_last_win</code> and per-game cookies named <code>idleondle_win_<em>&lt;game&gt;</em></code>. These cookies store a JSON payload containing the game identifier, an ISO timestamp of when you completed the daily puzzle, and the number of guesses you used. The cookies are used only locally by the site to show that you've already completed today's puzzle, automatically reveal the answer, and display the guess count in the post-win modal.</p>
 
                 <p>These cookies are non-personal, do not contain any identifiers that would reasonably identify you, are not shared with third parties by this site, and are retained locally for 365 days to allow users to revisit prior wins on the same device. For clarity, this is separate from advertising cookies used by Google AdSense or Umami (see below).</p>
 
           <h3>Analytics (Umami)</h3>
-           <p>We use <strong>Umami</strong> for privacy-focused, anonymous analytics. Umami only collects non-identifying information such as pageviews, referrers, timestamps, and basic device/browser metadata. No names, email addresses, or persistent personal identifiers are collected or stored. The Umami script is loaded only if you explicitly opt in via this Privacy Policy ("Accept analytics"). You can revoke your choice at any time by returning to this Privacy Policy and selecting "Disable analytics".</p>
-        <div style="display:flex;gap:8px;justify-content:center;margin:12px 0 0 0;">
-          <button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
-          <button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
-        </div>
+          <p>We use <strong>Umami</strong> for privacy-focused, anonymous analytics. Umami only collects non-identifying information such as pageviews, referrers, timestamps, and basic device/browser metadata. No names, email addresses, or persistent personal identifiers are collected or stored. The Umami script is loaded only if you explicitly opt in via this Privacy Policy ("Accept analytics"). You can revoke your choice at any time by returning to this Privacy Policy and selecting "Disable analytics".</p>
+          <div style="display:flex;gap:8px;justify-content:center;margin:12px 0 0 0;">
+                    <button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
+                    <button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
+                  </div>
           <h3>Google AdSense</h3>
           <p>This website displays advertisements through Google AdSense. Google, as a third-party vendor, uses cookies to serve ads based on users’ prior visits to this and other websites. Google’s use of advertising cookies enables it and its partners to serve personalized ads to users based on their interests.</p>
           <p>Users in the European Union will be presented with a consent mechanism before personalized ads are shown. Consent choices can be managed or withdrawn at any time. Non-personalized ads may also be served.</p>
@@ -192,17 +173,17 @@
           <h3>Updates</h3>
           <p>This Privacy Policy may be updated to remain compliant with legal requirements. Any changes will be reflected on this page with a revised effective date.</p>
         </div>
-
+    
       </div>
     </div>
   </div>
 
-  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
   <script type="module">
-    import '../js/monsterGuesser.js';
+    import '../js/results.js';
   </script>
   <script>
     (function(){
+      // Load Umami only if the user previously opted in
       if (document.cookie.split('; ').some(c => c.startsWith('umami_consent=') && c.split('=')[1] === 'yes')) {
         const s = document.createElement('script');
         s.defer = true;
@@ -213,6 +194,7 @@
     })();
   </script>
   <script>
+    // Define local helpers if not provided by shared scripts
     function setCookie(name, value, days) { const d = new Date(); d.setTime(d.getTime() + (days*86400000)); document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + d.toUTCString() + '; path=/'; }
     function loadUmami() { if (document.querySelector('script[data-website-id]')) return; const s = document.createElement('script'); s.defer = true; s.src = 'https://cloud.umami.is/script.js'; s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3'); document.head.appendChild(s); }
     function setConsentYes() { setCookie('umami_consent','yes',365); loadUmami(); }
@@ -228,4 +210,3 @@
   
 </body>
 </html>
-

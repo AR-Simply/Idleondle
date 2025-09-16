@@ -21,7 +21,7 @@
   <img src="images/title.png" alt="Idleondle title" class="site-title" />
   <!-- Static page switcher: item, card, monster, meal -->
   <div class="page-switch">
-    <a href="index.html" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
+    <a href="../" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
       <img src="images/Helmets/Copper Helmet.png" alt="Item" />
     </a>
     <a href="html/cardGuesser.html" id="btn-cards" class="page-btn" title="Card Guesser">
@@ -137,15 +137,22 @@
             </div>
             <!-- Bottom action buttons: Hard Item Guesser (left) and Next Game (right) -->
             <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
-              <a href="html/HardItemGuesser.html" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
+              <a href="harditem/" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
                 <img src="images/Premium Helmets/Diamon Horns.png" alt="Diamon Horns" style="width:22px;height:22px;object-fit:contain;" />
                 <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
               </a>
-              <a href="html/cardGuesser.html" class="guess-btn" id="nextGameBtn" aria-label="Next Game" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+              <a href="card/" class="guess-btn" id="nextGameBtn" aria-label="Next Game" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
                 <img src="images/card.png" alt="card" style="width:22px;height:22px;object-fit:contain;" />
                 <span style="color:var(--text);font-weight:800;font-size:15px;">Next Game</span>
               </a>
+              
             </div>
+                <a href="results/" class="guess-btn results-btn-orange" id="resultsbtn" aria-label="View your past daily results" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:18px;width:68%;">
+                  <img src="images/icon.png" alt="Results icon" style="width:24px;height:24px;object-fit:contain;" />
+                  <span style="font-weight:900;font-size:15px;">See Your Results</span>
+                </a>
+
+
           </div>
         </div>
 
@@ -160,6 +167,7 @@
                 <p>Type in the name of an item and it will reveal its properties. The color of the tiles will change to show how close your guess was to the daily item.</p>
                 <ul>
                   <li><strong>Green</strong> indicates the property is an exact match.</li>
+                  <li><strong>Yellow</strong> indicates the property is a partial match.</li>
                   <li><strong>Red</strong> indicates the property is wrong.</li>
                   <li>⬇️ ⬆️ indicates if the answer is above or below your guess.</li>
                 </ul>

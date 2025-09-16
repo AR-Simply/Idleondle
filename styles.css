@@ -885,6 +885,51 @@ body:not([data-hard]) #helpModal .goal-body {
 .goal-timer-wrap { display: flex; justify-content: center; }
 .goal-timer { font-size: 32px; font-weight: 800; color: #d9534f; letter-spacing: 1px; }
 
+/* Results button (orange accent) */
+#resultsbtn, .results-btn-orange {
+  background: #62bb2e;
+  color: #ffffff !important;
+  border: 1px solid #5a9e36;
+  font-weight: 900;
+  letter-spacing: .4px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.28), 0 2px 4px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+}
+#resultsbtn::before, .results-btn-orange::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+ 
+  opacity: .35;
+  pointer-events: none;
+}
+#resultsbtn:hover, .results-btn-orange:hover { filter: brightness(1.05); }
+#resultsbtn:active, .results-btn-orange:active { transform: translateY(1px); }
+#resultsbtn:focus-visible { outline: 3px solid #ffe6c1; outline-offset: 3px; }
+
+/* Long button under goal actions */
+.goal-long-btn {
+  margin-top: 12px;
+  width: 100%;
+  max-width: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  background: linear-gradient(90deg, #6fa8ff, #7aa2ff, #9fb8ff);
+  color: #fff !important;
+  font-weight: 900;
+  letter-spacing: .5px;
+  border: 1px solid #5a7dcc;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25), 0 2px 4px rgba(0,0,0,0.15);
+  transition: filter .25s, transform .25s;
+}
+.goal-long-btn:hover { filter: brightness(1.05); }
+.goal-long-btn:active { transform: translateY(1px); }
+
 .site-footer {
   width: 100%;
   display: flex;

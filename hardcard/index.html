@@ -12,7 +12,7 @@
   <meta name="google-adsense-account" content="ca-pub-4897247326207368">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4897247326207368" crossorigin="anonymous"></script>
 </head>
-<body>
+<body data-hard="card">
   <div class="center">
   <img src="../images/title.png" alt="Idleondle title" class="site-title" />
   <!-- Static page switcher -->
@@ -31,20 +31,16 @@
     </a>
   </div>
 
-  <!-- Daily results box (shows wins from cookies) -->
-  <div id="resultsbox" class="results-box" aria-live="polite" aria-atomic="true" style="margin:14px auto 24px; max-width:720px;">
-    <div class="results-box-header fancy-title" style="position:relative;">
-      <div class="results-title-wrap no-gems">
-        <h2 class="results-title-text large">Daily <span class="accent">Results</span></h2>
-      </div>
-      <div class="results-subtitle">Share your victories!</div>
-    </div>
-    <div id="resultsList" class="results-list">
-      <em>Loading...</em>
-    </div>
-  </div>
-
-  
+    <div class="top-row">
+      <div class="guess-box combo-guess" id="guessBox">
+        <div class="guess-title">Guess today's HARD card!</div>
+        <div class="guess-actions">
+          <div class="clue-wrap">
+            <button id="colorBtn" class="guess-btn" aria-label="Color clue" disabled>Color Clue</button>
+            <div class="clue-note" id="noteColor"></div>
+          </div>
+         
+        </div>
 
         <!-- About modal -->
         <div id="aboutModal" class="goal-modal" aria-hidden="true">
@@ -69,9 +65,28 @@
         </div>
       </div>
 
- 
+      <div class="side-box" id="sideBox" aria-hidden="true">
+        <button id="helpBtn" class="icon-btn" aria-label="Question button">
+          <img src="../images/question.png" alt="question" />
+        </button>
+        <button id="aboutBtn" class="icon-btn" aria-label="Info button">
+          <img src="../images/info.png" alt="info" />
+        </button>
+        <a class="icon-btn" href="https://ko-fi.com/S6S51KOEMK" target="_blank" rel="noopener noreferrer" aria-label="Ko-fi link">
+          <img src="../images/kofi.png" alt="Buy Me a Coffee" style="height:24px;border:0;" />
+        </a>
+      </div>
+    </div>
 
-   
+    <div class="combo" id="combo">
+      <div class="input-wrap">
+        <input id="search" type="text" placeholder="Type the name of a card..." autocomplete="off" />
+      </div>
+      <div class="dropdown" id="dropdown">
+        <ul class="results" id="results"></ul>
+      </div>
+    </div>
+
 
     <!-- Goal found modal (shared) -->
     <div id="goalModal" class="goal-modal" aria-hidden="true">
@@ -89,13 +104,16 @@
         </div>
         <!-- Add action button linking to Monster Guesser (carrotman icon) -->
         <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
-          <a href="hardCardGuesser.html" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
-                <img src="../images/hardcard.png" alt="Hard Card" style="width:22px;height:22px;object-fit:contain;" />
-                <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
-              </a>
-          <a href="monsterGuesser.html" class="guess-btn" id="toMonsterBtn" aria-label="Monster Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-            <img src="../images/Enemies/carrotman-6_thumb.png" alt="carrotman" style="width:22px;height:22px;object-fit:contain;" />
+          
+          <a href="/monster/" class="guess-btn" id="toMonsterBtn" aria-label="Monster Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+            <img src="/images/Enemies/carrotman-6_thumb.png" alt="carrotman" style="width:22px;height:22px;object-fit:contain;" />
             <span style="color:var(--text);font-weight:800;font-size:15px;">Next game</span>
+          </a>
+
+                </div>
+          <a href="results/" class="guess-btn results-btn-orange" id="resultsbtn" aria-label="View your past daily results" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:18px;width:68%;">
+            <img src="/images/icon.png" alt="Results icon" style="width:24px;height:24px;object-fit:contain;" />
+            <span style="font-weight:900;font-size:15px;">See Your Results</span>
           </a>
         </div>
       </div>
@@ -109,7 +127,7 @@
         <div class="goal-body">
           <div style="text-align:left; font-size:14px; color:#111;">
             <p>Daily guessing games from the game "IdleOn". Games changes at midnight in your timezone.</p>
-            <p>The card unblurs slightly for each guess. When you guess correctly, the card will be fully revealed.</p>
+            <p>On hard mode the card is greyscale and unblurs a smaller amount for each guess.</p>
            
             <p>How fast can you discover what card it is?</p>
             
@@ -121,11 +139,14 @@
 
   </div> <!-- .center -->
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <a id="privacyLink" class="privacy-link" href="#">Privacy Policy</a>
-    </div>
-  </footer>
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner" style="flex-direction:column;gap:8px;">
+        <div class="footer-follow-box">
+          <a href="https://ko-fi.com/S6S51KOEMK" target="_blank" rel="noopener" class="kofi-follow-link">Follow on Ko-fi for development updates and news</a>
+        </div>
+        <a id="privacyLink" class="privacy-link" href="#">Privacy Policy</a>
+      </div>
+    </footer>
 
   <!-- Privacy Policy modal -->
   <div id="privacyModal" class="goal-modal" aria-hidden="true">
@@ -173,13 +194,22 @@
           <h3>Updates</h3>
           <p>This Privacy Policy may be updated to remain compliant with legal requirements. Any changes will be reflected on this page with a revised effective date.</p>
         </div>
-    
+
       </div>
     </div>
   </div>
 
   <script type="module">
-    import '../js/results.js';
+    // Hard Card page: import shared first, then cardGuesser which auto-detects hard mode via body[data-hard] or URL
+    import { initShared } from '../js/shared.js';
+    import '../js/cardGuesser.js';
+    // Initialize shared with hard-mode settings: use a separate JSON and seedOffset
+    initShared({
+      dataUrl: '../json/idleon_cards.json',
+      imageBase: '../images',
+      clueUnlocks: { category: 10 },
+      seedOffset: 999
+    });
   </script>
   <script>
     (function(){

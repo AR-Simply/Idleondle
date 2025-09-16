@@ -17,16 +17,16 @@
   <img src="../images/title.png" alt="Idleondle title" class="site-title" />
   <!-- Static page switcher -->
   <div class="page-switch">
-    <a href="../index.html" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
+    <a href="../" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
       <img src="../images/Helmets/Copper Helmet.png" alt="Item" />
     </a>
-    <a href="cardGuesser.html" id="btn-cards" class="page-btn" title="Card Guesser">
+    <a href="../card/" id="btn-cards" class="page-btn" title="Card Guesser">
       <img src="../images/card.png" alt="Cards" />
     </a>
-    <a href="monsterGuesser.html" id="btn-monster" class="page-btn" title="Monster Guesser">
+    <a href="../monster/" id="btn-monster" class="page-btn" title="Monster Guesser">
       <img src="../images/Enemies/carrotman-6_thumb.png" alt="Monster" />
     </a>
-    <a href="mealGuesser.html" id="btn-meal" class="page-btn page-btn-right" title="Meal Guesser">
+    <a href="../meal/" id="btn-meal" class="page-btn page-btn-right" title="Meal Guesser">
       <img src="../images/Spice/36px-Jungle_Spice.png" alt="Meal" />
     </a>
   </div>
@@ -104,15 +104,21 @@
         </div>
         <!-- Add action button linking to Monster Guesser (carrotman icon) -->
         <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
-          <a href="hardCardGuesser.html" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
+          <a href="/hardcard/" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
                 <img src="../images/hardcard.png" alt="Hard Card" style="width:22px;height:22px;object-fit:contain;" />
                 <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
               </a>
-          <a href="monsterGuesser.html" class="guess-btn" id="toMonsterBtn" aria-label="Monster Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+          <a href="/monster/" class="guess-btn" id="toMonsterBtn" aria-label="Monster Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
             <img src="../images/Enemies/carrotman-6_thumb.png" alt="carrotman" style="width:22px;height:22px;object-fit:contain;" />
             <span style="color:var(--text);font-weight:800;font-size:15px;">Next game</span>
           </a>
-        </div>
+      
+
+              </div>
+          <a href="/results/" class="guess-btn results-btn-orange" id="resultsbtn" aria-label="View your past daily results" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:18px;width:68%;">
+            <img src="/images/icon.png" alt="Results icon" style="width:24px;height:24px;object-fit:contain;" />
+            <span style="font-weight:900;font-size:15px;">See Your Results</span>
+          </a>
       </div>
     </div>
 
