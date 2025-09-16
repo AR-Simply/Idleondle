@@ -584,23 +584,27 @@ function addToTable(it) {
     }
 
     if (cell.type === 'red') {
-      // Source column: mark partial matches (yellow) when one side contains the other
+      // Source column matching (updated):
+      //  - Exact full-string case-insensitive equality => cell-match
+      //  - Else compare comma-separated segments (after trimming, removing surrounding parentheses,
+      //    collapsing spaces, lowercasing). If any guess segment exactly equals any goal segment => cell-partial
+      //  - Else cell-miss.
       if (cell.key === 'source') {
-        // Tokenize and compare words: mark partial if any meaningful token from
-        // the goal appears inside the guess. This handles cases like
-        // "Smithing, (W1 Colosseum)" vs "Smithing, (Slime), Glunko The Massive".
-        const aRaw = String(info.value || '');
-        const bRaw = String(info.goal || '');
-        const a = safeLower(aRaw);
-        const b = safeLower(bRaw);
-        // split on non-alphanumeric characters, keep tokens of length >= 2
-        const tokens = s => String(s || '').replace(/[^0-9a-z]+/g, ' ').split(/\s+/).filter(Boolean).filter(w => w.length >= 2);
-        const aTokens = new Set(tokens(a));
-        const bTokens = tokens(b);
-        try { if (a.includes('smithing') || b.includes('smithing')) console.log('source-compare', { a, b, aTokens: Array.from(aTokens), bTokens }); } catch (e) { /* ignore */ }
-        if (a === b) td.classList.add('cell-match');
-        else if (bTokens.length > 0 && bTokens.some(t => aTokens.has(t))) td.classList.add('cell-partial');
-        else td.classList.add('cell-miss');
+        const guessRaw = String(info.value || '').trim();
+        const goalRaw = String(info.goal || '').trim();
+        const guessNormFull = safeLower(guessRaw);
+        const goalNormFull = safeLower(goalRaw);
+        if (guessNormFull && goalNormFull && guessNormFull === goalNormFull) {
+          td.classList.add('cell-match');
+        } else {
+          const splitSegments = s => s.split(/,/).map(seg => seg.trim()).filter(Boolean);
+          const normalizeSeg = s => safeLower(s.replace(/^\(/,'').replace(/\)$/,'').replace(/\s+/g,' ').trim());
+          const guessSegs = splitSegments(guessRaw).map(normalizeSeg).filter(Boolean);
+          const goalSegs = splitSegments(goalRaw).map(normalizeSeg).filter(Boolean);
+          const goalSet = new Set(goalSegs);
+          const hasExactSegment = guessSegs.some(seg => goalSet.has(seg));
+          if (hasExactSegment) td.classList.add('cell-partial'); else td.classList.add('cell-miss');
+        }
       } else {
         if (info.value === info.goal) {
           td.classList.add('cell-match');

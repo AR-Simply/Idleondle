@@ -820,7 +820,7 @@
       "level_requirement": "38",
       "sell_price": 30450,
       "type": "Helmets",
-      "source": "Smithing, (Blunder Hills Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "Strength": "4",
         "Agility": "4",
@@ -914,7 +914,7 @@
       "level_requirement": "110",
       "sell_price": 7425275,
       "type": "Helmets",
-      "source": "Smithing, (Frostbite Tundra Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "power": "3",
         "Strength": "20",
@@ -1023,7 +1023,7 @@
       "level_requirement": "80",
       "sell_price": 120220,
       "type": "Helmets",
-      "source": "Smithing, (Yum Yum Desert Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "power": "1",
         "Strength": "8",
@@ -1695,7 +1695,7 @@
       "level_requirement": "35",
       "sell_price": 30100,
       "type": "Shirts",
-      "source": "Smithing, (Blunder Hills Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "power": "3",
         "Strength": "7",
@@ -1737,7 +1737,7 @@
       "level_requirement": "105",
       "sell_price": 75508218,
       "type": "Shirts",
-      "source": "Smithing, (Frostbite Tundra Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "Strength": "15",
         "Agility": "15",
@@ -1812,7 +1812,7 @@
       "level_requirement": "80",
       "sell_price": 4260,
       "type": "Shirts",
-      "source": "Smithing, (Yum Yum Desert Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "Strength": "5",
         "Agility": "5",
@@ -2225,7 +2225,7 @@
       "level_requirement": "40",
       "sell_price": 28500,
       "type": "Pants",
-      "source": "Smithing, (Blunder Hills Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "Strength": "2",
         "Agility": "2",
@@ -2267,7 +2267,7 @@
       "level_requirement": "100",
       "sell_price": 9335210,
       "type": "Pants",
-      "source": "Smithing, (Frostbite Tundra Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "Strength": "13",
         "Agility": "13",
@@ -2341,7 +2341,7 @@
       "level_requirement": "75",
       "sell_price": 1260,
       "type": "Pants",
-      "source": "Smithing, (Yum Yum Desert Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "Strength": "4",
         "Agility": "4",
@@ -3177,7 +3177,7 @@
       "level_requirement": "35",
       "sell_price": 12275,
       "type": "Shoes",
-      "source": "Smithing, (Blunder Hills Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -3244,7 +3244,7 @@
       "level_requirement": "95",
       "sell_price": 7687006,
       "type": "Shoes",
-      "source": "Smithing, (Frostbite Tundra Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "Strength": "12",
         "Agility": "12",
@@ -3350,7 +3350,7 @@
       "level_requirement": "200",
       "sell_price": 3594115000,
       "type": "Shoes",
-      "source": "Smithing, (Domeo Magmus),Domeo Magmus",
+      "source": "Smithing, (Domeo Magmus)",
       "stats": {
         "Agility": "5",
         "Wisdom": "12",
@@ -3363,7 +3363,7 @@
       "level_requirement": "500",
       "sell_price": 1574050234000,
       "type": "Shoes",
-      "source": "Smithing, (Mama Troll),Mama Troll",
+      "source": "Smithing, (Mama Troll)",
       "stats": {
         "power": "5",
         "Strength": "57",
@@ -3380,7 +3380,7 @@
       "level_requirement": "70",
       "sell_price": 261970,
       "type": "Shoes",
-      "source": "Smithing, (Yum Yum Desert Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "Strength": "2",
         "Agility": "2",
@@ -3677,7 +3677,7 @@
       "level_requirement": "30",
       "sell_price": 4150,
       "type": "Pendants",
-      "source": "Smithing, (Blunder Hills Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "power": "2",
         "Wisdom": "12",
@@ -3702,7 +3702,7 @@
       "level_requirement": "120",
       "sell_price": 46,
       "type": "Pendants",
-      "source": "Smithing, (Frostbite Tundra Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "power": "8",
         "Upgrade Slots": "4"
@@ -4087,7 +4087,7 @@
       "level_requirement": "80",
       "sell_price": 102779,
       "type": "Rings",
-      "source": "Smithing, (Yum Yum Desert Merit Shop)",
+      "source": "Smithing, (Merit Shop)",
       "stats": {
         "power": "3",
         "Agility": "10",

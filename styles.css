@@ -18,12 +18,28 @@ html, body {
   margin: 0;
   box-sizing: border-box;
   font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background-image: url("../images/bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  /* We move the background image to a fixed ::before layer to ensure true
+     fixed behaviour on mobile Safari / Chrome where background-attachment:fixed
+     is ignored. Keep a solid fallback colour here. */
+  background: var(--bg);
   color: var(--text);
+}
+
+/* Fixed background layer (covers the viewport, sits behind all content).
+   Using a pseudo-element avoids mobile issues with background-attachment:fixed. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: var(--bg) url("../images/bg.png") center / cover no-repeat;
+  /* Place at 0 so it's behind normal content but still visible above the body's
+     background color; using -1 can hide it under the body painting layer in
+     some browsers */
+  z-index: 0;
+  pointer-events: none; /* don't block interactions */
+  /* Force its own layer for smoother scroll; helps reduce repaint jitter */
+  will-change: transform;
+  transform: translateZ(0);
 }
 *, *::before, *::after { box-sizing: inherit; }
 
@@ -51,6 +67,7 @@ html, body {
   height: auto;
   margin: 6px auto 4px auto;
   image-rendering: optimizeQuality;
+  z-index: 1;
 }
 
 /* Page switch buttons (between title and guess box) */
@@ -130,6 +147,7 @@ html, body {
   width: 37px;
   box-sizing: border-box;
   justify-content: center;
+  z-index: 1;
 }
 
 .icon-btn {
@@ -172,7 +190,7 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
 /* Switcher stays perfectly centered; flame will be floated elsewhere */
 
 /* Floating flame (detached positioning) - lowered z-index so it stays beneath modals */
-.floating-flame { position:absolute; z-index:5; pointer-events:auto; }
+.floating-flame { position:fixed; z-index:5; pointer-events:auto; }
 .floating-flame img.flame-icon { width:72px; height:72px; }
 .floating-flame .flame-streak { font-size:30px; transform:translateY(12px); }
 @media (max-width:720px){
@@ -505,6 +523,7 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    z-index: 1;
   }
   .results-box-header { display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:12px; width:100%; }
   .results-box-header h2 { text-align:center; width:100%; }
@@ -869,6 +888,7 @@ body:not([data-hard]) #helpModal .goal-body {
   color: black;
   text-decoration: underline;
   font-size: 13px;
+  z-index: 1;
 }
 
 /* Footer follow box */
@@ -883,6 +903,7 @@ body:not([data-hard]) #helpModal .goal-body {
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35), 0 1px 2px rgba(255,255,255,0.07) inset;
   max-width: 520px;
+  z-index: 1;
 }
 .footer-follow-box .kofi-follow-link {
   font-size: 13px;
@@ -892,6 +913,7 @@ body:not([data-hard]) #helpModal .goal-body {
   text-align: center;
   line-height: 1.25;
   letter-spacing: .3px;
+  
 }
 .footer-follow-box .kofi-follow-link:hover { color: #ffd27a; text-shadow: 0 0 4px rgba(255,210,122,0.4); }
 

@@ -121,19 +121,28 @@ export function addToTable(it) {
       row.appendChild(td); continue;
     }
     if (cell.type === 'red') {
-      // For the source column, allow partial matches (e.g. guess's source contains part of goal)
+      // Source matching rules (updated):
+      // - Exact case-insensitive equality -> cell-match (green)
+      // - Else split each source into comma-separated segments. Normalize each segment by:
+      //     trim, remove surrounding parentheses, collapse internal spaces, lowercase.
+      //   If any normalized segment from guess equals any normalized segment from goal -> cell-partial (yellow)
+      // - Otherwise -> cell-miss (red)
       if (cell.key === 'source') {
-        const aRaw = String(info.value || '');
-        const bRaw = String(info.goal || '');
-        const a = safeLower(aRaw);
-        const b = safeLower(bRaw);
-        const tokens = s => String(s || '').replace(/[^0-9a-z]+/g, ' ').split(/\s+/).filter(Boolean).filter(w => w.length >= 2);
-        const aTokens = new Set(tokens(a));
-        const bTokens = tokens(b);
-        try { if (a.includes('smithing') || b.includes('smithing')) console.log('IG-source-compare', { a, b, aTokens: Array.from(aTokens), bTokens }); } catch (e) {}
-        if (a === b) td.classList.add('cell-match');
-        else if (bTokens.length > 0 && bTokens.some(t => aTokens.has(t))) td.classList.add('cell-partial');
-        else td.classList.add('cell-miss');
+        const guessRaw = String(info.value || '').trim();
+        const goalRaw = String(info.goal || '').trim();
+        const guessNormFull = safeLower(guessRaw);
+        const goalNormFull = safeLower(goalRaw);
+        if (guessNormFull && goalNormFull && guessNormFull === goalNormFull) {
+          td.classList.add('cell-match');
+        } else {
+          const splitSegments = s => s.split(/,/).map(seg => seg.trim()).filter(Boolean);
+          const normalizeSeg = s => safeLower(s.replace(/^\(/,'').replace(/\)$/,'').replace(/\s+/g,' ').trim());
+          const guessSegs = splitSegments(guessRaw).map(normalizeSeg).filter(Boolean);
+          const goalSegs = splitSegments(goalRaw).map(normalizeSeg).filter(Boolean);
+          const goalSet = new Set(goalSegs);
+          const hasExactSegment = guessSegs.some(seg => goalSet.has(seg));
+          if (hasExactSegment) td.classList.add('cell-partial'); else td.classList.add('cell-miss');
+        }
       } else {
         if (info.value === info.goal) td.classList.add('cell-match'); else td.classList.add('cell-miss');
       }

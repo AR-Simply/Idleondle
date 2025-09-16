@@ -444,24 +444,28 @@ function render(list) {
     li.appendChild(img);
     li.appendChild(nameDiv);
     li.addEventListener('click', () => {
-      // increment guess counter for any selection attempt
+      // Increment guess counter for any selection attempt
       incrementGuessCount();
       // Remove item so it won't appear in future searches
       items = items.filter(item => item.name !== it.name);
-      document.getElementById('dropdown').classList.remove('open');
+      const dd = document.getElementById('dropdown');
+      if (dd) dd.classList.remove('open');
       const inputEl = document.getElementById('search');
-      if (inputEl) { inputEl.value = it.name; try { inputEl.focus(); } catch (e) {} }
-      // call page-specific selection handler if provided; if page handles selection
-      // itself (e.g. addToTable), let it decide when to show the modal. Only
-      // show the modal here if no page-specific handler exists.
+      if (inputEl) {
+        // Put the chosen value into the box then immediately clear it so user can type again
+        // (and dropdown logic won't think query is unchanged).
+        inputEl.value = '';
+        lastQuery = '';
+        try { inputEl.focus(); } catch (e) { /* non-fatal */ }
+      }
+      // Page-specific selection logic / modal trigger
       if (typeof _config.onSelect === 'function') {
         try { _config.onSelect(it); } catch (e) { console.warn('onSelect handler failed', e); }
       } else {
-        try { if (goalItem && it && it.name === goalItem.name) notifyGoalGuessed(it); } catch (e) {}
+        try { if (goalItem && it && it.name === goalItem.name) notifyGoalGuessed(it); } catch (e) { /* non-fatal */ }
       }
-      // Re-render dropdown in case user continues typing
-      const q = document.getElementById('search')?.value || '';
-      render(filterItems(q));
+      // Force a render pass with empty list so next keystroke triggers fresh open immediately
+      render([]);
     });
     frag.appendChild(li);
   }
@@ -898,15 +902,16 @@ export async function initShared(config = {}) {
         const positionFlame = () => {
           try {
             const rect = switcher.getBoundingClientRect();
-            flameWrap.style.position = 'absolute';
-            flameWrap.style.top = (rect.top + rect.height / 2) + 'px';
-            flameWrap.style.left = rect.right + 'px';
-            // Original horizontal gap was 16px; add 30px more (total 46px) per request
-            flameWrap.style.transform = 'translate(20px, -50%)';
+            const topPx = rect.top + (rect.height / 2);
+            const leftPx = rect.right + 20; // gap from switcher
+            flameWrap.style.top = topPx + 'px';
+            flameWrap.style.left = leftPx + 'px';
+            flameWrap.style.transform = 'translateY(-50%)';
           } catch (e) { /* non-fatal */ }
         };
         positionFlame();
-        window.addEventListener('resize', positionFlame);
+        window.addEventListener('resize', positionFlame, { passive: true });
+        window.addEventListener('scroll', positionFlame, { passive: true }); /* ensure it tracks if switcher moves (e.g., layout shifts) */
       } else if (sideBox) {
         // Fallback: keep previous behavior next to side box
         let wrapper = document.getElementById('sideFlameWrap');
@@ -976,11 +981,15 @@ export async function initShared(config = {}) {
   const onInput = () => {
     if (!input) return;
     const q = input.value;
-    if (q === lastQuery) return;
+    // Always allow re-render after a selection (lastQuery deliberately cleared on click)
+    if (q === lastQuery && q.length > 0) return; // still avoid redundant work for continuous same value
     lastQuery = q;
     const results = filterItems(q);
     render(results);
-    if (!loadingItems && results.length > 0) document.getElementById('dropdown')?.classList.add('open');
+    const dd = document.getElementById('dropdown');
+    if (dd) {
+      if (!loadingItems && results.length > 0) dd.classList.add('open'); else dd.classList.remove('open');
+    }
   };
   if (input) input.addEventListener('input', onInput);
 
