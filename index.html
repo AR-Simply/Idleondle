@@ -253,5 +253,25 @@
 		})();
 		</script>
 
+		<!-- Completion highlighting script: marks game cards green if today's win cookie exists -->
+		<script>
+		(function(){
+			function safeLower(s){ try { return String(s||'').toLowerCase(); } catch(e){ return ''; } }
+			function getCookie(name){ try { return document.cookie.split(';').map(s=>s.trim()).filter(Boolean).reduce((acc,p)=>{ const i=p.indexOf('='); const k=i===-1?p:p.slice(0,i); if(k===name) acc=decodeURIComponent(i===-1?'':p.slice(i+1)); return acc; }, undefined); } catch(e){ return undefined; } }
+			function hasWinToday(game){ try { const key='idleondle_win_'+safeLower(String(game||'unknown').replace(/[^a-z0-9_-]+/gi,'_')); const val=getCookie(key); if(!val) return false; let iso=null; try { const parsed=JSON.parse(val); iso=parsed && parsed.time ? parsed.time : null; } catch(e){ iso=val; } if(!iso) return false; const then=new Date(iso); if(isNaN(then.getTime())) return false; const now=new Date(); return then.getFullYear()===now.getFullYear() && then.getMonth()===now.getMonth() && then.getDate()===now.getDate(); } catch(e){ return false; } }
+			function mark(){
+				const cards=document.querySelectorAll('.game-card[data-game]');
+				cards.forEach(card=>{
+					const g=card.getAttribute('data-game');
+					// Map data-game to cookie keys used in shared.js (hard modes use hard_item/hard_card)
+					const map = { harditem:'hard_item', hardcard:'hard_card' };
+					const keyName = map[g] || g;
+					if(hasWinToday(keyName)) card.classList.add('completed');
+				});
+			}
+			if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', mark); else mark();
+		})();
+		</script>
+
 </body>
 </html>
