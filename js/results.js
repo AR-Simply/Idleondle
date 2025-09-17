@@ -8,6 +8,7 @@ const GAME_DISPLAY_ORDER = [
 	'card',        // Card Guesser
 	'hard_card',   // HARD Card Guesser
 	'monster',     // Monster Guesser
+	'hard_monster', // HARD Monster Guesser
 	'meal',        // Meal Guesser
 	'pack'         // Pack Guesser
 ];
@@ -17,6 +18,7 @@ const GAME_LABELS = {
 	card: 'Card Guesser',
 	hard_card: 'HARD Card Guesser',
 	monster: 'Monster Guesser',
+	hard_monster: 'HARD Monster Guesser',
 	meal: 'Meal Guesser',
 	pack: 'Pack Guesser'
 };

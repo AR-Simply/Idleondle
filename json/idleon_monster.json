@@ -6,7 +6,11 @@
       "emoji1": "🤺",
       "emoji2": "🗿",
       "emoji3": "🐺",
-      "emoji4": "🗝️"
+      "emoji4": "🗝️",
+      "attack": "100",
+      "health": "30,000",
+      "accuracy": "7",
+      "def" : "95"
     },
     "Baba Yaga": {
       "world": "Blunder Hills",
@@ -14,7 +18,11 @@
       "emoji1": "🏛️",
       "emoji2": "🧙‍♀️",
       "emoji3": "🐥",
-      "emoji4": "🏚️"
+      "emoji4": "🏚️",
+      "attack": "400",
+      "health": "150 K",
+      "accuracy": "450",
+      "def" : "466"
     },
     "Baby Boa": {
       "world": "Blunder Hills",
@@ -22,7 +30,11 @@
       "emoji1": "👅",
       "emoji2": "🌿",
       "emoji3": "👶",
-      "emoji4": "🐍"
+      "emoji4": "🐍",
+      "attack": "5",
+      "health": "325",
+      "accuracy": "8",
+      "def" : "2"
     },
     "Baby Troll": {
       "world": "Spirited Valley",
@@ -30,7 +42,11 @@
       "emoji1": "🍼",
       "emoji2": "🛝",
       "emoji3": "🌱",
-      "emoji4": "👹"
+      "emoji4": "👹",
+      "attack": "80,000",
+      "health": "20 B",
+      "accuracy": "135 K",
+      "def" : "63,171"
     },
     "Bamboo Spirit": {
       "world": "Spirited Valley",
@@ -38,7 +54,11 @@
       "emoji1": "🎋",
       "emoji2": "👻",
       "emoji3": "🍃",
-      "emoji4": "🐼"
+      "emoji4": "🐼",
+      "attack": "100 K",
+      "health": "130 B",
+      "accuracy": "300 K",
+      "def" : "76,109"
     },
     "Biggie Hours": {
       "world": "Yum-Yum Desert",
@@ -46,7 +66,11 @@
       "emoji1": "🕒",
       "emoji2": "👀",
       "emoji3": "⌛",
-      "emoji4": "🤠"
+      "emoji4": "🤠",
+      "attack": "500",
+      "health": "800 K",
+      "accuracy": "900",
+      "def" : "593"
     },
     "Biggole Mole": {
       "world": "Smolderin' Plateau",
@@ -54,7 +78,11 @@
       "emoji1": "🕳️",
       "emoji2": "⛏️",
       "emoji3": "🐾",
-      "emoji4": "🌋"
+      "emoji4": "🌋",
+      "attack": "25,000",
+      "health": "900 M",
+      "accuracy": "54,000",
+      "def" : "23,605"
     },
     "Biggole Wurm": {
       "world": "Hyperion Nebula",
@@ -62,7 +90,11 @@
       "emoji1": "🌀",
       "emoji2": "🌌",
       "emoji3": "🪱",
-      "emoji4": "🕳️"
+      "emoji4": "🕳️",
+      "attack": "5000",
+      "health": "6 M",
+      "accuracy": "11,550",
+      "def" : "7700"
     },
     "Bloodbone": {
       "world": "Frostbite Tundra",
@@ -70,7 +102,11 @@
       "emoji1": "🩸",
       "emoji2": "❄️",
       "emoji3": "🦴",
-      "emoji4": "🪞"
+      "emoji4": "🪞",
+      "attack": "3000",
+      "health": "10 M",
+      "accuracy": "3900",
+      "def" : "3563"
     },
     "Bloque": {
       "world": "Frostbite Tundra",
@@ -78,7 +114,11 @@
       "emoji1": "🍡",
       "emoji2": "🍧",
       "emoji3": "🥶",
-      "emoji4": "🧊"
+      "emoji4": "🧊",
+      "attack": "220",
+      "health": "100 K",
+      "accuracy": "638",
+      "def" : "238"
     },
     "Bop Box": {
       "world": "Frostbite Tundra",
@@ -86,7 +126,11 @@
       "emoji1": "🎶",
       "emoji2": "📦",
       "emoji3": "🎛️",
-      "emoji4": "🔈"
+      "emoji4": "🔈",
+      "attack": "650",
+      "health": "310 K",
+      "accuracy": "2700",
+      "def" : "2150"
     },
     "Bored Bean": {
       "world": "Blunder Hills",
@@ -94,7 +138,11 @@
       "emoji1": "🥒",
       "emoji2": "🥱",
       "emoji3": "🫘",
-      "emoji4": "📚"
+      "emoji4": "📚",
+      "attack": "0",
+      "health": "80",
+      "accuracy": "3",
+      "def" : "0"
     },
     "Carrotman": {
       "world": "Blunder Hills",
@@ -102,7 +150,11 @@
       "emoji1": "🧑‍🌾",
       "emoji2": "🥕",
       "emoji3": "🟧",
-      "emoji4": "🏹"
+      "emoji4": "🏹",
+      "attack": "9",
+      "health": "600",
+      "accuracy": "9",
+      "def" : "4"
     },
     "Ceramic Spirit": {
       "world": "Spirited Valley",
@@ -110,7 +162,11 @@
       "emoji1": "🍶",
       "emoji2": "☁️",
       "emoji3": "👻",
-      "emoji4": "💨"
+      "emoji4": "💨",
+      "attack": "250 K",
+      "health": "1.2 T",
+      "accuracy": "975 K",
+      "def" : "162.6 K"
     },
     "Cheese Nub": {
       "world": "Smolderin' Plateau",
@@ -118,7 +174,11 @@
       "emoji1": "🟨",
       "emoji2": "🧀",
       "emoji3": "🌕",
-      "emoji4": "🌋"
+      "emoji4": "🌋",
+      "attack": "14,000",
+      "health": "90 M",
+      "accuracy": "25,500",
+      "def" : "14,295"
     },
     "Chizoar": {
       "world": "Frostbite Tundra",
@@ -126,7 +186,11 @@
       "emoji1": "🥶",
       "emoji2": "🦣",
       "emoji3": "💎",
-      "emoji4": "🧣"
+      "emoji4": "🧣",
+      "attack": "3600",
+      "health": "20 M",
+      "accuracy": "1875",
+      "def" : "4224"
     },
     "Choccie": {
       "world": "Hyperion Nebula",
@@ -134,7 +198,11 @@
       "emoji1": "🍫",
       "emoji2": "🌌",
       "emoji3": "🤎",
-      "emoji4": "👩🏻‍🍳"
+      "emoji4": "👩🏻‍🍳",
+      "attack": "4300",
+      "health": "4 M",
+      "accuracy": "10,350",
+      "def" : "6900"
     },
     "Citringe": {
       "world": "Smolderin' Plateau",
@@ -142,7 +210,11 @@
       "emoji1": "🟠",
       "emoji2": "🧃",
       "emoji3": "🍊",
-      "emoji4": "🔋"
+      "emoji4": "🔋",
+      "attack": "20,000",
+      "health": "420 M",
+      "accuracy": "39,000",
+      "def" : "19,482"
     },
     "Clammie": {
       "world": "Hyperion Nebula",
@@ -150,7 +222,11 @@
       "emoji1": "🐚",
       "emoji2": "🔮",
       "emoji3": "🦪",
-      "emoji4": "🧚🏻‍♀️"
+      "emoji4": "🧚🏻‍♀️",
+      "attack": "5800",
+      "health": "8 M",
+      "accuracy": "13,050",
+      "def" : "8700"
     },
     "Crabcake": {
       "world": "Yum-Yum Desert",
@@ -158,7 +234,11 @@
       "emoji1": "🌴",
       "emoji2": "🦀",
       "emoji3": "🍰",
-      "emoji4": "🏖️"
+      "emoji4": "🏖️",
+      "attack": "28",
+      "health": "3500",
+      "accuracy": "45",
+      "def" : "19"
     },
     "Crawler": {
       "world": "Smolderin' Plateau",
@@ -166,7 +246,11 @@
       "emoji1": "🕸️",
       "emoji2": "🪱",
       "emoji3": "🐛",
-      "emoji4": "🥒"
+      "emoji4": "🥒",
+      "attack": "25,000",
+      "health": "1.2 B",
+      "accuracy": "67,500",
+      "def" : "23,605"
     },
     "Cryosnake": {
       "world": "Frostbite Tundra",
@@ -174,7 +258,11 @@
       "emoji1": "❄️",
       "emoji2": "🧊",
       "emoji3": "🐍",
-      "emoji4": "🪚"
+      "emoji4": "🪚",
+      "attack": "550",
+      "health": "260 K",
+      "accuracy": "2250",
+      "def" : "1900"
     },
     "Crystal Candalight": {
       "world": "Spirited Valley",
@@ -182,7 +270,9 @@
       "emoji1": "💎",
       "emoji2": "🕯️",
       "emoji3": "💠",
-      "emoji4": "🟢"
+      "emoji4": "🟢",
+      "exclude": "yes"
+  
     },
     "Crystal Capybara": {
       "world": "Smolderin' Plateau",
@@ -190,7 +280,8 @@
       "emoji1": "💎",
       "emoji2": "🐹",
       "emoji3": "💠",
-      "emoji4": "🟠"
+      "emoji4": "🟠",
+      "exclude": "yes"
     },
     "Crystal Carrot": {
       "world": "Blunder Hills",
@@ -198,7 +289,8 @@
       "emoji1": "💎",
       "emoji2": "🥕",
       "emoji3": "💠",
-      "emoji4": "🟢"
+      "emoji4": "🟢",
+      "exclude": "yes"
     },
     "Crystal Cattle": {
       "world": "Frostbite Tundra",
@@ -206,7 +298,8 @@
       "emoji1": "💎",
       "emoji2": "🐑",
       "emoji3": "💠",
-      "emoji4": "❄️"
+      "emoji4": "❄️",
+      "exclude": "yes"
     },
     "Crystal Custard": {
       "world": "Hyperion Nebula",
@@ -214,7 +307,8 @@
       "emoji1": "💎",
       "emoji2": "🍩",
       "emoji3": "💠",
-      "emoji4": "🔮"
+      "emoji4": "🔮",
+      "exclude": "yes"
     },
     "Dedotated Ram": {
       "world": "Frostbite Tundra",
@@ -222,7 +316,11 @@
       "emoji1": "🐏",
       "emoji2": "💾",
       "emoji3": "🥶",
-      "emoji4": "🧵"
+      "emoji4": "🧵",
+      "attack": "2500",
+      "health": "1.2 M",
+      "accuracy": "3750",
+      "def" : "1500"
     },
     "Demented Spiritlord": {
       "world": "Spirited Valley",
@@ -230,7 +328,11 @@
       "emoji1": "👹",
       "emoji2": "👻",
       "emoji3": "👑",
-      "emoji4": "🌀"
+      "emoji4": "🌀",
+      "attack": "1 M",
+      "health": "25 T",
+      "accuracy": "6750",
+      "def" : "505.5 K"
     },
     "Demon Genie": {
       "world": "Hyperion Nebula",
@@ -238,7 +340,11 @@
       "emoji1": "😈",
       "emoji2": "🧞‍♂️",
       "emoji3": "🔮",
-      "emoji4": "💠"
+      "emoji4": "💠",
+      "attack": "2200",
+      "health": "1 M",
+      "accuracy": "6330",
+      "def" : "4325"
     },
     "Dig Doug": {
       "world": "Yum-Yum Desert",
@@ -246,7 +352,11 @@
       "emoji1": "🥄",
       "emoji2": "🏜️",
       "emoji3": "🏛️",
-      "emoji4": "🔴"
+      "emoji4": "🔴",
+      "attack": "2",
+      "health": "14,000",
+      "accuracy": "342",
+      "def" : "1"
     },
     "Dilapidated Slush": {
       "world": "Frostbite Tundra",
@@ -254,7 +364,11 @@
       "emoji1": "🧊",
       "emoji2": "🫠",
       "emoji3": "🪣",
-      "emoji4": "💀"
+      "emoji4": "💀",
+      "attack": "20,000",
+      "health": "12.5 M",
+      "accuracy": "3000",
+      "def" : "19,482"
     },
     "Domeo Magmus": {
       "world": "Smolderin' Plateau",
@@ -262,7 +376,11 @@
       "emoji1": "🏐",
       "emoji2": "🌋",
       "emoji3": "🔥",
-      "emoji4": "🔴"
+      "emoji4": "🔴",
+      "attack": "150 K",
+      "health": "1 B",
+      "accuracy": "6750",
+      "def" : "106.6 K"
     },
     "Donut": {
       "world": "Hyperion Nebula",
@@ -270,7 +388,11 @@
       "emoji1": "🍬",
       "emoji2": "🔬",
       "emoji3": "🍩",
-      "emoji4": "😋"
+      "emoji4": "😋",
+      "attack": "1750",
+      "health": "850 K",
+      "accuracy": "5400",
+      "def" : "3800"
     },
     "Dr Defecaus": {
       "world": "Blunder Hills",
@@ -278,7 +400,11 @@
       "emoji1": "👨🏻‍⚕️",
       "emoji2": "🚽",
       "emoji3": "🐀",
-      "emoji4": "💩"
+      "emoji4": "💩",
+      "attack": "1000",
+      "health": "750 K",
+      "accuracy": "900",
+      "def" : "1223"
     },
     "Efaunt": {
       "world": "Yum-Yum Desert",
@@ -286,7 +412,11 @@
       "emoji1": "🏺",
       "emoji2": "🐘",
       "emoji3": "💀",
-      "emoji4": "💎"
+      "emoji4": "💎",
+      "attack": "10,000",
+      "health": "1 M",
+      "accuracy": "225",
+      "def" : "10,638"
     },
     "Emperor": {
       "world": "Spirited Valley",
@@ -294,7 +424,11 @@
       "emoji1": "🏯",
       "emoji2": "🎎",
       "emoji3": "👑",
-      "emoji4": "⛩️"
+      "emoji4": "⛩️",
+      "attack": "1000",
+      "health": "200 T",
+      "accuracy": "900",
+      "def" : "0"
     },
     "Fire Spirit": {
       "world": "Smolderin' Plateau",
@@ -302,7 +436,11 @@
       "emoji1": "🔥",
       "emoji2": "🌊",
       "emoji3": "👻",
-      "emoji4": "📜"
+      "emoji4": "📜",
+      "attack": "20,000",
+      "health": "720 M",
+      "accuracy": "39,000",
+      "def" : "19,482"
     },
     "Flombeige": {
       "world": "Hyperion Nebula",
@@ -310,7 +448,11 @@
       "emoji1": "🌌",
       "emoji2": "🫧",
       "emoji3": "🪼",
-      "emoji4": "🧵"
+      "emoji4": "🧵",
+      "attack": "7500",
+      "health": "15 M",
+      "accuracy": "15,750",
+      "def" : "10,500"
     },
     "Flying Worm": {
       "world": "Hyperion Nebula",
@@ -318,7 +460,11 @@
       "emoji1": "✈️",
       "emoji2": "🌌",
       "emoji3": "🪱",
-      "emoji4": "👽"
+      "emoji4": "👽",
+      "attack": "3000",
+      "health": "2 M",
+      "accuracy": "8475",
+      "def" : "3563"
     },
     "Frog": {
       "world": "Blunder Hills",
@@ -326,7 +472,11 @@
       "emoji1": "🌿",
       "emoji2": "🐸",
       "emoji3": "🦵",
-      "emoji4": "🌱"
+      "emoji4": "🌱",
+      "attack": "0",
+      "health": "40",
+      "accuracy": "2",
+      "def" : "0"
     },
     "Frost Flake": {
       "world": "Frostbite Tundra",
@@ -334,7 +484,11 @@
       "emoji1": "❄️",
       "emoji2": "🌬️",
       "emoji3": "🧊",
-      "emoji4": "🥶"
+      "emoji4": "🥶",
+      "attack": "170",
+      "health": "67,000",
+      "accuracy": "495",
+      "def" : "177"
     },
     "Gelatinous Cuboid": {
       "world": "Hyperion Nebula",
@@ -342,7 +496,11 @@
       "emoji1": "🫧",
       "emoji2": "🍮",
       "emoji3": "🟪",
-      "emoji4": "🦴"
+      "emoji4": "🦴",
+      "attack": "3500",
+      "health": "3 M",
+      "accuracy": "9300",
+      "def" : "6200"
     },
     "Gigafrog": {
       "world": "Blunder Hills",
@@ -350,7 +508,11 @@
       "emoji1": "🌲",
       "emoji2": "💥",
       "emoji3": "🐸",
-      "emoji4": "🐐"
+      "emoji4": "🐐",
+      "attack": "45",
+      "health": "2500",
+      "accuracy": "90",
+      "def" : "35"
     },
     "Glublin": {
       "world": "Blunder Hills",
@@ -358,7 +520,11 @@
       "emoji1": "🟩",
       "emoji2": "🧌",
       "emoji3": "🛐",
-      "emoji4": "👹"
+      "emoji4": "👹",
+      "attack": "13",
+      "health": "800",
+      "accuracy": "11",
+      "def" : "7"
     },
     "Glunko the Massive": {
       "world": "Spirited Valley",
@@ -366,7 +532,11 @@
       "emoji1": "✶",
       "emoji2": "🏋️",
       "emoji3": "🦠",
-      "emoji4": "🟢"
+      "emoji4": "🟢",
+      "attack": "25",
+      "health": "10,000",
+      "accuracy": "8",
+      "def" : "17"
     },
     "Green Mushroom": {
       "world": "Blunder Hills",
@@ -374,7 +544,11 @@
       "emoji1": "🟢",
       "emoji2": "🌿",
       "emoji3": "🍄",
-      "emoji4": "👕"
+      "emoji4": "👕",
+      "attack": "0",
+      "health": "225",
+      "accuracy": "3",
+      "def" : "0"
     },
     "Kattlekruk": {
       "world": "Smolderin' Plateau",
@@ -382,7 +556,11 @@
       "emoji1": "💀",
       "emoji2": "💀",
       "emoji3": "💀",
-      "emoji4": "💀"
+      "emoji4": "💀",
+      "attack": "25,000",
+      "health": "100 B",
+      "accuracy": "3750",
+      "def" : "23,605"
     },
     "King Doot": {
       "world": "Yum-Yum Desert",
@@ -390,7 +568,11 @@
       "emoji1": "👑",
       "emoji2": "💀",
       "emoji3": "🏜️",
-      "emoji4": "🩹"
+      "emoji4": "🩹",
+      "attack": "800",
+      "health": "3 M",
+      "accuracy": "1500",
+      "def" : "973"
     },
     "Lampar": {
       "world": "Smolderin' Plateau",
@@ -398,7 +580,11 @@
       "emoji1": "💡",
       "emoji2": "🌋",
       "emoji3": "🏮",
-      "emoji4": "👁️"
+      "emoji4": "👁️",
+      "attack": "20,000",
+      "health": "600 M",
+      "accuracy": "39,000",
+      "def" : "19,482"
     },
     "Lantern Spirit": {
       "world": "Spirited Valley",
@@ -406,7 +592,11 @@
       "emoji1": "🕯️",
       "emoji2": "🏮",
       "emoji3": "👻",
-      "emoji4": "🌗"
+      "emoji4": "🌗",
+      "attack": "120 K",
+      "health": "250 B",
+      "accuracy": "450 K",
+      "def" : "88,582"
     },
     "Leek Spirit": {
       "world": "Spirited Valley",
@@ -414,7 +604,11 @@
       "emoji1": "🌱",
       "emoji2": "🥬",
       "emoji3": "👻",
-      "emoji4": "🥒"
+      "emoji4": "🥒",
+      "attack": "170 K",
+      "health": "610 B",
+      "accuracy": "750 K",
+      "def" : "118.2 K"
     },
     "Maccie": {
       "world": "Smolderin' Plateau",
@@ -422,7 +616,11 @@
       "emoji1": "🍔",
       "emoji2": "🍟",
       "emoji3": "🥪",
-      "emoji4": "🧈"
+      "emoji4": "🧈",
+      "attack": "12,000",
+      "health": "35 M",
+      "accuracy": "18,000",
+      "def" : "12,492"
     },
     "Mafioso": {
       "world": "Yum-Yum Desert",
@@ -430,7 +628,11 @@
       "emoji1": "🕶️",
       "emoji2": "🧉",
       "emoji3": "🔫",
-      "emoji4": "🥥"
+      "emoji4": "🥥",
+      "attack": "38",
+      "health": "5000",
+      "accuracy": "68",
+      "def" : "28"
     },
     "Mama Troll": {
       "world": "Spirited Valley",
@@ -438,7 +640,11 @@
       "emoji1": "🤰",
       "emoji2": "🌺",
       "emoji3": "👹",
-      "emoji4": "🛼"
+      "emoji4": "🛼",
+      "attack": "140 K",
+      "health": "370 B",
+      "accuracy": "600 K",
+      "def" : "100.7 K"
     },
     "Mamooth": {
       "world": "Frostbite Tundra",
@@ -446,7 +652,11 @@
       "emoji1": "🧊",
       "emoji2": "🐗",
       "emoji3": "💿",
-      "emoji4": "🦣"
+      "emoji4": "🦣",
+      "attack": "260",
+      "health": "115 K",
+      "accuracy": "825",
+      "def" : "1050"
     },
     "Mashed Potato": {
       "world": "Yum-Yum Desert",
@@ -454,7 +664,11 @@
       "emoji1": "🧂",
       "emoji2": "💪",
       "emoji3": "🔨",
-      "emoji4": "🥔"
+      "emoji4": "🥔",
+      "attack": "70",
+      "health": "14,000",
+      "accuracy": "150",
+      "def" : "260"
     },
     "Massive Troll": {
       "world": "Smolderin' Plateau",
@@ -462,7 +676,11 @@
       "emoji1": "🦵",
       "emoji2": "🛰️",
       "emoji3": "🗝️",
-      "emoji4": "🧌"
+      "emoji4": "🧌",
+      "attack": "0",
+      "health": "80 M",
+      "accuracy": "3750",
+      "def" : "0"
     },
     "Mimic": {
       "world": "Yum-Yum Desert",
@@ -470,7 +688,11 @@
       "emoji1": "🏜️",
       "emoji2": "🦷",
       "emoji3": "👅",
-      "emoji4": "🎁"
+      "emoji4": "🎁",
+      "attack": "22",
+      "health": "2200",
+      "accuracy": "38",
+      "def" : "14"
     },
     "Minichief Spirit": {
       "world": "Spirited Valley",
@@ -478,7 +700,11 @@
       "emoji1": "💧",
       "emoji2": "👻",
       "emoji3": "🤏",
-      "emoji4": "🧑‍🍳"
+      "emoji4": "🧑‍🍳",
+      "attack": "500 K",
+      "health": "5.5 T",
+      "accuracy": "2.2 M",
+      "def" : "287. K"
     },
     "Mister Brightside": {
       "world": "Smolderin' Plateau",
@@ -486,7 +712,11 @@
       "emoji1": "🌋",
       "emoji2": "🪟",
       "emoji3": "🌞",
-      "emoji4": "🌡️"
+      "emoji4": "🌡️",
+      "attack": "12,000",
+      "health": "60 M",
+      "accuracy": "18,000",
+      "def" : "12,490"
     },
     "Molti": {
       "world": "Smolderin' Plateau",
@@ -494,7 +724,11 @@
       "emoji1": "😀",
       "emoji2": "☄️",
       "emoji3": "🔥",
-      "emoji4": "🌋"
+      "emoji4": "🌋",
+      "attack": "18,000",
+      "health": "200 M",
+      "accuracy": "25,500",
+      "def" : "17,785"
     },
     "Moonmoon": {
       "world": "Yum-Yum Desert",
@@ -502,7 +736,11 @@
       "emoji1": "🍒",
       "emoji2": "🏜️",
       "emoji3": "👨",
-      "emoji4": "🌙"
+      "emoji4": "🌙",
+      "attack": "120",
+      "health": "25,000",
+      "accuracy": "278",
+      "def" : "117"
     },
     "Mutated Mush": {
       "world": "Hyperion Nebula",
@@ -510,7 +748,11 @@
       "emoji1": "👾",
       "emoji2": "😶",
       "emoji3": "☣️",
-      "emoji4": "🍄"
+      "emoji4": "🍄",
+      "attack": "3000",
+      "health": "120 M",
+      "accuracy": "6750",
+      "def" : "3563"
     },
     "Neyeptune": {
       "world": "Frostbite Tundra",
@@ -518,7 +760,11 @@
       "emoji1": "🔱",
       "emoji2": "⚫",
       "emoji3": "👁️",
-      "emoji4": "🔵"
+      "emoji4": "🔵",
+      "attack": "800",
+      "health": "350 K",
+      "accuracy": "3600",
+      "def" : "973"
     },
     "Nutto": {
       "world": "Blunder Hills",
@@ -526,7 +772,11 @@
       "emoji1": "👀",
       "emoji2": "🟤",
       "emoji3": "🌲",
-      "emoji4": "🌰"
+      "emoji4": "🌰",
+      "attack": "40",
+      "health": "4000",
+      "accuracy": "300",
+      "def" : "30"
     },
     "Octodar": {
       "world": "Hyperion Nebula",
@@ -534,7 +784,11 @@
       "emoji1": "🔞",
       "emoji2": "⚽",
       "emoji3": "👾",
-      "emoji4": "🦑"
+      "emoji4": "🦑",
+      "attack": "6700",
+      "health": "11 M",
+      "accuracy": "14,400",
+      "def" : "9600"
     },
     "Penguin": {
       "world": "Frostbite Tundra",
@@ -542,7 +796,11 @@
       "emoji1": "🦘",
       "emoji2": "🖋️",
       "emoji3": "🎩",
-      "emoji4": "🐧"
+      "emoji4": "🐧",
+      "attack": "340",
+      "health": "160 K",
+      "accuracy": "1425",
+      "def" : "1350"
     },
     "Pincermin": {
       "world": "Yum-Yum Desert",
@@ -550,7 +808,11 @@
       "emoji1": "🌵",
       "emoji2": "🪲",
       "emoji3": "🟨",
-      "emoji4": "🔪"
+      "emoji4": "🔪",
+      "attack": "60",
+      "health": "11,500",
+      "accuracy": "120",
+      "def" : "50"
     },
     "Poop": {
       "world": "Blunder Hills",
@@ -558,7 +820,11 @@
       "emoji1": "🙊",
       "emoji2": "🟤",
       "emoji3": "🚽",
-      "emoji4": "💩"
+      "emoji4": "💩",
+      "attack": "150",
+      "health": "9000",
+      "accuracy": "150",
+      "def" : "152"
     },
     "Purgatory Stalker": {
       "world": "Smolderin' Plateau",
@@ -566,7 +832,11 @@
       "emoji1": "♨️",
       "emoji2": "🟧",
       "emoji3": "😱",
-      "emoji4": "😈"
+      "emoji4": "😈",
+      "attack": "18,000",
+      "health": "350 M",
+      "accuracy": "25,500",
+      "def" : "17,785"
     },
     "Purp Mushroom": {
       "world": "Hyperion Nebula",
@@ -574,7 +844,11 @@
       "emoji1": "☢️",
       "emoji2": "👞",
       "emoji3": "🟣",
-      "emoji4": "🍄"
+      "emoji4": "🍄",
+      "attack": "2100",
+      "health": "500 K",
+      "accuracy": "3000",
+      "def" : "2541"
     },
     "Quenchie": {
       "world": "Frostbite Tundra",
@@ -582,7 +856,11 @@
       "emoji1": "💧",
       "emoji2": "🦯",
       "emoji3": "🚰",
-      "emoji4": "🥛"
+      "emoji4": "🥛",
+      "attack": "450",
+      "health": "225 K",
+      "accuracy": "1875",
+      "def" : "1700"
     },
     "Rat": {
       "world": "Blunder Hills",
@@ -590,7 +868,11 @@
       "emoji1": "🐾",
       "emoji2": "🖱️",
       "emoji3": "🧻",
-      "emoji4": "🐀"
+      "emoji4": "🐀",
+      "attack": "220",
+      "health": "20,000",
+      "accuracy": "270",
+      "def" : "238"
     },
     "Red Mushroom": {
       "world": "Blunder Hills",
@@ -598,7 +880,11 @@
       "emoji1": "🦉",
       "emoji2": "🌳",
       "emoji3": "🔴",
-      "emoji4": "🍄"
+      "emoji4": "🍄",
+      "attack": "30",
+      "health": "1000",
+      "accuracy": "38",
+      "def" : "21"
     },
     "Ricecake": {
       "world": "Spirited Valley",
@@ -606,7 +892,11 @@
       "emoji1": "🌿",
       "emoji2": "😀",
       "emoji3": "🍰",
-      "emoji4": "🍚"
+      "emoji4": "🍚",
+      "attack": "40,000",
+      "health": "4.5 B",
+      "accuracy": "90,000",
+      "def" : "35,242"
     },
     "River Spirit": {
       "world": "Spirited Valley",
@@ -614,7 +904,11 @@
       "emoji1": "🟦",
       "emoji2": "👻",
       "emoji3": "🌊",
-      "emoji4": "🎍"
+      "emoji4": "🎍",
+      "attack": "50,000",
+      "health": "7 B",
+      "accuracy": "112.5 K",
+      "def" : "42,563"
     },
     "Royal Egg": {
       "world": "Spirited Valley",
@@ -622,7 +916,11 @@
       "emoji1": "🪶",
       "emoji2": "🥟",
       "emoji3": "👑",
-      "emoji4": "🥚"
+      "emoji4": "🥚",
+      "attack": "400 K",
+      "health": "3 T",
+      "accuracy": "1.5 M",
+      "def" : "239.2 K"
     },
     "Samurai Guardian": {
       "world": "Spirited Valley",
@@ -630,7 +928,11 @@
       "emoji1": "👑",
       "emoji2": "🏯",
       "emoji3": "🛡️",
-      "emoji4": "👹"
+      "emoji4": "👹",
+      "attack": "600 K",
+      "health": "10 T",
+      "accuracy": "3.8 M",
+      "def" : "333.3 K"
     },
     "Sand Castle": {
       "world": "Yum-Yum Desert",
@@ -638,7 +940,11 @@
       "emoji1": "🏁",
       "emoji2": "🏜️",
       "emoji3": "🏖️",
-      "emoji4": "🏰"
+      "emoji4": "🏰",
+      "attack": "52",
+      "health": "8500",
+      "accuracy": "90",
+      "def" : "42"
     },
     "Sand Giant": {
       "world": "Yum-Yum Desert",
@@ -646,7 +952,11 @@
       "emoji1": "🌱",
       "emoji2": "🗿",
       "emoji3": "🏖️",
-      "emoji4": "🧐"
+      "emoji4": "🧐",
+      "attack": "140",
+      "health": "30,000",
+      "accuracy": "345",
+      "def" : "141"
     },
     "Sandy Pot": {
       "world": "Yum-Yum Desert",
@@ -654,7 +964,11 @@
       "emoji1": "🏜️",
       "emoji2": "🪟",
       "emoji3": "🏖️",
-      "emoji4": "🏺"
+      "emoji4": "🏺",
+      "attack": "15",
+      "health": "1400",
+      "accuracy": "30",
+      "def" : "8"
     },
     "Sheepie": {
       "world": "Frostbite Tundra",
@@ -662,7 +976,11 @@
       "emoji1": "❄️",
       "emoji2": "🧶",
       "emoji3": "❄️",
-      "emoji4": "🐏"
+      "emoji4": "🐏",
+      "attack": "155",
+      "health": "55,000",
+      "accuracy": "435",
+      "def" : "158"
     },
     "Sir Stache": {
       "world": "Frostbite Tundra",
@@ -670,7 +988,11 @@
       "emoji1": "☕",
       "emoji2": "🤵",
       "emoji3": "🎩",
-      "emoji4": "🥸"
+      "emoji4": "🥸",
+      "attack": "195",
+      "health": "81,000",
+      "accuracy": "540",
+      "def" : "207"
     },
     "Skydoggie Spirit": {
       "world": "Spirited Valley",
@@ -678,7 +1000,11 @@
       "emoji1": "😈",
       "emoji2": "☁️",
       "emoji3": "👻",
-      "emoji4": "🐕‍🦺"
+      "emoji4": "🐕‍🦺",
+      "attack": "300 K",
+      "health": "1.6 T",
+      "accuracy": "1.2 M",
+      "def" : "188.9 K"
     },
     "Slime": {
       "world": "Blunder Hills",
@@ -686,7 +1012,11 @@
       "emoji1": "💧",
       "emoji2": "🧪",
       "emoji3": "👀",
-      "emoji4": "🟢"
+      "emoji4": "🟢",
+      "attack": "2",
+      "health": "175",
+      "accuracy": "6",
+      "def" : "1"
     },
     "Snelbie": {
       "world": "Yum-Yum Desert",
@@ -694,7 +1024,11 @@
       "emoji1": "🏜️",
       "emoji2": "🟤",
       "emoji3": "🐚",
-      "emoji4": "🐌"
+      "emoji4": "🐌",
+      "attack": "155",
+      "health": "35,000",
+      "accuracy": "375",
+      "def" : "158"
     },
     "Snowman": {
       "world": "Frostbite Tundra",
@@ -702,7 +1036,11 @@
       "emoji1": "🥕",
       "emoji2": "👦",
       "emoji3": "🏐",
-      "emoji4": "⛄"
+      "emoji4": "⛄",
+      "attack": "300",
+      "health": "135 K",
+      "accuracy": "1125",
+      "def" : "338"
     },
     "Soda Can": {
       "world": "Hyperion Nebula",
@@ -710,7 +1048,11 @@
       "emoji1": "🫧",
       "emoji2": "😃",
       "emoji3": "👾",
-      "emoji4": "🥤"
+      "emoji4": "🥤",
+      "attack": "2600",
+      "health": "1.5 M",
+      "accuracy": "7725",
+      "def" : "5150"
     },
     "Sprout Spirit": {
       "world": "Spirited Valley",
@@ -718,7 +1060,11 @@
       "emoji1": "𓇢",
       "emoji2": "👒",
       "emoji3": "💧",
-      "emoji4": "🌱"
+      "emoji4": "🌱",
+      "attack": "30,000",
+      "health": "3 B",
+      "accuracy": "75,000",
+      "def" : "27,591"
     },
     "Stilted Seeker": {
       "world": "Hyperion Nebula",
@@ -726,7 +1072,11 @@
       "emoji1": "🦩",
       "emoji2": "👾",
       "emoji3": "👀",
-      "emoji4": "🔨"
+      "emoji4": "🔨",
+      "attack": "8000",
+      "health": "20 M",
+      "accuracy": "16,500",
+      "def" : "11,000"
     },
     "Stiltmole": {
       "world": "Smolderin' Plateau",
@@ -734,7 +1084,11 @@
       "emoji1": "🦩",
       "emoji2": "👓",
       "emoji3": "💈",
-      "emoji4": "🐹"
+      "emoji4": "🐹",
+      "attack": "16,000",
+      "health": "130 M",
+      "accuracy": "25,500",
+      "def" : "16,058"
     },
     "Suggma": {
       "world": "Smolderin' Plateau",
@@ -742,7 +1096,11 @@
       "emoji1": "〰️",
       "emoji2": "🥵",
       "emoji3": "♨️",
-      "emoji4": "🔥"
+      "emoji4": "🔥",
+      "attack": "10,000",
+      "health": "25 M",
+      "accuracy": "18,000",
+      "def" : "10,638"
     },
     "Thermister": {
       "world": "Frostbite Tundra",
@@ -750,7 +1108,11 @@
       "emoji1": "🥶",
       "emoji2": "🤧",
       "emoji3": "❄️",
-      "emoji4": "🌡️"
+      "emoji4": "🌡️",
+      "attack": "380",
+      "health": "185 K",
+      "accuracy": "1650",
+      "def" : "1500"
     },
     "Tremor Wurm": {
       "world": "Smolderin' Plateau",
@@ -758,7 +1120,11 @@
       "emoji1": "👨‍🍳",
       "emoji2": "🌫️",
       "emoji3": "😮",
-      "emoji4": "🪱"
+      "emoji4": "🪱",
+      "attack": "200 K",
+      "health": "1.5 B",
+      "accuracy": "75,000",
+      "def" : "135.2 K"
     },
     "TV": {
       "world": "Hyperion Nebula",
@@ -766,7 +1132,11 @@
       "emoji1": "🦷",
       "emoji2": "📡",
       "emoji3": "🔌",
-      "emoji4": "📺"
+      "emoji4": "📺",
+      "attack": "1500",
+      "health": "650 K",
+      "accuracy": "4050",
+      "def" : "4950"
     },
     "Tyson": {
       "world": "Yum-Yum Desert",
@@ -774,7 +1144,11 @@
       "emoji1": "🍪",
       "emoji2": "💪",
       "emoji3": "🏜️",
-      "emoji4": "🍖"
+      "emoji4": "🍖",
+      "attack": "100",
+      "health": "20,000",
+      "accuracy": "225",
+      "def" : "94"
     },
     "Walking Stick": {
       "world": "Blunder Hills",
@@ -782,7 +1156,11 @@
       "emoji1": "🦵",
       "emoji2": "🪳",
       "emoji3": "🌲",
-      "emoji4": "🪵"
+      "emoji4": "🪵",
+      "attack": "20",
+      "health": "1500",
+      "accuracy": "225",
+      "def" : "12"
     },
     "Wode Board": {
       "world": "Blunder Hills",
@@ -790,7 +1168,11 @@
       "emoji1": "💪",
       "emoji2": "🛹",
       "emoji3": "🌲",
-      "emoji4": "🪵"
+      "emoji4": "🪵",
+      "attack": "15",
+      "health": "1000",
+      "accuracy": "9",
+      "def" : "8"
     },
     "Woodlin Spirit": {
       "world": "Spirited Valley",
@@ -798,7 +1180,11 @@
       "emoji1": "😱",
       "emoji2": "🍃",
       "emoji3": "👻",
-      "emoji4": "🪵"
+      "emoji4": "🪵",
+      "attack": "90,000",
+      "health": "42 B",
+      "accuracy": "195 K",
+      "def" : "69,705"
     },
     "Wood Mushroom": {
       "world": "Blunder Hills",
@@ -806,7 +1192,11 @@
       "emoji1": "🥏",
       "emoji2": "⭕",
       "emoji3": "🪵",
-      "emoji4": "🍄"
+      "emoji4": "🍄",
+      "attack": "75",
+      "health": "10,000",
+      "accuracy": "750",
+      "def" : "66"
     },
     "Xylobone": {
       "world": "Frostbite Tundra",
@@ -814,7 +1204,11 @@
       "emoji1": "🥶",
       "emoji2": "🧑‍🌾",
       "emoji3": "🪞",
-      "emoji4": "💀"
+      "emoji4": "💀",
+      "attack": "200",
+      "health": "200 K",
+      "accuracy": "150",
+      "def" : "213"
     }
   }
 }

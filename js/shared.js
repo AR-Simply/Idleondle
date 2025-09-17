@@ -315,6 +315,7 @@ function detectGameFromPath() {
   const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
   const p = safeLower(path);
   // Detect hard-card pages explicitly so hard mode uses a separate cookie/identity
+  if (p.includes('hardmonsterguesser') || p.includes('hardmonster') || p.includes('/hardmonster/')) return 'hard_monster';
   if (p.includes('hardcardguesser') || p.includes('hardcard')) return 'hard_card';
   if (p.includes('card')) return 'card';
   if (p.includes('monsterguesser') || p.includes('monster')) return 'monster';
@@ -843,11 +844,12 @@ export async function initShared(config = {}) {
   // NOTE: meal button intentionally not auto-created anymore.
   // If this is a hard-mode page, change the appropriate page button to a red "hard" button
     try {
-      // Determine hard type: 'item' for HardItemGuesser, 'card' for HardCardGuesser,
-      // or allow pages to explicitly set document.body.dataset.hard = 'item'|'card'.
+  // Determine hard type: 'item' for HardItemGuesser, 'card' for HardCardGuesser,
+  // 'monster' for HardMonster, or allow pages to explicitly set document.body.dataset.hard.
       let hardType = null;
       if ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('harditem')) hardType = 'item';
       if ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('hardcard')) hardType = 'card';
+  if ((location.pathname || '').includes('/hardmonster/') || (location.href || '').includes('hardmonster') || (function(){ try { return detectGameFromPath() === 'hard_monster'; } catch(e){ return false; } })()) hardType = 'monster';
       if (typeof document !== 'undefined' && document.body?.dataset?.hard) hardType = document.body.dataset.hard;
 
       if (hardType) {
@@ -876,6 +878,18 @@ export async function initShared(config = {}) {
             btnCardsEl.classList.add('hard');
           }
         }
+        if (hardType === 'monster') {
+          const btnMonsterEl = wrap.querySelector('#btn-monster');
+          if (btnMonsterEl) {
+            const imgEl = btnMonsterEl.querySelector('img');
+            if (imgEl) {
+              const cleaned = 'Enemies/kattlekruk-88_thumb.png';
+              imgEl.src = prefix ? `${prefix}/${cleaned}` : cleaned;
+              imgEl.alt = 'Hard Monster';
+            }
+            btnMonsterEl.classList.add('hard');
+          }
+        }
       }
     } catch (e) { /* non-fatal */ }
   // If we created the element, insert it after the title. If it already
@@ -892,7 +906,8 @@ export async function initShared(config = {}) {
   // Recompute hardType for later decisions (keep consistent with earlier detection)
   const hardType = (typeof document !== 'undefined' && document.body?.dataset?.hard) ? document.body.dataset.hard :
     ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('harditem')) ? 'item' :
-    ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('hardcard')) ? 'card' : null;
+    ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('hardcard')) ? 'card' :
+    (((location.pathname || '').includes('/hardmonster/') || (location.href || '').includes('hardmonster') || (function(){ try { return detectGameFromPath() === 'hard_monster'; } catch(e){ return false; } })()) ? 'monster' : null);
   const isHardAny = !!hardType;
   const isItems = !isCard && !isMonster && !isMeal && !isPack;
 
@@ -915,25 +930,28 @@ export async function initShared(config = {}) {
   // hard mode must remain visibly red. Only mark item/card as complete on non-hard pages.
   if (hardType !== 'item' && btnItems && hasWinToday('item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
     if (hardType !== 'card' && btnCards && hasWinToday('card')) { btnCards.classList.add('complete'); btnCards.style.background = '#2ecc71'; }
-  if (btnMonster && hasWinToday('monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
+  if (hardType !== 'monster' && btnMonster && hasWinToday('monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
   if (btnMeal && hasWinToday('meal')) { btnMeal.classList.add('complete'); btnMeal.style.background = '#2ecc71'; }
   if (btnPack && hasWinToday('pack')) { btnPack.classList.add('complete'); btnPack.style.background = '#2ecc71'; }
     // Hard-item completed may be tracked under 'hard_item'
   if (hardType !== 'item' && btnItems && hasWinToday('hard_item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
     // Hard-card completed may be tracked under 'hard_card'
   if (hardType !== 'card' && btnCards && hasWinToday('hard_card')) { btnCards.classList.add('complete'); btnCards.style.background = '#2ecc71'; }
+  // Hard-monster completed may be tracked under 'hard_monster'
+  if (hardType !== 'monster' && btnMonster && hasWinToday('hard_monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
   } catch (e) { /* non-fatal */ }
 
   // Mark active (yellow) -- higher priority than complete so we override background
   // If this is the hard-mode page, keep the left button red instead of marking it active
   if (isItems && btnItems && hardType !== 'item') { btnItems.classList.add('active'); btnItems.style.background = '#f1c40f'; }
   if (isCard && btnCards && hardType !== 'card') { btnCards.classList.add('active'); btnCards.style.background = '#f1c40f'; }
-  if (isMonster && btnMonster) { btnMonster.classList.add('active'); btnMonster.style.background = '#f1c40f'; }
+  if (isMonster && btnMonster && hardType !== 'monster') { btnMonster.classList.add('active'); btnMonster.style.background = '#f1c40f'; }
   if (isMeal && btnMeal) { btnMeal.classList.add('active'); btnMeal.style.background = '#f1c40f'; }
   if (isPack && btnPack) { btnPack.classList.add('active'); btnPack.style.background = '#f1c40f'; }
   // Ensure hard-mode buttons remain red (override) when detected
   if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
   if (hardType === 'card' && btnCards) { btnCards.classList.add('hard'); btnCards.style.background = '#c0392b'; }
+  if (hardType === 'monster' && btnMonster) { btnMonster.classList.add('hard'); btnMonster.style.background = '#c0392b'; }
     } catch (e) { console.warn('Page switch render failed', e); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => renderPageSwitch(config.imageBase || IMAGE_BASE)); else renderPageSwitch(config.imageBase || IMAGE_BASE);

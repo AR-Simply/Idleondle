@@ -63,6 +63,14 @@
 				</div>
 			</a>
 
+			<a class="game-card hard" href="hardmonster/" data-game="hardmonster">
+				<img src="images/Enemies/kattlekruk-88_thumb.png" alt="" class="game-icon" width="88" height="88" loading="lazy" decoding="async" />
+				<div class="game-info">
+					<h2 class="game-title">HARD Monster</h2>
+					<p class="game-subtitle">No help, only stats</p>
+				</div>
+			</a>
+
 			<a class="game-card" href="meal/" data-game="meal">
 				<img src="images/spice.png" alt="" class="game-icon" width="88" height="88" loading="lazy" decoding="async" />
 				<div class="game-info">
@@ -322,7 +330,7 @@
 				cards.forEach(card=>{
 					const g=card.getAttribute('data-game');
 					// Map data-game to cookie keys used in shared.js (hard modes use hard_item/hard_card)
-					const map = { harditem:'hard_item', hardcard:'hard_card' };
+					const map = { harditem:'hard_item', hardcard:'hard_card',hardmonster:'hard_monster' };
 					const keyName = map[g] || g;
 					if(hasWinToday(keyName)) card.classList.add('completed');
 				});
