@@ -54,6 +54,8 @@ function buildTiles() {
   overlay.innerHTML = '';
   tiles = [];
   orderedTiles = [];
+  // While building, ensure the overlay hides the image to avoid initial flash
+  overlay.style.background = '#000';
   // Use natural image dimensions to compute percentage-based geometry so tiles
   // scale perfectly with the image during zoom/resizes (no pixel gaps).
   const naturalW = Math.max(1, Number(imgEl.naturalWidth) || 1);
@@ -132,6 +134,8 @@ function buildTiles() {
     const applyInitial = () => {
       const currentGuesses = (window && typeof window === 'object' && typeof window.guessCount === 'number') ? window.guessCount : 0;
       revealTilesForGuesses(currentGuesses || 0);
+      // Tiles exist now; let the image show through by clearing background
+      overlay.style.background = 'transparent';
     };
     // Defer to next frame so the browser commits initial styles before adding 'revealed'
     if (typeof requestAnimationFrame === 'function') requestAnimationFrame(applyInitial); else applyInitial();
