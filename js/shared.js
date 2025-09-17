@@ -321,6 +321,8 @@ function detectGameFromPath() {
   if (p.includes('harditemguesser') || p.includes('harditem')) return 'hard_item';
   // New: meal guesser page
   if (p.includes('mealguesser')) return 'meal';
+  // New: pack guesser page
+  if (p.includes('/pack/')) return 'pack';
     return 'item';
   } catch (e) { return 'item'; }
 }
@@ -635,6 +637,8 @@ function hideGoalModal() {
 function incrementGuessCount() {
   guessCount = (guessCount || 0) + 1;
   try { document.getElementById('goalGuesses').textContent = String(guessCount); } catch (e) {}
+  // Expose current guess count globally for modules that need to react (e.g., overlays on resize)
+  try { if (typeof window !== 'undefined') window.guessCount = guessCount; } catch (e) { /* non-fatal */ }
   updateClueState();
   // Emit an event so any page-specific module (e.g. cardGuesser) can react to guesses.
   try {
@@ -767,6 +771,9 @@ export async function initShared(config = {}) {
     const game = detectGameFromPath();
     if (game === 'monster') {
       CLUE_UNLOCKS = { world: 999, category: 999 };
+    } else if (game === 'pack') {
+      // Pack guesser only uses the category clue button (guessBtn2), but set both for safety
+      CLUE_UNLOCKS = { world: 999, category: 999 };
     }
   } catch (e) { /* non-fatal */ }
 
@@ -802,6 +809,7 @@ export async function initShared(config = {}) {
   const cardHref = '../card/';
   const monsterHref = '../monster/';
   const mealHref = '../meal/';
+  const packHref = '../pack/';
 
       // Ensure the switch has the three expected buttons. If static HTML provided
       // them, update their href/img; otherwise append new buttons.
@@ -831,6 +839,7 @@ export async function initShared(config = {}) {
   ensureBtn(cardHref, 'btn-cards', '../images/card.png', 'Card Guesser');
   ensureBtn(monsterHref, 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser');
   ensureBtn(mealHref, 'btn-meal', '../images/Spice/36px-Jungle_Spice.png', 'Meal Guesser');
+  ensureBtn(packHref, 'btn-pack', '../images/Gem.png', 'Pack Guesser');
   // NOTE: meal button intentionally not auto-created anymore.
   // If this is a hard-mode page, change the appropriate page button to a red "hard" button
     try {
@@ -879,20 +888,22 @@ export async function initShared(config = {}) {
   const isCard = _pathname.endsWith('cardguesser.html') || _href.includes('cardguesser.html') || _href.includes('card'); // Do something about hard card
   const isMonster = _pathname.endsWith('monsterguesser.html') || _href.includes('monsterguesser.html') || _href.includes('monster');
   const isMeal = _pathname.endsWith('mealguesser.html') || _href.includes('mealguesser.html') || _href.includes('meal');
+  const isPack = _pathname.endsWith('/pack/index.html') || _href.includes('/pack/') || _href.includes('packguesser.html') || /(^|\/)pack(\/$|$)/.test(_pathname);
   // Recompute hardType for later decisions (keep consistent with earlier detection)
   const hardType = (typeof document !== 'undefined' && document.body?.dataset?.hard) ? document.body.dataset.hard :
     ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('harditem')) ? 'item' :
     ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('hardcard')) ? 'card' : null;
   const isHardAny = !!hardType;
-  const isItems = !isCard && !isMonster && !isMeal;
+  const isItems = !isCard && !isMonster && !isMeal && !isPack;
 
   const btnItems = document.getElementById('btn-items');
   const btnCards = document.getElementById('btn-cards');
   const btnMonster = document.getElementById('btn-monster');
   const btnMeal = document.getElementById('btn-meal');
+  const btnPack = document.getElementById('btn-pack');
 
   // reset classes/styles
-  [btnItems, btnCards, btnMonster, btnMeal].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
+  [btnItems, btnCards, btnMonster, btnMeal, btnPack].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
 
   // Mark hard page button red depending on hard type
   if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
@@ -906,6 +917,7 @@ export async function initShared(config = {}) {
     if (hardType !== 'card' && btnCards && hasWinToday('card')) { btnCards.classList.add('complete'); btnCards.style.background = '#2ecc71'; }
   if (btnMonster && hasWinToday('monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
   if (btnMeal && hasWinToday('meal')) { btnMeal.classList.add('complete'); btnMeal.style.background = '#2ecc71'; }
+  if (btnPack && hasWinToday('pack')) { btnPack.classList.add('complete'); btnPack.style.background = '#2ecc71'; }
     // Hard-item completed may be tracked under 'hard_item'
   if (hardType !== 'item' && btnItems && hasWinToday('hard_item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
     // Hard-card completed may be tracked under 'hard_card'
@@ -918,6 +930,7 @@ export async function initShared(config = {}) {
   if (isCard && btnCards && hardType !== 'card') { btnCards.classList.add('active'); btnCards.style.background = '#f1c40f'; }
   if (isMonster && btnMonster) { btnMonster.classList.add('active'); btnMonster.style.background = '#f1c40f'; }
   if (isMeal && btnMeal) { btnMeal.classList.add('active'); btnMeal.style.background = '#f1c40f'; }
+  if (isPack && btnPack) { btnPack.classList.add('active'); btnPack.style.background = '#f1c40f'; }
   // Ensure hard-mode buttons remain red (override) when detected
   if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
   if (hardType === 'card' && btnCards) { btnCards.classList.add('hard'); btnCards.style.background = '#c0392b'; }
@@ -1068,6 +1081,9 @@ export async function initShared(config = {}) {
   if (gb2) gb2.addEventListener('click', handlers.guessBtn2);
 
   updateClueState();
+
+  // Initialize global guess count value for consumers
+  try { if (typeof window !== 'undefined' && typeof window.guessCount !== 'number') window.guessCount = guessCount || 0; } catch (e) { /* non-fatal */ }
 
   if (input) input.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') document.getElementById('dropdown')?.classList.remove('open');

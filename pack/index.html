@@ -8,14 +8,21 @@
   <link rel="stylesheet" href="../styles.css">
   <style>
   /* Reveal overlay styles for packGuesser */
-  .reveal-wrap { position: relative; display: inline-block; max-width: 100%; overflow: hidden; }
+   .reveal-wrap { position: relative; display: inline-block; max-width: 100%; overflow: hidden; }
     .reveal-wrap img { display: block; width: 100%; height: auto; }
   .tile-overlay { position: absolute; left: 0; top: 0; right: 0; bottom: 0; pointer-events: none; z-index: 1; }
-  .tile { position: absolute; background: rgba(0,0,0,0.94); opacity: 1; transition: opacity 380ms ease, transform 360ms ease; will-change: opacity, transform; z-index: 2; }
-  /* Ensure dropdown/input sit above the reveal overlay */
-  .combo, .dropdown { position: relative; z-index: 9999; }
+  .tile { position: absolute; background: rgba(0,0,0,0.94); opacity: 1; transition: opacity 380ms ease, transform 360ms ease; will-change: opacity, transform; z-index: 2; box-sizing: border-box; border: 2px solid rgba(122,162,255,0.25); }
+  /* Defer dropdown stacking to global styles.css for consistency across pages */
     .tile.revealed { opacity: 0; transform: translateY(-6px) scale(0.98); }
     @media (prefers-reduced-motion: reduce) { .tile { transition: none; } .tile.revealed { transform: none; } }
+
+  /* Spice-style reveal box (similar look to .emojibox) */
+  .reveal-box { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; margin: 16px auto 0; width:min(650px, 90%); background: rgba(20,24,48,0.65); border:1px solid rgba(122,162,255,0.25); padding: 14px 14px 10px; border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.35); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); position:relative; z-index:1; }
+  .reveal-inner { position:relative; width:100%; display:flex; align-items:center; justify-content:center; }
+  .reveal-wrap { display:block; width: 100%; max-width: 100%; }
+  /* Anti-cheat transparent overlay covering the reveal area */
+  .anti-overlay { position:absolute; inset:0; background: rgba(0,0,0,0); z-index: 3; pointer-events: auto; border-radius: 12px; }
+  .reveal-note { margin: 2px 0 0; font-size: 18px; color: #fff; opacity: 0.9; text-align:center; }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png">
   <link rel="apple-touch-icon" href="../images/icon.png">
@@ -46,12 +53,12 @@
 
     <div class="top-row">
       <div class="guess-box combo-guess" id="guessBox">
-        <div class="guess-title">Guess today's IdleOn card!</div>
+        <div class="guess-title">Guess today's pack!</div>
         <div class="guess-actions">
 
-          <div class="clue-wrap">
-            <button id="guessBtn2" class="guess-btn" aria-label="Category clue">Category Clue</button>
-            <div class="clue-note" id="note2"></div>
+                    <div class="clue-wrap">
+            <button id="guessBtn2" class="guess-btn" aria-label="Category clue">No clues for this</button>
+            
           </div>
         </div>
 
@@ -93,7 +100,7 @@
 
     <div class="combo" id="combo">
       <div class="input-wrap">
-        <input id="search" type="text" placeholder="Type the name of a card..." autocomplete="off" />
+        <input id="search" type="text" placeholder="Type the name of a pack..." autocomplete="off" />
       </div>
       <div class="dropdown" id="dropdown">
         <ul class="results" id="results"></ul>
@@ -107,24 +114,20 @@
         <button class="goal-close" id="goalClose" aria-label="Close">✕</button>
         <h2 class="goal-title">YOU FOUND IT!</h2>
         <div class="goal-body">
-          <img id="goalIcon" class="goal-icon" src="" alt="goal icon" />
+          <img id="goalIcon" class="goal-icon" src="" alt="goal icon"  style="width: 350px;"/>
           <div id="goalName" class="goal-name"></div>
         </div>
         <div class="goal-guesses">Number of guesses: <strong id="goalGuesses">0</strong></div>
         <div class="goal-footer">
-          <div class="goal-footer-text">Come back for a new card in...</div>
+          <div class="goal-footer-text">Come back for a new pack in...</div>
           <div class="goal-timer-wrap"><span id="goalTimer" class="goal-timer">00:00:00</span></div>
         </div>
         <!-- Add action button linking to Monster Guesser (carrotman icon) -->
         <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
-          <a href="hardCardGuesser.html" class="guess-btn btn-hard" id="hardItemBtn" aria-label="Hard Item Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none; ">
-                <img src="../images/hardcard.png" alt="Hard Card" style="width:22px;height:22px;object-fit:contain;" />
-                <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
-              </a>
-          <a href="monsterGuesser.html" class="guess-btn" id="toMonsterBtn" aria-label="Monster Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-            <img src="../images/Enemies/carrotman-6_thumb.png" alt="carrotman" style="width:22px;height:22px;object-fit:contain;" />
-            <span style="color:var(--text);font-weight:800;font-size:15px;">Next game</span>
-          </a>
+          <a href="/results/" class="guess-btn results-btn-orange" id="resultsbtn" aria-label="View your past daily results" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:18px;width:68%;">
+                  <img src="/images/icon.png" alt="Results icon" style="width:24px;height:24px;object-fit:contain;" />
+                  <span style="font-weight:900;font-size:15px;">See Your Results</span>
+                </a>
         </div>
       </div>
     </div>
@@ -148,10 +151,17 @@
     </div>
 
     
-      <!-- Daily pack reveal placed under the dropdown/input as requested -->
-      <div class="reveal-wrap" id="revealWrap">
-        <img id="packImage" alt="Daily Pack" src="" />
-        <div class="tile-overlay" id="tileOverlay" aria-hidden="true"></div>
+      <!-- Daily pack reveal inside a spice-style box with anti-cheat overlay -->
+      <div class="reveal-box">
+        <div class="reveal-inner">
+          <div class="reveal-wrap" id="revealWrap">
+            <img id="packImage" alt="Daily Pack" src="" />
+            <div class="tile-overlay" id="tileOverlay" aria-hidden="true"></div>
+          </div>
+          <!-- Transparent overlay to prevent dragging/cheating, similar to meal -->
+          <div class="anti-overlay" aria-hidden="true"></div>
+        </div>
+        <p class="reveal-note"><span id="revealNoteText">Square revealed in 2 guesses</span></p>
       </div>
     </div>
 

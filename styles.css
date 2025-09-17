@@ -428,9 +428,9 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   left: 0; right: 0; top: calc(100% - 2px);
   background: var(--panel); border: 1px solid var(--border); border-top: none;
   border-radius: 0 0 var(--radius) var(--radius); max-height: 360px; overflow: auto;
-  display: none; z-index: 1000; /* ensure dropdown appears above other page elements (cards, images) */
+  display: none; z-index: 800; /* above page content (images/cards), below modals (z:900) */
 }
-.dropdown.open { display: block; }
+.dropdown.open { display: block; z-index: 800; }
 
 /* Emoji box: grouped panel with large icons (icons increased by 50%) */
 .emojibox {
@@ -513,7 +513,7 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   font-size: 18px; /* increased for readability */
 }
 
-.results { list-style: none; margin: 0; padding: 6px; }
+.results { list-style: none; margin: 0; padding: 6px;  }
 .guess-box {
   display: flex;
   flex-direction: column;

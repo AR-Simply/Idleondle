@@ -1,6 +1,27 @@
 // js/results.js
 // Render a Daily Results box by reading cookies created by shared.js
 
+// Centralized, easy-to-extend game ordering and labels
+const GAME_DISPLAY_ORDER = [
+	'item',        // Item Guesser
+	'hard_item',   // HARD Item Guesser
+	'card',        // Card Guesser
+	'hard_card',   // HARD Card Guesser
+	'monster',     // Monster Guesser
+	'meal',        // Meal Guesser
+	'pack'         // Pack Guesser
+];
+const GAME_LABELS = {
+	item: 'Item Guesser',
+	hard_item: 'HARD Item Guesser',
+	card: 'Card Guesser',
+	hard_card: 'HARD Card Guesser',
+	monster: 'Monster Guesser',
+	meal: 'Meal Guesser',
+	pack: 'Pack Guesser'
+};
+const normKey = (s) => String(s || '').toLowerCase().replace(/\s+/g, '_');
+
 function safeLower(s) { try { return String(s).normalize('NFC').toLocaleLowerCase('en'); } catch(e){ return String(s||'').toLowerCase(); } }
 
 function getCookie(name) {
@@ -51,8 +72,19 @@ function collectWinsToday() {
 			}
 		}
 	} catch (e) { /* non-fatal */ }
-	// Sort by time ascending (earlier wins first)
-	wins.sort((a,b) => new Date(a.time) - new Date(b.time));
+	// Sort using a fixed, easy-to-extend display order. Fall back to time.
+	const rank = (g) => {
+		const k = normKey(g);
+		const i = GAME_DISPLAY_ORDER.indexOf(k);
+		return i === -1 ? Number.POSITIVE_INFINITY : i;
+	};
+	wins.sort((a,b) => {
+		const ra = rank(a.game);
+		const rb = rank(b.game);
+		if (ra !== rb) return ra - rb;
+		// Same bucket: fall back to earlier completion first
+		return new Date(a.time) - new Date(b.time);
+	});
 	return wins;
 }
 
@@ -81,18 +113,6 @@ function renderResultsBox() {
 
 	const list = document.createElement('div'); list.className = 'results-items';
 	list.style.display = 'flex'; list.style.flexDirection = 'column'; list.style.gap = '4px'; list.style.width = '100%';
-			// Map raw cookie suffixes to friendly display labels
-			const labelMap = {
-				'item': 'Item Guesser',
-				'hard item': 'HARD Item Guesser',
-				'hard_item': 'HARD Item Guesser',
-				'card': 'Card Guesser',
-				'hard card': 'HARD Card Guesser',
-				'hard_card': 'HARD Card Guesser',
-				'monster': 'Monster Guesser',
-				'meal': 'Meal Guesser'
-			};
-
 			for (const w of wins) {
 			const row = document.createElement('div'); row.className = 'results-row results-row-line';
 			row.style.display = 'flex'; row.style.alignItems = 'center'; row.style.justifyContent = 'space-between';
@@ -100,8 +120,8 @@ function renderResultsBox() {
 
 			const leftWrap = document.createElement('div'); leftWrap.className = 'results-line-left';
 				const raw = w.game.trim();
-				const key = raw.toLowerCase();
-				const friendly = labelMap[key] || labelMap[key.replace(/\s+/g,'_')] || capitalizeWords(raw);
+				const key = normKey(raw);
+				const friendly = GAME_LABELS[key] || capitalizeWords(raw);
 				const nameSpan = document.createElement('span'); nameSpan.className = 'results-game-line'; nameSpan.textContent = friendly + ':';
 				// Mark hard modes visually (red text)
 				if (/hard/i.test(friendly)) nameSpan.classList.add('hard-mode');
@@ -220,6 +240,7 @@ function markPageSwitcherCompletion() {
 	const btnCards = document.getElementById('btn-cards');
 	const btnMonster = document.getElementById('btn-monster');
 	const btnMeal = document.getElementById('btn-meal');
+	const btnPack = document.getElementById('btn-pack');
 	// Item (normal or hard)
 	if (btnItems && (hasWinToday('item'))) {
 		btnItems.classList.add('complete');
@@ -244,6 +265,11 @@ function markPageSwitcherCompletion() {
 		btnMeal.style.background = '#2ecc71';
 		btnMeal.style.borderColor = '#2ecc71';
 	}
+	if (btnPack && hasWinToday('pack')) {
+		btnPack.classList.add('complete');
+		btnPack.style.background = '#2ecc71';
+		btnPack.style.borderColor = '#2ecc71';
+	}
 }
 
 function capitalizeWords(s){ return String(s||'').split(' ').map(w=> w ? w[0].toUpperCase()+w.slice(1) : '').join(' ').trim(); }
@@ -261,21 +287,10 @@ function copyShareText() {
 	}
 	// Map rank numbers to emoji
 	const rankEmoji = { 1:'🎖️', 2:'🥈', 3:'🥉', 4:'🎀', 5:'💀' };
-	// Friendly name mapping (duplicated from renderResultsBox for isolation)
-	const labelMap = {
-		'item': 'Item Guesser',
-		'hard item': 'HARD Item Guesser',
-		'hard_item': 'HARD Item Guesser',
-		'card': 'Card Guesser',
-		'hard card': 'HARD Card Guesser',
-		'hard_card': 'HARD Card Guesser',
-		'monster': 'Monster Guesser',
-		'meal': 'Meal Guesser'
-	};
 	const lines = wins.map(w => {
 		const raw = w.game.trim();
-		const key = raw.toLowerCase();
-		const friendly = labelMap[key] || labelMap[key.replace(/\s+/g,'_')] || capitalizeWords(raw);
+		const key = normKey(raw);
+		const friendly = GAME_LABELS[key] || capitalizeWords(raw);
 		const isHard = /hard/i.test(friendly);
 		const rank = determineRank(w.guesses, isHard);
 		const emoji = rankEmoji[rank] || '💀';

@@ -13,11 +13,41 @@ let imgEl = null;
 let tiles = [];
 let orderedTiles = [];
 let revealedCount = 0;
+let noteEl = null;
+
+function updateRevealNote(currentGuesses){
+  try {
+    if (!noteEl) noteEl = document.getElementById('revealNoteText');
+    if (!noteEl) return;
+    const g = Number(currentGuesses || 0);
+    // Count how many non-top tiles are unlocked at g
+    const topIdx = orderedTiles.findIndex(t => t.i === 'top-left');
+    const bottomsLen = topIdx >= 0 ? topIdx : orderedTiles.length;
+    // Which tile index is next to reveal? (uses thresholds order)
+    let nextIdx = 0;
+    for (let i = 0; i < bottomsLen; i++) {
+      const need = THRESHOLDS[i] ?? Infinity;
+      if (g >= need) nextIdx = i + 1; else break;
+    }
+    // If all bottom tiles shown, keep note generic or show 0
+    const noteWrap = noteEl.closest ? noteEl.closest('.reveal-note') : null;
+    if (nextIdx >= bottomsLen) {
+      if (noteWrap) noteWrap.style.display = 'none'; else noteEl.style.display = 'none';
+      return;
+    } else {
+      if (noteWrap) noteWrap.style.display = ''; else noteEl.style.display = '';
+    }
+    const nextNeeded = THRESHOLDS[nextIdx] ?? Infinity;
+    const left = Math.max(0, nextNeeded - g);
+    noteEl.textContent = `Square revealed in ${left} ${left === 1 ? 'guess' : 'guesses'}`;
+  } catch (e) { /* non-fatal */ }
+}
 
 // Custom rectangles in natural image pixels (as provided):
 // initial: 221x58 from bottom-left
 // then three rectangles 711x130 each to the right
 const CUSTOM_RECTS = [ { w: 221, h: 58 }, { w: 711, h: 130 }, { w: 711, h: 130 }, { w: 711, h: 130 } ];
+
 
 function buildTiles() {
   if (!imgEl || !overlay) return;
@@ -42,7 +72,7 @@ function buildTiles() {
     const r = CUSTOM_RECTS[i] || { w: 0, h: 0 };
     let w = Math.max(1, Math.round(r.w * scaleX));
      if (i === 1) {
-      w = Math.max(1, Math.round(w /5));
+      w = Math.max(1, Math.round(w /4.6));
     }
     let h = Math.max(1, Math.round(r.h * scaleY));
     // Make the third tile (index 2) exactly match the second tile and sit to its right
@@ -59,6 +89,7 @@ function buildTiles() {
     el.style.width = w + 'px';
     el.style.height = h + 'px';
     overlay.appendChild(el);
+    // Straight-edged tiles with outlined borders; no jagged clip-path.
     tiles.push({ i, x, w, h, el });
     orderedTiles.push({ i, el });
     x += w;
@@ -87,12 +118,33 @@ function buildTiles() {
       topEl.style.bottom = first.h + 'px';
       topEl.style.width = first.w + 'px';
       topEl.style.height = topHeight + 'px';
+      // No jagged edges for the top tile either.
       overlay.appendChild(topEl);
       tiles.push({ i: 'top-left', x: 0, w: first.w, h: topHeight, el: topEl });
       // push last so it's only cleared on correct
       orderedTiles.push({ i: 'top-left', el: topEl });
     }
   }
+
+  // Invert the reveal order for the bottom tiles (right-to-left) while keeping
+  // the top-left cover as the final element so it only reveals on correct.
+  try {
+    const topIdx = orderedTiles.findIndex(t => t.i === 'top-left');
+    const bottoms = topIdx >= 0 ? orderedTiles.slice(0, topIdx) : orderedTiles.slice();
+    const tail = topIdx >= 0 ? orderedTiles.slice(topIdx) : [];
+    orderedTiles = bottoms.reverse().concat(tail);
+  } catch (e) { /* non-fatal reordering failure */ }
+
+  // Ensure initial reveal state is applied immediately after building tiles.
+  // This reveals the first square on page load (threshold 0) instead of after the first guess event.
+  try {
+    const applyInitial = () => {
+      const currentGuesses = (window && typeof window === 'object' && typeof window.guessCount === 'number') ? window.guessCount : 0;
+      revealTilesForGuesses(currentGuesses || 0);
+    };
+    // Defer to next frame so the browser commits initial styles before adding 'revealed'
+    if (typeof requestAnimationFrame === 'function') requestAnimationFrame(applyInitial); else applyInitial();
+  } catch (e) { revealTilesForGuesses(0); }
 }
 
 function revealTilesForGuesses(guessCount) {
@@ -109,6 +161,7 @@ function revealTilesForGuesses(guessCount) {
       }, { once: true });
     }
   }
+  updateRevealNote(guessCount);
 }
 
 function onGuessUpdated(e) {
@@ -120,6 +173,8 @@ function onCorrect(e) {
   // Immediately reveal all tiles when guessed correctly
   if (!orderedTiles) return;
   orderedTiles.forEach(t => { if (t && t.el) t.el.classList.add('revealed'); });
+  // Update note to reflect completion
+  updateRevealNote(Number.MAX_SAFE_INTEGER);
 }
 
 function applyImage(iconUrl) {
