@@ -11,7 +11,7 @@
    .reveal-wrap { position: relative; display: inline-block; max-width: 100%; overflow: hidden; }
     .reveal-wrap img { display: block; width: 100%; height: auto; }
   .tile-overlay { position: absolute; left: 0; top: 0; right: 0; bottom: 0; pointer-events: none; z-index: 1; }
-  .tile { position: absolute; background: rgba(0,0,0,0.94); opacity: 1; transition: opacity 380ms ease, transform 360ms ease; will-change: opacity, transform; z-index: 2; box-sizing: border-box; border: 2px solid rgba(122,162,255,0.25); }
+  .tile { position: absolute; background: rgba(0,0,0,1); opacity: 1; transition: opacity 380ms ease, transform 360ms ease; will-change: opacity, transform; z-index: 2; box-sizing: border-box; border: 2px solid rgba(122,162,255,0.25); }
   /* Defer dropdown stacking to global styles.css for consistency across pages */
     .tile.revealed { opacity: 0; transform: translateY(-6px) scale(0.98); }
     @media (prefers-reduced-motion: reduce) { .tile { transition: none; } .tile.revealed { transform: none; } }

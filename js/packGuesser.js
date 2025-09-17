@@ -54,53 +54,44 @@ function buildTiles() {
   overlay.innerHTML = '';
   tiles = [];
   orderedTiles = [];
+  // Use natural image dimensions to compute percentage-based geometry so tiles
+  // scale perfectly with the image during zoom/resizes (no pixel gaps).
+  const naturalW = Math.max(1, Number(imgEl.naturalWidth) || 1);
+  const naturalH = Math.max(1, Number(imgEl.naturalHeight) || 1);
 
-  // Prefer overlay's layout size (it's positioned over the image). Fall back to image rect.
-  const rect = imgEl.getBoundingClientRect();
-  const overlayW = overlay.clientWidth || Math.round(rect.width);
-  const overlayH = overlay.clientHeight || Math.round(rect.height);
-  const displayW = Math.max(1, Math.round(overlayW));
-  const displayH = Math.max(1, Math.round(overlayH));
-
-  // Scale from natural pixels if available otherwise assume 1:1
-  const scaleX = imgEl.naturalWidth ? (displayW / imgEl.naturalWidth) : 1;
-  const scaleY = imgEl.naturalHeight ? (displayH / imgEl.naturalHeight) : 1;
-
-  // Build tiles left-to-right anchored to the bottom edge (use style.bottom)
-  let x = 0;
+  // Build tiles left-to-right anchored to the bottom edge (use % values)
+  let xPerc = 0; // accumulated left offset in % of width
   for (let i = 0; i < CUSTOM_RECTS.length; i++) {
     const r = CUSTOM_RECTS[i] || { w: 0, h: 0 };
-    let w = Math.max(1, Math.round(r.w * scaleX));
-     if (i === 1) {
-      w = Math.max(1, Math.round(w /4.6));
-    }
-    let h = Math.max(1, Math.round(r.h * scaleY));
+    let wPerc = (r.w / naturalW) * 100;
+    if (i === 1) { wPerc = wPerc / 4.6; } // preserve empirical adjustment
+    let hPerc = (r.h / naturalH) * 100;
     // Make the third tile (index 2) exactly match the second tile and sit to its right
     if (i === 2 && tiles.length > 1) {
-      w = tiles[1].w;
-      h = tiles[1].h;
+      wPerc = tiles[1].wPerc;
+      hPerc = tiles[1].hPerc;
     }
 
     const el = document.createElement('div');
     el.className = 'tile';
     el.style.position = 'absolute';
-    el.style.left = x + 'px';
-    el.style.bottom = '0px';
-    el.style.width = w + 'px';
-    el.style.height = h + 'px';
+    el.style.left = xPerc + '%';
+    el.style.bottom = '0%';
+    el.style.width = wPerc + '%';
+    el.style.height = hPerc + '%';
     overlay.appendChild(el);
     // Straight-edged tiles with outlined borders; no jagged clip-path.
-    tiles.push({ i, x, w, h, el });
+    tiles.push({ i, leftPerc: xPerc, wPerc, hPerc, el });
     orderedTiles.push({ i, el });
-    x += w;
+    xPerc += wPerc;
   }
 
   // Stretch last tile to fill any remaining horizontal gap so tiles cover the image width
-  if (tiles.length && x < displayW) {
+  if (tiles.length && xPerc < 100) {
     const last = tiles[tiles.length - 1];
-    const newW = displayW - last.x;
-    last.w = newW;
-    last.el.style.width = newW + 'px';
+    const newWperc = Math.max(0, 100 - last.leftPerc);
+    last.wPerc = newWperc;
+    last.el.style.width = newWperc + '%';
   }
 
   // Add a top-left cover (above the small initial bottom-left rect) that stays
@@ -108,19 +99,19 @@ function buildTiles() {
   // revealed by `onCorrect()` (THRESHOLDS doesn't include it).
   if (tiles.length) {
     const first = tiles[0];
-    const topHeight = Math.max(0, displayH - first.h);
-    if (topHeight > 0) {
+    const topHeightPerc = Math.max(0, 100 - first.hPerc);
+    if (topHeightPerc > 0) {
       const topEl = document.createElement('div');
       topEl.className = 'tile';
       topEl.style.position = 'absolute';
-      topEl.style.left = '0px';
+      topEl.style.left = '0%';
       // anchor directly above the first bottom tile
-      topEl.style.bottom = first.h + 'px';
-      topEl.style.width = first.w + 'px';
-      topEl.style.height = topHeight + 'px';
+      topEl.style.bottom = first.hPerc + '%';
+      topEl.style.width = first.wPerc + '%';
+      topEl.style.height = topHeightPerc + '%';
       // No jagged edges for the top tile either.
       overlay.appendChild(topEl);
-      tiles.push({ i: 'top-left', x: 0, w: first.w, h: topHeight, el: topEl });
+      tiles.push({ i: 'top-left', leftPerc: 0, wPerc: first.wPerc, hPerc: topHeightPerc, el: topEl });
       // push last so it's only cleared on correct
       orderedTiles.push({ i: 'top-left', el: topEl });
     }
