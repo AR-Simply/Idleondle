@@ -779,6 +779,26 @@ export async function initShared(config = {}) {
   } catch (e) { /* non-fatal */ }
 
   await loadItems();
+  // If requested, exclude entries flagged in source JSON
+  try {
+    if (config && config.exclude && Array.isArray(items) && items.length) {
+      const before = items.length;
+      const isYes = (v) => {
+        if (v === true || v === 1) return true;
+        const s = (v == null ? '' : String(v)).trim().toLowerCase();
+        return s === 'yes' || s === 'true' || s === '1';
+      };
+      items = items.filter(it => {
+        const flag = it?.raw?.exclude ?? it?.raw?.Excluded ?? it?.raw?.EXCLUDE;
+        return !isYes(flag);
+      });
+      const removed = before - items.length;
+      console.log(`[shared] exclude filter active: removed ${removed} of ${before}; remaining ${items.length}`);
+      if (items.length === 0) {
+        console.warn('[shared] exclude filter removed all items; game will have no candidates until data changes.');
+      }
+    }
+  } catch (e) { console.warn('Exclude filtering failed', e); }
   selectGoalItem();
 
   // Render page switch buttons (inserted after the site title). Use imageBase if present.

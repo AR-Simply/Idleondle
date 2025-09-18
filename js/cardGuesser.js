@@ -40,7 +40,7 @@ export async function initCardGuesser(options = {}) {
   // For normal cardGuesser pages, show color by default. For hard pages, keep grayscale locked.
   _colorUnlocked = !_isHardPage;
   // Per-page configuration: how many guesses until color unlock and how much blur reduces per guess
-  const colorUnlockThreshold = _isHardPage ? 7 : 3;
+  const colorUnlockThreshold = _isHardPage ? 10 : 3;
   // Hard mode reduces blur more slowly (6% per guess) while normal is faster (10% per guess)
   const percentPerGuess = _isHardPage ? 5 : 10;
   // Ensure the category clue requires 4 guesses on the normal cardGuesser page by default.

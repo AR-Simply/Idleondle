@@ -117,6 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
     imageBase: '../images',
     clueUnlocks: { world: 999, category: 999 },
     seedOffset: 998,
+    // Exclude flagged entries from dataset (raw.exclude === 'yes'|'true'|true)
+    exclude: true,
     guessButtonHandlers: {
       // No clues for hardmonster page
       guessBtn1: () => {},
