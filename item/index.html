@@ -326,7 +326,7 @@
           document.cookie = name + '=' + encodeURIComponent(value) + '; path=/; expires=' + expires + '; SameSite=Lax';
         }
         function loadUmamiOnce(){ if(document.querySelector('script[data-website-id]')) return; const s=document.createElement('script'); s.defer=true; s.src='https://cloud.umami.is/script.js'; s.setAttribute('data-website-id','ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3'); document.head.appendChild(s); }
-        const api = window.IdleondleConsent || { setConsentYes: () => { localSetCookie('umami_consent','yes',365); loadUmamiOnce(); }, setConsentNo: () => { localSetCookie('umami_consent','no',365); } };
+  const api = window.IdleondleConsent || { setConsentYes: () => { localSetCookie('new_umami_consent','yes',365); loadUmamiOnce(); }, setConsentNo: () => { localSetCookie('new_umami_consent','no',365); } };
         const pa = document.getElementById('privacyAccept');
         const pd = document.getElementById('privacyDecline');
         const pm = document.getElementById('privacyModal');

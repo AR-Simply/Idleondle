@@ -189,8 +189,8 @@ function setCookie(name, value, days = 365) {
   } catch (e) { /* non-fatal */ }
 }
 
-// One-time normalization of analytics consent cookie across pages.
-// Re-sets 'umami_consent' with consistent attributes so it is visible on all routes
+// One-time normalization/migration of analytics consent cookie across pages.
+// Re-sets 'new_umami_consent' with consistent attributes so it is visible on all routes
 // after folder restructures, and loads Umami when consent is already granted.
 (function normalizeConsentCookie(){
   try {
@@ -208,13 +208,18 @@ function setCookie(name, value, days = 365) {
       } catch (e) {}
       return undefined;
     };
-    const val = get('umami_consent');
+    // Prefer new cookie; fall back to old if present
+    let val = get('new_umami_consent');
+    if (val !== 'yes' && val !== 'no') {
+      const legacy = get('umami_consent');
+      if (legacy === 'yes' || legacy === 'no') val = legacy;
+    }
     if (val !== 'yes' && val !== 'no') return; // nothing to normalize
 
     // Build a cookie string with Path=/ and SameSite=Lax. On production HTTPS, also set Domain=.idleondle.com and Secure.
     const exp = new Date(Date.now() + 365 * 864e5).toUTCString();
     const parts = [
-      `umami_consent=${encodeURIComponent(val)}`,
+      `new_umami_consent=${encodeURIComponent(val)}`,
       `expires=${exp}`,
       'path=/',
       'SameSite=Lax'

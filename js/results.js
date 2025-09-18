@@ -383,11 +383,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			} catch (e) {}
 			return undefined;
 		};
-		const val = get('umami_consent');
+		let val = get('new_umami_consent');
+		if (val !== 'yes' && val !== 'no') {
+			const legacy = get('umami_consent');
+			if (legacy === 'yes' || legacy === 'no') val = legacy;
+		}
 		if (val === 'yes' || val === 'no') {
 			const exp = new Date(Date.now() + 365 * 864e5).toUTCString();
 			const parts = [
-				`umami_consent=${encodeURIComponent(val)}`,
+				`new_umami_consent=${encodeURIComponent(val)}`,
 				`expires=${exp}`,
 				'path=/',
 				'SameSite=Lax'

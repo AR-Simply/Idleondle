@@ -272,8 +272,8 @@
 				s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3');
 				document.head.appendChild(s);
 			}
-			function setConsentYes() { setCookie('umami_consent','yes',365); loadUmami(); }
-			function setConsentNo() { setCookie('umami_consent','no',365); }
+			function setConsentYes() { setCookie('new_umami_consent','yes',365); loadUmami(); }
+			function setConsentNo() { setCookie('new_umami_consent','no',365); }
 
 			// Banner DOM
 			const banner = document.getElementById('consentBanner');
@@ -282,7 +282,7 @@
 			const declineBtn = document.getElementById('consentDecline');
 
 			// Normalize consent cookie
-			let consent = getCookie('umami_consent');
+			let consent = getCookie('new_umami_consent');
 			if (consent !== 'yes' && consent !== 'no') consent = undefined;
 
 			function showBanner(){ if(backdrop){ backdrop.hidden=false; backdrop.setAttribute('aria-hidden','false'); } if(banner){ banner.hidden=false; banner.setAttribute('aria-hidden','false'); } }
@@ -290,7 +290,8 @@
 			function safeHide(){ hideBanner(); }
 
 			if (consent === undefined) {
-				if (banner && backdrop && acceptBtn && declineBtn) {
+				// Show banner as long as the banner and action buttons exist; backdrop is optional
+				if (banner && acceptBtn && declineBtn) {
 					showBanner();
 				} else {
 					safeHide();
