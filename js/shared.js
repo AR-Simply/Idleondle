@@ -925,7 +925,7 @@ export async function initShared(config = {}) {
   const _pathname = (location.pathname || '').toLowerCase();
   const _href = (location.href || '').toLowerCase();
   const isCard = _pathname.endsWith('cardguesser.html') || _href.includes('cardguesser.html') || _href.includes('card'); // Do something about hard card
-  const isMonster = _pathname.endsWith('monsterguesser.html') || _href.includes('monsterguesser.html') || _href.includes('monster');
+  const isMonster = _href.includes('/monster/') || _href.endsWith('/monster') || _pathname.endsWith('monsterguesser.html') || _href.includes('monsterguesser.html');
   const isMeal = _pathname.endsWith('mealguesser.html') || _href.includes('mealguesser.html') || _href.includes('meal');
   const isPack = _pathname.endsWith('/pack/index.html') || _href.includes('/pack/') || _href.includes('packguesser.html') || /(^|\/)pack(\/$|$)/.test(_pathname);
   // Recompute hardType for later decisions (keep consistent with earlier detection)

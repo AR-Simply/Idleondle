@@ -5001,20 +5001,6 @@
     }
   },
   "Premium Helmets": {
-    "Arcanist Crown": {
-      "icon": "images\\Premium Helmets\\Arcanist Crown.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Gem Shop",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
     "Bamboo Hat": {
       "icon": "images\\Premium Helmets\\Bamboo Hat.png",
       "level_requirement": "1",
@@ -5059,21 +5045,6 @@
       },
       "class": "All"
     },
-    "Big Bunny": {
-      "icon": "images\\Premium Helmets\\Big Bunny.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Gem Shop",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Luck": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
     "Bloo Creamer": {
       "icon": "images\\Premium Helmets\\Bloo Creamer.png",
       "level_requirement": "1",
@@ -5109,35 +5080,6 @@
       "sell_price": 1,
       "type": "Premium Helmets",
       "source": "Gem Shop",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
-    "Carrotman Mask": {
-      "icon": "images\\Premium Helmets\\Carrotman Mask.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Falloween Treat",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Luck": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
-    "Celebration Mane": {
-      "icon": "images\\Premium Helmets\\Celebration Mane.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "4th Anniversary Event",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5247,20 +5189,6 @@
       },
       "class": "All"
     },
-    "Ele Sorcerer Pointed Hat": {
-      "icon": "images\\Premium Helmets\\Ele Sorcerer Pointed Hat.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Gem Shop",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
     "Fanned Blossomage": {
       "icon": "images\\Premium Helmets\\Fanned Blossomage.png",
       "level_requirement": "1",
@@ -5314,21 +5242,6 @@
       },
       "class": "All"
     },
-    "Fluffy Ramsy": {
-      "icon": "images\\Premium Helmets\\Fluffy Ramsy.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Gem Shop",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Luck": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
     "Funky Hat": {
       "icon": "images\\Premium Helmets\\Funky Hat.png",
       "level_requirement": "1",
@@ -5357,21 +5270,6 @@
       },
       "class": "All"
     },
-    "Giftmas Tree": {
-      "icon": "images\\Premium Helmets\\Giftmas Tree.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Gem Shop",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Luck": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
     "Gilded Headband": {
       "icon": "images\\Premium Helmets\\Gilded Headband.png",
       "level_requirement": "1",
@@ -5386,21 +5284,6 @@
       },
       "class": "All"
     },
-    "Glublin Mask": {
-      "icon": "images\\Premium Helmets\\Glublin Mask.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Falloween Treat",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Luck": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
     "Goldberry": {
       "icon": "images\\Premium Helmets\\Goldberry.png",
       "level_requirement": "1",
@@ -5411,21 +5294,6 @@
         "Strength": "1",
         "Agility": "1",
         "Wisdom": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
-    "Green Beanie": {
-      "icon": "images\\Premium Helmets\\Green Beanie.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Gem Shop",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Luck": "1",
         "Upgrade Slots": "5"
       },
       "class": "All"
@@ -5530,20 +5398,6 @@
       },
       "class": "All"
     },
-    "Orange Beanie": {
-      "icon": "images\\Premium Helmets\\Orange Beanie.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "4th Anniversary Event",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
     "Paper Bag": {
       "icon": "images\\Premium Helmets\\Paper Bag.png",
       "level_requirement": "1",
@@ -5618,40 +5472,12 @@
       },
       "class": "All"
     },
-    "Reinforced Headband": {
-      "icon": "images\\Premium Helmets\\Reinforced Headband.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Baby Troll",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
     "Shogun Helmet": {
       "icon": "images\\Premium Helmets\\Shogun Helmet.png",
       "level_requirement": "1",
       "sell_price": 1,
       "type": "Premium Helmets",
       "source": "Baby Troll",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
-    "Siege Captain Cap": {
-      "icon": "images\\Premium Helmets\\Siege Captain Cap.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
@@ -5764,20 +5590,6 @@
       },
       "class": "All"
     },
-    "True Crown": {
-      "icon": "images\\Premium Helmets\\True Crown.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Gem Shop",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
     "Umbrella Brim": {
       "icon": "images\\Premium Helmets\\Umbrella Brim.png",
       "level_requirement": "1",
@@ -5798,20 +5610,6 @@
       "sell_price": 1,
       "type": "Premium Helmets",
       "source": "Sprout Spirit",
-      "stats": {
-        "Strength": "1",
-        "Agility": "1",
-        "Wisdom": "1",
-        "Upgrade Slots": "5"
-      },
-      "class": "All"
-    },
-    "Windwalker Hood": {
-      "icon": "images\\Premium Helmets\\Windwalker Hood.png",
-      "level_requirement": "1",
-      "sell_price": 1,
-      "type": "Premium Helmets",
-      "source": "Gem Shop",
       "stats": {
         "Strength": "1",
         "Agility": "1",
