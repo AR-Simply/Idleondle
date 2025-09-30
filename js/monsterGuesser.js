@@ -5,6 +5,9 @@ export async function initMonsterGuesser(options = {}) {
   // NOTE: JSON file in repo is named `idleon_monster.json` (singular)
   await initShared(Object.assign({ dataUrl: '../json/idleon_monster.json', imageBase: '../images' }, options));
 
+  // Twemoji configuration to use jsDelivr for assets (matches the script CDN)
+  const TWEMOJI_OPTS = { base: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/', folder: 'svg', ext: '.svg' };
+
   // Render the emojibox using the current goal's emoji1 and placeholders for emoji2/3.
   try {
     const goal = getGoalItem();
@@ -70,7 +73,7 @@ export async function initMonsterGuesser(options = {}) {
       slot.classList.remove('hidden-initial');
       const q = slot.querySelector('.emoji-q');
       if (q) q.style.display = 'none';
-      try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(inner, { folder: 'svg', ext: '.svg' }); } catch (e) { /* non-fatal */ }
+  try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(inner, TWEMOJI_OPTS); } catch (e) { /* non-fatal */ }
     };
 
     const updateNote = (count) => {
@@ -102,13 +105,13 @@ export async function initMonsterGuesser(options = {}) {
       // When correct, reveal all
       document.addEventListener('guess:correct', () => { reveal(2); reveal(3); reveal(4); if (note) note.style.display = 'none';
         // parse the whole emojibox so all emoji are replaced with Twemoji images
-        try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(box, { folder: 'svg', ext: '.svg' }); } catch (e) { /* non-fatal */ }
+  try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(box, TWEMOJI_OPTS); } catch (e) { /* non-fatal */ }
       });
     } catch (e) { /* non-fatal */ }
   } catch (e) { console.warn('Failed to render emojibox', e); }
 
   // If twemoji is available, parse the initial emojibox so emoji render consistently across systems
-  try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(document.getElementById('emojibox') || document.body, { folder: 'svg', ext: '.svg' }); } catch (e) { /* non-fatal */ }
+  try { if (window.twemoji && typeof window.twemoji.parse === 'function') window.twemoji.parse(document.getElementById('emojibox') || document.body, TWEMOJI_OPTS); } catch (e) { /* non-fatal */ }
 }
 
 // Auto-init when imported directly from the page (mirrors cardGuesser.js behavior)
