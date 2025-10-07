@@ -1,0 +1,427 @@
+{
+  "Maps": {
+    "Blunder Hills": {
+      "icon": "images\\Maps\\blunder hills.png",
+      "world": "Blunder Hills",
+      "enemy": "None",
+      "start": "tr"
+    },
+    "Spore Meadows": {
+      "icon": "images\\Maps\\spore meadows.png",
+      "world": "Blunder Hills",
+      "enemy": "Green Mushroom",
+      "start": "bt"
+    },
+    "Froggy Fields": {
+      "icon": "images\\Maps\\froggy fields.png",
+      "world": "Blunder Hills",
+      "enemy": "Frog",
+      "start": "tr"
+    },
+    "Valley of the Beans": {
+      "icon": "images\\Maps\\valley of beans.png",
+      "world": "Blunder Hills",
+      "enemy": "Bored Bean",
+      "start": "bl"
+    },
+    "Jungle Perimeter": {
+      "icon": "images\\Maps\\jungle perimeter.png",
+      "world": "Blunder Hills",
+      "enemy": "Slime",
+      "start": "tl"
+    },
+    "Winding Willows": {
+      "icon": "images\\Maps\\winding willows.png",
+      "world": "Blunder Hills",
+      "enemy": "Baby Boa",
+      "start": "bl"
+    },
+    "Vegetable Patch": {
+      "icon": "images\\Maps\\vegetable patch.png",
+      "world": "Blunder Hills",
+      "enemy": "Carrotman",
+      "start": "br"
+    },
+    "Birch Enclave": {
+      "icon": "images\\Maps\\birch enclave.png",
+      "world": "Blunder Hills",
+      "enemy": "Red Mushroom",
+      "start": "tl"
+    },
+    "Forest Outskirts": {
+      "icon": "images\\Maps\\forest outskirts.png",
+      "world": "Blunder Hills",
+      "enemy": "Glublin",
+      "start": "tl"
+    },
+    "Encroaching Forest Villas": {
+      "icon": "images\\Maps\\forest villas.png",
+      "world": "Blunder Hills",
+      "enemy": "Wode Board",
+      "start": "bl"
+    },
+    "Tucked Away": {
+      "icon": "images\\Maps\\tucked away.png",
+      "world": "Blunder Hills",
+      "enemy": "Gigafrog",
+      "start": "bl"
+    },
+    "The Base of the Bark": {
+      "icon": "images\\Maps\\base of the bark.png",
+      "world": "Blunder Hills",
+      "enemy": "Walking Stick",
+      "start": "tl"
+    },
+    "Hollowed Trunk": {
+      "icon": "images\\Maps\\hollowed trunk.png",
+      "world": "Blunder Hills",
+      "enemy": "Nutto",
+      "start": "tr"
+    },
+    "Where the Branches End": {
+      "icon": "images\\Maps\\wheere the branches end.png",
+      "world": "Blunder Hills",
+      "enemy": "Wood Mushroom",
+      "start": "br"
+    },
+    "The Roots": {
+      "icon": "images\\Maps\\the roots.png",
+      "world": "Blunder Hills",
+      "enemy": "Nutto",
+      "start": "tr"
+    },
+    "The Office": {
+      "icon": "images\\Maps\\the office.png",
+      "world": "Blunder Hills",
+      "enemy": "Dr Defecaus",
+      "start": "br"
+    },
+    "Rats Nest": {
+      "icon": "images\\Maps\\rats nest.png",
+      "world": "Blunder Hills",
+      "enemy": "Rat",
+      "start": "tr"
+    },
+    "Poopy Sewers": {
+      "icon": "images\\Maps\\poppy sewers.png",
+      "world": "Blunder Hills",
+      "enemy": "Poop",
+      "start": "bl"
+    },
+    "Meel's Crypt": {
+      "icon": "images\\Maps\\mells crypt.png",
+      "world": "Blunder Hills",
+      "enemy": "Boop",
+      "start": "tr"
+    },
+    "Tunnels Entrance": {
+      "icon": "images\\Maps\\tunnels entrance.png",
+      "world": "Blunder Hills",
+      "enemy": "None",
+      "start": "bl"
+    },
+    "Grand Owl Perch": {
+      "icon": "images\\Maps\\owl perch.png",
+      "world": "Blunder Hills",
+      "enemy": "None",
+      "start": "tr"
+    },
+
+    "YumYum Grotto": {
+      "icon": "images\\Maps\\yumyum grotto.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "None",
+      "start": "bl"
+    },
+    "Jar Bridge": {
+      "icon": "images\\Maps\\jar bridge.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Sandy Pot",
+      "start": "tl"
+    },
+    "The Mimic Hole": {
+      "icon": "images\\Maps\\the mimic hole.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Mimic",
+      "start": "tr"
+    },
+    "Dessert Dunes": {
+      "icon": "images\\Maps\\desert dunes.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Crabcake",
+      "start": "br"
+    },
+    "Grandioso Canyon": {
+      "icon": "images\\Maps\\grandioso canyon.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Mafioso",
+      "start": "br"
+    },
+    "Shifty Sandbox": {
+      "icon": "images\\Maps\\shifty sandbox.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Sand Castle",
+      "start": "tl"
+    },
+    "Pincer Plateau": {
+      "icon": "images\\Maps\\pincer plateu.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Pincermin",
+      "start": "br"
+    },
+    "Slamabam Straightaway": {
+      "icon": "images\\Maps\\slamabam.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Mashed Potato",
+      "start": "tr"
+    },
+    "The Ring": {
+      "icon": "images\\Maps\\the ring.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Tyson",
+      "start": "br"
+    },
+    "Up Up Down Down": {
+      "icon": "images\\Maps\\up up down down.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Moonmoon",
+      "start": "tr"
+    },
+    "Sands of Time": {
+      "icon": "images\\Maps\\sands of time.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Sand Giant",
+      "start": "tl"
+    },
+    "Salty Shore": {
+      "icon": "images\\Maps\\salty shore.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "None",
+      "start": "tl"
+    },
+    "Bandit Bob's Hideout": {
+      "icon": "images\\Maps\\bandit bobs hideout.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "None",
+      "start": "tr"
+    },
+    "Djonnuttown": {
+      "icon": "images\\Maps\\djonnuttown.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Snelbie",
+      "start": "tl"
+    },
+    "Efaunts Tomb": {
+      "icon": "images\\Maps\\efaunts tomb.png",
+      "world": "Yum-Yum Desert",
+      "enemy": "Efaunt",
+      "start": "br"
+    },
+
+    "Frostbite Towndra": {
+      "icon": "images\\Maps\\frostbite towndra.png",
+      "world": "Frostbite Tundra",
+      "enemy": "None",
+      "start": "tl"
+    },
+    "Snowfield Outskirts": {
+      "icon": "images\\Maps\\snow field outskirts.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Frost Flake",
+      "start": "tr"
+    },
+    "Steep Sheep Ledge": {
+      "icon": "images\\Maps\\steep sheep ledge.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Sheepie",
+      "start": "tl"
+    },
+    "Refrigeration Station": {
+      "icon": "images\\Maps\\refrigeration station.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Bloque",
+      "start": "br"
+    },
+    "Mamooooth Mountain": {
+      "icon": "images\\Maps\\mamoooth mountain.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Mamooth",
+      "start": "bl"
+    },
+    "Rollin' Tundra": {
+      "icon": "images\\Maps\\rolllin tundra.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Snowman",
+      "start": "tr"
+    },
+    "Signature Slopes": {
+      "icon": "images\\Maps\\signatyre slopes.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Penguin",
+      "start": "tl"
+    },
+    "Thermonuclear Climb": {
+      "icon": "images\\Maps\\thermonuclear climb.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Thermister",
+      "start": "tr"
+    },
+    "Waterlogged Entrance": {
+      "icon": "images\\Maps\\waterlogged entrance.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Quenchie",
+      "start": "bl"
+    },
+    "Cryo Catacombs": {
+      "icon": "images\\Maps\\cryo catacombs.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Cryosnake",
+      "start": "br"
+    },
+    "Overpass of Sound": {
+      "icon": "images\\Maps\\overpass of sound.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Bop Box",
+      "start": "tl"
+    },
+    "Crystal Basecamp": {
+      "icon": "images\\Maps\\crystal basecamp.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Neyeptune",
+      "start": "bl"
+    },
+    "The Stache Split": {
+      "icon": "images\\Maps\\the stache split.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Sir Stache",
+      "start": "tl"
+    },
+    "Wam Wonderland": {
+      "icon": "images\\Maps\\wam wonderland.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Dedotated Ram",
+      "start": "tl"
+    },
+    "Trappers Folly": {
+      "icon": "images\\Maps\\trappers folly.png",
+      "world": "Frostbite Tundra",
+      "enemy": "None",
+      "start": "tr"
+    },
+    "Equinox Valley": {
+      "icon": "images\\Maps\\equinox valley.png",
+      "world": "Frostbite Tundra",
+      "enemy": "None",
+      "start": "bl"
+    },
+    "Hell Hath Frozen Over": {
+      "icon": "images\\Maps\\hell hath frozen over.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Bloodbone",
+      "start": "br"
+    },
+    "Chizoar's Cavern": {
+      "icon": "images\\Maps\\chiozars cavern.png",
+      "world": "Frostbite Tundra",
+      "enemy": "Chizoar",
+      "start": "bl"
+    },
+
+    "Outer World Town": {
+      "icon": "images\\Maps\\outer world town.png",
+      "world": "Hyperion Nebula",
+      "enemy": "None",
+      "start": "bl"
+    },
+    "Donut Drive-In": {
+      "icon": "images\\Maps\\donut driveway.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Donut",
+      "start": "br"
+    },
+    "TV Outpost": {
+      "icon": "images\\Maps\\tv outpost.png",
+      "world": "Hyperion Nebula",
+      "enemy": "TV",
+      "start": "br"
+    },
+    "Jelly Cube Bridge": {
+      "icon": "images\\Maps\\jelly cube bridge.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Gelatinous Cuboid",
+      "start": "tl"
+    },
+    "Spaceway Raceway": {
+      "icon": "images\\Maps\\spaceway raceway.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Purp Mushroom",
+      "start": "bl"
+    },
+    "Wurm Highway": {
+      "icon": "images\\Maps\\wurm highway.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Flying Worm",
+      "start": "tr"
+    },
+    "Flamboyant Bayou": {
+      "icon": "images\\Maps\\flamboyant bayou.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Flombeige",
+      "start": "tr"
+    },
+    "Cocoa Tunnel": {
+      "icon": "images\\Maps\\cocoa tunnel.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Choccie",
+      "start": "tl"
+    },
+    "Outskirts of Fallstar Isle": {
+      "icon": "images\\Maps\\outskirts of fallstar isle.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Genie",
+      "start": "br"
+    },
+    "Shelled Shores": {
+      "icon": "images\\Maps\\shelled shores.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Clammie",
+      "start": "tl"
+    },
+    "Standstill Plains": {
+      "icon": "images\\Maps\\standstill plains.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Biggole Wurm",
+      "start": "bl"
+    },
+    "Untravelled Octopath": {
+      "icon": "images\\Maps\\untravelled octopath.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Octodar",
+      "start": "bl"
+    },
+    "The Rift": {
+      "icon": "images\\Maps\\the rift.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Various",
+      "start": "br"
+    },
+    "Enclave of Eyes": {
+      "icon": "images\\Maps\\enclave of eyes.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Stilted Seeker",
+      "start": "tl"
+    },
+    "Enclave of La Troll": {
+      "icon": "images\\Maps\\enclave of la troll.png",
+      "world": "Hyperion Nebula",
+      "enemy": "Massive Troll",
+      "start": "br"
+    },
+    "End of the Road": {
+      "icon": "images\\Maps\\end of the road.png",
+      "world": "Blunder Hills",
+      "enemy": "Amarok",
+      "start": "tr"
+    }
+  }
+}

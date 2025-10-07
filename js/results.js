@@ -1,5 +1,6 @@
 // js/results.js
 // Render a Daily Results box by reading cookies created by shared.js
+import { initShared } from './shared.js';
 
 // Centralized, easy-to-extend game ordering and labels
 const GAME_DISPLAY_ORDER = [
@@ -10,6 +11,7 @@ const GAME_DISPLAY_ORDER = [
 	'monster',     // Monster Guesser
 	'hard_monster', // HARD Monster Guesser
 	'meal',        // Meal Guesser
+	'map',        // Map Guesser
 	'pack'         // Pack Guesser
 ];
 const GAME_LABELS = {
@@ -20,6 +22,7 @@ const GAME_LABELS = {
 	monster: 'Monster Guesser',
 	hard_monster: 'HARD Monster Guesser',
 	meal: 'Meal Guesser',
+	map: 'Map Guesser',
 	pack: 'Pack Guesser'
 };
 const normKey = (s) => String(s || '').toLowerCase().replace(/\s+/g, '_');
@@ -237,42 +240,7 @@ function hasWinToday(game) {
 	} catch (e) { return false; }
 }
 
-function markPageSwitcherCompletion() {
-	const btnItems = document.getElementById('btn-items');
-	const btnCards = document.getElementById('btn-cards');
-	const btnMonster = document.getElementById('btn-monster');
-	const btnMeal = document.getElementById('btn-meal');
-	const btnPack = document.getElementById('btn-pack');
-	// Item (normal or hard)
-	if (btnItems && (hasWinToday('item'))) {
-		btnItems.classList.add('complete');
-		btnItems.style.background = '#2ecc71';
-		btnItems.style.borderColor = '#2ecc71';
-	}
-	// Card (normal or hard)
-	if (btnCards && (hasWinToday('card'))) {
-		btnCards.classList.add('complete');
-		btnCards.style.background = '#2ecc71';
-		btnCards.style.borderColor = '#2ecc71';
-	}
-	// Monster
-	if (btnMonster && hasWinToday('monster')) {
-		btnMonster.classList.add('complete');
-		btnMonster.style.background = '#2ecc71';
-		btnMonster.style.borderColor = '#2ecc71';
-	}
-	// Meal
-	if (btnMeal && hasWinToday('meal')) {
-		btnMeal.classList.add('complete');
-		btnMeal.style.background = '#2ecc71';
-		btnMeal.style.borderColor = '#2ecc71';
-	}
-	if (btnPack && hasWinToday('pack')) {
-		btnPack.classList.add('complete');
-		btnPack.style.background = '#2ecc71';
-		btnPack.style.borderColor = '#2ecc71';
-	}
-}
+// Page switcher completion is handled centrally in js/shared.js now; remove results-only special-casing
 
 function capitalizeWords(s){ return String(s||'').split(' ').map(w=> w ? w[0].toUpperCase()+w.slice(1) : '').join(' ').trim(); }
 
@@ -368,6 +336,10 @@ function showToast(msg) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+	// Initialize shared UI so the page-switcher and flame are rendered/updated
+	// in the same way as other pages. We still keep the local consent normalization
+	// below for compatibility, but calling initShared ensures shared page rendering.
+	try { initShared({ imageBase: '../images', skipDataLoad: true }).catch?.(()=>{}); } catch(e) { /* non-fatal */ }
 	// Normalize consent cookie here as results page may not import shared.js
 	try {
 		const get = (name) => {

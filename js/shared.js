@@ -259,6 +259,8 @@ function recordWin(game) {
   setCookie('idleondle_last_win', JSON.stringify(payload), 365);
   const safeName = safeLower(String(game || 'unknown').replace(/[^a-z0-9_-]+/gi, '_'));
   setCookie(`idleondle_win_${safeName}`, JSON.stringify({ time: now, guesses }), 365);
+  // Increment streak only for the first completed game of the day across all pages
+  try { incrementStreakIfFirstWinToday(); } catch (e) { /* non-fatal */ }
   } catch (e) { /* non-fatal */ }
 }
 
@@ -324,9 +326,10 @@ function detectGameFromPath() {
   if (p.includes('hardcardguesser') || p.includes('hardcard')) return 'hard_card';
   if (p.includes('card')) return 'card';
   if (p.includes('monsterguesser') || p.includes('monster')) return 'monster';
+  if (p.includes('/map/') || p.includes('mapguesser') || p.includes('/map')) return 'map';
   if (p.includes('harditemguesser') || p.includes('harditem')) return 'hard_item';
-  // New: meal guesser page
-  if (p.includes('mealguesser')) return 'meal';
+  // New: meal guesser page - detect both 'mealguesser' and pages inside /meal/ folder
+  if (p.includes('mealguesser') || p.includes('/meal/') || p.includes('/meal')) return 'meal';
   // New: pack guesser page
   if (p.includes('/pack/')) return 'pack';
     return 'item';
@@ -756,9 +759,6 @@ function notifyGoalGuessed(it) {
   recordWin(game, Number(guessCount) || 0);
   } catch (e) { /* non-fatal */ }
 
-  // Increment streak only for the first completed game of the day across all pages
-  try { incrementStreakIfFirstWinToday(); } catch (e) { /* non-fatal */ }
-
   goalModalTimeout = setTimeout(() => { showGoalModal(it); goalModalTimeout = null; }, 1000);
 }
 
@@ -783,28 +783,37 @@ export async function initShared(config = {}) {
     }
   } catch (e) { /* non-fatal */ }
 
-  await loadItems();
-  // If requested, exclude entries flagged in source JSON
-  try {
-    if (config && config.exclude && Array.isArray(items) && items.length) {
-      const before = items.length;
-      const isYes = (v) => {
-        if (v === true || v === 1) return true;
-        const s = (v == null ? '' : String(v)).trim().toLowerCase();
-        return s === 'yes' || s === 'true' || s === '1';
-      };
-      items = items.filter(it => {
-        const flag = it?.raw?.exclude ?? it?.raw?.Excluded ?? it?.raw?.EXCLUDE;
-        return !isYes(flag);
-      });
-      const removed = before - items.length;
-      console.log(`[shared] exclude filter active: removed ${removed} of ${before}; remaining ${items.length}`);
-      if (items.length === 0) {
-        console.warn('[shared] exclude filter removed all items; game will have no candidates until data changes.');
+  // Allow callers to skip loading the full JSON dataset when they only need
+  // shared UI elements (page switcher, flame/streak). This avoids noisy fetch
+  // errors on pages like /results/ which don't use the dataset.
+  if (!config.skipDataLoad) {
+    await loadItems();
+    // If requested, exclude entries flagged in source JSON
+    try {
+      if (config && config.exclude && Array.isArray(items) && items.length) {
+        const before = items.length;
+        const isYes = (v) => {
+          if (v === true || v === 1) return true;
+          const s = (v == null ? '' : String(v)).trim().toLowerCase();
+          return s === 'yes' || s === 'true' || s === '1';
+        };
+        items = items.filter(it => {
+          const flag = it?.raw?.exclude ?? it?.raw?.Excluded ?? it?.raw?.EXCLUDE;
+          return !isYes(flag);
+        });
+        const removed = before - items.length;
+        console.log(`[shared] exclude filter active: removed ${removed} of ${before}; remaining ${items.length}`);
+        if (items.length === 0) {
+          console.warn('[shared] exclude filter removed all items; game will have no candidates until data changes.');
+        }
       }
-    }
-  } catch (e) { console.warn('Exclude filtering failed', e); }
-  selectGoalItem();
+    } catch (e) { console.warn('Exclude filtering failed', e); }
+    selectGoalItem();
+  } else {
+    // Skip loading; mark as not loading so UI doesn't show 'loading' state
+    loadingItems = false;
+    items = items || [];
+  }
 
   // Render page switch buttons (inserted after the site title). Use imageBase if present.
   function renderPageSwitch(imageBase) {
@@ -835,6 +844,7 @@ export async function initShared(config = {}) {
   const cardHref = '../card/';
   const monsterHref = '../monster/';
   const mealHref = '../meal/';
+  const mapHref = '../map/';
   const packHref = '../pack/';
 
       // Ensure the switch has the three expected buttons. If static HTML provided
@@ -852,9 +862,25 @@ export async function initShared(config = {}) {
           }
           return existingBtn;
         }
-        const btn = makeBtn(href, id, imgSrc, alt);
-        wrap.appendChild(btn);
-        return btn;
+          const btn = makeBtn(href, id, imgSrc, alt);
+          // If the .page-switch already exists in the HTML, insert new buttons
+          // according to a canonical order so the layout is consistent across pages.
+          try {
+            // Desired canonical order: map should be second-to-last (before pack)
+            const canonical = ['btn-items','btn-cards','btn-monster','btn-meal','btn-map','btn-pack'];
+            // Find the next button in the canonical sequence that already exists in the DOM
+            const myIndex = canonical.indexOf(id);
+            let inserted = false;
+            if (myIndex !== -1) {
+              for (let i = myIndex + 1; i < canonical.length; i++) {
+                const nextId = canonical[i];
+                const nextEl = wrap.querySelector('#' + nextId);
+                if (nextEl) { wrap.insertBefore(btn, nextEl); inserted = true; break; }
+              }
+            }
+            if (!inserted) wrap.appendChild(btn);
+          } catch (e) { wrap.appendChild(btn); }
+          return btn;
       };
 
   // Only ensure the original three buttons (items, cards, monster). The Meal button
@@ -864,6 +890,7 @@ export async function initShared(config = {}) {
   ensureBtn(indexHref, 'btn-items', '../images/Helmets/Copper Helmet.png', 'Item Guesser');
   ensureBtn(cardHref, 'btn-cards', '../images/card.png', 'Card Guesser');
   ensureBtn(monsterHref, 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser');
+  ensureBtn(mapHref, 'btn-map', '../images/portal.png', 'Map Guesser');
   ensureBtn(mealHref, 'btn-meal', '../images/Spice/36px-Jungle_Spice.png', 'Meal Guesser');
   ensureBtn(packHref, 'btn-pack', '../images/Gem.png', 'Pack Guesser');
   // NOTE: meal button intentionally not auto-created anymore.
@@ -926,6 +953,7 @@ export async function initShared(config = {}) {
   const _href = (location.href || '').toLowerCase();
   const isCard = _pathname.endsWith('cardguesser.html') || _href.includes('cardguesser.html') || _href.includes('card'); // Do something about hard card
   const isMonster = _href.includes('/monster/') || _href.endsWith('/monster') || _pathname.endsWith('monsterguesser.html') || _href.includes('monsterguesser.html');
+  const isMap = _href.includes('/map/') || _href.endsWith('/map') || _pathname.includes('/map/') || _href.includes('mapguesser');
   const isMeal = _pathname.endsWith('mealguesser.html') || _href.includes('mealguesser.html') || _href.includes('meal');
   const isPack = _pathname.endsWith('/pack/index.html') || _href.includes('/pack/') || _href.includes('packguesser.html') || /(^|\/)pack(\/$|$)/.test(_pathname);
   // Recompute hardType for later decisions (keep consistent with earlier detection)
@@ -934,16 +962,17 @@ export async function initShared(config = {}) {
     ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('hardcard')) ? 'card' :
     (((location.pathname || '').includes('/hardmonster/') || (location.href || '').includes('hardmonster') || (function(){ try { return detectGameFromPath() === 'hard_monster'; } catch(e){ return false; } })()) ? 'monster' : null);
   const isHardAny = !!hardType;
-  const isItems = !isCard && !isMonster && !isMeal && !isPack;
+  const isItems = !isCard && !isMonster && !isMeal && !isPack && !isMap;
 
   const btnItems = document.getElementById('btn-items');
   const btnCards = document.getElementById('btn-cards');
   const btnMonster = document.getElementById('btn-monster');
   const btnMeal = document.getElementById('btn-meal');
+  const btnMap = document.getElementById('btn-map');
   const btnPack = document.getElementById('btn-pack');
 
   // reset classes/styles
-  [btnItems, btnCards, btnMonster, btnMeal, btnPack].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
+  [btnItems, btnCards, btnMonster, btnMeal, btnMap, btnPack].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
 
   // Mark hard page button red depending on hard type
   if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
@@ -956,6 +985,7 @@ export async function initShared(config = {}) {
   if (hardType !== 'item' && btnItems && hasWinToday('item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
     if (hardType !== 'card' && btnCards && hasWinToday('card')) { btnCards.classList.add('complete'); btnCards.style.background = '#2ecc71'; }
   if (hardType !== 'monster' && btnMonster && hasWinToday('monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
+  if (btnMap && hasWinToday('map')) { btnMap.classList.add('complete'); btnMap.style.background = '#2ecc71'; }
   if (btnMeal && hasWinToday('meal')) { btnMeal.classList.add('complete'); btnMeal.style.background = '#2ecc71'; }
   if (btnPack && hasWinToday('pack')) { btnPack.classList.add('complete'); btnPack.style.background = '#2ecc71'; }
     // Hard-item completed may be tracked under 'hard_item'
@@ -971,6 +1001,7 @@ export async function initShared(config = {}) {
   if (isItems && btnItems && hardType !== 'item') { btnItems.classList.add('active'); btnItems.style.background = '#f1c40f'; }
   if (isCard && btnCards && hardType !== 'card') { btnCards.classList.add('active'); btnCards.style.background = '#f1c40f'; }
   if (isMonster && btnMonster && hardType !== 'monster') { btnMonster.classList.add('active'); btnMonster.style.background = '#f1c40f'; }
+  if (isMap && btnMap) { btnMap.classList.add('active'); btnMap.style.background = '#f1c40f'; }
   if (isMeal && btnMeal) { btnMeal.classList.add('active'); btnMeal.style.background = '#f1c40f'; }
   if (isPack && btnPack) { btnPack.classList.add('active'); btnPack.style.background = '#f1c40f'; }
   // Ensure hard-mode buttons remain red (override) when detected
@@ -985,7 +1016,11 @@ export async function initShared(config = {}) {
   try {
     const sideBox = document.getElementById('sideBox') || document.querySelector('.side-box');
     const switcher = document.querySelector('.page-switch');
-    const isResultsPage = /results\.html$/i.test(location.pathname);
+  // Consider results.html or any path under the /results/ folder (for example
+  // /results/, /results/index.html). This ensures pages inside that folder
+  // are treated as the results page and the flame is not placed inside the
+  // page-switch (the results page renders its own flame below the content).
+  const isResultsPage = /results\.html$/i.test(location.pathname) || /\/results(\/|$)/i.test(location.pathname);
     // Only reposition next to page switcher when switcher exists and not results page
     if (!document.getElementById('flameIconImg')) {
       // Create flame structure once

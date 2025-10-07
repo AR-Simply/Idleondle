@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <title>Idleondle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Allow search engines to index this page -->
-  <link rel="canonical" href="https://www.idleondle.com/meal/">
-  <meta name="description" content="Deduce today's IdleOn meal from recipe and spice clues in Idleondle Meal Guesser." />
+  <!-- Allow indexing: removed previous noindex directive -->
+  <link rel="canonical" href="https://www.idleondle.com/card/">
+  <meta name="description" content="Guess the daily IdleOn map in as few tries as possible in Idleondle's Map Guesser." />
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png">
   <link rel="apple-touch-icon" href="../images/icon.png">
@@ -14,34 +14,34 @@
   <meta name="google-adsense-account" content="ca-pub-4897247326207368">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4897247326207368" crossorigin="anonymous"></script>
 </head>
-<body data-game="meal">
+<body>
   <div class="center">
   <a href="../" aria-label="Idleondle Home" style="display:inline-block;line-height:0;">
     <img src="../images/title.png" alt="Idleondle title" class="site-title" />
   </a>
   <!-- Static page switcher -->
   <div class="page-switch">
-    <a href="../index.html" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
+    <a href="../" id="btn-items" class="page-btn page-btn-left" title="Item Guesser">
       <img src="../images/Helmets/Copper Helmet.png" alt="Item" />
     </a>
-    <a href="cardGuesser.html" id="btn-cards" class="page-btn" title="Card Guesser">
+    <a href="../card/" id="btn-cards" class="page-btn" title="Card Guesser">
       <img src="../images/card.png" alt="Cards" />
     </a>
-  <a href="/monster/" id="btn-monster" class="page-btn" title="Monster Guesser">
+    <a href="../monster/" id="btn-monster" class="page-btn" title="Monster Guesser">
       <img src="../images/Enemies/carrotman-6_thumb.png" alt="Monster" />
     </a>
-      <a href="mealGuesser.html" id="btn-meal" class="page-btn page-btn-right" title="Meal Guesser">
-        <img src="../images/Spice/36px-Jungle_Spice.png" alt="Meal" />
-      </a>
+    <a href="../meal/" id="btn-meal" class="page-btn page-btn-right" title="Meal Guesser">
+      <img src="../images/Spice/36px-Jungle_Spice.png" alt="Meal" />
+    </a>
   </div>
 
     <div class="top-row">
       <div class="guess-box combo-guess" id="guessBox">
-        <div class="guess-title">Guess today's meal!</div>
+        <div class="guess-title">Guess today's Map!</div>
         <div class="guess-actions">
 
-              <div class="clue-wrap">
-            <button id="guessBtn2" class="guess-btn" aria-label="Meal effect clue" disabled>Meal effect clue</button>
+          <div class="clue-wrap">
+            <button id="guessBtn2" class="guess-btn" aria-label="Category clue">Enemy Clue</button>
             <div class="clue-note" id="note2"></div>
           </div>
         </div>
@@ -56,7 +56,7 @@
                 <p><strong>IdleOn</strong> is a registered trademark of Lavaflame2. <strong>Idleondle</strong> is an independent project and is not affiliated with, endorsed by, or sponsored by Lavaflame2, IdleOn or any of its subsidiaries. All trademarks, service marks, trade names, and logos referenced herein remain the property of their respective owners. Any use of these names or marks is solely for descriptive purposes and does not imply any association or partnership.</p>
 
                 <p>Idleondle is inspired by games like <a href="https://www.nytimes.com/games/wordle/index.html?from=onepiecedle.net_with_love" target="_blank" rel="noopener">Wordle</a> and <a href="https://onepiecedle.net/" target="_blank" rel="noopener">Onepiecedle</a>.</p>
-            
+
                 <p>The background, all items, icons and related properties are from <a href="https://store.steampowered.com/app/1476970/IdleOn__The_Idle_RPG/" target="_blank" rel="noopener">IdleOn</a>. Button icons are from <a href="https://www.flaticon.com/" target="_blank" rel="noopener">Flaticon</a>.</p>
 
                 <h3>FEEDBACK/QUESTIONS</h3>
@@ -84,7 +84,7 @@
 
     <div class="combo" id="combo">
       <div class="input-wrap">
-        <input id="search" type="text" placeholder="Type the name of a meal..." autocomplete="off" />
+        <input id="search" type="text" placeholder="Type the name of a card..." autocomplete="off" />
       </div>
       <div class="dropdown" id="dropdown">
         <ul class="results" id="results"></ul>
@@ -98,27 +98,28 @@
         <button class="goal-close" id="goalClose" aria-label="Close">✕</button>
         <h2 class="goal-title">YOU FOUND IT!</h2>
         <div class="goal-body">
-          <img id="goalIcon" class="goal-icon" src="" alt="goal icon" />
+          <img id="goalIcon" class="goal-icon" src="" alt="goal icon" style="width: 300px;" />
           <div id="goalName" class="goal-name"></div>
         </div>
         <div class="goal-guesses">Number of guesses: <strong id="goalGuesses">0</strong></div>
         <div class="goal-footer">
-          <div class="goal-footer-text">Come back for a new meal in...</div>
+          <div class="goal-footer-text">Come back for a new card in...</div>
           <div class="goal-timer-wrap"><span id="goalTimer" class="goal-timer">00:00:00</span></div>
         </div>
         <!-- Add action button linking to Monster Guesser (carrotman icon) -->
         <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
-                   </div>
 
-          <a href="/map/" class="guess-btn" id="toMapBtn" aria-label="Map Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-            <img src="/images/portal.png" alt="portal" style="width:22px;height:22px;object-fit:contain;" />
+          <a href="/pack/" class="guess-btn" id="toPackBtn" aria-label="Pack Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+            <img src="../images/Gem.png" alt="gem" style="width:22px;height:22px;object-fit:contain;" />
             <span style="color:var(--text);font-weight:800;font-size:15px;">Next game</span>
           </a>
-                <a href="/results/" class="guess-btn results-btn-orange" id="resultsbtn" aria-label="View your past daily results" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:18px;width:68%;">
-                  <img src="/images/icon.png" alt="Results icon" style="width:24px;height:24px;object-fit:contain;" />
-                  <span style="font-weight:900;font-size:15px;">See Your Results</span>
-                </a>
-        </div>
+      
+
+              </div>
+          <a href="/results/" class="guess-btn results-btn-orange" id="resultsbtn" aria-label="View your past daily results" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:18px;width:68%;">
+            <img src="/images/icon.png" alt="Results icon" style="width:24px;height:24px;object-fit:contain;" />
+            <span style="font-weight:900;font-size:15px;">See Your Results</span>
+          </a>
       </div>
     </div>
 
@@ -130,9 +131,9 @@
         <div class="goal-body">
           <div style="text-align:left; font-size:14px; color:#111;">
             <p>Daily guessing games from the game "IdleOn". Games changes at midnight in your timezone.</p>
-            <p>Guess the daily meal based on the recipe and outlines of the spices needed. The recipe is the best possible according to the Idleon Wiki. It can be either by Fire Time, Luck or earliest possible. Guesses reveal outlines of more spices.</p>
+            <p>The map zooms out slightly for each guess. When you guess correctly, the map will be fully revealed.</p>
            
-            <p>How fast can you discover the meal?</p>
+            <p>How fast can you discover what map it is?</p>
             
             <p><strong>Good luck and have fun!</strong></p>
           </div>
@@ -250,7 +251,7 @@
   </div>
 
   <script type="module">
-    import '../js/mealGuesser.js';
+    import '../js/mapGuesser.js';
   </script>
   <script>
     (function(){
@@ -265,21 +266,7 @@
     })();
   </script>
   <script>
-    // Define local helpers if not provided by shared scripts
-    function setCookie(name, value, days) { const d = new Date(); d.setTime(d.getTime() + (days*86400000)); document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + d.toUTCString() + '; path=/'; }
-    function loadUmami() { if (document.querySelector('script[data-website-id]')) return; const s = document.createElement('script'); s.defer = true; s.src = 'https://cloud.umami.is/script.js'; s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3'); document.head.appendChild(s); }
-  function setConsentYes() { setCookie('new_umami_consent','yes',365); loadUmami(); }
-  function setConsentNo() { setCookie('new_umami_consent','no',365); }
-    (function(){
-      const pa = document.getElementById('privacyAccept');
-      const pd = document.getElementById('privacyDecline');
-      const pm = document.getElementById('privacyModal');
-      if (pa) pa.addEventListener('click', function(){ setConsentYes(); if (pm) pm.setAttribute('aria-hidden','true'); });
-      if (pd) pd.addEventListener('click', function(){ setConsentNo(); if (pm) pm.setAttribute('aria-hidden','true'); });
-    })();
-  </script>
-  <script>
-    // Minimal modal wiring for Privacy & Terms on this page
+    // Minimal modal wiring for Privacy & Terms on this page (no shared.js here)
     (function(){
       const privacyLink = document.getElementById('privacyLink');
       const privacyModal = document.getElementById('privacyModal');
@@ -295,6 +282,20 @@
       if (termsLink && termsModal) termsLink.addEventListener('click', e => { e.preventDefault(); open(termsModal); });
       if (termsClose && termsModal) termsClose.addEventListener('click', () => close(termsModal));
       if (termsModal) termsModal.addEventListener('click', e => { if (e.target === termsModal) close(termsModal); });
+    })();
+  </script>
+  <script>
+    // Define local helpers if not provided by shared scripts
+    function setCookie(name, value, days) { const d = new Date(); d.setTime(d.getTime() + (days*86400000)); document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + d.toUTCString() + '; path=/'; }
+    function loadUmami() { if (document.querySelector('script[data-website-id]')) return; const s = document.createElement('script'); s.defer = true; s.src = 'https://cloud.umami.is/script.js'; s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3'); document.head.appendChild(s); }
+  function setConsentYes() { setCookie('new_umami_consent','yes',365); loadUmami(); }
+  function setConsentNo() { setCookie('new_umami_consent','no',365); }
+    (function(){
+      const pa = document.getElementById('privacyAccept');
+      const pd = document.getElementById('privacyDecline');
+      const pm = document.getElementById('privacyModal');
+      if (pa) pa.addEventListener('click', function(){ setConsentYes(); if (pm) pm.setAttribute('aria-hidden','true'); });
+      if (pd) pd.addEventListener('click', function(){ setConsentNo(); if (pm) pm.setAttribute('aria-hidden','true'); });
     })();
   </script>
   

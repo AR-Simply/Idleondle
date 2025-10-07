@@ -409,6 +409,43 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   pointer-events: auto; /* capture mouse events so the underlying image can't be directly interacted with */
 }
 
+/* Map-specific prominent icon: wider than the card variant so it doesn't conflict visually */
+.daily-map {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+  /* 50% wider than .daily-card (360px -> 540px) */
+  width: 540px;
+  /* Let height follow image's intrinsic aspect so overlay matches image when unscaled */
+  height: auto;
+  padding: 3px;
+  background: var(--border);
+  border-radius: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.daily-map-img {
+  display: block; /* avoid inline-gap and baseline issues */
+  width: 100%;
+  height: auto; /* match container width and keep aspect */
+  object-fit: contain;
+  border-radius: 12px;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.daily-map-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  border-radius: 12px;
+  z-index: 2;
+  pointer-events: auto;
+}
+
 /* removed: no responsive adjustments for .daily-card; it keeps its desktop size */
 .combo .input-wrap {
   display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px;
