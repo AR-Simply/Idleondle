@@ -430,7 +430,9 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
 }
 .daily-map-img {
   display: block; /* avoid inline-gap and baseline issues */
-  width: 100%;
+  /* Use intrinsic sizing with a max cap to avoid transform/layout issues in Firefox */
+  width: auto;
+  max-width: 100%;
   height: auto; /* match container width and keep aspect */
   object-fit: contain;
   border-radius: 12px;
@@ -439,6 +441,11 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   /* Ensure transforms scale around the element correctly in Firefox */
   transform-origin: center center;
   transform-box: fill-box;
+  /* Rendering hints to reduce Firefox painting artifacts when transformed */
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  contain: paint;
 }
 .daily-map-overlay {
   position: absolute;
