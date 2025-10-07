@@ -30,7 +30,10 @@ function setMapScale(scale) {
     if (!_mapImg) return;
     _currentScale = Number(scale) || 1;
     _mapImg.style.transition = 'transform 320ms ease';
-    _mapImg.style.transform = `scale(${_currentScale})`;
+    // Preserve the centering translate used in CSS (translate(-50%,-50%)) so
+    // scaling does not remove the centering and shift the image to one side.
+    // Compose translate + scale into the transform property.
+    _mapImg.style.transform = `translate(-50%, -50%) scale(${_currentScale})`;
   } catch (e) { console.warn('setMapScale failed', e); }
 }
 
