@@ -418,8 +418,8 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   margin: 10px 0;
   /* 50% wider than .daily-card (360px -> 540px) */
   width: 540px;
-  /* Let height follow image's intrinsic aspect so overlay matches image when unscaled */
-  height: auto;
+  /* Use a fixed frame similar to .daily-card so transforms are predictable across browsers */
+  height: 360px;
   padding: 3px;
   background: var(--border);
   border-radius: 15px;
@@ -429,11 +429,9 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   z-index: 1;
 }
 .daily-map-img {
-  display: block; /* avoid inline-gap and baseline issues */
-  /* Use intrinsic sizing with a max cap to avoid transform/layout issues in Firefox */
-  width: auto;
-  max-width: 100%;
-  height: auto; /* match container width and keep aspect */
+  /* Fill the frame like .daily-card to keep behavior consistent across browsers */
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: 12px;
   background: transparent !important;
@@ -459,21 +457,17 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
 /* Responsive adjustments: on small screens make the map narrower and limit height */
 @media (max-width: 600px) {
   .daily-map {
-    width: min(92%, 420px); /* keep some margin on very small screens */
+    width: min(92%, 420px);
+    height: min(56vh, 300px); /* scale frame down on small screens */
     padding: 6px;
   }
-  .daily-map-img {
-    width: 100%;
-    height: auto;
-    max-height: 56vh; /* avoid occupying whole viewport on mobile */
-    object-fit: contain;
-  }
+  .daily-map-img { width: 100%; height: 100%; object-fit: contain; }
 }
 
 /* Extra conservative cap for very narrow viewports (small phones) */
 @media (max-width: 380px) {
-  .daily-map { width: min(94%, 360px); }
-  .daily-map-img { max-height: 48vh; }
+  .daily-map { width: min(94%, 360px); height: min(52vh, 280px); }
+  .daily-map-img { width: 100%; height: 100%; }
 }
 
 /* removed: no responsive adjustments for .daily-card; it keeps its desktop size */
