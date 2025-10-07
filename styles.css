@@ -436,6 +436,9 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   border-radius: 12px;
   background: transparent !important;
   box-shadow: none !important;
+  /* Ensure transforms scale around the element correctly in Firefox */
+  transform-origin: center center;
+  transform-box: fill-box;
 }
 .daily-map-overlay {
   position: absolute;
@@ -444,6 +447,26 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   border-radius: 12px;
   z-index: 2;
   pointer-events: auto;
+}
+
+/* Responsive adjustments: on small screens make the map narrower and limit height */
+@media (max-width: 600px) {
+  .daily-map {
+    width: min(92%, 420px); /* keep some margin on very small screens */
+    padding: 6px;
+  }
+  .daily-map-img {
+    width: 100%;
+    height: auto;
+    max-height: 56vh; /* avoid occupying whole viewport on mobile */
+    object-fit: contain;
+  }
+}
+
+/* Extra conservative cap for very narrow viewports (small phones) */
+@media (max-width: 380px) {
+  .daily-map { width: min(94%, 360px); }
+  .daily-map-img { max-height: 48vh; }
 }
 
 /* removed: no responsive adjustments for .daily-card; it keeps its desktop size */
