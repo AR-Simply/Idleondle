@@ -716,7 +716,9 @@ function updateClueState() {
             let catLabel = 'Category';
             try {
               const g = typeof detectGameFromPath === 'function' ? detectGameFromPath() : '';
+              // On map pages the second clue reveals the enemy, not a category
               if (g === 'meal') catLabel = 'Meal effect';
+              if (g === 'map' || g === 'hard_map') catLabel = 'Enemy';
             } catch (e) { /* fallback keeps default */ }
             // Improve accessibility hint when unlocking on meal page
             try {
@@ -866,8 +868,8 @@ export async function initShared(config = {}) {
           // If the .page-switch already exists in the HTML, insert new buttons
           // according to a canonical order so the layout is consistent across pages.
           try {
-            // Desired canonical order: map should be second-to-last (before pack)
-            const canonical = ['btn-items','btn-cards','btn-monster','btn-meal','btn-map','btn-pack'];
+            // Desired canonical order: map should appear after monster (before meal/pack)
+            const canonical = ['btn-items','btn-cards','btn-monster','btn-map','btn-meal','btn-pack'];
             // Find the next button in the canonical sequence that already exists in the DOM
             const myIndex = canonical.indexOf(id);
             let inserted = false;
@@ -942,6 +944,18 @@ export async function initShared(config = {}) {
             btnMonsterEl.classList.add('hard');
           }
         }
+        if (hardType === 'map') {
+          const btnMapEl = wrap.querySelector('#btn-map');
+          if (btnMapEl) {
+            const imgEl = btnMapEl.querySelector('img');
+            if (imgEl) {
+              const cleaned = 'hard_portal.png';
+              imgEl.src = prefix ? `${prefix}/${cleaned}` : cleaned;
+              imgEl.alt = 'Hard Map';
+            }
+            btnMapEl.classList.add('hard');
+          }
+        }
       }
     } catch (e) { /* non-fatal */ }
   // If we created the element, insert it after the title. If it already
@@ -962,7 +976,10 @@ export async function initShared(config = {}) {
     ((location.pathname || '').endsWith('HardCardGuesser.html') || (location.href || '').includes('hardcard')) ? 'card' :
     (((location.pathname || '').includes('/hardmonster/') || (location.href || '').includes('hardmonster') || (function(){ try { return detectGameFromPath() === 'hard_monster'; } catch(e){ return false; } })()) ? 'monster' : null);
   const isHardAny = !!hardType;
-  const isItems = !isCard && !isMonster && !isMeal && !isPack && !isMap;
+  // If this is any hard-mode page, treat it as not the normal 'items' page so
+  // the left 'Item' button doesn't get marked active (yellow). Hard pages
+  // should instead mark their corresponding button with the red 'hard' class.
+  const isItems = !isCard && !isMonster && !isMeal && !isPack && !isMap && !isHardAny;
 
   const btnItems = document.getElementById('btn-items');
   const btnCards = document.getElementById('btn-cards');
@@ -985,7 +1002,7 @@ export async function initShared(config = {}) {
   if (hardType !== 'item' && btnItems && hasWinToday('item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
     if (hardType !== 'card' && btnCards && hasWinToday('card')) { btnCards.classList.add('complete'); btnCards.style.background = '#2ecc71'; }
   if (hardType !== 'monster' && btnMonster && hasWinToday('monster')) { btnMonster.classList.add('complete'); btnMonster.style.background = '#2ecc71'; }
-  if (btnMap && hasWinToday('map')) { btnMap.classList.add('complete'); btnMap.style.background = '#2ecc71'; }
+  if (hardType !== 'map' && btnMap && hasWinToday('map')) { btnMap.classList.add('complete'); btnMap.style.background = '#2ecc71'; }
   if (btnMeal && hasWinToday('meal')) { btnMeal.classList.add('complete'); btnMeal.style.background = '#2ecc71'; }
   if (btnPack && hasWinToday('pack')) { btnPack.classList.add('complete'); btnPack.style.background = '#2ecc71'; }
     // Hard-item completed may be tracked under 'hard_item'
@@ -998,7 +1015,8 @@ export async function initShared(config = {}) {
 
   // Mark active (yellow) -- higher priority than complete so we override background
   // If this is the hard-mode page, keep the left button red instead of marking it active
-  if (isItems && btnItems && hardType !== 'item') { btnItems.classList.add('active'); btnItems.style.background = '#f1c40f'; }
+  // Do not mark Items active when viewing results pages (they live under /results/)
+  if (isItems && btnItems && hardType !== 'item' && !( /results\.html$/i.test(location.pathname) || /\/results(\/|$)/i.test(location.pathname) )) { btnItems.classList.add('active'); btnItems.style.background = '#f1c40f'; }
   if (isCard && btnCards && hardType !== 'card') { btnCards.classList.add('active'); btnCards.style.background = '#f1c40f'; }
   if (isMonster && btnMonster && hardType !== 'monster') { btnMonster.classList.add('active'); btnMonster.style.background = '#f1c40f'; }
   if (isMap && btnMap) { btnMap.classList.add('active'); btnMap.style.background = '#f1c40f'; }
@@ -1008,22 +1026,24 @@ export async function initShared(config = {}) {
   if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
   if (hardType === 'card' && btnCards) { btnCards.classList.add('hard'); btnCards.style.background = '#c0392b'; }
   if (hardType === 'monster' && btnMonster) { btnMonster.classList.add('hard'); btnMonster.style.background = '#c0392b'; }
+  if (hardType === 'map' && btnMap) { btnMap.classList.add('hard'); btnMap.style.background = '#c0392b'; }
     } catch (e) { console.warn('Page switch render failed', e); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => renderPageSwitch(config.imageBase || IMAGE_BASE)); else renderPageSwitch(config.imageBase || IMAGE_BASE);
 
-  // Inject flame icon + streak (now on all pages)
+  // Inject flame icon + streak only on results pages. For other pages we
+  // keep the streak data and update logic, but avoid dynamically inserting
+  // the flame into the page switcher UI. This respects the user's request
+  // to remove the decorative flame from the switcher while still keeping
+  // streak values available for the results page which renders its own flame.
   try {
     const sideBox = document.getElementById('sideBox') || document.querySelector('.side-box');
     const switcher = document.querySelector('.page-switch');
-  // Consider results.html or any path under the /results/ folder (for example
-  // /results/, /results/index.html). This ensures pages inside that folder
-  // are treated as the results page and the flame is not placed inside the
-  // page-switch (the results page renders its own flame below the content).
-  const isResultsPage = /results\.html$/i.test(location.pathname) || /\/results(\/|$)/i.test(location.pathname);
-    // Only reposition next to page switcher when switcher exists and not results page
+    const isResultsPage = /results\.html$/i.test(location.pathname) || /\/results(\/|$)/i.test(location.pathname);
+    // If the flame does not yet exist and we're on a results page, create it
+    // and append it into a sensible results container. Do NOT append the
+    // flame into the page-switch on non-results pages.
     if (!document.getElementById('flameIconImg')) {
-      // Create flame structure once
       const flameWrap = document.createElement('div');
       flameWrap.className = 'flame-wrap';
       flameWrap.id = 'flameWrapRoot';
@@ -1041,39 +1061,18 @@ export async function initShared(config = {}) {
       flameWrap.appendChild(img);
       flameWrap.appendChild(streak);
 
-      if (switcher && !isResultsPage) {
-        // Place flame inside the page switcher flex container so it aligns horizontally
-        try { switcher.classList.remove('offset-left'); } catch(e) { /* non-fatal */ }
-        flameWrap.classList.add('inline-flame');
-        switcher.appendChild(flameWrap);
-        // Mark switcher so CSS can shorten decorative bar, and set a CSS var for dynamic width subtraction
-        try {
-          switcher.classList.add('has-flame');
-          const updateSwitcherBar = () => {
-            try {
-              const ml = parseFloat(getComputedStyle(flameWrap).marginLeft) || 0;
-              const total = flameWrap.offsetWidth + ml; // total horizontal space consumed
-              switcher.style.setProperty('--flame-total-width', total + 'px');
-            } catch(e) { /* non-fatal */ }
-          };
-          updateSwitcherBar();
-          window.addEventListener('resize', debounce(updateSwitcherBar, 160));
-        } catch(e) { /* non-fatal */ }
-      } else if (sideBox) {
-        // Fallback: keep previous behavior next to side box
-        let wrapper = document.getElementById('sideFlameWrap');
-        if (!wrapper) {
-          wrapper = document.createElement('div');
-          wrapper.id = 'sideFlameWrap';
-          wrapper.className = 'side-with-flame';
-          if (sideBox.parentNode) sideBox.parentNode.insertBefore(wrapper, sideBox);
-          wrapper.appendChild(sideBox);
-        }
-        wrapper.appendChild(flameWrap);
+      if (isResultsPage) {
+        // Try to append into a results-specific container if present. Do NOT
+        // fall back to the page-switcher; we intentionally avoid placing the
+        // dynamic flame inside `.page-switch` to keep that UI clean.
+        const resultsContainer = document.getElementById('resultsFlameContainer') || document.getElementById('resultsFlameArea') || document.getElementById('results') || document.querySelector('.results') || sideBox;
+        if (resultsContainer) resultsContainer.appendChild(flameWrap);
       }
+      // Always load streak data so values remain computed and available; the
+      // visual flame will only appear where the page provides it (results).
       loadStreak();
     } else {
-      // Flame exists: just re-render number
+      // Flame exists somewhere in the DOM (static or previously created): re-render number
       try {
         const img = document.getElementById('flameIconImg');
         if (img) { img.title = 'Daily Streak'; img.setAttribute('aria-label','Daily Streak'); }

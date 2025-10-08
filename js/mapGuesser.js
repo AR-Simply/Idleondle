@@ -149,9 +149,15 @@ export async function initMapGuesser(options = {}) {
   }
 }
 
-// Auto-init when imported
+// Auto-init when imported, but skip automatic initialization for explicit
+// hard-mode pages so those pages can call initMapGuesser with custom options.
 if (typeof window !== 'undefined') {
-  initMapGuesser().catch(e => console.error('MapGuesser init failed', e));
+  try {
+    const isHard = !!(document && document.body && document.body.dataset && document.body.dataset.hard);
+    if (!isHard) {
+      initMapGuesser().catch(e => console.error('MapGuesser init failed', e));
+    }
+  } catch (e) { /* non-fatal */ }
   window.mapGuesser = window.mapGuesser || {};
   window.mapGuesser.initMapGuesser = initMapGuesser;
   window.mapGuesser.START_ZOOM = START_ZOOM;

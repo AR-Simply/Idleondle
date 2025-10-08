@@ -781,7 +781,17 @@ function updateClueState() {
       btnCategory.disabled = false; btnCategory.classList.remove('locked'); if (note2) note2.textContent = '';
       if (wasLocked) {
         try {
-          if (typeof showToast === 'function') showToast('Clue unlocked: Category', { timeout: 3000 });
+          // Use a context-sensitive label: on map pages the second clue is the Enemy
+          try {
+            const g = (typeof detectGameFromPath === 'function') ? detectGameFromPath() : '';
+            if (g === 'map' || g === 'hard_map') {
+              if (typeof showToast === 'function') showToast('Clue unlocked: Enemy', { timeout: 3000 });
+            } else {
+              if (typeof showToast === 'function') showToast('Clue unlocked: Category', { timeout: 3000 });
+            }
+          } catch (e) {
+            if (typeof showToast === 'function') showToast('Clue unlocked: Category', { timeout: 3000 });
+          }
         } catch (e) {}
         try {
           // visually indicate newly unlocked clue until the user clicks it

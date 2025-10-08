@@ -74,6 +74,15 @@ body::before {
   position: relative; /* ensure the z-index takes effect even if link not styled */
 }
 
+/* Apply the same visual treatment used on the front page title to the site-wide title
+   so every page's title image gets the drop-shadow and similar sizing rules. */
+.site-title {
+  filter: drop-shadow(0 6px 24px rgba(0,0,0,0.55));
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.site-title:hover { transform: translateY(-2px); filter: drop-shadow(0 10px 34px rgba(0,0,0,0.6)); }
+
 /* Ensure the link (anchor) containing the title image sits above nearby decorative layers */
 /* Uses :has for direct child match; widely supported in modern browsers (Chrome, Safari, Edge). */
 a:has(> img.site-title) {

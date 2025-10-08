@@ -5,7 +5,7 @@
   <title>Idleondle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Allow indexing: removed previous noindex directive -->
-  <link rel="canonical" href="https://www.idleondle.com/card/">
+  <link rel="canonical" href="https://www.idleondle.com/map/">
   <meta name="description" content="Guess the daily IdleOn map in as few tries as possible in Idleondle's Map Guesser." />
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png">
@@ -84,7 +84,7 @@
 
     <div class="combo" id="combo">
       <div class="input-wrap">
-        <input id="search" type="text" placeholder="Type the name of a card..." autocomplete="off" />
+        <input id="search" type="text" placeholder="Type the name of a map..." autocomplete="off" />
       </div>
       <div class="dropdown" id="dropdown">
         <ul class="results" id="results"></ul>
@@ -103,14 +103,19 @@
         </div>
         <div class="goal-guesses">Number of guesses: <strong id="goalGuesses">0</strong></div>
         <div class="goal-footer">
-          <div class="goal-footer-text">Come back for a new card in...</div>
+          <div class="goal-footer-text">Come back for a new map in...</div>
           <div class="goal-timer-wrap"><span id="goalTimer" class="goal-timer">00:00:00</span></div>
         </div>
         <!-- Add action button linking to Monster Guesser (carrotman icon) -->
         <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
 
-          <a href="/pack/" class="guess-btn" id="toPackBtn" aria-label="Pack Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-            <img src="../images/Gem.png" alt="gem" style="width:22px;height:22px;object-fit:contain;" />
+          <a href="/hardmap/" class="guess-btn" id="toHardMapBtn" aria-label="Hard Map Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+            <img src="../images/hard_portal.png" alt="gem" style="width:22px;height:22px;object-fit:contain;" />
+            <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
+          </a>
+
+          <a href="/meal/" class="guess-btn" id="toPackBtn" aria-label="Pack Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+            <img src="../images/Spice/36px-Jungle_Spice.png" alt="gem" style="width:22px;height:22px;object-fit:contain;" />
             <span style="color:var(--text);font-weight:800;font-size:15px;">Next game</span>
           </a>
       

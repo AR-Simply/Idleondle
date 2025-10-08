@@ -10,8 +10,9 @@ const GAME_DISPLAY_ORDER = [
 	'hard_card',   // HARD Card Guesser
 	'monster',     // Monster Guesser
 	'hard_monster', // HARD Monster Guesser
-	'meal',        // Meal Guesser
 	'map',        // Map Guesser
+	'hard_map',    // HARD Map Guesser
+	'meal',        // Meal Guesser
 	'pack'         // Pack Guesser
 ];
 const GAME_LABELS = {
@@ -21,8 +22,9 @@ const GAME_LABELS = {
 	hard_card: 'HARD Card Guesser',
 	monster: 'Monster Guesser',
 	hard_monster: 'HARD Monster Guesser',
-	meal: 'Meal Guesser',
 	map: 'Map Guesser',
+	hard_map: 'HARD Map Guesser',
+	meal: 'Meal Guesser',
 	pack: 'Pack Guesser'
 };
 const normKey = (s) => String(s || '').toLowerCase().replace(/\s+/g, '_');
