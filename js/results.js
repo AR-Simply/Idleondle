@@ -357,19 +357,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			} catch (e) {}
 			return undefined;
 		};
-		let val = get('new_umami_consent');
-		if (val !== 'yes' && val !== 'no') {
-			const legacy = get('umami_consent');
-			if (legacy === 'yes' || legacy === 'no') val = legacy;
-		}
-		if (val === 'yes' || val === 'no') {
-			const exp = new Date(Date.now() + 365 * 864e5).toUTCString();
-			const parts = [
-				`new_umami_consent=${encodeURIComponent(val)}`,
-				`expires=${exp}`,
-				'path=/',
-				'SameSite=Lax'
-			];
+			let val = get('analytics_consent');
+			if (val !== 'yes' && val !== 'no') {
+				const legacy = get('new_umami_consent') || get('umami_consent');
+				if (legacy === 'yes' || legacy === 'no') val = legacy;
+			}
+			if (val === 'yes' || val === 'no') {
+				const exp = new Date(Date.now() + 365 * 864e5).toUTCString();
+				const parts = [
+					`analytics_consent=${encodeURIComponent(val)}`,
+					`expires=${exp}`,
+					'path=/',
+					'SameSite=Lax'
+				];
 			try {
 				const host = String(location.hostname || '').toLowerCase();
 				const isHttps = String(location.protocol || '').toLowerCase() === 'https:';
@@ -379,12 +379,16 @@ document.addEventListener('DOMContentLoaded', () => {
 				}
 			} catch (e) {}
 			try { document.cookie = parts.join('; '); } catch (e) {}
-			if (val === 'yes' && !document.querySelector('script[data-website-id]')) {
-				const s = document.createElement('script');
-				s.defer = true;
-				s.src = 'https://cloud.umami.is/script.js';
-				s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3');
-				document.head.appendChild(s);
+			if (val === 'yes' && !document.querySelector('script[data-gtag]')) {
+				const a = document.createElement('script');
+				a.async = true;
+				a.src = 'https://www.googletagmanager.com/gtag/js?id=G-5H288JHY22';
+				a.setAttribute('data-gtag','1');
+				document.head.appendChild(a);
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);} window.gtag = window.gtag || gtag;
+				window.gtag('js', new Date());
+				window.gtag('config', 'G-5H288JHY22');
 			}
 		}
 	} catch (e) { /* swallow */ }

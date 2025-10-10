@@ -168,7 +168,7 @@
       <h2 class="goal-title">Privacy Policy</h2>
       <div class="goal-body">
         <div style="text-align:left; font-size:14px; color:#111; max-height:60vh; overflow:auto;">
-          <p><strong>Effective Date:</strong> 04/09 2025</p>
+          <p><strong>Effective Date:</strong> 10/10 2025</p>
           <p>This Privacy Policy explains how this website collects, uses, and protects personal data in accordance with the General Data Protection Regulation (GDPR) and other applicable EU data protection laws.</p>
 
           <h3>Data Collection</h3>
@@ -176,10 +176,10 @@
 
                         <p>We do set a small, local cookie to support game UX: <code>idleondle_last_win</code> and per-game cookies named <code>idleondle_win_<em>&lt;game&gt;</em></code>. These cookies store a JSON payload containing the game identifier, an ISO timestamp of when you completed the daily puzzle, and the number of guesses you used. The cookies are used only locally by the site to show that you've already completed today's puzzle, automatically reveal the answer, and display the guess count in the post-win modal.</p>
 
-                <p>These cookies are non-personal, do not contain any identifiers that would reasonably identify you, are not shared with third parties by this site, and are retained locally for 365 days to allow users to revisit prior wins on the same device. For clarity, this is separate from advertising cookies used by Google AdSense or Umami (see below).</p>
+                <p>These cookies are non-personal, do not contain any identifiers that would reasonably identify you, are not shared with third parties by this site, and are retained locally for 365 days to allow users to revisit prior wins on the same device. For clarity, this is separate from advertising cookies used by Google AdSense or analytics providers (see below).</p>
 
-          <h3>Analytics (Umami)</h3>
-          <p>We use <strong>Umami</strong> for privacy-focused, anonymous analytics. Umami only collects non-identifying information such as pageviews, referrers, timestamps, and basic device/browser metadata. No names, email addresses, or persistent personal identifiers are collected or stored. The Umami script is loaded only if you explicitly opt in via this Privacy Policy ("Accept analytics"). You can revoke your choice at any time by returning to this Privacy Policy and selecting "Disable analytics".</p>
+          <h3>Analytics</h3>
+          <p>We use Google Analytics (gtag.js) to collect non-identifying usage data (pageviews, referrers, timestamps, and basic device/browser metadata). The script is loaded only if you explicitly opt in via this Privacy Policy ("Accept analytics"). You can revoke your choice at any time by returning to this Privacy Policy and selecting "Disable analytics".</p>
           <div style="display:flex;gap:8px;justify-content:center;margin:12px 0 0 0;">
                     <button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
                     <button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
@@ -260,13 +260,18 @@
   </script>
   <script>
     (function(){
-      // Load Umami only if the user previously opted in
-  if (document.cookie.split('; ').some(c => c.startsWith('new_umami_consent=') && c.split('=')[1] === 'yes')) {
-        const s = document.createElement('script');
-        s.defer = true;
-        s.src = 'https://cloud.umami.is/script.js';
-        s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3');
-        document.head.appendChild(s);
+  // Load analytics (gtag.js) only if the user previously opted in
+  if (document.cookie.split('; ').some(c => c.startsWith('analytics_consent=') && c.split('=')[1] === 'yes')) {
+        const a = document.createElement('script');
+        a.async = true;
+        a.src = 'https://www.googletagmanager.com/gtag/js?id=G-5H288JHY22';
+        a.setAttribute('data-gtag','1');
+        document.head.appendChild(a);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);} // lightweight wrapper
+        window.gtag = window.gtag || gtag;
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-5H288JHY22');
       }
     })();
   </script>
@@ -292,9 +297,9 @@
   <script>
     // Define local helpers if not provided by shared scripts
     function setCookie(name, value, days) { const d = new Date(); d.setTime(d.getTime() + (days*86400000)); document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + d.toUTCString() + '; path=/'; }
-    function loadUmami() { if (document.querySelector('script[data-website-id]')) return; const s = document.createElement('script'); s.defer = true; s.src = 'https://cloud.umami.is/script.js'; s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3'); document.head.appendChild(s); }
-  function setConsentYes() { setCookie('new_umami_consent','yes',365); loadUmami(); }
-  function setConsentNo() { setCookie('new_umami_consent','no',365); }
+    function loadGtag() { if (document.querySelector('script[data-gtag]')) return; const a = document.createElement('script'); a.async = true; a.src = 'https://www.googletagmanager.com/gtag/js?id=G-5H288JHY22'; a.setAttribute('data-gtag','1'); document.head.appendChild(a); window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} window.gtag = window.gtag || gtag; window.gtag('js', new Date()); window.gtag('config','G-5H288JHY22'); }
+  function setConsentYes() { setCookie('analytics_consent','yes',365); loadGtag(); }
+  function setConsentNo() { setCookie('analytics_consent','no',365); }
     (function(){
       const pa = document.getElementById('privacyAccept');
       const pd = document.getElementById('privacyDecline');

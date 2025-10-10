@@ -153,7 +153,7 @@
 			<h2 class="goal-title">Privacy Policy</h2>
 			<div class="goal-body">
 				<div style="text-align:left; font-size:14px; color:#111; max-height:60vh; overflow:auto;">
-					<p><strong>Effective Date:</strong> 04/09 2025</p>
+					<p><strong>Effective Date:</strong> 10/10 2025</p>
 					<p>This Privacy Policy explains how this website collects, uses, and protects personal data in accordance with the General Data Protection Regulation (GDPR) and other applicable EU data protection laws.</p>
 
 					<h3>Data Collection</h3>
@@ -161,8 +161,8 @@
 
 					<p>We set a small local cookie to support game UX: <code>idleondle_last_win</code> and per-game cookies named <code>idleondle_win_<em>&lt;game&gt;</em></code>. These store the game identifier, an ISO timestamp of completion, and guess count – only to show completion status locally. They are non-personal and expire after 365 days.</p>
 
-					<h3>Analytics (Umami)</h3>
-					<p>We use <strong>Umami</strong> for privacy-focused, anonymous analytics. It collects only non-identifying information (pageviews, referrers, timestamps, basic device/browser metadata). The script loads only if you opt in below. You can revoke consent anytime.</p>
+					<h3>Analytics</h3>
+					<p>We use Google Analytics (gtag.js) to collect non-identifying usage data (pageviews, referrers, timestamps, and basic device/browser metadata). The script loads only if you opt in below. You can revoke consent anytime.</p>
 					<div style="display:flex;gap:8px;justify-content:center;margin:12px 0 0 0;">
 						<button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
 						<button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
@@ -236,11 +236,11 @@
 
 		<!-- Consent banner (moved from item page for global first-touch prompt) -->
 		
-		<div id="consentBanner" class="consent-modal" role="dialog" aria-modal="true" aria-label="Cookie consent" hidden>
+			<div id="consentBanner" class="consent-modal" role="dialog" aria-modal="true" aria-label="Cookie consent" hidden>
 			<div class="consent-modal-inner">
 				<h3 style="margin:0 0 8px 0;">Privacy & Analytics</h3>
 				<div class="consent-text">
-					We use a privacy-friendly analytics script (Umami) to understand site usage. Please opt in to help us improve. You can change this later in the Privacy Policy.
+					We use Google Analytics (gtag.js) to understand site usage. Please opt in to help us improve. You can change this later in the Privacy Policy.
 				</div>
 				<div class="consent-actions">
 					<button id="consentAccept" class="consent-btn consent-accept">Accept</button>
@@ -282,16 +282,22 @@
 					return parts[0] === name ? decodeURIComponent(parts.slice(1).join('=')) : r;
 				}, undefined);
 			}
-			function loadUmami() {
-				if (document.querySelector('script[data-website-id]')) return;
-				const s = document.createElement('script');
-				s.defer = true;
-				s.src = 'https://cloud.umami.is/script.js';
-				s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3');
-				document.head.appendChild(s);
+			// Google gtag loader and consent helpers
+			function loadGtag() {
+				if (document.querySelector('script[data-gtag]')) return;
+				const a = document.createElement('script');
+				a.async = true;
+				a.src = 'https://www.googletagmanager.com/gtag/js?id=G-5H288JHY22';
+				a.setAttribute('data-gtag', '1');
+				document.head.appendChild(a);
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);} // minimal wrapper if not present yet
+				window.gtag = window.gtag || gtag;
+				window.gtag('js', new Date());
+				window.gtag('config', 'G-5H288JHY22');
 			}
-			function setConsentYes() { setCookie('new_umami_consent','yes',365); loadUmami(); }
-			function setConsentNo() { setCookie('new_umami_consent','no',365); }
+			function setConsentYes() { setCookie('analytics_consent','yes',365); loadGtag(); }
+			function setConsentNo() { setCookie('analytics_consent','no',365); }
 
 			// Banner DOM
 			const banner = document.getElementById('consentBanner');
@@ -300,7 +306,7 @@
 			const declineBtn = document.getElementById('consentDecline');
 
 			// Normalize consent cookie
-			let consent = getCookie('new_umami_consent');
+			let consent = getCookie('analytics_consent');
 			if (consent !== 'yes' && consent !== 'no') consent = undefined;
 
 			function showBanner(){ if(backdrop){ backdrop.hidden=false; backdrop.setAttribute('aria-hidden','false'); } if(banner){ banner.hidden=false; banner.setAttribute('aria-hidden','false'); } }
@@ -316,7 +322,7 @@
 					console.warn('Consent UI missing pieces; banner suppressed.');
 				}
 			} else if (consent === 'yes') {
-				loadUmami();
+				loadGtag();
 			} else {
 				safeHide();
 			}
@@ -332,9 +338,9 @@
 			if (pd) pd.addEventListener('click', () => { setConsentNo(); close(pm); });
 
 			// Export to window (optional reuse on subpages loaded dynamically)
-			window.IdleondleConsent = { setConsentYes, setConsentNo, loadUmami };
-			// Auto-load Umami if previously accepted
-			if (consent === 'yes') loadUmami();
+			window.IdleondleConsent = { setConsentYes, setConsentNo, loadGtag };
+			// Auto-load gtag if previously accepted
+			if (consent === 'yes') loadGtag();
 		})();
 		</script>
 

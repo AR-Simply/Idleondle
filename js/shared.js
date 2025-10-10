@@ -190,8 +190,8 @@ function setCookie(name, value, days = 365) {
 }
 
 // One-time normalization/migration of analytics consent cookie across pages.
-// Re-sets 'new_umami_consent' with consistent attributes so it is visible on all routes
-// after folder restructures, and loads Umami when consent is already granted.
+// Re-sets 'analytics_consent' with consistent attributes so it is visible on all routes
+// after folder restructures, and loads gtag when consent is already granted.
 (function normalizeConsentCookie(){
   try {
     if (typeof document === 'undefined') return;
@@ -209,9 +209,9 @@ function setCookie(name, value, days = 365) {
       return undefined;
     };
     // Prefer new cookie; fall back to old if present
-    let val = get('new_umami_consent');
+    let val = get('analytics_consent');
     if (val !== 'yes' && val !== 'no') {
-      const legacy = get('umami_consent');
+      const legacy = get('new_umami_consent') || get('umami_consent');
       if (legacy === 'yes' || legacy === 'no') val = legacy;
     }
     if (val !== 'yes' && val !== 'no') return; // nothing to normalize
@@ -219,7 +219,7 @@ function setCookie(name, value, days = 365) {
     // Build a cookie string with Path=/ and SameSite=Lax. On production HTTPS, also set Domain=.idleondle.com and Secure.
     const exp = new Date(Date.now() + 365 * 864e5).toUTCString();
     const parts = [
-      `new_umami_consent=${encodeURIComponent(val)}`,
+      `analytics_consent=${encodeURIComponent(val)}`,
       `expires=${exp}`,
       'path=/',
       'SameSite=Lax'
@@ -234,15 +234,19 @@ function setCookie(name, value, days = 365) {
     } catch (e) { /* ignore env issues */ }
     try { document.cookie = parts.join('; '); } catch (e) { /* non-fatal */ }
 
-    // Load Umami script if consent is yes and script not present yet.
-    if (val === 'yes') {
+    // Load analytics (gtag.js) if consent is yes and script not present yet.
+      if (val === 'yes') {
       try {
-        if (!document.querySelector('script[data-website-id]')) {
-          const s = document.createElement('script');
-          s.defer = true;
-          s.src = 'https://cloud.umami.is/script.js';
-          s.setAttribute('data-website-id', 'ad9a1bfc-29d8-4cab-843e-a7a2d9a142f3');
-          document.head.appendChild(s);
+        if (!document.querySelector('script[data-gtag]')) {
+          const a = document.createElement('script');
+          a.async = true;
+          a.src = 'https://www.googletagmanager.com/gtag/js?id=G-5H288JHY22';
+          a.setAttribute('data-gtag','1');
+          document.head.appendChild(a);
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);} window.gtag = window.gtag || gtag;
+          window.gtag('js', new Date());
+          window.gtag('config', 'G-5H288JHY22');
         }
       } catch (e) { /* non-fatal */ }
     }

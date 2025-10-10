@@ -1224,7 +1224,7 @@ body:not([data-hard]) #helpModal .goal-body {
   .toast { width: calc(100% - 48px); max-width: none; font-size: 16px; }
 }
 
-/* Consent banner (Umami) */
+/* Consent banner (analytics / gtag) */
 /* Consent modal and backdrop (centered square) */
 .consent-backdrop {
   position: fixed;
