@@ -372,6 +372,23 @@ function buildDailyMealUI(){
 
 			spiceBox.appendChild(wrap);
 
+			// Add a transparent overlay above the silhouette image so users can't
+			// directly interact with or open the image to cheat (mimics cardGuesser).
+			const overlay = document.createElement('div');
+			overlay.id = 'mealSpiceOverlay';
+			overlay.style.position = 'absolute';
+			overlay.style.left = '0';
+			overlay.style.top = '0';
+			overlay.style.width = '100%';
+			overlay.style.height = '100%';
+			overlay.style.zIndex = '4';
+			overlay.style.background = 'transparent';
+			overlay.style.pointerEvents = 'auto';
+			// Prevent context menu and drag to avoid "open image in new tab" or drag-cheats
+			overlay.addEventListener('contextmenu', (ev) => { ev.preventDefault(); });
+			overlay.addEventListener('dragstart', (ev) => { ev.preventDefault(); });
+			spiceBox.appendChild(overlay);
+
 			// Reset guess counter and run outline update (no-op when no spices)
 			_guessCount = 0;
 			updateSpiceOutlineProgress();
