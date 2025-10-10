@@ -2,7 +2,7 @@
 // Daily Meal guessing page logic. Reuses shared.js helpers (initShared, notifyGoalGuessed, etc.)
 // Creates/updates per-game cookie: idleondle_win_meal and idleondle_last_win handled by shared.js recordWin().
 
-import { initShared, notifyGoalGuessed, getDailyDeterministicIndex, getGoalItem } from './shared.js';
+import { initShared, notifyGoalGuessed, getDailyDeterministicIndex, getGoalItem, setGoalItem } from './shared.js';
 
 // Configuration:
 // - Dropdown suggestions come from SPICES (`idleon_spices.json`).
@@ -31,6 +31,34 @@ let _spiceImgMap = Object.create(null); // name -> <img>
 let _mealWinFired = false;
 let _guessCount = 0; // counts total user guesses until win (used for silhouette progression)
 let _spiceSlotMap = Object.create(null); // name -> slot wrapper div
+
+// How many wrong guesses to reach a full reveal (configurable)
+const MEAL_REVEAL_GUESSES = 5;
+
+// Update the meal silhouette image based on current guess progress.
+// Each wrong guess removes some of the black silhouette effect; when fully
+// guessed (or _mealWinFired) the image is shown in full color.
+function updateMealImageReveal() {
+	try {
+		const img = document.getElementById('mealGoalSilhouette');
+		if (!img) return;
+		// If we've already won, show full color
+		if (_mealWinFired) {
+			img.style.filter = 'none';
+			img.style.opacity = '1';
+			img.classList.add('revealed');
+			return;
+		}
+		const f = Math.min(_guessCount / MEAL_REVEAL_GUESSES, 1);
+		// Map fraction to CSS filter values
+		const grayscale = Math.round((1 - f) * 100); // percent
+		// brightness as a number: avoid zero so tiny reveal is visible
+		const brightness = (0.08 + (0.92 * f)).toFixed(3);
+		const saturate = (0.5 + (1.5 * f)).toFixed(3);
+		img.style.filter = `grayscale(${grayscale}%) brightness(${brightness}) saturate(${saturate})`;
+		img.style.opacity = `${0.7 + 0.3 * f}`;
+	} catch (e) { /* non-fatal */ }
+}
 
 // Reveal spice silhouettes progressively: first spice visible from start, then one new outline every 2 guesses
 function updateSpiceOutlineProgress() {
@@ -153,10 +181,17 @@ function resolveIconRelative(p){
 function onSelectMeal(it){
 	try {
 		if (!it) return;
+		// Increment guess counter for any guess that isn't an immediate win (we will
+		// decrement or mark win below when appropriate). This powers the progressive reveal.
 		if (!_mealWinFired) { _guessCount++; }
+		// Update meal image reveal state on any guess
+		try { updateMealImageReveal(); } catch(e) {}
 		// Tag item with friendly game name so shared.js records correct cookie
 		it._gameName = 'meal';
 		const goal = window.getGoalItem ? window.getGoalItem() : null;
+		// If selection looks like an effect-only entry (we passed effect text as items)
+		const isEffectGuess = !!(it && (!it.icon || String(it.icon||'').trim() === ''));
+
 		// If player guesses the meal name directly, count that as immediate win
 		if (goal && goal.name === it.name) {
 			// Correct full meal guess: reward by decrementing guess counter
@@ -182,10 +217,29 @@ function onSelectMeal(it){
 					updateSpiceOutlineProgress();
 				} catch(e){}
 				notifyGoalGuessed(it);
+				// Reveal meal image fully
+				try { updateMealImageReveal(); } catch(e) {}
 			}
 			// Remove spice overlay if present (direct meal guess win)
 			try { const ov = document.getElementById('mealSpiceOverlay'); if (ov) ov.remove(); } catch(e){}
 			return;
+		}
+		// If this selection is an effect guess (text-only), treat it specially
+		if (isEffectGuess && goal) {
+			const goalEffect = String(goal?.raw?.effect || goal?.raw?.Effect || '').trim();
+			const guessEffect = String(it.name || '').trim();
+				if (guessEffect && goalEffect && guessEffect === goalEffect) {
+				// Correct effect guessed: register win
+				if (_guessCount > 0) _guessCount = Math.max(0, _guessCount - 1);
+				if (!_mealWinFired) {
+					_mealWinFired = true;
+					notifyGoalGuessed(goal);
+						// Reveal meal image fully
+						try { updateMealImageReveal(); } catch(e) {}
+				}
+				try { const ov = document.getElementById('mealSpiceOverlay'); if (ov) ov.remove(); } catch(e){}
+				return;
+			}
 		}
 		// Otherwise treat guesses as spice guesses; if the guessed item is a required spice, reveal it
 		try {
@@ -193,7 +247,7 @@ function onSelectMeal(it){
 				// Normalize comparison similar to shared filter logic
 				const guessName = it.name.trim();
 				const matchIdx = _requiredSpices.findIndex(s => s === guessName);
-				if (matchIdx !== -1 && !_revealedSpices.has(guessName)) {
+					if (matchIdx !== -1 && !_revealedSpices.has(guessName)) {
 					_revealedSpices.add(guessName);
 					const img = _spiceImgMap[guessName];
 					if (img) {
@@ -210,6 +264,9 @@ function onSelectMeal(it){
 					}
 					// Correct spice guess: decrement guess counter as reward
 					if (_guessCount > 0) _guessCount = Math.max(0, _guessCount - 1);
+					// Update meal reveal since rewarding the player should also slightly
+					// reduce the remaining silhouette (make it more colorful).
+					try { updateMealImageReveal(); } catch(e) {}
 					// Win if all required spices are revealed
 					if (_revealedSpices.size === _requiredSpices.length) {
 						if (!_mealWinFired) {
@@ -249,14 +306,6 @@ function buildDailyMealUI(){
 	const mealGoal = getGoalItem();
 	if (!mealGoal) return; // not yet ready
 	window.__mealDailyGoal = mealGoal;
-	
-	const variant = (getDailyDeterministicIndex(3, 0) % 3) + 1; // 1..3
-	window.__mealDailyVariant = variant;
-	const variantTextMap = {
-		1: 'Best recipe by <span class="mv-key">Luck</span>:',
-		2: 'Best recipe by <span class="mv-key">Fire Time</span>:',
-		3: '<span class="mv-key">Earliest</span> Recipe:'
-	};
 	const combo = document.getElementById('combo');
 	if (combo && combo.parentNode) {
 		// Build or reuse spice box (now primary container)
@@ -283,142 +332,114 @@ function buildDailyMealUI(){
 		} else {
 			spiceBox.innerHTML = '';
 		}
-		// Variant label sits at top as full-width header
-		let labelEl = document.getElementById('mealVariantLabel');
-		if (!labelEl) {
-			labelEl = document.createElement('div');
-			labelEl.id = 'mealVariantLabel';
-			labelEl.style.position = 'absolute';
-			labelEl.style.top = '10px';
-			labelEl.style.left = '50%';
-			labelEl.style.transform = 'translateX(-50%)';
-			labelEl.style.width = '100%';
-			labelEl.style.textAlign = 'center';
-			labelEl.style.padding = '0 6px';
-			labelEl.style.pointerEvents = 'none';
-			spiceBox.appendChild(labelEl);
-		}
-		labelEl.innerHTML = variantTextMap[variant] || '';
-		labelEl.style.fontSize = '22px';
-		labelEl.style.lineHeight = '1.15';
-		labelEl.style.fontWeight = '800';
-		labelEl.style.letterSpacing = '0.5px';
-		labelEl.style.textShadow = '0 2px 6px rgba(0,0,0,0.55)';
-		labelEl.style.color = '#ffffff';
-		try { labelEl.querySelectorAll('.mv-key').forEach(span => { span.style.color = '#ff4242'; span.style.fontWeight = '900'; span.style.textShadow = '0 1px 4px rgba(0,0,0,0.55)'; }); } catch(e){}
+		// No variant label; proceed directly to silhouette rendering
 
-		// Spacer to push icons below absolutely positioned header
-		const headerSpacer = document.createElement('div');
-		headerSpacer.style.width = '100%';
-		headerSpacer.style.height = '28px';
-		spiceBox.appendChild(headerSpacer);
-
-		// Build spice silhouettes
+		// Instead of building individual spice slots, render a single black silhouette
+		// of the goal meal image inside the spice box. This replaces the previous
+		// visual design where individual spice icons and question marks were shown.
 		try {
-			const variantKey = variant === 1 ? 'luck' : (variant === 2 ? 'fire' : 'early');
-			const spiceNames = Array.isArray(mealGoal?.raw?.[variantKey]) ? mealGoal.raw[variantKey] : [];
-			const entries = spiceNames.map(n => { const rec = _spiceMap[n]; return { name: n, icon: rec?.icon || '../images/icon.png' }; }).slice(0,4);
-			_requiredSpices = entries.map(e => e.name);
+			// Clear any spice state used by the old UI so other functions gracefully short-circuit
+			_requiredSpices = [];
 			_revealedSpices = new Set();
 			_spiceImgMap = Object.create(null);
-			entries.forEach(ent => {
-				const img = document.createElement('img');
-				img.src = ent.icon;
-				img.alt = '';
-				img.title = '';
-				img.dataset.originalName = ent.name;
-				img.style.width = '64px';
-				img.style.height = '64px';
-				img.style.objectFit = 'contain';
-				// Show full-color icon by default; visibility handled in updateSpiceOutlineProgress()
-				img.style.filter = 'none';
-				img.style.opacity = '1';
-				img.style.borderRadius = '8px';
-				img.style.background = 'rgba(255,255,255,0.02)';
-				img.style.transition = 'filter 400ms ease, opacity 400ms ease';
-				img.onerror = () => { img.src = '../images/icon.png'; };
-				const slot = document.createElement('div');
-				slot.className = 'spice-slot';
-				slot.style.position = 'relative';
-				slot.style.width = '64px';
-				slot.style.height = '64px';
-				slot.style.display = 'inline-flex';
-				slot.style.alignItems = 'center';
-				slot.style.justifyContent = 'center';
-				slot.style.pointerEvents = 'none';
-				img.style.position = 'absolute';
-				img.style.left = '0';
-				img.style.top = '0';
-				img.style.right = '0';
-				img.style.bottom = '0';
-				slot.appendChild(img);
-				const q = document.createElement('span');
-				q.className = 'spice-q';
-				q.textContent = '?';
-				q.style.position = 'relative';
-				q.style.fontWeight = '900';
-				q.style.fontSize = '36px';
-				q.style.color = '#ffffffd9';
-				q.style.textShadow = '0 2px 6px rgba(0,0,0,0.65)';
-				slot.appendChild(q);
-				spiceBox.appendChild(slot);
-				_spiceImgMap[ent.name] = img;
-				_spiceSlotMap[ent.name] = slot;
-			});
+			_spiceSlotMap = Object.create(null);
+
+			// Use the actual goal meal (from getGoalItem) for the silhouette image so
+			// the displayed icon always matches the day's goal.
+			const sil = document.createElement('img');
+			sil.id = 'mealGoalSilhouette';
+			sil.src = (mealGoal && mealGoal.icon) || (mealGoal.raw && mealGoal.raw.icon) || '../images/icon.png';
+			sil.alt = '';
+			sil.title = '';
+			// Visual styling: start as a dark silhouette; updateMealImageReveal will
+			// compute the exact filter based on _guessCount (supports smooth progression)
+			sil.style.width = '160px';
+			sil.style.height = '160px';
+			sil.style.objectFit = 'contain';
+			sil.style.borderRadius = '12px';
+			sil.style.background = 'transparent';
+			sil.style.transition = 'filter 280ms ease, opacity 280ms ease, transform 200ms ease';
+			sil.onerror = () => { sil.src = '../images/icon.png'; };
+
+			// Center wrapper so the silhouette is centered and responsive
+			const wrap = document.createElement('div');
+			wrap.style.width = '100%';
+			wrap.style.display = 'flex';
+			wrap.style.justifyContent = 'center';
+			wrap.style.alignItems = 'center';
+			wrap.style.padding = '18px 0 6px';
+			wrap.appendChild(sil);
+
+			spiceBox.appendChild(wrap);
+
+			// Reset guess counter and run outline update (no-op when no spices)
 			_guessCount = 0;
 			updateSpiceOutlineProgress();
-			let overlay = document.getElementById('mealSpiceOverlay');
-			if (!overlay) {
-				overlay = document.createElement('div');
-				overlay.id = 'mealSpiceOverlay';
-				overlay.style.position = 'absolute';
-				overlay.style.inset = '0';
-				overlay.style.background = 'rgba(0,0,0,0)';
-				overlay.style.cursor = 'default';
-				overlay.style.zIndex = '5';
-				overlay.style.pointerEvents = 'auto';
-				overlay.setAttribute('aria-hidden', 'true');
-				overlay.addEventListener('contextmenu', ev => { ev.preventDefault(); return false; });
-				if (getComputedStyle(spiceBox).position === 'static') spiceBox.style.position = 'relative';
-				spiceBox.appendChild(overlay);
-			}
-			// Auto-reveal if already won today
-			try {
-				function _mealHasWinToday(){
-					try {
-						const key='idleondle_win_meal';
-						const pair=(document.cookie||'').split(';').map(s=>s.trim()).find(s=>s.startsWith(key+'='));
-						if(!pair) return false;
-						const raw=decodeURIComponent(pair.split('=')[1]||'');
-						let timeStr=null; try { const parsed=JSON.parse(raw); if(parsed&&parsed.time) timeStr=parsed.time; } catch(e){ timeStr=raw; }
-						if(!timeStr) return false; const then=new Date(timeStr); if(isNaN(then.getTime())) return false; const now=new Date();
-						return then.getFullYear()===now.getFullYear() && then.getMonth()===now.getMonth() && then.getDate()===now.getDate();
-					} catch(e){ return false; }
-				}
-				if (_requiredSpices.length && _mealHasWinToday()) {
-					_requiredSpices.forEach(n=>{ const img=_spiceImgMap[n]; if(img){ img.style.filter='none'; img.style.opacity='1'; if(!img.alt && img.dataset.originalName){ img.alt=img.dataset.originalName; img.title=img.dataset.originalName; } } });
-					_revealedSpices = new Set(_requiredSpices);
-					_mealWinFired = true;
-					try { const ov=document.getElementById('mealSpiceOverlay'); if(ov) ov.remove(); } catch(e){}
-					_requiredSpices.forEach(n=>{ try { const slot=_spiceSlotMap[n]; const q=slot?.querySelector('.spice-q'); if(q) q.style.display='none'; } catch(e){} });
-					updateSpiceOutlineProgress();
-				}
-			} catch(e){}
-		} catch(e){ console.warn('MealGuesser: spice box build failed', e); }
+			// Ensure the meal image reflect initial reveal state
+			try { updateMealImageReveal(); } catch(e) {}
+		} catch(e){ console.warn('MealGuesser: silhouette build failed', e); }
 	}
 }
 
 // Initialise once DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
 	await Promise.all([loadMeals(), loadSpices()]);
+
+	// Build a unique list of meal effects (dedupe identical effects). Each
+	// dropdown entry is shaped like { name: '<Effect text>', icon: '' } so the
+	// shared dropdown can render labels. We set showIcons:false so the list
+	// is text-only.
+	const effectsSet = new Set();
+	const effectItems = [];
+	try {
+		for (const m of _meals) {
+			const effect = m?.raw?.effect || m?.raw?.Effect || (m?.raw && (m.raw.effect || m.raw.Effect)) || 'Unknown';
+			const trimmed = String(effect || 'Unknown').trim();
+			if (!effectsSet.has(trimmed)) {
+				effectsSet.add(trimmed);
+				effectItems.push({ name: trimmed, icon: '' });
+			}
+		}
+	} catch (e) { /* non-fatal */ }
+
 	await initShared({
 		dataUrl: MEALS_JSON,
 		imageBase: '../images',
 		seedOffset: SEED_OFFSET,
 		onSelect: onSelectMeal,
-		clueUnlocks: { category: 5 }, // shared system manages unlock; we override button text when clicked
-		guessButtonHandlers: guessHandlers
+		clueUnlocks: { category: 99 }, // shared system manages unlock; we override button text when clicked
+		guessButtonHandlers: guessHandlers,
+		overrideItems: effectItems,
+		showIcons: false
 	});
+
+	// The shared module's goalItem was selected from the overrideItems (effects list).
+	// We need to override the shared goal with the actual meal object from _meals
+	// so the UI (and cookie recording) references the meal icon and metadata.
+	try {
+		if (Array.isArray(_meals) && _meals.length) {
+			const idx = getDailyDeterministicIndex(_meals.length, SEED_OFFSET+5) || 0;
+			const actualMeal = _meals[idx] || _meals[0];
+			// Update shared's internal goalItem so getGoalItem() returns the meal
+			try { setGoalItem(actualMeal); } catch (e) { /* non-fatal */ }
+			// Also expose on window for compatibility with existing code
+			window.__mealDailyGoal = actualMeal;
+		}
+	} catch (e) { /* non-fatal */ }
 	// Build UI now (or shortly if goal not yet populated)
 	if (!getGoalItem()) setTimeout(buildDailyMealUI, 120); else buildDailyMealUI();
+
+	// Listen for the shared 'guess:correct' event which the shared module
+	// dispatches when a win is detected (including wins loaded from cookie).
+	// When received, ensure the meal image is revealed fully.
+	document.addEventListener('guess:correct', (ev) => {
+		try {
+			// Mark as won and force a full reveal
+			_mealWinFired = true;
+			_guessCount = MEAL_REVEAL_GUESSES;
+			try { updateMealImageReveal(); } catch (e) {}
+			// Remove any overlay if present
+			try { const ov = document.getElementById('mealSpiceOverlay'); if (ov) ov.remove(); } catch (e) {}
+		} catch (e) { /* non-fatal */ }
+	});
 });

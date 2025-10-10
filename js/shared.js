@@ -498,10 +498,15 @@ function render(list) {
   for (const it of list) {
     const li = document.createElement('li');
     li.className = 'item';
-    const img = document.createElement('img');
-    img.alt = it.name;
-    img.src = it.icon;
-    img.addEventListener('error', () => { img.src = placeholder(); });
+    // Optionally render no-image list entries (meal effects list uses text-only)
+    const showIcons = (_config && typeof _config.showIcons === 'boolean') ? _config.showIcons : true;
+    let img = null;
+    if (showIcons) {
+      img = document.createElement('img');
+      img.alt = it.name;
+      img.src = it.icon;
+      img.addEventListener('error', () => { img.src = placeholder(); });
+    }
     const nameDiv = document.createElement('div');
     nameDiv.className = 'name';
     // When on the card guessaer page, remove the standalone word "card"
@@ -511,8 +516,8 @@ function render(list) {
       displayName = displayName.replace(/\bcard\b/ig, '').replace(/\s{2,}/g, ' ').trim();
     }
     nameDiv.textContent = displayName;
-    li.appendChild(img);
-    li.appendChild(nameDiv);
+  if (img) li.appendChild(img);
+  li.appendChild(nameDiv);
     li.addEventListener('click', () => {
       // Increment guess counter for any selection attempt
       incrementGuessCount();
@@ -777,6 +782,17 @@ export async function initShared(config = {}) {
   MAX_RESULTS = config.maxResults || MAX_RESULTS;
   CLUE_UNLOCKS = Object.assign({}, CLUE_UNLOCKS, config.clueUnlocks || {});
 
+  // Allow callers to supply an explicit list of dropdown items (override the
+  // shared dataset). This is used by pages like the meal guesser which want
+  // a custom list (effects) rather than the full items dataset.
+  if (config.overrideItems && Array.isArray(config.overrideItems)) {
+    try { items = config.overrideItems.slice(); loadingItems = false; } catch (e) { items = config.overrideItems || []; loadingItems = false; }
+  }
+
+  // Default behavior is to show icons in dropdown entries. Pages can opt-out
+  // by setting showIcons=false in the init config (meal page wants no images).
+  _config.showIcons = (typeof config.showIcons === 'boolean') ? config.showIcons : true;
+
   // If this is the monster guesser page, set clue unlock thresholds very high
   // so the clue buttons reflect the requested "999 guesses" behavior.
   try {
@@ -793,7 +809,9 @@ export async function initShared(config = {}) {
   // shared UI elements (page switcher, flame/streak). This avoids noisy fetch
   // errors on pages like /results/ which don't use the dataset.
   if (!config.skipDataLoad) {
-    await loadItems();
+    // Only load the dataset when overrideItems wasn't provided; otherwise
+    // we already set `items` above and can skip the fetch.
+    if (!config.overrideItems) await loadItems();
     // If requested, exclude entries flagged in source JSON
     try {
       if (config && config.exclude && Array.isArray(items) && items.length) {
@@ -897,7 +915,7 @@ export async function initShared(config = {}) {
   ensureBtn(cardHref, 'btn-cards', '../images/card.png', 'Card Guesser');
   ensureBtn(monsterHref, 'btn-monster', '../images/Enemies/carrotman-6_thumb.png', 'Monster Guesser');
   ensureBtn(mapHref, 'btn-map', '../images/portal.png', 'Map Guesser');
-  ensureBtn(mealHref, 'btn-meal', '../images/Spice/36px-Jungle_Spice.png', 'Meal Guesser');
+  ensureBtn(mealHref, 'btn-meal', '../images/Meals/36px-Turkey_a_la_Thank.png', 'Meal Guesser');
   ensureBtn(packHref, 'btn-pack', '../images/Gem.png', 'Pack Guesser');
   // NOTE: meal button intentionally not auto-created anymore.
   // If this is a hard-mode page, change the appropriate page button to a red "hard" button

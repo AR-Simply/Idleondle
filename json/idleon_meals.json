@@ -26,7 +26,7 @@
       "luck": ["Jungle Spice", "Smokey Lake Spice"],
       "fire": ["Grasslands Spice", "Jungle Spice"],
       "early": ["Grasslands Spice", "Jungle Spice"],
-      "effect": "Recipe Cooking Speed"
+      "effect": "New Recipe Cooking Speed"
     },
     "Frenk Fries": {
       "icon": "Meals\\36px-Frenk_Fries.png",

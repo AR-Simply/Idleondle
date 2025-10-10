@@ -510,6 +510,13 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
 }
 .dropdown.open { display: block; z-index: 800; }
 
+/* Ensure dropdown items have a consistent width on pages that use longer labels (eg. meal effects) */
+.dropdown .results .item,
+.dropdown .item {
+  width: 300px;
+  box-sizing: border-box;
+}
+
 /* Emoji box: grouped panel with large icons (icons increased by 50%) */
 .emojibox {
   display: flex;
@@ -829,6 +836,17 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   border: 1px solid var(--border);
 }
 .item .name { font-size: 15px; line-height: 1.2; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* On the meal page we show a list of meal effects which can be long; allow
+   the dropdown labels to wrap instead of truncating with ellipsis. This
+   targets only the meal page via body[data-game="meal"]. */
+body[data-game="meal"] .item .name {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  word-break: break-word;
+  width: 300px;
+}
 .hint { margin-top: 14px; color: var(--muted); font-size: 13px; text-align: center; }
 .status { margin-top: 8px; color: #a6f3a6; font-size: 13px; text-align: center; min-height: 1.2em; }
 
