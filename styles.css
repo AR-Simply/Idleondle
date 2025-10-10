@@ -99,8 +99,9 @@ a:has(> img.site-title) {
   justify-content: center;
   margin-bottom: 6px;
   position: relative;
-  /* Amount the decorative bar should extend (overhang) to the left (and right when no flame) */
-  --switch-overhang: 24px;
+  /* Amount the decorative bar should extend (overhang) to the left (and right when no flame).
+    Reduced to avoid extending beyond the last icon. */
+  --switch-overhang: 0px;
   /* Horizontal gap between last icon and flame so bar stops early */
   --flame-gap: 24px;
 }
@@ -154,7 +155,8 @@ a:has(> img.site-title) {
 }
 
 @media (max-width: 420px) {
-  .page-switch { --switch-overhang: 16px; }
+  /* Slightly shorter overhang on very small screens to prevent visual overflow */
+  .page-switch { --switch-overhang: 12px; }
   .page-switch { --flame-gap: 16px; }
   .page-switch::after { height: 10px; }
   .page-btn { width: 48px; height: 48px; }
