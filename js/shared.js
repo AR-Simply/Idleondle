@@ -247,6 +247,21 @@ function setCookie(name, value, days = 365) {
           function gtag(){dataLayer.push(arguments);} window.gtag = window.gtag || gtag;
           window.gtag('js', new Date());
           window.gtag('config', 'G-5H288JHY22');
+          // Send page-specific custom event
+          try {
+            let game = 'item';
+            const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
+            const p = path.toLowerCase();
+            if (p.includes('hardmonsterguesser') || p.includes('hardmonster') || p.includes('/hardmonster/')) game = 'hard_monster';
+            if (p.includes('hardcardguesser') || p.includes('hardcard')) game = 'hard_card';
+            if (p.includes('card')) game = 'card';
+            if (p.includes('monsterguesser') || p.includes('monster')) game = 'monster';
+            if (p.includes('/map/') || p.includes('mapguesser') || p.includes('/map')) game = 'map';
+            if (p.includes('harditemguesser') || p.includes('harditem')) game = 'hard_item';
+            if (p.includes('mealguesser') || p.includes('/meal/') || p.includes('/meal')) game = 'meal';
+            if (p.includes('/pack/')) game = 'pack';
+            window.gtag('event', 'page_view_' + game, { page_title: document.title || 'Idleondle' });
+          } catch (e) { /* non-fatal */ }
         }
       } catch (e) { /* non-fatal */ }
     }
