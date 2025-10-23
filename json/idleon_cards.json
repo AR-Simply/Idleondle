@@ -1020,11 +1020,6 @@
       "dropchance": null,
       "icon": "images\\Cards\\Sovereign Emperor Card.png"
     },
-    "Spirit Diamond Card": {
-      "category": "Bosses",
-      "dropchance": null,
-      "icon": "images\\Cards\\Spirit Diamond Card.png"
-    },
     "Spring Splendor Card": {
       "category": "Events",
       "dropchance": null,
