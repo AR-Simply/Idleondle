@@ -6,109 +6,109 @@
       "enemy": "None",
       "start": "tr"
     },
-    "Spore Meadows": {
+    "Spore Meadows / Green Mush": {
       "icon": "images\\Maps\\spore meadows.png",
       "world": "Blunder Hills",
       "enemy": "Green Mushroom",
       "start": "bt"
     },
-    "Froggy Fields": {
+    "Froggy Fields / Frog": {
       "icon": "images\\Maps\\froggy fields.png",
       "world": "Blunder Hills",
       "enemy": "Frog",
       "start": "tr"
     },
-    "Valley of the Beans": {
+    "Valley of the Beans / Bean": {
       "icon": "images\\Maps\\valley of beans.png",
       "world": "Blunder Hills",
       "enemy": "Bored Bean",
       "start": "bl"
     },
-    "Jungle Perimeter": {
+    "Jungle Perimeter / Slime": {
       "icon": "images\\Maps\\jungle perimeter.png",
       "world": "Blunder Hills",
       "enemy": "Slime",
       "start": "tl"
     },
-    "Winding Willows": {
+    "Winding Willows / Baby Boa": {
       "icon": "images\\Maps\\winding willows.png",
       "world": "Blunder Hills",
       "enemy": "Baby Boa",
       "start": "bl"
     },
-    "Vegetable Patch": {
+    "Vegetable Patch / Carrotman": {
       "icon": "images\\Maps\\vegetable patch.png",
       "world": "Blunder Hills",
       "enemy": "Carrotman",
       "start": "br"
     },
-    "Birch Enclave": {
+    "Birch Enclave / Red Mush": {
       "icon": "images\\Maps\\birch enclave.png",
       "world": "Blunder Hills",
       "enemy": "Red Mushroom",
       "start": "tl"
     },
-    "Forest Outskirts": {
+    "Forest Outskirts / Glublin": {
       "icon": "images\\Maps\\forest outskirts.png",
       "world": "Blunder Hills",
       "enemy": "Glublin",
       "start": "tl"
     },
-    "Encroaching Forest Villas": {
+    "Encroaching Forest Villas / Wode Board": {
       "icon": "images\\Maps\\forest villas.png",
       "world": "Blunder Hills",
       "enemy": "Wode Board",
       "start": "bl"
     },
-    "Tucked Away": {
+    "Tucked Away / Gigafrog": {
       "icon": "images\\Maps\\tucked away.png",
       "world": "Blunder Hills",
       "enemy": "Gigafrog",
       "start": "bl"
     },
-    "The Base of the Bark": {
+    "The Base of the Bark / Walking Stick": {
       "icon": "images\\Maps\\base of the bark.png",
       "world": "Blunder Hills",
       "enemy": "Walking Stick",
       "start": "tl"
     },
-    "Hollowed Trunk": {
+    "Hollowed Trunk / Nutto": {
       "icon": "images\\Maps\\hollowed trunk.png",
       "world": "Blunder Hills",
       "enemy": "Nutto",
       "start": "tr"
     },
-    "Where the Branches End": {
+    "Where the Branches End / Wood Mush": {
       "icon": "images\\Maps\\wheere the branches end.png",
       "world": "Blunder Hills",
       "enemy": "Wood Mushroom",
       "start": "br"
     },
-    "The Roots": {
+    "The Roots / Nutto": {
       "icon": "images\\Maps\\the roots.png",
       "world": "Blunder Hills",
       "enemy": "Nutto",
       "start": "tr"
     },
-    "The Office": {
+    "The Office / Dr Defecaus": {
       "icon": "images\\Maps\\the office.png",
       "world": "Blunder Hills",
       "enemy": "Dr Defecaus",
       "start": "br"
     },
-    "Rats Nest": {
+    "Rats Nest / Rat": {
       "icon": "images\\Maps\\rats nest.png",
       "world": "Blunder Hills",
       "enemy": "Rat",
       "start": "tr"
     },
-    "Poopy Sewers": {
+    "Poopy Sewers / Poop": {
       "icon": "images\\Maps\\poppy sewers.png",
       "world": "Blunder Hills",
       "enemy": "Poop",
       "start": "bl"
     },
-    "Meel's Crypt": {
+    "Meel's Crypt / Boop": {
       "icon": "images\\Maps\\mells crypt.png",
       "world": "Blunder Hills",
       "enemy": "Boop",
@@ -133,61 +133,61 @@
       "enemy": "None",
       "start": "bl"
     },
-    "Jar Bridge": {
+    "Jar Bridge / Sandy Pot": {
       "icon": "images\\Maps\\jar bridge.png",
       "world": "Yum-Yum Desert",
       "enemy": "Sandy Pot",
       "start": "tl"
     },
-    "The Mimic Hole": {
+    "The Mimic Hole / Mimic": {
       "icon": "images\\Maps\\the mimic hole.png",
       "world": "Yum-Yum Desert",
       "enemy": "Mimic",
       "start": "tr"
     },
-    "Dessert Dunes": {
+    "Dessert Dunes / Crabcake": {
       "icon": "images\\Maps\\desert dunes.png",
       "world": "Yum-Yum Desert",
       "enemy": "Crabcake",
       "start": "br"
     },
-    "Grandioso Canyon": {
+    "Grandioso Canyon / Mafioso": {
       "icon": "images\\Maps\\grandioso canyon.png",
       "world": "Yum-Yum Desert",
       "enemy": "Mafioso",
       "start": "br"
     },
-    "Shifty Sandbox": {
+    "Shifty Sandbox / Sand Castle": {
       "icon": "images\\Maps\\shifty sandbox.png",
       "world": "Yum-Yum Desert",
       "enemy": "Sand Castle",
       "start": "tl"
     },
-    "Pincer Plateau": {
+    "Pincer Plateau / Pincermin": {
       "icon": "images\\Maps\\pincer plateu.png",
       "world": "Yum-Yum Desert",
       "enemy": "Pincermin",
       "start": "br"
     },
-    "Slamabam Straightaway": {
+    "Slamabam Straightaway / Mashed Potato": {
       "icon": "images\\Maps\\slamabam.png",
       "world": "Yum-Yum Desert",
       "enemy": "Mashed Potato",
       "start": "tr"
     },
-    "The Ring": {
+    "The Ring / Tyson": {
       "icon": "images\\Maps\\the ring.png",
       "world": "Yum-Yum Desert",
       "enemy": "Tyson",
       "start": "br"
     },
-    "Up Up Down Down": {
+    "Up Up Down Down / Moonmoon": {
       "icon": "images\\Maps\\up up down down.png",
       "world": "Yum-Yum Desert",
       "enemy": "Moonmoon",
       "start": "tr"
     },
-    "Sands of Time": {
+    "Sands of Time / Sand Giant": {
       "icon": "images\\Maps\\sands of time.png",
       "world": "Yum-Yum Desert",
       "enemy": "Sand Giant",
@@ -205,13 +205,13 @@
       "enemy": "None",
       "start": "tr"
     },
-    "Djonnuttown": {
+    "Djonnuttown / Snelbie": {
       "icon": "images\\Maps\\djonnuttown.png",
       "world": "Yum-Yum Desert",
       "enemy": "Snelbie",
       "start": "tl"
     },
-    "Efaunts Tomb": {
+    "Efaunts Tomb / Efaunt": {
       "icon": "images\\Maps\\efaunts tomb.png",
       "world": "Yum-Yum Desert",
       "enemy": "Efaunt",
@@ -224,79 +224,79 @@
       "enemy": "None",
       "start": "tl"
     },
-    "Snowfield Outskirts": {
+    "Snowfield Outskirts / Frost Flake": {
       "icon": "images\\Maps\\snow field outskirts.png",
       "world": "Frostbite Tundra",
       "enemy": "Frost Flake",
       "start": "tr"
     },
-    "Steep Sheep Ledge": {
+    "Steep Sheep Ledge / Sheepie": {
       "icon": "images\\Maps\\steep sheep ledge.png",
       "world": "Frostbite Tundra",
       "enemy": "Sheepie",
       "start": "tl"
     },
-    "Refrigeration Station": {
+    "Refrigeration Station / Bloque": {
       "icon": "images\\Maps\\refrigeration station.png",
       "world": "Frostbite Tundra",
       "enemy": "Bloque",
       "start": "br"
     },
-    "Mamooooth Mountain": {
+    "Mamooooth Mountain / Mamooth": {
       "icon": "images\\Maps\\mamoooth mountain.png",
       "world": "Frostbite Tundra",
       "enemy": "Mamooth",
       "start": "bl"
     },
-    "Rollin' Tundra": {
+    "Rollin' Tundra / Snowman": {
       "icon": "images\\Maps\\rolllin tundra.png",
       "world": "Frostbite Tundra",
       "enemy": "Snowman",
       "start": "tr"
     },
-    "Signature Slopes": {
+    "Signature Slopes / Penguin": {
       "icon": "images\\Maps\\signatyre slopes.png",
       "world": "Frostbite Tundra",
       "enemy": "Penguin",
       "start": "tl"
     },
-    "Thermonuclear Climb": {
+    "Thermonuclear Climb / Thermister": {
       "icon": "images\\Maps\\thermonuclear climb.png",
       "world": "Frostbite Tundra",
       "enemy": "Thermister",
       "start": "tr"
     },
-    "Waterlogged Entrance": {
+    "Waterlogged Entrance / Quenchie": {
       "icon": "images\\Maps\\waterlogged entrance.png",
       "world": "Frostbite Tundra",
       "enemy": "Quenchie",
       "start": "bl"
     },
-    "Cryo Catacombs": {
+    "Cryo Catacombs / Cryosnake": {
       "icon": "images\\Maps\\cryo catacombs.png",
       "world": "Frostbite Tundra",
       "enemy": "Cryosnake",
       "start": "br"
     },
-    "Overpass of Sound": {
+    "Overpass of Sound / Bop Box": {
       "icon": "images\\Maps\\overpass of sound.png",
       "world": "Frostbite Tundra",
       "enemy": "Bop Box",
       "start": "tl"
     },
-    "Crystal Basecamp": {
+    "Crystal Basecamp / Neyeptune": {
       "icon": "images\\Maps\\crystal basecamp.png",
       "world": "Frostbite Tundra",
       "enemy": "Neyeptune",
       "start": "bl"
     },
-    "The Stache Split": {
+    "The Stache Split / Sir Stache": {
       "icon": "images\\Maps\\the stache split.png",
       "world": "Frostbite Tundra",
       "enemy": "Sir Stache",
       "start": "tl"
     },
-    "Wam Wonderland": {
+    "Wam Wonderland / Dedotated Ram": {
       "icon": "images\\Maps\\wam wonderland.png",
       "world": "Frostbite Tundra",
       "enemy": "Dedotated Ram",
@@ -314,13 +314,13 @@
       "enemy": "None",
       "start": "bl"
     },
-    "Hell Hath Frozen Over": {
+    "Hell Hath Frozen Over / Bloodbone": {
       "icon": "images\\Maps\\hell hath frozen over.png",
       "world": "Frostbite Tundra",
       "enemy": "Bloodbone",
       "start": "br"
     },
-    "Chizoar's Cavern": {
+    "Chizoar's Cavern / Chizoar": {
       "icon": "images\\Maps\\chiozars cavern.png",
       "world": "Frostbite Tundra",
       "enemy": "Chizoar",
@@ -333,67 +333,67 @@
       "enemy": "None",
       "start": "bl"
     },
-    "Donut Drive-In": {
+    "Donut Drive-In / Donut": {
       "icon": "images\\Maps\\donut driveway.png",
       "world": "Hyperion Nebula",
       "enemy": "Donut",
       "start": "br"
     },
-    "TV Outpost": {
+    "TV Outpost / TV": {
       "icon": "images\\Maps\\tv outpost.png",
       "world": "Hyperion Nebula",
       "enemy": "TV",
       "start": "br"
     },
-    "Jelly Cube Bridge": {
+    "Jelly Cube Bridge / Gelatinous Cuboid": {
       "icon": "images\\Maps\\jelly cube bridge.png",
       "world": "Hyperion Nebula",
       "enemy": "Gelatinous Cuboid",
       "start": "tl"
     },
-    "Spaceway Raceway": {
+    "Spaceway Raceway / Purp Mush": {
       "icon": "images\\Maps\\spaceway raceway.png",
       "world": "Hyperion Nebula",
       "enemy": "Purp Mushroom",
       "start": "bl"
     },
-    "Wurm Highway": {
+    "Wurm Highway / Flying Worm": {
       "icon": "images\\Maps\\wurm highway.png",
       "world": "Hyperion Nebula",
       "enemy": "Flying Worm",
       "start": "tr"
     },
-    "Flamboyant Bayou": {
+    "Flamboyant Bayou / Flombeige": {
       "icon": "images\\Maps\\flamboyant bayou.png",
       "world": "Hyperion Nebula",
       "enemy": "Flombeige",
       "start": "tr"
     },
-    "Cocoa Tunnel": {
+    "Cocoa Tunnel / Choccie": {
       "icon": "images\\Maps\\cocoa tunnel.png",
       "world": "Hyperion Nebula",
       "enemy": "Choccie",
       "start": "tl"
     },
-    "Outskirts of Fallstar Isle": {
+    "Outskirts of Fallstar Isle / Genie": {
       "icon": "images\\Maps\\outskirts of fallstar isle.png",
       "world": "Hyperion Nebula",
       "enemy": "Genie",
       "start": "br"
     },
-    "Shelled Shores": {
+    "Shelled Shores / Clammie": {
       "icon": "images\\Maps\\shelled shores.png",
       "world": "Hyperion Nebula",
       "enemy": "Clammie",
       "start": "tl"
     },
-    "Standstill Plains": {
+    "Standstill Plains / Biggole Wurm": {
       "icon": "images\\Maps\\standstill plains.png",
       "world": "Hyperion Nebula",
       "enemy": "Biggole Wurm",
       "start": "bl"
     },
-    "Untravelled Octopath": {
+    "Untravelled Octopath / Octodar": {
       "icon": "images\\Maps\\untravelled octopath.png",
       "world": "Hyperion Nebula",
       "enemy": "Octodar",
@@ -405,23 +405,216 @@
       "enemy": "Various",
       "start": "br"
     },
-    "Enclave of Eyes": {
+    "Enclave of Eyes / Stilted Seeker": {
       "icon": "images\\Maps\\enclave of eyes.png",
       "world": "Hyperion Nebula",
       "enemy": "Stilted Seeker",
       "start": "tl"
     },
-    "Enclave of La Troll": {
+    "Enclave of La Troll / Massive Troll": {
       "icon": "images\\Maps\\enclave of la troll.png",
       "world": "Hyperion Nebula",
       "enemy": "Massive Troll",
       "start": "br"
     },
-    "End of the Road": {
+    "End of the Road / Amarok": {
       "icon": "images\\Maps\\end of the road.png",
       "world": "Blunder Hills",
       "enemy": "Amarok",
       "start": "tr"
+    },
+    "Magma Rivertown": {
+      "icon": "images\\Maps\\magma rivertown.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "None",
+      "start": "tr"
+    },
+    "Naut Sake Perimeter / Suggma": {
+      "icon": "images\\Maps\\naut sake perimeter.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Suggma",
+      "start": "tr"
+    },
+    "Niagrilled Falls / Maccie": {
+      "icon": "images\\Maps\\niagrilled falls.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Maccie",
+      "start": "tr"
+    },
+    "The Killer Roundabout / Mister Brightside": {
+      "icon": "images\\Maps\\the killer roundabout.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Mister Brightside",
+      "start": "tr"
+    },
+    "The Hole": {
+      "icon": "images\\Maps\\the hole.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "None",
+      "start": "tr"
+    },
+    "Cracker Jack Lake / Cheese Nub": {
+      "icon": "images\\Maps\\cracker jack lake.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Cheese Nub",
+      "start": "tr"
+    },
+    "The Great Molehill / Stiltmole": {
+      "icon": "images\\Maps\\the great molehill.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Stiltmole",
+      "start": "tr"
+    },
+    "Erruption River / Molti": {
+      "icon": "images\\Maps\\erruption river.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Molti",
+      "start": "tr"
+    },
+    "Mount Doomish / Purgatory-Stalker": {
+      "icon": "images\\Maps\\mount doomish.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Purgatory-Stalker",
+      "start": "tr"
+    },
+    "OJ Bay / Citringe": {
+      "icon": "images\\Maps\\oj bay.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Citringe",
+      "start": "tr"
+    },
+    "Lampar Lake / Lampar": {
+      "icon": "images\\Maps\\lampar lake.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Lampar",
+      "start": "tr"
+    },
+    "Spitfire River / Fire Spirit": {
+      "icon": "images\\Maps\\spitfire river.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Fire Spirit",
+      "start": "tr"
+    },
+    "Miner Mole Outskirts / Biggole Mole": {
+      "icon": "images\\Maps\\miner mole outskirts.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Biggole Mole",
+      "start": "tr"
+    },
+    "Crawly Catacombs / Crawler": {
+      "icon": "images\\Maps\\crawly catacombs.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Crawler",
+      "start": "tr"
+    },
+    "The Worm Nest / Tremor Worms": {
+      "icon": "images\\Maps\\the worm nest.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Tremor Worms",
+      "start": "tr"
+    },
+    "Kattlekruks Vulcano / Kattlekruk": {
+      "icon": "images\\Maps\\kattlekruks vulcano.png",
+      "world": "Smolderin' Plateau",
+      "enemy": "Kattlekruk",
+      "start": "tr"
+    },
+    "Spirit Village": {
+      "icon": "images\\Maps\\spirit village.png",
+      "world": "Spirited Valley",
+      "enemy": "None",
+      "start": "tr"
+        },
+    "Gooble Goop Creek / Sprout Spirit": {
+      "icon": "images\\Maps\\gooble goop creek.png",
+      "world": "Spirited Valley",
+      "enemy": "Sprout Spirit",
+      "start": "tr"
+        },
+    "Picnic Bridgeways / Ricecake": {
+      "icon": "images\\Maps\\picnic bridgeways.png",
+      "world": "Spirited Valley",
+      "enemy": "Ricecake",
+      "start": "tr"
+        },
+    "Irrigation Station / River Spirit": {
+      "icon": "images\\Maps\\irrigation station.png",
+      "world": "Spirited Valley",
+      "enemy": "River Spirit",
+      "start": "tr"
+        },
+    "Troll Playground / Baby Troll": {
+      "icon": "images\\Maps\\troll playground.png",
+      "world": "Spirited Valley",
+      "enemy": "Baby Troll",
+      "start": "tr"
+        },
+    "Edge of the Valley / Woodlin Spirit": {
+      "icon": "images\\Maps\\edge of the valley.png",
+      "world": "Spirited Valley",
+      "enemy": "Woodlin Spirit",
+      "start": "tr"
+        },
+    "Bamboo Laboredge / Bamboo Spirit": {
+      "icon": "images\\Maps\\bamboo laboredge.png",
+      "world": "Spirited Valley",
+      "enemy": "Bamboo Spirit",
+      "start": "tr"
+        },
+    "Lightway Path / Lantern Spirit": {
+      "icon": "images\\Maps\\lightway path.png",
+      "world": "Spirited Valley",
+      "enemy": "Lantern Spirit",
+      "start": "tr"
+        },
+    "Troll Broodnest / Mama Troll": {
+      "icon": "images\\Maps\\troll broodnest.png",
+      "world": "Spirited Valley",
+      "enemy": "Mama Troll",
+      "start": "tr"
+        },
+    "Above the Clouds / Leek Spirit": {
+      "icon": "images\\Maps\\above the clouds.png",
+      "world": "Spirited Valley",
+      "enemy": "Leek Spirit",
+      "start": "tr"
+        },
+    "Sleepy Skyline / Ceramic Spirit": {
+      "icon": "images\\Maps\\sleepy skyline.png",
+      "world": "Spirited Valley",
+      "enemy": "Ceramic Spirit",
+      "start": "tr"
+        },
+    "Dozey Dogpark / Skydoggie Spirit": {
+      "icon": "images\\Maps\\dozey dogpark.png",
+      "world": "Spirited Valley",
+      "enemy": "Skydoggie Spirit",
+      "start": "tr"
+        },
+    "Yolkrock Basin / Royal Egg": {
+      "icon": "images\\Maps\\yolkrock basin.png",
+      "world": "Spirited Valley",
+      "enemy": "Royal Egg",
+      "start": "tr"
+        },
+    "Chieftain Stairway / Minichef Spirit": {
+      "icon": "images\\Maps\\chieftan stairway.png",
+      "world": "Spirited Valley",
+      "enemy": "Minichef Spirit",
+      "start": "tr"
+        },
+    "Emperor's Castle Doorstep / Samurai Guardian": {
+      "icon": "images\\Maps\\emperors castle doorstep.png",
+      "world": "Spirited Valley",
+      "enemy": "Samurai Guardian",
+      "start": "tr"
+        },
+    "Emperors Castle / Emperor": {
+      "icon": "images\\Maps\\emperors castle.png",
+      "world": "Spirited Valley",
+      "enemy": "Emperor",
+      "start": "tr"
     }
+
   }
 }

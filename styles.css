@@ -420,6 +420,45 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   pointer-events: auto; /* capture mouse events so the underlying image can't be directly interacted with */
 }
 
+/* Daily NPC quote display (prominent quote on npcGuesser page) */
+.daily-npc-quote {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+  width: 540px;
+  min-height: 180px;
+  padding: 24px;
+  background: var(--panel);
+  border: 2px solid var(--border);
+  border-radius: 15px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+.npc-quote-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.daily-npc-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  border-radius: 12px;
+  z-index: 2;
+  pointer-events: auto;
+  user-select: none;
+}
+
 /* Map-specific prominent icon: wider than the card variant so it doesn't conflict visually */
 .daily-map {
   display: inline-flex;

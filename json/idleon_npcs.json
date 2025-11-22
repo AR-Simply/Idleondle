@@ -1,0 +1,142 @@
+{
+  "Npcs": {
+    "Builder Bird": {
+      "world": "Blunder Hills",
+      "Total Quests": 1,
+      "quote": "Defeat the Boss at the end of World 1 to retrieve the gem and open the portal to WORLD 2!!",
+      "icon": "images\\Npcs\\Builder_Bird.png"
+    },
+        "Mr Pigibank": {
+      "world": "Blunder Hills",
+      "Total Quests": 1,
+      "quote": "Well good thing is I've actually found some Stamps in my desk while you were gone so at least we can start with something. So lets talk business!",
+      "icon": "images\\Npcs\\Mr_Pigibank.png"
+    },
+            "Grasslands Gary": {
+      "world": "Blunder Hills",
+      "Total Quests": 0,
+      "quote": "Hey you're still playing! Alright so I'm a Taskmaster. I've got a bunch of tasks for you to complete while you're out there adventuring. For each one you complete you'll get points to spend!",
+      "icon": "images\\Npcs\\Grasslands_Gary.png"
+    },
+            "Scripticus": {
+      "world": "Blunder Hills",
+      "Total Quests": 12,
+      "quote": "Wow you seriously did all of that? Here's my tro... wait you don't have any inventory space! I guess that means you have to do EVERYTHING AGAIN HAHAHA!!! Nah just kidding clear a space and talk to me again.",
+      "icon": "images\\Npcs\\Scripticus.png"
+    },
+            "Town Marble": {
+      "world": "Blunder Hills",
+      "Total Quests": 1,
+      "quote": "But hark what be this I see? Mayhaps a glimmer of hope through yonder eyeball breaks upon which mine surface doth reflect?",
+      "icon": "images\\Npcs\\Town_Marble.png"
+    },
+            "Glumlee": {
+      "world": "Blunder Hills",
+      "Total Quests": 4,
+      "quote": "Alright kid or man or baby whatever you are behind that screen I'm gonna let you in on a secret.",
+      "icon": "images\\Npcs\\Glumlee.png"
+    },
+            "Mutton": {
+      "world": "Blunder Hills",
+      "Total Quests": 4,
+      "quote": "A MILLION FOLLOWERS! I'm the biggest thing ever clever as a feather only getting better... forever!!! Aaand I just got cancelled on Oinkker for an Oink I posted 4 years ago ughhh.",
+      "icon": "images\\Npcs\\Mutton.png"
+    },
+            "Krunk": {
+      "world": "Blunder Hills",
+      "Total Quests": 3,
+      "quote": "I need you to... Hang on I'm getting a call from the game developer LavaFlame2... Hey how are you? ... Oh is that so? You haven't coded my final quest yet and you need me to stall them? I see sure I'll let them know.",
+      "icon": "images\\Npcs\\Krunk.png"
+        },
+            "Woodsman": {
+      "world": "Blunder Hills",
+      "Total Quests": 3,
+      "quote": "Hahahaha you should've seen your face! You can't chop down trees in this game it was just a prank my boy! This stump here? It's just a prop! Here take my spare prop as a gift for being such a good sport!",
+      "icon": "images\\Npcs\\Woodsman.png"
+    },
+            "Picnic Stowaway": {
+      "world": "Blunder Hills",
+      "Total Quests": 12,
+      "quote": "Aahhh well that's been a full day of eating for me gonna head to sleep. I know they say the way to a blobs heart is through his stomach so I should be tellin' ya that I'm flattered but not interested.",
+      "icon": "images\\Npcs\\Picnic_Stowaway.png"
+    },
+            "Typhoon": {
+      "world": "Blunder Hills",
+      "Total Quests": 1,
+      "quote": "Hello citizen the colosseum peanut gallery is on the third floor in the upper left corner. Viewer admission is free as per Executive Order 66.",
+      "icon": "images\\Npcs\\Typhoon.png"
+    },
+            "Hamish": {
+      "world": "Blunder Hills",
+      "Total Quests": 3,
+      "quote": "Thats uh quite a few less than a billion. But that Quest Notifier was right I'll still accept! Here's the storage chest it's super OP for a big time adventurer like you!",
+      "icon": "images\\Npcs\\Hamish.png"
+    },
+            "Promotheus": {
+      "world": "Blunder Hills",
+      "Total Quests": 4,
+      "quote": "The monsters here are even crazier many are references to something called 'pop culture' which I assume is some sort of Bubble Religion in their land.",
+      "icon": "images\\Npcs\\Promotheus.png"
+    },
+            "Toadstall": {
+      "world": "Blunder Hills",
+      "Total Quests": 2,
+      "quote": "Hehe... that outta teach that old coot to not hit me off my walking stick! Please do keep bothering him from time to time he has it coming!",
+      "icon": "images\\Npcs\\Toadstall.png"
+    },
+            "Stiltzcho": {
+      "world": "Blunder Hills",
+      "Total Quests": 6,
+      "quote": "Haha I guess it is that I just get easily sidetrack and lose focus often and instead of investigating myself for the problem I tried to blame someone else!",
+      "icon": "images\\Npcs\\Stiltzcho.png"
+    },
+            "Funguy": {
+      "world": "Blunder Hills",
+      "Total Quests": 5,
+      "quote": "What you thought you were killing them? Hahaha bro chill. They're monsters they'll just respawn back home no biiiiggie! Yo but could you help clean up before headin' out?",
+      "icon": "images\\Npcs\\Funguy.png"
+        },
+            "Tiki Chief": {
+      "world": "Blunder Hills",
+      "Total Quests": 5,
+      "quote": "Well at least we've got you soon to be Valued Customer! Wink Wink! Sorry I had to say that out but I am wearing a mask here.",
+      "icon": "images\\Npcs\\Tiki_Chief.png"    
+    },
+            "Dog Bone": {
+      "world": "Blunder Hills",
+      "Total Quests": 2,
+      "quote": "Look I'm not actually over the whole 'dying' thing and it's been terribly annoying to continually help promote that darn boss monster especially since they were the one who ate me!",
+      "icon": "images\\Npcs\\Dog_Bone.png"    
+    },
+            "Papua Piggea": {
+      "world": "Blunder Hills",
+      "Total Quests": 4,
+      "quote": "Oinko... boinko shama lama loinko... 'The pig realizes that hoarding stamps brings him no real joy and he yearns for more meaningful stampage.",
+      "icon": "images\\Npcs\\Papua_Piggea.png"
+    },
+            "TP Pete": {
+      "world": "Blunder Hills",
+      "Total Quests": 3,
+      "quote": "Well catch you later when you're higher level! What? Oh did I say level 60 before? I meant 160... thousand. Yea come back at Lv. 160000 and I'll probably have a new quest by then.",
+      "icon": "images\\Npcs\\TP_Pete.png"
+        },
+            "Telescope": {
+      "world": "Blunder Hills",
+      "Total Quests": 1,
+      "quote": "The engraving on the side says 'High Power Hubble Telescope capable of over 500000x magnification...'",
+      "icon": "images\\Npcs\\Telescope.png"
+    },  
+            "Dazey": {
+      "world": "Blunder Hills",
+      "Total Quests": 2,
+      "quote": "NICE! FINALLY!!! Now I can make my costume and pretend to be Sprout! No one will ever bother me again!! Just gotta take this off and... Hey can I get some privacy you creep? Please leave the map and come back...",
+      "icon": "images\\Npcs\\Dazey.png"
+    },
+            "Sprout": {
+      "world": "Blunder Hills",
+      "Total Quests": 4,
+      "quote": "This is not working!! But at least I look super awesome I think I'll keep wearing these shoes! Here you can have my Merry Cherry Remedy Tshirt they broke up when I was a sapling and they'll never ever come back ever.",
+      "icon": "images\\Npcs\\Sprout.png"
+    }
+}
+}

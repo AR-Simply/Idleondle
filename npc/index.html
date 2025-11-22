@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Idleondle</title>
+  <title>Idleondle - NPC Guesser</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Allow indexing: removed previous noindex directive -->
-  <link rel="canonical" href="https://www.idleondle.com/map/">
-  <meta name="description" content="Guess the daily IdleOn map in as few tries as possible in Idleondle's Map Guesser." />
+  <link rel="canonical" href="https://www.idleondle.com/npc/">
+  <meta name="description" content="Guess the daily IdleOn NPC in as few tries as possible in Idleondle's NPC Guesser." />
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png">
   <link rel="apple-touch-icon" href="../images/icon.png">
@@ -37,11 +37,15 @@
 
     <div class="top-row">
       <div class="guess-box combo-guess" id="guessBox">
-        <div class="guess-title">Guess today's Map!</div>
+        <div class="guess-title">Guess today's NPC!</div>
         <div class="guess-actions">
           <div class="clue-wrap">
-            <button id="guessBtn2" class="guess-btn" aria-label="Category clue">No clues for this</button>
-            
+            <button id="guessBtn1" class="guess-btn" aria-label="World clue">World Clue</button>
+            <div class="clue-note" id="note1"></div>
+          </div>
+          <div class="clue-wrap">
+            <button id="guessBtn2" class="guess-btn" aria-label="Total Quests clue">Total Quests Clue</button>
+            <div class="clue-note" id="note2"></div>
           </div>
         </div>
 
@@ -83,7 +87,7 @@
 
     <div class="combo" id="combo">
       <div class="input-wrap">
-        <input id="search" type="text" placeholder="Type the name of a map..." autocomplete="off" />
+        <input id="search" type="text" placeholder="Type the name of an NPC..." autocomplete="off" />
       </div>
       <div class="dropdown" id="dropdown">
         <ul class="results" id="results"></ul>
@@ -97,27 +101,17 @@
         <button class="goal-close" id="goalClose" aria-label="Close">✕</button>
         <h2 class="goal-title">YOU FOUND IT!</h2>
         <div class="goal-body">
-          <img id="goalIcon" class="goal-icon" src="" alt="goal icon" style="width: 300px;" />
+          <img id="goalIcon" class="goal-icon" src="" alt="goal icon" />
           <div id="goalName" class="goal-name"></div>
         </div>
         <div class="goal-guesses">Number of guesses: <strong id="goalGuesses">0</strong></div>
         <div class="goal-footer">
-          <div class="goal-footer-text">Come back for a new map in...</div>
+          <div class="goal-footer-text">Come back for a new card in...</div>
           <div class="goal-timer-wrap"><span id="goalTimer" class="goal-timer">00:00:00</span></div>
         </div>
-        <!-- Add action button linking to Monster Guesser (carrotman icon) -->
+        <!-- Add action button linking to other games -->
         <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
 
-          <a href="/hardmap/" class="guess-btn" id="toHardMapBtn" aria-label="Hard Map Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-            <img src="../images/hard_portal.png" alt="gem" style="width:22px;height:22px;object-fit:contain;" />
-            <span style="color:var(--text);font-weight:800;font-size:15px;">Try Hard Mode</span>
-          </a>
-
-          <a href="/meal/" class="guess-btn" id="toPackBtn" aria-label="Pack Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-            <img src="../images/Meals/36px-Turkey_a_la_Thank.png" alt="gem" style="width:22px;height:22px;object-fit:contain;" />
-            <span style="color:var(--text);font-weight:800;font-size:15px;">Next game</span>
-          </a>
-      
 
               </div>
           <a href="/results/" class="guess-btn results-btn-orange" id="resultsbtn" aria-label="View your past daily results" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:18px;width:68%;">
@@ -135,9 +129,9 @@
         <div class="goal-body">
           <div style="text-align:left; font-size:14px; color:#111;">
             <p>Daily guessing games from the game "IdleOn". Games changes at midnight in your timezone.</p>
-            <p>The map zooms out slightly for each guess. When you guess correctly, the map will be fully revealed.</p>
+            <p>Try to guess the daily NPC! Use the clue buttons to reveal hints about the NPC's world and quest count.</p>
            
-            <p>How fast can you discover what map it is?</p>
+            <p>How fast can you discover which NPC it is?</p>
             
             <p><strong>Good luck and have fun!</strong></p>
           </div>
@@ -175,10 +169,10 @@
 
                         <p>We do set a small, local cookie to support game UX: <code>idleondle_last_win</code> and per-game cookies named <code>idleondle_win_<em>&lt;game&gt;</em></code>. These cookies store a JSON payload containing the game identifier, an ISO timestamp of when you completed the daily puzzle, and the number of guesses you used. The cookies are used only locally by the site to show that you've already completed today's puzzle, automatically reveal the answer, and display the guess count in the post-win modal.</p>
 
-                <p>These cookies are non-personal, do not contain any identifiers that would reasonably identify you, are not shared with third parties by this site, and are retained locally for 365 days to allow users to revisit prior wins on the same device. For clarity, this is separate from advertising cookies used by Google AdSense or analytics providers (see below).</p>
+        <p>These cookies are non-personal, do not contain any identifiers that would reasonably identify you, are not shared with third parties by this site, and are retained locally for 365 days to allow users to revisit prior wins on the same device. For clarity, this is separate from advertising cookies used by Google AdSense or analytics (see below).</p>
 
-          <h3>Analytics</h3>
-          <p>We use Google Analytics (gtag.js) to collect non-identifying usage data (pageviews, referrers, timestamps, and basic device/browser metadata). The script is loaded only if you explicitly opt in via this Privacy Policy ("Accept analytics"). You can revoke your choice at any time by returning to this Privacy Policy and selecting "Disable analytics".</p>
+      <h3>Analytics (Google Analytics)</h3>
+      <p>We use <strong>Google Analytics (gtag.js)</strong> for site analytics. Google Analytics only collects non-identifying information such as pageviews, referrers, timestamps, and basic device/browser metadata. No names, email addresses, or persistent personal identifiers are collected or stored by this site. The gtag.js script is loaded only if you explicitly opt in via this Privacy Policy ("Accept analytics"). You can revoke your choice at any time by returning to this Privacy Policy and selecting "Disable analytics".</p>
           <div style="display:flex;gap:8px;justify-content:center;margin:12px 0 0 0;">
                     <button id="privacyAccept" class="consent-btn consent-accept">Accept analytics</button>
                     <button id="privacyDecline" class="consent-btn consent-decline">Disable analytics</button>
@@ -255,23 +249,13 @@
   </div>
 
   <script type="module">
-    import '../js/mapGuesser.js';
+    import '../js/npcGuesser.js';
   </script>
   <script>
     (function(){
   // Load analytics (gtag.js) only if the user previously opted in
   if (document.cookie.split('; ').some(c => c.startsWith('analytics_consent=') && c.split('=')[1] === 'yes')) {
-        const a = document.createElement('script');
-        a.async = true;
-        a.src = 'https://www.googletagmanager.com/gtag/js?id=G-5H288JHY22';
-        a.setAttribute('data-gtag','1');
-        document.head.appendChild(a);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);} // lightweight wrapper
-        window.gtag = window.gtag || gtag;
-        window.gtag('js', new Date());
-        window.gtag('config', 'G-5H288JHY22');
-      }
+    const a = document.createElement('script'); a.async = true; a.src = 'https://www.googletagmanager.com/gtag/js?id=G-5H288JHY22'; a.setAttribute('data-gtag','1'); document.head.appendChild(a); window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} window.gtag = window.gtag || gtag; window.gtag('js', new Date()); window.gtag('config','G-5H288JHY22'); }
     })();
   </script>
   <script>

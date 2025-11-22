@@ -238,29 +238,51 @@ function setCookie(name, value, days = 365) {
       if (val === 'yes') {
       try {
         if (!document.querySelector('script[data-gtag]')) {
+          // Determine current game/page type once so we can both queue the event
+          // and resend/confirm it when the gtag script finishes loading.
+          let _game_for_gtag = 'item';
+          try {
+            const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
+            const p = path.toLowerCase();
+            if (p.includes('hardmonsterguesser') || p.includes('hardmonster') || p.includes('/hardmonster/')) _game_for_gtag = 'hard_monster';
+            else if (p.includes('hardcardguesser') || p.includes('hardcard')) _game_for_gtag = 'hard_card';
+            else if (p.includes('card')) _game_for_gtag = 'card';
+            else if (p.includes('monsterguesser') || p.includes('monster')) _game_for_gtag = 'monster';
+            else if (p.includes('/map/') || p.includes('mapguesser') || p.includes('/map')) _game_for_gtag = 'map';
+            else if (p.includes('harditemguesser') || p.includes('harditem')) _game_for_gtag = 'hard_item';
+            else if (p.includes('mealguesser') || p.includes('/meal/') || p.includes('/meal')) _game_for_gtag = 'meal';
+            else if (p.includes('/pack/')) _game_for_gtag = 'pack';
+            else if (p.includes('npcguesser') || p.includes('/npc/') || p.includes('/npc')) _game_for_gtag = 'npc';
+          } catch (e) { /* ignore detection errors */ }
+
           const a = document.createElement('script');
           a.async = true;
           a.src = 'https://www.googletagmanager.com/gtag/js?id=G-5H288JHY22';
           a.setAttribute('data-gtag','1');
+          // When the external script loads, resend the page-specific event and log for debugging
+          a.onload = function () {
+            try {
+              console.info('[gtag] script loaded');
+              if (typeof window.gtag === 'function') {
+                try { window.gtag('event', 'page_view_' + _game_for_gtag, { page_title: document.title || 'Idleondle', _sent_on_load: 1 }); } catch (e) { /* non-fatal */ }
+              } else {
+                console.warn('[gtag] script loaded but window.gtag is not a function');
+              }
+            } catch (e) { /* non-fatal */ }
+          };
           document.head.appendChild(a);
+
+          // Ensure dataLayer & shim exist so events are queued while the script loads
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);} window.gtag = window.gtag || gtag;
           window.gtag('js', new Date());
           window.gtag('config', 'G-5H288JHY22');
-          // Send page-specific custom event
+
+          // Queue the page-specific custom event immediately (it will be processed
+          // by gtag.js when it finishes loading) and log the action for debugging.
           try {
-            let game = 'item';
-            const path = (location.pathname || '') + (location.hash || '') + (location.search || '');
-            const p = path.toLowerCase();
-            if (p.includes('hardmonsterguesser') || p.includes('hardmonster') || p.includes('/hardmonster/')) game = 'hard_monster';
-            if (p.includes('hardcardguesser') || p.includes('hardcard')) game = 'hard_card';
-            if (p.includes('card')) game = 'card';
-            if (p.includes('monsterguesser') || p.includes('monster')) game = 'monster';
-            if (p.includes('/map/') || p.includes('mapguesser') || p.includes('/map')) game = 'map';
-            if (p.includes('harditemguesser') || p.includes('harditem')) game = 'hard_item';
-            if (p.includes('mealguesser') || p.includes('/meal/') || p.includes('/meal')) game = 'meal';
-            if (p.includes('/pack/')) game = 'pack';
-            window.gtag('event', 'page_view_' + game, { page_title: document.title || 'Idleondle' });
+            console.debug('[gtag] queueing page-specific event', _game_for_gtag);
+            window.gtag('event', 'page_view_' + _game_for_gtag, { page_title: document.title || 'Idleondle', _queued: 1 });
           } catch (e) { /* non-fatal */ }
         }
       } catch (e) { /* non-fatal */ }
@@ -351,9 +373,36 @@ function detectGameFromPath() {
   if (p.includes('mealguesser') || p.includes('/meal/') || p.includes('/meal')) return 'meal';
   // New: pack guesser page
   if (p.includes('/pack/')) return 'pack';
+  // New: npc guesser page
+  if (p.includes('npcguesser') || p.includes('/npc/') || p.includes('/npc')) return 'npc';
     return 'item';
   } catch (e) { return 'item'; }
 }
+
+// Ensure a page-specific GA event is sent or queued once detectGameFromPath is available.
+function sendPageSpecificEvent() {
+  try {
+    if (window.__page_specific_event_sent) return;
+    // Only send if user consented to analytics
+    try { if (getCookie('analytics_consent') !== 'yes') return; } catch (e) { /* proceed cautiously */ }
+    let game = 'item';
+    try { game = detectGameFromPath(); } catch (e) { /* fallback */ }
+    const name = 'page_view_' + game;
+    const payload = { page_title: document.title || 'Idleondle' };
+    if (typeof window.gtag === 'function') {
+      try { console.debug('[gtag] sending page-specific event', name); } catch (e) {}
+      try { window.gtag('event', name, Object.assign({}, payload, { _auto: 1 })); } catch (e) { /* non-fatal */ }
+    } else if (window.dataLayer) {
+      try { console.debug('[gtag] queuing page-specific event to dataLayer', name); } catch (e) {}
+      try { window.dataLayer.push(['event', name, Object.assign({}, payload, { _queued: 1 })]); } catch (e) { /* non-fatal */ }
+    }
+    window.__page_specific_event_sent = true;
+  } catch (e) { /* non-fatal */ }
+}
+
+// Attempt to send immediately if consent already present. If gtag.js loads later
+// the onload handler will also re-send (we guard with __page_specific_event_sent).
+try { if (getCookie('analytics_consent') === 'yes') sendPageSpecificEvent(); } catch (e) { /* ignore */ }
 
 function resolveIcon(p) {
   const cleaned = toWebPath(p).replace(/^\.?\//, '');
@@ -817,6 +866,13 @@ export async function initShared(config = {}) {
     } else if (game === 'pack') {
       // Pack guesser only uses the category clue button (guessBtn2), but set both for safety
       CLUE_UNLOCKS = { world: 999, category: 999 };
+    } else if (game === 'map') {
+      // Normal map guesser: make enemy clue very hard to unlock (user requested 99 guesses)
+      // Keep world clue at the default low threshold
+      CLUE_UNLOCKS = { world: 4, category: 99 };
+    } else if (game === 'npc') {
+      // NPC guesser: world clue at 3, total quests clue at 5
+      CLUE_UNLOCKS = { world: 3, category: 5 };
     }
   } catch (e) { /* non-fatal */ }
 
@@ -932,6 +988,8 @@ export async function initShared(config = {}) {
   ensureBtn(mapHref, 'btn-map', '../images/portal.png', 'Map Guesser');
   ensureBtn(mealHref, 'btn-meal', '../images/Meals/36px-Turkey_a_la_Thank.png', 'Meal Guesser');
   ensureBtn(packHref, 'btn-pack', '../images/Gem.png', 'Pack Guesser');
+  const npcHref = '../npc/';
+  ensureBtn(npcHref, 'btn-npc', '../images/Npcs/Scripticus.png', 'NPC Guesser');
   // NOTE: meal button intentionally not auto-created anymore.
   // If this is a hard-mode page, change the appropriate page button to a red "hard" button
     try {
@@ -1007,6 +1065,7 @@ export async function initShared(config = {}) {
   const isMap = _href.includes('/map/') || _href.endsWith('/map') || _pathname.includes('/map/') || _href.includes('mapguesser');
   const isMeal = _pathname.endsWith('mealguesser.html') || _href.includes('mealguesser.html') || _href.includes('meal');
   const isPack = _pathname.endsWith('/pack/index.html') || _href.includes('/pack/') || _href.includes('packguesser.html') || /(^|\/)pack(\/$|$)/.test(_pathname);
+  const isNpc = _pathname.endsWith('npcguesser.html') || _href.includes('npcguesser.html') || _href.includes('/npc/') || /(^|\/)npc(\/$|$)/.test(_pathname);
   // Recompute hardType for later decisions (keep consistent with earlier detection)
   const hardType = (typeof document !== 'undefined' && document.body?.dataset?.hard) ? document.body.dataset.hard :
     ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('harditem')) ? 'item' :
@@ -1016,7 +1075,7 @@ export async function initShared(config = {}) {
   // If this is any hard-mode page, treat it as not the normal 'items' page so
   // the left 'Item' button doesn't get marked active (yellow). Hard pages
   // should instead mark their corresponding button with the red 'hard' class.
-  const isItems = !isCard && !isMonster && !isMeal && !isPack && !isMap && !isHardAny;
+  const isItems = !isCard && !isMonster && !isMeal && !isPack && !isMap && !isNpc && !isHardAny;
 
   const btnItems = document.getElementById('btn-items');
   const btnCards = document.getElementById('btn-cards');
@@ -1024,9 +1083,10 @@ export async function initShared(config = {}) {
   const btnMeal = document.getElementById('btn-meal');
   const btnMap = document.getElementById('btn-map');
   const btnPack = document.getElementById('btn-pack');
+  const btnNpc = document.getElementById('btn-npc');
 
   // reset classes/styles
-  [btnItems, btnCards, btnMonster, btnMeal, btnMap, btnPack].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
+  [btnItems, btnCards, btnMonster, btnMeal, btnMap, btnPack, btnNpc].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
 
   // Mark hard page button red depending on hard type
   if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
@@ -1042,6 +1102,7 @@ export async function initShared(config = {}) {
   if (hardType !== 'map' && btnMap && hasWinToday('map')) { btnMap.classList.add('complete'); btnMap.style.background = '#2ecc71'; }
   if (btnMeal && hasWinToday('meal')) { btnMeal.classList.add('complete'); btnMeal.style.background = '#2ecc71'; }
   if (btnPack && hasWinToday('pack')) { btnPack.classList.add('complete'); btnPack.style.background = '#2ecc71'; }
+  if (btnNpc && hasWinToday('npc')) { btnNpc.classList.add('complete'); btnNpc.style.background = '#2ecc71'; }
     // Hard-item completed may be tracked under 'hard_item'
   if (hardType !== 'item' && btnItems && hasWinToday('hard_item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
     // Hard-card completed may be tracked under 'hard_card'
@@ -1059,6 +1120,7 @@ export async function initShared(config = {}) {
   if (isMap && btnMap) { btnMap.classList.add('active'); btnMap.style.background = '#f1c40f'; }
   if (isMeal && btnMeal) { btnMeal.classList.add('active'); btnMeal.style.background = '#f1c40f'; }
   if (isPack && btnPack) { btnPack.classList.add('active'); btnPack.style.background = '#f1c40f'; }
+  if (isNpc && btnNpc) { btnNpc.classList.add('active'); btnNpc.style.background = '#f1c40f'; }
   // Ensure hard-mode buttons remain red (override) when detected
   if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
   if (hardType === 'card' && btnCards) { btnCards.classList.add('hard'); btnCards.style.background = '#c0392b'; }
