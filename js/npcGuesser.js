@@ -33,16 +33,35 @@ export async function initNpcGuesser(options = {}) {
   // Render the daily NPC quote below the combo (search input + dropdown)
   try {
     const goal = getGoalItem();
+    
     const container = document.createElement('div');
     container.id = 'dailyNpc';
     container.className = 'daily-npc-quote';
 
+    // Add "Who said this?" header inside the container
+    const header = document.createElement('div');
+    header.className = 'npc-quote-header';
+    header.textContent = 'Who said this?';
+
+    // Opening quotation mark (top-left)
+    const openQuote = document.createElement('div');
+    openQuote.className = 'npc-quote-mark npc-quote-open';
+    openQuote.textContent = '"';
+
     const quoteText = document.createElement('div');
     quoteText.className = 'npc-quote-text';
     const quote = goal?.raw?.quote || goal?.raw?.Quote || 'A mysterious NPC with a secret...';
-    quoteText.textContent = `"${quote}"`;
+    quoteText.textContent = quote;
 
+    // Closing quotation mark (bottom-right)
+    const closeQuote = document.createElement('div');
+    closeQuote.className = 'npc-quote-mark npc-quote-close';
+    closeQuote.textContent = '"';
+
+    container.appendChild(header);
+    container.appendChild(openQuote);
     container.appendChild(quoteText);
+    container.appendChild(closeQuote);
 
     // Add overlay to prevent text selection/copying
     const overlay = document.createElement('div');
@@ -53,7 +72,14 @@ export async function initNpcGuesser(options = {}) {
 
     // Insert after the combo (so it appears below the input and dropdown)
     const combo = document.getElementById('combo');
-    if (combo && combo.parentNode) combo.parentNode.insertBefore(container, combo.nextSibling);
+    if (combo && combo.parentNode) {
+      combo.parentNode.insertBefore(container, combo.nextSibling);
+    }
+    
+    // Trigger fade-in animation after a brief delay
+    setTimeout(() => {
+      container.classList.add('fade-in');
+    }, 100);
   } catch (e) {
     console.warn('Failed to render daily NPC quote', e);
   }

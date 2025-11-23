@@ -1,11 +1,5 @@
 {
   "Npcs": {
-    "Builder Bird": {
-      "world": "Blunder Hills",
-      "Total Quests": 1,
-      "quote": "Defeat the Boss at the end of World 1 to retrieve the gem and open the portal to WORLD 2!!",
-      "icon": "images\\Npcs\\Builder_Bird.png"
-    },
         "Mr Pigibank": {
       "world": "Blunder Hills",
       "Total Quests": 1,
@@ -137,6 +131,120 @@
       "Total Quests": 4,
       "quote": "This is not working!! But at least I look super awesome I think I'll keep wearing these shoes! Here you can have my Merry Cherry Remedy Tshirt they broke up when I was a sapling and they'll never ever come back ever.",
       "icon": "images\\Npcs\\Sprout.png"
+    },
+            "Cowbo Jones": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 13,
+      "quote": "FINALLY I CAN GET TO WORLD 3 AND DITCH THIS DANG DESERT! Just gotta walk myself over to ya and pickpocket the crystal. Oh... right. I got no legs.",
+      "icon": "images\\Npcs\\Cowbo_Jones.png"
+    },
+            "Desert Davey": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 1,
+      "quote": "I'm too cool for you that's for sure... yall best come back later when you're cool like me.",
+      "icon": "images\\Npcs\\Desert_Davey.png"
+    },
+            "Obol Altar": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 1,
+      "quote": "MROWW! 'The cat jumps off in fear of the pickle. What a silly cat getting scared of a little pickl-- OH MY GOD THE PICKLE HAS EYEBALLS AAAAAH KILL IT KILL IT!!!'",
+      "icon": "images\\Npcs\\Obol_Altar.png"
+    },
+            "Postboy Pablob": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 1,
+      "quote": "You're looking for work? Cool glad to hear it. OH you mean work here at the post office? Uhm right lemme think about that...",
+      "icon": "images\\Npcs\\Postboy_Pablob.png"
+    },
+            "Constructor Crow": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 1,
+      "quote": "Kacaw! 'The bird awaits the return of the town gem. They're ready to restore the gem to the portal allowing travel to World 3. They look very cool in their matching blue hat and scarf.'",
+      "icon": "images\\Npcs\\Constructor_Crow.png"
+    },
+            "Centurion": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 5,
+      "quote": "Stop right there civilian scum! You've violated penal code 83.7e under which King Doot demands all travelers enlist for colosseum combat!",
+      "icon": "images\\Npcs\\Centurion.png"
+    },
+            "Bandit Bob": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 3,
+      "quote": "Yep that's the seasme seed alright! Drop it at the door and go get some loot! ... what? Snakenhotep? What do you mean? Did that darn lava scoundrel replace MY dungeon with some darn snake??? Well shucks...",
+      "icon": "images\\Npcs\\Bandit_Bob.png"
+    },
+            "Snake Jar": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 3,
+      "quote": "MMMMmmmm what a juicy noob that was! The dumb ones are alwayssss the most ssssucculent!",
+      "icon": "images\\Npcs\\Snake_Jar.png"
+    },
+            "Speccius": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 2,
+      "quote": "Wait a minute how else could you have gotten such a weird class other than... GASP! You're HACKING! I'm reporting you straight to LavaFlame2!",
+      "icon": "images\\Npcs\\Speccius.png"
+    },
+            "XXX Cattleprod XXX": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 3,
+      "quote": "DUDE I got BANNED from Lava's Discord! WTF I didn't even do anything!! I was just trying to help report the bug and I guess calling them all 'Smelly Buttfaces' when they told me it wasn't a bug triggered them or something!",
+      "icon": "images\\Npcs\\XXX_Cattleprod_XXX.png"
+    },
+            "Goldric": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 6,
+      "quote": "Ohohoho! Don't I look maaaarvelous! Mmmmm such a shiny exterior no wonder I am the envy of all those silver spoon crybabies! Why I could go on and on and on about how wonderful I...",
+      "icon": "images\\Npcs\\Goldric.png"
+    },
+            "Carpetiem": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 3,
+      "quote": "Thanks a million ya did it! Me and them Zoomer generation are great friends now they even include me in their Ticky Tocky shenanigans it's great fun! Now get off my lawn ya darn millenial!",
+      "icon": "images\\Npcs\\Carpetiem.png"
+    },
+            "Loominadi": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 3,
+      "quote": "The deed done hope you had fun! But you must run free and leave me be where the sun I cannot see!",
+      "icon": "images\\Npcs\\Loominadi.png"
+    },
+            "Wellington": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 3,
+      "quote": "Hahaha! I concur old sport! However we mustn't get too down. As a matter of fact I take my hat off to the darn thing it's hiding skills are exquisite! I so suppose I'll be staying a lowly Journeyman for now.",
+      "icon": "images\\Npcs\\Wellington.png"
+    },
+            "Djonnut": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 3,
+      "quote": "Sayyy have you gotten the elephant boss rare equip? It is very naiiice for the grind!",
+      "icon": "images\\Npcs\\Djonnut.png"
+    },
+            "Whattso": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 4,
+      "quote": "C:",
+      "icon": "images\\Npcs\\Whattso.png"
+    },
+            "Fishpaste97": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 2,
+      "quote": "Ok wow that was actually super lame... huh... guess you don't really notice how weird the things you do really are.",
+      "icon": "images\\Npcs\\Fishpaste97.png"
+    },
+            "Scubidew": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 3,
+      "quote": "Thank you so much for the fish it's perfect! A perfect fish from a perfect ocean caught by a perfect player! Have a wonderful day friend I'll see you later!",
+      "icon": "images\\Npcs\\Scubidew.png"
+    },
+            "Omar Da Ogar": {
+      "world": "Yum Yum Desert",
+      "Total Quests": 1,
+      "quote": "Ok, you help me all you can! Me need no more, me hope you sail far and good!",
+      "icon": "images\\Npcs\\Omar_Da_Ogar.png"
     }
 }
 }
