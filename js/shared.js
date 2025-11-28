@@ -795,6 +795,7 @@ function updateClueState() {
               // On map pages the second clue reveals the enemy, not a category
               if (g === 'meal') catLabel = 'Meal effect';
               if (g === 'map' || g === 'hard_map') catLabel = 'Enemy';
+              if (g === 'recipe') catLabel = 'Anvil Tab';
             } catch (e) { /* fallback keeps default */ }
             // Improve accessibility hint when unlocking on meal page
             try {

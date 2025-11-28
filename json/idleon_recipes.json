@@ -25,7 +25,7 @@
       "tab": 1
     },
     "anvil tab 2": {
-      "icon": "images\\Helmets\\Santa Hat.png",
+      "icon": "images\\recipes\\Anvil_Tab_2.png",
       "recipe": "images\\recipes\\anvil tab 2.png",
       "items": 2,
       "tab": 1
@@ -61,7 +61,7 @@
       "tab": 1
     },
     "blunderbag": {
-      "icon": "images\\Shirts\\Efaunt Ribcage.png",
+      "icon": "images\\recipes\\blunderbag2.png",
       "recipe": "images\\recipes\\blunderbag.png",
       "items": 2,
       "tab": 1
@@ -115,25 +115,25 @@
       "tab": 1
     },
     "cramped choppin pouch": {
-      "icon": "images\\Hatchets\\Copper Chopper.png",
+      "icon": "images\\recipes\\Cramped_Choppin_Pouch.png",
       "recipe": "images\\recipes\\cramped choppin pouch.png",
       "items": 2,
       "tab": 1
     },
     "cramped food pouch": {
-      "icon": "images\\Fishing Rods\\Cramped Food Pouch.png",
+      "icon": "images\\recipes\\Cramped_Food_Pouch.png",
       "recipe": "images\\recipes\\cramped food pouch.png",
       "items": 2,
       "tab": 1
     },
     "cramped material pouch": {
-      "icon": "images\\Helmets\\Cramped Material Pouch.png",
+      "icon": "images\\recipes\\Cramped_Material_Pouch.png",
       "recipe": "images\\recipes\\cramped material pouch.png",
       "items": 2,
       "tab": 1
     },
     "cramped mining pouch": {
-      "icon": "images\\Bug Catching Nets\\Cramped Mining Pouch.png",
+      "icon": "images\\recipes\\Cramped_Mining_Pouch.png",
       "recipe": "images\\recipes\\cramped mining pouch.png",
       "items": 2,
       "tab": 1
@@ -151,7 +151,7 @@
       "tab": 1
     },
     "eco friendly oil": {
-      "icon": "images\\Rings\\Eco Friendly Oil.png",
+      "icon": "images\\recipes\\Eco_Friendly_Oil.png",
       "recipe": "images\\recipes\\eco friendly oil.png",
       "items": 2,
       "tab": 1
@@ -175,7 +175,7 @@
       "tab": 1
     },
     "golden peanut": {
-      "icon": "images\\Bug Catching Nets\\Golden Net.png",
+      "icon": "images\\recipes\\Golden_Peanut.png",
       "recipe": "images\\recipes\\golden peanut.png",
       "items": 2,
       "tab": 1
@@ -199,7 +199,7 @@
       "tab": 1
     },
     "icing ironbite": {
-      "icon": "images\\Shoes\\Iron Boots.png",
+      "icon": "images\\recipes\\Icing_Ironbite.png",
       "recipe": "images\\recipes\\icing ironbite.png",
       "items": 2,
       "tab": 1
@@ -259,7 +259,7 @@
       "tab": 1
     },
     "peanut": {
-      "icon": "images\\Shirts\\Planktop.png",
+      "icon": "images\\recipes\\peanut2.png",
       "recipe": "images\\recipes\\peanut.png",
       "items": 2,
       "tab": 1
@@ -283,7 +283,7 @@
       "tab": 1
     },
     "saucy logfries": {
-      "icon": "images\\Rings\\Sanic Ring.png",
+      "icon": "images\\recipes\\Saucy_Logfries.png",
       "recipe": "images\\recipes\\saucy logfries.png",
       "items": 2,
       "tab": 1
@@ -295,13 +295,13 @@
       "tab": 1
     },
     "small choppin pouch": {
-      "icon": "images\\Bows\\Small Choppin Pouch.png",
+      "icon": "images\\recipes\\Small_Choppin_Pouch.png",
       "recipe": "images\\recipes\\small choppin pouch.png",
       "items": 2,
       "tab": 1
     },
     "small mining pouch": {
-      "icon": "images\\Rings\\Midnight Stopwatch.png",
+      "icon": "images\\recipes\\Small_Mining_Pouch.png",
       "recipe": "images\\recipes\\small mining pouch.png",
       "items": 2,
       "tab": 1

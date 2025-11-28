@@ -14,7 +14,8 @@ const GAME_DISPLAY_ORDER = [
 	'hard_map',    // HARD Map Guesser
 	'meal',        // Meal Guesser
 	'pack',         // Pack Guesser
-	'npc'         // NPC Guesser
+	'npc',         // NPC Guesser
+	'recipe'       // Recipe Guesser
 ];
 const GAME_LABELS = {
 	item: 'Item Guesser',
@@ -27,7 +28,8 @@ const GAME_LABELS = {
 	hard_map: 'HARD Map Guesser',
 	meal: 'Meal Guesser',
 	pack: 'Pack Guesser',
-    npc: 'NPC Guesser'
+    npc: 'NPC Guesser',
+	recipe: 'Recipe Guesser'
 };
 const normKey = (s) => String(s || '').toLowerCase().replace(/\s+/g, '_');
 

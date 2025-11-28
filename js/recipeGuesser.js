@@ -16,7 +16,17 @@ function resolveRecipePath(path) {
 export async function initRecipeGuesser(options = {}) {
   const sharedConfig = Object.assign({
     dataUrl: '../json/idleon_recipes.json',
-    imageBase: '../images'
+    imageBase: '../images',
+    guessButtonHandlers: {
+      guessBtn2: () => {
+        const gb2 = document.getElementById('guessBtn2');
+        if (!gb2 || gb2.disabled) return;
+        const goal = getGoalItem();
+        const tab = goal?.raw?.tab || goal?.raw?.Tab || 'Unknown';
+        gb2.textContent = `Tab ${tab}`;
+        gb2.setAttribute('aria-label', `Anvil Tab: ${tab}`);
+      }
+    }
   }, options || {});
 
   await initShared(sharedConfig);
@@ -104,6 +114,12 @@ export async function initRecipeGuesser(options = {}) {
     // Insert after the combo
     const combo = document.getElementById('combo');
     if (combo && combo.parentNode) combo.parentNode.insertBefore(container, combo.nextSibling);
+
+    // Add notice below the recipe image
+    const notice = document.createElement('div');
+    notice.className = 'recipe-notice';
+    notice.textContent = 'Only anvil tab 1 for now!';
+    if (combo && combo.parentNode) combo.parentNode.insertBefore(notice, container.nextSibling);
 
     // Listen for guess events to reduce blur
     if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
