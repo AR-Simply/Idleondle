@@ -27,7 +27,7 @@
     "anvil tab 2": {
       "icon": "images\\recipes\\Anvil_Tab_2.png",
       "recipe": "images\\recipes\\anvil tab 2.png",
-      "items": 2,
+      "items": 4,
       "tab": 1
     },
     "birch longbow": {
@@ -45,25 +45,25 @@
     "black tee": {
       "icon": "images\\Shirts\\Black Tee.png",
       "recipe": "images\\recipes\\black tee.png",
-      "items": 2,
+      "items": 4,
       "tab": 1
     },
     "bleached designer wodepatch pants": {
       "icon": "images\\Pants\\Bleached Designer Wode Patch Pants.png",
       "recipe": "images\\recipes\\bleached designer wodepatch pants.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "blue tee": {
       "icon": "images\\Shirts\\Blue Tee.png",
       "recipe": "images\\recipes\\blue tee.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "blunderbag": {
       "icon": "images\\recipes\\Blunderbag2.png",
       "recipe": "images\\recipes\\blunderbag.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "boxing gloves": {
@@ -123,7 +123,7 @@
     "cramped food pouch": {
       "icon": "images\\recipes\\Cramped_Food_Pouch.png",
       "recipe": "images\\recipes\\cramped food pouch.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "cramped material pouch": {
@@ -147,7 +147,7 @@
     "dooble goopi": {
       "icon": "images\\Rings\\Dooble Goopi.png",
       "recipe": "images\\recipes\\dooble goopi.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "eco friendly oil": {
@@ -189,13 +189,13 @@
     "green tee": {
       "icon": "images\\Shirts\\Green Tee.png",
       "recipe": "images\\recipes\\green tee.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "hide shirt": {
       "icon": "images\\Shirts\\Hide Shirt.png",
       "recipe": "images\\recipes\\hide shirt.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "icing ironbite": {
@@ -207,7 +207,7 @@
     "iron boots": {
       "icon": "images\\Shoes\\Iron Boots.png",
       "recipe": "images\\recipes\\iron boots.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "iron hatchet": {
@@ -249,7 +249,7 @@
     "militia helm": {
       "icon": "images\\Helmets\\Militia Helm.png",
       "recipe": "images\\recipes\\militia helm.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "orange tee": {
@@ -267,13 +267,13 @@
     "purple tee": {
       "icon": "images\\Shirts\\Purple Tee.png",
       "recipe": "images\\recipes\\purple tee.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "purple tupacband": {
       "icon": "images\\Helmets\\Purple Tupacband.png",
       "recipe": "images\\recipes\\purple tupacband.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "quaterstaff": {
@@ -291,7 +291,7 @@
     "sleek shank": {
       "icon": "images\\Pendants\\Sleek Shank.png",
       "recipe": "images\\recipes\\sleek shank.png",
-      "items": 2,
+      "items": 4,
       "tab": 1
     },
     "small choppin pouch": {
@@ -327,13 +327,13 @@
     "thief hood": {
       "icon": "images\\Helmets\\Thief Hood.png",
       "recipe": "images\\recipes\\thief hood.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "top hat": {
       "icon": "images\\Helmets\\Top Hat.png",
       "recipe": "images\\recipes\\top hat.png",
-      "items": 2,
+      "items": 3,
       "tab": 1
     },
     "torn jeans": {
