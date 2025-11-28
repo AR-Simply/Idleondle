@@ -511,7 +511,7 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   left: 200px;
   width: 260px;
   height: 55px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(20px);
   background: rgba(0, 0, 0, 0.1);
   z-index: 1;
