@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Idleondle - NPC Guesser</title>
+  <title>Idleondle - Recipe Guesser</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Allow indexing: removed previous noindex directive -->
-  <link rel="canonical" href="https://www.idleondle.com/npc/">
-  <meta name="description" content="Guess the daily IdleOn NPC in as few tries as possible in Idleondle's NPC Guesser." />
+  <link rel="canonical" href="https://www.idleondle.com/recipe/">
+  <meta name="description" content="Guess the daily IdleOn recipe in as few tries as possible in Idleondle's Recipe Guesser." />
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/icon.png">
   <link rel="apple-touch-icon" href="../images/icon.png">
@@ -37,14 +37,11 @@
 
     <div class="top-row">
       <div class="guess-box combo-guess" id="guessBox">
-        <div class="guess-title">Guess today's NPC!</div>
+        <div class="guess-title">Guess today's recipe!</div>
         <div class="guess-actions">
+
           <div class="clue-wrap">
-            <button id="guessBtn1" class="guess-btn" aria-label="World clue">World Clue</button>
-            <div class="clue-note" id="note1"></div>
-          </div>
-          <div class="clue-wrap">
-            <button id="guessBtn2" class="guess-btn" aria-label="Total Quests clue">Total Quests Clue</button>
+            <button id="guessBtn2" class="guess-btn" aria-label="Anvil Tab clue">Anvil Tab Hint</button>
             <div class="clue-note" id="note2"></div>
           </div>
         </div>
@@ -87,7 +84,7 @@
 
     <div class="combo" id="combo">
       <div class="input-wrap">
-        <input id="search" type="text" placeholder="Type the name of an NPC..." autocomplete="off" />
+        <input id="search" type="text" placeholder="Type the name of a recipe..." autocomplete="off" />
       </div>
       <div class="dropdown" id="dropdown">
         <ul class="results" id="results"></ul>
@@ -106,16 +103,15 @@
         </div>
         <div class="goal-guesses">Number of guesses: <strong id="goalGuesses">0</strong></div>
         <div class="goal-footer">
-          <div class="goal-footer-text">Come back for a new npc in...</div>
+          <div class="goal-footer-text">Come back for a new recipe in...</div>
           <div class="goal-timer-wrap"><span id="goalTimer" class="goal-timer">00:00:00</span></div>
         </div>
-        <!-- Add action button linking to other games -->
+        <!-- Add action button linking to Monster Guesser (carrotman icon) -->
         <div class="goal-actions" style="display:flex;gap:10px;margin-top:12px;justify-content:center;">
+     
+     
+      
 
-     <a href="/recipe/" class="guess-btn" id="toMonsterBtn" aria-label="Recipe Guesser" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-            <img src="../images/recipe.png" alt="recipe" style="width:22px;height:22px;object-fit:contain;" />
-            <span style="color:var(--text);font-weight:800;font-size:15px;">Next game</span>
-          </a>
               </div>
           <a href="/results/" class="guess-btn results-btn-orange" id="resultsbtn" aria-label="View your past daily results" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:18px;width:68%;">
             <img src="/images/icon.png" alt="Results icon" style="width:24px;height:24px;object-fit:contain;" />
@@ -132,9 +128,9 @@
         <div class="goal-body">
           <div style="text-align:left; font-size:14px; color:#111;">
             <p>Daily guessing games from the game "IdleOn". Games changes at midnight in your timezone.</p>
-            <p>Try to guess the daily NPC! Use the clue buttons to reveal hints about the NPC's world and quest count.</p>
+            <p>Guess a recipe from an anvil tab. Materials slowly unblur with each guess.</p>
            
-            <p>How fast can you discover which NPC it is?</p>
+            <p>How fast can you discover what recipe it is?</p>
             
             <p><strong>Good luck and have fun!</strong></p>
           </div>
@@ -252,7 +248,7 @@
   </div>
 
   <script type="module">
-    import '../js/npcGuesser.js';
+    import '../js/recipeGuesser.js';
   </script>
   <script>
     (function(){

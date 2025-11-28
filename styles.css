@@ -453,6 +453,125 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   opacity: 0;
   transition: opacity 1.2s ease-in;
 }
+
+/* Daily recipe (prominent recipe image on recipeGuesser page) - same as card */
+.daily-recipe {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+  width: 540px;
+  height: 540px;
+  padding: 3px;
+  background: var(--border);
+  border-radius: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.daily-recipe-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.daily-recipe-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  border-radius: 12px;
+  z-index: 2;
+  pointer-events: auto;
+}
+.recipe-obscure-box {
+  position: absolute;
+  top: 35px;
+  left: 70px;
+  width: 130px;
+  height: 130px;
+  background: var(--panel);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--muted);
+  z-index: 1;
+  user-select: none;
+}
+.recipe-blur-box {
+  position: absolute;
+  top: 40px;
+  left: 200px;
+  width: 260px;
+  height: 55px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.recipe-blur-box-2 {
+  position: absolute;
+  top: 180px;
+  left: 75px;
+  width: 190px;
+  height: 140px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.recipe-blur-box-3 {
+  position: absolute;
+  top: 180px;
+  left: 275px;
+  width: 190px;
+  height: 140px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.recipe-blur-box-4 {
+  position: absolute;
+  top: 345px;
+  left: 75px;
+  width: 190px;
+  height: 140px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.recipe-blur-box-5 {
+  position: absolute;
+  top: 345px;
+  left: 275px;
+  width: 190px;
+  height: 140px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.recipe-notice {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-top: 16px;
+  font-style: italic;
+  position: relative;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .daily-npc-quote.fade-in {
   opacity: 1;
 }

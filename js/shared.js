@@ -253,6 +253,7 @@ function setCookie(name, value, days = 365) {
             else if (p.includes('mealguesser') || p.includes('/meal/') || p.includes('/meal')) _game_for_gtag = 'meal';
             else if (p.includes('/pack/')) _game_for_gtag = 'pack';
             else if (p.includes('npcguesser') || p.includes('/npc/') || p.includes('/npc')) _game_for_gtag = 'npc';
+            else if (p.includes('recipeguesser') || p.includes('/recipe/') || p.includes('/recipe')) _game_for_gtag = 'recipe';
           } catch (e) { /* ignore detection errors */ }
 
           const a = document.createElement('script');
@@ -375,6 +376,8 @@ function detectGameFromPath() {
   if (p.includes('/pack/')) return 'pack';
   // New: npc guesser page
   if (p.includes('npcguesser') || p.includes('/npc/') || p.includes('/npc')) return 'npc';
+  // New: recipe guesser page
+  if (p.includes('recipeguesser') || p.includes('/recipe/') || p.includes('/recipe')) return 'recipe';
     return 'item';
   } catch (e) { return 'item'; }
 }
@@ -792,6 +795,7 @@ function updateClueState() {
               // On map pages the second clue reveals the enemy, not a category
               if (g === 'meal') catLabel = 'Meal effect';
               if (g === 'map' || g === 'hard_map') catLabel = 'Enemy';
+              if (g === 'recipe') catLabel = 'Anvil Tab';
             } catch (e) { /* fallback keeps default */ }
             // Improve accessibility hint when unlocking on meal page
             try {
@@ -990,6 +994,8 @@ export async function initShared(config = {}) {
   ensureBtn(packHref, 'btn-pack', '../images/Gem.png', 'Pack Guesser');
   const npcHref = '../npc/';
   ensureBtn(npcHref, 'btn-npc', '../images/Npcs/Scripticus.png', 'NPC Guesser');
+  const recipeHref = '../recipe/';
+  ensureBtn(recipeHref, 'btn-recipe', '../images/recipe.png', 'Recipe Guesser');
   // NOTE: meal button intentionally not auto-created anymore.
   // If this is a hard-mode page, change the appropriate page button to a red "hard" button
     try {
@@ -1066,6 +1072,7 @@ export async function initShared(config = {}) {
   const isMeal = _pathname.endsWith('mealguesser.html') || _href.includes('mealguesser.html') || _href.includes('meal');
   const isPack = _pathname.endsWith('/pack/index.html') || _href.includes('/pack/') || _href.includes('packguesser.html') || /(^|\/)pack(\/$|$)/.test(_pathname);
   const isNpc = _pathname.endsWith('npcguesser.html') || _href.includes('npcguesser.html') || _href.includes('/npc/') || /(^|\/)npc(\/$|$)/.test(_pathname);
+  const isRecipe = _pathname.endsWith('recipeguesser.html') || _href.includes('recipeguesser.html') || _href.includes('/recipe/') || /(^|\/)recipe(\/$|$)/.test(_pathname);
   // Recompute hardType for later decisions (keep consistent with earlier detection)
   const hardType = (typeof document !== 'undefined' && document.body?.dataset?.hard) ? document.body.dataset.hard :
     ((location.pathname || '').endsWith('HardItemGuesser.html') || (location.href || '').includes('harditem')) ? 'item' :
@@ -1075,7 +1082,7 @@ export async function initShared(config = {}) {
   // If this is any hard-mode page, treat it as not the normal 'items' page so
   // the left 'Item' button doesn't get marked active (yellow). Hard pages
   // should instead mark their corresponding button with the red 'hard' class.
-  const isItems = !isCard && !isMonster && !isMeal && !isPack && !isMap && !isNpc && !isHardAny;
+  const isItems = !isCard && !isMonster && !isMeal && !isPack && !isMap && !isNpc && !isRecipe && !isHardAny;
 
   const btnItems = document.getElementById('btn-items');
   const btnCards = document.getElementById('btn-cards');
@@ -1084,9 +1091,10 @@ export async function initShared(config = {}) {
   const btnMap = document.getElementById('btn-map');
   const btnPack = document.getElementById('btn-pack');
   const btnNpc = document.getElementById('btn-npc');
+  const btnRecipe = document.getElementById('btn-recipe');
 
   // reset classes/styles
-  [btnItems, btnCards, btnMonster, btnMeal, btnMap, btnPack, btnNpc].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
+  [btnItems, btnCards, btnMonster, btnMeal, btnMap, btnPack, btnNpc, btnRecipe].forEach(b => { if (!b) return; b.classList.remove('active','complete','hard'); b.style.background = ''; });
 
   // Mark hard page button red depending on hard type
   if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
@@ -1103,6 +1111,7 @@ export async function initShared(config = {}) {
   if (btnMeal && hasWinToday('meal')) { btnMeal.classList.add('complete'); btnMeal.style.background = '#2ecc71'; }
   if (btnPack && hasWinToday('pack')) { btnPack.classList.add('complete'); btnPack.style.background = '#2ecc71'; }
   if (btnNpc && hasWinToday('npc')) { btnNpc.classList.add('complete'); btnNpc.style.background = '#2ecc71'; }
+  if (btnRecipe && hasWinToday('recipe')) { btnRecipe.classList.add('complete'); btnRecipe.style.background = '#2ecc71'; }
     // Hard-item completed may be tracked under 'hard_item'
   if (hardType !== 'item' && btnItems && hasWinToday('hard_item')) { btnItems.classList.add('complete'); btnItems.style.background = '#2ecc71'; }
     // Hard-card completed may be tracked under 'hard_card'
@@ -1121,6 +1130,7 @@ export async function initShared(config = {}) {
   if (isMeal && btnMeal) { btnMeal.classList.add('active'); btnMeal.style.background = '#f1c40f'; }
   if (isPack && btnPack) { btnPack.classList.add('active'); btnPack.style.background = '#f1c40f'; }
   if (isNpc && btnNpc) { btnNpc.classList.add('active'); btnNpc.style.background = '#f1c40f'; }
+  if (isRecipe && btnRecipe) { btnRecipe.classList.add('active'); btnRecipe.style.background = '#f1c40f'; }
   // Ensure hard-mode buttons remain red (override) when detected
   if (hardType === 'item' && btnItems) { btnItems.classList.add('hard'); btnItems.style.background = '#c0392b'; }
   if (hardType === 'card' && btnCards) { btnCards.classList.add('hard'); btnCards.style.background = '#c0392b'; }

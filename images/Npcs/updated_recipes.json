@@ -1,0 +1,2305 @@
+[
+    {
+        "name": "Bandage Wraps",
+        "icon": "images\\Fisticuffs\\Bandage Wraps.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/bandage_wraps.json"
+    },
+    {
+        "name": "Boxing Gloves",
+        "icon": "images\\Fisticuffs\\Boxing Gloves.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/boxing_gloves.json"
+    },
+    {
+        "name": "Crackled Skull Destroyer",
+        "icon": "images\\Fisticuffs\\Crackled Skull Destroyer.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/crackled_skull_destroyer.json"
+    },
+    {
+        "name": "Diabolical Gauntlet",
+        "icon": "images\\Fisticuffs\\Diabolical Gauntlet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/diabolical_gauntlet.json"
+    },
+    {
+        "name": "Eclectic Ordeal",
+        "icon": "images\\Fisticuffs\\Eclectic Ordeal.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/eclectic_ordeal.json"
+    },
+    {
+        "name": "Knuckle Sabers",
+        "icon": "images\\Fisticuffs\\Knuckle Sabers.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/knuckle_sabers.json"
+    },
+    {
+        "name": "Mittens Of The Gods",
+        "icon": "images\\Fisticuffs\\Mittens of the Gods.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/mittens_of_the_gods.json"
+    },
+    {
+        "name": "Molten Core Knucklers",
+        "icon": "images\\Fisticuffs\\Molten Core Knucklers.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/molten_core_knucklers.json"
+    },
+    {
+        "name": "Pentastud Slapper",
+        "icon": "images\\Fisticuffs\\Pentastud Slapper.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/pentastud_slapper.json"
+    },
+    {
+        "name": "The Stingers",
+        "icon": "images\\Fisticuffs\\The Stingers.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/the_stingers.json"
+    },
+    {
+        "name": "Uninflated Glove",
+        "icon": "images\\Fisticuffs\\Uninflated Glove.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/uninflated_glove.json"
+    },
+    {
+        "name": "Cattle Core Soothsayer Staff",
+        "icon": "images\\Wands\\Cattle Core Soothsayer Staff.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/cattle_core_soothsayer_staff.json"
+    },
+    {
+        "name": "Crows Nest",
+        "icon": "images\\Wands\\Crows Nest.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/crows_nest.json"
+    },
+    {
+        "name": "Diabolical Opticule",
+        "icon": "images\\Wands\\Diabolical Opticule.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/diabolical_opticule.json"
+    },
+    {
+        "name": "Gnarled Wand",
+        "icon": "images\\Wands\\Gnarled Wand.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/gnarled_wand.json"
+    },
+    {
+        "name": "Grey Gatsby",
+        "icon": "images\\Wands\\Grey Gatsby.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/grey_gatsby.json"
+    },
+    {
+        "name": "Magnifique Godcaster",
+        "icon": "images\\Wands\\Magnifique Godcaster.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/magnifique_godcaster.json"
+    },
+    {
+        "name": "Quarterstaff",
+        "icon": "images\\Wands\\Quarterstaff.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/quarterstaff.json"
+    },
+    {
+        "name": "Skullslip Hallow",
+        "icon": "images\\Wands\\Skullslip Hallow.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/skullslip_hallow.json"
+    },
+    {
+        "name": "Sparky Marble Staff",
+        "icon": "images\\Wands\\Sparky Marble Staff.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/sparky_marble_staff.json"
+    },
+    {
+        "name": "Spriggly Storm",
+        "icon": "images\\Wands\\Spriggly Storm.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/spriggly_storm.json"
+    },
+    {
+        "name": "Staff Of The Undead Plague",
+        "icon": "images\\Wands\\Staff of the Undead Plague.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/staff_of_the_undead_plague.json"
+    },
+    {
+        "name": "Starlight",
+        "icon": "images\\Wands\\Starlight.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/starlight.json"
+    },
+    {
+        "name": "Deuscythe",
+        "icon": "images\\Spears\\Deuscythe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/deuscythe.json"
+    },
+    {
+        "name": "Diabolical Flesh Ripper",
+        "icon": "images\\Spears\\Diabolical Flesh Ripper.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/diabolical_flesh_ripper.json"
+    },
+    {
+        "name": "Elegant Spear",
+        "icon": "images\\Spears\\Elegant Spear.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/elegant_spear.json"
+    },
+    {
+        "name": "Enforced Slasher",
+        "icon": "images\\Spears\\Enforced Slasher.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/enforced_slasher.json"
+    },
+    {
+        "name": "Magma Maul",
+        "icon": "images\\Spears\\Magma Maul.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/magma_maul.json"
+    },
+    {
+        "name": "Massive Godbreaker",
+        "icon": "images\\Spears\\Massive Godbreaker.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/massive_godbreaker.json"
+    },
+    {
+        "name": "Royal Bayonet",
+        "icon": "images\\Spears\\Royal Bayonet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/royal_bayonet.json"
+    },
+    {
+        "name": "Skull Lance",
+        "icon": "images\\Spears\\Skull Lance.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/skull_lance.json"
+    },
+    {
+        "name": "Slimsharp Fin",
+        "icon": "images\\Spears\\Slimsharp Fin.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/slimsharp_fin.json"
+    },
+    {
+        "name": "Steel Axe",
+        "icon": "images\\Spears\\Steel Axe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/steel_axe.json"
+    },
+    {
+        "name": "The Ice Breaker",
+        "icon": "images\\Spears\\The Ice Breaker.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/the_ice_breaker.json"
+    },
+    {
+        "name": "Wooden Spear",
+        "icon": "images\\Spears\\Wooden Spear.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/wooden_spear.json"
+    },
+    {
+        "name": "Birch Longbow",
+        "icon": "images\\Bows\\Birch Longbow.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/birch_longbow.json"
+    },
+    {
+        "name": "Blackhole Bow",
+        "icon": "images\\Bows\\Blackhole Bow.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/blackhole_bow.json"
+    },
+    {
+        "name": "Blizzard Bow",
+        "icon": "images\\Bows\\Blizzard Bow.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/blizzard_bow.json"
+    },
+    {
+        "name": "Carrot Launcher",
+        "icon": "images\\Bows\\Carrot Launcher.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/carrot_launcher.json"
+    },
+    {
+        "name": "Diabolical Continuit",
+        "icon": "images\\Bows\\Diabolical Continuit.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/diabolical_continuit.json"
+    },
+    {
+        "name": "Doublestring Godshooter",
+        "icon": "images\\Bows\\Doublestring Godshooter.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/doublestring_godshooter.json"
+    },
+    {
+        "name": "Pharaoh Bow",
+        "icon": "images\\Bows\\Pharaoh Bow.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/pharaoh_bow.json"
+    },
+    {
+        "name": "Pristine Longbow",
+        "icon": "images\\Bows\\Pristine Longbow.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/pristine_longbow.json"
+    },
+    {
+        "name": "Sediment Core Grunkler",
+        "icon": "images\\Bows\\Sediment Core Grunkler.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/sediment_core_grunkler.json"
+    },
+    {
+        "name": "Shardsure Leif",
+        "icon": "images\\Bows\\Shardsure Leif.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/shardsure_leif.json"
+    },
+    {
+        "name": "Spiked Menace",
+        "icon": "images\\Bows\\Spiked Menace.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/spiked_menace.json"
+    },
+    {
+        "name": "Spine Tingler Sniper",
+        "icon": "images\\Bows\\Spine Tingler Sniper.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/spine_tingler_sniper.json"
+    },
+    {
+        "name": "Wooden Bow",
+        "icon": "images\\Bows\\Wooden Bow.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/wooden_bow.json"
+    },
+    {
+        "name": "3Rd Anniversary Ice Cream Topper",
+        "icon": "images\\Helmets\\3rd Anniversary Ice Cream Topper.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/3rd_anniversary_ice_cream_topper.json"
+    },
+    {
+        "name": "Acorn Topper",
+        "icon": "images\\Helmets\\Acorn Topper.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/acorn_topper.json"
+    },
+    {
+        "name": "Adornment Of The High Priest",
+        "icon": "images\\Helmets\\Adornment of the High Priest.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/adornment_of_the_high_priest.json"
+    },
+    {
+        "name": "Alien Headband",
+        "icon": "images\\Helmets\\Alien Headband.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/alien_headband.json"
+    },
+    {
+        "name": "Amarok Helmet",
+        "icon": "images\\Helmets\\Amarok Helmet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/amarok_helmet.json"
+    },
+    {
+        "name": "Apple Launch Hat",
+        "icon": "images\\Helmets\\Apple Launch Hat.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/apple_launch_hat.json"
+    },
+    {
+        "name": "Baseball Hat",
+        "icon": "images\\Helmets\\Baseball Hat.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/baseball_hat.json"
+    },
+    {
+        "name": "Big Pretty Bow",
+        "icon": "images\\Helmets\\Big Pretty Bow.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/big_pretty_bow.json"
+    },
+    {
+        "name": "Birthday Hat",
+        "icon": "images\\Helmets\\Birthday Hat.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/birthday_hat.json"
+    },
+    {
+        "name": "Bored Beanie",
+        "icon": "images\\Helmets\\Bored Beanie.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/bored_beanie.json"
+    },
+    {
+        "name": "Bunny Ears",
+        "icon": "images\\Helmets\\Bunny Ears.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/bunny_ears.json"
+    },
+    {
+        "name": "Chizoar Helmet",
+        "icon": "images\\Helmets\\Chizoar Helmet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/chizoar_helmet.json"
+    },
+    {
+        "name": "Conquistador Plume",
+        "icon": "images\\Helmets\\Conquistador Plume.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/conquistador_plume.json"
+    },
+    {
+        "name": "Copper Helmet",
+        "icon": "images\\Helmets\\Copper Helmet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/copper_helmet.json"
+    },
+    {
+        "name": "Cowbo Galloneer",
+        "icon": "images\\Helmets\\Cowbo Galloneer.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/cowbo_galloneer.json"
+    },
+    {
+        "name": "Crown Of The Gods",
+        "icon": "images\\Helmets\\Crown of the Gods.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/crown_of_the_gods.json"
+    },
+    {
+        "name": "Dementia Helmet",
+        "icon": "images\\Helmets\\Dementia Helmet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dementia_helmet.json"
+    },
+    {
+        "name": "Diabolical Headcase",
+        "icon": "images\\Helmets\\Diabolical Headcase.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/diabolical_headcase.json"
+    },
+    {
+        "name": "Efaunt Helmet",
+        "icon": "images\\Helmets\\Efaunt Helmet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/efaunt_helmet.json"
+    },
+    {
+        "name": "Emperor Kabuto",
+        "icon": "images\\Helmets\\Emperor Kabuto.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/emperor_kabuto.json"
+    },
+    {
+        "name": "Epic Santa Hat",
+        "icon": "images\\Helmets\\Epic Santa Hat.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/epic_santa_hat.json"
+    },
+    {
+        "name": "Farmer Brim",
+        "icon": "images\\Helmets\\Farmer Brim.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/farmer_brim.json"
+    },
+    {
+        "name": "Funny Hat",
+        "icon": "images\\Helmets\\Funny Hat.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/funny_hat.json"
+    },
+    {
+        "name": "Gold Helmet",
+        "icon": "images\\Helmets\\Gold Helmet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/gold_helmet.json"
+    },
+    {
+        "name": "Grandma Disguise",
+        "icon": "images\\Helmets\\Grandma Disguise.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/grandma_disguise.json"
+    },
+    {
+        "name": "Green Headband",
+        "icon": "images\\Helmets\\Green Headband.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/green_headband.json"
+    },
+    {
+        "name": "Grey Beret",
+        "icon": "images\\Helmets\\Grey Beret.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/grey_beret.json"
+    },
+    {
+        "name": "Honker Hat",
+        "icon": "images\\Helmets\\Honker Hat.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/honker_hat.json"
+    },
+    {
+        "name": "Ice Guard Helmet",
+        "icon": "images\\Helmets\\Ice Guard Helmet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/ice_guard_helmet.json"
+    },
+    {
+        "name": "Iron Helmet",
+        "icon": "images\\Helmets\\Iron Helmet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/iron_helmet.json"
+    },
+    {
+        "name": "Jar",
+        "icon": "images\\Helmets\\Jar.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/jar.json"
+    },
+    {
+        "name": "Leather Cap",
+        "icon": "images\\Helmets\\Leather Cap.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/leather_cap.json"
+    },
+    {
+        "name": "Lustre Veil",
+        "icon": "images\\Helmets\\Lustre Veil.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/lustre_veil.json"
+    },
+    {
+        "name": "Magma Core Headdress",
+        "icon": "images\\Helmets\\Magma Core Headdress.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/magma_core_headdress.json"
+    },
+    {
+        "name": "Marbiglass Headdress",
+        "icon": "images\\Helmets\\Marbiglass Headdress.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/marbiglass_headdress.json"
+    },
+    {
+        "name": "Mark Of Member",
+        "icon": "images\\Helmets\\Mark of Member.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/mark_of_member.json"
+    },
+    {
+        "name": "Meteorhead",
+        "icon": "images\\Helmets\\Meteorhead.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/meteorhead.json"
+    },
+    {
+        "name": "Militia Helm",
+        "icon": "images\\Helmets\\Militia Helm.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/militia_helm.json"
+    },
+    {
+        "name": "Murmillo Helm",
+        "icon": "images\\Helmets\\Murmillo Helm.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/murmillo_helm.json"
+    },
+    {
+        "name": "Nuget Cake Fedora",
+        "icon": "images\\Helmets\\Nuget Cake Fedora.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/nuget_cake_fedora.json"
+    },
+    {
+        "name": "Paper Boat",
+        "icon": "images\\Helmets\\Paper Boat.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/paper_boat.json"
+    },
+    {
+        "name": "Pink Headband",
+        "icon": "images\\Helmets\\Pink Headband.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/pink_headband.json"
+    },
+    {
+        "name": "Platinum Helmet",
+        "icon": "images\\Helmets\\Platinum Helmet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/platinum_helmet.json"
+    },
+    {
+        "name": "Propeller Cap",
+        "icon": "images\\Helmets\\Propeller Cap.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/propeller_cap.json"
+    },
+    {
+        "name": "Purple Tupacband",
+        "icon": "images\\Helmets\\Purple Tupacband.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/purple_tupacband.json"
+    },
+    {
+        "name": "Real Civil Engineer Helmet",
+        "icon": "images\\Helmets\\Real Civil Engineer Helmet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/real_civil_engineer_helmet.json"
+    },
+    {
+        "name": "Royal Turban",
+        "icon": "images\\Helmets\\Royal Turban.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/royal_turban.json"
+    },
+    {
+        "name": "Santa Hat",
+        "icon": "images\\Helmets\\Santa Hat.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/santa_hat.json"
+    },
+    {
+        "name": "Shiny Bored Beanie",
+        "icon": "images\\Helmets\\Shiny Bored Beanie.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/shiny_bored_beanie.json"
+    },
+    {
+        "name": "Skulled Helmet Of The Divine",
+        "icon": "images\\Helmets\\Skulled Helmet of the Divine.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/skulled_helmet_of_the_divine.json"
+    },
+    {
+        "name": "Sleek Coif",
+        "icon": "images\\Helmets\\Sleek Coif.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/sleek_coif.json"
+    },
+    {
+        "name": "Steam Cap",
+        "icon": "images\\Helmets\\Steam Cap.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/steam_cap.json"
+    },
+    {
+        "name": "Stump Prop",
+        "icon": "images\\Helmets\\Stump Prop.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/stump_prop.json"
+    },
+    {
+        "name": "Summer Shell",
+        "icon": "images\\Helmets\\Summer Shell.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/summer_shell.json"
+    },
+    {
+        "name": "The Crow Perch",
+        "icon": "images\\Helmets\\The Crow Perch.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/the_crow_perch.json"
+    },
+    {
+        "name": "Thief Hood",
+        "icon": "images\\Helmets\\Thief Hood.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/thief_hood.json"
+    },
+    {
+        "name": "Thin Veil Of The Troll",
+        "icon": "images\\Helmets\\Thin Veil of The Troll.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/thin_veil_of_the_troll.json"
+    },
+    {
+        "name": "Top Hat",
+        "icon": "images\\Helmets\\Top Hat.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/top_hat.json"
+    },
+    {
+        "name": "Traffic Cone",
+        "icon": "images\\Helmets\\Traffic Cone.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/traffic_cone.json"
+    },
+    {
+        "name": "Viking Cap",
+        "icon": "images\\Helmets\\Viking Cap.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/viking_cap.json"
+    },
+    {
+        "name": "Void Imperium Helmet",
+        "icon": "images\\Helmets\\Void Imperium Helmet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/void_imperium_helmet.json"
+    },
+    {
+        "name": "White Headband",
+        "icon": "images\\Helmets\\White Headband.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/white_headband.json"
+    },
+    {
+        "name": "Witch Hat",
+        "icon": "images\\Helmets\\Witch Hat.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/witch_hat.json"
+    },
+    {
+        "name": "Yellow Headband",
+        "icon": "images\\Helmets\\Yellow Headband.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/yellow_headband.json"
+    },
+    {
+        "name": "Amarok Bodyplate",
+        "icon": "images\\Shirts\\Amarok Bodyplate.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/amarok_bodyplate.json"
+    },
+    {
+        "name": "Black Tee",
+        "icon": "images\\Shirts\\Black Tee.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/black_tee.json"
+    },
+    {
+        "name": "Blue Tee",
+        "icon": "images\\Shirts\\Blue Tee.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/blue_tee.json"
+    },
+    {
+        "name": "Chizoar Bodyplate",
+        "icon": "images\\Shirts\\Chizoar Bodyplate.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/chizoar_bodyplate.json"
+    },
+    {
+        "name": "Copper Platebody",
+        "icon": "images\\Shirts\\Copper Platebody.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/copper_platebody.json"
+    },
+    {
+        "name": "Damascus Plates",
+        "icon": "images\\Shirts\\Damascus Plates.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/damascus_plates.json"
+    },
+    {
+        "name": "Dementia Body",
+        "icon": "images\\Shirts\\Dementia Body.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dementia_body.json"
+    },
+    {
+        "name": "Diabolical Abdomen",
+        "icon": "images\\Shirts\\Diabolical Abdomen.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/diabolical_abdomen.json"
+    },
+    {
+        "name": "Efaunt Ribcage",
+        "icon": "images\\Shirts\\Efaunt Ribcage.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/efaunt_ribcage.json"
+    },
+    {
+        "name": "Elegantine Robes",
+        "icon": "images\\Shirts\\Elegantine Robes.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/elegantine_robes.json"
+    },
+    {
+        "name": "Emperor Sokutai Ho",
+        "icon": "images\\Shirts\\Emperor Sokutai Ho.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/emperor_sokutai_ho.json"
+    },
+    {
+        "name": "Evergreen Wraps",
+        "icon": "images\\Shirts\\Evergreen Wraps.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/evergreen_wraps.json"
+    },
+    {
+        "name": "Feral Leathering",
+        "icon": "images\\Shirts\\Feral Leathering.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/feral_leathering.json"
+    },
+    {
+        "name": "Fur Shirt",
+        "icon": "images\\Shirts\\Fur Shirt.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/fur_shirt.json"
+    },
+    {
+        "name": "Furled Robes",
+        "icon": "images\\Shirts\\Furled Robes.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/furled_robes.json"
+    },
+    {
+        "name": "Gold Platebody",
+        "icon": "images\\Shirts\\Gold Platebody.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/gold_platebody.json"
+    },
+    {
+        "name": "Green Tee",
+        "icon": "images\\Shirts\\Green Tee.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/green_tee.json"
+    },
+    {
+        "name": "Hide Shirt",
+        "icon": "images\\Shirts\\Hide Shirt.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/hide_shirt.json"
+    },
+    {
+        "name": "Iron Platebody",
+        "icon": "images\\Shirts\\Iron Platebody.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/iron_platebody.json"
+    },
+    {
+        "name": "Lustre Chestplate",
+        "icon": "images\\Shirts\\Lustre Chestplate.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/lustre_chestplate.json"
+    },
+    {
+        "name": "Magma Core Wavemaille",
+        "icon": "images\\Shirts\\Magma Core Wavemaille.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/magma_core_wavemaille.json"
+    },
+    {
+        "name": "Marbiglass Tunic",
+        "icon": "images\\Shirts\\Marbiglass Tunic.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/marbiglass_tunic.json"
+    },
+    {
+        "name": "Mcr Tshirt",
+        "icon": "images\\Shirts\\MCR Tshirt.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/mcr_tshirt.json"
+    },
+    {
+        "name": "Member Hoodie",
+        "icon": "images\\Shirts\\Member Hoodie.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/member_hoodie.json"
+    },
+    {
+        "name": "Orange Tee",
+        "icon": "images\\Shirts\\Orange Tee.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/orange_tee.json"
+    },
+    {
+        "name": "Planktop",
+        "icon": "images\\Shirts\\Planktop.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/planktop.json"
+    },
+    {
+        "name": "Platinum Platbody",
+        "icon": "images\\Shirts\\Platinum Platbody.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/platinum_platbody.json"
+    },
+    {
+        "name": "Purple Tee",
+        "icon": "images\\Shirts\\Purple Tee.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/purple_tee.json"
+    },
+    {
+        "name": "Robe Of The Gods",
+        "icon": "images\\Shirts\\Robe of the Gods.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/robe_of_the_gods.json"
+    },
+    {
+        "name": "Serrated Chest Of The Divine",
+        "icon": "images\\Shirts\\Serrated Chest of the Divine.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/serrated_chest_of_the_divine.json"
+    },
+    {
+        "name": "Spore Tee",
+        "icon": "images\\Shirts\\Spore Tee.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/spore_tee.json"
+    },
+    {
+        "name": "Studded Hide",
+        "icon": "images\\Shirts\\Studded Hide.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/studded_hide.json"
+    },
+    {
+        "name": "Tattered Cloth",
+        "icon": "images\\Shirts\\Tattered Cloth.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/tattered_cloth.json"
+    },
+    {
+        "name": "Trollish Garb",
+        "icon": "images\\Shirts\\Trollish Garb.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/trollish_garb.json"
+    },
+    {
+        "name": "Void Imperium Platebody",
+        "icon": "images\\Shirts\\Void Imperium Platebody.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/void_imperium_platebody.json"
+    },
+    {
+        "name": "Adam'S Leaf",
+        "icon": "images\\Pants\\Adam's Leaf.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/adam's_leaf.json"
+    },
+    {
+        "name": "Amarok Hinds",
+        "icon": "images\\Pants\\Amarok Hinds.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/amarok_hinds.json"
+    },
+    {
+        "name": "Bandito Pantaloon",
+        "icon": "images\\Pants\\Bandito Pantaloon.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/bandito_pantaloon.json"
+    },
+    {
+        "name": "Bleached Designer Wode Patch Pants",
+        "icon": "images\\Pants\\Bleached Designer Wode Patch Pants.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/bleached_designer_wode_patch_pants.json"
+    },
+    {
+        "name": "Chizoar Scaled Leggings",
+        "icon": "images\\Pants\\Chizoar Scaled Leggings.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/chizoar_scaled_leggings.json"
+    },
+    {
+        "name": "Copper Platelegs",
+        "icon": "images\\Pants\\Copper Platelegs.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/copper_platelegs.json"
+    },
+    {
+        "name": "Dementia Shins",
+        "icon": "images\\Pants\\Dementia Shins.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dementia_shins.json"
+    },
+    {
+        "name": "Diabolical Trimed Leg Guards",
+        "icon": "images\\Pants\\Diabolical Trimed Leg Guards.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/diabolical_trimed_leg_guards.json"
+    },
+    {
+        "name": "Dirty Coal Miner Baggy Soot Pants",
+        "icon": "images\\Pants\\Dirty Coal Miner Baggy Soot Pants.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dirty_coal_miner_baggy_soot_pants.json"
+    },
+    {
+        "name": "Efaunt Hipilium",
+        "icon": "images\\Pants\\Efaunt Hipilium.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/efaunt_hipilium.json"
+    },
+    {
+        "name": "Emperor Zubon",
+        "icon": "images\\Pants\\Emperor Zubon.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/emperor_zubon.json"
+    },
+    {
+        "name": "Fishing Overalls",
+        "icon": "images\\Pants\\Fishing Overalls.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/fishing_overalls.json"
+    },
+    {
+        "name": "Give Up On Life Pants",
+        "icon": "images\\Pants\\Give Up On Life Pants.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/give_up_on_life_pants.json"
+    },
+    {
+        "name": "Gold Platelegs",
+        "icon": "images\\Pants\\Gold Platelegs.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/gold_platelegs.json"
+    },
+    {
+        "name": "Iron Platelegs",
+        "icon": "images\\Pants\\Iron Platelegs.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/iron_platelegs.json"
+    },
+    {
+        "name": "Lustre Scales",
+        "icon": "images\\Pants\\Lustre Scales.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/lustre_scales.json"
+    },
+    {
+        "name": "Magma Core Battleskirt",
+        "icon": "images\\Pants\\Magma Core Battleskirt.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/magma_core_battleskirt.json"
+    },
+    {
+        "name": "Marbiglass Legplates",
+        "icon": "images\\Pants\\Marbiglass Legplates.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/marbiglass_legplates.json"
+    },
+    {
+        "name": "Platinum Shins",
+        "icon": "images\\Pants\\Platinum Shins.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/platinum_shins.json"
+    },
+    {
+        "name": "Spiked Leggings Of The Divine",
+        "icon": "images\\Pants\\Spiked Leggings of the Divine.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/spiked_leggings_of_the_divine.json"
+    },
+    {
+        "name": "Tatters Of The Gods",
+        "icon": "images\\Pants\\Tatters of the Gods.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/tatters_of_the_gods.json"
+    },
+    {
+        "name": "Torn Jeans",
+        "icon": "images\\Pants\\Torn Jeans.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/torn_jeans.json"
+    },
+    {
+        "name": "Trimmed Rune Platelegs",
+        "icon": "images\\Pants\\Trimmed Rune Platelegs.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/trimmed_rune_platelegs.json"
+    },
+    {
+        "name": "Twisted Scales",
+        "icon": "images\\Pants\\Twisted Scales.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/twisted_scales.json"
+    },
+    {
+        "name": "Void Imperium Shardshins",
+        "icon": "images\\Pants\\Void Imperium Shardshins.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/void_imperium_shardshins.json"
+    },
+    {
+        "name": "Copper Pickaxe",
+        "icon": "images\\Pickaxes\\Copper Pickaxe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/copper_pickaxe.json"
+    },
+    {
+        "name": "Dementia Pickaxe",
+        "icon": "images\\Pickaxes\\Dementia Pickaxe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dementia_pickaxe.json"
+    },
+    {
+        "name": "Destroyer Of The Mollo Gomme",
+        "icon": "images\\Pickaxes\\Destroyer of the Mollo Gomme.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/destroyer_of_the_mollo_gomme.json"
+    },
+    {
+        "name": "Dreadlo Pickolo",
+        "icon": "images\\Pickaxes\\Dreadlo Pickolo.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dreadlo_pickolo.json"
+    },
+    {
+        "name": "Gold Pickaxe",
+        "icon": "images\\Pickaxes\\Gold Pickaxe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/gold_pickaxe.json"
+    },
+    {
+        "name": "Iron Pickaxe",
+        "icon": "images\\Pickaxes\\Iron Pickaxe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/iron_pickaxe.json"
+    },
+    {
+        "name": "Junk Pickaxe",
+        "icon": "images\\Pickaxes\\Junk Pickaxe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/junk_pickaxe.json"
+    },
+    {
+        "name": "Lustre Pickaxe",
+        "icon": "images\\Pickaxes\\Lustre Pickaxe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/lustre_pickaxe.json"
+    },
+    {
+        "name": "Marbiglass Pickaxe",
+        "icon": "images\\Pickaxes\\Marbiglass Pickaxe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/marbiglass_pickaxe.json"
+    },
+    {
+        "name": "Platinum Pickaxe",
+        "icon": "images\\Pickaxes\\Platinum Pickaxe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/platinum_pickaxe.json"
+    },
+    {
+        "name": "Poopy Pickaxe",
+        "icon": "images\\Pickaxes\\Poopy Pickaxe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/poopy_pickaxe.json"
+    },
+    {
+        "name": "Skewered Snek",
+        "icon": "images\\Pickaxes\\Skewered Snek.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/skewered_snek.json"
+    },
+    {
+        "name": "Starfire Pickaxe",
+        "icon": "images\\Pickaxes\\Starfire Pickaxe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/starfire_pickaxe.json"
+    },
+    {
+        "name": "Void Imperium Pik",
+        "icon": "images\\Pickaxes\\Void Imperium Pik.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/void_imperium_pik.json"
+    },
+    {
+        "name": "Annihilator Of The Yggdrasil",
+        "icon": "images\\Hatchets\\Annihilator of the Yggdrasil.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/annihilator_of_the_yggdrasil.json"
+    },
+    {
+        "name": "Copper Chopper",
+        "icon": "images\\Hatchets\\Copper Chopper.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/copper_chopper.json"
+    },
+    {
+        "name": "Dementia Dicer",
+        "icon": "images\\Hatchets\\Dementia Dicer.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dementia_dicer.json"
+    },
+    {
+        "name": "Dreadlo Hatchet",
+        "icon": "images\\Hatchets\\Dreadlo Hatchet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dreadlo_hatchet.json"
+    },
+    {
+        "name": "Golden Axe",
+        "icon": "images\\Hatchets\\Golden Axe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/golden_axe.json"
+    },
+    {
+        "name": "Grumbie The Hatchet Hammer",
+        "icon": "images\\Hatchets\\Grumbie the Hatchet Hammer.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/grumbie_the_hatchet_hammer.json"
+    },
+    {
+        "name": "Iron Hatchet",
+        "icon": "images\\Hatchets\\Iron Hatchet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/iron_hatchet.json"
+    },
+    {
+        "name": "Lustre Logger",
+        "icon": "images\\Hatchets\\Lustre Logger.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/lustre_logger.json"
+    },
+    {
+        "name": "Marbiglass Hatchet",
+        "icon": "images\\Hatchets\\Marbiglass Hatchet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/marbiglass_hatchet.json"
+    },
+    {
+        "name": "Old Hatchet",
+        "icon": "images\\Hatchets\\Old Hatchet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/old_hatchet.json"
+    },
+    {
+        "name": "Plat Hatchet",
+        "icon": "images\\Hatchets\\Plat Hatchet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/plat_hatchet.json"
+    },
+    {
+        "name": "Starfire Hatchet",
+        "icon": "images\\Hatchets\\Starfire Hatchet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/starfire_hatchet.json"
+    },
+    {
+        "name": "Stinky Axe",
+        "icon": "images\\Hatchets\\Stinky Axe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/stinky_axe.json"
+    },
+    {
+        "name": "Void Imperium Axe",
+        "icon": "images\\Hatchets\\Void Imperium Axe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/void_imperium_axe.json"
+    },
+    {
+        "name": "Angler Of The Iliunne",
+        "icon": "images\\Fishing Rods\\Angler of the Iliunne.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/angler_of_the_iliunne.json"
+    },
+    {
+        "name": "Copper Fish Rod",
+        "icon": "images\\Fishing Rods\\Copper Fish Rod.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/copper_fish_rod.json"
+    },
+    {
+        "name": "Dementia Rod For Fishing",
+        "icon": "images\\Fishing Rods\\Dementia Rod for Fishing.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dementia_rod_for_fishing.json"
+    },
+    {
+        "name": "Dreadlo Rod",
+        "icon": "images\\Fishing Rods\\Dreadlo Rod.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dreadlo_rod.json"
+    },
+    {
+        "name": "Gold Fishing Rod",
+        "icon": "images\\Fishing Rods\\Gold Fishing Rod.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/gold_fishing_rod.json"
+    },
+    {
+        "name": "Iron Fishing Rod",
+        "icon": "images\\Fishing Rods\\Iron Fishing Rod.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/iron_fishing_rod.json"
+    },
+    {
+        "name": "Lustre Rod",
+        "icon": "images\\Fishing Rods\\Lustre Rod.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/lustre_rod.json"
+    },
+    {
+        "name": "Marbiglass Rod",
+        "icon": "images\\Fishing Rods\\Marbiglass Rod.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/marbiglass_rod.json"
+    },
+    {
+        "name": "Plat Fishing Rod",
+        "icon": "images\\Fishing Rods\\Plat Fishing Rod.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/plat_fishing_rod.json"
+    },
+    {
+        "name": "Starfire Rod",
+        "icon": "images\\Fishing Rods\\Starfire Rod.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/starfire_rod.json"
+    },
+    {
+        "name": "Void Imperium Rod",
+        "icon": "images\\Fishing Rods\\Void Imperium Rod.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/void_imperium_rod.json"
+    },
+    {
+        "name": "Amarok Paws",
+        "icon": "images\\Shoes\\Amarok Paws.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/amarok_paws.json"
+    },
+    {
+        "name": "Angler Boots",
+        "icon": "images\\Shoes\\Angler Boots.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/angler_boots.json"
+    },
+    {
+        "name": "Bandito Boots",
+        "icon": "images\\Shoes\\Bandito Boots.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/bandito_boots.json"
+    },
+    {
+        "name": "Cavern Trekkers",
+        "icon": "images\\Shoes\\Cavern Trekkers.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/cavern_trekkers.json"
+    },
+    {
+        "name": "Chef Hat Shoes",
+        "icon": "images\\Shoes\\Chef Hat Shoes.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/chef_hat_shoes.json"
+    },
+    {
+        "name": "Chizoar Walkers",
+        "icon": "images\\Shoes\\Chizoar Walkers.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/chizoar_walkers.json"
+    },
+    {
+        "name": "Cooking Clogs",
+        "icon": "images\\Shoes\\Cooking Clogs.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/cooking_clogs.json"
+    },
+    {
+        "name": "Copper Boots",
+        "icon": "images\\Shoes\\Copper Boots.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/copper_boots.json"
+    },
+    {
+        "name": "Deep Sea Galoshes",
+        "icon": "images\\Shoes\\Deep Sea Galoshes.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/deep_sea_galoshes.json"
+    },
+    {
+        "name": "Dementia Boots",
+        "icon": "images\\Shoes\\Dementia Boots.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dementia_boots.json"
+    },
+    {
+        "name": "Devious Slippers Of The Divine",
+        "icon": "images\\Shoes\\Devious Slippers of the Divine.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/devious_slippers_of_the_divine.json"
+    },
+    {
+        "name": "Diabolical Toe Tips",
+        "icon": "images\\Shoes\\Diabolical Toe Tips.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/diabolical_toe_tips.json"
+    },
+    {
+        "name": "Divvy Slippers",
+        "icon": "images\\Shoes\\Divvy Slippers.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/divvy_slippers.json"
+    },
+    {
+        "name": "Drip Of The Gods",
+        "icon": "images\\Shoes\\Drip of the Gods.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/drip_of_the_gods.json"
+    },
+    {
+        "name": "Efaunts Broken Ankles",
+        "icon": "images\\Shoes\\Efaunts Broken Ankles.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/efaunts_broken_ankles.json"
+    },
+    {
+        "name": "Emperor Geta",
+        "icon": "images\\Shoes\\Emperor Geta.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/emperor_geta.json"
+    },
+    {
+        "name": "Fiberous Footings",
+        "icon": "images\\Shoes\\Fiberous Footings.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/fiberous_footings.json"
+    },
+    {
+        "name": "Flip Flops",
+        "icon": "images\\Shoes\\Flip Flops.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/flip_flops.json"
+    },
+    {
+        "name": "Gold Boots",
+        "icon": "images\\Shoes\\Gold Boots.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/gold_boots.json"
+    },
+    {
+        "name": "Goo Galoshes",
+        "icon": "images\\Shoes\\Goo Galoshes.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/goo_galoshes.json"
+    },
+    {
+        "name": "Iron Boots",
+        "icon": "images\\Shoes\\Iron Boots.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/iron_boots.json"
+    },
+    {
+        "name": "Laboratory Scrubs",
+        "icon": "images\\Shoes\\Laboratory Scrubs.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/laboratory_scrubs.json"
+    },
+    {
+        "name": "Logger Heels",
+        "icon": "images\\Shoes\\Logger Heels.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/logger_heels.json"
+    },
+    {
+        "name": "Lustre Shieldshoe",
+        "icon": "images\\Shoes\\Lustre Shieldshoe.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/lustre_shieldshoe.json"
+    },
+    {
+        "name": "Magma Core Lavarunners",
+        "icon": "images\\Shoes\\Magma Core Lavarunners.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/magma_core_lavarunners.json"
+    },
+    {
+        "name": "Marbiglass Soles",
+        "icon": "images\\Shoes\\Marbiglass Soles.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/marbiglass_soles.json"
+    },
+    {
+        "name": "Platinum Boots",
+        "icon": "images\\Shoes\\Platinum Boots.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/platinum_boots.json"
+    },
+    {
+        "name": "Rough Rockers",
+        "icon": "images\\Shoes\\Rough Rockers.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/rough_rockers.json"
+    },
+    {
+        "name": "Sheek Scrubs",
+        "icon": "images\\Shoes\\Sheek Scrubs.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/sheek_scrubs.json"
+    },
+    {
+        "name": "Soles Of The Troll",
+        "icon": "images\\Shoes\\Soles of the Troll.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/soles_of_the_troll.json"
+    },
+    {
+        "name": "Spaggy Westerados",
+        "icon": "images\\Shoes\\Spaggy Westerados.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/spaggy_westerados.json"
+    },
+    {
+        "name": "Void Imperium Kicks",
+        "icon": "images\\Shoes\\Void Imperium Kicks.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/void_imperium_kicks.json"
+    },
+    {
+        "name": "Carrot Horror",
+        "icon": "images\\Pendants\\Carrot Horror.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/carrot_horror.json"
+    },
+    {
+        "name": "Cedar Pendant",
+        "icon": "images\\Pendants\\Cedar Pendant.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/cedar_pendant.json"
+    },
+    {
+        "name": "Chaotic Amarok Pendant",
+        "icon": "images\\Pendants\\Chaotic Amarok Pendant.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/chaotic_amarok_pendant.json"
+    },
+    {
+        "name": "Chizoars Blankie",
+        "icon": "images\\Pendants\\Chizoars Blankie.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/chizoars_blankie.json"
+    },
+    {
+        "name": "Chizoars Caustic Scarf",
+        "icon": "images\\Pendants\\Chizoars Caustic Scarf.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/chizoars_caustic_scarf.json"
+    },
+    {
+        "name": "Crescent Moon Pendant",
+        "icon": "images\\Pendants\\Crescent Moon Pendant.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/crescent_moon_pendant.json"
+    },
+    {
+        "name": "Deathbloom Flower Pendant",
+        "icon": "images\\Pendants\\Deathbloom Flower Pendant.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/deathbloom_flower_pendant.json"
+    },
+    {
+        "name": "Deathly Cluster Pendant",
+        "icon": "images\\Pendants\\Deathly Cluster Pendant.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/deathly_cluster_pendant.json"
+    },
+    {
+        "name": "Emerald Bling Pendant",
+        "icon": "images\\Pendants\\Emerald Bling Pendant.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/emerald_bling_pendant.json"
+    },
+    {
+        "name": "Fishhead Pendant",
+        "icon": "images\\Pendants\\Fishhead Pendant.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/fishhead_pendant.json"
+    },
+    {
+        "name": "Fuscismatia",
+        "icon": "images\\Pendants\\Fuscismatia.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/fuscismatia.json"
+    },
+    {
+        "name": "Hallowed Tail Pendant",
+        "icon": "images\\Pendants\\Hallowed Tail Pendant.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/hallowed_tail_pendant.json"
+    },
+    {
+        "name": "Little Wooden Katana",
+        "icon": "images\\Pendants\\Little Wooden Katana.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/little_wooden_katana.json"
+    },
+    {
+        "name": "Persephones Bouquet",
+        "icon": "images\\Pendants\\Persephones Bouquet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/persephones_bouquet.json"
+    },
+    {
+        "name": "Polished Bludgeon",
+        "icon": "images\\Pendants\\Polished Bludgeon.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/polished_bludgeon.json"
+    },
+    {
+        "name": "Skullfish Pendant",
+        "icon": "images\\Pendants\\Skullfish Pendant.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/skullfish_pendant.json"
+    },
+    {
+        "name": "Sleek Shank",
+        "icon": "images\\Pendants\\Sleek Shank.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/sleek_shank.json"
+    },
+    {
+        "name": "Slimy Necklace",
+        "icon": "images\\Pendants\\Slimy Necklace.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/slimy_necklace.json"
+    },
+    {
+        "name": "Strung Bludgeon",
+        "icon": "images\\Pendants\\Strung Bludgeon.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/strung_bludgeon.json"
+    },
+    {
+        "name": "Strung Tooth Of The Divine",
+        "icon": "images\\Pendants\\Strung Tooth of the Divine.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/strung_tooth_of_the_divine.json"
+    },
+    {
+        "name": "Tarantulight",
+        "icon": "images\\Pendants\\Tarantulight.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/tarantulight.json"
+    },
+    {
+        "name": "The Divine Scarf",
+        "icon": "images\\Pendants\\The Divine Scarf.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/the_divine_scarf.json"
+    },
+    {
+        "name": "Bejeweled Ring",
+        "icon": "images\\Rings\\Bejeweled Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/bejeweled_ring.json"
+    },
+    {
+        "name": "Chef Ring",
+        "icon": "images\\Rings\\Chef Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/chef_ring.json"
+    },
+    {
+        "name": "Copper Band",
+        "icon": "images\\Rings\\Copper Band.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/copper_band.json"
+    },
+    {
+        "name": "Dawn Stopwatch",
+        "icon": "images\\Rings\\Dawn Stopwatch.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dawn_stopwatch.json"
+    },
+    {
+        "name": "Death Wish",
+        "icon": "images\\Rings\\Death Wish.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/death_wish.json"
+    },
+    {
+        "name": "Deepwater Trench Ring",
+        "icon": "images\\Rings\\Deepwater Trench Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/deepwater_trench_ring.json"
+    },
+    {
+        "name": "Defenders Dignity",
+        "icon": "images\\Rings\\Defenders Dignity.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/defenders_dignity.json"
+    },
+    {
+        "name": "Demented Emperor Opal",
+        "icon": "images\\Rings\\Demented Emperor Opal.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/demented_emperor_opal.json"
+    },
+    {
+        "name": "Dooble Goopi",
+        "icon": "images\\Rings\\Dooble Goopi.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dooble_goopi.json"
+    },
+    {
+        "name": "Dune Killer Ring",
+        "icon": "images\\Rings\\Dune Killer Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dune_killer_ring.json"
+    },
+    {
+        "name": "Efaunt Trunculus",
+        "icon": "images\\Rings\\Efaunt Trunculus.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/efaunt_trunculus.json"
+    },
+    {
+        "name": "Elf Twist Ring",
+        "icon": "images\\Rings\\Elf Twist Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/elf_twist_ring.json"
+    },
+    {
+        "name": "Frisbee Ring",
+        "icon": "images\\Rings\\Frisbee Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/frisbee_ring.json"
+    },
+    {
+        "name": "Lab Ring",
+        "icon": "images\\Rings\\Lab Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/lab_ring.json"
+    },
+    {
+        "name": "Magma Killer Ring",
+        "icon": "images\\Rings\\Magma Killer Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/magma_killer_ring.json"
+    },
+    {
+        "name": "Midnight Stopwatch",
+        "icon": "images\\Rings\\Midnight Stopwatch.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/midnight_stopwatch.json"
+    },
+    {
+        "name": "Nebula Killer Ring",
+        "icon": "images\\Rings\\Nebula Killer Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/nebula_killer_ring.json"
+    },
+    {
+        "name": "Neutron Ice Ring",
+        "icon": "images\\Rings\\Neutron Ice Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/neutron_ice_ring.json"
+    },
+    {
+        "name": "Oceanic Ring",
+        "icon": "images\\Rings\\Oceanic Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/oceanic_ring.json"
+    },
+    {
+        "name": "Protectors Pride",
+        "icon": "images\\Rings\\Protectors Pride.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/protectors_pride.json"
+    },
+    {
+        "name": "Pugilist Demise",
+        "icon": "images\\Rings\\Pugilist Demise.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/pugilist_demise.json"
+    },
+    {
+        "name": "Rex Ring",
+        "icon": "images\\Rings\\Rex Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/rex_ring.json"
+    },
+    {
+        "name": "Sanic Ring",
+        "icon": "images\\Rings\\Sanic Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/sanic_ring.json"
+    },
+    {
+        "name": "Serrated Rex Ring",
+        "icon": "images\\Rings\\Serrated Rex Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/serrated_rex_ring.json"
+    },
+    {
+        "name": "Shallow Watering",
+        "icon": "images\\Rings\\Shallow Watering.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/shallow_watering.json"
+    },
+    {
+        "name": "Silver Stopwatch",
+        "icon": "images\\Rings\\Silver Stopwatch.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/silver_stopwatch.json"
+    },
+    {
+        "name": "Souped Lab Ring",
+        "icon": "images\\Rings\\Souped Lab Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/souped_lab_ring.json"
+    },
+    {
+        "name": "Steel Band",
+        "icon": "images\\Rings\\Steel Band.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/steel_band.json"
+    },
+    {
+        "name": "Tenacity Ring",
+        "icon": "images\\Rings\\Tenacity Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/tenacity_ring.json"
+    },
+    {
+        "name": "The Emperor'S Opal",
+        "icon": "images\\Rings\\The Emperor's Opal.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/the_emperor's_opal.json"
+    },
+    {
+        "name": "Tundra Killer Ring",
+        "icon": "images\\Rings\\Tundra Killer Ring.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/tundra_killer_ring.json"
+    },
+    {
+        "name": "Zero Point Stopwatch",
+        "icon": "images\\Rings\\Zero Point Stopwatch.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/zero_point_stopwatch.json"
+    },
+    {
+        "name": "Copper Netted Net",
+        "icon": "images\\Bug Catching Nets\\Copper Netted Net.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/copper_netted_net.json"
+    },
+    {
+        "name": "Dementia Net",
+        "icon": "images\\Bug Catching Nets\\Dementia Net.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dementia_net.json"
+    },
+    {
+        "name": "Dreadlo Matted Netting",
+        "icon": "images\\Bug Catching Nets\\Dreadlo Matted Netting.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dreadlo_matted_netting.json"
+    },
+    {
+        "name": "Golden Net",
+        "icon": "images\\Bug Catching Nets\\Golden Net.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/golden_net.json"
+    },
+    {
+        "name": "Lustre Netting",
+        "icon": "images\\Bug Catching Nets\\Lustre Netting.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/lustre_netting.json"
+    },
+    {
+        "name": "Marbiglass Netting",
+        "icon": "images\\Bug Catching Nets\\Marbiglass Netting.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/marbiglass_netting.json"
+    },
+    {
+        "name": "Platinet",
+        "icon": "images\\Bug Catching Nets\\Platinet.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/platinet.json"
+    },
+    {
+        "name": "Reinforced Net",
+        "icon": "images\\Bug Catching Nets\\Reinforced Net.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/reinforced_net.json"
+    },
+    {
+        "name": "Starfire Trim Netting",
+        "icon": "images\\Bug Catching Nets\\Starfire Trim Netting.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/starfire_trim_netting.json"
+    },
+    {
+        "name": "Void Imperium Net",
+        "icon": "images\\Bug Catching Nets\\Void Imperium Net.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/void_imperium_net.json"
+    },
+    {
+        "name": "Wrangler Of The Qoxzul",
+        "icon": "images\\Bug Catching Nets\\Wrangler of the Qoxzul.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/wrangler_of_the_qoxzul.json"
+    },
+    {
+        "name": "Cardboard Traps",
+        "icon": "images\\Trap Box Sets\\Cardboard Traps.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/cardboard_traps.json"
+    },
+    {
+        "name": "Containment Of The Zrgyios",
+        "icon": "images\\Trap Box Sets\\Containment of the Zrgyios.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/containment_of_the_zrgyios.json"
+    },
+    {
+        "name": "Egalitarian Traps",
+        "icon": "images\\Trap Box Sets\\Egalitarian Traps.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/egalitarian_traps.json"
+    },
+    {
+        "name": "Forbidden Traps",
+        "icon": "images\\Trap Box Sets\\Forbidden Traps.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/forbidden_traps.json"
+    },
+    {
+        "name": "Meaty Traps",
+        "icon": "images\\Trap Box Sets\\Meaty Traps.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/meaty_traps.json"
+    },
+    {
+        "name": "Natural Traps",
+        "icon": "images\\Trap Box Sets\\Natural Traps.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/natural_traps.json"
+    },
+    {
+        "name": "Royal Traps",
+        "icon": "images\\Trap Box Sets\\Royal Traps.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/royal_traps.json"
+    },
+    {
+        "name": "Silkskin Traps",
+        "icon": "images\\Trap Box Sets\\Silkskin Traps.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/silkskin_traps.json"
+    },
+    {
+        "name": "Steel Traps",
+        "icon": "images\\Trap Box Sets\\Steel Traps.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/steel_traps.json"
+    },
+    {
+        "name": "Wooden Traps",
+        "icon": "images\\Trap Box Sets\\Wooden Traps.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/wooden_traps.json"
+    },
+    {
+        "name": "Ceramic Skull",
+        "icon": "images\\Worship Skulls\\Ceramic Skull.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/ceramic_skull.json"
+    },
+    {
+        "name": "Crystal Skull Of Esquire Vnoze",
+        "icon": "images\\Worship Skulls\\Crystal Skull of Esquire Vnoze.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/crystal_skull_of_esquire_vnoze.json"
+    },
+    {
+        "name": "Cultist Skull",
+        "icon": "images\\Worship Skulls\\Cultist Skull.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/cultist_skull.json"
+    },
+    {
+        "name": "Dreadnaught Skull",
+        "icon": "images\\Worship Skulls\\Dreadnaught Skull.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/dreadnaught_skull.json"
+    },
+    {
+        "name": "Glauss Skull",
+        "icon": "images\\Worship Skulls\\Glauss Skull.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/glauss_skull.json"
+    },
+    {
+        "name": "Horned Skull",
+        "icon": "images\\Worship Skulls\\Horned Skull.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/horned_skull.json"
+    },
+    {
+        "name": "Luciferian Skull",
+        "icon": "images\\Worship Skulls\\Luciferian Skull.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/luciferian_skull.json"
+    },
+    {
+        "name": "Manifested Skull",
+        "icon": "images\\Worship Skulls\\Manifested Skull.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/manifested_skull.json"
+    },
+    {
+        "name": "Prickle Skull",
+        "icon": "images\\Worship Skulls\\Prickle Skull.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/prickle_skull.json"
+    },
+    {
+        "name": "Slush Skull",
+        "icon": "images\\Worship Skulls\\Slush Skull.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/slush_skull.json"
+    },
+    {
+        "name": "Wax Skull",
+        "icon": "images\\Worship Skulls\\Wax Skull.png",
+        "items": 2,
+        "tab": 1,
+        "recipe_path": "recipes/wax_skull.json"
+    }
+]
