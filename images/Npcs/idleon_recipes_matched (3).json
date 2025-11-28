@@ -1,0 +1,352 @@
+{
+  "Recipes": {
+    "amarok bodyplate": {
+      "icon": "images\\Shirts\\Amarok Bodyplate.png",
+      "recipe": "images\\recipes\\amarok bodyplate.png",
+      "items": 3,
+      "tab": 1
+    },
+    "amarok helmet": {
+      "icon": "images\\Helmets\\Amarok Helmet.png",
+      "recipe": "images\\recipes\\amarok helmet.png",
+      "items": 3,
+      "tab": 1
+    },
+    "amarok hinds": {
+      "icon": "images\\Pants\\Amarok Hinds.png",
+      "recipe": "images\\recipes\\amarok hinds.png",
+      "items": 3,
+      "tab": 1
+    },
+    "amarok paws": {
+      "icon": "images\\Shoes\\Amarok Paws.png",
+      "recipe": "images\\recipes\\amarok paws.png",
+      "items": 3,
+      "tab": 1
+    },
+    "anvil tab 2": {
+      "icon": "images\\Helmets\\Santa Hat.png",
+      "recipe": "images\\recipes\\anvil tab 2.png",
+      "items": 2,
+      "tab": 1
+    },
+    "birch longbow": {
+      "icon": "images\\Bows\\Birch Longbow.png",
+      "recipe": "images\\recipes\\birch longbow.png",
+      "items": 2,
+      "tab": 1
+    },
+    "birthday hat": {
+      "icon": "images\\Helmets\\Birthday Hat.png",
+      "recipe": "images\\recipes\\birthday hat.png",
+      "items": 2,
+      "tab": 1
+    },
+    "black tee": {
+      "icon": "images\\Shirts\\Black Tee.png",
+      "recipe": "images\\recipes\\black tee.png",
+      "items": 2,
+      "tab": 1
+    },
+    "bleached designer wodepatch pants": {
+      "icon": "images\\Pants\\Bleached Designer Wode Patch Pants.png",
+      "recipe": "images\\recipes\\bleached designer wodepatch pants.png",
+      "items": 2,
+      "tab": 1
+    },
+    "blue tee": {
+      "icon": "images\\Shirts\\Blue Tee.png",
+      "recipe": "images\\recipes\\blue tee.png",
+      "items": 2,
+      "tab": 1
+    },
+    "blunderbag": {
+      "icon": "images\\Shirts\\Efaunt Ribcage.png",
+      "recipe": "images\\recipes\\blunderbag.png",
+      "items": 2,
+      "tab": 1
+    },
+    "boxing gloves": {
+      "icon": "images\\Fisticuffs\\Boxing Gloves.png",
+      "recipe": "images\\recipes\\boxing gloves.png",
+      "items": 2,
+      "tab": 1
+    },
+    "copper band": {
+      "icon": "images\\Rings\\Copper Band.png",
+      "recipe": "images\\recipes\\copper band.png",
+      "items": 2,
+      "tab": 1
+    },
+    "copper boots": {
+      "icon": "images\\Shoes\\Copper Boots.png",
+      "recipe": "images\\recipes\\copper boots.png",
+      "items": 2,
+      "tab": 1
+    },
+    "copper chopper": {
+      "icon": "images\\Hatchets\\Copper Chopper.png",
+      "recipe": "images\\recipes\\copper chopper.png",
+      "items": 2,
+      "tab": 1
+    },
+    "copper helmet": {
+      "icon": "images\\Helmets\\Copper Helmet.png",
+      "recipe": "images\\recipes\\copper helmet.png",
+      "items": 2,
+      "tab": 1
+    },
+    "copper pickaxe": {
+      "icon": "images\\Pickaxes\\Copper Pickaxe.png",
+      "recipe": "images\\recipes\\copper pickaxe.png",
+      "items": 2,
+      "tab": 1
+    },
+    "copper platebody": {
+      "icon": "images\\Shirts\\Copper Platebody.png",
+      "recipe": "images\\recipes\\copper platebody.png",
+      "items": 2,
+      "tab": 1
+    },
+    "copper platelegs": {
+      "icon": "images\\Pants\\Copper Platelegs.png",
+      "recipe": "images\\recipes\\copper platelegs.png",
+      "items": 2,
+      "tab": 1
+    },
+    "cramped choppin pouch": {
+      "icon": "images\\Hatchets\\Copper Chopper.png",
+      "recipe": "images\\recipes\\cramped choppin pouch.png",
+      "items": 2,
+      "tab": 1
+    },
+    "cramped food pouch": {
+      "icon": "images\\Fishing Rods\\Cramped Food Pouch.png",
+      "recipe": "images\\recipes\\cramped food pouch.png",
+      "items": 2,
+      "tab": 1
+    },
+    "cramped material pouch": {
+      "icon": "images\\Helmets\\Cramped Material Pouch.png",
+      "recipe": "images\\recipes\\cramped material pouch.png",
+      "items": 2,
+      "tab": 1
+    },
+    "cramped mining pouch": {
+      "icon": "images\\Bug Catching Nets\\Cramped Mining Pouch.png",
+      "recipe": "images\\recipes\\cramped mining pouch.png",
+      "items": 2,
+      "tab": 1
+    },
+    "dirty coal miner baggy soot pants": {
+      "icon": "images\\Pants\\Dirty Coal Miner Baggy Soot Pants.png",
+      "recipe": "images\\recipes\\dirty coal miner baggy soot pants.png",
+      "items": 2,
+      "tab": 1
+    },
+    "dooble goopi": {
+      "icon": "images\\Rings\\Dooble Goopi.png",
+      "recipe": "images\\recipes\\dooble goopi.png",
+      "items": 2,
+      "tab": 1
+    },
+    "eco friendly oil": {
+      "icon": "images\\Rings\\Eco Friendly Oil.png",
+      "recipe": "images\\recipes\\eco friendly oil.png",
+      "items": 2,
+      "tab": 1
+    },
+    "farmer brim": {
+      "icon": "images\\Helmets\\Farmer Brim.png",
+      "recipe": "images\\recipes\\farmer brim.png",
+      "items": 2,
+      "tab": 1
+    },
+    "flip flops": {
+      "icon": "images\\Shoes\\Flip Flops.png",
+      "recipe": "images\\recipes\\flip flops.png",
+      "items": 2,
+      "tab": 1
+    },
+    "fur shirt": {
+      "icon": "images\\Shirts\\Fur Shirt.png",
+      "recipe": "images\\recipes\\fur shirt.png",
+      "items": 2,
+      "tab": 1
+    },
+    "golden peanut": {
+      "icon": "images\\Bug Catching Nets\\Golden Net.png",
+      "recipe": "images\\recipes\\golden peanut.png",
+      "items": 2,
+      "tab": 1
+    },
+    "goo galoshes": {
+      "icon": "images\\Shoes\\Goo Galoshes.png",
+      "recipe": "images\\recipes\\goo galoshes.png",
+      "items": 2,
+      "tab": 1
+    },
+    "green tee": {
+      "icon": "images\\Shirts\\Green Tee.png",
+      "recipe": "images\\recipes\\green tee.png",
+      "items": 2,
+      "tab": 1
+    },
+    "hide shirt": {
+      "icon": "images\\Shirts\\Hide Shirt.png",
+      "recipe": "images\\recipes\\hide shirt.png",
+      "items": 2,
+      "tab": 1
+    },
+    "icing ironbite": {
+      "icon": "images\\Shoes\\Iron Boots.png",
+      "recipe": "images\\recipes\\icing ironbite.png",
+      "items": 2,
+      "tab": 1
+    },
+    "iron boots": {
+      "icon": "images\\Shoes\\Iron Boots.png",
+      "recipe": "images\\recipes\\iron boots.png",
+      "items": 2,
+      "tab": 1
+    },
+    "iron hatchet": {
+      "icon": "images\\Hatchets\\Iron Hatchet.png",
+      "recipe": "images\\recipes\\iron hatchet.png",
+      "items": 2,
+      "tab": 1
+    },
+    "iron helmet": {
+      "icon": "images\\Helmets\\Iron Helmet.png",
+      "recipe": "images\\recipes\\iron helmet.png",
+      "items": 2,
+      "tab": 1
+    },
+    "iron pickaxe": {
+      "icon": "images\\Pickaxes\\Iron Pickaxe.png",
+      "recipe": "images\\recipes\\iron pickaxe.png",
+      "items": 2,
+      "tab": 1
+    },
+    "iron platebody": {
+      "icon": "images\\Shirts\\Iron Platebody.png",
+      "recipe": "images\\recipes\\iron platebody.png",
+      "items": 2,
+      "tab": 1
+    },
+    "iron platelegs": {
+      "icon": "images\\Pants\\Iron Platelegs.png",
+      "recipe": "images\\recipes\\iron platelegs.png",
+      "items": 2,
+      "tab": 1
+    },
+    "leather cap": {
+      "icon": "images\\Helmets\\Leather Cap.png",
+      "recipe": "images\\recipes\\leather cap.png",
+      "items": 2,
+      "tab": 1
+    },
+    "militia helm": {
+      "icon": "images\\Helmets\\Militia Helm.png",
+      "recipe": "images\\recipes\\militia helm.png",
+      "items": 2,
+      "tab": 1
+    },
+    "orange tee": {
+      "icon": "images\\Shirts\\Orange Tee.png",
+      "recipe": "images\\recipes\\orange tee.png",
+      "items": 2,
+      "tab": 1
+    },
+    "peanut": {
+      "icon": "images\\Shirts\\Planktop.png",
+      "recipe": "images\\recipes\\peanut.png",
+      "items": 2,
+      "tab": 1
+    },
+    "purple tee": {
+      "icon": "images\\Shirts\\Purple Tee.png",
+      "recipe": "images\\recipes\\purple tee.png",
+      "items": 2,
+      "tab": 1
+    },
+    "purple tupacband": {
+      "icon": "images\\Helmets\\Purple Tupacband.png",
+      "recipe": "images\\recipes\\purple tupacband.png",
+      "items": 2,
+      "tab": 1
+    },
+    "quaterstaff": {
+      "icon": "images\\Wands\\Quarterstaff.png",
+      "recipe": "images\\recipes\\quaterstaff.png",
+      "items": 2,
+      "tab": 1
+    },
+    "saucy logfries": {
+      "icon": "images\\Rings\\Sanic Ring.png",
+      "recipe": "images\\recipes\\saucy logfries.png",
+      "items": 2,
+      "tab": 1
+    },
+    "sleek shank": {
+      "icon": "images\\Pendants\\Sleek Shank.png",
+      "recipe": "images\\recipes\\sleek shank.png",
+      "items": 2,
+      "tab": 1
+    },
+    "small choppin pouch": {
+      "icon": "images\\Bows\\Small Choppin Pouch.png",
+      "recipe": "images\\recipes\\small choppin pouch.png",
+      "items": 2,
+      "tab": 1
+    },
+    "small mining pouch": {
+      "icon": "images\\Rings\\Midnight Stopwatch.png",
+      "recipe": "images\\recipes\\small mining pouch.png",
+      "items": 2,
+      "tab": 1
+    },
+    "steel axe": {
+      "icon": "images\\Spears\\Steel Axe.png",
+      "recipe": "images\\recipes\\steel axe.png",
+      "items": 2,
+      "tab": 1
+    },
+    "steel band": {
+      "icon": "images\\Rings\\Steel Band.png",
+      "recipe": "images\\recipes\\steel band.png",
+      "items": 2,
+      "tab": 1
+    },
+    "the stringers": {
+      "icon": "images\\Fisticuffs\\The Stingers.png",
+      "recipe": "images\\recipes\\the stringers.png",
+      "items": 2,
+      "tab": 1
+    },
+    "thief hood": {
+      "icon": "images\\Helmets\\Thief Hood.png",
+      "recipe": "images\\recipes\\thief hood.png",
+      "items": 2,
+      "tab": 1
+    },
+    "top hat": {
+      "icon": "images\\Helmets\\Top Hat.png",
+      "recipe": "images\\recipes\\top hat.png",
+      "items": 2,
+      "tab": 1
+    },
+    "torn jeans": {
+      "icon": "images\\Pants\\Torn Jeans.png",
+      "recipe": "images\\recipes\\torn jeans.png",
+      "items": 2,
+      "tab": 1
+    },
+    "wooden spear": {
+      "icon": "images\\Spears\\Wooden Spear.png",
+      "recipe": "images\\recipes\\wooden spear.png",
+      "items": 2,
+      "tab": 1
+    }
+  }
+}
