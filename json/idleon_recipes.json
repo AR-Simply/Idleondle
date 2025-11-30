@@ -75,13 +75,13 @@
     "copper band": {
       "icon": "images\\Rings\\Copper Band.png",
       "recipe": "images\\recipes\\copper band.png",
-      "items": 2,
+      "items": 1,
       "tab": 1
     },
     "copper boots": {
       "icon": "images\\Shoes\\Copper Boots.png",
       "recipe": "images\\recipes\\copper boots.png",
-      "items": 2,
+      "items": 1,
       "tab": 1
     },
     "copper chopper": {
@@ -99,7 +99,7 @@
     "copper pickaxe": {
       "icon": "images\\Pickaxes\\Copper Pickaxe.png",
       "recipe": "images\\recipes\\copper pickaxe.png",
-      "items": 2,
+      "items": 1,
       "tab": 1
     },
     "copper platebody": {
@@ -117,7 +117,7 @@
     "cramped choppin pouch": {
       "icon": "images\\recipes\\Cramped_Choppin_Pouch.png",
       "recipe": "images\\recipes\\cramped choppin pouch.png",
-      "items": 2,
+      "items": 1,
       "tab": 1
     },
     "cramped food pouch": {
@@ -135,7 +135,7 @@
     "cramped mining pouch": {
       "icon": "images\\recipes\\Cramped_Mining_Pouch.png",
       "recipe": "images\\recipes\\cramped mining pouch.png",
-      "items": 2,
+      "items": 1,
       "tab": 1
     },
     "dirty coal miner baggy soot pants": {
@@ -243,7 +243,7 @@
     "leather cap": {
       "icon": "images\\Helmets\\Leather Cap.png",
       "recipe": "images\\recipes\\leather cap.png",
-      "items": 2,
+      "items": 1,
       "tab": 1
     },
     "militia helm": {
@@ -255,7 +255,7 @@
     "orange tee": {
       "icon": "images\\Shirts\\Orange Tee.png",
       "recipe": "images\\recipes\\orange tee.png",
-      "items": 2,
+      "items": 1,
       "tab": 1
     },
     "peanut": {
@@ -297,13 +297,13 @@
     "small choppin pouch": {
       "icon": "images\\recipes\\Small_Choppin_Pouch.png",
       "recipe": "images\\recipes\\small choppin pouch.png",
-      "items": 2,
+      "items": 1,
       "tab": 1
     },
     "small mining pouch": {
       "icon": "images\\recipes\\Small_Mining_Pouch.png",
       "recipe": "images\\recipes\\small mining pouch.png",
-      "items": 2,
+      "items": 1,
       "tab": 1
     },
     "steel axe": {
@@ -315,7 +315,7 @@
     "steel band": {
       "icon": "images\\Rings\\Steel Band.png",
       "recipe": "images\\recipes\\steel band.png",
-      "items": 2,
+      "items": 1,
       "tab": 1
     },
     "the stringers": {
@@ -345,7 +345,7 @@
     "wooden spear": {
       "icon": "images\\Spears\\Wooden Spear.png",
       "recipe": "images\\recipes\\wooden spear.png",
-      "items": 2,
+      "items": 1,
       "tab": 1
     }
   }
