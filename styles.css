@@ -507,32 +507,43 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
 }
 .recipe-blur-box {
   position: absolute;
-  top: 40px;
+  top: 30px;
   left: 200px;
-  width: 260px;
+  width: 288px;
   height: 55px;
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(0, 0, 0, 0.1);
+  background-image: url('../images/recipes/Background top.PNG');
+  background-size: cover;
+  background-position: center;
   z-index: 1;
 }
 .recipe-blur-box-2 {
   position: absolute;
-  top: 180px;
-  left: 75px;
-  width: 190px;
-  height: 140px;
+  top: 188px;
+  left: 110px;
+  width: 115px;
+  height: 115px;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(20px);
   background: rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
+.recipe-blur-box-6 {
+  position: absolute;
+  top: 298px;
+  left: 60px;
+  width: 420px;
+  height: 25px;
+  background-image: url('../images/recipes/Background mid.PNG');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
 .recipe-blur-box-3 {
   position: absolute;
-  top: 180px;
-  left: 275px;
-  width: 190px;
-  height: 140px;
+  top: 188px;
+  left: 320px;
+  width: 115px;
+  height: 115px;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(20px);
   background: rgba(0, 0, 0, 0.1);
@@ -541,9 +552,9 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
 .recipe-blur-box-4 {
   position: absolute;
   top: 345px;
-  left: 75px;
-  width: 190px;
-  height: 140px;
+  left: 110px;
+  width: 115px;
+  height: 115px;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(20px);
   background: rgba(0, 0, 0, 0.1);
@@ -552,14 +563,26 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
 .recipe-blur-box-5 {
   position: absolute;
   top: 345px;
-  left: 275px;
-  width: 190px;
-  height: 140px;
+  left: 320px;
+  width: 115px;
+  height: 115px;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(20px);
   background: rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
+.recipe-blur-box-7 {
+  position: absolute;
+  top: 460px;
+  left: 60px;
+  width: 420px;
+  height: 25px;
+  background-image: url('../images/recipes/Background bot.PNG');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
 .recipe-notice {
   font-size: 20px;
   font-weight: 700;
@@ -570,6 +593,19 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   position: relative;
   z-index: 10;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Cropped recipe icon for dropdown items on recipe page */
+.recipe-cropped-icon {
+  width: 40px; /* smaller thumbnail in dropdown */
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  /* Show the 125x125 crop from (25,35); since dropdown thumbnail is 40x40, we scale via background-size and position.
+     Keep original size; position the background to align the desired region within the 40x40 box. */
+  /* Align with JS crop values via CSS variables set by recipeGuesser.js */
+  background-position: var(--recipe-crop-x, -15px) var(--recipe-crop-y, -20px);
+  border-radius: 4px;
 }
 
 .daily-npc-quote.fade-in {

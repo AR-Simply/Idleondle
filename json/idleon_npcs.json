@@ -245,6 +245,189 @@
       "Total Quests": 1,
       "quote": "Ok, you help me all you can! Me need no more, me hope you sail far and good!",
       "icon": "images\\Npcs\\Omar_Da_Ogar.png"
+    },
+                "Hoggindaz": {
+      "world": "Frostbite Tundra",
+      "Total Quests": 10,
+      "quote": "My first order as Mayor is for you to go defeat that world boss who invaded just before the election! Come to think of it why didn't I do that back then I was still mayor..",
+      "icon": "images\\Npcs\\Hoggindaz.png"
+    },
+                    "Iceland Irwin": {
+      "world": "Frostbite Tundra",
+      "Total Quests": 1,
+      "quote": "Oi mate! I reckon it's a bit cold out 'ere for a half naked fella like yourself! It's a darn shame you humans aren't born with a snowman heater on ya noggin like I am would do you wonders in the frozen outback!",
+      "icon": "images\\Npcs\\Iceland_Irwin.png"
+    },
+                    "Lord of the Hunt": {
+      "world": "Frostbite Tundra",
+      "Total Quests": 11,
+      "quote": "No way these are geniune froges?? I better convert these into frogecoins quickly before... darn their value just dropped to 0.",
+      "icon": "images\\Npcs\\Lord_of_the_Hunt.png.png"
+    },
+                    "Lonely Hunter": {
+      "world": "Frostbite Tundra",
+      "Total Quests": 3,
+      "quote": "What the... what are these for? Why did y-- oh. Ugh.",
+      "icon": "images\\Npcs\\Lonely_Hunter.png"
+    },
+                    "Snouts": {
+      "world": "Frostbite Tundra",
+      "Total Quests": 4,
+      "quote": "WAIT! I totally forgot I have a star talent that can shield me!! But I don't have enough mana to cast it... please get me some pots!!!",
+      "icon": "images\\Npcs\\Snouts.png"
+    },
+                    "Shuvelle": {
+      "world": "Frostbite Tundra",
+      "Total Quests": 7,
+      "quote": "Can you get me a DVD of that one movie the 'coming of age' one? I think I saw some mamooths with a copy ages ago...",
+      "icon": "images\\Npcs\\Shuvelle.png"
+    },
+                    "Yondergreen": {
+      "world": "Frostbite Tundra",
+      "Total Quests": 7,
+      "quote": "Alright as a contract lawyer I have one more question. Do you have the guts to sign legislature into action?",
+      "icon": "images\\Npcs\\Yondergreen.png"
+    },
+                    "Crystalswine": {
+      "world": "Frostbite Tundra",
+      "Total Quests": 3,
+      "quote": "To whoever reads this I have decided to freeze myself as to avoiding having to actively wait for the next world to be released.",
+      "icon": "images\\Npcs\\Crystalswine.png"
+    },
+                    "Bill Brr": {
+      "world": "Frostbite Tundra",
+      "Total Quests": 7,
+      "quote": "Jeez you're still here? Can't you tell I don't really wanna socialize with the likes of you? Eh whatever... got any candies on ya? ",
+      "icon": "images\\Npcs\\Bill_Brr.png"
+    },
+                    "Bellows": {
+      "world": "Frostbite Tundra",
+      "Total Quests": 4,
+      "quote": "Breathe in... Breathe out... Breathe in... Breathe out... Breathe in... Breathe out...",
+      "icon": "images\\Npcs\\Bellows.png"
+    },
+                        "Gobo": {
+      "world": "Hyperion Nebula",
+      "Total Quests": 5,
+      "quote": "Zzzz.... nono lava I wont tell them... zzz... I wont tell them to drop sludge oil onto the purple spores.... zzz... nah lava secrets safe with... zzz... me...",
+      "icon": "images\\Npcs\\Gobo.png"
+    },
+                            "Nebula Neddy": {
+      "world": "Hyperion Nebula",
+      "Total Quests": 1,
+      "quote": "Greetings. Your presence has been acknowledged let us commence proper conversation.",
+      "icon": "images\\Npcs\\Nebula_Neddy.png"
+    },
+                            "Oinkin": {
+      "world": "Hyperion Nebula",
+      "Total Quests": 3,
+      "quote": "Now that's what I call non-raw cooking! I can't believe I'm saying this but that's all the cooking I can do for now... I'm all cooked out!",
+      "icon": "images\\Npcs\\Oinkin.png"
+    },
+                            "Eliteus": {
+      "world": "Hyperion Nebula",
+      "Total Quests": 2,
+      "quote": "Yoooooo haha love that! Man they up and DIPPED once you started slappin' them around bwhahaha! Aight fairs fair here's your own elite class.",
+      "icon": "images\\Npcs\\Eliteus.png"
+    },
+                            "Royal Worm": {
+      "world": "Hyperion Nebula",
+      "Total Quests": 9,
+      "quote": "Holy who the what now?? You're level THREE HUNDRED??? Well ok you suddenly appear very useful again! And uh... you like still will do my bidding right? Royal this and that?",
+      "icon": "images\\Npcs\\Royal_Worm.png"
+    },
+                            "Capital P": {
+      "world": "Hyperion Nebula",
+      "Total Quests": 3,
+      "quote": "Holla holla! You're a winning MACHINE! I'm gonna keep the party going but that's it for the games for now. PartyOn!",
+      "icon": "images\\Npcs\\Capital_P.png"
+    },
+                            "Blobbo": {
+      "world": "Hyperion Nebula",
+      "Total Quests": 2,
+      "quote": "Blublbublbub.... BLUBLBUBLB!",
+      "icon": "images\\Npcs\\Blobbo.png"
+    },
+                            "Rift Ripper": {
+      "world": "Hyperion Nebula",
+      "Total Quests": 1,
+      "quote": "Give yourself a pat on the back! Such a thankless job all the credit always going to your characters instead of YOU the one actually controlling them!",
+      "icon": "images\\Npcs\\Rift_Ripper.png"
+    },
+                            "Monolith": {
+      "world": "Hyperion Nebula",
+      "Total Quests": 3,
+      "quote": "Magnificent... and to think that my brilliance that irradiates from the surface of my being was ever called into question bluhahugue!",
+      "icon": "images\\Npcs\\Monolith.png"
+    },
+                            "Lava Larry": {
+      "world": "Smolderin' Plateau",
+      "Total Quests": 1,
+      "quote": "Hows it flowin' 'n goin' my guy? This pipin' hot heat out here making you and I very dry.",
+      "icon": "images\\Npcs\\Lava_Larry.png"
+    },
+                            "Muhmuguh": {
+      "world": "Smolderin' Plateau",
+      "Total Quests": 3,
+      "quote": "Nice job that was super hot! Super hot! Super H... no? You don't get that reference? Eh never mind. Guess you ARE only a level 1 gamer after all right now.",
+      "icon": "images\\Npcs\\Muhmuguh.png"
+    },
+                            "Slargon": {
+      "world": "Smolderin' Plateau",
+      "Total Quests": 4,
+      "quote": "Woah... That... was... AWESOME!! You were all like POW and BAM and WHAM! I dont know why maybe it was my birfday wish coming true but every since you did that they've all been super nice to me!",
+      "icon": "images\\Npcs\\Slargon.png"
+    },
+                            "Pirate Porkchop": {
+      "world": "Smolderin' Plateau",
+      "Total Quests": 4,
+      "quote": "Nothin' in particular eh? I aint sure if ye said anything I play with chat bubbles off so I'll assume ye got some spare time. Care to lend this old sailor a hand?",
+      "icon": "images\\Npcs\\Pirate_Porkchop.png"
+    },
+                            "Poigu": {
+      "world": "Smolderin' Plateau",
+      "Total Quests": 3,
+      "quote": "Speak not with words but with belief. I shall listen to whatever it is I can hear...",
+      "icon": "images\\Npcs\\Poigu.png"
+    },
+                            "Tired Mole": {
+      "world": "Smolderin' Plateau",
+      "Total Quests": 3,
+      "quote": "Those lowly lava moles don't know how lucky they got it... Uhhh hi there? You're a funny looking mole what department do you work in?",
+      "icon": "images\\Npcs\\Tired_Mole.png"
+    },
+                            "Lafu Shi": {
+      "world": "Spirited Valley",
+      "Total Quests": 6,
+      "quote": "That was a strong debut very sophisticated moves you made. Although clicking on those cards thinking you could select them was a bit of a blunder if you ask me...",
+      "icon": "images\\Npcs\\Lafu_Shi.png"
+    },
+                                "Spirit Sungmin": {
+      "world": "Spirited Valley",
+      "Total Quests": 1,
+      "quote": "I am sure you are familiar with my passion for tasks my bretheren abroad share the same ambitions.",
+      "icon": "images\\Npcs\\Spirit_Sungmin.png"
+    },                            "Hoov": {
+      "world": "Spirited Valley",
+      "Total Quests": 4,
+      "quote": "Dang bruh I saw that speech bubble fr I would've joined you but like I ain't puttin up with that disrespect. You makin' me feel a certain kinda way hater lucky I don't drop some bars on ya.",
+      "icon": "images\\Npcs\\Hoov.png"
+    },                            "Woodlin Elder": {
+      "world": "Spirited Valley",
+      "Total Quests": 5,
+      "quote": "You are not a worthy traveler. Passage to the Bamboo Forest is thus prohibited.",
+      "icon": "images\\Npcs\\Woodlin_Elder.png"
+    },                            "Sussy Gene": {
+      "world": "Spirited Valley",
+      "Total Quests": 3,
+      "quote": "Hey stop squirming down there bro cmon someone's gonna... Oh hello greetings sir.",
+      "icon": "images\\Npcs\\Sussy_Gene.png"
+    },                            "Potti": {
+      "world": "Spirited Valley",
+      "Total Quests":6,
+      "quote": "Her forced expression is one of true happiness. She would scream if only she knew how.",
+      "icon": "images\\Npcs\\Potti.png"
     }
+
 }
 }

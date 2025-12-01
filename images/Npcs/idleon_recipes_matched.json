@@ -1,9 +1,0 @@
-[
-  {
-    "name": "Boxing Gloves",
-    "icon": "images\\Fisticuffs\\Boxing Gloves.png",
-    "recipe_image": "images\\recipes\\boxing gloves.png",
-    "items": 2,
-    "original_icon_in_recipes": "images\\Fisticuffs\\Boxing Gloves.png"
-  }
-]

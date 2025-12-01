@@ -1,7 +1,7 @@
 {
   "Recipes": {
     "amarok bodyplate": {
-      "icon": "images\\Shirts\\Amarok Bodyplate.png",
+      "icon": "images\\Shirts\\f.png",
       "recipe": "images\\recipes\\amarok bodyplate.png",
       "items": 3,
       "tab": 1

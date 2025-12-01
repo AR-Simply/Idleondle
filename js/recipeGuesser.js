@@ -1,5 +1,5 @@
 // js/recipeGuesser.js
-import { initShared, getGoalItem } from './shared.js';
+import { initShared, getGoalItem, filterItems } from './shared.js';
 
 // Helper to resolve image paths (similar to shared.js resolveIcon)
 function resolveRecipePath(path) {
@@ -13,11 +13,49 @@ function resolveRecipePath(path) {
   return cleaned;
 }
 
+// Helper to create a cropped icon from recipe image
+// Crop box parameters (adjust to tune zoom/position)
+const CROP_X = 50;   // left offset
+const CROP_Y = 50;   // top offset
+const CROP_W = 120;   // width of crop
+const CROP_H = 120;   // height of crop
+function createCroppedIcon(recipePath, callback) {
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = () => {
+    try {
+      const canvas = document.createElement('canvas');
+      canvas.width = CROP_W;
+      canvas.height = CROP_H;
+      const ctx = canvas.getContext('2d');
+      // Crop using defined box
+      ctx.drawImage(img, CROP_X, CROP_Y, CROP_W, CROP_H, 0, 0, CROP_W, CROP_H);
+      callback(canvas.toDataURL());
+    } catch (e) {
+      console.warn('Failed to crop recipe icon:', e);
+      callback('../images/icon.png');
+    }
+  };
+  img.onerror = () => {
+    console.warn('Failed to load recipe image for cropping');
+    callback('../images/icon.png');
+  };
+  img.src = recipePath;
+}
+
+// Expose crop helper so shared dropdown can use canvas-cropped icons
+try {
+  if (typeof window !== 'undefined') {
+    window.recipeGuesser = window.recipeGuesser || {};
+    window.recipeGuesser.createCroppedIcon = createCroppedIcon;
+  }
+} catch (e) { /* non-fatal */ }
+
 export async function initRecipeGuesser(options = {}) {
   const sharedConfig = Object.assign({
     dataUrl: '../json/idleon_recipes.json',
     imageBase: '../images',
-    seedOffset: 9,
+    seedOffset: 9000,
     guessButtonHandlers: {
       guessBtn2: () => {
         const gb2 = document.getElementById('guessBtn2');
@@ -31,11 +69,45 @@ export async function initRecipeGuesser(options = {}) {
   }, options || {});
 
   await initShared(sharedConfig);
+  
+  // After shared init, replace all item icons with cropped versions
+  // Access the items array through filterItems
+  const allItems = filterItems('');
+  allItems.forEach(item => {
+    const recipePath = item.raw?.recipe || item.raw?.Recipe;
+    if (recipePath) {
+      const resolvedPath = resolveRecipePath(recipePath);
+      createCroppedIcon(resolvedPath, (croppedIcon) => {
+        item.icon = croppedIcon;
+      });
+    }
+  });
+  
+  // Also update the goal item's icon for the modal
+  const goal = getGoalItem();
+  if (goal && goal.raw) {
+    const recipePath = goal.raw.recipe || goal.raw.Recipe;
+    if (recipePath) {
+      const resolvedPath = resolveRecipePath(recipePath);
+      createCroppedIcon(resolvedPath, (croppedIcon) => {
+        goal.icon = croppedIcon;
+        // Update any existing icon displays
+        const goalIcon = document.getElementById('goalIcon');
+        if (goalIcon) goalIcon.src = croppedIcon;
+      });
+    }
+  }
 
+  // Sync CSS variables for dropdown crop so changes reflect immediately
+  try {
+    const root = document.documentElement;
+    root.style.setProperty('--recipe-crop-x', `${-CROP_X}px`);
+    root.style.setProperty('--recipe-crop-y', `${-CROP_Y}px`);
+  } catch (e) { /* non-fatal */ }
   // Track blur reduction for boxes 2-5
   let blurBoxes = []; // Will store references to blur boxes 2-5
   const initialBlur = 20; // Starting blur value in px
-  const guessesPerBox = 5; // Number of guesses to fully clear one box
+  const guessesPerBox = 3; // Number of guesses to fully clear one box
 
   // Render the daily recipe image below the combo
   try {
@@ -80,6 +152,16 @@ export async function initRecipeGuesser(options = {}) {
       container.appendChild(blurBox2);
       blurBoxes.push(blurBox2);
     }
+
+    // Blur box 6 (background image box)
+    const blurBox6 = document.createElement('div');
+    blurBox6.className = 'recipe-blur-box-6';
+    container.appendChild(blurBox6);
+
+    // Blur box 7 (background image box)
+    const blurBox7 = document.createElement('div');
+    blurBox7.className = 'recipe-blur-box-7';
+    container.appendChild(blurBox7);
 
     // Blur box 3 (index 1)
     if (itemCount > 1) {
@@ -176,6 +258,15 @@ export async function initRecipeGuesser(options = {}) {
             box.style.transition = 'opacity 0.5s ease-out';
             box.style.opacity = '0';
           });
+          // Fade out background image boxes 6 and 7
+          if (blurBox6) {
+            blurBox6.style.transition = 'opacity 0.5s ease-out';
+            blurBox6.style.opacity = '0';
+          }
+          if (blurBox7) {
+            blurBox7.style.transition = 'opacity 0.5s ease-out';
+            blurBox7.style.opacity = '0';
+          }
         } catch (err) {
           console.warn('Error fading recipe boxes:', err);
         }

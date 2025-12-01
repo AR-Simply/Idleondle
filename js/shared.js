@@ -562,6 +562,9 @@ function render(list) {
   // can alter the visible label (remove the word "card"). Do not mutate
   // the original item object - only change the displayed text.
   const isCardPage = (location.pathname || '').endsWith('cardGuesser.html') || (location.href || '').includes('card');
+  // Detect recipe page to render cropped recipe icons in dropdown
+  let isRecipePage = false;
+  try { if (typeof detectGameFromPath === 'function') { isRecipePage = (detectGameFromPath() === 'recipe'); } } catch (e) { isRecipePage = ((location.pathname||'').includes('/recipe/') || (location.href||'').includes('/recipe/')); }
   for (const it of list) {
     const li = document.createElement('li');
     li.className = 'item';
@@ -569,10 +572,45 @@ function render(list) {
     const showIcons = (_config && typeof _config.showIcons === 'boolean') ? _config.showIcons : true;
     let img = null;
     if (showIcons) {
-      img = document.createElement('img');
-      img.alt = it.name;
-      img.src = it.icon;
-      img.addEventListener('error', () => { img.src = placeholder(); });
+      if (isRecipePage) {
+        // Prefer pre-cropped data URL icons when available
+        if (it.icon && /^data:image\//.test(it.icon)) {
+          img = document.createElement('img');
+          img.alt = it.name;
+          img.src = it.icon;
+          img.addEventListener('error', () => { img.src = placeholder(); });
+        } else if (it && it.raw && (it.raw.recipe || it.raw.Recipe)) {
+          // If crop helper is available, generate a canvas-cropped data URL per item
+          const recipePath = String(it.raw.recipe || it.raw.Recipe).replace(/\\/g,'/');
+          const resolved = resolveIcon(recipePath);
+          if (typeof window !== 'undefined' && window.recipeGuesser && typeof window.recipeGuesser.createCroppedIcon === 'function') {
+            img = document.createElement('img');
+            img.alt = it.name;
+            img.src = placeholder();
+            try {
+              window.recipeGuesser.createCroppedIcon(resolved, (dataUrl) => {
+                try { img.src = dataUrl; } catch (e) { img.src = placeholder(); }
+              });
+            } catch (e) { img.src = placeholder(); }
+          } else {
+            // Fallback to CSS background crop when no data URL icon exists
+            const crop = document.createElement('div');
+            crop.className = 'recipe-cropped-icon';
+            try { crop.style.backgroundImage = `url('${resolved}')`; } catch (e) { crop.style.backgroundImage = `url('${placeholder()}')`; }
+            img = crop;
+          }
+        } else {
+          img = document.createElement('img');
+          img.alt = it.name;
+          img.src = it.icon;
+          img.addEventListener('error', () => { img.src = placeholder(); });
+        }
+      } else {
+        img = document.createElement('img');
+        img.alt = it.name;
+        img.src = it.icon;
+        img.addEventListener('error', () => { img.src = placeholder(); });
+      }
     }
     const nameDiv = document.createElement('div');
     nameDiv.className = 'name';
