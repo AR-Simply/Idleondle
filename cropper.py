@@ -2,8 +2,8 @@ import os
 from PIL import Image
 
 # configure these values
-input_folder = "C:/Users/tobia/PycharmProjects/wiki scraper/images/recipes/Tab 6"
-output_folder =  "C:/Users/tobia/PycharmProjects/wiki scraper/images/recipes/output"
+input_folder = "C:/Users/tobia/PycharmProjects/wiki scraper/images/recipes/Tab 1"
+output_folder =  "C:/Users/tobia/PycharmProjects/wiki scraper/images/recipes/crops"
 
 # crop parameters
 x = 577           # top-left x
@@ -21,5 +21,5 @@ for filename in os.listdir(input_folder):
         crop_box = (x, y, x + width, y + height)
         cropped = img.crop(crop_box)
 
-        out_path = os.path.join(output_folder, filename)
+        out_path = os.path.join(output_folder, "Tab 1_"+filename)
         cropped.save(out_path)
