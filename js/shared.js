@@ -456,7 +456,8 @@ function flattenFromJson(json) {
   const out = [];
   const pushItem = (name, obj) => {
     if (!obj || typeof obj !== 'object') return;
-    const iconRaw = obj.icon || obj.Icon || obj.image || obj.Image;
+    // Support multiple image fields across datasets, including recipes
+    const iconRaw = obj.icon || obj.Icon || obj.image || obj.Image || obj.recipe || obj.Recipe;
     if (!name || !iconRaw) return;
     out.push({ name: String(name), icon: resolveIcon(iconRaw), raw: obj });
   };

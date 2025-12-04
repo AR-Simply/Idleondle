@@ -489,10 +489,10 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
 }
 .recipe-obscure-box {
   position: absolute;
-  top: 35px;
-  left: 70px;
-  width: 130px;
-  height: 130px;
+  top: 46px;
+  left: 88px;
+  width: 112px;
+  height: 112px;
   background: var(--panel);
   border: 2px solid var(--border);
   border-radius: 8px;
@@ -507,25 +507,30 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
 }
 .recipe-blur-box {
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 200px;
-  width: 288px;
-  height: 55px;
+  width: 287px;
+  height: 75px;
   background-image: url('../images/recipes/Background top.PNG');
   background-size: cover;
   background-position: center;
   z-index: 1;
+  
 }
 .recipe-blur-box-2 {
   position: absolute;
-  top: 188px;
-  left: 110px;
-  width: 115px;
-  height: 115px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  top: 191px;
+  left: 115px;
+  width: 108px;
+  height: 107px;
+  backdrop-filter: blur(10px) saturate(110%);
+  -webkit-backdrop-filter: blur(10px) saturate(110%);
+
+  border: 1px solid rgba(122,162,255,0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35), inset 0 0 20px rgba(122,162,255,0.08);
+  border-radius: 2px;
+  z-index: 2;
+  animation: recipeBlurPulse 2.8s ease-in-out infinite;
 }
 .recipe-blur-box-6 {
   position: absolute;
@@ -540,36 +545,48 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
 }
 .recipe-blur-box-3 {
   position: absolute;
-  top: 188px;
-  left: 320px;
-  width: 115px;
-  height: 115px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  top: 191px;
+  left: 322px;
+  width: 108px;
+  height: 107px;
+  backdrop-filter: blur(10px) saturate(110%);
+  -webkit-backdrop-filter: blur(10px) saturate(110%);
+  
+  border: 1px solid rgba(122,162,255,0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35), inset 0 0 20px rgba(122,162,255,0.08);
+  border-radius: 2px;
+  z-index: 2;
+  animation: recipeBlurPulse 2.8s ease-in-out infinite;
 }
 .recipe-blur-box-4 {
   position: absolute;
-  top: 345px;
-  left: 110px;
-  width: 115px;
-  height: 115px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  top: 352px;
+  left: 115px;
+  width: 108px;
+  height: 107px;
+  backdrop-filter: blur(10px) saturate(110%);
+  -webkit-backdrop-filter: blur(10px) saturate(110%);
+
+  border: 1px solid rgba(122,162,255,0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35), inset 0 0 20px rgba(122,162,255,0.08);
+  border-radius: 2px;
+  z-index: 2;
+  animation: recipeBlurPulse 2.8s ease-in-out infinite;
 }
 .recipe-blur-box-5 {
   position: absolute;
-  top: 345px;
-  left: 320px;
-  width: 115px;
-  height: 115px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  top: 352px;
+  left: 322px;
+  width: 108px;
+  height: 107px;
+  backdrop-filter: blur(10px) saturate(110%);
+  -webkit-backdrop-filter: blur(10px) saturate(110%);
+
+  border: 1px solid rgba(122,162,255,0.0);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35), inset 0 0 20px rgba(122,162,255,0.08);
+  border-radius: 2px;
+  z-index: 2;
+  animation: recipeBlurPulse 2.8s ease-in-out infinite;
 }
 .recipe-blur-box-7 {
   position: absolute;
@@ -580,8 +597,11 @@ img.flame-icon.flame-zero:hover { filter: grayscale(100%) brightness(0.75) contr
   background-image: url('../images/recipes/Background bot.PNG');
   background-size: cover;
   background-position: center;
+
   z-index: 1;
 }
+
+
 
 .recipe-notice {
   font-size: 20px;

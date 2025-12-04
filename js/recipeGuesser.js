@@ -1,5 +1,5 @@
 // js/recipeGuesser.js
-import { initShared, getGoalItem, filterItems } from './shared.js';
+import { initShared, getGoalItem, filterItems, setGoalItem } from './shared.js';
 
 // Helper to resolve image paths (similar to shared.js resolveIcon)
 function resolveRecipePath(path) {
@@ -16,9 +16,9 @@ function resolveRecipePath(path) {
 // Helper to create a cropped icon from recipe image
 // Crop box parameters (adjust to tune zoom/position)
 const CROP_X = 50;   // left offset
-const CROP_Y = 50;   // top offset
-const CROP_W = 120;   // width of crop
-const CROP_H = 120;   // height of crop
+const CROP_Y = 55;   // top offset
+const CROP_W = 125;   // width of crop
+const CROP_H = 125;   // height of crop
 function createCroppedIcon(recipePath, callback) {
   const img = new Image();
   img.crossOrigin = 'anonymous';
@@ -55,7 +55,7 @@ export async function initRecipeGuesser(options = {}) {
   const sharedConfig = Object.assign({
     dataUrl: '../json/idleon_recipes.json',
     imageBase: '../images',
-    seedOffset: 9000,
+    seedOffset: 1,
     guessButtonHandlers: {
       guessBtn2: () => {
         const gb2 = document.getElementById('guessBtn2');
@@ -69,6 +69,16 @@ export async function initRecipeGuesser(options = {}) {
   }, options || {});
 
   await initShared(sharedConfig);
+
+  // TEMP: Force goal item to specific recipe for debugging
+  try {
+    const targetName = 'Dirty Coal Miner Baggy Soot Pants';
+    const candidates = filterItems(targetName) || [];
+    const exact = candidates.find(it => String(it?.name).trim().toLowerCase() === targetName.toLowerCase());
+    if (exact) {
+      setGoalItem(exact);
+    }
+  } catch (e) { /* non-fatal */ }
   
   // After shared init, replace all item icons with cropped versions
   // Access the items array through filterItems
@@ -106,7 +116,7 @@ export async function initRecipeGuesser(options = {}) {
   } catch (e) { /* non-fatal */ }
   // Track blur reduction for boxes 2-5
   let blurBoxes = []; // Will store references to blur boxes 2-5
-  const initialBlur = 20; // Starting blur value in px
+  const initialBlur = 10; // Starting blur value in px (matches CSS)
   const guessesPerBox = 3; // Number of guesses to fully clear one box
 
   // Render the daily recipe image below the combo
@@ -198,11 +208,7 @@ export async function initRecipeGuesser(options = {}) {
     const combo = document.getElementById('combo');
     if (combo && combo.parentNode) combo.parentNode.insertBefore(container, combo.nextSibling);
 
-    // Add notice below the recipe image
-    const notice = document.createElement('div');
-    notice.className = 'recipe-notice';
-    notice.textContent = 'Only anvil tab 1 for now!';
-    if (combo && combo.parentNode) combo.parentNode.insertBefore(notice, container.nextSibling);
+   
 
     // Listen for guess events to reduce blur
     if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
