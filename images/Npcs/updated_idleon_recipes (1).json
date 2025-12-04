@@ -1,9 +1,0 @@
-{
-    "Recipes": {
-        "Boxing Gloves": {
-            "icon": "images\\Fisticuffs\\Boxing Gloves.png",
-            "recipe": "images\\recipes\\boxing gloves.png",
-            "items": 2
-        }
-    }
-}
