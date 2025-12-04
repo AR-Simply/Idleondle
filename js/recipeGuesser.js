@@ -70,15 +70,15 @@ export async function initRecipeGuesser(options = {}) {
 
   await initShared(sharedConfig);
 
-  // TEMP: Force goal item to specific recipe for debugging
-  try {
-    const targetName = 'Dirty Coal Miner Baggy Soot Pants';
-    const candidates = filterItems(targetName) || [];
-    const exact = candidates.find(it => String(it?.name).trim().toLowerCase() === targetName.toLowerCase());
-    if (exact) {
-      setGoalItem(exact);
-    }
-  } catch (e) { /* non-fatal */ }
+  // TEMP OVERRIDE (disabled): Force goal item to a specific recipe for debugging
+  // try {
+  //   const targetName = 'Dirty Coal Miner Baggy Soot Pants';
+  //   const candidates = filterItems(targetName) || [];
+  //   const exact = candidates.find(it => String(it?.name).trim().toLowerCase() === targetName.toLowerCase());
+  //   if (exact) {
+  //     setGoalItem(exact);
+  //   }
+  // } catch (e) { /* non-fatal */ }
   
   // After shared init, replace all item icons with cropped versions
   // Access the items array through filterItems
