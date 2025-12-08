@@ -55,7 +55,7 @@ export async function initRecipeGuesser(options = {}) {
   const sharedConfig = Object.assign({
     dataUrl: '../json/idleon_recipes.json',
     imageBase: '../images',
-    seedOffset: 3,
+    seedOffset: 4,
     guessButtonHandlers: {
       guessBtn2: () => {
         const gb2 = document.getElementById('guessBtn2');
