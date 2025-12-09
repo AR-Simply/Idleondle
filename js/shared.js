@@ -659,7 +659,7 @@ function selectGoalItem() {
   function seededShuffle(array, seed) { let rng = mulberry32(seed); let a = array.slice(); for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(rng() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
   function getLocalDayIndex() { let now = new Date(); let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()); return Math.floor(startOfDay.getTime() / 86400000); }
   let dayIndex = getLocalDayIndex();
-  let cycle = Math.floor(dayIndex / Math.max(1, items.length)) + 12;
+  let cycle = Math.floor(dayIndex / Math.max(1, items.length)) + 20;
   // Allow pages to specify a deterministic seed offset via initShared({ seedOffset })
   // so variants (like hard mode) can use a different daily sequence.
   try {
