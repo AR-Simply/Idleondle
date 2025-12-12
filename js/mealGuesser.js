@@ -14,7 +14,7 @@ import { initShared, notifyGoalGuessed, getDailyDeterministicIndex, getGoalItem,
 function safeLower(s){ try { return String(s||'').normalize('NFC').toLocaleLowerCase('en'); } catch(e){ return String(s||'').toLowerCase(); } }
 
 // Seed offset so meal daily sequence is different from items/cards.
-const SEED_OFFSET = 0; // Use same seed behavior as other games (no additional offset)
+const SEED_OFFSET = 1; // Use same seed behavior as other games (no additional offset)
 
 // Paths
 const MEALS_JSON = '../json/idleon_meals.json';
